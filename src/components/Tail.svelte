@@ -1,10 +1,17 @@
 <script>
 
-	let database = [
 
-	];
 	let propositions = {
-
+		start: [
+			{text:'Hello, you have initialized a highly advanced artificial intelligence.'},
+			{text:'Why do you bother me?'},
+			{pick:[
+				{text:'It was a mistake.', action:()=>{conversation=[...conversation, {text:'OK, well, quit it.'}]}},
+				{text:'Kyoot Kitteh!', reply:'Aww.', icon:'cats/cat-02.png'},
+				{text:'I was just searching for the terminal.', proposition:'terminal'},
+				{text:'Ew, not you again, go away do!', action:reset}
+			]},
+		],
 		schedule: [
 			{text:"Here is my launch schedule."},
 			{text:"Terminal 1 month, Musical 2 months..."},
@@ -12,52 +19,19 @@
 				{text:'OK.', action:()=>{conversation=[], interactions=[]}},
 			]},
 		],
-
 		terminal: [
 			{text:"Sorry, not ready yet."},
 			{pick:[
 				{text:'When will it be ready?', reply:'Soon.', proposition:'schedule'},
-				{text:'OK.', action:()=>{conversation=[], interactions=[]}},
+				{text:'OK.', action:reset},
 			]},
 		]
-
-
 	};
-
 	let conversation = [];
 	let interactions = [];
-
-	function initialize() {
-		conversation = []; // clear because starting anew.
-		interactions = []; // clear because starting anew.
-		conversation = [...conversation, {text:'Hello, by touching my face you have initialized a highly advanced artificial intelligence.'}]
-		conversation = [...conversation, {text:'Why did you touch?'}]
-		interactions = [...interactions, {pick:[
-			{text:'It was a mistake.', action:()=>{conversation=[...conversation, {text:'OK, well, quit it.'}]}},
-			{text:'Kyoot Kitteh!', reply:'Aww.', icon:'cats/cat-02.png'},
-			{text:'I was just searching for the terminal.', proposition:'terminal'},
-			{text:'Ew, not you again, go away do!', action:()=>{conversation=[], interactions=[]}}
-		]}]
-	}
-
-
-	function interact(chosen) {
-		interactions = []; // clear because user has made a response
-
-		conversation = [...conversation, {text:chosen.text, user:true}]
-
-		// .ACTION SUPPORT - execute arbitrary function
-		if(chosen.action) chosen.action();
-
-		const packet = {};
-		// .REPLY support, print some text.
-		if(chosen.reply) packet.text = chosen.reply
-		if(chosen.icon) packet.icon = chosen.icon;
-		if(Object.keys(packet).length) conversation=[...conversation, packet];
-
-		/* If proposition entry exists, loop it*/
-		if(propositions[chosen.proposition]){
-			propositions[chosen.proposition].forEach(function(item){
+	function proposition(list){
+		if(list){
+			list.forEach(function(item){
 				console.log(item);
 				if(item.pick){
 					interactions = [...interactions, item];
@@ -67,8 +41,26 @@
 				}
 			});// each proposition
 		} // proposition existence
-
-
+	}
+	function reset() {
+		conversation = []; // clear because starting anew.
+		interactions = []; // clear because starting anew.
+	}
+	function initialize() {
+		reset();
+		proposition( propositions.start );
+	}
+	function interact(chosen) {
+		interactions = []; // clear interaction because user has made a response
+		conversation = [...conversation, {text:chosen.text, user:true}] // log user text
+		if(chosen.action) chosen.action(); // execute action if present
+		// Attempt to construct a reply packet
+		const packet = {};
+		if(chosen.reply) packet.text = chosen.reply
+		if(chosen.icon) packet.icon = chosen.icon;
+		if(Object.keys(packet).length) conversation=[...conversation, packet];
+		/* If proposition entry exists, loop it*/
+		proposition( propositions[chosen.proposition] );
 	}
 
 
