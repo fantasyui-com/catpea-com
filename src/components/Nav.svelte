@@ -1,0 +1,50 @@
+<script>
+	export let segment;
+
+	let collapse = true;
+
+	function handleCollapse() {
+	collapse=!collapse;
+	}
+
+
+
+</script>
+
+<style>
+
+</style>
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary shadow text-white	mb-3 rounded-sm">
+  <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
+
+  <button class="navbar-toggler" type="button" on:click={handleCollapse}>
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse" class:collapse='{collapse}'>
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item" class:selected='{segment === undefined}'>
+        <a class="nav-link" href=".">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+			<!-- for the stream link, we're using rel=prefetch so that Sapper prefetches
+	 		     the stream data when we hover over the link or tap it on a touchscreen -->
+      <li class="nav-item" class:selected='{segment === "stream"}'>
+        <a class="nav-link" rel=prefetch href="stream">Stream <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item" class:selected='{segment === "about"}'>
+        <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
+      </li>
+
+
+    </ul>
+
+  </div>
+</nav>
