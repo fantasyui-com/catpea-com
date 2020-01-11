@@ -24,11 +24,8 @@
 	}
 
 
+	function interact(chosen) {
 
-
-
-	function user(chosen) {
-		console.log('Click', chosen);
 		conversation = [...conversation, {text:chosen.text, user:true}]
 
 		// .ACTION SUPPORT - execute arbitrary function
@@ -76,6 +73,7 @@
 		<img src="cats/cat-03.png" class="d-inline" alt="Catpea Bot Image">
  	</div>
 
+	<!-- STORAGE OF CONVERSATION -->
 	{#each conversation as item}
 		{#if item.user}
 			<div class="card bg-success shadow border-primary border-left-0 border-right-0 border-top-0 rounded-lg ml-5 mb-2">
@@ -93,14 +91,17 @@
 			</div>
 		{/if}
 	{/each}
+	<!-- /STORAGE OF CONVERSATION -->
 
+	<!-- PRESENTATION OF INTERACTION -->
 	{#each interactions as potential}
 		{#each potential.pick as choice}
-		<button type="button" class="btn btn-outline-primary m-1" on:click|preventDefault={() => user(choice)}>
+		<button type="button" class="btn btn-outline-primary m-1" on:click|preventDefault={() => interact(choice)}>
 			{choice.text}
 		</button>
 		{/each}
 	{/each}
+	<!-- /PRESENTATION OF INTERACTION -->
 
 	</div>
 

@@ -454,6 +454,7 @@ const Tail = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 		<img src="${"cats/cat-03.png"}" class="${"d-inline"}" alt="${"Catpea Bot Image"}">
  	</div>
 
+	
 	${each(conversation, item => `${item.user
 	? `<div class="${"card bg-success shadow border-primary border-left-0 border-right-0 border-top-0 rounded-lg ml-5 mb-2"}">
 				<div class="${"card-body"}">
@@ -469,10 +470,13 @@ const Tail = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 				    <p class="${"card-text small"}">${escape(item.text)}</p>
 			  </div>
 			</div>`}`)}
+	
 
+	
 	${each(interactions, potential => `${each(potential.pick, choice => `<button type="${"button"}" class="${"btn btn-outline-primary m-1"}">
 			${escape(choice.text)}
 		</button>`)}`)}
+	
 
 	</div>
 
