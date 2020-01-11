@@ -4,7 +4,24 @@
 
 	];
 	let propositions = {
-		terminal: {text:"Sorry, not ready yet."}
+
+		schedule: [
+			{text:"Here is my launch schedule."},
+			{text:"Terminal 1 month, Musical 2 months..."},
+			{pick:[
+				{text:'OK.', action:()=>{conversation=[], interactions=[]}},
+			]},
+		],
+
+		terminal: [
+			{text:"Sorry, not ready yet."},
+			{pick:[
+				{text:'When will it be ready?', reply:'Soon.', proposition:'schedule'},
+				{text:'OK.', action:()=>{conversation=[], interactions=[]}},
+			]},
+		]
+
+
 	};
 
 	let conversation = [];
@@ -25,6 +42,7 @@
 
 
 	function interact(chosen) {
+		interactions = []; // clear because user has made a response
 
 		conversation = [...conversation, {text:chosen.text, user:true}]
 
@@ -35,17 +53,21 @@
 		// .REPLY support, print some text.
 		if(chosen.reply) packet.text = chosen.reply
 		if(chosen.icon) packet.icon = chosen.icon;
-		if(Object.keys(packet).length) conversation=[...conversation,packet];
+		if(Object.keys(packet).length) conversation=[...conversation, packet];
 
+		/* If proposition entry exists, loop it*/
 		if(propositions[chosen.proposition]){
-			if(propositions[chosen.proposition].pick){
-				interactions = [...interactions, propositions[chosen.proposition]];
-			}else{
-				conversation = [...conversation, propositions[chosen.proposition]];
-			}
-		}
+			propositions[chosen.proposition].forEach(function(item){
+				console.log(item);
+				if(item.pick){
+					interactions = [...interactions, item];
+					console.log(interactions);
+				}else{
+					conversation = [...conversation, item];
+				}
+			});// each proposition
+		} // proposition existence
 
-		interactions = []; // clear because user has made a response
 
 	}
 
