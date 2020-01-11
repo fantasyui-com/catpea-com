@@ -266,9 +266,9 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
       <p class="${"small"}"><strong>The well established shalln&#39;t be replaced by that which is unproven by the test of decades.</strong></p>
 
-      <p class="${"small"}">The primary objective for ${escape(year)} is Minimum Viable Product Generation (MVPG).</p>
+      <p class="${"small"}">The primary objective for ${escape(year)}-${escape(year + 1)} is Minimum Viable Product Generation (MVPG).</p>
 
-      <p class="${"small"}">Research focus for ${escape(year)} is targeting MUD, Tone.js Generative Music, Generative Vector Patterns (Fashion Design), Bot Communication Frameworks, FS-Free Wiki; and underlying programming patterns and constraint solutions. </p>
+      <p class="${"small"}">Research focus for ${escape(year)}-${escape(year + 1)} is targeting MUD, Tone.js Generative Music, Generative Vector Patterns (Fashion Design), Bot Communication Frameworks, FS-Free Wiki; and underlying programming patterns and constraint solutions. </p>
 
     </div>
 
