@@ -55,7 +55,10 @@ makeName(); setInterval(makeName, 1000*60);
 
     <div class="container bg-secondary shadow-lg border-primary border-bottom rounded-lg p-5">
 
-      
+      <p class="lead">The Pay Per Post Social Network</p>
+      <p class="small">High Quality Posts with content creators that stand behind their content. Built-in Mechanical Turk to earn credits and money. Answering Machine Bots for optimal communications. Visual Programming Language for Automation. Focus on Accountability, Privacy, and Accessibility.</p>
+
+
       <!--
       <p class=""><strong>{name}</strong> (CATPEA) is focused on long-term ambitious problem solving by means of well established patterns framed outside of their initial bounding principles.</p>
 

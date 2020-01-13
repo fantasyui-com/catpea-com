@@ -256,7 +256,10 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
     <div class="${"container bg-secondary shadow-lg border-primary border-bottom rounded-lg p-5"}">
 
-      
+      <p class="${"lead"}">The Pay Per Post Social Network</p>
+      <p class="${"small"}">High Quality Posts with content creators that stand behind their content. Built-in Mechanical Turk to earn credits and money. Answering Machine Bots for optimal communications. Visual Programming Language for Automation. Focus on Accountability, Privacy, and Accessibility.</p>
+
+
       
 
     </div>
@@ -406,14 +409,21 @@ const Nav = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
       </li>
 
 			
-      <li class="${["nav-item", segment === "stream" ? "selected" : ""].join(" ").trim()}">
-        <a class="${"nav-link"}" rel="${"prefetch"}" href="${"stream"}">Stream <span class="${"sr-only"}">(current)</span></a>
-      </li>
+      
 
-      <li class="${["nav-item", segment === "about" ? "selected" : ""].join(" ").trim()}">
-        <a class="${"nav-link"}" href="${"about"}">About <span class="${"sr-only"}">(current)</span></a>
-      </li>
+			<li class="${["nav-item", segment === "stream" ? "selected" : ""].join(" ").trim()}">
+				<a class="${"nav-link disabled"}" rel="${"prefetch"}" href="${"#"}">Stream <span class="${"sr-only"}">(current)</span></a>
+			</li>
 
+			<li class="${["nav-item", segment === "profile" ? "selected" : ""].join(" ").trim()}">
+				<a class="${"nav-link disabled"}" rel="${"prefetch"}" href="${"#"}">Profile <span class="${"sr-only"}">(current)</span></a>
+			</li>
+			<li class="${["nav-item", segment === "friends" ? "selected" : ""].join(" ").trim()}">
+				<a class="${"nav-link disabled"}" rel="${"prefetch"}" href="${"#"}">Friends <span class="${"sr-only"}">(current)</span></a>
+			</li>
+			<li class="${["nav-item", segment === "inbox" ? "selected" : ""].join(" ").trim()}">
+				<a class="${"nav-link disabled"}" rel="${"prefetch"}" href="${"#"}">Inbox <span class="${"sr-only"}">(current)</span></a>
+			</li>
 
     </ul>
 
@@ -3295,6 +3305,6 @@ polka() // You can also use Express
 		sirv('static', { dev }),
 		middleware()
 	)
-	.listen(PORT, err => {
+	.listen(PORT, `0.0.0.0`, err => {
 		if (err) console.log('error', err);
 	});
