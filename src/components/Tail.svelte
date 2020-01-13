@@ -1,5 +1,6 @@
 <script>
 
+ 
 
 	let propositions = {
 		start: [
@@ -29,6 +30,7 @@
 	};
 	let conversation = [];
 	let interactions = [];
+
 	function proposition(list){
 		if(list){
 			list.forEach(function(item){

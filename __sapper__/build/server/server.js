@@ -228,16 +228,12 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 		["Architecture"]
 	];
 
-	let name = "";
-
 	const makeName = function () {
-		name = "";
 
 		for (let potential of names) {
 			console.log(names, potential);
 			let randomIndex = rnd(0, potential.length - 1);
 			let chosen = potential[randomIndex];
-			name = name + " " + chosen;
 		}
 	};
 
@@ -260,15 +256,8 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
     <div class="${"container bg-secondary shadow-lg border-primary border-bottom rounded-lg p-5"}">
 
-      <p class="${""}"><strong>${escape(name)}</strong> (CATPEA) is focused on long-term ambitious problem solving by means of well established patterns framed outside of their initial bounding principles.</p>
-
-      <p class="${"small"}">The primary fundamental principle powering the Advanced Development Programs (ADP) stands as follows:</p>
-
-      <p class="${"small"}"><strong>The well established shalln&#39;t be replaced by that which is unproven by the test of decades.</strong></p>
-
-      <p class="${"small"}">The primary objective for ${escape(year)}-${escape(year + 1)} is Minimum Viable Product Generation (MVPG).</p>
-
-      <p class="${"small"}">Research focus for ${escape(year)}-${escape(year + 1)} is targeting MUD, Tone.js Generative Music, Generative Vector Patterns (Fashion Design), Bot Communication Frameworks, FS-Free Wiki; and underlying programming patterns and constraint solutions. </p>
+      
+      
 
     </div>
 

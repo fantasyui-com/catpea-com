@@ -55,6 +55,8 @@ makeName(); setInterval(makeName, 1000*60);
 
     <div class="container bg-secondary shadow-lg border-primary border-bottom rounded-lg p-5">
 
+      
+      <!--
       <p class=""><strong>{name}</strong> (CATPEA) is focused on long-term ambitious problem solving by means of well established patterns framed outside of their initial bounding principles.</p>
 
       <p class="small">The primary fundamental principle powering the Advanced Development Programs (ADP) stands as follows:</p>
@@ -63,7 +65,7 @@ makeName(); setInterval(makeName, 1000*60);
 
       <p class="small">The primary objective for {year}-{year+1} is Minimum Viable Product Generation (MVPG).</p>
 
-      <p class="small">Research focus for {year}-{year+1} is targeting MUD, Tone.js Generative Music, Generative Vector Patterns (Fashion Design), Bot Communication Frameworks, FS-Free Wiki; and underlying programming patterns and constraint solutions. </p>
+      <p class="small">Research focus for {year}-{year+1} is targeting MUD, Tone.js Generative Music, Generative Vector Patterns (Fashion Design), Bot Communication Frameworks, FS-Free Wiki; and underlying programming patterns and constraint solutions. </p> -->
 
     </div>
 
