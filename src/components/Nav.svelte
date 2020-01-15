@@ -39,11 +39,13 @@
         <a class="nav-link" rel=prefetch href="stream">Stream <span class="sr-only">(current)</span></a>
       </li>
 
-      <li class="nav-item" class:selected='{segment === "about"}'>
+			-->
+
+      <!-- <li class="nav-item" class:selected='{segment === "about"}'>
         <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
       </li> -->
 
-			<li class="nav-item" class:selected='{segment === "stream"}'>
+			<!-- <li class="nav-item" class:selected='{segment === "stream"}'>
 				<a class="nav-link disabled" rel=prefetch href="#">Stream <span class="sr-only">(current)</span></a>
 			</li>
 
@@ -55,7 +57,7 @@
 			</li>
 			<li class="nav-item" class:selected='{segment === "inbox"}'>
 				<a class="nav-link disabled" rel=prefetch href="#">Inbox <span class="sr-only">(current)</span></a>
-			</li>
+			</li> -->
 
     </ul>
 

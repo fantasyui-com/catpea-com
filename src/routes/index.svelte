@@ -1,5 +1,7 @@
 <script>
 
+import { onMount } from "svelte";
+
 const date = new Date();
 const year = date.getFullYear();
 
@@ -32,6 +34,41 @@ for (let potential of names){
 
 makeName(); setInterval(makeName, 1000*60);
 
+
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+let database = [];
+let posts = [
+
+  {kind:"youtube", title:"Laniakea: Our home supercluster", url:"https://www.youtube.com/watch?v=rENyyRwxpHo", image:"https://img.youtube.com/vi/rENyyRwxpHo/0.jpg" },
+  {kind:"youtube", title:"Oumuamua", url:"https://www.youtube.com/watch?v=rfi3w9Bzwik", image:"https://img.youtube.com/vi/rfi3w9Bzwik/0.jpg" },
+  {kind:"youtube", title:"", text:"", url:"https://www.youtube.com/watch?v=gypAjPp6eps", image:"https://img.youtube.com/vi/gypAjPp6eps/0.jpg" },
+  {kind:"youtube", title:"", text:"", url:"https://www.youtube.com/watch?v=yqc9zX04DXs", image:"https://img.youtube.com/vi/yqc9zX04DXs/0.jpg" },
+  {kind:"youtube", title:"", text:"", url:"https://www.youtube.com/watch?v=1-OdJmAefOY", image:"https://img.youtube.com/vi/1-OdJmAefOY/0.jpg" },
+  {kind:"youtube", title:"", text:"", url:"https://www.youtube.com/watch?v=P1ww1IXRfTA", image:"https://img.youtube.com/vi/P1ww1IXRfTA/0.jpg" },
+  {kind:"youtube", title:"", text:"", url:"https://www.youtube.com/watch?v=UuRxRGR3VpM", image:"https://img.youtube.com/vi/UuRxRGR3VpM/0.jpg" },
+  {kind:"youtube", title:"", text:"", url:"https://www.youtube.com/watch?v=YnU6vMVAdAE", image:"https://img.youtube.com/vi/YnU6vMVAdAE/0.jpg" },
+
+];
+
+onMount(async function() {
+    const res = await fetch("youtube.json");
+    const json = await res.json();
+    database = json;
+    shuffle(database);
+    posts = database.slice(0,8)
+});
+
+
+
+
+
 </script>
 <style>
 
@@ -48,32 +85,27 @@ makeName(); setInterval(makeName, 1000*60);
 
 
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-lg-4"></div>
-
-		<div class="col">
-
-    <div class="container bg-secondary shadow-lg border-primary border-bottom rounded-lg p-5">
-
-      <p class="lead">The Pay Per Post Social Network</p>
-      <p class="small">High Quality Posts with content creators that stand behind their content. Built-in Mechanical Turk to earn credits and money. Answering Machine Bots for optimal communications. Visual Programming Language for Automation. Focus on Accountability, Privacy, and Accessibility.</p>
 
 
-      <!--
-      <p class=""><strong>{name}</strong> (CATPEA) is focused on long-term ambitious problem solving by means of well established patterns framed outside of their initial bounding principles.</p>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
 
-      <p class="small">The primary fundamental principle powering the Advanced Development Programs (ADP) stands as follows:</p>
 
-      <p class="small"><strong>The well established shalln't be replaced by that which is unproven by the test of decades.</strong></p>
+    {#each posts as post}
 
-      <p class="small">The primary objective for {year}-{year+1} is Minimum Viable Product Generation (MVPG).</p>
+      <div class="col mb-4">
+        <div class="card bg-secondary text-white">
+          <img src="{post.image}" class="card-img-top" alt="{post.title}">
+          <div class="card-body">
+            <h5 class="card-title small">{post.title}</h5>
+          </div>
+        </div>
+      </div>
 
-      <p class="small">Research focus for {year}-{year+1} is targeting MUD, Tone.js Generative Music, Generative Vector Patterns (Fashion Design), Bot Communication Frameworks, FS-Free Wiki; and underlying programming patterns and constraint solutions. </p> -->
+    {/each}
 
     </div>
 
-		</div>
 
-		<div class="col-lg-4"></div>
-	</div>
+
+
 </div>

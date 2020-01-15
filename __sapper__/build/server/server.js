@@ -134,6 +134,9 @@ function get_current_component() {
         throw new Error(`Function called outside component initialization`);
     return current_component;
 }
+function onMount(fn) {
+    get_current_component().$$.on_mount.push(fn);
+}
 function setContext(key, context) {
     get_current_component().$$.context.set(key, context);
 }
@@ -215,6 +218,15 @@ function rnd(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function shuffle(a) {
+	for (let i = a.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[a[i], a[j]] = [a[j], a[i]];
+	}
+
+	return a;
+}
+
 const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	const date = new Date();
 	const year = date.getFullYear();
@@ -239,6 +251,72 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
 	makeName();
 	setInterval(makeName, 1000 * 60);
+	let database = [];
+
+	let posts = [
+		{
+			kind: "youtube",
+			title: "Laniakea: Our home supercluster",
+			url: "https://www.youtube.com/watch?v=rENyyRwxpHo",
+			image: "https://img.youtube.com/vi/rENyyRwxpHo/0.jpg"
+		},
+		{
+			kind: "youtube",
+			title: "Oumuamua",
+			url: "https://www.youtube.com/watch?v=rfi3w9Bzwik",
+			image: "https://img.youtube.com/vi/rfi3w9Bzwik/0.jpg"
+		},
+		{
+			kind: "youtube",
+			title: "",
+			text: "",
+			url: "https://www.youtube.com/watch?v=gypAjPp6eps",
+			image: "https://img.youtube.com/vi/gypAjPp6eps/0.jpg"
+		},
+		{
+			kind: "youtube",
+			title: "",
+			text: "",
+			url: "https://www.youtube.com/watch?v=yqc9zX04DXs",
+			image: "https://img.youtube.com/vi/yqc9zX04DXs/0.jpg"
+		},
+		{
+			kind: "youtube",
+			title: "",
+			text: "",
+			url: "https://www.youtube.com/watch?v=1-OdJmAefOY",
+			image: "https://img.youtube.com/vi/1-OdJmAefOY/0.jpg"
+		},
+		{
+			kind: "youtube",
+			title: "",
+			text: "",
+			url: "https://www.youtube.com/watch?v=P1ww1IXRfTA",
+			image: "https://img.youtube.com/vi/P1ww1IXRfTA/0.jpg"
+		},
+		{
+			kind: "youtube",
+			title: "",
+			text: "",
+			url: "https://www.youtube.com/watch?v=UuRxRGR3VpM",
+			image: "https://img.youtube.com/vi/UuRxRGR3VpM/0.jpg"
+		},
+		{
+			kind: "youtube",
+			title: "",
+			text: "",
+			url: "https://www.youtube.com/watch?v=YnU6vMVAdAE",
+			image: "https://img.youtube.com/vi/YnU6vMVAdAE/0.jpg"
+		}
+	];
+
+	onMount(async function () {
+		const res = await fetch("youtube.json");
+		const json = await res.json();
+		database = json;
+		shuffle(database);
+		posts = database.slice(0, 8);
+	});
 
 	return `${($$result.head += `<title>Cat Pea</title>`, "")}
 
@@ -249,25 +327,25 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
 
 <div class="${"container-fluid"}">
-	<div class="${"row"}">
-		<div class="${"col-lg-4"}"></div>
-
-		<div class="${"col"}">
-
-    <div class="${"container bg-secondary shadow-lg border-primary border-bottom rounded-lg p-5"}">
-
-      <p class="${"lead"}">The Pay Per Post Social Network</p>
-      <p class="${"small"}">High Quality Posts with content creators that stand behind their content. Built-in Mechanical Turk to earn credits and money. Answering Machine Bots for optimal communications. Visual Programming Language for Automation. Focus on Accountability, Privacy, and Accessibility.</p>
 
 
-      
+    <div class="${"row row-cols-1 row-cols-md-2 row-cols-lg-4"}">
+
+
+    ${each(posts, post => `<div class="${"col mb-4"}">
+        <div class="${"card bg-secondary text-white"}">
+          <img${add_attribute("src", post.image, 0)} class="${"card-img-top"}"${add_attribute("alt", post.title, 0)}>
+          <div class="${"card-body"}">
+            <h5 class="${"card-title small"}">${escape(post.title)}</h5>
+          </div>
+        </div>
+      </div>`)}
 
     </div>
 
-		</div>
 
-		<div class="${"col-lg-4"}"></div>
-	</div>
+
+
 </div>`;
 });
 
@@ -370,13 +448,49 @@ const About = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 
 			<div class="${"container bg-secondary shadow-lg border-success border-bottom rounded-lg p-5"}">
 
-		  	<div class="${"text-center"}">
-		  	<img src="${"cats/cat-02.png"}" class="${"d-inline"}" alt="${"Catpea Bot Image"}">
+				<p class="${"lead"}">
+					Modern Internet Research
+				</p>
 
-		  	<p class="${"small"}">Catpea is a central tongue-in-cheek hub for my ongoing research and development projects, as well as a few thoughts and links.</p>
+	      <div class="${"small"}">
 
-		  	</div>
+ 
 
+
+					<li>How to create a safe Pay Per Post website?
+				    <ul>
+				      <li>Use of third party off-site processor still poses fraud risk.</li>
+				      <li>Bitcoin Merchants sill face fraud risks.</li>
+				    </ul>
+				  </li>
+
+					<li>How to create a low-liability Social Network?
+				    <ul>
+				      <li>User management poses security risks.</li>
+				      <li>Third party user management is still too complex. Trading safety for complexity.</li>
+				    </ul>
+				  </li>
+
+					<li>How to create quality posts where content creators can stand behind their content?
+				    <ul>
+				      <li>There is great safety in linking to top ranking posts on other networks, this cannot be overlooked.</li>
+				    </ul>
+				  </li>
+
+					<li>What is the simplest way to get bots to help the user program.
+				    <ul>
+				      <li>Bots are already operational, this in under 50 lines of code, this should be taken advantage of.</li>
+				    </ul>
+				  </li>
+
+					<li>How to create a Mechanical Turk where users can earn credits and/or money.
+				    <ul>
+				      <li>This seems to be a separate website facing the same problems as above.</li>
+				    </ul>
+				  </li>
+
+
+				</div>
 
 		  </div>
 
@@ -411,19 +525,9 @@ const Nav = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 			
       
 
-			<li class="${["nav-item", segment === "stream" ? "selected" : ""].join(" ").trim()}">
-				<a class="${"nav-link disabled"}" rel="${"prefetch"}" href="${"#"}">Stream <span class="${"sr-only"}">(current)</span></a>
-			</li>
+      
 
-			<li class="${["nav-item", segment === "profile" ? "selected" : ""].join(" ").trim()}">
-				<a class="${"nav-link disabled"}" rel="${"prefetch"}" href="${"#"}">Profile <span class="${"sr-only"}">(current)</span></a>
-			</li>
-			<li class="${["nav-item", segment === "friends" ? "selected" : ""].join(" ").trim()}">
-				<a class="${"nav-link disabled"}" rel="${"prefetch"}" href="${"#"}">Friends <span class="${"sr-only"}">(current)</span></a>
-			</li>
-			<li class="${["nav-item", segment === "inbox" ? "selected" : ""].join(" ").trim()}">
-				<a class="${"nav-link disabled"}" rel="${"prefetch"}" href="${"#"}">Inbox <span class="${"sr-only"}">(current)</span></a>
-			</li>
+			
 
     </ul>
 
@@ -2550,17 +2654,17 @@ const resolve_url = Url.resolve;
  * @param   Object   opts  Fetch options
  * @return  Promise
  */
-function fetch(url, opts) {
+function fetch$1(url, opts) {
 
 	// allow custom promise
-	if (!fetch.Promise) {
+	if (!fetch$1.Promise) {
 		throw new Error('native promise missing, set fetch.Promise to your favorite alternative');
 	}
 
-	Body.Promise = fetch.Promise;
+	Body.Promise = fetch$1.Promise;
 
 	// wrap http.request into fetch
-	return new fetch.Promise(function (resolve, reject) {
+	return new fetch$1.Promise(function (resolve, reject) {
 		// build request object
 		const request = new Request(url, opts);
 		const options = getNodeRequestOptions(request);
@@ -2624,7 +2728,7 @@ function fetch(url, opts) {
 			const headers = createHeadersLenient(res.headers);
 
 			// HTTP fetch step 5
-			if (fetch.isRedirect(res.statusCode)) {
+			if (fetch$1.isRedirect(res.statusCode)) {
 				// HTTP fetch step 5.2
 				const location = headers.get('Location');
 
@@ -2691,7 +2795,7 @@ function fetch(url, opts) {
 						}
 
 						// HTTP-redirect fetch step 15
-						resolve(fetch(new Request(locationURL, requestOpts)));
+						resolve(fetch$1(new Request(locationURL, requestOpts)));
 						finalize();
 						return;
 				}
@@ -2788,12 +2892,12 @@ function fetch(url, opts) {
  * @param   Number   code  Status code
  * @return  Boolean
  */
-fetch.isRedirect = function (code) {
+fetch$1.isRedirect = function (code) {
 	return code === 301 || code === 302 || code === 303 || code === 307 || code === 308;
 };
 
 // expose Promise
-fetch.Promise = global.Promise;
+fetch$1.Promise = global.Promise;
 
 function get_page_handler(
 	manifest,
@@ -2920,7 +3024,7 @@ function get_page_handler(
 					}
 				}
 
-				return fetch(parsed.href, opts);
+				return fetch$1(parsed.href, opts);
 			}
 		};
 
@@ -3300,11 +3404,18 @@ const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
 polka() // You can also use Express
+
+.get('/users/:id', (req, res) => {
+	console.log(`~> Hello, ${req.hello}`);
+	res.end(`User: ${req.params.id}`);
+})
 	.use(
 		compression({ threshold: 0 }),
 		sirv('static', { dev }),
 		middleware()
 	)
+
+
 	.listen(PORT, `0.0.0.0`, err => {
 		if (err) console.log('error', err);
 	});
