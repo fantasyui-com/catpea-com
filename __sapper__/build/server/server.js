@@ -393,7 +393,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 <div class="${"container-fluid"}">
 
 
-    <div class="${"row row-cols-1 row-cols-md-2 row-cols-lg-4"}">
+    <div class="${"row row-cols-1 row-cols-md-2 row-cols-xl-4"}">
 
     ${each(posts, post => `<div class="${"col mb-4"}">
         <div class="${"card bg-secondary text-white fade-in"}">
