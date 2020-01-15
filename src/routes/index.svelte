@@ -46,19 +46,11 @@ function shuffle(a) {
     return a;
 }
 
+
+let showPerPage = 8;
+let startAt = 0;
 let database = [];
-let posts = [
-
-  {kind:"youtube", title:"Laniakea: Our home supercluster", url:"https://www.youtube.com/watch?v=rENyyRwxpHo", image:"https://img.youtube.com/vi/rENyyRwxpHo/0.jpg" },
-  {kind:"youtube", title:"Oumuamua", url:"https://www.youtube.com/watch?v=rfi3w9Bzwik", image:"https://img.youtube.com/vi/rfi3w9Bzwik/0.jpg" },
-  {kind:"youtube", title:"", text:"", url:"https://www.youtube.com/watch?v=gypAjPp6eps", image:"https://img.youtube.com/vi/gypAjPp6eps/0.jpg" },
-  {kind:"youtube", title:"", text:"", url:"https://www.youtube.com/watch?v=yqc9zX04DXs", image:"https://img.youtube.com/vi/yqc9zX04DXs/0.jpg" },
-  {kind:"youtube", title:"", text:"", url:"https://www.youtube.com/watch?v=1-OdJmAefOY", image:"https://img.youtube.com/vi/1-OdJmAefOY/0.jpg" },
-  {kind:"youtube", title:"", text:"", url:"https://www.youtube.com/watch?v=P1ww1IXRfTA", image:"https://img.youtube.com/vi/P1ww1IXRfTA/0.jpg" },
-  {kind:"youtube", title:"", text:"", url:"https://www.youtube.com/watch?v=UuRxRGR3VpM", image:"https://img.youtube.com/vi/UuRxRGR3VpM/0.jpg" },
-  {kind:"youtube", title:"", text:"", url:"https://www.youtube.com/watch?v=YnU6vMVAdAE", image:"https://img.youtube.com/vi/YnU6vMVAdAE/0.jpg" },
-
-];
+let posts = [];
 
 let pageId = uuidv4();
 
@@ -67,13 +59,39 @@ onMount(async function() {
     const json = await res.json();
     database = json;
     shuffle(database);
-    posts = database.slice(0,8)
- });
+    nextPage()
+});
+
+let exhausted = false;
 
 function nextPage(){
-  shuffle(database);
-  posts = database.slice(0,8)
-  pageId = uuidv4();
+
+  if(startAt>(database.length-1)) exhausted = true;
+
+  console.log('exhausted',exhausted)
+  if(exhausted){
+    shuffle(database);
+    posts = database.slice(0,showPerPage);
+  }else{
+    const pages = ((database.length-1)/showPerPage)+1
+    const page = (startAt/showPerPage)+1
+    console.log('startAt=%d, showPerPage=%d, page=%d/%d', startAt, showPerPage, page,pages)
+    posts = database.slice(startAt, startAt+showPerPage);
+    startAt = startAt + showPerPage;
+    console.log('startAt=%d, showPerPage=%d', startAt, showPerPage)
+
+  }
+
+
+
+
+  setTimeout(function () {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      //behavior: 'smooth'
+    });
+  },2);
 }
 
 
@@ -114,7 +132,12 @@ function nextPage(){
 
 
     <div class="row p-5">
-      <a class="btn btn-primary btn-lg btn-block" href="/?start={pageId}" on:click={nextPage} role="button">Next &raquo;</a>
+    {#if exhausted}
+      <button class="btn btn-info btn-lg btn-block" on:click={nextPage}>More &raquo;</button>
+    {:else}
+      <button class="btn btn-primary btn-lg btn-block" on:click={nextPage}>Next &raquo;</button>
+    {/if}
+
     </div>
 
 
