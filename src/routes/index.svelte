@@ -1,6 +1,9 @@
 <script>
 
 import { onMount } from "svelte";
+import uuidv4 from "uuid/v4";
+
+
 
 const date = new Date();
 const year = date.getFullYear();
@@ -57,21 +60,26 @@ let posts = [
 
 ];
 
+let pageId = uuidv4();
+
 onMount(async function() {
     const res = await fetch("youtube.json");
     const json = await res.json();
     database = json;
     shuffle(database);
     posts = database.slice(0,8)
-});
+ });
 
-
-
+function nextPage(){
+  shuffle(database);
+  posts = database.slice(0,8)
+  pageId = uuidv4();
+}
 
 
 </script>
 <style>
-
+ 
 </style>
 
 <svelte:head>
@@ -89,12 +97,11 @@ onMount(async function() {
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
 
-
     {#each posts as post}
 
       <div class="col mb-4">
-        <div class="card bg-secondary text-white">
-          <img src="{post.image}" class="card-img-top" alt="{post.title}">
+        <div class="card bg-secondary text-white fade-in">
+          <a href="{post.url}"><img src="{post.image}" class="card-img-top" alt="{post.title}"></a>
           <div class="card-body">
             <h5 class="card-title small">{post.title}</h5>
           </div>
@@ -105,6 +112,10 @@ onMount(async function() {
 
     </div>
 
+
+    <div class="row p-5">
+      <a class="btn btn-primary btn-lg btn-block" href="/?start={pageId}" on:click={nextPage} role="button">Next &raquo;</a>
+    </div>
 
 
 
