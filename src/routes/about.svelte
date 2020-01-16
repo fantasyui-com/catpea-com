@@ -22,14 +22,19 @@
 			<div class="container bg-secondary shadow-lg border-success border-bottom rounded-lg p-5">
 
 				<p class="lead">
-					Modern Internet Research
+					<img src="cats/cat-01.png" alt="Cat Alert">
+					Catpea
+				</p>
+
+				<p class="lead">
+					Earthling, dreamer, explorer, fighter, adventurer, philosopher, artist, inventor, dancer, composer, athlete, poet, writer, CEO, philanthropist, and superstar.
 				</p>
 
 	      <div class="small">
 
- 
 
 
+<!--
 					<li>How to create a safe Pay Per Post website?
 				    <ul>
 				      <li>Use of third party off-site processor still poses fraud risk.</li>
@@ -60,7 +65,7 @@
 				    <ul>
 				      <li>This seems to be a separate website facing the same problems as above.</li>
 				    </ul>
-				  </li>
+				  </li> -->
 
 
 				</div>

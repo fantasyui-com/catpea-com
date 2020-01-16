@@ -7,8 +7,8 @@
 
 	%sapper.base%
 
-	<link rel='stylesheet' href='global.css'>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel='stylesheet' href='global.css'>
 	<link rel='manifest' href='manifest.json'>
 	<link rel='icon' type='image/png' href='cats/cat-02.png'>
 
@@ -23,6 +23,25 @@
 </head>
 
 <body class="bg-dark p-1">
+
+	<noscript>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+
+					<div class="alert alert-danger" role="alert">
+					  <h4 class="alert-heading">Whoo Wee!</h4>
+						<img src="cats/cat-02.png" alt="Cat Alert">
+					  <p>Arrr, Catpea requires JavaScript, Sorry.</p>
+					  <hr>
+					  <p class="mb-0">Please enable JavaScript in your browser.</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</noscript>
+
 	<!-- The application will be rendered inside this element,
 	     because `src/client.js` references it -->
 	<div id='sapper'>%sapper.html%</div>
