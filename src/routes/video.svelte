@@ -45,7 +45,7 @@ onMount(async function() {
     {#each slice as post}
       <div class="col mb-4">
         <div class="card bg-secondary text-white shadow p-0 m-0">
-          <a href="{post.url}"><img src="{post.image}" class="card-img-top" alt="{post.title}"></a>
+          <a href="{post.url}" rel="noopener noreferrer" target="_blank"><img src="{post.image}" class="card-img-top" alt="{post.title}"></a>
           <div class="card-body p-3">
             <h5 class="card-text small">{post.title}</h5>
           </div>

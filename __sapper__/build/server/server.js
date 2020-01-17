@@ -374,7 +374,7 @@ const Video = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
     <div class="${"row row-cols-1 row-cols-md-2 row-cols-xl-4"}">
     ${each(slice, post => `<div class="${"col mb-4"}">
         <div class="${"card bg-secondary text-white shadow p-0 m-0"}">
-          <a${add_attribute("href", post.url, 0)}><img${add_attribute("src", post.image, 0)} class="${"card-img-top"}"${add_attribute("alt", post.title, 0)}></a>
+          <a${add_attribute("href", post.url, 0)} rel="${"noopener noreferrer"}" target="${"_blank"}"><img${add_attribute("src", post.image, 0)} class="${"card-img-top"}"${add_attribute("alt", post.title, 0)}></a>
           <div class="${"card-body p-3"}">
             <h5 class="${"card-text small"}">${escape(post.title)}</h5>
           </div>
