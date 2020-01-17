@@ -1,0 +1,1 @@
+import"./index.f4fb538e.js";import"./slicedToArray.f13a096f.js";import"./_commonjsHelpers.419d1ef6.js";import"./asyncToGenerator.6a1c4682.js";import{s as r}from"./app.02239868.js";r({target:document.querySelector("#sapper")});

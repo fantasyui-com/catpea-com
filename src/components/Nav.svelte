@@ -41,10 +41,15 @@
 
 			-->
 
+      <li class="nav-item" class:selected='{segment === "videos"}'>
+        <a class="nav-link" href="/video?p=0&i=8">Video Library <span class="sr-only">(current)</span></a>
+      </li>
+
+<!--
       <li class="nav-item" class:selected='{segment === "warrior"}'>
         <a class="nav-link" href="warrior">Warrior <span class="sr-only">(current)</span></a>
-      </li>
-<!-- 
+      </li> -->
+<!--
       <li class="nav-item" class:selected='{segment === "about"}'>
         <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
       </li> -->
