@@ -1,7 +1,7 @@
 <script>
 
 import { onMount } from "svelte";
-import { stores, goto } from '@sapper/app';
+import { stores } from '@sapper/app';
 const { page } = stores();
 
 let pageReady = false;
@@ -22,11 +22,13 @@ $: slice = database.slice(start, end);
 
 
 onMount(async function() {
+
     const res = await fetch("youtube.json");
     const json = await res.json();
     database = json;
     console.log('database.length: %d',database.length)
     pageReady = true;
+    
 });
 
 </script>
