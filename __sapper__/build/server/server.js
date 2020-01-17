@@ -133,7 +133,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 		modified: "2020-01-17T01:57:49.730Z",
 		changed: "recently",
 		name: "Video Library",
-		text: "Cat Pea Video Library contains hundreds of interesting, informative, and educational videos from across all disciplines.",
+		text: "Cat Pea Video Library contains hundreds of interesting, informative, and educational videos.",
 		url: "/video?p=0&i=8",
 		img: "videos.png"
 	};
@@ -161,7 +161,8 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
           <div class="${"card-body p-3"}">
             <h5 class="${"card-text"}">${escape(videos.name)}</h5>
             <p class="${"card-text"}">${escape(videos.text)}</p>
-            <p class="${"card-text"}"><small class="${"text-muted"}">${escape(videos.changed)}</small></p>
+            <a${add_attribute("href", videos.url, 0)} class="${"btn btn-primary"}">${escape(videos.name)} »</a>
+            <p class="${"card-text"}"><small class="${"text-muted"}">Updated ${escape(videos.changed)}</small></p>
           </div>
         </div>
 

@@ -11,7 +11,7 @@ const videos = {
   changed: 'recently',
 
   name: 'Video Library',
-  text: 'Cat Pea Video Library contains hundreds of interesting, informative, and educational videos from across all disciplines.',
+  text: 'Cat Pea Video Library contains hundreds of interesting, informative, and educational videos.',
 
   url: '/video?p=0&i=8',
   img: 'videos.png',
@@ -48,7 +48,8 @@ recalculate();
           <div class="card-body p-3">
             <h5 class="card-text">{videos.name}</h5>
             <p class="card-text">{videos.text}</p>
-            <p class="card-text"><small class="text-muted">{videos.changed}</small></p>
+            <a href="{videos.url}" class="btn btn-primary">{videos.name} &raquo;</a>
+            <p class="card-text"><small class="text-muted">Updated {videos.changed}</small></p>
           </div>
         </div>
 
