@@ -8,110 +8,11 @@ var compression = _interopDefault(require('compression'));
 var fs = _interopDefault(require('fs'));
 var path = _interopDefault(require('path'));
 var moment = _interopDefault(require('moment'));
-var crypto = _interopDefault(require('crypto'));
-var Stream$1 = _interopDefault(require('stream'));
+var Stream = _interopDefault(require('stream'));
 var http = _interopDefault(require('http'));
 var Url = _interopDefault(require('url'));
 var https = _interopDefault(require('https'));
 var zlib = _interopDefault(require('zlib'));
-
-// Ordinarily, you'd generate this data from markdown files in your
-// repo, or fetch them from a database of some kind. But in order to
-// avoid unnecessary dependencies in the starter template, and in the
-// service of obviousness, we're just going to leave it here.
-
-// This file is called `_posts.js` rather than `posts.js`, because
-// we don't want to create an `/blog/posts` route — the leading
-// underscore tells Sapper not to do that.
-
-const posts = [
-
-	{
-		date: '2020-01-10T13:33:16.538Z',
-		publish: '2020-07-10T13:33:16.538Z',
-
-		category:'MUD',
-		title: 'What is a MUD?',
-		about: 'What can we learn from minimum viable virual worlds?',
-
-		slug: 'what-is-sapper',
-		html: `
-			<p>First, you have to know what <a class="btn btn-primary btn-sm d-inline text-nowrap shadow" href='https://svelte.dev'>Svelte</a> is. Svelte is a UI framework with a bold new idea: rather than providing a library that you write code with (like React or Vue, for example), it's a compiler that turns your components into highly optimized vanilla JavaScript. If you haven't already read the <a class="btn btn-primary btn-sm d-inline text-nowrap shadow" href='https://svelte.dev/blog/frameworks-without-the-framework'>introductory blog post</a>, you should!</p>
-
-			<p>Sapper is a Next.js-style framework (<a class="btn btn-primary btn-sm d-inline text-nowrap shadow" href='blog/how-is-sapper-different-from-next'>more on that here</a>) built around Svelte. It makes it embarrassingly easy to create extremely high performance web apps. Out of the box, you get:</p>
-
-			<ul>
-				<li>Code-splitting, dynamic imports and hot module replacement, powered by webpack</li>
-				<li>Server-side rendering (SSR) with client-side hydration</li>
-				<li>Service worker for offline support, and all the PWA bells and whistles</li>
-				<li>The nicest development experience you've ever had, or your money back</li>
-			</ul>
-
-			<p>It's implemented as Express middleware. Everything is set up and waiting for you to get started, but you keep complete control over the server, service worker, webpack config and everything else, so it's as flexible as you need it to be.</p>
-		`
-	},
-
-];
-
-posts.forEach(post => {
-	post.html = post.html.replace(/^\t{3}/gm, '');
-});
-
-const contents = JSON.stringify(posts.map(post => {
-	return {
-		title: post.title,
-		about: post.about,
-		category: post.category,
-		date: post.date,
-		publish: post.publish,
-		slug: post.slug
-	};
-}));
-
-function get(req, res) {
-	res.writeHead(200, {
-		'Content-Type': 'application/json'
-	});
-
-	res.end(contents);
-}
-
-var route_0 = /*#__PURE__*/Object.freeze({
-	__proto__: null,
-	get: get
-});
-
-const lookup = new Map();
-posts.forEach(post => {
-	lookup.set(post.slug, JSON.stringify(post));
-});
-
-function get$1(req, res, next) {
-	// the `slug` parameter is available because
-	// this file is called [slug].json.js
-	const { slug } = req.params;
-
-	if (lookup.has(slug)) {
-		res.writeHead(200, {
-			'Content-Type': 'application/json'
-		});
-
-		res.end(lookup.get(slug));
-	} else {
-		res.writeHead(404, {
-			'Content-Type': 'application/json'
-		});
-
-		res.end(JSON.stringify({
-			message: `Not found`
-		}));
-	}
-}
-
-var route_1 = /*#__PURE__*/Object.freeze({
-	__proto__: null,
-	get: get$1
-});
 
 function noop() { }
 function run(fn) {
@@ -267,325 +168,6 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
     </div>
 </div>`;
-});
-
-// Unique ID creation requires a high quality random # generator.  In node.js
-// this is pretty straight-forward - we use the crypto API.
-
-
-
-var rng = function nodeRNG() {
-  return crypto.randomBytes(16);
-};
-
-/**
- * Convert array of 16 byte values to UUID string format of the form:
- * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
- */
-var byteToHex = [];
-for (var i = 0; i < 256; ++i) {
-  byteToHex[i] = (i + 0x100).toString(16).substr(1);
-}
-
-function bytesToUuid(buf, offset) {
-  var i = offset || 0;
-  var bth = byteToHex;
-  // join used to fix memory issue caused by concatenation: https://bugs.chromium.org/p/v8/issues/detail?id=3175#c4
-  return ([bth[buf[i++]], bth[buf[i++]], 
-	bth[buf[i++]], bth[buf[i++]], '-',
-	bth[buf[i++]], bth[buf[i++]], '-',
-	bth[buf[i++]], bth[buf[i++]], '-',
-	bth[buf[i++]], bth[buf[i++]], '-',
-	bth[buf[i++]], bth[buf[i++]],
-	bth[buf[i++]], bth[buf[i++]],
-	bth[buf[i++]], bth[buf[i++]]]).join('');
-}
-
-var bytesToUuid_1 = bytesToUuid;
-
-function v4(options, buf, offset) {
-  var i = buf && offset || 0;
-
-  if (typeof(options) == 'string') {
-    buf = options === 'binary' ? new Array(16) : null;
-    options = null;
-  }
-  options = options || {};
-
-  var rnds = options.random || (options.rng || rng)();
-
-  // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
-  rnds[6] = (rnds[6] & 0x0f) | 0x40;
-  rnds[8] = (rnds[8] & 0x3f) | 0x80;
-
-  // Copy bytes to buffer, if provided
-  if (buf) {
-    for (var ii = 0; ii < 16; ++ii) {
-      buf[i + ii] = rnds[ii];
-    }
-  }
-
-  return buf || bytesToUuid_1(rnds);
-}
-
-var v4_1 = v4;
-
-/* src/routes/old_index.svelte generated by Svelte v3.16.7 */
-let showPerPage = 8;
-
-const Old_index = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
-	let ready = false;
-	const date = new Date();
-	const year = date.getFullYear();
-	let startAt = 0;
-	let database = [];
-	let posts = [];
-	let pageId = v4_1();
-
-	onMount(async function () {
-		const res = await fetch("youtube.json");
-		const json = await res.json();
-		database = json;
-		renderPage();
-		ready = true;
-	});
-
-	let exhausted = false;
-	let page = 0;
-	let pages = 0;
-
-	function renderPage() {
-		if (startAt > database.length - 1) exhausted = true;
-		pages = Math.floor((database.length - 1) / showPerPage + 1);
-		page = startAt / showPerPage + 1;
-
-		if (exhausted) {
-			posts = database.slice(0, showPerPage);
-		} else {
-			posts = database.slice(startAt, startAt + showPerPage);
-		}
-
-		setTimeout(
-			function () {
-				window.scrollTo({ top: 0, left: 0 });
-			},
-			2
-		);
-	}
-
-	return `${($$result.head += `<title>Cat Pea</title>`, "")}
-
-
-
-
-
-
-
-<div class="${["container-fluid", ready ? "visible" : ""].join(" ").trim()}" style="${"visibility: hidden;"}">
-
-
-    <div class="${"row row-cols-1 row-cols-md-2 row-cols-xl-4"}">
-
-    ${each(posts, post => `<div class="${"col mb-4"}">
-        <div class="${"card bg-secondary text-white shadow p-0 m-0"}">
-
-          <a${add_attribute("href", post.url, 0)}><img${add_attribute("src", post.image, 0)} class="${"card-img-top"}"${add_attribute("alt", post.title, 0)}></a>
-
-          <div class="${"card-body p-3"}">
-            <h5 class="${"card-text small"}">${escape(post.title)}</h5>
-          </div>
-
-        </div>
-      </div>`)}
-
-    </div>
-
-
-    <div class="${"row"}">
-      <div class="${"col mb-4"}">
-
-      ${exhausted
-	? `<button class="${"btn btn-secondary btn-lg btn-block shadow"}">Shuffle ∞</button>`
-	: `<button class="${"btn btn-secondary btn-lg btn-block shadow"}">Page ${escape(page)}/${escape(pages)} »</button>`}
-
-      </div>
-    </div>
-
-
-
-
-</div>`;
-});
-
-/* src/routes/warrior.svelte generated by Svelte v3.16.7 */
-
-const Warrior = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
-	return `${($$result.head += `<title>About</title>`, "")}
-
-
-
-
-
-
-
-
-	<div class="${"container-fluid"}">
-		<div class="${"row"}">
-			<div class="${"col-lg-4"}"></div>
-
-			<div class="${"col"}">
-
-			<div class="${"container bg-secondary shadow-lg border-success border-bottom rounded-lg p-5"}">
-
-				<p class="${"lead"}">
-					Warrior
-				</p>
-
-				<p class="${"lead"}">
-
-				</p>
-
-	      <div class="${"small"}">
-
-
-
-
-
-				</div>
-
-		  </div>
-
-			</div>
-
-			<div class="${"col-lg-4"}"></div>
-		</div>
-	</div>`;
-});
-
-/* src/routes/stream/index.svelte generated by Svelte v3.16.7 */
-
-function preload({ params, query }) {
-	return this.fetch(`stream.json`).then(r => r.json()).then(posts => {
-		return { posts };
-	});
-}
-
-const Stream = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
-	let { posts } = $$props;
-	if ($$props.posts === void 0 && $$bindings.posts && posts !== void 0) $$bindings.posts(posts);
-
-	return `${($$result.head += `<title>Catpea Stream</title>`, "")}
-
-<div class="${"container-fluid"}">
-	<div class="${"row"}">
-		<div class="${"col-lg-4"}"></div>
-		<div class="${"col"}">
-			${each(posts, post => `<div class="${"card bg-secondary mb-3 shadow-lg"}" style="${"max-width: 40rem;"}">
-				  <div class="${"card-header"}">${escape(post.category)}</div>
-				  <div class="${"card-body"}">
-				    <h5 class="${"card-title"}">${escape(post.title)}</h5>
-				    <p class="${"card-text text-dark small"}">${escape(post.date)}</p>
-				    <p class="${"card-text small"}">${escape(post.about)}</p>
-				  </div>
-				  <div class="${"card-body text-right"}">
-				 		<a class="${"btn btn-dark btn-sm shadow"}" rel="${"prefetch"}" href="${"stream/" + escape(post.slug)}">${escape(post.title)} »</a>
-				  </div>
-				</div>`)}
-		</div>
-		<div class="${"col-lg-4"}"></div>
-	</div>
-</div>`;
-});
-
-/* src/routes/stream/[slug].svelte generated by Svelte v3.16.7 */
-
-async function preload$1({ params, query }) {
-	const res = await this.fetch(`stream/${params.slug}.json`);
-	const data = await res.json();
-
-	if (res.status === 200) {
-		return { post: data };
-	} else {
-		this.error(res.status, data.message);
-	}
-}
-
-const U5Bslugu5D = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
-	let { post } = $$props;
-	if ($$props.post === void 0 && $$bindings.post && post !== void 0) $$bindings.post(post);
-
-	return `${($$result.head += `<title>${escape(post.title)}</title>`, "")}
-
-
-
-
-<div class="${"container-fluid"}">
-	<div class="${"row"}">
-		<div class="${"col-lg-4"}"></div>
-
-		<div class="${"col"}">
-
-		<div class="${"card bg-secondary mb-3 shadow-lg"}">
-		  <div class="${"card-header"}">${escape(post.title)}</div>
-
-			<div class="${"card-body"}">
-		    <p class="${"card-text"}">${post.html}</p>
-		  </div>
-
-		</div>
-
-		</div>
-
-		<div class="${"col-lg-4"}"></div>
-	</div>
-</div>`;
-});
-
-/* src/routes/about.svelte generated by Svelte v3.16.7 */
-
-const About = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
-	return `${($$result.head += `<title>About</title>`, "")}
-
-
-
-
-
-
-
-
-	<div class="${"container-fluid"}">
-		<div class="${"row"}">
-			<div class="${"col-lg-4"}"></div>
-
-			<div class="${"col"}">
-
-			<div class="${"container bg-secondary shadow-lg border-success border-bottom rounded-lg p-5"}">
-
-				<p class="${"lead"}">
-					<img src="${"cats/cat-01.png"}" alt="${"Cat Alert"}">
-					Catpea
-				</p>
-
-				<p class="${"lead"}">
-					Earthling, dreamer, explorer, fighter, adventurer, philosopher, artist, inventor, dancer, composer, athlete, poet, writer, CEO, philanthropist, and superstar.
-				</p>
-
-	      <div class="${"small"}">
-
-
-
-
-
-
-				</div>
-
-		  </div>
-
-			</div>
-
-			<div class="${"col-lg-4"}"></div>
-		</div>
-	</div>`;
 });
 
 const subscriber_queue = [];
@@ -841,23 +423,9 @@ const Video = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 
 // This file is generated by Sapper — do not edit it!
 
-const d = decodeURIComponent;
-
 const manifest = {
 	server_routes: [
-		{
-			// stream/index.json.js
-			pattern: /^\/stream.json$/,
-			handlers: route_0,
-			params: () => ({})
-		},
-
-		{
-			// stream/[slug].json.js
-			pattern: /^\/stream\/([^\/]+?).json$/,
-			handlers: route_1,
-			params: match => ({ slug: d(match[1]) })
-		}
+		
 	],
 
 	pages: [
@@ -866,47 +434,6 @@ const manifest = {
 			pattern: /^\/$/,
 			parts: [
 				{ name: "index", file: "index.svelte", component: Routes }
-			]
-		},
-
-		{
-			// old_index.svelte
-			pattern: /^\/old_index\/?$/,
-			parts: [
-				{ name: "old_index", file: "old_index.svelte", component: Old_index }
-			]
-		},
-
-		{
-			// warrior.svelte
-			pattern: /^\/warrior\/?$/,
-			parts: [
-				{ name: "warrior", file: "warrior.svelte", component: Warrior }
-			]
-		},
-
-		{
-			// stream/index.svelte
-			pattern: /^\/stream\/?$/,
-			parts: [
-				{ name: "stream", file: "stream/index.svelte", component: Stream, preload: preload }
-			]
-		},
-
-		{
-			// stream/[slug].svelte
-			pattern: /^\/stream\/([^\/]+?)\/?$/,
-			parts: [
-				null,
-				{ name: "stream_$slug", file: "stream/[slug].svelte", component: U5Bslugu5D, preload: preload$1, params: match => ({ slug: d(match[1]) }) }
-			]
-		},
-
-		{
-			// about.svelte
-			pattern: /^\/about\/?$/,
-			parts: [
-				{ name: "about", file: "about.svelte", component: About }
 			]
 		},
 
@@ -1431,7 +958,7 @@ function stringifyString(str) {
 // Based on https://github.com/tmpvar/jsdom/blob/aa85b2abf07766ff7bf5c1f6daafb3726f2f2db5/lib/jsdom/living/blob.js
 
 // fix for "Readable" isn't a named export issue
-const Readable = Stream$1.Readable;
+const Readable = Stream.Readable;
 
 const BUFFER = Symbol('buffer');
 const TYPE = Symbol('type');
@@ -1583,7 +1110,7 @@ try {
 const INTERNALS = Symbol('Body internals');
 
 // fix an issue where "PassThrough" isn't a named export for node <10
-const PassThrough = Stream$1.PassThrough;
+const PassThrough = Stream.PassThrough;
 
 /**
  * Body mixin
@@ -1616,7 +1143,7 @@ function Body(body) {
 	} else if (ArrayBuffer.isView(body)) {
 		// body is ArrayBufferView
 		body = Buffer.from(body.buffer, body.byteOffset, body.byteLength);
-	} else if (body instanceof Stream$1) ; else {
+	} else if (body instanceof Stream) ; else {
 		// none of the above
 		// coerce to string then buffer
 		body = Buffer.from(String(body));
@@ -1629,7 +1156,7 @@ function Body(body) {
 	this.size = size;
 	this.timeout = timeout;
 
-	if (body instanceof Stream$1) {
+	if (body instanceof Stream) {
 		body.on('error', function (err) {
 			const error = err.name === 'AbortError' ? err : new FetchError(`Invalid response body while trying to fetch ${_this.url}: ${err.message}`, 'system', err);
 			_this[INTERNALS].error = error;
@@ -1785,7 +1312,7 @@ function consumeBody() {
 	}
 
 	// istanbul ignore if: should never happen
-	if (!(body instanceof Stream$1)) {
+	if (!(body instanceof Stream)) {
 		return Body.Promise.resolve(Buffer.alloc(0));
 	}
 
@@ -1952,7 +1479,7 @@ function clone(instance) {
 
 	// check that body is a stream and not form-data object
 	// note: we can't clone the form-data object without having it as a dependency
-	if (body instanceof Stream$1 && typeof body.getBoundary !== 'function') {
+	if (body instanceof Stream && typeof body.getBoundary !== 'function') {
 		// tee instance body
 		p1 = new PassThrough();
 		p2 = new PassThrough();
@@ -2000,7 +1527,7 @@ function extractContentType(body) {
 	} else if (typeof body.getBoundary === 'function') {
 		// detect form data input from form-data module
 		return `multipart/form-data;boundary=${body.getBoundary()}`;
-	} else if (body instanceof Stream$1) {
+	} else if (body instanceof Stream) {
 		// body is stream
 		// can't really do much about this
 		return null;
@@ -2558,7 +2085,7 @@ const INTERNALS$2 = Symbol('Request internals');
 const parse_url = Url.parse;
 const format_url = Url.format;
 
-const streamDestructionSupported = 'destroy' in Stream$1.Readable.prototype;
+const streamDestructionSupported = 'destroy' in Stream.Readable.prototype;
 
 /**
  * Check if a value is an instance of Request.
@@ -2721,7 +2248,7 @@ function getNodeRequestOptions(request) {
 		throw new TypeError('Only HTTP(S) protocols are supported');
 	}
 
-	if (request.signal && request.body instanceof Stream$1.Readable && !streamDestructionSupported) {
+	if (request.signal && request.body instanceof Stream.Readable && !streamDestructionSupported) {
 		throw new Error('Cancellation of streamed requests with AbortSignal is not supported in node < 8');
 	}
 
@@ -2796,7 +2323,7 @@ AbortError.prototype.constructor = AbortError;
 AbortError.prototype.name = 'AbortError';
 
 // fix an issue where "PassThrough", "resolve" aren't a named export for node <10
-const PassThrough$1 = Stream$1.PassThrough;
+const PassThrough$1 = Stream.PassThrough;
 const resolve_url = Url.resolve;
 
 /**
@@ -2829,7 +2356,7 @@ function fetch$1(url, opts) {
 		const abort = function abort() {
 			let error = new AbortError('The user aborted a request.');
 			reject(error);
-			if (request.body && request.body instanceof Stream$1.Readable) {
+			if (request.body && request.body instanceof Stream.Readable) {
 				request.body.destroy(error);
 			}
 			if (!response || !response.body) return;
@@ -3423,7 +2950,7 @@ mime_raw.split('\n').forEach((row) => {
 	});
 });
 
-function lookup$1(file) {
+function lookup(file) {
 	const match = /\.([^\.]+)$/.exec(file);
 	return match && map.get(match[1]);
 }
@@ -3531,7 +3058,7 @@ function serve({ prefix, pathname, cache_control }
 
 	return (req, res, next) => {
 		if (filter(req)) {
-			const type = lookup$1(req.path);
+			const type = lookup(req.path);
 
 			try {
 				const file = decodeURIComponent(req.path.slice(1));
