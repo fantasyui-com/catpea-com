@@ -41,10 +41,16 @@ function reset(){
   Song Beat Calculator
 </div>
 	<div class="card-body">
-	 <h3 class="card-title text-white text-center py-5">{totalBpm} BPM</h3>
-      <button class="btn btn-primary" on:click={beat}>Beat</button>
-      <button class="btn btn-secondary" on:click={reset}>Reset</button>
-      <p class="card-text py-3"><small class="text-info">Start hitting the beat button to the beat of a song to calculate the song's BPM.</small></p>
+
+    <h3 class="card-title text-white text-center py-5">{totalBpm} BPM</h3>
+    <button class="btn btn-primary btn-lg" on:click={beat}>Beat</button>
+    <p class="card-text py-3"><small class="text-info">Start hitting the beat button to the beat of a song to calculate the song's BPM.</small></p>
+
+    <div class="text-right">
+      <button class="btn btn-secondary btn-sm" on:click={reset}>Reset</button>
+    </div>
 
 	</div>
+
+
 </div>

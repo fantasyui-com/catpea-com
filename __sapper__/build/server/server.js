@@ -136,12 +136,18 @@ const SongBeatCalculator = create_ssr_component(($$result, $$props, $$bindings, 
   Song Beat Calculator
 </div>
 	<div class="${"card-body"}">
-	 <h3 class="${"card-title text-white text-center py-5"}">${escape(totalBpm)} BPM</h3>
-      <button class="${"btn btn-primary"}">Beat</button>
-      <button class="${"btn btn-secondary"}">Reset</button>
-      <p class="${"card-text py-3"}"><small class="${"text-info"}">Start hitting the beat button to the beat of a song to calculate the song&#39;s BPM.</small></p>
+
+    <h3 class="${"card-title text-white text-center py-5"}">${escape(totalBpm)} BPM</h3>
+    <button class="${"btn btn-primary btn-lg"}">Beat</button>
+    <p class="${"card-text py-3"}"><small class="${"text-info"}">Start hitting the beat button to the beat of a song to calculate the song&#39;s BPM.</small></p>
+
+    <div class="${"text-right"}">
+      <button class="${"btn btn-secondary btn-sm"}">Reset</button>
+    </div>
 
 	</div>
+
+
 </div>`;
 });
 

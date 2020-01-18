@@ -2,14 +2,14 @@
   "bundler": "rollup",
   "shimport": "1.0.1",
   "assets": {
-    "main": "client.57e1bb08.js"
+    "main": "client.464c18d6.js"
   },
   "css": {
     "main": "main.637669398.css",
     "chunks": {
       "index.svelte": [],
       "video.svelte": [
-        "app.9b0b6d79.css"
+        "app.0231e2bf.css"
       ]
     }
   }
