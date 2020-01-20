@@ -67,14 +67,14 @@ setInterval(function(){
   <div class="card-header">
     Solstice and Equinox Calculator
   </div>
-	<div class="card-body py-5">
+	<div class="card-body py-3">
 
 
     {#each events as event}
       {#if event.next}
-      <h5 class="card-text pb-4 text-info">{event.text}</h5>
+      <p class="card-text pb-4 text-info lead">{event.text}</p>
       {:else}
-      <h5 class="card-text pb-4 text-muted">{event.text}</h5>
+      <p class="card-text pb-2 text-muted">{event.text}</p>
       {/if}
     {/each}
 
