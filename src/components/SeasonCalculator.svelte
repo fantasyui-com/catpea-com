@@ -4,6 +4,7 @@ import mainspring from 'mainspring';
 import solsticesAndEquinoxes from 'solstices-and-equinoxes';
 function makeEvents(){
   let today = new Date();
+  //today.setMonth(today.getMonth()+8);
   let tmpList = [];
   function labelEvent(i){
     const o = i.countdown;
@@ -14,7 +15,7 @@ function makeEvents(){
       seconds: o.seconds==1?'second':'seconds',
     }
     i.text = [
-      `${i.name} is in`,
+      `${i.label} is in`,
       o.days==0?undefined:`${o.days} ${p.days},`,
       o.hours==0?undefined:`${o.hours} ${p.hours},`,
       o.minutes==0?undefined:`${o.minutes} ${p.minutes} and`,
@@ -25,14 +26,14 @@ function makeEvents(){
   const year = new Date().getFullYear();
   const thisYear = solsticesAndEquinoxes.filter(i=>i.year==(year)).pop();
   const nextYear = solsticesAndEquinoxes.filter(i=>i.year==(year+1)).pop();
-  tmpList.push({name:'Vernal (Spring) Equinox', countdown: mainspring(new Date(thisYear.spring),today)});
-  tmpList.push({name:'Summer Solstice', countdown: mainspring(new Date(thisYear.summer),today)});
-  tmpList.push({name:'Autumnal Equinox',   countdown: mainspring(new Date(thisYear.fall),today)});
-  tmpList.push({name:'Winter Solstice', countdown: mainspring(new Date(thisYear.winter),today)});
-  tmpList.push({name:'Vernal (Spring) Equinox', countdown: mainspring(new Date(nextYear.spring),today)});
-  tmpList.push({name:'Summer Solstice', countdown: mainspring(new Date(nextYear.summer),today)});
-  tmpList.push({name:'Autumnal Equinox',   countdown: mainspring(new Date(nextYear.fall),today)});
-  tmpList.push({name:'Winter Solstice', countdown: mainspring(new Date(nextYear.winter),today)});
+  tmpList.push({name: 'Spring', label:'Vernal (Spring) Equinox', countdown: mainspring(new Date(thisYear.spring),today)});
+  tmpList.push({name: 'Summer', label:'Summer Solstice', countdown: mainspring(new Date(thisYear.summer),today)});
+  tmpList.push({name: 'Fall',   label:'Autumnal Equinox',   countdown: mainspring(new Date(thisYear.fall),today)});
+  tmpList.push({name: 'Winter', label:'Winter Solstice', countdown: mainspring(new Date(thisYear.winter),today)});
+  tmpList.push({name: 'Spring', label:year+1+' Vernal (Spring) Equinox', countdown: mainspring(new Date(nextYear.spring),today)});
+  tmpList.push({name: 'Summer', label:year+1+' Summer Solstice', countdown: mainspring(new Date(nextYear.summer),today)});
+  tmpList.push({name: 'Fall',   label:year+1+' Autumnal Equinox',   countdown: mainspring(new Date(nextYear.fall),today)});
+  tmpList.push({name: 'Winter', label:year+1+' Winter Solstice', countdown: mainspring(new Date(nextYear.winter),today)});
   tmpList = tmpList.filter(i=>i.countdown.inFuture);
   tmpList = tmpList.map(i=>labelEvent(i))
   const tracker = new Set();
