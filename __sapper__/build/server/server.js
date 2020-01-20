@@ -340,7 +340,7 @@ const SeasonCalculator = create_ssr_component(($$result, $$props, $$bindings, $$
 
 	return `<div class="${"card text-white bg-dark shadow"}">
   <div class="${"card-header"}">
-    Calculate Solstices and Equinoxes
+    Solstice and Equinox Calculator
   </div>
 	<div class="${"card-body py-5"}">
 
