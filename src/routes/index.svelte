@@ -1,6 +1,7 @@
 <script>
 import SongBeatCalculator from '../components/SongBeatCalculator.svelte';
 import SongTempoChangeCalculator from '../components/SongTempoChangeCalculator.svelte';
+import SeasonCalculator from '../components/SeasonCalculator.svelte';
 
 import moment from "moment";
 
@@ -53,6 +54,7 @@ recalculate();
         </div>
     </div>
 
+    <div class="col pb-3"><SeasonCalculator/></div>
     <div class="col pb-3"><SongBeatCalculator/></div>
     <div class="col pb-3"><SongTempoChangeCalculator/></div>
 
