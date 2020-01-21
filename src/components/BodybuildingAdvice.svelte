@@ -27,7 +27,7 @@ function boom(){
 
 </style>
 
-<div class="card text-white bg-dark shadow">
+<div class="card text-white bg-dark shadow" style="min-height: 23rem;">
   <div class="card-header">
     Bodybuilding Advice
   </div>

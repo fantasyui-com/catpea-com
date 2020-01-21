@@ -3,6 +3,7 @@ import SongBeatCalculator from '../components/SongBeatCalculator.svelte';
 import SongTempoChangeCalculator from '../components/SongTempoChangeCalculator.svelte';
 import SeasonCalculator from '../components/SeasonCalculator.svelte';
 import BodybuildingAdvice from '../components/BodybuildingAdvice.svelte';
+import RandomVideo from '../components/RandomVideo.svelte';
 
 import moment from "moment";
 
@@ -69,6 +70,18 @@ recalculate();
 
     <div class="col pb-3">
     <BodybuildingAdvice/>
+    </div>
+
+    <div class="col pb-3">
+    <RandomVideo/>
+    </div>
+
+    <div class="col pb-3">
+    <RandomVideo/>
+    </div>
+    
+    <div class="col pb-3">
+    <RandomVideo/>
     </div>
 
     </div>
