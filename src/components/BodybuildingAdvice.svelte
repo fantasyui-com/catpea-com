@@ -13,6 +13,10 @@ setInterval(function(){
     progress = 100;
   }
 }, 300)
+function boom(){
+  advice = oneOf(bodybuildingAdvice());
+  progress = 100;
+}
 
 
 </script>
@@ -29,7 +33,7 @@ setInterval(function(){
   </div>
 	<div class="card-body py-3">
 
-    <p class="card-text pb-4 text-warning lead text-center pt-4">{advice}</p>
+    <p class="card-text pb-4 text-warning lead text-center pt-4" style="cursor: pointer;" on:click={boom}>{advice}</p>
 
     <div class="progress" style="height: 1px; background: black;">
       <div class="progress-bar bg-warning" role="progressbar" style="width: {progress}%;" aria-valuenow="{progress}" aria-valuemin="0" aria-valuemax="100"></div>

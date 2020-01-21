@@ -394,7 +394,7 @@ const BodybuildingAdvice = create_ssr_component(($$result, $$props, $$bindings, 
   </div>
 	<div class="${"card-body py-3"}">
 
-    <p class="${"card-text pb-4 text-warning lead text-center pt-4"}">${escape(advice)}</p>
+    <p class="${"card-text pb-4 text-warning lead text-center pt-4"}" style="${"cursor: pointer;"}">${escape(advice)}</p>
 
     <div class="${"progress"}" style="${"height: 1px; background: black;"}">
       <div class="${"progress-bar bg-warning"}" role="${"progressbar"}" style="${"width: " + escape(progress) + "%;"}"${add_attribute("aria-valuenow", progress, 0)} aria-valuemin="${"0"}" aria-valuemax="${"100"}"></div>
