@@ -503,7 +503,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 	let news = [
 		{
 			date: "2020-01-22T03:38:19.680Z",
-			html: "Improved Bodybuilding Advice randomness items begin repeating after about 84 selections. I added a tiny little sub-progress bar to show when new repetitions will begin."
+			html: "Improved the randomness of the Bodybuilding Advice. Items begin repeating after about 84 selections. I added a tiny little sub-progress bar to show when new repetitions will begin."
 		},
 		{
 			date: "2020-01-22T03:23:19.680Z",
