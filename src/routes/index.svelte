@@ -19,12 +19,21 @@ const videos = {
   img: 'videos.png',
 }
 
-function recalculate(){
-  videos.changed = moment(videos.modified).from(moment())
-}
-setInterval(recalculate,60000)
-recalculate();
 
+
+
+
+let news = [
+  {date:'2020-01-22T03:23:19.680Z', html:'Added Preferences Pane to Bodybuilding Advice, Bodybuilding Advice is meant to serve as a starting point for more complex components.'},
+  {date:'2020-01-22T03:23:19.680Z', html:'Testing <a href="https://octicons.github.com/" rel="noopener noreferrer" target="_blank">octicons</a>'},
+];
+
+function recalculateTimestamps(){
+  videos.changed = moment(videos.modified).from(moment())
+  news = news.map(i=>{ i.ago = moment(i.date).from(moment()); return i; })
+}
+setInterval(recalculateTimestamps,60000)
+recalculateTimestamps();
 
 </script>
 
@@ -73,16 +82,29 @@ recalculate();
     </div>
 
     <div class="col pb-3">
+        <div class="card text-white bg-dark shadow" style="min-height: 23rem;">
+        <div class="card-header">
+          News
+        </div>
+          <div class="card-body p-3 text-secondary">
+          {#each news as item}
+            <p class="card-text">
+              {@html item.html} &middot; {item.ago}
+            </p>
+          {/each}
+          </div>
+        </div>
+    </div>
+
+    <div class="col pb-3">
     <RandomVideo/>
     </div>
 
     <div class="col pb-3">
     <RandomVideo/>
     </div>
-    
-    <div class="col pb-3">
-    <RandomVideo/>
-    </div>
+ 
+
 
     </div>
 </div>
