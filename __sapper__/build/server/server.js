@@ -231,7 +231,7 @@ const SongTempoChangeCalculator = create_ssr_component(($$result, $$props, $$bin
 
       ${ `<div class="${"card-text"}">
 
-      <div class="${"alert alert-secondary shadow"}" role="${"alert"}">
+      <div class="${"border border secondary rounded p-3 mb-3"}">
         ffmpeg -i <span class="${"text-secondary"}">input-file.mp3</span> -af atempo=<strong>${escape(adjustment)}</strong> <span class="${"text-secondary"}">output-file-${escape(target)}.mp3</span>
       </div>
 
@@ -502,12 +502,16 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
 	let news = [
 		{
+			date: "2020-01-22T03:38:19.680Z",
+			html: "Improved Bodybuilding Advice randomness items begin repeating after about 84 selections. I added a tiny little sub-progress bar to show when new repetitions will begin."
+		},
+		{
 			date: "2020-01-22T03:23:19.680Z",
 			html: "Added Preferences Pane to Bodybuilding Advice, Bodybuilding Advice is meant to serve as a starting point for more complex components."
 		},
 		{
-			date: "2020-01-22T03:23:19.680Z",
-			html: "Testing <a href=\"https://octicons.github.com/\" rel=\"noopener noreferrer\" target=\"_blank\">octicons</a>"
+			date: "2020-01-22T03:22:19.680Z",
+			html: "Testing <a href=\"https://octicons.github.com/\" rel=\"noopener noreferrer\" target=\"_blank\">octicons</a> I love the " + octicons.squirrel.toSVG({ "class": "fill-white", "width": 45 }) + " icon."
 		}
 	];
 
@@ -568,7 +572,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
           News
         </div>
           <div class="${"card-body p-3 text-secondary"}">
-          ${each(news, item => `<p class="${"card-text"}">
+          ${each(news, item => `<p class="${"card-text small"}">
               ${item.html} · ${escape(item.ago)}
             </p>`)}
           </div>
@@ -582,7 +586,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
     <div class="${"col pb-3"}">
     ${validate_component(RandomVideo, "RandomVideo").$$render($$result, {}, {}, {})}
     </div>
- 
+
 
 
     </div>

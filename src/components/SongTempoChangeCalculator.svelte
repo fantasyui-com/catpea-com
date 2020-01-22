@@ -86,7 +86,7 @@ $: adjustment = songTempoChange(original, target).toPrecision(3);
       {#if ffmpeg}
       <div class="card-text">
 
-      <div class="alert alert-secondary shadow" role="alert">
+      <div class="border border secondary rounded p-3 mb-3">
         ffmpeg -i <span class="text-secondary">input-file.mp3</span> -af atempo=<strong>{adjustment}</strong> <span class="text-secondary">output-file-{target}.mp3</span>
       </div>
 

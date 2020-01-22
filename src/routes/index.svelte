@@ -4,7 +4,7 @@ import SongTempoChangeCalculator from '../components/SongTempoChangeCalculator.s
 import SeasonCalculator from '../components/SeasonCalculator.svelte';
 import BodybuildingAdvice from '../components/BodybuildingAdvice.svelte';
 import RandomVideo from '../components/RandomVideo.svelte';
-
+import octicons from 'octicons';
 import moment from "moment";
 
 
@@ -24,8 +24,9 @@ const videos = {
 
 
 let news = [
+  {date:'2020-01-22T03:38:19.680Z', html:'Improved Bodybuilding Advice randomness items begin repeating after about 84 selections. I added a tiny little sub-progress bar to show when new repetitions will begin.'},
   {date:'2020-01-22T03:23:19.680Z', html:'Added Preferences Pane to Bodybuilding Advice, Bodybuilding Advice is meant to serve as a starting point for more complex components.'},
-  {date:'2020-01-22T03:23:19.680Z', html:'Testing <a href="https://octicons.github.com/" rel="noopener noreferrer" target="_blank">octicons</a>'},
+  {date:'2020-01-22T03:22:19.680Z', html:'Testing <a href="https://octicons.github.com/" rel="noopener noreferrer" target="_blank">octicons</a> I love the ' + octicons.squirrel.toSVG({ "class": "fill-white", "width": 45 }) + ' icon.'},
 ];
 
 function recalculateTimestamps(){
@@ -88,7 +89,7 @@ recalculateTimestamps();
         </div>
           <div class="card-body p-3 text-secondary">
           {#each news as item}
-            <p class="card-text">
+            <p class="card-text small">
               {@html item.html} &middot; {item.ago}
             </p>
           {/each}
@@ -103,7 +104,7 @@ recalculateTimestamps();
     <div class="col pb-3">
     <RandomVideo/>
     </div>
- 
+
 
 
     </div>
