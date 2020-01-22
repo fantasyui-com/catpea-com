@@ -238,8 +238,8 @@ const SongTempoChangeCalculator = create_ssr_component(($$result, $$props, $$bin
 
       </div>
 
-      <p class="${"card-text small"}"><strong>-af</strong> Simple filtergraphs are configured with the per-stream -filter option (with -vf and -af aliases for video and audio respectively). <a href="${"https://ffmpeg.org/ffmpeg.html#Filtering"}">»</a></p>
-      <p class="${"card-text small"}"><strong>atempo</strong> Adjust audio tempo. The filter accepts exactly one parameter, the audio tempo. If not specified then the filter will assume nominal 1.0 tempo. Tempo must be in the [0.5, 100.0] range. Note that tempo greater than 2 will skip some samples rather than blend them in. <a href="${"https://ffmpeg.org/ffmpeg-filters.html#atempo"}">»</a></p>`
+      <p class="${"card-text small text-secondary"}"><strong>-af</strong> Simple filtergraphs are configured with the per-stream -filter option (with -vf and -af aliases for video and audio respectively). <a href="${"https://ffmpeg.org/ffmpeg.html#Filtering"}">»</a></p>
+      <p class="${"card-text small text-secondary"}"><strong>atempo</strong> Adjust audio tempo. The filter accepts exactly one parameter, the audio tempo. If not specified then the filter will assume nominal 1.0 tempo. Tempo must be in the [0.5, 100.0] range. Note that tempo greater than 2 will skip some samples rather than blend them in. <a href="${"https://ffmpeg.org/ffmpeg-filters.html#atempo"}">»</a></p>`
 	}
 
 
