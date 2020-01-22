@@ -503,15 +503,15 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 	let news = [
 		{
 			date: "2020-01-22T03:38:19.680Z",
-			html: "Improved the randomness of Bodybuilding Advice. Items begin repeating after about 84 selections. I added a tiny little sub-progress bar to show when new repetitions will begin."
+			html: "Improved the randomness of Bodybuilding Advice. Items begin repeating after about 84 selections. I added a tiny little sub-progress bar to show when the system will reset, re-shuffle, and begin parading the newly re-shuffled list."
 		},
 		{
 			date: "2020-01-22T03:23:19.680Z",
-			html: "Added Preferences Pane to Bodybuilding Advice, Bodybuilding Advice is meant to serve as a starting point for more complex components."
+			html: "Added Preferences Pane to Bodybuilding Advice. Bodybuilding Advice is meant to serve as a starting point for more complex components."
 		},
 		{
 			date: "2020-01-22T03:22:19.680Z",
-			html: "Testing <a href=\"https://octicons.github.com/\" rel=\"noopener noreferrer\" target=\"_blank\">octicons</a> I love the " + octicons.squirrel.toSVG({ "class": "fill-white", "width": 45 }) + " icon."
+			html: "Testing <a href=\"https://octicons.github.com/\" rel=\"noopener noreferrer\" target=\"_blank\">octicons</a>. I love the " + octicons.squirrel.toSVG({ "class": "fill-white", "width": 45 }) + " icon."
 		}
 	];
 
