@@ -505,7 +505,7 @@ const PreferenceCard = create_ssr_component(($$result, $$props, $$bindings, $$sl
       <button class="${"btn btn-text btn-sm border border-secondary float-right"}">${octicons.gear.toSVG({ "class": "fill-white" })}</button>
     </div>
 
-  	<div class="${"card-body py-3"}">
+    <div class="${"card-body py-3"}">
 
     ${$$slots.application
 			? $$slots.application({})
@@ -513,9 +513,9 @@ const PreferenceCard = create_ssr_component(($$result, $$props, $$bindings, $$sl
       <p class="${"card-text"}">
         Application Empty
       </p>
-		`}
+    `}
 
-  	</div>
+    </div>
   </div>`
 		}`}`;
 });

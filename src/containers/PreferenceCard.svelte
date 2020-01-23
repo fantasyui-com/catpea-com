@@ -27,7 +27,7 @@ let view = 1; // controlled via UI icons
       <p class="card-text">
         Preferences Empty
       </p>
-		</slot>
+    </slot>
 
     </div>
   </div>
@@ -41,15 +41,15 @@ let view = 1; // controlled via UI icons
       <button class="btn btn-text btn-sm border border-secondary float-right" on:click="{e => view = 0}">{@html octicons.gear.toSVG({ "class": "fill-white" })}</button>
     </div>
 
-  	<div class="card-body py-3">
+    <div class="card-body py-3">
 
     <slot name="application">
       <p class="card-text">
         Application Empty
       </p>
-		</slot>
+    </slot>
 
-  	</div>
+    </div>
   </div>
 
 {/if}
