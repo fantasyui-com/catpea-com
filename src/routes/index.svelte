@@ -1,12 +1,14 @@
 <script>
+
+import octicons from 'octicons';
+import moment from "moment";
+
 import SongBeatCalculator from '../components/SongBeatCalculator.svelte';
 import SongTempoChangeCalculator from '../components/SongTempoChangeCalculator.svelte';
 import SeasonCalculator from '../components/SeasonCalculator.svelte';
 import BodybuildingAdvice from '../components/BodybuildingAdvice.svelte';
 import RandomVideo from '../components/RandomVideo.svelte';
-import octicons from 'octicons';
-import moment from "moment";
-
+import News from '../components/News.svelte';
 
 
 const videos = {
@@ -83,18 +85,7 @@ recalculateTimestamps();
     </div>
 
     <div class="col pb-3">
-        <div class="card text-white bg-dark shadow" style="min-height: 23rem;">
-        <div class="card-header">
-          News
-        </div>
-          <div class="card-body p-3 text-secondary">
-          {#each news as item}
-            <p class="card-text small">
-              {@html item.html} &middot; {item.ago}
-            </p>
-          {/each}
-          </div>
-        </div>
+    <News/>
     </div>
 
     <div class="col pb-3">
