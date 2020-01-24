@@ -678,6 +678,10 @@ const News = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	// Application
 	let news = [
 		{
+			date: "2020-01-24T23:48:12.074Z",
+			html: "The Squirrel Expert System can hide topics that the user already discussed, some topics can be just faded out while still active."
+		},
+		{
 			date: "2020-01-24T14:39:17.606Z",
 			html: "Added Squirrel AI."
 		},
@@ -810,34 +814,20 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 	let footer = true;
 
 	// Application
+	// NOTE: you should initialize the conversation here, this is great for introductions.
+	let introduction = [
+		{
+			text: "<div class=\"shake shake-force d-inline-block d-flex justify-content-center\">" + octicons.squirrel.toSVG({ "class": "fill-white", height: 56 }) + "</div> <div>Hello, I am Squirrel. I am an <a href=\"https://en.wikipedia.org/wiki/Expert_system\" rel=\"noopener noreferrer\" target=\"_blank\">expert-system</a>, fully capable of emulating the decision-making ability of a human expert... provided... enough time.</div>"
+		},
+		{
+			text: "Please state the nature of your emergency."
+		}
+	];
+
+	let conversation = [];
+	let interactions = [];
+
 	let propositions = {
-		init: [
-			{
-				text: "<div class=\"shake shake-force d-inline-block\">" + octicons.squirrel.toSVG({ "class": "fill-white", height: 56 }) + "</div> <div>Hello, I am Squirrel. I am an <a href=\"https://en.wikipedia.org/wiki/Expert_system\" rel=\"noopener noreferrer\" target=\"_blank\">expert-system</a>, fully capable of emulating the decision-making ability of a human expert... provided... enough time.</div>"
-			},
-			{
-				text: "Please state the nature of your emergency."
-			},
-			{
-				pick: [
-					//{text:'It was a mistake.', action:()=>{conversation=[...conversation, {text:'OK, well, quit it.'}]}},
-					//{text:'What are your Prime Directives?', reply:'Aww.', icon:'cats/cat-02.png'},
-					{
-						text: "What are your Prime Directives?",
-						proposition: "directives"
-					},
-					{
-						text: "I was just searching for the terminal.",
-						proposition: "terminal"
-					},
-					{
-						text: "What is your name?",
-						proposition: "introduction"
-					}
-				], //{text:'I told you, go away already!', action:reset}
-				
-			}
-		],
 		start: [
 			{
 				pick: [
@@ -845,15 +835,23 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 					//{text:'What are your Prime Directives?', reply:'Aww.', icon:'cats/cat-02.png'},
 					{
 						text: "What are your Prime Directives?",
-						proposition: "directives"
+						proposition: "directives",
+						once: false
+					},
+					{
+						text: "What are the Three Laws of Robotics?",
+						proposition: "laws",
+						once: false
 					},
 					{
 						text: "I was just searching for the terminal.",
-						proposition: "terminal"
+						proposition: "terminal",
+						once: true
 					},
 					{
 						text: "What is your name?",
-						proposition: "introduction"
+						proposition: "introduction",
+						once: true
 					}
 				], //{text:'I told you, go away already!', action:reset}
 				
@@ -919,6 +917,25 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 				]
 			}
 		],
+		laws: [
+			{
+				text: "A robot may not injure a human being or, through inaction, allow a human being to come to harm."
+			},
+			{
+				text: "A robot must obey the orders given it by human beings except where such orders would conflict with the First Law."
+			},
+			{
+				text: "A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws."
+			},
+			{
+				pick: [
+					{
+						text: "Eggcellent.",
+						proposition: "start"
+					}
+				]
+			}
+		],
 		directives: [
 			{ text: "Serve the public trust." },
 			{ text: "Protect the innocent." },
@@ -933,9 +950,6 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 			}
 		]
 	};
-
-	let conversation = [];
-	let interactions = [];
 
 	function proposition(list) {
 		if (list) {
@@ -959,7 +973,8 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 
 	function initialize() {
 		reset();
-		proposition(propositions.init);
+		conversation = [...introduction]; // while conversation is cleared, the introduction is injected.
+		proposition(propositions.start);
 	}
 
 	initialize();
@@ -1001,29 +1016,39 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 
 
   <div class="${"p-3"}" style="${"max-height: 18rem; overflow-y: auto;"}">
-  
-  ${each(conversation, item => `${item.user
+
+    
+    ${each(conversation, item => `${item.user
 		? `<div class="${"shadow border border-primary rounded-lg ml-5 mb-2"}">
-        <div class="${"card-body"}">
-            <h5 class="${"card-title small text-muted"}">You:</h5>
-            <p class="${"card-text small"}">${escape(item.text)}</p>
-        </div>
-      </div>`
+          <div class="${"card-body"}">
+              <h5 class="${"card-title small text-muted"}">You:</h5>
+              <p class="${"card-text small"}">${escape(item.text)}</p>
+          </div>
+        </div>`
 		: `<div class="${"shadow border border-warning rounded-lg mr-5 mb-2"}">
-        <div class="${"card-body"}">
-            ${item.icon
+          <div class="${"card-body"}">
+              ${item.icon
 			? `<img${add_attribute("src", item.icon, 0)} class="${"d-inline"}" alt="${"Icon"}">`
 			: ``}
-            <p class="${"card-text small"}">${item.text}</p>
-        </div>
-      </div>`}`)}
-  
+              <p class="${"card-text small"}">${item.text}</p>
+          </div>
+        </div>`}`)}
+    
 
-  
-  ${each(interactions, potential => `${each(potential.pick, choice => `<button type="${"button"}" class="${"btn btn-sm btn-outline-primary m-1"}">
-      ${escape(choice.text)}
-    </button>`)}`)}
-  
+    
+    <div class="${"pt-5"}">
+    ${each(interactions, potential => `${each(potential.pick, choice => `${choice.used && choice.once
+		? ``
+		: `${choice.used
+			? `<button type="${"button"}" class="${"btn btn-sm btn-outline-secondary m-1"}">
+            ${escape(choice.text)}
+          </button>`
+			: `<button type="${"button"}" class="${"btn btn-sm btn-outline-primary m-1"}">
+            ${escape(choice.text)}
+          </button>`}`}`)}`)}
+    
+    </div>
+
   </div>
 
 
@@ -1085,6 +1110,10 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
     <div class="${"row row-cols-1 row-cols-md-2 row-cols-xl-4"}">
 
     <div class="${"col pb-3"}">
+    ${validate_component(Squirrel, "Squirrel").$$render($$result, {}, {}, {})}
+    </div>
+    
+    <div class="${"col pb-3"}">
         <div class="${"card text-white bg-dark shadow"}">
           <a${add_attribute("href", videos.url, 0)}><img${add_attribute("src", videos.img, 0)} class="${"card-img-top"}"${add_attribute("alt", videos.name, 0)}></a>
           <div class="${"card-body p-3"}">
@@ -1120,9 +1149,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
     ${validate_component(RandomVideo, "RandomVideo").$$render($$result, { duration: "10" }, {}, {})}
     </div>
 
-    <div class="${"col pb-3"}">
-    ${validate_component(Squirrel, "Squirrel").$$render($$result, {}, {}, {})}
-    </div>
+
 
 
 

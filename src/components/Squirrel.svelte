@@ -12,29 +12,21 @@
 
   // Application
 
+  // NOTE: you should initialize the conversation here, this is great for introductions.
+  let introduction = [ {text:'<div class="shake shake-force d-inline-block d-flex justify-content-center">' + octicons.squirrel.toSVG({ "class": "fill-white", height: 56  }) + '</div> <div>Hello, I am Squirrel. I am an <a href="https://en.wikipedia.org/wiki/Expert_system" rel="noopener noreferrer" target="_blank">expert-system</a>, fully capable of emulating the decision-making ability of a human expert... provided... enough time.</div>'}, {text:'Please state the nature of your emergency.'}  ];
+  let conversation = [];
+  let interactions = [];
+  let propositions = {
 
 
-   let propositions = {
-
-     init: [
-       {text:'<div class="shake shake-force d-inline-block">' + octicons.squirrel.toSVG({ "class": "fill-white", height: 56  }) + '</div> <div>Hello, I am Squirrel. I am an <a href="https://en.wikipedia.org/wiki/Expert_system" rel="noopener noreferrer" target="_blank">expert-system</a>, fully capable of emulating the decision-making ability of a human expert... provided... enough time.</div>'},
-       {text:'Please state the nature of your emergency.'},
-       {pick:[
-         //{text:'It was a mistake.', action:()=>{conversation=[...conversation, {text:'OK, well, quit it.'}]}},
-         //{text:'What are your Prime Directives?', reply:'Aww.', icon:'cats/cat-02.png'},
-         {text:'What are your Prime Directives?', proposition:'directives'},
-         {text:'I was just searching for the terminal.', proposition:'terminal'},
-         {text:'What is your name?', proposition:'introduction'},
-         //{text:'I told you, go away already!', action:reset}
-       ]},
-     ],
      start: [
        {pick:[
          //{text:'It was a mistake.', action:()=>{conversation=[...conversation, {text:'OK, well, quit it.'}]}},
          //{text:'What are your Prime Directives?', reply:'Aww.', icon:'cats/cat-02.png'},
-         {text:'What are your Prime Directives?', proposition:'directives'},
-         {text:'I was just searching for the terminal.', proposition:'terminal'},
-         {text:'What is your name?', proposition:'introduction'},
+         {text:'What are your Prime Directives?', proposition:'directives', once:false},
+         {text:'What are the Three Laws of Robotics?', proposition:'laws', once:false},
+         {text:'I was just searching for the terminal.', proposition:'terminal', once:true},
+         {text:'What is your name?', proposition:'introduction', once:true},
          //{text:'I told you, go away already!', action:reset}
        ]},
      ],
@@ -79,6 +71,15 @@
      ],
 
 
+     laws: [
+       {text:"A robot may not injure a human being or, through inaction, allow a human being to come to harm."},
+       {text:"A robot must obey the orders given it by human beings except where such orders would conflict with the First Law."},
+       {text:"A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws."},
+       {pick:[
+         {text:'Eggcellent.', proposition:'start'},
+       ]},
+     ],
+
      directives: [
        {text:"Serve the public trust."},
        {text:"Protect the innocent."},
@@ -90,8 +91,7 @@
 
 
    };
-   let conversation = [];
-   let interactions = [];
+
 
    function proposition(list){
      if(list){
@@ -112,9 +112,11 @@
    }
    function initialize() {
      reset();
-     proposition( propositions.init );
+     conversation = [...introduction] // while conversation is cleared, the introduction is injected.
+     proposition( propositions.start );
    }
    function interact(chosen) {
+     chosen.used = true;
      interactions = []; // clear interaction because user has made a response
      conversation = [...conversation, {text:chosen.text, user:true}] // log user text
      if(chosen.action) chosen.action(); // execute action if present
@@ -173,35 +175,47 @@ initialize()
 
 
   <div class="p-3" style="max-height: 18rem; overflow-y: auto;">
-  <!-- STORAGE OF CONVERSATION -->
-  {#each conversation as item}
-    {#if item.user}
-      <div class="shadow border border-primary rounded-lg ml-5 mb-2">
-        <div class="card-body">
-            <h5 class="card-title small text-muted">You:</h5>
-            <p class="card-text small">{item.text}</p>
-        </div>
-      </div>
-    {:else}
-      <div class="shadow border border-warning rounded-lg mr-5 mb-2">
-        <div class="card-body">
-            {#if item.icon} <img src="{item.icon}" class="d-inline" alt="Icon"> {/if}
-            <p class="card-text small">{@html item.text}</p>
-        </div>
-      </div>
-    {/if}
-  {/each}
-  <!-- /STORAGE OF CONVERSATION -->
 
-  <!-- PRESENTATION OF INTERACTION -->
-  {#each interactions as potential}
-    {#each potential.pick as choice}
-    <button type="button" class="btn btn-sm btn-outline-primary m-1" on:click|preventDefault={() => interact(choice)}>
-      {choice.text}
-    </button>
+    <!-- STORAGE OF CONVERSATION -->
+    {#each conversation as item}
+      {#if item.user}
+        <div class="shadow border border-primary rounded-lg ml-5 mb-2">
+          <div class="card-body">
+              <h5 class="card-title small text-muted">You:</h5>
+              <p class="card-text small">{item.text}</p>
+          </div>
+        </div>
+      {:else}
+        <div class="shadow border border-warning rounded-lg mr-5 mb-2">
+          <div class="card-body">
+              {#if item.icon} <img src="{item.icon}" class="d-inline" alt="Icon"> {/if}
+              <p class="card-text small">{@html item.text}</p>
+          </div>
+        </div>
+      {/if}
     {/each}
-  {/each}
-  <!-- /PRESENTATION OF INTERACTION -->
+    <!-- /STORAGE OF CONVERSATION -->
+
+    <!-- PRESENTATION OF INTERACTION -->
+    <div class="pt-5">
+    {#each interactions as potential}
+      {#each potential.pick as choice}
+        {#if choice.used && choice.once}
+        <!-- do not show anything -->
+        {:else if choice.used}
+          <button type="button" class="btn btn-sm btn-outline-secondary m-1" on:click|preventDefault={() => interact(choice)}>
+            {choice.text}
+          </button>
+          {:else}
+          <button type="button" class="btn btn-sm btn-outline-primary m-1" on:click|preventDefault={() => interact(choice)}>
+            {choice.text}
+          </button>
+        {/if}
+      {/each}
+    {/each}
+    <!-- /PRESENTATION OF INTERACTION -->
+    </div>
+
   </div>
 
 

@@ -1,1 +1,1 @@
-{"bundler":"rollup","shimport":"1.0.1","assets":{"main":"client.cfdd9aef.js"},"css":{"main":"main.637669398.css","chunks":{"index.svelte":[],"video.svelte":["app.7f0b927a.css"]}},"legacy_assets":{"main":"client.b89729ed.js"}}
+{"bundler":"rollup","shimport":"1.0.1","assets":{"main":"client.486a978d.js"},"css":{"main":"main.637669398.css","chunks":{"index.svelte":[],"video.svelte":["app.2571d31c.css"]}},"legacy_assets":{"main":"client.487d1796.js"}}

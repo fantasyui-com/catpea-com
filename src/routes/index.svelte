@@ -58,6 +58,10 @@ recalculateTimestamps();
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
 
     <div class="col pb-3">
+    <Squirrel/>
+    </div>
+    
+    <div class="col pb-3">
         <div class="card text-white bg-dark shadow">
           <a href="{videos.url}"><img src="{videos.img}" class="card-img-top" alt="{videos.name}"></a>
           <div class="card-body p-3">
@@ -93,9 +97,7 @@ recalculateTimestamps();
     <RandomVideo duration="10"/>
     </div>
 
-    <div class="col pb-3">
-    <Squirrel/>
-    </div>
+
 
 
 
