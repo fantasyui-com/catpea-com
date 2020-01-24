@@ -44,7 +44,7 @@ recalculateTimestamps();
 </style>
 
 <svelte:head>
-	<title>Cat Pea</title>
+  <title>Cat Pea</title>
 </svelte:head>
 
 
@@ -89,11 +89,11 @@ recalculateTimestamps();
     </div>
 
     <div class="col pb-3">
-    <RandomVideo/>
+    <RandomVideo duration="10"/>
     </div>
 
     <div class="col pb-3">
-    <RandomVideo/>
+    <RandomVideo duration="30"/>
     </div>
 
 

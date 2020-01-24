@@ -1,4 +1,5 @@
 <script>
+
 export let title = 'Preferences Card';
 
 import octicons from 'octicons';
@@ -16,7 +17,8 @@ let view = 1; // controlled via UI icons
 
 {#if view == 0}
 
-  <div class="card text-white bg-dark shadow" style="min-height: 23rem;" >
+  <!-- TODO: Add this? style="min-height: 20rem;" -->
+  <div class="card text-white bg-dark shadow">
     <div class="card-header lead">
       Preferences
       <button class="btn btn-text btn-sm border border-secondary float-right" on:click="{e => view = 1}">{@html octicons.checklist.toSVG({ "class": "fill-white" })}</button>
@@ -30,26 +32,37 @@ let view = 1; // controlled via UI icons
     </slot>
 
     </div>
+
+    <div class="card-footer text-muted small">
+      <slot name="preferences-footer">
+      </slot>
+    </div>
+
+
+
   </div>
 
 {:else if view == 1}
 
-  <div class="card text-white bg-dark shadow" style="min-height: 23rem;" >
+  <div class="card text-white bg-dark shadow">
 
     <div class="card-header lead">
       {title}
       <button class="btn btn-text btn-sm border border-secondary float-right" on:click="{e => view = 0}">{@html octicons.gear.toSVG({ "class": "fill-white" })}</button>
+      <slot name="buttons"></slot>
     </div>
 
-    <div class="card-body py-3">
-
-    <slot name="application">
-      <p class="card-text">
-        Application Empty
-      </p>
+    <slot>
+      <!--
+      NOTE: you are required to create a card-body node, this gives you the ability to add footer and card-img, card-img-top/card-img-bottom
+      -->
+      <div class="card-body p-2" style="box-shadow: inset 0 0 10px #000000;">
+          <p class="card-text">
+            Application Empty
+          </p>
+      </div>
     </slot>
 
-    </div>
   </div>
 
 {/if}
