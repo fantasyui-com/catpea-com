@@ -19,6 +19,7 @@
 
 
   let news = [
+    {date:'2020-01-24T14:39:17.606Z', html:'Added Squirrel AI.'},
     {date:'2020-01-24T02:11:52.327Z', html:'Added Squirrel <div class="shake shake-force">' + octicons.squirrel.toSVG({ "class": "fill-white", height: 56  }) + '</div>'},
     {date:'2020-01-24T02:06:48.327Z', html:'Improved news readability.'},
     {date:'2020-01-24T01:34:33.923Z', html:'Added prev/next navigation to random videos.'},

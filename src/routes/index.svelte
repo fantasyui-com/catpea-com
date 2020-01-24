@@ -9,6 +9,7 @@ import SeasonCalculator from '../components/SeasonCalculator.svelte';
 import BodybuildingAdvice from '../components/BodybuildingAdvice.svelte';
 import RandomVideo from '../components/RandomVideo.svelte';
 import News from '../components/News.svelte';
+import Squirrel from '../components/Squirrel.svelte';
 
 
 const videos = {
@@ -93,7 +94,7 @@ recalculateTimestamps();
     </div>
 
     <div class="col pb-3">
-    <RandomVideo duration="30"/>
+    <Squirrel/>
     </div>
 
 
