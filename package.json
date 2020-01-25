@@ -17,6 +17,7 @@
     "calculate-percent": "^1.3.0",
     "compression": "^1.7.1",
     "js-cookie": "^2.2.1",
+    "lodash": "^4.17.15",
     "mainspring": "^1.0.1",
     "moment": "^2.24.0",
     "octicons": "^8.5.0",

@@ -2,15 +2,43 @@
 
   import moment from "moment";
   import octicons from 'octicons';
+  import camelCase from 'lodash/camelCase';
 
   import PreferenceCard from '../containers/PreferenceCard.svelte';
 
   // Preferences
 
-  let items = 10;
-  let footer = true;
+  let iq = 100;
+  let footer = false;
+  const attributes = [
+    {name: "Bulk Apperception", value:.7},
+    {name: "Candor", value:.9},
+    {name: "Vivacity", value:.8},
+    {name: "Coordination", value:1},
+    {name: "Meekness", value:.1},
+    {name: "Humility", value:.5},
+    {name: "Cruelty", value:0},
+    {name: "Self-Preservation", value:.5},
+    {name: "Patience", value:1},
+    {name: "Decisiveness", value:.8},
+    {name: "Imagination", value:1},
+    {name: "Curiosity", value:.9},
+    {name: "Aggression", value:.0},
+    {name: "Loyalty", value:0},
+    {name: "Empathy", value:.9},
+    {name: "Tenacity", value:.6},
+    {name: "Courage", value:.9},
+    {name: "Sensuality", value:.2},
+    {name: "Charm", value:.7},
+    {name: "Humor", value:.9},
+    {name: "Perception", value:.6},
+    {name: "Emotional Acuity", value:.8}
+  ];
 
   // Application
+
+
+
 
   // NOTE: you should initialize the conversation here, this is great for introductions.
   let introduction = [ {text:'<div class="shake shake-force d-inline-block d-flex justify-content-center">' + octicons.squirrel.toSVG({ "class": "fill-white", height: 56  }) + '</div> <div>Hello, I am Squirrel. I am an <a href="https://en.wikipedia.org/wiki/Expert_system" rel="noopener noreferrer" target="_blank">expert-system</a>, fully capable of emulating the decision-making ability of a human expert... provided... enough time.</div>'}, {text:'Please state the nature of your emergency.'}  ];
@@ -146,29 +174,40 @@ initialize()
   <div slot="preferences" class="card-text">
 
   <div class="card-text">
-    <label class="small" for="duration">News Items</label>
+    <label class="small" for="duration">Squirrel Intelligence Quotient</label>
     <div class="input-group mb-3">
-    <input type="number" id="duration" min="2" max="50" class="form-control" bind:value={items} placeholder="number of items to display">
+    <input type="number" id="duration" min="50" max="300" class="form-control" bind:value={iq} placeholder="Squirrel Intelligence Quotient">
       <div class="input-group-append">
-      <span class="input-group-text " id="duration-addon">items</span>
+      <span class="input-group-text " id="duration-addon">IQ</span>
       </div>
     </div>
   </div>
+
+  {#each attributes as item}
 
   <div class="card-text">
-    <label class="small" for="duration">Footer</label>
+    <label class="small" for="{camelCase(item.name)}attribute">{item.name}</label>
     <div class="input-group mb-3">
       <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" bind:checked={footer} id="footerControl">
-        <label class="custom-control-label" for="footerControl"><!-- some text --></label>
+
+        <input type="range" class="form-control-range custom-range" bind:value={item.value} min="0" max="1" step="0.1" id="{camelCase(item.name)}attribute">
+
       </div>
     </div>
   </div>
 
+  {/each}
+
+ 
 
   </div>
 
   <div slot="preferences-footer">
+    {#if iq > 100}
+      Danger: current squirrel intelligence quotient is above average (for <a href="https://en.wikipedia.org/wiki/Sciuromorpha" rel="noopener noreferrer" target="_blank">Sciuromorpha</a> )
+    {:else}
+      Squirrel Intelligence Quotient: {iq}
+    {/if}
   </div>
 
 
