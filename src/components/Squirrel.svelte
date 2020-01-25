@@ -74,7 +74,7 @@
 
 
   // NOTE: you should initialize the conversation here, this is great for introductions.
-  let introduction = [ {text:'<div class="shake shake-force d-inline-block d-flex justify-content-center" style="fill: #e17f7f;">' + octicons.squirrel.toSVG({  height: 56  }) + '</div> <div>Hello, I am Squirrel. I am an <a href="https://en.wikipedia.org/wiki/Expert_system" rel="noopener noreferrer" target="_blank">expert-system</a>, fully capable of emulating the decision-making ability of a human expert... provided... enough time.</div>'}, {text:'Please state the nature of your emergency.'}  ];
+  let introduction = [ {text:'<div class="shake shake-force d-inline-block d-flex justify-content-center" style="fill: #e17f7f;">' + octicons.squirrel.toSVG({  height: 56  }) + '</div> <div>Hello, I am Squirrel. I am an <a href="https://en.wikipedia.org/wiki/Expert_system" rel="noopener noreferrer" target="_blank">expert-system</a>, fully capable of emulating the decision-making ability of a human expert.</div>'}, {text:'Please state the nature of your emergency.'}  ];
   let conversation = [];
   let interactions = [];
   let propositions = {
