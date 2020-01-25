@@ -776,7 +776,7 @@ const News = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 
   
 
-    <div class="${"card-body"}" style="${"max-height: 18rem; overflow-y: auto;"}">
+    <div class="${"card-body"}" style="${"max-height: 25rem; overflow-y: auto;"}">
       ${each(news, (item, i) => `${i < items
 		? `<div class="${"card-text small"}">
 
@@ -1835,7 +1835,7 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 	initialize();
 
 	return `${validate_component(PreferenceCard, "PreferenceCard").$$render($$result, { title: "Squirrel" }, {}, {
-		preferences: () => `<div slot="${"preferences"}" class="${"card-text p-2"}" style="${"max-height: 18rem; overflow-y: auto;"}">
+		preferences: () => `<div slot="${"preferences"}">
 
   <div class="${"card-text"}">
     <label class="${"small"}" for="${"duration"}">Squirrel Intelligence Quotient</label>
@@ -1874,7 +1874,7 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 
 
 
-  <div class="${"p-3"}" style="${"max-height: 18rem; overflow-y: auto;"}">
+  <div class="${"p-3"}" style="${"max-height: 25rem; overflow-y: auto;"}">
 
     
     ${each(conversation, item => `${item.user

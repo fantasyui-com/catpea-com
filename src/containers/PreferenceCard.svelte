@@ -23,7 +23,7 @@ let view = 1; // controlled via UI icons
       Preferences
       <button class="btn btn-text btn-sm border border-secondary float-right" on:click="{e => view = 1}">{@html octicons.checklist.toSVG({ "class": "fill-white" })}</button>
     </div>
-    <div class="card-body py-3">
+    <div class="card-body p-2" style="max-height: 25rem; overflow-y: auto;">
 
     <slot name="preferences">
       <p class="card-text">

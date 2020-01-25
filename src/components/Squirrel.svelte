@@ -171,7 +171,7 @@ initialize()
 
 <PreferenceCard title="Squirrel">
 
-  <div slot="preferences" class="card-text p-2" style="max-height: 18rem; overflow-y: auto;">
+  <div slot="preferences">
 
   <div class="card-text">
     <label class="small" for="duration">Squirrel Intelligence Quotient</label>
@@ -225,7 +225,7 @@ initialize()
 
 
 
-  <div class="p-3" style="max-height: 18rem; overflow-y: auto;">
+  <div class="p-3" style="max-height: 25rem; overflow-y: auto;">
 
     <!-- STORAGE OF CONVERSATION -->
     {#each conversation as item}

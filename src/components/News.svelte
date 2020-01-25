@@ -91,7 +91,7 @@
   {/if}
   </div>
 
-    <div class="card-body" style="max-height: 18rem; overflow-y: auto;">
+    <div class="card-body" style="max-height: 25rem; overflow-y: auto;">
       {#each news as item, i}
         {#if i<items}
           <div class="card-text small">
