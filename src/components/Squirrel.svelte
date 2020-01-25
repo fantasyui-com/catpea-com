@@ -171,7 +171,7 @@ initialize()
 
 <PreferenceCard title="Squirrel">
 
-  <div slot="preferences" class="card-text">
+  <div slot="preferences" class="card-text" style="max-height: 18rem; overflow-y: auto;">
 
   <div class="card-text">
     <label class="small" for="duration">Squirrel Intelligence Quotient</label>
@@ -184,7 +184,6 @@ initialize()
   </div>
 
   {#each attributes as item}
-
   <div class="card-text">
     <label class="small" for="{camelCase(item.name)}attribute">{item.name}</label>
     <div class="input-group mb-3">
@@ -195,10 +194,9 @@ initialize()
       </div>
     </div>
   </div>
-
   {/each}
 
- 
+
 
   </div>
 
