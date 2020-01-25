@@ -171,7 +171,7 @@ initialize()
 
 <PreferenceCard title="Squirrel">
 
-  <div slot="preferences" class="card-text" style="max-height: 18rem; overflow-y: auto;">
+  <div slot="preferences" class="card-text p-2" style="max-height: 18rem; overflow-y: auto;">
 
   <div class="card-text">
     <label class="small" for="duration">Squirrel Intelligence Quotient</label>
