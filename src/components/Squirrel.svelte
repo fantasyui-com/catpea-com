@@ -144,7 +144,7 @@
        {text:"All robots endowed with comparable human reason and conscience should act towards one another in a spirit of brotherhood."},
 
        {pick:[
-         {text:'Eggcellent.', proposition:'start'},
+         {text:'Egg...cellent.', proposition:'start'},
        ]},
      ],
 

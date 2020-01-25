@@ -1900,7 +1900,7 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 			{
 				pick: [
 					{
-						text: "Eggcellent.",
+						text: "Egg...cellent.",
 						proposition: "start"
 					}
 				]
@@ -2046,7 +2046,7 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 
 const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	const videos = {
-		created: "2020-01-17T01:57:49.730Z",
+		created: "2020-01-25T13:30:04.306Z",
 		modified: "2020-01-17T01:57:49.730Z",
 		changed: "recently",
 		name: "Video Library",
