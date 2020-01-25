@@ -202,7 +202,21 @@ initialize()
 
   <div slot="preferences-footer">
     {#if iq > 100}
-      Danger: current squirrel intelligence quotient is above average (for <a href="https://en.wikipedia.org/wiki/Sciuromorpha" rel="noopener noreferrer" target="_blank">Sciuromorpha</a> )
+
+
+
+      <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Anomalous Intelligence Quotient</h4>
+        <p>The current squirrel intelligence quotient is above average for <a href="https://en.wikipedia.org/wiki/Red_squirrel" rel="noopener noreferrer" target="_blank">Sciurus vulgaris</a>.</p>
+        <hr>
+        <p class="mb-0">
+        Secure. Contain. Protect.
+        <a href="http://www.scp-wiki.net/scp-2050" rel="noopener noreferrer" target="_blank">Lower the value immediately.</a></p>
+      </div>
+
+
+    {:else if iq == 100}
+      Squirrel Intelligence Quotient Nominal.
     {:else}
       Squirrel Intelligence Quotient: {iq}
     {/if}

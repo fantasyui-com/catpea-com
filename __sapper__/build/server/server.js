@@ -679,7 +679,7 @@ const News = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	let news = [
 		{
 			date: "2020-01-24T23:48:12.074Z",
-			html: "The Squirrel Expert System can hide topics that the user already discussed, some topics can be just faded out while still active. Squirrel's mind can be configured via Preferences pane."
+			html: "The Squirrel Expert System can hide topics that the user already discussed. Squirrel's mind can be configured via Preferences pane. Added warning to anomalous IQ settings."
 		},
 		{
 			date: "2020-01-24T14:39:17.606Z",
@@ -1862,7 +1862,8 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 
   </div>`,
 		"preferences-footer": () => `<div slot="${"preferences-footer"}">
-    ${ `Squirrel Intelligence Quotient: ${escape(iq)}`}
+    ${ `${ `Squirrel Intelligence Quotient Nominal.`
+			}`}
   </div>`,
 		default: () => `
 
