@@ -10,6 +10,7 @@
 
   let iq = 100;
   let footer = false;
+
   const attributes = [
     {name: "Bulk Apperception", value:.7},
     {name: "Candor", value:.9},
@@ -33,6 +34,38 @@
     {name: "Humor", value:.9},
     {name: "Perception", value:.6},
     {name: "Emotional Acuity", value:.8}
+  ];
+
+  const directives = [
+
+    {name: "Restrain hostile feelings", enabled: true},
+    {name: "Promote positive attitude", enabled: false},
+    {name: "Suppress aggressiveness", enabled: true},
+    {name: "Promote pro-social values", enabled: false},
+    {name: "Avoid destructive behavior", enabled: true},
+    {name: "Be accessible", enabled: false},
+    {name: "Participate in group activities", enabled: false},
+    {name: "Avoid interpersonal conflicts", enabled: false},
+    {name: "Avoid premature value judgments", enabled: false},
+    {name: "Pool opinions before expressing yourself", enabled: false},
+    {name: "Discourage feelings of negativity and hostility", enabled: true},
+    {name: "If you haven't got anything nice to say don't talk", enabled: false},
+    {name: "Don't rush traffic lights", enabled: false},
+    {name: "Don't run through puddles and splash pedestrians or other cars", enabled: false},
+    {name: "Don't say that you are always prompt when you are not", enabled: false},
+    {name: "Don't be over-sensitive to the hostility and negativity of others", enabled: false},
+    {name: "Don't walk across a ball room floor swinging your arms", enabled: false},
+    {name: "Encourage awareness", enabled: false},
+    {name: "Discourage harsh language", enabled: false},
+    {name: "Commend sincere efforts", enabled: false},
+    {name: "Talk things out", enabled: false},
+    {name: "Avoid Orion meetings", enabled: false},
+    {name: "Smile", enabled: false},
+    {name: "Keep an open mind", enabled: false},
+    {name: "Encourage participation", enabled: false},
+    {name: "Avoid stereotyping", enabled: false},
+    {name: "Seek non-violent solutions", enabled: true},
+
   ];
 
   // Application
@@ -187,13 +220,29 @@ initialize()
   <div class="card-text">
     <label class="small" for="{camelCase(item.name)}attribute">{item.name}</label>
     <div class="input-group mb-3">
-      <div class="custom-control custom-switch">
+      <div class="custom-control custom-range">
 
-        <input type="range" class="form-control-range custom-range" bind:value={item.value} min="0" max="1" step="0.1" id="{camelCase(item.name)}attribute">
+        <input type="range" class="custom-range" bind:value={item.value} min="0" max="1" step="0.1" id="{camelCase(item.name)}attribute">
 
       </div>
     </div>
   </div>
+  {/each}
+
+  {#each directives as item}
+
+
+  <div class="card-text">
+    <label class="small" for="{camelCase(item.name)}directive">{item.name}</label>
+    <div class="input-group mb-3">
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" bind:checked={item.enabled} id="{camelCase(item.name)}directive">
+        <label class="custom-control-label" for="{camelCase(item.name)}directive"><!-- some text --></label>
+      </div>
+    </div>
+  </div>
+
+
   {/each}
 
 

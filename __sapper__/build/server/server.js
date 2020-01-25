@@ -678,8 +678,8 @@ const News = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	// Application
 	let news = [
 		{
-			date: "2020-01-24T23:48:12.074Z",
-			html: "The Squirrel Expert System can hide topics that the user already discussed. Squirrel's mind can be configured via Preferences pane. Added warning to anomalous IQ settings."
+			date: "2020-01-25T01:01:25.484Z",
+			html: "The Squirrel Expert System can hide topics that the user already discussed. Squirrel's mind can be configured via Preferences pane. Added warning to anomalous IQ settings. Added secondary directives."
 		},
 		{
 			date: "2020-01-24T14:39:17.606Z",
@@ -1668,6 +1668,108 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 		{ name: "Emotional Acuity", value: 0.8 }
 	];
 
+	const directives = [
+		{
+			name: "Restrain hostile feelings",
+			enabled: true
+		},
+		{
+			name: "Promote positive attitude",
+			enabled: false
+		},
+		{
+			name: "Suppress aggressiveness",
+			enabled: true
+		},
+		{
+			name: "Promote pro-social values",
+			enabled: false
+		},
+		{
+			name: "Avoid destructive behavior",
+			enabled: true
+		},
+		{ name: "Be accessible", enabled: false },
+		{
+			name: "Participate in group activities",
+			enabled: false
+		},
+		{
+			name: "Avoid interpersonal conflicts",
+			enabled: false
+		},
+		{
+			name: "Avoid premature value judgments",
+			enabled: false
+		},
+		{
+			name: "Pool opinions before expressing yourself",
+			enabled: false
+		},
+		{
+			name: "Discourage feelings of negativity and hostility",
+			enabled: true
+		},
+		{
+			name: "If you haven't got anything nice to say don't talk",
+			enabled: false
+		},
+		{
+			name: "Don't rush traffic lights",
+			enabled: false
+		},
+		{
+			name: "Don't run through puddles and splash pedestrians or other cars",
+			enabled: false
+		},
+		{
+			name: "Don't say that you are always prompt when you are not",
+			enabled: false
+		},
+		{
+			name: "Don't be over-sensitive to the hostility and negativity of others",
+			enabled: false
+		},
+		{
+			name: "Don't walk across a ball room floor swinging your arms",
+			enabled: false
+		},
+		{
+			name: "Encourage awareness",
+			enabled: false
+		},
+		{
+			name: "Discourage harsh language",
+			enabled: false
+		},
+		{
+			name: "Commend sincere efforts",
+			enabled: false
+		},
+		{ name: "Talk things out", enabled: false },
+		{
+			name: "Avoid Orion meetings",
+			enabled: false
+		},
+		{ name: "Smile", enabled: false },
+		{
+			name: "Keep an open mind",
+			enabled: false
+		},
+		{
+			name: "Encourage participation",
+			enabled: false
+		},
+		{
+			name: "Avoid stereotyping",
+			enabled: false
+		},
+		{
+			name: "Seek non-violent solutions",
+			enabled: true
+		}
+	];
+
 	// Application
 	// NOTE: you should initialize the conversation here, this is great for introductions.
 	let introduction = [
@@ -1850,10 +1952,20 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
   ${each(attributes, item => `<div class="${"card-text"}">
     <label class="${"small"}" for="${escape(camelCase_1(item.name)) + "attribute"}">${escape(item.name)}</label>
     <div class="${"input-group mb-3"}">
+      <div class="${"custom-control custom-range"}">
+
+        <input type="${"range"}" class="${"custom-range"}" min="${"0"}" max="${"1"}" step="${"0.1"}" id="${escape(camelCase_1(item.name)) + "attribute"}"${add_attribute("value", item.value, 1)}>
+
+      </div>
+    </div>
+  </div>`)}
+
+  ${each(directives, item => `<div class="${"card-text"}">
+    <label class="${"small"}" for="${escape(camelCase_1(item.name)) + "directive"}">${escape(item.name)}</label>
+    <div class="${"input-group mb-3"}">
       <div class="${"custom-control custom-switch"}">
-
-        <input type="${"range"}" class="${"form-control-range custom-range"}" min="${"0"}" max="${"1"}" step="${"0.1"}" id="${escape(camelCase_1(item.name)) + "attribute"}"${add_attribute("value", item.value, 1)}>
-
+        <input type="${"checkbox"}" class="${"custom-control-input"}" id="${escape(camelCase_1(item.name)) + "directive"}"${add_attribute("checked", item.enabled, 1)}>
+        <label class="${"custom-control-label"}" for="${escape(camelCase_1(item.name)) + "directive"}"></label>
       </div>
     </div>
   </div>`)}
