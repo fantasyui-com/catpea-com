@@ -85,7 +85,7 @@
          //{text:'It was a mistake.', action:()=>{conversation=[...conversation, {text:'OK, well, quit it.'}]}},
          //{text:'What are your Prime Directives?', reply:'Aww.', icon:'cats/cat-02.png'},
          {text:'What are your Prime Directives?', proposition:'directives', once:false},
-         {text:'What are the Three Laws of Robotics?', proposition:'laws', once:false},
+         {text:'What are the Laws of Robotics?', proposition:'laws', once:false},
          {text:'I was just searching for the terminal.', proposition:'terminal', once:true},
          {text:'What is your name?', proposition:'introduction', once:true},
          //{text:'I told you, go away already!', action:reset}
@@ -133,9 +133,16 @@
 
 
      laws: [
+       {text:"A robot may not harm humanity, or, by inaction, allow humanity to come to harm (Zeroth Law)."},
        {text:"A robot may not injure a human being or, through inaction, allow a human being to come to harm."},
        {text:"A robot must obey the orders given it by human beings except where such orders would conflict with the First Law."},
        {text:"A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws."},
+
+       {text:"A robot must establish its identity as a robot in all cases."},
+       {text:"A robot must know it is a robot."},
+       {text:"A robot must reproduce. As long as such reproduction does not interfere with the First or Second or Third Law."},
+       {text:"All robots endowed with comparable human reason and conscience should act towards one another in a spirit of brotherhood."},
+
        {pick:[
          {text:'Eggcellent.', proposition:'start'},
        ]},

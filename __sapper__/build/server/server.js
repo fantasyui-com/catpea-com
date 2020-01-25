@@ -1796,7 +1796,7 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 						once: false
 					},
 					{
-						text: "What are the Three Laws of Robotics?",
+						text: "What are the Laws of Robotics?",
 						proposition: "laws",
 						once: false
 					},
@@ -1876,6 +1876,9 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 		],
 		laws: [
 			{
+				text: "A robot may not harm humanity, or, by inaction, allow humanity to come to harm (Zeroth Law)."
+			},
+			{
 				text: "A robot may not injure a human being or, through inaction, allow a human being to come to harm."
 			},
 			{
@@ -1883,6 +1886,16 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 			},
 			{
 				text: "A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws."
+			},
+			{
+				text: "A robot must establish its identity as a robot in all cases."
+			},
+			{ text: "A robot must know it is a robot." },
+			{
+				text: "A robot must reproduce. As long as such reproduction does not interfere with the First or Second or Third Law."
+			},
+			{
+				text: "All robots endowed with comparable human reason and conscience should act towards one another in a spirit of brotherhood."
 			},
 			{
 				pick: [
