@@ -7,7 +7,14 @@ body {
 
 
 
+.bg-gradient-gold-primary {}
+.bg-gradient-gold-secondary {}
 
+.bg-noise-steel-primary {}
+.bg-noise-steel-secondary {}
+
+.br-glow-cyan-primary {}
+.br-glow-cyan-secondary {}
 
 
 
@@ -44,4 +51,15 @@ body {
 .shake {
   display:inline-block;
   fill: gray;
+}
+
+
+
+.card.bg-danger.text-white a {
+  color: #ffd700;
+  font-weight: bold;
+}
+.card.bg-warning.text-white a {
+  color: #308a7d;
+  font-weight: bold;
 }

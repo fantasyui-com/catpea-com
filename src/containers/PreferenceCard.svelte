@@ -46,7 +46,7 @@ let view = 1; // controlled via UI icons
 
   <div class="card text-white bg-dark shadow">
 
-    <div class="card-header lead">
+    <div class="card-header lead bg-gradient-gold shadow text-dark">
       {title}
       <button class="btn btn-text btn-sm border border-secondary float-right" on:click="{e => view = 0}">{@html octicons.gear.toSVG({ "class": "fill-white" })}</button>
       <slot name="buttons"></slot>

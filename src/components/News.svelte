@@ -19,7 +19,10 @@
 
 
   let news = [
+    {date:'2020-01-28T03:34:30.737Z', html:'Added <a href="/warrior" class="text-warning">The Warrior Book</a> to the main menu. It is a complicated effort as the book was converted to a pure data file, and now needs components to render the data. It made the book very portable, but there are a couple of broken internal links, and perhaps a bug or two.'},
+
     {date:'2020-01-25T01:01:25.484Z', html:'The Squirrel Expert System can hide topics that the user already discussed. Squirrel\'s mind can be configured via Preferences pane. Added warning to anomalous IQ settings. Added secondary directives.'},
+
     {date:'2020-01-24T14:39:17.606Z', html:'Added Squirrel AI.'},
     {date:'2020-01-24T02:11:52.327Z', html:'Added Squirrel <div class="shake shake-force">' + octicons.squirrel.toSVG({ "class": "fill-white", height: 56  }) + '</div>'},
     {date:'2020-01-24T02:06:48.327Z', html:'Improved news readability.'},

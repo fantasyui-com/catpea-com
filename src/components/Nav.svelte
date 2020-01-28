@@ -1,11 +1,11 @@
 <script>
-	export let segment;
+  export let segment;
 
-	let collapse = true;
+  let collapse = true;
 
-	function handleCollapse() {
-	collapse=!collapse;
-	}
+  function handleCollapse() {
+  collapse=!collapse;
+  }
 
 
 
@@ -33,16 +33,20 @@
         <a class="nav-link" href=".">Home <span class="sr-only">(current)</span></a>
       </li>
 
-			<!-- for the stream link, we're using rel=prefetch so that Sapper prefetches
-	 		     the stream data when we hover over the link or tap it on a touchscreen -->
+      <!-- for the stream link, we're using rel=prefetch so that Sapper prefetches
+            the stream data when we hover over the link or tap it on a touchscreen -->
       <!-- <li class="nav-item" class:selected='{segment === "stream"}'>
         <a class="nav-link" rel=prefetch href="stream">Stream <span class="sr-only">(current)</span></a>
       </li>
 
-			-->
+      -->
 
-      <li class="nav-item" class:selected='{segment === "videos"}'>
+      <li class="nav-item" class:selected='{segment === "video"}'>
         <a class="nav-link" href="/video?p=0&i=8">Video Library <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item" class:selected='{segment === "warrior"}'>
+        <a class="nav-link" href="/warrior">The Warrior Book <span class="sr-only">(current)</span></a>
       </li>
 
 <!--
@@ -54,19 +58,19 @@
         <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
       </li> -->
 
-			<!-- <li class="nav-item" class:selected='{segment === "stream"}'>
-				<a class="nav-link disabled" rel=prefetch href="#">Stream <span class="sr-only">(current)</span></a>
-			</li>
+      <!-- <li class="nav-item" class:selected='{segment === "stream"}'>
+        <a class="nav-link disabled" rel=prefetch href="#">Stream <span class="sr-only">(current)</span></a>
+      </li>
 
-			<li class="nav-item" class:selected='{segment === "profile"}'>
-				<a class="nav-link disabled" rel=prefetch href="#">Profile <span class="sr-only">(current)</span></a>
-			</li>
-			<li class="nav-item" class:selected='{segment === "friends"}'>
-				<a class="nav-link disabled" rel=prefetch href="#">Friends <span class="sr-only">(current)</span></a>
-			</li>
-			<li class="nav-item" class:selected='{segment === "inbox"}'>
-				<a class="nav-link disabled" rel=prefetch href="#">Inbox <span class="sr-only">(current)</span></a>
-			</li> -->
+      <li class="nav-item" class:selected='{segment === "profile"}'>
+        <a class="nav-link disabled" rel=prefetch href="#">Profile <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" class:selected='{segment === "friends"}'>
+        <a class="nav-link disabled" rel=prefetch href="#">Friends <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" class:selected='{segment === "inbox"}'>
+        <a class="nav-link disabled" rel=prefetch href="#">Inbox <span class="sr-only">(current)</span></a>
+      </li> -->
 
     </ul>
 
