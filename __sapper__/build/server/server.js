@@ -2694,7 +2694,7 @@ const Warrior = create_ssr_component(($$result, $$props, $$bindings, $$slots) =>
 
   <nav class="${"mb-5"}" aria-label="${"breadcrumb"}">
     <ol class="${"breadcrumb bg-dark text-white"}">
-    <li class="${"breadcrumb-item"}"><a href="${"?chapter=index"}">Warrior</a></li>
+    <li class="${"breadcrumb-item"}"><a href="${"warrior?chapter=index"}">Warrior</a></li>
     <li class="${"breadcrumb-item active"}" aria-current="${"page"}">${escape(content.meta.title)}</li>
     </ol>
   </nav>
@@ -2731,12 +2731,12 @@ ${each(content.data, item => `<div class="${"row"}">
   <nav aria-label="${"Page Navigation"}">
 
     <p class="${"py-3"}">
-      <a href="${"warrior/?chapter=" + escape(contentNext.meta.name)}" class="${"btn btn-lg btn-primary btn-block"}">${escape(contentNext.meta.title)} <img style="${"width: 1rem; height:1rem;"}" src="${"warrior/images/arrow-alt-circle-right.svg"}"${add_attribute("alt", contentNext.meta.title, 0)}></a>
+      <a href="${"warrior?chapter=" + escape(contentNext.meta.name)}" class="${"btn btn-lg btn-primary btn-block"}">${escape(contentNext.meta.title)} <img style="${"width: 1rem; height:1rem;"}" src="${"warrior/images/arrow-alt-circle-right.svg"}"${add_attribute("alt", contentNext.meta.title, 0)}></a>
     </p>
 
     <p class="${"py-3"}">
-      <a href="${"warrior/?chapter=" + escape(contentPrev.meta.name)}" class="${"btn btn-secondary"}"><img style="${"width: 1rem; height:1rem;"}" src="${"warrior/images/arrow-alt-circle-left.svg"}"${add_attribute("alt", contentPrev.meta.title, 0)}> ${escape(contentPrev.meta.title)}</a>
-      <a href="${"warrior/?chapter=index"}" class="${"btn btn-secondary"}"><img alt="${"Index"}" style="${"width: 1rem; height:1rem;"}" src="${"warrior/images/list-alt.svg"}"></a>
+      <a href="${"warrior?chapter=" + escape(contentPrev.meta.name)}" class="${"btn btn-secondary"}"><img style="${"width: 1rem; height:1rem;"}" src="${"warrior/images/arrow-alt-circle-left.svg"}"${add_attribute("alt", contentPrev.meta.title, 0)}> ${escape(contentPrev.meta.title)}</a>
+      <a href="${"warrior?chapter=index"}" class="${"btn btn-secondary"}"><img alt="${"Index"}" style="${"width: 1rem; height:1rem;"}" src="${"warrior/images/list-alt.svg"}"></a>
     </p>
 
    </nav>

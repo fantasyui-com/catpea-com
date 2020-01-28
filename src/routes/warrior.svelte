@@ -115,7 +115,7 @@ onMount(async function() {
 
   <nav class="mb-5" aria-label="breadcrumb">
     <ol class="breadcrumb bg-dark text-white">
-    <li class="breadcrumb-item"><a href="?chapter=index">Warrior</a></li>
+    <li class="breadcrumb-item"><a href="warrior?chapter=index">Warrior</a></li>
     <li class="breadcrumb-item active" aria-current="page">{content.meta.title}</li>
     </ol>
   </nav>
@@ -154,12 +154,12 @@ onMount(async function() {
   <nav aria-label="Page Navigation">
 
     <p class="py-3">
-      <a href="warrior/?chapter={contentNext.meta.name}" class="btn btn-lg btn-primary btn-block">{contentNext.meta.title} <img style="width: 1rem; height:1rem;" src="warrior/images/arrow-alt-circle-right.svg" alt="{contentNext.meta.title}"></a>
+      <a href="warrior?chapter={contentNext.meta.name}" class="btn btn-lg btn-primary btn-block">{contentNext.meta.title} <img style="width: 1rem; height:1rem;" src="warrior/images/arrow-alt-circle-right.svg" alt="{contentNext.meta.title}"></a>
     </p>
 
     <p class="py-3">
-      <a href="warrior/?chapter={contentPrev.meta.name}" class="btn btn-secondary"><img style="width: 1rem; height:1rem;" src="warrior/images/arrow-alt-circle-left.svg" alt="{contentPrev.meta.title}">&nbsp;{contentPrev.meta.title}</a>
-      <a href="warrior/?chapter=index" class="btn btn-secondary"><img alt="Index" style="width: 1rem; height:1rem;" src="warrior/images/list-alt.svg"></a>
+      <a href="warrior?chapter={contentPrev.meta.name}" class="btn btn-secondary"><img style="width: 1rem; height:1rem;" src="warrior/images/arrow-alt-circle-left.svg" alt="{contentPrev.meta.title}">&nbsp;{contentPrev.meta.title}</a>
+      <a href="warrior?chapter=index" class="btn btn-secondary"><img alt="Index" style="width: 1rem; height:1rem;" src="warrior/images/list-alt.svg"></a>
     </p>
 
    </nav>
