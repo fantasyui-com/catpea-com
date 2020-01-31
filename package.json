@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "bodybuilding-advice": "^1.5.0",
-    "book-gui": "^3.3.5",
+    "book-gui": "^3.3.6",
     "calculate-percent": "^1.3.0",
     "compression": "^1.7.1",
     "js-cookie": "^2.2.1",

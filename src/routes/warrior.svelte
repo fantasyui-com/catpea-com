@@ -8,26 +8,17 @@ import Youtube from 'book-gui/src/Youtube.svelte';
 
 import Quote from 'book-gui/src/Quote.svelte';
 import Poem from 'book-gui/src/Poem.svelte';
-
-
-// import ImageComponent from '../book/ImageComponent.svelte';
-// import BusinessComponent from '../book/BusinessComponent.svelte';
-// import TextComponent from '../book/TextComponent.svelte';
-// import YoutubeComponent from '../book/YoutubeComponent.svelte';
-// import QuoteComponent from '../book/QuoteComponent.svelte';
-// import PoemComponent from '../book/PoemComponent.svelte';
-import SubtitleComponent from '../book/SubtitleComponent.svelte';
-// import LinkComponent from '../book/LinkComponent.svelte';
+import Subtitle from 'book-gui/src/Subtitle.svelte';
 
 const componentLookup = {
-image: Illustration,
-business: Business,
-text: Text,
-youtube: Youtube,
-quote: Quote,
-poem: Poem,
-subtitle: SubtitleComponent,
-link: Link,
+  image: Illustration,
+  business: Business,
+  text: Text,
+  youtube: Youtube,
+  quote: Quote,
+  poem: Poem,
+  subtitle: Subtitle,
+  link: Link,
 }
 
 import calculatePercent from "calculate-percent";
