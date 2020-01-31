@@ -33,7 +33,7 @@
     <blockquote class="blockquote mb-0">
 
       {#each text as line, index}
-        <p>{@html text}</p>
+        <p>{@html line}</p>
       {/each}
 
       <footer class="blockquote-footer"><span class="text-light">{author}</span></footer>

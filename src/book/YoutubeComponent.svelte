@@ -31,13 +31,13 @@
     {title}
   </div>
 
-  <a href="https://www.youtube.com/watch?v={video}"><img class="card-img-bottom" src="warrior/images/youtube-{video}.jpg" alt="{title}"></a>
+  <a href="https://www.youtube.com/watch?v={video}" rel="noopener noreferrer" target="_blank"><img class="card-img-bottom" src="warrior/images/youtube-{video}.jpg" alt="{title}"></a>
 
   {#if text.length}
     <div class="card-body" style="">
       {#if author}<h5 class="card-title">{author}</h5>{/if}
       {#each text as line, index}
-        <p>{@html text}</p>
+        <p>{@html line}</p>
       {/each}
     </div>
   {/if}

@@ -35,7 +35,7 @@
   {#if text.length}
     <div class="card-body" style="">
       {#each text as line, index}
-        <p>{@html text}</p>
+        <p>{@html line}</p>
       {/each}
     </div>
   {/if}

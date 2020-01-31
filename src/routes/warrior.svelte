@@ -1,23 +1,33 @@
 <script>
 
-import ImageComponent from '../book/ImageComponent.svelte';
-import BusinessComponent from '../book/BusinessComponent.svelte';
-import TextComponent from '../book/TextComponent.svelte';
-import YoutubeComponent from '../book/YoutubeComponent.svelte';
-import QuoteComponent from '../book/QuoteComponent.svelte';
-import PoemComponent from '../book/PoemComponent.svelte';
+import Illustration from 'book-gui/src/Illustration.svelte';
+import Text from 'book-gui/src/Text.svelte';
+import Link from 'book-gui/src/Link.svelte';
+import Business from 'book-gui/src/Business.svelte';
+import Youtube from 'book-gui/src/Youtube.svelte';
+
+import Quote from 'book-gui/src/Quote.svelte';
+import Poem from 'book-gui/src/Poem.svelte';
+
+
+// import ImageComponent from '../book/ImageComponent.svelte';
+// import BusinessComponent from '../book/BusinessComponent.svelte';
+// import TextComponent from '../book/TextComponent.svelte';
+// import YoutubeComponent from '../book/YoutubeComponent.svelte';
+// import QuoteComponent from '../book/QuoteComponent.svelte';
+// import PoemComponent from '../book/PoemComponent.svelte';
 import SubtitleComponent from '../book/SubtitleComponent.svelte';
-import LinkComponent from '../book/LinkComponent.svelte';
+// import LinkComponent from '../book/LinkComponent.svelte';
 
 const componentLookup = {
-image: ImageComponent,
-business: BusinessComponent,
-text: TextComponent,
-youtube: YoutubeComponent,
-quote: QuoteComponent,
-poem: PoemComponent,
+image: Illustration,
+business: Business,
+text: Text,
+youtube: Youtube,
+quote: Quote,
+poem: Poem,
 subtitle: SubtitleComponent,
-link: LinkComponent,
+link: Link,
 }
 
 import calculatePercent from "calculate-percent";

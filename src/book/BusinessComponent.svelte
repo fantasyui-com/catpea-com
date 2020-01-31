@@ -36,7 +36,7 @@
     <div class="card-body text-dark" style="">
       {#if title}<h5 class="card-title" class:mb-0='{text.length==0}'>{title}</h5>{/if}
         {#each text as line, index}
-          <p class="lead">{@html text}</p>
+          <p class="lead">{@html line}</p>
         {/each}
     </div>
 

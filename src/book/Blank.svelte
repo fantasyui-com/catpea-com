@@ -36,7 +36,7 @@
       {#if title}<h5 class="card-title">{title}</h5>{/if}
       {#if author}<h5 class="card-title">{author}</h5>{/if}
       {#each text as line, index}
-        <p>{@html text}</p>
+        <p>{@html line}</p>
       {/each}
     </div>
   {/if}
