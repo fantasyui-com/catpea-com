@@ -682,8 +682,12 @@ const News = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	// Application
 	let news = [
 		{
+			date: "2020-02-03T01:48:18.732Z",
+			html: "Created a tool for updating the book and Cat Pea GUI <a href=\"https://fantasyui-com.github.io/neumorphism/\" rel=\"noopener noreferrer\" target=\"_blank\" class=\"text-warning\">Neumorphism</a>"
+		},
+		{
 			date: "2020-01-31T04:07:32.063Z",
-			html: "Hee Haw, what a ride, I split the user Interface components used in <a href=\"/warrior\" class=\"text-warning\">The Warrior Book</a> from <a href=\"https://github.com/fantasyui-com/catpea-com\" rel=\"noopener noreferrer\" target=\"_blank\" class=\"text-warning\">Cat Pea Code</a> and created a creatively named stand-alone project: <a href=\"https://fantasyui-com.github.io/book-gui/?path=/story/widgets--illustration\" rel=\"noopener noreferrer\" target=\"_blank\" class=\"text-warning\">book-gui</a>, Ooh Wee."
+			html: "Hee Haw, what a ride, I split the user Interface components used in <a href=\"/warrior\" class=\"text-warning\">The Warrior Book</a> from <a href=\"https://github.com/fantasyui-com/catpea-com\" rel=\"noopener noreferrer\" target=\"_blank\" class=\"text-warning\">Cat Pea Code</a> and created a creatively named stand-alone project: <a href=\"https://fantasyui-com.github.io/book-gui/?path=/story/widgets--illustration\" rel=\"noopener noreferrer\" target=\"_blank\" class=\"text-warning\">book-gui</a>"
 		},
 		{
 			date: "2020-01-28T03:34:30.737Z",
