@@ -2101,7 +2101,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 	setInterval(recalculateTimestamps, 60000);
 	recalculateTimestamps();
 
-	return `${($$result.head += `${($$result.title = `<title>Cat Pea</title>`, "")}`, "")}
+	return `${($$result.head += `${($$result.title = `<title>𝗖𝗔𝗧 𝗣𝗘𝗔</title>`, "")}`, "")}
 
 
 
@@ -2847,7 +2847,7 @@ const Warrior = create_ssr_component(($$result, $$props, $$bindings, $$slots) =>
 	// database.forEach(chapter => chapter.data.forEach(item=>Object.keys(item).forEach(item=>types.add(item)) ))
 	// console.log(Array.from(types), types);
 
-	return `${($$result.head += `${($$result.title = `<title>Cat Pea</title>`, "")}`, "")}
+	return `${($$result.head += `${($$result.title = `<title>𝗖𝗔𝗧 𝗣𝗘𝗔</title>`, "")}`, "")}
 
 <div class="${["container-fluid text-warning", pageReady ? "visible" : ""].join(" ").trim()}" style="${"visibility: hidden;"}">
 
@@ -2925,7 +2925,7 @@ const Video = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	let end = start + parseInt($page.query.i);
 	let slice = database.slice(start, end);
 
-	return `${($$result.head += `${($$result.title = `<title>Cat Pea</title>`, "")}`, "")}
+	return `${($$result.head += `${($$result.title = `<title>𝗖𝗔𝗧 𝗣𝗘𝗔</title>`, "")}`, "")}
 
 <div class="${["container-fluid", pageReady ? "visible" : ""].join(" ").trim()}" style="${"visibility: hidden;"}">
 

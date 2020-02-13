@@ -28,7 +28,7 @@ onMount(async function() {
     database = json;
     console.log('database.length: %d',database.length)
     pageReady = true;
-    
+
 });
 
 </script>
@@ -38,7 +38,7 @@ onMount(async function() {
 </style>
 
 <svelte:head>
-	<title>Cat Pea</title>
+  <title>𝗖𝗔𝗧 𝗣𝗘𝗔</title>
 </svelte:head>
 
 <div class="container-fluid" style="visibility: hidden;" class:visible='{pageReady}'>

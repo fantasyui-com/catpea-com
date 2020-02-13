@@ -44,7 +44,7 @@ recalculateTimestamps();
 </style>
 
 <svelte:head>
-  <title>Cat Pea</title>
+  <title>𝗖𝗔𝗧 𝗣𝗘𝗔</title>
 </svelte:head>
 
 
