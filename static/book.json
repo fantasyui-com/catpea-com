@@ -15,7 +15,7 @@
    },
    {
     "type": "youtube",
-    "video": "cFEarBzelBs",
+    "video": "GEPhLqwKo6g",
     "title": "Think Different"
    },
    {
@@ -1295,7 +1295,7 @@
    {
     "type": "link",
     "url": "https://www.youtube.com/watch?v=tQHBHRV6eBQ&list=PL63A23DCDD95209FC",
-    "title": "Full Playlist &#xBB;"
+    "title": "Full Playlist"
    },
    {
     "type": "youtube",
@@ -1325,7 +1325,7 @@
    {
     "type": "link",
     "url": "https://www.youtube.com/watch?v=vJG698U2Mvo",
-    "title": "Selective Attention Gorilla Test &#xBB;"
+    "title": "Selective Attention Gorilla Test"
    },
    {
     "type": "text",
@@ -1452,12 +1452,122 @@
    {
     "type": "link",
     "url": "https://www.youtube.com/watch?v=BdXtjNSDi4s&list=PLzEZRwmmqC4FTciK3pyF2JsuSFyiysVYM",
-    "title": "Full Playlist &#xBB;"
+    "title": "Full Playlist"
    },
    {
     "type": "youtube",
     "video": "dw4w1UsOafQ",
     "title": "Richard Dawkins: Growing up in the Universe (1991)"
+   }
+  ]
+ },
+ {
+  "meta": {
+   "name": "naturalist",
+   "title": "The Naturalist"
+  },
+  "data": [
+   {
+    "type": "quote",
+    "author": "Beverly Sills",
+    "url": "https://en.wikipedia.org/wiki/Beverly_Sills",
+    "text": [
+     "There are no shortcuts to any place worth going."
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "2197wgDecZk",
+    "title": "A journey through Henry David Thoreau's Maine woods."
+   },
+   {
+    "type": "youtube",
+    "video": "SNxm2zkViKQ",
+    "title": "Appalachian Trail Thru Hike 2015: KATAHDIN!"
+   },
+   {
+    "type": "youtube",
+    "video": "_8FUPrd5ra0",
+    "title": "Thoreau's simple life at Walden"
+   },
+   {
+    "type": "youtube",
+    "video": "JJL9S0J8-4k",
+    "title": "Political theory: Henry David Thoreau"
+   },
+   {
+    "type": "youtube",
+    "video": "bAqIkEZbVhI",
+    "title": "Review: Walden by Henry David Thoreau"
+   },
+   {
+    "type": "youtube",
+    "video": "VaME4iHUhSE",
+    "title": "Walden, Public Domain Audiobook"
+   },
+   {
+    "type": "youtube",
+    "video": "6gFyH_cKWjk",
+    "title": "Owl Banding at Whitefish Point, Michigan"
+   },
+   {
+    "type": "youtube",
+    "video": "HgOJ0aShUuc",
+    "title": "Wild Things - Wildlife in Bialowieza, Poland (English)"
+   },
+   {
+    "type": "youtube",
+    "video": "1czqejkbvO8",
+    "title": "Bialowieza primeval forest part 1/2"
+   },
+   {
+    "type": "youtube",
+    "video": "-v7wqo-CHPI",
+    "title": "Bialowieza primeval forest part 2/2"
+   },
+   {
+    "type": "youtube",
+    "video": "2G8LAiHSCAs",
+    "title": "Forest Birds Singing"
+   },
+   {
+    "type": "youtube",
+    "video": "ko_GQ9ImAvE",
+    "title": "Crickets, Owls, Rain, and Wind"
+   },
+   {
+    "type": "youtube",
+    "video": "vPhg6sc1Mk4",
+    "title": "Ocean Sounds"
+   },
+   {
+    "type": "text",
+    "title": "Groundhog Day",
+    "text": [
+     "<p> <a href=\"https://en.wikipedia.org/wiki/Groundhog_Day\">Groundhog Day</a> is a popular tradition celebrated in Canada and the United States on February 2nd. It derives from the Pennsylvania Dutch superstition that if a groundhog emerging from its burrow on this day sees its shadow due to clear weather, it will retreat to its den and winter will persist for six more weeks, and if it does not see its shadow because of cloudiness, spring will arrive early. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "FDFy7_DM_qQ",
+    "title": "Why Groundhogs Supposedly Predict The Weather On Groundhog Day"
+   },
+   {
+    "type": "quote",
+    "author": "Phil Connors (Bill Murray)",
+    "text": [
+     "There is no way that this winter is ever going to end as long as this groundhog keeps seeing his shadow. I don&apos;t see any other way out. He&apos;s got to be stopped. And I have to stop him."
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "oLqLpVLE8R0",
+    "title": "Jimmy the Groundhog takes a nibble of Wisconsin mayor"
+   },
+   {
+    "type": "youtube",
+    "video": "p3Qnlu9Nfj8",
+    "title": "Pennsylvania Polka"
    }
   ]
  },
@@ -1945,6 +2055,30 @@
     "type": "youtube",
     "video": "fnkj6fD_i9o",
     "title": "Dark Energy and the Runaway Universe, Dr. Alex Filippenko, UC Berkeley"
+   },
+   {
+    "type": "text",
+    "title": "Dr. Becky",
+    "text": [
+     "<a href=\"https://www.youtube.com/channel/UCYNbYGl89UUowy8oXkipC-Q\">YouTube Channel</a>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "YgDItoRdQ_Q",
+    "title": "A newly discovered, unexplained Fast Radio Burst | Night Sky News February 2020"
+   },
+   {
+    "type": "text",
+    "title": "Physics Girl",
+    "text": [
+     "<a href=\"https://www.youtube.com/channel/UC7DdEm33SyaTDtWYGO2CwdA\">YouTube Channel</a>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "c6Eq2sI1NDY",
+    "title": "How the Edge of Our Galaxy Defies Known Physics"
    }
   ]
  },
@@ -2031,8 +2165,8 @@
    },
    {
     "type": "youtube",
-    "video": "1oTUupME0-M",
-    "title": "Faded (Remix)"
+    "video": "S321TDbe9Bo",
+    "title": "Alan Walker Shuffle Dance"
    },
    {
     "type": "quote",
@@ -2052,6 +2186,60 @@
     "text": [
      "<p>Edward Maya - <a href=\"https://www.youtube.com/watch?v=ixWNDh2XAwE\">Stereo Love</a></p> <p>Eiffel 65 - <a href=\"https://www.youtube.com/watch?v=zA52uNzx7Y4\">Blue (Da Ba Dee)</a></p> <p>Ryan Enzed - <a href=\"https://www.youtube.com/watch?v=jSiMyTwUfWY\">Stage Rage</a></p> <p>Ryan Enzed &amp; Gladius - <a href=\"https://www.youtube.com/watch?v=YVpfEBxTGgA\">Living The Dream</a></p> <p>Risk and Enzed - <a href=\"https://www.youtube.com/watch?v=HtyAW80KM6U\">Repeat After Me</a></p> <p>Alan Walker - <a href=\"https://www.youtube.com/watch?v=1-xGerv5FOk\">Alone</a></p> <p>Alan Walker - <a href=\"https://www.youtube.com/watch?v=1oTUupME0-M\">Faded</a></p>"
     ]
+   },
+   {
+    "type": "text",
+    "title": "Amazing Choreography of Rasputin",
+    "text": [
+     "<p> <a href=\"https://en.wikipedia.org/wiki/Rasputin_(song)\">Rasputin</a> is a 1978 Euro disco hit single by the Germany-based pop and Euro disco group Boney M., the second from their album Nightflight to Venus. It was written by the group&apos;s creator Frank Farian, along with George Reyam and Fred Jay. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "16y1AkoZkmQ",
+    "title": "Boney M. - Rasputin (Sopot Festival 1979)"
+   },
+   {
+    "type": "youtube",
+    "video": "SRWiqjgOyX0",
+    "title": "Just Dance 2 - Rasputin (side by side)"
+   },
+   {
+    "type": "youtube",
+    "video": "I8kuhv0FcTE",
+    "title": "LittleSiha dancing to Rasputin"
+   },
+   {
+    "type": "youtube",
+    "video": "a_n2Jm6-NpA",
+    "title": "CiaoMia dancing to Rasputin"
+   },
+   {
+    "type": "youtube",
+    "video": "YgGzAKP_HuM",
+    "title": "RASPUTIN - Vladimir Putin - Love The Way You Move"
+   },
+   {
+    "type": "text",
+    "title": "Notes",
+    "text": [
+     "<p class=\"small\"> <a href=\"https://en.wikipedia.org/wiki/Sopot_International_Song_Festival\">Sopot Festival</a> is an annual international song contest held in Sopot, Poland. It was the biggest Polish music festival altogether with the National Festival of Polish Song in Opole, and one of the biggest song contests in Europe. </p> <p class=\"small\"> <a href=\"https://en.wikipedia.org/wiki/Just_Dance_(video_game_series)\">Just Dance</a> is a rhythm game series developed and published by Ubisoft. The series was named after the Lady Gaga song of the same title. The original Just Dance game was released on the Wii in 2009. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "9S8ecyxO7Bw",
+    "title": "Rasputin by Roman Kondrachov"
+   },
+   {
+    "type": "youtube",
+    "video": "85xPjTQYzWM",
+    "title": "Roman Kondrachov's Ukrainian Folk Dance Solos"
+   },
+   {
+    "type": "youtube",
+    "video": "1FLThlB_OWc",
+    "title": "PRISYADKA (Russian Squat Kick TUTORIAL) - Detailed"
    }
   ]
  },
@@ -2283,7 +2471,7 @@
     "type": "text",
     "title": "Playlist",
     "text": [
-     "<p>This is a snapshot of one of my workout playlists, primary Dance Pop as it is easiest to workout to a dance song. I change my playlist almost daily, searching YouTube for <a href=\"https://www.youtube.com/results?search_query=Electro+Bounce\">Electro Bounce</a>, <a href=\"https://www.youtube.com/results?search_query=Boosted+Bootleg\">Boosted Bootleg</a>, <a href=\"https://www.youtube.com/results?search_query=Hardstyle\">Hardstyle</a>, <a href=\"https://www.youtube.com/results?search_query=Hard+Bass\">Hard Bass</a>, <a href=\"https://www.youtube.com/results?search_query=Powerstomp\">Powerstomp</a>, <a href=\"https://www.youtube.com/results?search_query=Dance+Pop\">Dance Pop</a>, <a href=\"https://www.youtube.com/results?search_query=Bubblegum+Pop\">Bubblegum Pop</a>, <a href=\"https://www.youtube.com/results?search_query=Bass+Boost\">Bass Boost</a>, <a href=\"https://www.youtube.com/results?search_query=HIIT+Songs\">HIIT Songs</a>, and <a href=\"https://www.youtube.com/results?search_query=Choreography\">Choreography</a> (choreographers tend to pick amazing songs).</p>"
+     "<p> I change my playlist daily, here are some examples. </p> <p><a href=\"https://www.youtube.com/results?search_query=Electro+Bounce\">Electro Bounce</a></p> <p><a href=\"https://www.youtube.com/results?search_query=Boosted+Bootleg\">Boosted Bootleg</a></p> <p><a href=\"https://www.youtube.com/results?search_query=Bass+Boost\">Bass Boost</a></p> <p><a href=\"https://www.youtube.com/results?search_query=HIIT+Songs\">HIIT Songs</a></p> <p><a href=\"https://www.youtube.com/results?search_query=Bubblegum+Pop\">Bubblegum Pop</a></p> <p><a href=\"https://www.youtube.com/results?search_query=Dance+Pop\">Dance Pop</a></p> <p><a href=\"https://www.youtube.com/results?search_query=Hardstyle\">Hardstyle</a></p> <p><a href=\"https://www.youtube.com/results?search_query=Hard+Bass\">Hard Bass</a></p> <p><a href=\"https://www.youtube.com/results?search_query=Powerstomp\">Powerstomp</a></p> <p><a href=\"https://www.youtube.com/results?search_query=Industrial\">Industrial</a></p> <p><a href=\"https://www.youtube.com/results?search_query=EBM\">EBM (Electronic body music)</a></p> <!-- Um, no. <p><a href=\"https://www.youtube.com/results?search_query=Harsh+Noise\">Harsh Noise</a></p> --> <p><a href=\"https://www.youtube.com/results?search_query=Synthpop\">Synthpop</a></p> <p><a href=\"https://www.youtube.com/results?search_query=Witch+House\">Witch House</a></p> <p><a href=\"https://www.youtube.com/results?search_query=Aggrotech\">Aggrotech</a></p> <p> <a href=\"https://www.youtube.com/results?search_query=Choreography\">Choreography</a> (choreographers tend to pick amazing songs). </p>"
     ]
    },
    {
@@ -2424,8 +2612,8 @@
    },
    {
     "type": "youtube",
-    "video": "6umL3VjGX7c",
-    "title": "Lauren Bruzzone, Strength and Focus."
+    "video": "tI98MLR-4U4",
+    "title": "Lauren Bruzzone, Strength and Fitness."
    },
    {
     "type": "subtitle",
@@ -2572,59 +2760,22 @@
     "type": "youtube",
     "video": "3nQ6c7WIudE",
     "title": "The Japanese Tradition - Sushi"
+   },
+   {
+    "type": "text",
+    "title": "Questions and more questions...",
+    "text": [
+     "<a href=\"https://realsalt.com/why-do-some-japanese-restaurants-keep-piles-of-salt-outside/\">Why Do Some Japanese Restaurants Keep Piles of Salt Outside?</a>"
+    ]
    }
   ]
  },
  {
   "meta": {
-   "name": "maker",
-   "title": "The Maker"
+   "name": "blacksmith",
+   "title": "The Blacksmith"
   },
   "data": [
-   {
-    "type": "youtube",
-    "video": "b694exl_oZo",
-    "title": "My creations, a new form of life by Theo Jansen"
-   },
-   {
-    "type": "youtube",
-    "video": "KsqlnGMzMD4",
-    "title": "Strandbeest Evolution 2017"
-   },
-   {
-    "type": "text",
-    "title": "Colin Furze",
-    "text": [
-     "<a href=\"https://www.youtube.com/user/colinfurze\">YouTube Channel</a>"
-    ]
-   },
-   {
-    "type": "youtube",
-    "video": "soxxPyaAT1k",
-    "title": "Homemade Hoverbike"
-   },
-   {
-    "type": "youtube",
-    "video": "yox9CKYh7EU",
-    "title": "Underground Beach Hut Build"
-   },
-   {
-    "type": "text",
-    "title": "Clickspring",
-    "text": [
-     "<p> <a href=\"https://www.youtube.com/channel/UCworsKCR-Sx6R6-BnIjS2MA\">YouTube Channel</a> </p> <p> <a href=\"https://www.youtube.com/playlist?list=PLZioPDnFPNsHnyxfygxA0to4RXv4_jDU2\">Making The Antikythera Mechanism</a> </p> <p> <a href=\"https://www.youtube.com/playlist?list=PLZioPDnFPNsETq9h35dgQq80Ryx-beOli\">Making A Large Wheel Skeleton Clock</a> </p>"
-    ]
-   },
-   {
-    "type": "youtube",
-    "video": "ML4tw_UzqZE",
-    "title": "The Antikythera Mechanism Episode 1 - Greeks, Clocks and Rockets."
-   },
-   {
-    "type": "youtube",
-    "video": "B8Y146v8HxE",
-    "title": "How To Make A Clock In The Home Machine Shop - Part 1"
-   },
    {
     "type": "text",
     "title": "Freerk Wieringa",
@@ -2665,23 +2816,6 @@
     "type": "youtube",
     "video": "Vu1s8LoLd7c",
     "title": "Making a Knife from an Old File"
-   },
-   {
-    "type": "text",
-    "title": "Andre Will Do It",
-    "text": [
-     "<a href=\"https://www.youtube.com/channel/UCad1pq_FAygE4VaDLJMZ8BA\">YouTube Channel</a>"
-    ]
-   },
-   {
-    "type": "youtube",
-    "video": "py6WEp6pKGE",
-    "title": "Rusty Remington Clone"
-   },
-   {
-    "type": "youtube",
-    "video": "86356fRR1VY",
-    "title": "Abandoned 1886 Colt Lightning"
    },
    {
     "type": "text",
@@ -2745,6 +2879,116 @@
     "type": "youtube",
     "video": "GLFAURAIyXQ",
     "title": "Blacksmithing Knifemaking - Forging A Ram's Head Railroad Spike Knife"
+   },
+   {
+    "type": "text",
+    "title": "Torbjörn Åhman",
+    "text": [
+     "<a href=\"https://www.youtube.com/channel/UCSFaYYQzNMLo2U6rSNLpghg\">YouTube Channel</a>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "je-BmMoEFtQ",
+    "title": "Making a pair of scissors"
+   },
+   {
+    "type": "text",
+    "title": "Black Bear Forge",
+    "text": [
+     "<a href=\"https://www.youtube.com/channel/UCdOM6Qc53TcWuExrnDLVjXg\">YouTube Channel</a>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "c80mMzDknTI",
+    "title": "Chevron or Wheat twist, forge welding twists"
+   }
+  ]
+ },
+ {
+  "meta": {
+   "name": "maker",
+   "title": "The Maker"
+  },
+  "data": [
+   {
+    "type": "youtube",
+    "video": "b694exl_oZo",
+    "title": "My creations, a new form of life by Theo Jansen"
+   },
+   {
+    "type": "youtube",
+    "video": "KsqlnGMzMD4",
+    "title": "Strandbeest Evolution 2017"
+   },
+   {
+    "type": "text",
+    "title": "Colin Furze",
+    "text": [
+     "<a href=\"https://www.youtube.com/user/colinfurze\">YouTube Channel</a>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "soxxPyaAT1k",
+    "title": "Homemade Hoverbike"
+   },
+   {
+    "type": "youtube",
+    "video": "yox9CKYh7EU",
+    "title": "Underground Beach Hut Build"
+   },
+   {
+    "type": "text",
+    "title": "Jimmy Diresta",
+    "text": [
+     "<a href=\"https://www.youtube.com/user/jimmydiresta\">YouTube Channel</a>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "M6v2trBW4es",
+    "title": "Brass Hammer"
+   },
+   {
+    "type": "youtube",
+    "video": "gwAId02ssYs",
+    "title": "Stained Glass Window"
+   },
+   {
+    "type": "text",
+    "title": "Clickspring",
+    "text": [
+     "<p> <a href=\"https://www.youtube.com/channel/UCworsKCR-Sx6R6-BnIjS2MA\">YouTube Channel</a> </p> <p> <a href=\"https://www.youtube.com/playlist?list=PLZioPDnFPNsHnyxfygxA0to4RXv4_jDU2\">Making The Antikythera Mechanism</a> </p> <p> <a href=\"https://www.youtube.com/playlist?list=PLZioPDnFPNsETq9h35dgQq80Ryx-beOli\">Making A Large Wheel Skeleton Clock</a> </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "ML4tw_UzqZE",
+    "title": "The Antikythera Mechanism Episode 1 - Greeks, Clocks and Rockets."
+   },
+   {
+    "type": "youtube",
+    "video": "B8Y146v8HxE",
+    "title": "How To Make A Clock In The Home Machine Shop - Part 1"
+   },
+   {
+    "type": "text",
+    "title": "Andre Will Do It",
+    "text": [
+     "<a href=\"https://www.youtube.com/channel/UCad1pq_FAygE4VaDLJMZ8BA\">YouTube Channel</a>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "py6WEp6pKGE",
+    "title": "Rusty Remington Clone"
+   },
+   {
+    "type": "youtube",
+    "video": "86356fRR1VY",
+    "title": "Abandoned 1886 Colt Lightning"
    },
    {
     "type": "text",
@@ -3076,6 +3320,24 @@
     ]
    },
    {
+    "type": "image",
+    "url": "warrior/images/stereo-master.jpg",
+    "title": "The Masters of the Stereo",
+    "text": [
+     "<p> A <strong>sample</strong> of sound, is the same as a sample of cake, it is just a little bit of something larger. In the world of music, that little bit, would often be a defining sound in a song that captured your attention. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "i9MXYZh1jcs",
+    "title": "Amiga Samplers : Budget dance music in 1990"
+   },
+   {
+    "type": "youtube",
+    "video": "v89CjsSOJ_c",
+    "title": "Amen, Break: The Most Sampled Loop in Music History"
+   },
+   {
     "type": "youtube",
     "video": "H3TF-hI7zKc",
     "title": "How sampling transformed music by Mark Ronson"
@@ -3216,6 +3478,11 @@
     "type": "youtube",
     "video": "Z8ZShEgGt-4",
     "title": "Smile, Ukulele Cover by Izzie Naylor"
+   },
+   {
+    "type": "youtube",
+    "video": "D1Nq086QB1Q",
+    "title": "Gary Jules - Mad World (live)"
    },
    {
     "type": "text",
@@ -4563,6 +4830,11 @@
    },
    {
     "type": "youtube",
+    "video": "PUv66718DII",
+    "title": "Bret Victor - Inventing on Principle"
+   },
+   {
+    "type": "youtube",
     "video": "-jRREn6ifEQ",
     "title": "The poetry of programming (teaching children about computers): Linda Liukas"
    },
@@ -4580,6 +4852,16 @@
     "type": "youtube",
     "video": "m2Ux2PnJe6E",
     "title": "Making a Game: Bill Gates explains If statements."
+   },
+   {
+    "type": "youtube",
+    "video": "vYXQTrYPenQ",
+    "title": "Bill Gates remembers his early programming career"
+   },
+   {
+    "type": "youtube",
+    "video": "6V6Gir1Dyfs",
+    "title": "1991 Interview with Bill Gates"
    },
    {
     "type": "youtube",
@@ -4709,6 +4991,965 @@
  },
  {
   "meta": {
+   "name": "highschooler",
+   "title": "The Highschooler"
+  },
+  "data": [
+   {
+    "type": "youtube",
+    "video": "Io3sdAAcZLw",
+    "title": "Elon Musk knocks the college experience"
+   },
+   {
+    "type": "text",
+    "title": "Notes from an Imaginary High School: A Quick Reminder",
+    "text": [
+     "<p> We knew there was no conspiracy, no deliberate ill intent, no plan to betray a student for a paycheck. </p> <p> Many of the teachers were our friends, family, people we admired. Many felt bad about the level of education we were receiving. </p> <p> But, whether they liked it or not, consciously or subconsciously, at the end of the day, it was clear that the teachers were forcing us to memorize for long enough to pass standardized testing, and the administration didn&apos;t have a problem with that. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "DzSnvxejenY",
+    "title": "De-Grading Education by Elizabeth Wissner-Gross"
+   },
+   {
+    "type": "text",
+    "title": "Paved with Good Intentions",
+    "text": [
+     "<p> They meant no harm, they did it so that they could get paid, so that the school could get funding, so that everyone would keep their job. But those who didn&apos;t rise against it caused harm. They interfered with our real education, harming creativity, erasing individuality. </p> <p> In K-12 they taught us that delicate hearts belonged with mommy at home, that bullies were a fact, and life is never fair. They hurt our hearts, and shamed us by saying. &quot;Oh, just grow up, already! Because, you need to improve your grades.&quot; </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "sxyKNMrhEvY",
+    "title": "The Surprising Truth About Learning in Schools by Will Richardson"
+   },
+   {
+    "type": "text",
+    "title": "We Were Mislead",
+    "text": [
+     "<p> &quot;Today, we&apos;ll get it all working, and today we&apos;ll get paid. Tomorrow, tomorrow, when everything is worked-out and working, we&apos;ll get to the students - one thing at a time.&quot; - They&apos;d say. </p> <p> But we knew that tomorrow never comes, once the new day starts, it is already today. The tomorrow they thought of, was more of a garbage can for nice-to-haves. </p> <p> They were working very hard, and it was all very hard work. But they didn&apos;t have the strength to do both, their job, and make schools work. </p> <p> In effect, everyone forgot about us. They forgot we were the point and the future. Their aim was no longer our education, but merely staying in business by arranging for what in effect became, an impression of one. </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "Twists & Turns",
+    "text": [
+     "<p> To accomplish all this, some changes needed to be made, they first convinced themselves that they were doing a great job so as long as they were working hard, and then some things needed to be taken away, and a few needed to be twisted around. </p> <p> We were forced to recognize that teachers work really, really hard, that the administration works very hard, it is all hard work, extremely stressful. People give up days off, cancel vacations, make sacrifices. </p> <p> To question administration or teachers while they work that hard, makes for a heartless, cruel, shameful petty little student. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "GeSjkVFtb9k",
+    "title": "Nataly Buhr"
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/buhr1.png",
+    "text": []
+   },
+   {
+    "type": "text",
+    "title": "How Unfortunate... ",
+    "text": [
+     "<p> &quot;Focus on the positive, on how hard we work and how far we&apos;ve come together.&quot; - They&apos;d say, ever so lovingly. </p> <p> Void of context, many of the shallow arguments the teachers made could almost stand up to a proper debate. </p> <p> But we remained unconvinced because teaching is not just a job. It is not an ordinary job, and it is not just about knowledge. </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "Teaching is Complex",
+    "text": [
+     "<p> Teaching requires that the Teacher first comprehends each of the Students, understands their existing body of knowledge, manner of learning, and finds a way to genuinely communicate with them. </p> <p> Tracking is not that hard, a pencil or a Concept Mapping tool will do. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "22YeW55POBs",
+    "title": "Concept Mapping with Cmap"
+   },
+   {
+    "type": "text",
+    "title": "Teaching is Complex and Rewarding",
+    "text": [
+     "<p> Teaching should respectfully extend their existing knowledge. The teacher must know if fascination with Dinosaurs will head towards Paleontology, Biology, Ecology, and keep an eye on progression of that path (if said path continues) to see is they have a Cell Bilogist, Astrobiologist, Evolutionary Biologist, or maybe a Writer, in their class. </p> <p> The complexity of teaching may actually scale with the reward, how fantastic it must be to help our Dino Girl to ponder inter-planetary cross-contamination from the Chicxulub crater and witness her journey lean towards Astrobiology and an internship at NASA/ESA, possibly a career. </p> <p> Now, pushing her away from what moves her, grading her down for it, and forcing her to memorize whatever is in the curriculum so that she may pass the grade. That is something else... And the answer to how many children were hurt this way, is: <strong>all of them</strong>, in every school, on every continent, in every country, state and district. </p> <p> Schools interrupt education. </p> <p> They destroy careers, passions, inspirations, talents, and genius. They do it just a split second before the Kids know how to protect it. </p> <p> They destroy The Shy, The Delicate, The Compassionate. </p> <p> They destroy Pacifists, Leaders, Scientists, Inventors, Dreamers, Poets, Artists, Sculptors, Musicians, Adventures, Writers, Makers, Heroes. </p>"
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/gpa.png",
+    "text": [
+     "<p> A picture of a real blackboard in a library taken from <a href=\"https://www.youtube.com/watch?v=xz-gVKwWNzs\">F**k Grades by Denise Dutton</a>. </p> <p class=\"small\"> Prof. Dutton does not postulate a 2.* GPA student in her talk. </p> <p class=\"small\"> I think the person that wrote this was a young woman. And this might have been her last act of defiance in that school. </p> <p class=\"small\"> We lost a wise and delicate being, a leader, a scientist, maybe a writer, to silence, rejection, shunning. </p> <p class=\"small\"> That late-night scribble is clear Evidence of Exceptional Ability. This is someone we each admire, someone Beautifully Courageous. </p> <p class=\"small\"> But she left, she&apos;s gone. They gave her a 2.0 for Leadership, Unbreakability, Heroism, for spending her last semester reading books she loved, at the school library she loved, right before getting thrown out. </p> <p class=\"small\"> Thrown out by people that didn&apos;t know what they were doing, but they sure as hell worked hard at doing it. </p> <p class=\"small\"> Thrown out for unobstructed pursuit of Wisdom. </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "Lux Et Veritas (Enlightenment and Authenticity)",
+    "text": [
+     "<p> Above all, school is a place of healing, it is a sacred place. </p> <p> The School Library is even more sacred, it is a place for Young Philosophers. </p> <p> School is about safety and security and protection, first. </p> <p> It must be a place where we can safely grow, study both Life, and Wisdom. Search for Enlightenment and Authenticity. </p> <p> Education is about mental health, learning to live. </p> <p> Learning to avoid what is not life. </p> <p> Not starting at zero, but rather resuming at where the greatest minds left off. </p> <p> The teachers were supposed to work for us first. Only upon genuinely enabling us to comprehend new things, should they be rewarded. </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "How Evil...",
+    "text": [
+     "<p> Alas, teaching whilst failing to educate, is fraud. </p> <p> Parading the coffee lovers, who want to breeze through with a 4.0 GPA, to get the hell out, and move past this damn charade. Parading them as successfully educated students, is fraud. </p> <p> Making the quiet girl cry because she wanted to comprehend and not merely memorize, is evil. </p> <p> Turning face away, when the fat kid is being bullied, beaten, assaulted, threatened, kicked, held down, spat upon, is evil. <!-- So much for my music education, dear teacher. I still see your face turning away in slow motion, I figured out what you are. --> </p> <p> Sending a kid back home, when you just witnessed his father beating him in the bathroom for the bad grades he ended up with, because he can&apos;t memorize anything when he is under constant threat from everybody, is evil. <!-- Patryk, it's beer 30 years you weirdo, I am sure you are a dad now. I would have helped, but I didn't know bullies were bad back then, I thought it was just something we had to fight to survive. --> </p> <p> Failing to authentically educate, and then grading down those who rejected the memorization dog and pony show, is evil. </p> <p> Pretending to teach under the poisonous threat of repeating the grade or year, semester or class, threatening kids to stop learning, and start memorizing, is evil. </p> <p> Sending kids home to angry, often violent parents, because they rejected fake education, fake tests, fantasy GPA, is evil. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "iG9CE55wbtY",
+    "title": "Do schools kill creativity? by Sir Ken Robinson"
+   },
+   {
+    "type": "text",
+    "title": "Toxic, Fractured, Hoop Jumping",
+    "text": [
+     "<p> School doesn&apos;t just kill creativity, genius, talent, inspiration and passion, it kills learning too. </p> <p> The toxic mixture of irrelevant babble, easy to cram for tests, and Life &amp; Career threatening GPA; forces the student to abandon Authentic Education for curriculum-hoop jumping. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "xz-gVKwWNzs",
+    "title": "F**k Grades by Denise Dutton"
+   },
+   {
+    "type": "text",
+    "title": "We Were All Geniuses, We Were Mislead",
+    "text": [
+     "<p> We were taught that genius is rare, that creativity is reserved for those who have talent, that good grades get a good job, that only the smart ace the tests, and that to pass a test we need to cram harder and take more notes, that grade-point-average is the measure of a human - because that is how the world works. </p> <p> And work... </p> <p> Work would set us free. </p> <p> We were scared, because there was no road ahead. There was no clear authentic future. </p> <p> Not without that same charade, that inauthenticity, that glass of fashion, that mold of form that we were being pressed into, and everyone else already accepted, and blindly participated in. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "9M4tdMsg3ts",
+    "title": "Erica Goldson"
+   },
+   {
+    "type": "text",
+    "title": "Trigonometry, Triceps and Triceratops",
+    "text": [
+     "<p> At first we thought we were the losers. We certainly had the grades to prove it. We formed a club. We sarcastically called it The Breakfast Club after an old movie. We expected to be held back, and eventually kicked out. </p> <p> We didn&apos;t expect to be seen as the gifted ones. </p> <p> But we had the gift of courage, the gift of search for a clear road ahead. And that road turned out to be becoming a Businessperson, a Founder, a CEO. It was a path that mixed education with rewards, leading onward to independence and a majestic triumph, albeit through many a failure. </p> <p> In school, we were being forced to memorize Trigonometry, Triceps and Triceratops, when what we really needed was help with finding investors to scale our little Breakfast Club business. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "2Yt6raj-S1M",
+    "title": "How School Makes Kids Less Intelligent by Eddy Zhong"
+   },
+   {
+    "type": "text",
+    "title": "The Courageous & The Fallen",
+    "text": [
+     "<p> The others secretly saw us as courageous, strong and unbreakable, healthy and authentic. But they didn&apos;t really know how to relate to us. We were the same but they were too confused by the noise of homework, quizzes, tests, and grades, chores, parents, circles, and punishment, punishment everywhere. </p> <p> The threat of repeating classes, reliving the same noise, or being held back was exactly like prison. Neurologically, Threat and Punishment interferes with Neurogenesis. For the most Delicate, it wasn&apos;t just difficult to cram and memorize, it might have been neurologically impossible. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "zxRTHq5uBbg",
+    "title": "Mad World, Our Club"
+   },
+   {
+    "type": "text",
+    "title": "Angelheaded Hipsters",
+    "text": [
+     "<p> The biggest of the troublemakers had the most brittle souls, they were the first to shine, the mightiest of the thinkers, the best of the survivors, but tragically also the first to have their spark dim under threat and pressure. </p> <p> Already forged in battle at home, the betrayal of schooling was the tipping point for many. </p> <p> They just couldn&apos;t resist parents, or pressure, or grades, not for that long, it was not human to live perpetually frightened in constant fear. </p> <p> The schools added to the dark forces already crushing them, the teachers were supposed to kindle their flame, but they filled their vessel and often extirpated their spark. </p>"
+    ]
+   },
+   {
+    "type": "quote",
+    "author": "Allen Ginsberg",
+    "url": "https://en.wikipedia.org/wiki/Howl",
+    "text": [
+     "I saw the best minds of my generation destroyed by madness, starving hysterical naked, dragging themselves through the negro streets at dawn looking for an angry fix, angelheaded hipsters burning for the ancient heavenly connection to the starry dynamo in the machinery of night..."
+    ]
+   },
+   {
+    "type": "text",
+    "title": "We Didn't Forget About The Fallen",
+    "text": [
+     "<p> We&apos;d see it the moment it happened, overnight they&apos;d end up switching crowds. </p> <p> The teachers, who were supposed to be their protectors, and their hope and inspiration, would eventually notice the transition as well, but perversely they would think to themselves &quot;I was correct, I always knew that one was a loser too.&quot; </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "DQ1QUK8KLH0",
+    "title": "The Club"
+   },
+   {
+    "type": "text",
+    "title": "People tried to help, but they didn't know how.",
+    "text": [
+     "<p> Someone said that the only reason the teachers seemed to know more than we did, was because they had to regurgitate that same stuff every year to keep their jobs... </p> <p> Each time it came up; there was always someone to say that they wanted to help us, but in the end they seemed to have wanted to assimilate and destroy, embrace and extinguish. Get the gifted ones out of the system to make things easier for themselves, to calm the waters - if nothing sticks out, it must be all good. </p> <p> Nobody, really, took grades seriously because of how easy it was to cram before a test, pass it, and forget it. Since tests did not represent student knowledge, grades did not represent the student. Everyone knew this, nobody said anything because once the students realized the school was mostly a charade they just wanted to graduate and move on. </p> <p> Overwhelming majority of Teachers didn&apos;t want to change anything because they didn&apos;t want to make their job any harder, they just want to get paid and go home. Statistically half of them quit anyway. </p> <p> Management was focused on grade points and funding. </p> <p> Everybody else was parading solutions, but there was no time, any extras were aimed at symptoms, extras just added to the weight of existing problems. </p> <p> The root cause was that we were not safe, and we were not learning. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "8rmSldhnSDc",
+    "title": "Waiting For Superman"
+   },
+   {
+    "type": "text",
+    "title": "We Set Ourselves Free, to Live Authentic, to Invent, to Triumph.",
+    "text": [
+     "<p> We accepted the responsibility for our own education. </p> <p> We begun learning on our own, through internet, Audio Books, trial and error. </p> <p> We begun building more and more small companies, and the more we failed the wiser we became. </p> <p> The moment schools begun interfering with our companies, with making money that we used to support ourselves, we became dropouts. </p> <p> But we did look back, we aimed to fix Education. To make all those countless forgotten aches and pains count. </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "We Changed The World",
+    "text": [
+     "<p> At first, nobody wanted to talk to us. </p> <p> There was a problem with how Investors viewed people who paraded their GPA or even completed schools. </p> <p> The Investors didn&apos;t want followers, and above all they didn&apos;t want cheaters that tried to pass their GPA as something authentic or even meaningful. </p> <p> The Investors sought Natural Born Leaders, they sought Evidence of Exceptional Ability. </p> <p> The Investors sought people who rejected the inauthenticity of broken education and didn&apos;t partake in stupid charades. </p> <p> It was almost like High School became a mechanism to keep the administration busy, the teachers blind, the students poor, and the parents dreaming. </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "The Fierce & Authentic",
+    "text": [
+     "<p> Staying in school had a negative impact on our education, on our futures. College and Premed brought sleep deprivation into the farce, it was a dangerous joke. </p> <p> In the end all we had was our friendship. The school was tearing us apart, the Start-ups kept us together. </p> <p> Looking back at how young we were, how unbreakable, how fierce. </p> <p> Though we didn&apos;t believe in schools, we doubted ourselves for years. Now, looking back, we searched for mentors, but none were to be found. But, in the absence of teachers, we became the teachers. </p> <p> To quote an old commercial: We were The Crazy Ones, The Misfits, The Rebels, The Troublemakers, the round pegs in the square holes, the ones who saw things differently, who were not fond of rules, and had no respect for the status quo. </p> <p> We were the ones crazy enough to think we could change the world... </p> <p> ... and we did ... </p>"
+    ]
+   }
+  ]
+ },
+ {
+  "meta": {
+   "name": "principal",
+   "title": "The Principal"
+  },
+  "data": [
+   {
+    "type": "youtube",
+    "video": "qzALINIvYNQ",
+    "title": "Why most students are getting the least out of school by Dan Cardinali"
+   },
+   {
+    "type": "text",
+    "title": "Poverty Of Mind Comes From Lack Of Non Cognitive Skills",
+    "text": [
+     "<p> Dan Cardinali&apos;s definition of Non Cognitive Skills includes the following: Building grit, and resilience, and persistence, and self-regulation. He&apos;s describing skills of a Warrior, a Fighter, an Authentic Grown Up. </p> <p> Dan Cardinali explains that ideally families should provide Non Cognitive Skills (Child Development), and then schools will deliver Academic Development (Math, History, Physics). </p> <p> But this is not how it works today, well to do parents are too busy, parents stricken by poverty can&apos;t have time, and non-cognitive skill development is not only unavailable, but is often laughed at by teachers &quot;Parents do your job.&quot; they brainlessly utter. </p> <p> Above all, a child born to the culture of poverty (lacking non-cognitive skills) will often remain in the culture of poverty be it dropping out or graduation. The steps out and up are just too far apart. </p>"
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/fall.jpg",
+    "text": [
+     "<p> How dare you. </p> <p> How. Dare. You. </p> <p class=\"small\"> Image from <a href=\"https://www.youtube.com/watch?v=sxyKNMrhEvY\">The Surprising Truth About Learning in Schools by Will Richardson</a> </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "The Battle Against Poverty of Mind",
+    "text": [
+     "<!-- <p> Go against the grain of reality long enough, you will slam into the brick wall. As far as Active Relevant Knowledge on subjects the children are passionate about, Audio Books are far better at teaching than any school. </p> --> <p> It is correct to say that Poverty of Mind is rooted in lack of Non Cognitive Skills. </p> <p> An example of poverty of mind is inability to have an expensive lunch with an internship company CEO. Out of fear of not knowing <strong>EVERYTHING!</strong> from how to get a table to when to order, or even if it is OK to just have the cute little bagel and focus on the questionnaire. Lunch, if not impossible, can be impossibly terrifying. </p> <p> There is no breaking out of poverty when every-step induces fear, confusion, anxiety. </p> <p> To be clear, the ultimate aim for both Student and Principal. Almost always, is to rise and break away, become a CEO. </p> <p> Become an inspiration and a teacher; to make life more. To then retire come the Golden Age of Wisdom and write. Write about the lessons that counted to make them last even longer. Create an Audio Book in your own voice in hopes of it being used 50 years from now to Rise &amp; Learn to Really Learn. What an Honor to have your spirit revived by means of Admiration and Love, your own voice across decades, maybe centuries, maybe forever. </p> <p> Instead, the children are getting scared, mostly because they can see schools are forcing irrelevant learning that fades away. It is impossible to retain irrelevant knowledge. In context of education, forcing irrelevant knowledge and grading a student down for lack of retention is evil. </p> <p> And here the child does not want the job because it has too many complications, can&apos;t even have the internship lunch because it is too terrifying, and can&apos;t conceive of the notion of connecting with the CEO in such a way as to eventually resign position and start a company in a similar sector. </p> <p> They are scared, sometimes crushed, but far too brave to show you... Principal. </p> <p> We know what happens to most young people that can&apos;t handle fear or depression. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "AyogyD7vXbw",
+    "title": "The Power of a Teacher by Adam Saenz"
+   },
+   {
+    "type": "text",
+    "title": "A Place of Healing",
+    "text": [
+     "<p> Be it by intent or ignorance, anybody taking part in the fracturing of minds, and young minds especially, is just another monster. </p> <p> A school must become a place of healing before it can hope to teach. </p> <p> It must protect against all kinds of poverty, and bad parents, dangerous culture and bad ideas. </p> <p> Today school is a bad place. Just another broken promise. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "Io3sdAAcZLw",
+    "title": "Elon Musk knocks the college experience"
+   },
+   {
+    "type": "quote",
+    "author": "Elon Musk",
+    "url": "https://en.wikipedia.org/wiki/Elon_Musk",
+    "text": [
+     "[My] recruiting does not have anything that says &quot;Requires University&quot; because that&apos;s absurd, but there is a requirement of evidence of exceptional ability. [...] I don&apos;t consider going to college evidence of exceptional ability in fact ideally you dropped out and did something [exceptional]."
+    ]
+   },
+   {
+    "type": "text",
+    "title": "The Battle Against Poverty of Mind",
+    "text": [
+     "<p> What can be easier than to help a child grow? </p> <p> what can be more rewarding than to be Admired, Loved, Remembered? To have a High School named after you upon your retirement, and have every student that goes there at least look at your picture with your beloved students hugging you as if you were their own Mother. </p>"
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/talitha-halley.png",
+    "text": []
+   },
+   {
+    "type": "text",
+    "title": "A Meaningful Life Calls For Real Education",
+    "text": [
+     "<p> Focus on Real Education, not Administration. If you need money, then look to your students. </p> <p> Become a Start-up Accelerator. Give them initial mentoring and funding, Take a small percentage of their earnings in return for the initial funding and in order to fund other start-ups. Take only for a small number of years, and only what you need. Get out of their way. </p> <p> Never forget, Principal. You serve The Kids, The Students, they are the point of it all, they are the future. The Children are not your means to staying in business and getting paid- that would make you a Monster and a Fraud. </p> <p> The best way to fight poverty in a person&apos;s mind, is to set a student up for a job so high up, that it will make them want to run out of the school quietly-yelling and hope they never need to come back. </p> <p> A prestigious position at a local Hospital as a Research Nurse that keeps everyone informed a month ahead of time, a complicated job at the Library of Congress, or as Someone Amazing at the Detroit Institute of Arts. </p> <p> Set a step so high, that it is already a healthy career but completely unreachable to the child, the step up being, Just Impossible. And then slowly, build. But smaller steps, and maybe even smaller, or maybe even an on-ramp for a smooth ride. </p>"
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/genius.png",
+    "text": [
+     "Image from <a href=\"https://www.youtube.com/watch?v=mQPEZdBTOeE\">Can anyone become a genius? by Mark Diaz</a>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "Every Developmental Opportunity",
+    "text": [
+     "<p> It is not just &quot;grit, and resilience, and persistence, and self-regulation&quot;, Dan Cardinali shows that Talitha Halley had enormous amount of help beyond Belief and Love which is already wonderful. Donna Watkins (Talitha&apos;s community-school site coordinator) looked for <strong>every developmental opportunity</strong>. </p> <p> Talitha must have said she was scared to go to the Fancy Lunch and Donna came to her rescue, that is so brave and so sweet. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "0NPO3lEcPyU",
+    "title": "CIS Alum Talitha Halley appears on MSNBC 5/5/15"
+   },
+   {
+    "type": "text",
+    "title": "Non Cognitive Skills Must Come First",
+    "text": [
+     "<p> Academic Development can&apos;t succeed on its own, it is incompatible with who we are, we are not machines that can make room for knowledge on our long-term storage drive. Even with a blooming ecosystem of Memory Palaces, that which is irrelevant to out Hearts and Existence will be soon forgotten. </p> <p> This parade through classes, levels, and subjects is a waste of time. Our time is precious, life is so dear. There simply is no time for charades. </p> <p> Principal, stand up, and deliver. </p>"
+    ]
+   }
+  ]
+ },
+ {
+  "meta": {
+   "name": "teacher",
+   "title": "The Teacher"
+  },
+  "data": [
+   {
+    "type": "youtube",
+    "video": "DjxhenAHyGk",
+    "title": "Why I Dropped Out of College"
+   },
+   {
+    "type": "text",
+    "title": "Knowledge vs. College",
+    "text": [
+     "<p> I think, he started learning the most valuable of his lessons, once he broke out oh the Grade Point Average Prison. </p> <p> He selected courses that matched the wisdom he already had, he selected compatible knowledge he was naturally predisposed to integrate. </p>"
+    ]
+   },
+   {
+    "type": "quote",
+    "author": "Abraham Lincoln",
+    "url": "https://en.wikipedia.org/wiki/Abraham_Lincoln",
+    "text": [
+     "The best way to predict your future is to create it."
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "Bg_Q7KYWG1g",
+    "title": "The Wisdom of a Third Grade Dropout"
+   },
+   {
+    "type": "youtube",
+    "video": "FFMz8JRg8Y8",
+    "title": "Jaime Escalante"
+   },
+   {
+    "type": "text",
+    "title": "Jaime Escalante",
+    "text": [
+     "<p> Jaime Escalante is the man portrayed by Edward James Olmos in <a href=\"https://www.youtube.com/watch?v=qtQQC23eseU\">Stand and Deliver (1988)</a> </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "tlY0PkWxCW8",
+    "title": "Don't Be Afraid to Fail Big, To Dream Big"
+   },
+   {
+    "type": "youtube",
+    "video": "xFr0FKnaLDk",
+    "title": "Why it Pays to Be Hungry"
+   },
+   {
+    "type": "youtube",
+    "video": "Kb7_E12FFLw",
+    "title": "5 Rules for Success"
+   },
+   {
+    "type": "youtube",
+    "video": "8rmSldhnSDc",
+    "title": "Waiting For Superman"
+   },
+   {
+    "type": "text",
+    "title": "Waiting For a Generation of Superheroes",
+    "text": [
+     "<p> Waiting For You. </p> <p> And everybody else, to grow up, all the way up, until we become a generation after a generation of great beings. </p> <p> Growing up is not optional. Growing all the way up, is not optional. </p> <p> It is our Health, it is our Right. </p> <p> It is the only way to break out, and bring about our hopes and dreams of the future. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "SFnMTHhKdkw",
+    "title": "Waiting For the Champions"
+   },
+   {
+    "type": "text",
+    "title": "Waiting For the Champions",
+    "text": [
+     "<p> &quot;It is hard to teach kids who stink.&quot; </p> <p> We must face the misjudgment of the role of poverty in education. </p> <p> We must face the misjudgment of the the gravity of poverty. </p> <p> We must face policy that does not make sense, that will never make sense, due to persistent malformed-understanding of education. </p> <p> Education begins in kindergarten, it is easy to forget this. </p> <p> It begins with mentors, inspiration, friendship. </p> <p> There is no education without human connection, but there is merit in apps, computer programs, videos, audio books, and overhead internet satellites. </p> <p> We need a clear aim, for both, educators, and the kids. There is no clearer aim than becoming a Business Creator, and escaping poverty. </p> <p> Rising to no end in sight. Eventually leaving a worthy legacy. Unbreakable shoulders for other giants to stand on. </p> <p> The cure for poverty bears the same pattern as the cure for broken education. The individual must become a businessperson, just as the student must become her own teacher. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "_4JtyLKDjXk",
+    "title": "What is Y Combinator?"
+   },
+   {
+    "type": "text",
+    "title": "Limitless",
+    "text": [
+     "<p> It is easy to forget that we have no limits. </p> <p> It is easy to believe the lie, that we can stop because we are not learning fast enough, or we know enough, or got enough; or had enough. </p> <p> It is easy to misunderstand the purpose of Education. </p> <p> We don&apos;t need a generation of Brilliant and Unstoppable Teachers, or Policy Makers. Oh, there will never be enough of those; and there is already far too many. </p> <p> Pretending to be wise and authentic is far too easy, to put the future of humanity in someone else&apos;s hands. </p> <p> Even if it wasn&apos;t a fantasy aimed to place responsibility for education elsewhere, there is no good reason to wait for Policy Makers to update policy. </p> <p> We must teach children that they are responsible for their own education, and their own exit from poverty, by means of becoming a business creator. </p> <p> Children need an aim, before they open the textbook. </p> <p> They need persistent enlightenment. Not moronic excuses that they won&apos;t always have a calculator at hand, or sick fantasies of a happy job they will always love performing. </p> <p> We don&apos;t need better teachers, we need and endless supply of Brilliant and Unstoppable Students who accept the responsibility for their own education, at their own pace, and a sequence that matches who they are. </p> <p> Unbreakable, Unstoppable, Uncontainable, Unpredictable, Uncontrollable torrent of Superheros under the banner of Unrelenting Pursuit of Excellence and Love of Wisdom. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "CpaFX6Ei0nU",
+    "title": "My path out of poverty by Lashon Amado"
+   },
+   {
+    "type": "text",
+    "title": "Each a Superhero",
+    "text": [
+     "<p> Grades must end, because too many children confuse their grade point average with their value to the world. </p> <p> The only reason why someone would ever fail a test, is because the wisdom they already had, was incompatible with what was being taught. </p> <p> To force incompatible knowledge on someone, and blame them for not integrating it, is evil. </p> <p> If you are young and still in school. Begin making unbreakable promises that you will fix what is broken. Help your friends to Audio Books that set them free to understand Science, or travel the Appalachian Trail when waiting for the bus. Help them understand YCombinator and Techstars, Startup Accelerators, Angel Funds. </p> <p> And if you have already left it all behind, now it is time to remember your hopes and dreams. Go back with your wisdom of today, and fix what was broken when you were little. Stand up in the classroom and rage against mediocrity or lies. Take a lesson from Erica Goldson. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "9M4tdMsg3ts",
+    "title": "Erica Goldson Valedictorian Speech"
+   },
+   {
+    "type": "text",
+    "title": "Mothers. Rage, rage against the dying of the light.",
+    "text": [
+     "<p> &quot;Education is not the filling of a vessel, but the kindling of a flame.&quot; </p> <p> The cradle of education is within. The flame of curiosity, lives within. Students reach out and put things into their soul, all the time. </p> <p> Sometimes all it takes is a poem. </p> <p> Sometimes the explanation, that all education is really for, is beating back Poverty of Mind-and-Wallet. </p> <p> Poverty that they were unfortunately and unfairly dropped into, and now they must learn wisdom and fight their way out of, and if they so choose, bring back the light so that others may follow. </p> <p> And later, finally, enjoy their existence and high achievement, leave a legacy worthy of following. </p> <p> Never tell a child that life is not fair. That will only force them into accepting their poverty as a given, and your mediocrity as a fact. </p> <p> Education is never! for good grades, or a good resume, or a good job that pays well. </p> <p> Education is for the opposite of Memorization and Servitude. </p> <p> Education is for Creativity, and Freedom. </p> <p> Education is for Originality, and Independence. </p> <p> Education is for Unbrekability, and Leadership. </p> <p> The children you taught to wait for Superman, are, that promise, and the future, and more. </p> <p> And the opposite of high achievement is not failing while daring greatly. Failure is nonsense, just another excuse not to try. There is no such thing as failure. Every step forward adds to success. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "TMrtLsQbaok",
+    "title": "Greta Thunberg"
+   }
+  ]
+ },
+ {
+  "meta": {
+   "name": "student",
+   "title": "The Student"
+  },
+  "data": [
+   {
+    "type": "youtube",
+    "video": "LwIyy1Fi-4Q",
+    "title": "Astra Taylor on the Unschooled Life"
+   },
+   {
+    "type": "youtube",
+    "video": "23jVmKXk2I0",
+    "title": "Skipping School by Lua Martin Wells"
+   },
+   {
+    "type": "youtube",
+    "video": "h11u3vtcpaY",
+    "title": "Hackschooling makes me happy by Logan LaPlante"
+   },
+   {
+    "type": "youtube",
+    "video": "T0hQNR5fDKw",
+    "title": "Going natural in education by Lora Smothers"
+   },
+   {
+    "type": "youtube",
+    "video": "OEqOgtmvkkE",
+    "title": "Why school sucks by Jad Khoury"
+   },
+   {
+    "type": "youtube",
+    "video": "2Yt6raj-S1M",
+    "title": "How School Makes Kids Less Intelligent by Eddy Zhong"
+   },
+   {
+    "type": "youtube",
+    "video": "woVtj8GH678",
+    "title": "What standardized tests don't measure by Nikki Adeli"
+   },
+   {
+    "type": "youtube",
+    "video": "nVj3qizoWS8",
+    "title": "Connecting Nature and Education by Bandile Phiri"
+   },
+   {
+    "type": "quote",
+    "author": "Albert Einstein",
+    "url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+    "text": [
+     "Insanity is doing the same thing over and over again and expecting different results."
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "StdwWpbokcw",
+    "title": "Inventing 101 by Chase Lewis"
+   },
+   {
+    "type": "youtube",
+    "video": "lFDG7w_jAFk",
+    "title": "The problem with inventions by Ann Makosinski"
+   },
+   {
+    "type": "youtube",
+    "video": "iw4FzMDhU6M",
+    "title": "Ann Makosinski: From Tinkering To Invention | Forbes"
+   },
+   {
+    "type": "youtube",
+    "video": "sxyKNMrhEvY",
+    "title": "The Surprising Truth About Learning in Schools by Will Richardson"
+   },
+   {
+    "type": "quote",
+    "author": "Will Richardson",
+    "url": "https://en.wikipedia.org/wiki/Will_Richardson",
+    "text": [
+     "Schools aren&apos;t built for learning."
+    ]
+   },
+   {
+    "type": "text",
+    "title": "Become a Great Being",
+    "text": [
+     "<p>You may need to consider standardized learning an experiment in helping the world grow, an experiment so large and complex that it slowly moves at the pace of decades, if not centuries.</p> <p>Today, the help is effectively stuck, they are not coming to help you.</p> <p>Education has reached a point where it can help you memorize, but the actual learning probably has to be done prior to taking a class.</p> <p>The teachers can&apos;t yet help you, they can&apos;t help you meaningfully learn and fully integrate at a fast enough pace.</p> <p>Do not relinquish control over your education, knowledge, wisdom, individuality, and decision making. Your own future, is in your own hands.</p> <p>Grow up, grow all the way up. Become a Great Being.</p> <p>Rise, accept the responsibility for your own education, your own exploration.</p> <p>Accept the responsibility for your own triumph over poverty.</p> <p>Accept the responsibility for your own existence.</p> <p>Decades from now, with your wisdom, with your help, we may be able to do more for students.</p> <p>But the challenges you will face are far more complex than broken education.</p> <p>Quietly helping yourself is just the first step.</p> <p>Much more complex, and much greater, and far nobler challenges lie ahead.</p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "vvlozhvQPJw",
+    "title": "We can end poverty, but this is why we haven't by Teva Sienicki"
+   }
+  ]
+ },
+ {
+  "meta": {
+   "name": "genius",
+   "title": "The Genius"
+  },
+  "data": [
+   {
+    "type": "text",
+    "title": "You are a Genius.",
+    "text": [
+     "<p> Genius, is a collector, and a master of frameworks. </p> <p> One of the most pop frameworks, is English. Or as we will call it here: The English Framework for Advanced Human to Human Communication. </p> <p> The &quot;Double U&quot;, the 26 unsqiglies (as I call them - my original alphabet has extra squiggly letters I never knew what to do with). And then the comma and, Oxford Comma, the mysterious semicolon, the haunting tilde? </p> <p>Rhymes.</p> <p>Poems.</p> <p>Songs.</p> <p>Letters.</p> <p>Essays.</p> <p> Transcribing Lyrics, of a song that paused your time, classes, grades, parents? </p> <p> Memorizing Poems? </p> <p> Quotes? To thine own... yeah you did. </p> <p> Speaking. Reading. Writing. </p>"
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/thorgal.png",
+    "title": "Thorgal",
+    "text": []
+   },
+   {
+    "type": "text",
+    "title": "Frameworks are superpowers, and your powers will call to you.",
+    "text": [
+     "<p> Once you have the framework down, you gain special abilities, like Storytelling, for example. </p> <p> You can warp facts to construct fantasies based on real events and beings, now transformed into Mighty Ice Giants, maybe Dragons, Lost Worlds, and Faster Than Light Travel. </p> <p> You can encode a lifetime of experience in an exciting story with enchanted objects, and transcendental superhero journeys, here you can easily pass on a message across centuries. You can leave stones unturned that will mark forks and joins that will call to others to add to your story, to keep it alive across centuries even as English evolves. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "JgOi1YEU7TU",
+    "title": "Story of Beowulf"
+   },
+   {
+    "type": "text",
+    "title": "Land of Monsters?",
+    "text": [
+     "<p> My friends, the story of <a href=\"https://en.wikipedia.org/wiki/Grendel%27s_mother\" title=\"Grendel&apos;s Mother\">Grendles M&#x14D;dor</a> remains unfinished, <a href=\"https://en.wikipedia.org/wiki/Idis_(Germanic)\">Ides</a> <abbr title=\"Monster Woman\">Agl&#xE6;cwif</abbr> of <abbr title=\"Land of Monsters\">&#xC6;lwihta Eard</abbr>; beacons her side to be writ. Was Grendles Modor a monster, would she be an <abbr title=\"Goddess\">Ide</abbr> then? </p> <p> Was the Dragon a mere reminder, a clumsy blurb for <a href=\"https://en.wikipedia.org/wiki/Memento_mori\">Memento Mori</a> or is that just the introduction to the real story, the story that has little to do with men like Beowulf who can&apos;t even take down a fat flying lizard right. A story burned to the ground by the spirit of the age, the Greatest Story Never Told, The Story of The Ides of the Old World. </p> <p> Pick up the pen. Rebuild the story a thousand times, and let the version 1001 earn you a place in history. </p>"
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/the-dises.jpg",
+    "title": "The Dises (1909) by Dorothy Hardy.",
+    "text": []
+   },
+   {
+    "type": "text",
+    "title": "A Pen is Mightier than a Sword.",
+    "text": [
+     "<p> Genius, is to answer the challenge. &#xC6;lwihta Eard, is the world of our childhood stories, from Baba Jaga, to The One Ring, to Harry Potter, and beyond. </p> <p> Genius is to pick up the pen, and not fear sounding foolish. </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "Do not deny your Readers",
+    "text": [
+     "<p> Do not deny your stories to those who are still learning the lessons you have already mastered. </p> <p> What if your &quot;Not good enough&quot;, will become the best they ever had? </p> <p> Mightier than The Sword. </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "Damn kids. They're all alike.",
+    "text": [
+     "<p> When I was learning English, my most powerful piece of literature was The Conscience of a Hacker, or <a href=\"https://en.wikipedia.org/wiki/Hacker_Manifesto\">The Hacker Manifesto.</a> (See External Links section for Hacker&apos;s Manifesto at Phrack Magazine) </p> <p> I am wiser now, the text is for a teenager. But I feel no shame for still holding it dear to my heart. I am glad to share with you. </p>"
+    ]
+   },
+   {
+    "type": "poem",
+    "title": "The Conscience of a Hacker",
+    "text": [
+     "<p> ... </p> <p> We explore... and you call us criminals. </p> <p> We seek after knowledge... and you call us criminals. </p> <p> We exist without skin color, without nationality, without religious bias... and you call us criminals. </p> <p> You build atomic bombs, you wage wars, you murder, cheat, and lie to us and try to make us believe it&apos;s for our own good, yet we&apos;re the criminals. </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "Damn kids. They're all alike.",
+    "text": [
+     "<p> These words are still as mighty as the day I found them. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "0tEnnvZbYek",
+    "title": "The Conscience of a Hacker read by The Mentor"
+   },
+   {
+    "type": "text",
+    "title": "You are a Genius.",
+    "text": [
+     "<p> Because storytelling, inspiration, sharing of wisdom, is just a part of The English Framework for Human Communication - that you mastered without noticing... as a child. </p> <p> At the age of 15 or earlier, you master a framework almost as complex as any of the more interesting Daughters of Philosophy (The Sciences). </p> <p> It comes to you so naturally, that you don&apos;t notice it. </p> <p> You think we are born with the ability for language. </p> <p> But, no. </p> <p> And not only do you learn it, your brain grows to match the complexity of information and tools needed to manipulate it. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "B_tjKYvEziI",
+    "title": "Neuro Genesis: You can grow new brain cells. Here's how by Sandrine Thuret"
+   },
+   {
+    "type": "text",
+    "title": "Genius, like Child Prodigy, is just a stepping stone. Don't stop.",
+    "text": [
+     "<p> You are to surpass what you think Genius is, on your way up, to growing all the way up. </p> <p> This act of transcendence will recur several times, depending how busy you get in life. </p> <p> Some things you think are one-way today; High School, Roswell, Globalization, Content of Character, Memorable Words, Superstars, Mokele-Mbembe, Spelling and Grammar (To use my teenage mind as example) will change meaning, as you grow; possibly/hopefully even reverse. </p> <p> Similar to how &quot;We make use of a service already existing without paying for what could be dirt-cheap if it wasn&apos;t run by profiteering gluttons, and you call us criminals.&quot; turns around, as we learn that Criminal <a href=\"https://en.wikipedia.org/wiki/Phreaking\">Phreaking</a> is just not worth the damn prison time. </p> <p> My Dear, Friends, Readers. You have mastered English. </p> <p> You have easily mastered something only a genius child prodigy could. </p> <p> Didn&apos;t even notice it, English came so naturally, so simply - didn&apos;t it? </p> <p> ... and you say you are not a Genius? </p> <p> Wow, just wow. </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "English is Complex",
+    "text": [
+     "<p> Let me give you a hint on you how Frameworks like these emerge evolve across centuries. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "OGeIzmu9DSA",
+    "title": "A History of English Letters"
+   },
+   {
+    "type": "text",
+    "title": "Good Frameworks come with Easy On-boarding",
+    "text": [
+     "<p> Easy On-boarding means easy access to eventual mastery. It means progressive, gradual learning and mastery. </p> <p> It would be difficult, though not impossible, to learn to write words without knowing the alphabet. English, or as I call it here &quot;The English Framework for Advanced Human to Human Communication&quot; bonds really well with our ability to learn words as a baby. The language evolved with human learning abilities. If English words were presented without letters, it would still be a functional, but very different language. </p> <p> Fundamentally, a framework without easy on-boarding, or progressive adaptation features is kind of useless. If there is no way to learn something, it won&apos;t be learned. </p> <p> But overall, new on-boarding can be tacked on to something that previously had trouble with it. For example in <a href=\"https://en.wikipedia.org/wiki/God_Created_the_Integers\">God Created the Integers: The Mathematical Breakthroughs That Changed History</a> Stephen Hawking helped his memory by creating a history of evolution of mathematical thinking. I view the book as a <a href=\"https://en.wikipedia.org/wiki/Method_of_loci\">Memory Palace</a> with emphasis on historical dates and progression, that expands standard mathematical on-boarding and helps the reader to a greater initial spectrum of Mathematics. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "vtQzuwnyW6E",
+    "title": "What if Schools Taught Us How to Learn by Jonathan Levi"
+   },
+   {
+    "type": "text",
+    "title": "Memorizing πr²",
+    "text": [
+     "<p> Do you remember memorizing &#x3C0;r&#xB2;? </p> <p> Forcing memorization of &#x3C0;r&#xB2; or any formula, should be seen as psychological torture, means of intimidation. It should be seen as cause for suspension of the teacher, and review and repair of the damage they made. </p> <p> Formula memorization is the same as being forced to learn English without the use of alphabet. It is incredibly cruel. </p> <p> Some young lady out there, tears in eyes can&apos;t comprehend &#x3C0;r&#xB2;, and her mind rejects memorization, she NEEDS to know - tears in eyes - why is the r is squared? Her mind reaching for why is the r multiplied by it self. Is there a geometric square somehow? </p> <p> Warm, but not warm enough. </p> <p> A brilliant mind yearning for arriving at the formula herself, yet forced to merely blindly accepting it, or repeating the whole year. </p> <p> People who need to invent the formulas, people who have the natural predisposition for abstract theoretical mathematics... The naturally predisposed for abstract mechanics or Mathematics, are being forced, not to, learn Mathematics, or be punished. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "YokKp3pwVFc",
+    "title": "Area of a circle, how to get the formula."
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/circle.jpg",
+    "title": "Just Eyeball",
+    "text": [
+     "Just witness that half the circumference of the circle (4 slices) are used at the the base of the rectangle, because the other four are used up top. It really does not matter how many divisions of the circle so as long as reaching infinity makes for an infinitely perfect rectangle &#x2764;"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "The Framework is Mightier Than The Formula",
+    "text": [
+     "<p> Armed with this knowledge, our young lady, can arrive at her own &#x3C0;r&#xB2;, when needed. </p> <p> But also at E=mc&#xB2;, and all the wonderful rest. </p> <p> And so can you. My Genius Reader. </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "Genius Is Our Right",
+    "text": [
+     "<p> Genius is knowing the framework mechanics, and reinventing the formulas as needed. </p> <p> Sometimes, applying mechanics from one place by subtle analogy to another. </p> <p> For example apply lessons from trains and their relativity of motion and distortion of sound waves, to other things... </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "TgH9KXEQ0YU",
+    "title": "Simple Relativity - Understanding Einstein's Special Theory of Relativity"
+   },
+   {
+    "type": "youtube",
+    "video": "hW7DW9NIO9M",
+    "title": "Einstein's Proof of E=mc2"
+   },
+   {
+    "type": "text",
+    "title": "Math",
+    "text": [
+     "<p> Math is almost too easy to bother with, it is certainly too messy when compared to the exquisite and wonderfully unambiguous and vast world of programming. </p> <p> Basic programming is enough to visualize all the important things in mathematics. </p> <p> <a href=\"https://github.com/Jam3/math-as-code\">Math as Code</a> </p> <p> It was only ever intimidating because it is a primitive language meant for paper and pencil, with an ugly problem to boot. As <a href=\"https://github.com/Jam3/math-as-code\">Math as Code</a> notes &quot;Mathematical symbols can mean different things depending on the author, context and the field of study (linear algebra, set theory, etc).&quot; </p> <p> It can be a wonderful and enlightening adventure to visit works of Newton from the simple world of programming, but to teach Calculus on paper is to waste your time on trivialities of a simple loop. </p> <p> Let us face that today&apos;s &quot;Alphabet of Math&quot; is basic Programming. This is because programming notation is not as ambiguous, and it is easier to latch-on-to-and-pursue mathematical concepts, as trivial as they will turn out to be to you now. </p> <p> As an enormous bonus, at the end of the day you can see your new knowledge come to life with a simple, mathematically themed program like <a href=\"https://p5js.org/examples/\">P5js</a> or maybe <a href=\"https://d3js.org/\">D3</a>, or even <a href=\"https://developer.mozilla.org/en-US/docs/Web/SVG\">SVG</a> (keep it in sync with leading Web Technologies as they receive most attention and thus good programming, exposure, use, and as a bonus bring a solid measure of fair employment opportunities). </p> <p> Some are moved by Ides, others by Numbers. As numbers can now come to life when transitioning from dead paper to colorful screens, games, visualizations. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "BGeT8IyKd2M",
+    "title": "Karlie Kloss explains how to use math with the artist in Code Studio"
+   },
+   {
+    "type": "text",
+    "title": "Easy as π",
+    "text": [
+     "<p> Look a the ease with which Karlie Kloss teaches real, live, moving, interactive, Modern Math to children. </p> <p> It is not just Drag and Drop programming, with works like <a href=\"https://github.com/Jam3/math-as-code\">Math as Code</a> children who enjoy it, get access to Theoretical Physics and Abstract Mathematics. A child using the program that <a href=\"https://en.wikipedia.org/wiki/Visual_programming_language\">Karlie teaches with</a> will see little surface difference between making a rectangle and converting matter to energy via Einstein&apos;s E=mc&#xB2;. A venture into the function contents, which are not too complex as shown in the previous video, may perhaps create a new Einstein, change the World, or Time, or better yet, <a href=\"https://en.wikipedia.org/wiki/Faster-than-light\">both</a>. </p> <p> In this short clip she interjects the use of variables and dynamic calculation; as a result she creates a reusable function that creates rectangles with a base twice the height. </p> <p> For many this is a mind blowing lesson that will call to them, pull them into the world of Math, Computers, Science, Technology. </p> <p> <a href=\"https://www.kodewithklossy.com/\">Kode With Klossy</a> shows what these classes are like. What real education looks like, where teachers strive to be worthy of teaching their students. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "36GT2zI8lVA",
+    "title": "Frameworks: Why."
+   },
+   {
+    "type": "text",
+    "title": "Genius.",
+    "text": [
+     "<p> Study your Frameworks. </p> <p> Generations have tried to avoid Genius, and the World is hurting for it. </p> <p> We are bound to this planet, chemically, biologically, even intellectually. </p> <p> We are all connected. </p> <p> There is no moving to Mars. </p> <p> And we were never allowed to let the TV, or the talking-heads, or lairs, do the talking - with each new generation, doubly so. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "XGK84Poeynk",
+    "title": "We are all connected."
+   },
+   {
+    "type": "text",
+    "title": "Accept The Responsibility",
+    "text": [
+     "<p> People laugh off running out of water, but that&apos;s actually terribly simple. </p> <p> It will happen like this: <a href=\"https://news.ycombinator.com/item?id=22116696\">U.S. drinking water widely contaminated with &apos;forever chemicals&apos;</a> </p> <p> But remember, all problems created by Humans, can be solved by Humans too. </p> <p> </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "QQskB2JJql4",
+    "title": "Those That Can't Do, Teach."
+   },
+   {
+    "type": "text",
+    "title": "Memorization is Over",
+    "text": [
+     "<p> Tell your teacher that memorization is over, it is useless to you. </p> <p> Tell your teachers that they are not allowed to stand in your way of real knowledge. </p> <p> They are interrupting your real education by threatening to mark you down for not following their worthless directions which can only lead to memorization, which in turn will soon result in you forgetting what you force-remembered. </p> <p> It is not possible to retain long-term what you memorized in the way you did it. If that is what they expect of you, then you maybe being taken advantage of. The motive is teacher getting paid, and ultimately, school qualifying for more funding. </p> <p> GPA or not, you still need those Marvelous Frameworks; or people will easily mislead you. One example is <a href=\"https://en.wikipedia.org/wiki/Vaccine_hesitancy\">Vaccine Hesitancy</a> which a lot of people fall for, but there are more complicated and closer calls like <a href=\"https://en.wikipedia.org/wiki/Ozone_depletion\">CFCs</a> and <a href=\"https://www.youtube.com/watch?v=uE2uwBA3EAw\">Tetraethyl Lead</a>, and now <a href=\"https://news.ycombinator.com/item?id=22116696\">PFAS</a>. You need to be knowledgeable enough to foresee consequences of what is going on in the world. </p> <p> Your life depends on it. The future of this planet depends on You, don&apos;t count on the adults, they&apos;re all going to retire of old age soon enough. </p> <p> Your life depends on real education, your knowledge has impact on everything from internal decision making, to external politics of the whole World. </p> <p> The teacher will soon retire, feel great about all the great work, and you will become the future. </p> <p> Just, take it upon yourselves to learn on your own, it is safer this way. </p> <p> You can stay in school, learn in library and from audio books. </p> <p> Real knowledge will always beat what you memorized and forgot. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "mQPEZdBTOeE",
+    "title": "Genius by Mark Diaz"
+   },
+   {
+    "type": "text",
+    "title": "The Future, The World",
+    "text": [
+     "<p> You were born a Genius. You are a Genius. It is not even that big of a deal, you are a human with a brain, Genius is what we do. On the other end, people saying they are better than you because they are a Genius, are sick from poverty of mind, they got fractured, stuck. It is sad, let us hope they feel better and catch up, but pass them on as they heal. </p> <p> Keep moving forward, keep learning, the World needs you to grow, to grow all the way up, you, and all your peers, and all generations to come. </p> <p> It is the journey of self education that makes the real difference. </p> <p> Begin your journey under the banner of Unrelenting Pursuit of Excellence and Love of Wisdom. </p> <p> The Future, and The World, it will all be Yours. </p> <p> You are far more than Genius. </p> <p>Unbreakable.</p> <p>Unstoppable.</p> <p>Uncontainable.</p> <p>Unpredictable.</p> <p>Uncontrollable.</p> <p> You Are The Future. </p>"
+    ]
+   }
+  ]
+ },
+ {
+  "meta": {
+   "name": "courageous",
+   "title": "The Courageous"
+  },
+  "data": [
+   {
+    "type": "image",
+    "url": "warrior/images/courage-calls.jpg",
+    "title": "Dame Millicent Garrett Fawcett",
+    "text": [
+     "English political leader, activist, writer and feminist icon. Known as a campaigner for women&apos;s suffrage via legislative change, from 1897 until 1919 she led Britain&apos;s largest women&apos;s rights organisation, the National Union of Women&apos;s Suffrage Societies."
+    ]
+   },
+   {
+    "type": "text",
+    "title": "The road between the past and the future is long, but it continues unbroken.",
+    "text": [
+     "<p> Relative to their beginnings, many will find just enough comfort and stop, and often block traffic. </p> <p> If you rise in class. Your teachers will fight you, because they just want to do their job, go home, and get paid. </p> <p> If you rise in class. They will say you are disrupting the class and throw you out, because they just want you to shut up so they can finish their job and go watch some TV. </p> <p> You can talk to the Principal or Dean, but they&apos;ll just tag you as &quot;Gifted&quot; and you&apos;ll graduate from Adult Ed so fast you&apos;ll struggle to remember where it all started and what the battle was for. </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "Because The Battle Is Not For You",
+    "text": [
+     "<p> The battle is for those that come; after you. </p> <p> In short term, you get a sweet sliver of solace as you learn that in the end all your troubles ended up counting towards protecting others from the same. </p> <p> In long term, you help the world grow, it won&apos;t be your world, it will be the world of the future. </p> <p> The battle for real education, and enjoying the fruits of real education are two separate things. </p> <p> It will make you tired. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "TMrtLsQbaok",
+    "title": "How dare you? You have stolen my dreams and my childhood."
+   },
+   {
+    "type": "text",
+    "title": "Bad News",
+    "text": [
+     "<p> There are very few Alternate Education resources, and as you rise you realize that the Start-up Accelerator rates are extremely low, almost too low. </p> <p> Nothing, nothing is as sweet and easy as putting up with broken education, the broken rules, the status quo, staying in school, getting some &quot;good&quot; grades, making your parents happy. </p> <p> Nothing is as easy as forgetting all of that ever happened, and make up excuses after excuses, forgetting everyone and everything, and never looking back. </p> <p> Alas, Dear Henry comes to our rescue. </p>"
+    ]
+   },
+   {
+    "type": "quote",
+    "author": "Henry David Thoreau",
+    "url": "https://en.wikipedia.org/wiki/Henry_David_Thoreau",
+    "text": [
+     "<p> I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived. </p> <p> I did not wish to live what was not life, living is so dear; nor did I wish to practice resignation, unless it was quite necessary. </p> <p> I wanted to live deep and suck out all the marrow of life, to live so sturdily and Spartan-like as to put to rout all that was not life, to cut a broad swath and shave close, to drive life into a corner, and reduce it to its lowest terms... </p>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "The Good News",
+    "text": [
+     "<p> Real Education, is not about getting really educated. </p> <p> It is about Your Life, Dignity, Authenticity, Health. </p> <p> Life that revolves around sweet and easy and making everyone else happy is not a healthy life. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "TLs4MGTTXRU",
+    "title": "Faith of the Heart"
+   },
+   {
+    "type": "text",
+    "title": "Article One: Inherent Dignity, Nobility.",
+    "text": [
+     "<p> The first and foremost, you must Retain Your Dignity, and your Nobility. </p> <p> No one is to treat you as means to their end, to their paycheck, or vacation, or else. </p> <p> You are not to be silenced, you are not to go quietly into the night, you are to rage, to rage against the dying of the light. </p>"
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/mountain.jpg",
+    "title": "Self Education starts With Life Changing Books",
+    "text": [
+     "Best way to understand a book, is to listen to the Author reading it. And the best way to listen to a book, is while climbing a <a href=\"https://en.wikipedia.org/wiki/Mount_Katahdin\">great mountain</a>."
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/short-history.jpg",
+    "title": "A Short History of Nearly Everything",
+    "text": [
+     "<a href=\"https://www.youtube.com/results?search_query=A+Short+History+of+Nearly+Everything\">YouTube</a> &#xB7; <a href=\"https://en.wikipedia.org/wiki/A_Short_History_of_Nearly_Everything\">Wikipedia</a> &#xB7; <a href=\"https://www.audible.com/pd/A-Short-History-of-Nearly-Everything-Audiobook/B002V0KFPW\">Audible</a>"
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/demon.jpg",
+    "title": "The Demon-Haunted World: Science as a Candle in the Dark",
+    "text": [
+     "<a href=\"https://www.youtube.com/results?search_query=The+Demon-Haunted+World%3A+Science+as+a+Candle+in+the+Dark\">YouTube</a> &#xB7; <a href=\"https://en.wikipedia.org/wiki/The_Demon-Haunted_World\">Wikipedia</a> &#xB7; <a href=\"https://www.audible.com/pd/The-Demon-Haunted-World-Audiobook/B06XTZZLZ8\">Audible</a>"
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/black-hole.jpg",
+    "title": "Death by Black Hole: And Other Cosmic Quandaries",
+    "text": [
+     "<a href=\"https://www.youtube.com/results?search_query=Death+by+Black+Hole%3A+And+Other+Cosmic+Quandaries\">YouTube</a> &#xB7; <a href=\"https://en.wikipedia.org/wiki/Death_by_Black_Hole\">Wikipedia</a> &#xB7; <a href=\"https://www.audible.com/pd/Death-by-Black-Hole-Audiobook/B002VA9L7A\">Audible</a>"
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/whatif.jpg",
+    "title": "What If?: Serious Scientific Answers to Absurd Hypothetical Questions",
+    "text": [
+     "<a href=\"https://www.youtube.com/results?search_query=What+If%3F%3A+Serious+Scientific+Answers+to+Absurd+Hypothetical+Questions\">YouTube</a> &#xB7; <a href=\"https://en.wikipedia.org/wiki/What_If%3F:_Serious_Scientific_Answers_to_Absurd_Hypothetical_Questions\">Wikipedia</a> &#xB7; <a href=\"https://www.audible.com/pd/What-If-Audiobook/B00LV6V4UW\">Audible</a>"
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/superheroes.jpg",
+    "title": "The Physics of Superheroes",
+    "text": [
+     "<a href=\"https://www.youtube.com/results?search_query=The+Physics+of+Superheroes%2C+James+Kakalios\">YouTube</a> &#xB7; <a href=\"https://en.wikipedia.org/wiki/The_Physics_of_Superheroes\">Wikipedia</a> &#xB7; <a href=\"https://www.audible.com/pd/The-Physics-of-Superheroes-Audiobook/1684574560\">Audible</a>"
+    ]
+   },
+   {
+    "type": "text",
+    "title": "Mind Mapping",
+    "text": [
+     "<p> The best tool to refine your vision is <a href=\"https://en.wikipedia.org/wiki/Mind_map\">Mind Mapping</a>. Visit <a href=\"https://en.wikipedia.org/wiki/List_of_concept-_and_mind-mapping_software\">List of concept and mind-mapping software</a> for more. </p> <p> Visit <a href=\"https://cmap.ihmc.us/\">Cmap Homepage</a> at Florida Institute for Human &amp; Machine Cognition (IHMC) for a free download. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "5nTuScU70As",
+    "title": "Want to learn better? Start mind mapping"
+   },
+   {
+    "type": "youtube",
+    "video": "u5Y4pIsXTV0",
+    "title": "How to Mind Map"
+   },
+   {
+    "type": "youtube",
+    "video": "9Pzz6rDMd8c",
+    "title": "Mind Map vs Concept Map"
+   },
+   {
+    "type": "youtube",
+    "video": "22YeW55POBs",
+    "title": "Concept Mapping with Cmap"
+   },
+   {
+    "type": "youtube",
+    "video": "o2Js_9-ek7o",
+    "title": "Concept Maps 1"
+   },
+   {
+    "type": "youtube",
+    "video": "TXU9UKajpVM",
+    "title": "Concept Maps 2"
+   },
+   {
+    "type": "text",
+    "title": "Behavior-Driven Development (BDD)",
+    "text": [
+     "<p> The best programming language for Leaders, is English. In BDD context, a structured subset of English. </p> <p> You can write you entire program in BDD, and coordinate your team at the same time. </p> <p> In the world of computers, teams can be distributed across the entire world. Some teams, can have revolving doors. And sometimes you may not even need doors, as you can post a BDD Test Issue on <a href=\"https://www.bountysource.com/\">Bounty Source</a> or similar. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "VS6EEUVZGLE",
+    "title": "What is Behavior Driven Development?"
+   },
+   {
+    "type": "text",
+    "title": "Learning Online and Tool Examples",
+    "text": [
+     "<p> Shopify&#x2019;s Director of Production Engineering explains how reading broadly helps him get to the bottom of things: <a href=\"https://superorganizers.substack.com/p/how-to-build-a-learning-machine\">How to Make Yourself Into a Learning Machine</a> </p> <p> <a href=\"https://readwise.io/\">Readwise</a> Get the most out of what you read, Readwise makes it easy to revisit and learn from your ebook &amp; article highlights. </p> <p> <a href=\"https://apps.ankiweb.net/\">Anki</a> Powerful, intelligent flash cards. Remembering things just became much easier. </p>"
+    ]
+   }
+  ]
+ },
+ {
+  "meta": {
    "name": "visionary",
    "title": "The Visionary"
   },
@@ -4779,62 +6020,6 @@
     "type": "youtube",
     "video": "Lp7BL-UI0Rw",
     "title": "How NASA is answering the question: Are we alone?"
-   },
-   {
-    "type": "text",
-    "title": "Extrapolations and Dreams Of The Future",
-    "text": [
-     "<p> Self Education Toolbox </p>"
-    ]
-   },
-   {
-    "type": "text",
-    "title": "Mind Mapping",
-    "text": [
-     "<p> The best tool to refine your vision is <a href=\"https://en.wikipedia.org/wiki/Mind_map\">Mind Mapping</a>. Visit <a href=\"https://en.wikipedia.org/wiki/List_of_concept-_and_mind-mapping_software\">List of concept and mind-mapping software</a> for more. </p> <p> Visit <a href=\"https://cmap.ihmc.us/\">Cmap Homepage</a> at Florida Institute for Human &amp; Machine Cognition (IHMC) for a free download. </p>"
-    ]
-   },
-   {
-    "type": "youtube",
-    "video": "5nTuScU70As",
-    "title": "Want to learn better? Start mind mapping"
-   },
-   {
-    "type": "youtube",
-    "video": "u5Y4pIsXTV0",
-    "title": "How to Mind Map"
-   },
-   {
-    "type": "youtube",
-    "video": "9Pzz6rDMd8c",
-    "title": "Mind Map vs Concept Map"
-   },
-   {
-    "type": "youtube",
-    "video": "22YeW55POBs",
-    "title": "Concept Mapping with Cmap"
-   },
-   {
-    "type": "youtube",
-    "video": "o2Js_9-ek7o",
-    "title": "Concept Maps 1"
-   },
-   {
-    "type": "youtube",
-    "video": "TXU9UKajpVM",
-    "title": "Concept Maps 2"
-   },
-   {
-    "type": "text",
-    "title": "Behavior-Driven Development (BDD)",
-    "text": [
-     "<p> The best programming language for Leaders, is English. In BDD context, a structured subset of English. </p> <p> You can write you entire program in BDD, and coordinate your team at the same time. </p> <p> In the world of computers, teams can be distributed across the entire world. Some teams, can have revolving doors. And sometimes you may not even need doors, as you can post a BDD Test Issue on <a href=\"https://www.bountysource.com/\">Bounty Source</a> or similar. </p>"
-    ]
-   },
-   {
-    "type": "youtube",
-    "video": "VS6EEUVZGLE",
-    "title": "What is Behavior Driven Development?"
    }
   ]
  },
@@ -4967,7 +6152,7 @@
     "type": "text",
     "title": "Source of Ideas",
     "text": [
-     "<p> The best source of ideas, is a list of <a href=\"https://www.ycombinator.com/topcompanies/\">Winning Companies</a>. </p> <p class=\"small\"> Take a look at <a href=\"https://en.wikipedia.org/wiki/List_of_mergers_and_acquisitions_by_Alphabet\">List of mergers and acquisitions by Alphabet</a> for some more ideas. </p>"
+     "<p> The best source of ideas, is a list of <a href=\"https://www.ycombinator.com/topcompanies/\">Winning Companies</a>. </p> <p> Investors <a href=\"https://www.ycombinator.com/rfs/\">Requesting for Startups</a>. </p> <p> <a href=\"https://en.wikipedia.org/wiki/List_of_mergers_and_acquisitions_by_Alphabet\">List of mergers and acquisitions by Alphabet</a>. </p> <p> <a href=\"http://profithunt.co/\">Profit Hunt</a> (a play on <a href=\"https://en.wikipedia.org/wiki/Product_Hunt\">Product Hunt</a>) has many smaller ideas along with Monthly Recurring Revenue (MRR). </p>"
     ]
    }
   ]

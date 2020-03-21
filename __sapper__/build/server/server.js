@@ -682,6 +682,10 @@ const News = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	// Application
 	let news = [
 		{
+			date: "2020-03-21T20:14:25.929Z",
+			html: "Updated Warrior Book and Videos"
+		},
+		{
 			date: "2020-02-05T00:33:31.100Z",
 			html: "Updated the <a href=\"https://fantasyui-com.github.io/neumorphism/\" rel=\"noopener noreferrer\" target=\"_blank\" class=\"text-warning\">Neumorphism</a> tool with support for mobile/tablet and light source direction."
 		},

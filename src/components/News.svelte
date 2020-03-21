@@ -19,6 +19,9 @@
 
 
   let news = [
+
+    {date:'2020-03-21T20:14:25.929Z', html:'Updated Warrior Book and Videos'},
+
     {date:'2020-02-05T00:33:31.100Z', html:'Updated the <a href="https://fantasyui-com.github.io/neumorphism/" rel="noopener noreferrer" target="_blank" class="text-warning">Neumorphism</a> tool with support for mobile/tablet and light source direction.'},
     {date:'2020-02-03T01:48:18.732Z', html:'Created a tool for updating the book and Cat Pea GUI <a href="https://fantasyui-com.github.io/neumorphism/" rel="noopener noreferrer" target="_blank" class="text-warning">Neumorphism</a>'},
 
