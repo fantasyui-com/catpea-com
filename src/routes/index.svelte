@@ -10,6 +10,7 @@ import BodybuildingAdvice from '../components/BodybuildingAdvice.svelte';
 import RandomVideo from '../components/RandomVideo.svelte';
 import News from '../components/News.svelte';
 import Squirrel from '../components/Squirrel.svelte';
+import MelodyMaker from '../components/MelodyMaker.svelte';
 
 
 const videos = {
@@ -44,7 +45,7 @@ recalculateTimestamps();
 </style>
 
 <svelte:head>
-  <title>𝗖𝗔𝗧 𝗣𝗘𝗔</title>
+  <title>𝗖𝗔𝗧 𝗣𝗘𝗔: World's Most Advanced Research Laboratories and Skunk Works</title>
 </svelte:head>
 
 
@@ -55,6 +56,20 @@ recalculateTimestamps();
 
 <div class="container-fluid">
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
+
+    <div class="col pb-3">
+    <News/>
+    </div>
+
+    <div class="col pb-3">
+    <MelodyMaker/>
+    </div>
+
+
+
+    <div class="col pb-3">
+    <Squirrel/>
+    </div>
 
 
     <div class="col pb-3">
@@ -68,6 +83,8 @@ recalculateTimestamps();
           </div>
         </div>
     </div>
+
+
 
     <div class="col pb-3">
     <SeasonCalculator/>
@@ -85,18 +102,26 @@ recalculateTimestamps();
     <BodybuildingAdvice/>
     </div>
 
-    <div class="col pb-3">
-    <News/>
-    </div>
-
-    <div class="col pb-3">
-    <RandomVideo duration="10"/>
-    </div>
 
 
     <div class="col pb-3">
-    <Squirrel/>
+    <RandomVideo duration="20"/>
     </div>
+
+    <div class="col pb-3">
+    <RandomVideo duration="30"/>
+    </div>
+
+    <div class="col pb-3">
+    <RandomVideo duration="40"/>
+    </div>
+
+    <div class="col pb-3">
+    <RandomVideo duration="50"/>
+    </div>
+
+
+
 
 
 

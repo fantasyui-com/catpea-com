@@ -20,6 +20,14 @@
 
   let news = [
 
+    {date:'2020-03-21T20:14:25.929Z', html:`Day Six of Quarantine:
+    Created a New Autogenerative Music Widget and disguised it as an immature <a href="https://www.dictionary.com/browse/sciurine" rel="noopener noreferrer" target="_blank">Sciurine</a> Urine joke.
+    The technology is extremely advanced.
+    I am for the first time in forever connecting virtual synthesizers through a <a href="https://tonejs.github.io/docs/13.8.25/Reverb" rel="noopener noreferrer" target="_blank">Reverb Convolver</a>.
+    This reshapes the Synthesized Sounds, the synthesizer waveform, into a more realistic sounding instrument. Reverb just about does it, if Commodore 64 came with a decent reverb it would sound amazing, nothing like chiptunes.
+    I have gotten used to breaking up my Generative Music into movements, and the initial song comes with 24 measures, where evey eight measures I do something interesting with the higher pitched instruments.
+    For the most part I fell like using A Basic <a href="https://github.com/Tonejs/Tone.js/wiki/Arpeggiator" rel="noopener noreferrer" target="_blank">Arpeggiator</a> for everything, I am yet to test it with real world sound samples (digital sound recordings as opposed to synthesizer based sounds.)`},
+
     {date:'2020-03-21T20:14:25.929Z', html:'Updated Warrior Book and Videos'},
 
     {date:'2020-02-05T00:33:31.100Z', html:'Updated the <a href="https://fantasyui-com.github.io/neumorphism/" rel="noopener noreferrer" target="_blank" class="text-warning">Neumorphism</a> tool with support for mobile/tablet and light source direction.'},

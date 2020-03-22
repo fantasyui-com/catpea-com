@@ -109,8 +109,9 @@ onMount(async function() {
 </style>
 
 <svelte:head>
-  <title>𝗖𝗔𝗧 𝗣𝗘𝗔</title>
+  <title>𝗖𝗔𝗧 𝗣𝗘𝗔: Warrior</title>
 </svelte:head>
+
 
 <div class="container-fluid text-warning" style="visibility: hidden;" class:visible='{pageReady}'>
 

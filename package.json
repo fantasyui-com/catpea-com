@@ -29,6 +29,7 @@
     "solstices-and-equinoxes": "^1.2.0",
     "sprintf-js": "^1.1.2",
     "sveltestrap": "^3.3.2",
+    "tone": "^13.8.25",
     "uuid": "^3.4.0"
   },
   "devDependencies": {
