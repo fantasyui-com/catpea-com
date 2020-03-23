@@ -56,6 +56,20 @@ const synth3 = new Tone.AMSynth().toMaster();
 // First Movement
 
 if(1){
+  // Membrane Background Beat
+  const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).toMaster();
+  await reverb.generate();
+  const membrane = new Tone.MembraneSynth().connect(reverb);
+  membrane.volume.value = -7;
+  const music = new Tone.Sequence(function(time, note){
+    membrane.triggerAttackRelease(note, "4n", time);
+    //instrument.triggerAttackRelease(note, "8n", time);
+  }, ["A1","A1","A1","A1"]); //subdivisions are given as subarrays
+  music.start(0)
+  music.stop('8m');
+}
+
+if(1){
   // background beat
   const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).toMaster();
   await reverb.generate();
@@ -79,8 +93,26 @@ if(1){
   music.stop('7m');
 }
 
+
+
+
+
+
 // Second Movement 8m - 16
 
+if(1){
+  // Membrane Background Beat
+  const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).toMaster();
+  await reverb.generate();
+  const membrane = new Tone.MembraneSynth().connect(reverb);
+  membrane.volume.value = -8;
+  const music = new Tone.Sequence(function(time, note){
+    membrane.triggerAttackRelease(note, "4n", time);
+    //instrument.triggerAttackRelease(note, "8n", time);
+  }, ["A1", ["A1","A1"], "A1", "A1"]); //subdivisions are given as subarrays
+  music.start('8m')
+  music.stop('16m');
+}
 
 if(1){
   // background beat
@@ -107,6 +139,29 @@ if(1){
   music.start('8m')
   music.stop('16m');
 }
+
+
+
+
+
+
+
+// THIRD Movement
+
+if(1){
+  // Membrane Background Beat
+  const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).toMaster();
+  await reverb.generate();
+  const membrane = new Tone.MembraneSynth().connect(reverb);
+  membrane.volume.value = -7;
+  const music = new Tone.Sequence(function(time, note){
+    membrane.triggerAttackRelease(note, "4n", time);
+    //instrument.triggerAttackRelease(note, "8n", time);
+  }, ["A1", ["A1","A1"], "A1", ["A1",,"B1","A1"]]); //subdivisions are given as subarrays
+  music.start('16m')
+  music.stop('22m');
+}
+
 
 if(1){
   // background beat
@@ -142,7 +197,7 @@ Tone.Transport.on("stop", () => {
 playing = !playing;
 });
 
-
+  //play();
 }
 
 main();
@@ -167,6 +222,10 @@ main();
       <div class="col text-muted small">
 
         <img src="album-covers/poor-fellows.jpg" class="img-fluid img-thumbnail bg-secondary border-info" alt="Responsive image">
+        <p class="pt-3">
+          <a href="http://www.scp-wiki.net/" rel="noopener noreferrer" target="_blank">SCP Foundation</a> report on
+          <a href="http://www.scp-wiki.net/scp-2050" rel="noopener noreferrer" target="_blank">Sciurine Monastic Brotherhood of Poor-Fellows and Crusader Knights</a>.
+        </p>
 
       </div>
 
@@ -176,9 +235,17 @@ main();
     <div class="row">
 
       <div class="col p-3">
-        <button  class="btn btn-secondary btn-sm" style="display: none;" class:d-inline='{!playing}' on:click={play}>{@html octicons.play.toSVG({ "class": "fill-black" })} Play Album Sample</button>
-        <button class="btn btn-secondary btn-sm" style="display: none;" class:d-inline='{playing}' on:click={stop}>Stop</button>
-      </div>
+
+        <button  class="btn btn-secondary btn-sm" style="display: none;" class:d-block='{!playing}' on:click={play}>{@html octicons.play.toSVG({ "class": "fill-black" })} Play Album Sample</button>
+        <button class="btn btn-secondary btn-sm" style="display: none;" class:d-block='{playing}' on:click={stop}>Stop</button>
+
+
+        <div class="small text-info" style="display: none;" class:d-inline='{playing}'>
+          CPU Requirement Notice:
+          Dynamic music generation comes with high CPU speed requirements.
+          Audio generation may not work on all mobile devices. Use your Desktop Computer for live music experiments.
+        </div>
+
 
     </div>
 
@@ -186,4 +253,5 @@ main();
   </div>
 
 
+</div>
 </div>

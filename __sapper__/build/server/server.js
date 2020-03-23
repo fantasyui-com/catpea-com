@@ -683,7 +683,11 @@ const News = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	// Application
 	let news = [
 		{
-			date: "2020-03-21T20:14:25.929Z",
+			date: "2020-03-23T13:41:42.846Z",
+			html: "Added membrane synth (Drums) to the Dehydration/Memphis Generative Album (It sounds like the <a href=\"https://en.wikipedia.org/wiki/Terminator_(character)\" rel=\"noopener noreferrer\" target=\"_blank\">T-800</a> is collaborating with the <a href=\"http://www.scp-wiki.net/scp-2050\" rel=\"noopener noreferrer\" target=\"_blank\">Sciurine Poor-Fellows</a>, and he's good.)"
+		},
+		{
+			date: "2020-03-22T20:14:25.929Z",
 			html: `Day Six of Quarantine:
     Created a New Autogenerative Music Widget and disguised it as an immature <a href="https://www.dictionary.com/browse/sciurine" rel="noopener noreferrer" target="_blank">Sciurine</a> Urine joke.
     The technology is extremely advanced.
@@ -2103,6 +2107,24 @@ const MelodyMaker = create_ssr_component(($$result, $$props, $$bindings, $$slots
 		//
 		// First Movement
 		{
+			// Membrane Background Beat
+			const reverb = new Tone.Reverb({ decay: 1.8, preDelay: 0.01 }).toMaster();
+
+			await reverb.generate();
+			const membrane = new Tone.MembraneSynth().connect(reverb);
+			membrane.volume.value = -7;
+
+			const music = new Tone.Sequence(function (time, note) {
+					membrane.triggerAttackRelease(note, "4n", time);
+				},
+			["A1", "A1", "A1", "A1"]); //instrument.triggerAttackRelease(note, "8n", time);
+			//subdivisions are given as subarrays
+
+			music.start(0);
+			music.stop("8m");
+		}
+
+		{
 			// background beat
 			const reverb = new Tone.Reverb({ decay: 1.8, preDelay: 0.01 }).toMaster();
 
@@ -2136,6 +2158,24 @@ const MelodyMaker = create_ssr_component(($$result, $$props, $$bindings, $$slots
 
 		// Second Movement 8m - 16
 		{
+			// Membrane Background Beat
+			const reverb = new Tone.Reverb({ decay: 1.8, preDelay: 0.01 }).toMaster();
+
+			await reverb.generate();
+			const membrane = new Tone.MembraneSynth().connect(reverb);
+			membrane.volume.value = -8;
+
+			const music = new Tone.Sequence(function (time, note) {
+					membrane.triggerAttackRelease(note, "4n", time);
+				},
+			["A1", ["A1", "A1"], "A1", "A1"]); //instrument.triggerAttackRelease(note, "8n", time);
+			//subdivisions are given as subarrays
+
+			music.start("8m");
+			music.stop("16m");
+		}
+
+		{
 			// background beat
 			const reverb = new Tone.Reverb({ decay: 1.8, preDelay: 0.01 }).toMaster();
 
@@ -2167,6 +2207,25 @@ const MelodyMaker = create_ssr_component(($$result, $$props, $$bindings, $$slots
 			music.probability = 0.95;
 			music.start("8m");
 			music.stop("16m");
+		}
+
+		// THIRD Movement
+		{
+			// Membrane Background Beat
+			const reverb = new Tone.Reverb({ decay: 1.8, preDelay: 0.01 }).toMaster();
+
+			await reverb.generate();
+			const membrane = new Tone.MembraneSynth().connect(reverb);
+			membrane.volume.value = -7;
+
+			const music = new Tone.Sequence(function (time, note) {
+					membrane.triggerAttackRelease(note, "4n", time);
+				},
+			["A1", ["A1", "A1"], "A1", ["A1", ,"B1", "A1"]]); //instrument.triggerAttackRelease(note, "8n", time);
+			//subdivisions are given as subarrays
+
+			music.start("16m");
+			music.stop("22m");
 		}
 
 		{
@@ -2210,7 +2269,7 @@ const MelodyMaker = create_ssr_component(($$result, $$props, $$bindings, $$slots
 		Tone.Transport.on("stop", () => {
 			playing = !playing;
 		});
-	}
+	} //play();
 
 	main();
 
@@ -2228,6 +2287,10 @@ const MelodyMaker = create_ssr_component(($$result, $$props, $$bindings, $$slots
       <div class="${"col text-muted small"}">
 
         <img src="${"album-covers/poor-fellows.jpg"}" class="${"img-fluid img-thumbnail bg-secondary border-info"}" alt="${"Responsive image"}">
+        <p class="${"pt-3"}">
+          <a href="${"http://www.scp-wiki.net/"}" rel="${"noopener noreferrer"}" target="${"_blank"}">SCP Foundation</a> report on
+          <a href="${"http://www.scp-wiki.net/scp-2050"}" rel="${"noopener noreferrer"}" target="${"_blank"}">Sciurine Monastic Brotherhood of Poor-Fellows and Crusader Knights</a>.
+        </p>
 
       </div>
 
@@ -2237,9 +2300,17 @@ const MelodyMaker = create_ssr_component(($$result, $$props, $$bindings, $$slots
     <div class="${"row"}">
 
       <div class="${"col p-3"}">
-        <button class="${["btn btn-secondary btn-sm", !playing ? "d-inline" : ""].join(" ").trim()}" style="${"display: none;"}">${octicons.play.toSVG({ "class": "fill-black" })} Play Album Sample</button>
-        <button class="${["btn btn-secondary btn-sm", playing ? "d-inline" : ""].join(" ").trim()}" style="${"display: none;"}">Stop</button>
-      </div>
+
+        <button class="${["btn btn-secondary btn-sm", !playing ? "d-block" : ""].join(" ").trim()}" style="${"display: none;"}">${octicons.play.toSVG({ "class": "fill-black" })} Play Album Sample</button>
+        <button class="${["btn btn-secondary btn-sm", playing ? "d-block" : ""].join(" ").trim()}" style="${"display: none;"}">Stop</button>
+
+
+        <div class="${["small text-info", playing ? "d-inline" : ""].join(" ").trim()}" style="${"display: none;"}">
+          CPU Requirement Notice:
+          Dynamic music generation comes with high CPU speed requirements.
+          Audio generation may not work on all mobile devices. Use your Desktop Computer for live music experiments.
+        </div>
+
 
     </div>
 
@@ -2247,6 +2318,7 @@ const MelodyMaker = create_ssr_component(($$result, $$props, $$bindings, $$slots
   </div>
 
 
+</div>
 </div>`;
 });
 
