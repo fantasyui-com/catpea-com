@@ -8,8 +8,11 @@ import octicons from 'octicons';
 Tone.Transport.bpm.value = 85; // ramp the bpm to 120 over 10 seconds Tone.Transport.bpm.rampTo(120, 10);
 let playing = false;
 
-function play(){
+let highDefinition = false;
+let useReverb = false;
 
+async function play(){
+  await make();
   //play a middle 'C' for the duration of an 8th note
   // A A# B C C# D D# E F F# G
     //synth.triggerAttackRelease("A4", "8n");
@@ -20,17 +23,31 @@ function play(){
     Tone.Transport.loopEnd = '24m';
 
     Tone.Transport.start(); //start the transport in one second starting at beginning of the 5th measure: Tone.Transport.start("+1", "4:0:0");
+    playing = true;
 }
-function stop(){
+async function stop(){
   //play a middle 'C' for the duration of an 8th note
   // A A# B C C# D D# E F F# G
     //synth.triggerAttackRelease("A4", "8n");
     Tone.Transport.stop(); //start the transport in one second starting at beginning of the 5th measure: Tone.Transport.start("+1", "4:0:0");
+    playing = false;
 }
 
 
-async function main(){
 
+async function make(){
+  Tone.Transport.stop();
+  Tone.Transport.cancel();
+  playing = false;
+
+  const master = Tone.Master;
+  let target = master;
+
+  if(useReverb){
+    const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).connect(master);
+    await reverb.generate();
+    target = reverb;
+  }
 
 //create a synth and connect it to the master output (your speakers)
 
@@ -57,9 +74,8 @@ const synth3 = new Tone.AMSynth().toMaster();
 
 if(1){
   // Membrane Background Beat
-  const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).toMaster();
-  await reverb.generate();
-  const membrane = new Tone.MembraneSynth().connect(reverb);
+
+  const membrane = new Tone.MembraneSynth().connect(target);
   membrane.volume.value = -7;
   const music = new Tone.Sequence(function(time, note){
     membrane.triggerAttackRelease(note, "4n", time);
@@ -69,11 +85,31 @@ if(1){
   music.stop('8m');
 }
 
+
+if(1){
+  // Membrane Background Beat
+
+  const instrument = new Tone.PluckSynth({
+    attackNoise : 1 ,
+    dampening : 2000 ,
+    resonance : 0.1
+  }).connect(target);
+  instrument.volume.value = -7;
+  const music = new Tone.Sequence(function(time, note){
+    instrument.triggerAttackRelease(note, "4n", time);
+    //instrument.triggerAttackRelease(note, "8n", time);
+  }, [["A1","B1"]]); //subdivisions are given as subarrays
+  music.start(0)
+  music.stop('8m');
+}
+
+
+
+
 if(1){
   // background beat
-  const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).toMaster();
-  await reverb.generate();
-  const instrument = new Tone.AMSynth().connect(reverb);
+
+  const instrument = new Tone.AMSynth().connect(target);
   var music = new Tone.Sequence(function(time, note){
   instrument.triggerAttackRelease(note, "8n", time);
   }, ["A1","B1"]); //subdivisions are given as subarrays
@@ -83,9 +119,10 @@ if(1){
 
 if(1){
   // background melody
-  const reverb = new Tone.Reverb( {decay : 1.0 , preDelay : 0.01 }).toMaster();
-  await reverb.generate();
-  const instrument = new Tone.AMSynth().connect(reverb);
+
+
+  const instrument = new Tone.AMSynth().connect(target);
+
   var music = new Tone.Sequence(function(time, note){
   instrument.triggerAttackRelease(note, "8n", time);
   }, ["C3", ["E3", "D3", "E3", "G3"], "C3", "C3", ["C3","D3","C3","D3"]]); //subdivisions are given as subarrays
@@ -102,9 +139,8 @@ if(1){
 
 if(1){
   // Membrane Background Beat
-  const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).toMaster();
-  await reverb.generate();
-  const membrane = new Tone.MembraneSynth().connect(reverb);
+
+  const membrane = new Tone.MembraneSynth().connect(target);
   membrane.volume.value = -8;
   const music = new Tone.Sequence(function(time, note){
     membrane.triggerAttackRelease(note, "4n", time);
@@ -115,10 +151,28 @@ if(1){
 }
 
 if(1){
+  // Membrane Background Beat
+
+  const instrument = new Tone.PluckSynth({
+    attackNoise : 1 ,
+    dampening : 2000 ,
+    resonance : 0.1
+  }).connect(target);
+
+  instrument.volume.value = -7;
+  const music = new Tone.Sequence(function(time, note){
+    instrument.triggerAttackRelease(note, "4n", time);
+    //instrument.triggerAttackRelease(note, "8n", time);
+  }, [["A1","B1"],["A1", "A1","G1","G1"]]); //subdivisions are given as subarrays
+  music.start('8m')
+  music.stop('16m');
+}
+
+if(1){
   // background beat
-  const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).toMaster();
-  await reverb.generate();
-  const instrument = new Tone.AMSynth().connect(reverb);
+
+  const instrument = new Tone.AMSynth().connect(target);
+
   var music = new Tone.Sequence(function(time, note){
   instrument.triggerAttackRelease(note, "8n", time);
 }, ["A2","B2"]); //subdivisions are given as subarrays
@@ -127,9 +181,8 @@ if(1){
 }
 
 if(1){
-  const reverb = new Tone.Reverb( {decay : 1.0 , preDelay : 0.01 }).toMaster();
-  await reverb.generate();
-  const instrument = new Tone.AMSynth().connect(reverb);
+
+  const instrument = new Tone.AMSynth().connect(target);
 
   const music = new Tone.Pattern(function(time, note){ //the order of the notes passed in depends on the pattern
     instrument.triggerAttackRelease(note, '8n');
@@ -150,9 +203,8 @@ if(1){
 
 if(1){
   // Membrane Background Beat
-  const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).toMaster();
-  await reverb.generate();
-  const membrane = new Tone.MembraneSynth().connect(reverb);
+
+  const membrane = new Tone.MembraneSynth().connect(target);
   membrane.volume.value = -7;
   const music = new Tone.Sequence(function(time, note){
     membrane.triggerAttackRelease(note, "4n", time);
@@ -161,13 +213,29 @@ if(1){
   music.start('16m')
   music.stop('22m');
 }
+if(1){
+  // Membrane Background Beat
+
+  const instrument = new Tone.PluckSynth({
+    attackNoise : 1 ,
+    dampening : 2000 ,
+    resonance : 0.1
+  }).connect(target);
+
+  instrument.volume.value = -7;
+  const music = new Tone.Sequence(function(time, note){
+    instrument.triggerAttackRelease(note, "4n", time);
+    //instrument.triggerAttackRelease(note, "8n", time);
+  }, [["A1","B1"],["A1", "A1"],["A1",]]); //subdivisions are given as subarrays
+  music.start('16m')
+  music.stop('23m');
+}
 
 
 if(1){
   // background beat
-  const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).toMaster();
-  await reverb.generate();
-  const instrument = new Tone.AMSynth().connect(reverb);
+
+  const instrument = new Tone.AMSynth().connect(target);
   var music = new Tone.Sequence(function(time, note){
   instrument.triggerAttackRelease(note, "8n", time);
 }, ["A1","B1","C2"]); //subdivisions are given as subarrays
@@ -176,9 +244,8 @@ if(1){
 }
 
 if(1){
-  const reverb = new Tone.Reverb( {decay : 1.0 , preDelay : 0.01 }).toMaster();
-  await reverb.generate();
-  const instrument = new Tone.AMSynth().connect(reverb);
+
+  const instrument = new Tone.AMSynth().connect(target);
   const music = new Tone.Pattern(function(time, note){ //the order of the notes passed in depends on the pattern
     instrument.triggerAttackRelease(note, '8n');
   }, ["A#4", "C#4", "D#4", "F#4"], "randomWalk");
@@ -189,15 +256,13 @@ if(1){
 }
 
 
-Tone.Transport.on("start", () => {
-playing = !playing;
-});
 
-Tone.Transport.on("stop", () => {
-playing = !playing;
-});
 
-  //play();
+}
+
+async function main(){
+   // await make();
+   // play();
 }
 
 main();
@@ -233,18 +298,37 @@ main();
     </div>
 
     <div class="row">
-
       <div class="col p-3">
 
-        <button  class="btn btn-secondary btn-sm" style="display: none;" class:d-block='{!playing}' on:click={play}>{@html octicons.play.toSVG({ "class": "fill-black" })} Play Album Sample</button>
-        <button class="btn btn-secondary btn-sm" style="display: none;" class:d-block='{playing}' on:click={stop}>Stop</button>
 
+      <button class="btn btn-secondary btn-sm" style="display: none;" class:d-block='{playing}' on:click={stop}>Stop</button>
 
-        <div class="small text-info" style="display: none;" class:d-inline='{playing}'>
+      {#if highDefinition}
+        <button  class="btn btn-primary btn-sm" style="display: none;" class:d-block='{!playing}' on:click={()=>{ useReverb=true; play() }}>{@html octicons.play.toSVG({ "class": "fill-black" })} Play HD</button>
+      {:else}
+        <button  class="btn btn-secondary btn-sm" style="display: none;" class:d-block='{!playing}' on:click={()=>{ useReverb=false; play() }}>{@html octicons.play.toSVG({ "class": "fill-black" })} Play</button>
+      {/if}
+
+      <div class="form-check pt-3">
+        <input type="checkbox" class="form-check-input" id="customSwitch1" on:click={()=>{ highDefinition=!highDefinition; useReverb=highDefinition; if(playing){play()}; }} >
+        {#if highDefinition}
+        <label class="form-check-label text-warning small" for="customSwitch1">Enable High Definition (HD) mode</label>
+        {:else}
+        <label class="form-check-label text-info small" for="customSwitch1">Enable High Definition (HD) mode</label>
+        {/if}
+      </div>
+
+      <div class="small text-info pt-3" style="display: none;" class:d-block='{highDefinition}'>
           CPU Requirement Notice:
           Dynamic music generation comes with high CPU speed requirements.
-          Audio generation may not work on all mobile devices. Use your Desktop Computer for live music experiments.
-        </div>
+          Audio generation may not work on all mobile devices.
+          It is recommended you use your Desktop Computer for live music experiments in HD.
+      </div>
+
+
+
+
+
 
 
     </div>

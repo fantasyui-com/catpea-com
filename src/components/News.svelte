@@ -20,7 +20,8 @@
 
   let news = [
 
-    {date:'2020-03-23T13:41:42.846Z', html:'Added membrane synth (Drums) to the Dehydration/Memphis Generative Album (It sounds like the <a href="https://en.wikipedia.org/wiki/Terminator_(character)" rel="noopener noreferrer" target="_blank">T-800</a> is collaborating with the <a href="http://www.scp-wiki.net/scp-2050" rel="noopener noreferrer" target="_blank">Sciurine Poor-Fellows</a>, and he\'s good.)'},
+    {date:'2020-03-23T20:32:49.019Z', html:'Added High Fidelity mode for Dehydration in Memphis, it should be possible to play it on mobile now, though it is kind of not the point. The real value in the HD toggle is hearing the actual Synthesizer without any HD filters.'},
+    {date:'2020-03-23T13:41:42.846Z', html:'Added membrane synth (Drums) to the Dehydration in Memphis Generative Album (It sounds like the <a href="https://en.wikipedia.org/wiki/Terminator_(character)" rel="noopener noreferrer" target="_blank">T-800</a> is collaborating with the <a href="http://www.scp-wiki.net/scp-2050" rel="noopener noreferrer" target="_blank">Sciurine Poor-Fellows</a>, and he\'s good.)'},
 
     {date:'2020-03-22T20:14:25.929Z', html:`Day Six of Quarantine:
     Created a New Autogenerative Music Widget and disguised it as an immature <a href="https://www.dictionary.com/browse/sciurine" rel="noopener noreferrer" target="_blank">Sciurine</a> Urine joke.
