@@ -683,8 +683,12 @@ const News = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	// Application
 	let news = [
 		{
+			date: "2020-03-24T00:46:35.352Z",
+			html: "On the Seventh Day of Quarantine I Added Tremolo (<a href=\"https://en.wikipedia.org/wiki/Low-frequency_oscillation\" rel=\"noopener noreferrer\" target=\"_blank\">LFO</a> effect) to the  Sciurines in Memphis song (it is used in the second movement [middle of the song]), and made our imaginary band a sick medieval logo. All my generative music uses <a href=\"https://en.wikipedia.org/wiki/Scientific_pitch_notation\" rel=\"noopener noreferrer\" target=\"_blank\">Scientific Pitch Notation</a>, take that Mozart. It looks like the CPU requirements are too high for mobile devices, small price to pay for a taste of Medieval <a href=\"https://www.dictionary.com/browse/sciurine\" rel=\"noopener noreferrer\" target=\"_blank\">Sciurine</a> Pöp. <a href=\"https://www.quora.com/On-GitHub-what-is-the-significance-of-the-Ship-It-squirrel?share=1\" rel=\"noopener noreferrer\" target=\"_blank\">Ship it!</a>"
+		},
+		{
 			date: "2020-03-23T20:32:49.019Z",
-			html: "Added High Fidelity mode for Dehydration in Memphis, it should be possible to play it on mobile now, though it is kind of not the point. The real value in the HD toggle is hearing the actual Synthesizer without any HD filters."
+			html: "Added High Fidelity mode for Dehydration in Memphis, it should be possible to [almost] play it on mobile now (need a speedy CPU), though it is kind of not the point. The real value in the HD toggle is hearing the actual Synthesizer without any HD filters."
 		},
 		{
 			date: "2020-03-23T13:41:42.846Z",
@@ -2102,38 +2106,61 @@ const MelodyMaker = create_ssr_component(($$result, $$props, $$bindings, $$slots
 
     <div class="${"row"}">
 
-      <div class="${"col text-muted small"}">
+      <div class="${"col px-5"}">
 
-        <img src="${"album-covers/poor-fellows.jpg"}" class="${"img-fluid img-thumbnail bg-secondary border-info"}" alt="${"Responsive image"}">
-        <p class="${"pt-3"}">
-          <a href="${"http://www.scp-wiki.net/"}" rel="${"noopener noreferrer"}" target="${"_blank"}">SCP Foundation</a> report on
-          <a href="${"http://www.scp-wiki.net/scp-2050"}" rel="${"noopener noreferrer"}" target="${"_blank"}">Sciurine Monastic Brotherhood of Poor-Fellows and Crusader Knights</a>.
-        </p>
+          <img src="${"album-covers/poor-fellows.jpg"}" class="${"img-fluid img-thumbnail bg-secondary border-info"}" alt="${"Responsive image"}">
 
+      </div>
+
+      </div>
+
+      <div class="${"row"}">
+
+
+      <div class="${"col py-3 small"}">
+        <a href="${"http://www.scp-wiki.net/"}" rel="${"noopener noreferrer"}" target="${"_blank"}">SCP Foundation</a> report on
+        <a href="${"http://www.scp-wiki.net/scp-2050"}" rel="${"noopener noreferrer"}" target="${"_blank"}">Sciurine Monastic Brotherhood of Poor-Fellows and Crusader Knights</a>.
       </div>
 
 
     </div>
 
     <div class="${"row"}">
-      <div class="${"col p-3"}">
 
+      <div class="${"col-5"}">
 
-      <button class="${["btn btn-secondary btn-sm",  ""].join(" ").trim()}" style="${"display: none;"}">Stop</button>
+        <button class="${["m-0 btn btn-secondary btn-block w-100 btn-sm",  ""].join(" ").trim()}" style="${"display: none;"}">${octicons.mute.toSVG({ "class": "fill-black" })} Stop</button>
 
-      ${ `<button class="${["btn btn-secondary btn-sm",  "d-block" ].join(" ").trim()}" style="${"display: none;"}">${octicons.play.toSVG({ "class": "fill-black" })} Play</button>`}
+        ${ `<button class="${["m-0 btn btn-primary btn-block w-100 btn-sm",  "d-block" ].join(" ").trim()}" style="${"display: none;"}">${octicons.play.toSVG({ "class": "fill-black" })} Play HD</button>`
+	}
 
-      <div class="${"form-check pt-3"}">
-        <input type="${"checkbox"}" class="${"form-check-input"}" id="${"customSwitch1"}">
-        ${ `<label class="${"form-check-label text-info small"}" for="${"customSwitch1"}">Enable High Definition (HD) mode</label>`}
       </div>
+
+      <div class="${"col-7"}">
+        <div class="${"form-check pt-1"}">
+          <input type="${"checkbox"}" class="${"form-check-input"}" id="${"customSwitch1"}" ${ "checked" }>
+          ${ `<label class="${"form-check-label text-warning small"}" for="${"customSwitch1"}">High Definition Mode</label>`
+	}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="${"row"}">
+
+
+      <div class="${"col"}">
+
+
+
 
       <div class="${["small text-info pt-3",  ""].join(" ").trim()}" style="${"display: none;"}">
-          CPU Requirement Notice:
-          Dynamic music generation comes with high CPU speed requirements.
-          Audio generation may not work on all mobile devices.
-          It is recommended you use your Desktop Computer for live music experiments in HD.
+        Audio generation may not work on all mobile devices due to high CPU speed requirements.
+          <span class="${["text-warning",  "d-inline" ].join(" ").trim()}" style="${"display: none;"}">
+          It is recommended that you use a Desktop Computer for high definition music.
+          </span>
       </div>
+
 
 
 

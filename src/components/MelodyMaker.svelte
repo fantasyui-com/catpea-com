@@ -8,7 +8,7 @@ import octicons from 'octicons';
 Tone.Transport.bpm.value = 85; // ramp the bpm to 120 over 10 seconds Tone.Transport.bpm.rampTo(120, 10);
 let playing = false;
 
-let highDefinition = false;
+let highDefinition = true;
 let useReverb = false;
 
 async function play(){
@@ -23,6 +23,7 @@ async function play(){
     Tone.Transport.loopEnd = '24m';
 
     Tone.Transport.start(); //start the transport in one second starting at beginning of the 5th measure: Tone.Transport.start("+1", "4:0:0");
+    // Tone.Transport.position =  '8:0:0';
     playing = true;
 }
 async function stop(){
@@ -45,6 +46,7 @@ async function make(){
 
   if(useReverb){
     const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).connect(master);
+    //reverb.wet.value = 0.2;
     await reverb.generate();
     target = reverb;
   }
@@ -89,16 +91,17 @@ if(1){
 if(1){
   // Membrane Background Beat
 
-  const instrument = new Tone.PluckSynth({
+  const instrument = new Tone.PluckSynth({ // Karplus-String string synthesis. Often out of tune. Will change when the AudioWorkerNode is available across browsers.
+
     attackNoise : 1 ,
     dampening : 2000 ,
     resonance : 0.1
   }).connect(target);
-  instrument.volume.value = -7;
+  instrument.volume.value = -6;
   const music = new Tone.Sequence(function(time, note){
     instrument.triggerAttackRelease(note, "4n", time);
     //instrument.triggerAttackRelease(note, "8n", time);
-  }, [["A1","B1"]]); //subdivisions are given as subarrays
+  }, ['A1', ["A1","D4"]]); //subdivisions are given as subarrays
   music.start(0)
   music.stop('8m');
 }
@@ -181,13 +184,45 @@ if(1){
 }
 
 if(1){
+  const tremolo = new Tone.Tremolo({
+    frequency : 2 ,
+    type : 'sine' ,
+    depth : 0.7 ,
+    spread : 180
+  }).connect(target).start();
 
-  const instrument = new Tone.AMSynth().connect(target);
+  const instrument = new Tone.FMSynth({
+      harmonicity : 3 ,
+      modulationIndex : 5 ,
+      detune : 2 ,
+      oscillator : {
+        type : 'sine'
+      },
+      envelope : {
+        attack : 0.13 ,
+        decay : 0.01 ,
+        sustain : 1 ,
+        release : 0.5
+      },
+      modulation : {
+        type : 'square'
+      },
+      modulationEnvelope : {
+        attack : 0.5 ,
+        decay : 0 ,
+        sustain : 1 ,
+        release : 0.5
+      }
+    }).connect(tremolo);
+
+  instrument.portamento = 0.12;
+   instrument.volume.value = 3;
 
   const music = new Tone.Pattern(function(time, note){ //the order of the notes passed in depends on the pattern
-    instrument.triggerAttackRelease(note, '8n');
+    instrument.triggerAttackRelease(note, '4n');
   }, ["A4", "B4", "C4", "D4", "E4", "F4", "G4"], "randomWalk");
-  music.interval = '8n';
+
+  music.interval = '4n';
   music.probability = .95;
   music.start('8m')
   music.stop('16m');
@@ -284,46 +319,67 @@ main();
 
     <div class="row">
 
-      <div class="col text-muted small">
+      <div class="col px-5">
 
-        <img src="album-covers/poor-fellows.jpg" class="img-fluid img-thumbnail bg-secondary border-info" alt="Responsive image">
-        <p class="pt-3">
-          <a href="http://www.scp-wiki.net/" rel="noopener noreferrer" target="_blank">SCP Foundation</a> report on
-          <a href="http://www.scp-wiki.net/scp-2050" rel="noopener noreferrer" target="_blank">Sciurine Monastic Brotherhood of Poor-Fellows and Crusader Knights</a>.
-        </p>
+          <img src="album-covers/poor-fellows.jpg" class="img-fluid img-thumbnail bg-secondary border-info" alt="Responsive image">
 
+      </div>
+
+      </div>
+
+      <div class="row">
+
+
+      <div class="col py-3 small">
+        <a href="http://www.scp-wiki.net/" rel="noopener noreferrer" target="_blank">SCP Foundation</a> report on
+        <a href="http://www.scp-wiki.net/scp-2050" rel="noopener noreferrer" target="_blank">Sciurine Monastic Brotherhood of Poor-Fellows and Crusader Knights</a>.
       </div>
 
 
     </div>
 
     <div class="row">
-      <div class="col p-3">
 
+      <div class="col-5">
 
-      <button class="btn btn-secondary btn-sm" style="display: none;" class:d-block='{playing}' on:click={stop}>Stop</button>
+        <button class="m-0 btn btn-secondary btn-block w-100 btn-sm" style="display: none;" class:d-block='{playing}' on:click={stop}>{@html octicons.mute.toSVG({ "class": "fill-black" })} Stop</button>
 
-      {#if highDefinition}
-        <button  class="btn btn-primary btn-sm" style="display: none;" class:d-block='{!playing}' on:click={()=>{ useReverb=true; play() }}>{@html octicons.play.toSVG({ "class": "fill-black" })} Play HD</button>
-      {:else}
-        <button  class="btn btn-secondary btn-sm" style="display: none;" class:d-block='{!playing}' on:click={()=>{ useReverb=false; play() }}>{@html octicons.play.toSVG({ "class": "fill-black" })} Play</button>
-      {/if}
-
-      <div class="form-check pt-3">
-        <input type="checkbox" class="form-check-input" id="customSwitch1" on:click={()=>{ highDefinition=!highDefinition; useReverb=highDefinition; if(playing){play()}; }} >
         {#if highDefinition}
-        <label class="form-check-label text-warning small" for="customSwitch1">Enable High Definition (HD) mode</label>
+          <button class="m-0 btn btn-primary btn-block w-100 btn-sm" style="display: none;" class:d-block='{!playing}' on:click={()=>{ useReverb=true; play() }}>{@html octicons.play.toSVG({ "class": "fill-black" })} Play HD</button>
         {:else}
-        <label class="form-check-label text-info small" for="customSwitch1">Enable High Definition (HD) mode</label>
+          <button class="m-0 btn btn-secondary btn-block w-100 btn-sm" style="display: none;" class:d-block='{!playing}' on:click={()=>{ useReverb=false; play() }}>{@html octicons.play.toSVG({ "class": "fill-black" })} Play</button>
         {/if}
+
       </div>
 
-      <div class="small text-info pt-3" style="display: none;" class:d-block='{highDefinition}'>
-          CPU Requirement Notice:
-          Dynamic music generation comes with high CPU speed requirements.
-          Audio generation may not work on all mobile devices.
-          It is recommended you use your Desktop Computer for live music experiments in HD.
+      <div class="col-7">
+        <div class="form-check pt-1">
+          <input type="checkbox" class="form-check-input" id="customSwitch1" checked={highDefinition} on:click={()=>{ highDefinition=!highDefinition; useReverb=highDefinition; if(playing){play()}; }} >
+          {#if highDefinition}
+          <label class="form-check-label text-warning small" for="customSwitch1">High Definition Mode</label>
+          {:else}
+          <label class="form-check-label text-info small" for="customSwitch1">High Definition Mode</label>
+          {/if}
+        </div>
       </div>
+
+    </div>
+
+    <div class="row">
+
+
+      <div class="col">
+
+
+
+
+      <div class="small text-info pt-3" style="display: none;" class:d-block='{playing}'>
+        Audio generation may not work on all mobile devices due to high CPU speed requirements.
+          <span class="text-warning" style="display: none;" class:d-inline='{highDefinition}'>
+          It is recommended that you use a Desktop Computer for high definition music.
+          </span>
+      </div>
+
 
 
 
