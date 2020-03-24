@@ -684,7 +684,7 @@ const News = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	let news = [
 		{
 			date: "2020-03-24T13:36:42.106Z",
-			html: "Captain's Log: Eighth day of the quarantine. I have extended the Sciurine Instrumental Section with a Beautiful Thin Saw (a Sciurine Favorite) and a powerful Electric Cello backing an Alien Squirrel Chorus. As nothing like this has ever been heard on Planet Earth before, the song has risen all the way to the very top of Shire Lyre Squire Squirrel Choir charts and is expected to stay there permanently, forever."
+			html: "Captain's Log: Eighth day of the quarantine. I have extended the Sciurine Instrumental Section with a Beautiful Thin Saw (a Sciurine Favorite) and a powerful Electric Cello backing a <a href=\"https://github.com/Tonejs/Presets/blob/gh-pages/instrument/Synth/TreeTrunk.json\" rel=\"noopener noreferrer\" target=\"_blank\">Tree Trunk</a> Synth. As nothing like this has ever been heard on Planet Earth before, the song has risen all the way to the very top of Shire Lyre Squire Squirrel Choir charts and is expected to stay there permanently, forever."
 		},
 		{
 			date: "2020-03-24T00:46:35.352Z",
@@ -2129,13 +2129,26 @@ const MelodyMaker = create_ssr_component(($$result, $$props, $$bindings, $$slots
 
     </div>
 
+      <div class="${"row"}">
+
+
+      <div class="${"col"}">
+      <audio controls class="${"w-100"}">
+       <source src="${"sciurine.mp3"}" type="${"audio/mpeg"}">
+     Your browser does not support the audio element.
+     </audio>
+      </div>
+
+
+    </div>
+
     <div class="${"row"}">
 
       <div class="${"col-5"}">
 
         <button class="${["m-0 btn btn-secondary btn-block w-100 btn-sm",  ""].join(" ").trim()}" style="${"display: none;"}">${octicons.mute.toSVG({ "class": "fill-black" })} Stop</button>
 
-        ${ `<button class="${["m-0 btn btn-primary btn-block w-100 btn-sm",  "d-block" ].join(" ").trim()}" style="${"display: none;"}">${octicons.play.toSVG({ "class": "fill-black" })} Play HD</button>`
+        ${ `<button class="${["m-0 btn btn-primary btn-block w-100 btn-sm",  "d-block" ].join(" ").trim()}" style="${"display: none;"}">${octicons.settings.toSVG({ "class": "fill-black" })} Generate HD Live</button>`
 	}
 
       </div>
@@ -2155,21 +2168,12 @@ const MelodyMaker = create_ssr_component(($$result, $$props, $$bindings, $$slots
 
       <div class="${"col"}">
 
-
-
-
       <div class="${["small text-info pt-3",  ""].join(" ").trim()}" style="${"display: none;"}">
         Audio generation may not work on all mobile devices due to high CPU speed requirements.
           <span class="${["text-warning",  "d-inline" ].join(" ").trim()}" style="${"display: none;"}">
           It is recommended that you use a Desktop Computer for high definition music.
           </span>
       </div>
-
-
-
-
-
-
 
 
     </div>

@@ -20,7 +20,7 @@ async function play(){
     Tone.Transport.loop = true;
 
     Tone.Transport.loopStart = '0m';
-    Tone.Transport.loopEnd = '24m';
+    Tone.Transport.loopEnd = '42m';
 
     Tone.Transport.start(); //start the transport in one second starting at beginning of the 5th measure: Tone.Transport.start("+1", "4:0:0");
     //  Tone.Transport.position =  '8:0:0';
@@ -275,7 +275,7 @@ if(1){
   music.interval = '4n';
   music.probability = 1;
   music.start('16m')
-  music.stop('28m');
+  music.stop('22m');
 }
 if(1){
   // const tremolo = new Tone.Tremolo({
@@ -288,17 +288,13 @@ if(1){
   const instrument = new Tone.Synth(
     {
         "oscillator": {
-            "type": "fatsine4",
-            "spread" : 60,
-            "count" : 10
+            "type": "sine"
         },
         "envelope": {
-            "attack": 0.4,
-            "decay": 0.01,
-            "sustain": 1,
-            "attackCurve" : "sine",
-            "releaseCurve" : "sine",
-            "release": 0.4
+            "attack": 0.001,
+            "decay": 0.1,
+            "sustain": 0.1,
+            "release": 1.2
         }
     }
   ).connect(target);
@@ -308,7 +304,7 @@ if(1){
 
   const music = new Tone.Pattern(function(time, note){ //the order of the notes passed in depends on the pattern
     instrument.triggerAttackRelease(note, '16n');
-  }, [  "A5", "B5", "C5", "D5",    "A4", "B4", "C4", "D4",   "E5", "F5", "G5", "H5" ], "randomWalk");
+  }, [  "A3", "B3", "C3", "D3",    "A4", "B4", "C4", "D4"    ], "randomWalk");
 
   music.interval = '16n';
   music.probability = 1;
@@ -426,6 +422,19 @@ main();
 
     </div>
 
+      <div class="row">
+
+
+      <div class="col">
+      <audio controls class="w-100">
+       <source src="sciurine.mp3" type="audio/mpeg">
+     Your browser does not support the audio element.
+     </audio>
+      </div>
+
+
+    </div>
+
     <div class="row">
 
       <div class="col-5">
@@ -433,9 +442,9 @@ main();
         <button class="m-0 btn btn-secondary btn-block w-100 btn-sm" style="display: none;" class:d-block='{playing}' on:click={stop}>{@html octicons.mute.toSVG({ "class": "fill-black" })} Stop</button>
 
         {#if highDefinition}
-          <button class="m-0 btn btn-primary btn-block w-100 btn-sm" style="display: none;" class:d-block='{!playing}' on:click={()=>{ useReverb=true; play() }}>{@html octicons.play.toSVG({ "class": "fill-black" })} Play HD</button>
+          <button class="m-0 btn btn-primary btn-block w-100 btn-sm" style="display: none;" class:d-block='{!playing}' on:click={()=>{ useReverb=true; play() }}>{@html octicons.settings.toSVG({ "class": "fill-black" })} Generate HD Live</button>
         {:else}
-          <button class="m-0 btn btn-secondary btn-block w-100 btn-sm" style="display: none;" class:d-block='{!playing}' on:click={()=>{ useReverb=false; play() }}>{@html octicons.play.toSVG({ "class": "fill-black" })} Play</button>
+          <button class="m-0 btn btn-secondary btn-block w-100 btn-sm" style="display: none;" class:d-block='{!playing}' on:click={()=>{ useReverb=false; play() }}>{@html octicons.settings.toSVG({ "class": "fill-black" })} Generate Live</button>
         {/if}
 
       </div>
@@ -458,21 +467,12 @@ main();
 
       <div class="col">
 
-
-
-
       <div class="small text-info pt-3" style="display: none;" class:d-block='{playing}'>
         Audio generation may not work on all mobile devices due to high CPU speed requirements.
           <span class="text-warning" style="display: none;" class:d-inline='{highDefinition}'>
           It is recommended that you use a Desktop Computer for high definition music.
           </span>
       </div>
-
-
-
-
-
-
 
 
     </div>
