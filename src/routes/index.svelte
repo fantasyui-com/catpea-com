@@ -11,6 +11,7 @@ import RandomVideo from '../components/RandomVideo.svelte';
 import News from '../components/News.svelte';
 import Squirrel from '../components/Squirrel.svelte';
 import SciurineSong from '../components/SciurineSong.svelte';
+import HiphopSong from '../components/HiphopSong.svelte';
 
 
 const videos = {
@@ -59,6 +60,10 @@ recalculateTimestamps();
 
     <div class="col pb-3">
     <News/>
+    </div>
+
+    <div class="col pb-3">
+    <HiphopSong/>
     </div>
 
     <div class="col pb-3">
@@ -116,9 +121,6 @@ recalculateTimestamps();
     <RandomVideo duration="40"/>
     </div>
 
-    <div class="col pb-3">
-    <RandomVideo duration="50"/>
-    </div>
 
 
 

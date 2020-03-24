@@ -20,6 +20,8 @@
 
   let news = [
 
+    {date:'2020-03-24T21:11:29.310Z', html:'Captain\'s Log Supplemental: Day Eight and Half... of Quarantine. I almost finished eating my 30 day supply of Chicken, my muscles have tripled in size, and I have the strength of 300.  I begun releasing a New Album entitled <strong class="text-white">THE WARRIOR</strong> Inspired by <a href="https://www.youtube.com/results?search_query=Tron+Legacy" class="strong text-warning" rel="noopener noreferrer" target="_blank">TRON</a> and <a href="https://www.youtube.com/watch?v=mVxLhy1v-xU" class="text-warning" rel="noopener noreferrer" target="_blank">LOFI Hip-Hop</a>.'}, 
+
     {date:'2020-03-24T15:18:57.286Z', html:'Added mp3 preview for the Sciurine Song. You can also <a href="sciurine.mp3" class="text-warning" rel="noopener noreferrer" target="_blank">download</a> it (Public Domain License).'},
 
 
