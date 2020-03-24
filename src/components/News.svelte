@@ -20,6 +20,8 @@
 
   let news = [
 
+    {date:'2020-03-24T13:36:42.106Z', html:'Captain\'s Log: Eighth day of the quarantine. I have extended the Sciurine Instrumental Section with a Beautiful Thin Saw (a Sciurine Favorite) and a powerful Electric Cello backing an Alien Squirrel Chorus. As nothing like this has ever been heard on Planet Earth before, the song has risen all the way to the very top of Shire Lyre Squire Squirrel Choir charts and is expected to stay there permanently, forever.'},
+
     {date:'2020-03-24T00:46:35.352Z', html:'On the Seventh Day of Quarantine I Added Tremolo (<a href="https://en.wikipedia.org/wiki/Low-frequency_oscillation" rel="noopener noreferrer" target="_blank">LFO</a> effect) to the  Sciurines in Memphis song (it is used in the second movement [middle of the song]), and made our imaginary band a sick medieval logo. All my generative music uses <a href="https://en.wikipedia.org/wiki/Scientific_pitch_notation" rel="noopener noreferrer" target="_blank">Scientific Pitch Notation</a>, take that Mozart. It looks like the CPU requirements are too high for mobile devices, small price to pay for a taste of Medieval <a href="https://www.dictionary.com/browse/sciurine" rel="noopener noreferrer" target="_blank">Sciurine</a> Pop. <a href="https://www.quora.com/On-GitHub-what-is-the-significance-of-the-Ship-It-squirrel?share=1" rel="noopener noreferrer" target="_blank">Ship it!</a>'},
 
     {date:'2020-03-23T20:32:49.019Z', html:'Added High Fidelity mode for Dehydration in Memphis, it should be possible to [almost] play it on mobile now (need a speedy CPU), though it is kind of not the point. The real value in the HD toggle is hearing the actual Synthesizer without any HD filters.'},

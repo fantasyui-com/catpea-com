@@ -1,1 +1,1 @@
-{"bundler":"rollup","shimport":"1.0.1","assets":{"main":"client.099fa49c.js"},"css":{"main":"main.637669398.css","chunks":{"index.svelte":["client.099fa49c.css"],"warrior.svelte":["client.099fa49c.css"],"video.svelte":["client.099fa49c.css"]}},"legacy_assets":{"main":"client.6d9ae678.js"}}
+{"bundler":"rollup","shimport":"1.0.1","assets":{"main":"client.6c819f2f.js"},"css":{"main":"main.637669398.css","chunks":{"index.svelte":["client.6c819f2f.css"],"warrior.svelte":["client.6c819f2f.css"],"video.svelte":["client.6c819f2f.css"]}},"legacy_assets":{"main":"client.da3ea6cf.js"}}

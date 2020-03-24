@@ -23,7 +23,7 @@ async function play(){
     Tone.Transport.loopEnd = '24m';
 
     Tone.Transport.start(); //start the transport in one second starting at beginning of the 5th measure: Tone.Transport.start("+1", "4:0:0");
-    // Tone.Transport.position =  '8:0:0';
+    //  Tone.Transport.position =  '8:0:0';
     playing = true;
 }
 async function stop(){
@@ -150,7 +150,7 @@ if(1){
     //instrument.triggerAttackRelease(note, "8n", time);
   }, ["A1", ["A1","A1"], "A1", "A1"]); //subdivisions are given as subarrays
   music.start('8m')
-  music.stop('16m');
+  music.stop('32m');
 }
 
 if(1){
@@ -168,7 +168,7 @@ if(1){
     //instrument.triggerAttackRelease(note, "8n", time);
   }, [["A1","B1"],["A1", "A1","G1","G1"]]); //subdivisions are given as subarrays
   music.start('8m')
-  music.stop('16m');
+  music.stop('32m');
 }
 
 if(1){
@@ -179,8 +179,8 @@ if(1){
   var music = new Tone.Sequence(function(time, note){
   instrument.triggerAttackRelease(note, "8n", time);
 }, ["A2","B2"]); //subdivisions are given as subarrays
-  music.start('8m')
-  music.stop('16m');
+music.start('8m')
+music.stop('32m');
 }
 
 if(1){
@@ -191,41 +191,129 @@ if(1){
     spread : 180
   }).connect(target).start();
 
-  const instrument = new Tone.FMSynth({
-      harmonicity : 3 ,
-      modulationIndex : 5 ,
-      detune : 2 ,
-      oscillator : {
-        type : 'sine'
-      },
-      envelope : {
-        attack : 0.13 ,
-        decay : 0.01 ,
-        sustain : 1 ,
-        release : 0.5
-      },
-      modulation : {
-        type : 'square'
-      },
-      modulationEnvelope : {
-        attack : 0.5 ,
-        decay : 0 ,
-        sustain : 1 ,
-        release : 0.5
-      }
-    }).connect(tremolo);
+  const instrument = new Tone.FMSynth(
+    {
+        "harmonicity": 0.5,
+        "modulationIndex": 1.2,
+        "oscillator": {
+            "type": "fmsawtooth",
+            "modulationType" : "sine",
+            "modulationIndex" : 20,
+            "harmonicity" : 3
+        },
+        "envelope": {
+            "attack": 0.05,
+            "decay": 0.3,
+            "sustain": 0.1,
+            "release": 1.2
+        },
+        "modulation" : {
+            "volume" : 0,
+            "type": "triangle"
+        },
+        "modulationEnvelope" : {
+            "attack": 0.35,
+            "decay": 0.1,
+            "sustain": 1,
+            "release": 0.01
+        }
+    }
+  ).connect(tremolo);
 
-  instrument.portamento = 0.12;
-   instrument.volume.value = 3;
+  // instrument.portamento = 0.12;
+   instrument.volume.value = 9;
 
   const music = new Tone.Pattern(function(time, note){ //the order of the notes passed in depends on the pattern
-    instrument.triggerAttackRelease(note, '4n');
-  }, ["A4", "B4", "C4", "D4", "E4", "F4", "G4"], "randomWalk");
+    instrument.triggerAttackRelease(note, '16n');
+  }, ["A4", "B2", "C4", "D3" , "D4", "E4", "F4", "G4"  ], "randomWalk");
+
+  music.interval = '16n';
+  music.probability = 1;
+  music.start('8m')
+  music.stop('18m');
+}
+if(1){
+  const tremolo = new Tone.Tremolo({
+    frequency : 2 ,
+    type : 'sine' ,
+    depth : 0.7 ,
+    spread : 180
+  }).connect(target).start();
+
+  const instrument = new Tone.FMSynth(
+    {
+        "harmonicity": 3.01,
+        "modulationIndex": 14,
+        "oscillator": {
+            "type": "triangle"
+        },
+        "envelope": {
+            "attack": 0.2,
+            "decay": 0.6,
+            "sustain": 0.5,
+            "release": 1.2
+        },
+        "modulation" : {
+            "type": "square"
+        },
+        "modulationEnvelope" : {
+            "attack": 0.01,
+            "decay": 0.5,
+            "sustain": 0.2,
+            "release": 0.1
+        }
+    }
+  ).connect(tremolo);
+
+  // instrument.portamento = 0.12;
+   instrument.volume.value = 9;
+
+  const music = new Tone.Pattern(function(time, note){ //the order of the notes passed in depends on the pattern
+    instrument.triggerAttackRelease(note, 6);
+  }, ["A2", "B2", "C2", "D2" ], "randomWalk");
 
   music.interval = '4n';
-  music.probability = .95;
-  music.start('8m')
-  music.stop('16m');
+  music.probability = 1;
+  music.start('16m')
+  music.stop('28m');
+}
+if(1){
+  // const tremolo = new Tone.Tremolo({
+  //   frequency : 2 ,
+  //   type : 'sine' ,
+  //   depth : 0.7 ,
+  //   spread : 180
+  // }).connect(target).start();
+
+  const instrument = new Tone.Synth(
+    {
+        "oscillator": {
+            "type": "fatsine4",
+            "spread" : 60,
+            "count" : 10
+        },
+        "envelope": {
+            "attack": 0.4,
+            "decay": 0.01,
+            "sustain": 1,
+            "attackCurve" : "sine",
+            "releaseCurve" : "sine",
+            "release": 0.4
+        }
+    }
+  ).connect(target);
+
+  // instrument.portamento = 0.12;
+   instrument.volume.value = -2;
+
+  const music = new Tone.Pattern(function(time, note){ //the order of the notes passed in depends on the pattern
+    instrument.triggerAttackRelease(note, '16n');
+  }, [  "A5", "B5", "C5", "D5",    "A4", "B4", "C4", "D4",   "E5", "F5", "G5", "H5" ], "randomWalk");
+
+  music.interval = '16n';
+  music.probability = 1;
+  music.start('20m')
+  music.stop('32m');
 }
 
 
@@ -245,8 +333,8 @@ if(1){
     membrane.triggerAttackRelease(note, "4n", time);
     //instrument.triggerAttackRelease(note, "8n", time);
   }, ["A1", ["A1","A1"], "A1", ["A1",,"B1","A1"]]); //subdivisions are given as subarrays
-  music.start('16m')
-  music.stop('22m');
+  music.start('32m')
+  music.stop('40m');
 }
 if(1){
   // Membrane Background Beat
@@ -262,8 +350,8 @@ if(1){
     instrument.triggerAttackRelease(note, "4n", time);
     //instrument.triggerAttackRelease(note, "8n", time);
   }, [["A1","B1"],["A1", "A1"],["A1",]]); //subdivisions are given as subarrays
-  music.start('16m')
-  music.stop('23m');
+  music.start('32m')
+  music.stop('40m');
 }
 
 
@@ -274,8 +362,8 @@ if(1){
   var music = new Tone.Sequence(function(time, note){
   instrument.triggerAttackRelease(note, "8n", time);
 }, ["A1","B1","C2"]); //subdivisions are given as subarrays
-  music.start('16m')
-  music.stop('24m');
+  music.start('32m')
+  music.stop('40m');
 }
 
 if(1){
@@ -286,8 +374,8 @@ if(1){
   }, ["A#4", "C#4", "D#4", "F#4"], "randomWalk");
   music.interval = '8n';
   music.probability = 1;
-  music.start('16m')
-  music.stop('20m');
+  music.start('32m')
+  music.stop('40m');
 }
 
 
