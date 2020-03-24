@@ -683,7 +683,7 @@ const News = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	// Application
 	let news = [
 		{
-			date: "2020-03-21T20:14:25.929Z",
+			date: "2020-03-24T15:18:57.286Z",
 			html: "Added mp3 preview for the Sciurine Song. You can also <a href=\"sciurine.mp3\" rel=\"noopener noreferrer\" target=\"_blank\">download</a> it (Public Domain License)."
 		},
 		{

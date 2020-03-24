@@ -20,7 +20,7 @@
 
   let news = [
 
-    {date:'2020-03-21T20:14:25.929Z', html:'Added mp3 preview for the Sciurine Song. You can also <a href="sciurine.mp3" rel="noopener noreferrer" target="_blank">download</a> it (Public Domain License).'},
+    {date:'2020-03-24T15:18:57.286Z', html:'Added mp3 preview for the Sciurine Song. You can also <a href="sciurine.mp3" rel="noopener noreferrer" target="_blank">download</a> it (Public Domain License).'},
 
 
     {date:'2020-03-24T13:36:42.106Z', html:'Captain\'s Log: Eighth day of the quarantine. I have extended the Sciurine Instrumental Section with a Beautiful Thin Saw (a Sciurine Favorite) and a powerful Electric Cello backing a <a href="https://github.com/Tonejs/Presets/blob/gh-pages/instrument/Synth/TreeTrunk.json" rel="noopener noreferrer" target="_blank">Tree Trunk</a> Synth. As nothing like this has ever been heard on Planet Earth before, the song has risen all the way to the very top of Shire Lyre Squire Squirrel Choir charts and is expected to stay there permanently, forever.'},
