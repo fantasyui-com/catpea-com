@@ -10,7 +10,7 @@ import BodybuildingAdvice from '../components/BodybuildingAdvice.svelte';
 import RandomVideo from '../components/RandomVideo.svelte';
 import News from '../components/News.svelte';
 import Squirrel from '../components/Squirrel.svelte';
-import MelodyMaker from '../components/MelodyMaker.svelte';
+import SciurineSong from '../components/SciurineSong.svelte';
 
 
 const videos = {
@@ -62,7 +62,7 @@ recalculateTimestamps();
     </div>
 
     <div class="col pb-3">
-    <MelodyMaker/>
+    <SciurineSong/>
     </div>
 
 
