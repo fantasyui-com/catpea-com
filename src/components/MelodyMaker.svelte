@@ -417,6 +417,7 @@ main();
       <div class="col py-3 small">
         <a href="http://www.scp-wiki.net/" rel="noopener noreferrer" target="_blank">SCP Foundation</a> report on
         <a href="http://www.scp-wiki.net/scp-2050" rel="noopener noreferrer" target="_blank">Sciurine Monastic Brotherhood of Poor-Fellows and Crusader Knights</a>.
+        You can  <a href="sciurine.mp3" rel="noopener noreferrer" target="_blank">download</a> the song as well.
       </div>
 
 
@@ -442,7 +443,7 @@ main();
         <button class="m-0 btn btn-secondary btn-block w-100 btn-sm" style="display: none;" class:d-block='{playing}' on:click={stop}>{@html octicons.mute.toSVG({ "class": "fill-black" })} Stop</button>
 
         {#if highDefinition}
-          <button class="m-0 btn btn-primary btn-block w-100 btn-sm" style="display: none;" class:d-block='{!playing}' on:click={()=>{ useReverb=true; play() }}>{@html octicons.settings.toSVG({ "class": "fill-black" })} Generate HD Live</button>
+          <button class="m-0 btn btn-secondary btn-block w-100 btn-sm" style="display: none;" class:d-block='{!playing}' on:click={()=>{ useReverb=true; play() }}>{@html octicons.settings.toSVG({ "class": "fill-black" })} Generate HD Live</button>
         {:else}
           <button class="m-0 btn btn-secondary btn-block w-100 btn-sm" style="display: none;" class:d-block='{!playing}' on:click={()=>{ useReverb=false; play() }}>{@html octicons.settings.toSVG({ "class": "fill-black" })} Generate Live</button>
         {/if}
@@ -450,7 +451,7 @@ main();
       </div>
 
       <div class="col-7">
-        <div class="form-check pt-1">
+        <div class="form-check pt-1" style="display: none;" class:d-block='{playing}'>
           <input type="checkbox" class="form-check-input" id="customSwitch1" checked={highDefinition} on:click={()=>{ highDefinition=!highDefinition; useReverb=highDefinition; if(playing){play()}; }} >
           {#if highDefinition}
           <label class="form-check-label text-warning small" for="customSwitch1">High Definition Mode</label>
