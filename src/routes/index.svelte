@@ -10,8 +10,10 @@ import BodybuildingAdvice from '../components/BodybuildingAdvice.svelte';
 import RandomVideo from '../components/RandomVideo.svelte';
 import News from '../components/News.svelte';
 import Squirrel from '../components/Squirrel.svelte';
+
 import SciurineSong from '../components/SciurineSong.svelte';
 import HiphopSong from '../components/HiphopSong.svelte';
+import LofiSoundboard from '../components/LofiSoundboard.svelte';
 
 
 const videos = {
@@ -63,6 +65,10 @@ recalculateTimestamps();
     </div>
 
     <div class="col pb-3">
+    <LofiSoundboard/>
+    </div>
+
+    <div class="col pb-3">
     <HiphopSong/>
     </div>
 
@@ -109,9 +115,6 @@ recalculateTimestamps();
 
 
 
-    <div class="col pb-3">
-    <RandomVideo duration="20"/>
-    </div>
 
     <div class="col pb-3">
     <RandomVideo duration="30"/>

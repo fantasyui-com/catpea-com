@@ -5,13 +5,15 @@ import octicons from 'octicons';
 
 // NOTE   Using “pitch-octave” notation: A A# B C C# D D# E F F# G
 
-Tone.Transport.bpm.value = 85; // ramp the bpm to 120 over 10 seconds Tone.Transport.bpm.rampTo(120, 10);
-let playing = false;
-
+ let playing = false;
+let songBpm = 85;
 let highDefinition = true;
 let useReverb = false;
 
 async function play(){
+
+  Tone.Transport.bpm.value = songBpm; // ramp the bpm to 120 over 10 seconds Tone.Transport.bpm.rampTo(120, 10);
+
   await make();
   //play a middle 'C' for the duration of an 8th note
   // A A# B C C# D D# E F F# G
@@ -304,7 +306,7 @@ if(1){
 
   const music = new Tone.Pattern(function(time, note){ //the order of the notes passed in depends on the pattern
     instrument.triggerAttackRelease(note, '16n');
-  }, [  "A3", "B3", "C3", "D3",    "A4", "B4", "C4", "D4"    ], "randomWalk");
+  }, [  "A4", "B4", "C4", "D4",    "A4", "B4", "C4", "D4"    ], "randomWalk");
 
   music.interval = '16n';
   music.probability = 1;

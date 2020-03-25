@@ -3,6 +3,13 @@
   export let error;
 
   const dev = process.env.NODE_ENV === 'development';
+
+  // This will print error in terminal
+  if(dev && error.stack){
+    console.log('ERROR: %s' + error.message)
+    console.log(error.stack);
+  }
+
 </script>
 
 <style>

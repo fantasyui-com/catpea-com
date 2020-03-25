@@ -164,10 +164,10 @@
    function proposition(list){
      if(list){
        list.forEach(function(item){
-         console.log(item);
+         //console.log(item);
          if(item.pick){
            interactions = [...interactions, item];
-           console.log(interactions);
+           //console.log(interactions);
          }else{
            conversation = [...conversation, item];
          }
