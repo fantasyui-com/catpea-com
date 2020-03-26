@@ -2148,7 +2148,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 	setInterval(recalculateTimestamps, 60000);
 	recalculateTimestamps();
 
-	return `${($$result.head += `${($$result.title = `<title>𝗖𝗔𝗧 𝗣𝗘𝗔: World&#39;s Most Advanced Research Laboratories and Skunk Works</title>`, "")}`, "")}
+	return `${($$result.head += `${($$result.title = `<title>𝗖𝗔𝗧𝗣𝗘𝗔: World&#39;s Most Advanced Research Laboratories and Skunk Works</title>`, "")}`, "")}
 
 
 
@@ -2681,7 +2681,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
 const css = {
 	code: "h1.svelte-hc3g3x,p.svelte-hc3g3x{margin:0 auto}h1.svelte-hc3g3x{font-size:2.8em;font-weight:700;margin:0 0 0.5em 0}p.svelte-hc3g3x{margin:1em auto}@media(min-width: 480px){h1.svelte-hc3g3x{font-size:4em}}",
-	map: "{\"version\":3,\"file\":\"_error.svelte\",\"sources\":[\"_error.svelte\"],\"sourcesContent\":[\"<script>\\n  export let status;\\n  export let error;\\n\\n  const dev = undefined === 'development';\\n\\n  // This will print error in terminal\\n  if(dev && error.stack){\\n    console.log('ERROR: %s' + error.message)\\n    console.log(error.stack);\\n  }\\n\\n</script>\\n\\n<style>\\n  h1, p {\\n    margin: 0 auto;\\n  }\\n\\n  h1 {\\n    font-size: 2.8em;\\n    font-weight: 700;\\n    margin: 0 0 0.5em 0;\\n  }\\n\\n  p {\\n    margin: 1em auto;\\n  }\\n\\n  @media (min-width: 480px) {\\n    h1 {\\n      font-size: 4em;\\n    }\\n  }\\n</style>\\n\\n<svelte:head>\\n  <title>𝗖𝗔𝗧 𝗣𝗘𝗔: World's Most Advanced Research Laboratories and Skunk Works</title>\\n</svelte:head>\\n\\n<h1>{status}</h1>\\n\\n<p>{error.message}</p>\\n\\n{#if dev && error.stack}\\n  <pre>{error.stack}</pre>\\n{/if}\\n\"],\"names\":[],\"mappings\":\"AAeE,gBAAE,CAAE,CAAC,cAAC,CAAC,AACL,MAAM,CAAE,CAAC,CAAC,IAAI,AAChB,CAAC,AAED,EAAE,cAAC,CAAC,AACF,SAAS,CAAE,KAAK,CAChB,WAAW,CAAE,GAAG,CAChB,MAAM,CAAE,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,AACrB,CAAC,AAED,CAAC,cAAC,CAAC,AACD,MAAM,CAAE,GAAG,CAAC,IAAI,AAClB,CAAC,AAED,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzB,EAAE,cAAC,CAAC,AACF,SAAS,CAAE,GAAG,AAChB,CAAC,AACH,CAAC\"}"
+	map: "{\"version\":3,\"file\":\"_error.svelte\",\"sources\":[\"_error.svelte\"],\"sourcesContent\":[\"<script>\\n  export let status;\\n  export let error;\\n\\n  const dev = undefined === 'development';\\n\\n  // This will print error in terminal\\n  if(dev && error.stack){\\n    console.log('ERROR: %s' + error.message)\\n    console.log(error.stack);\\n  }\\n\\n</script>\\n\\n<style>\\n  h1, p {\\n    margin: 0 auto;\\n  }\\n\\n  h1 {\\n    font-size: 2.8em;\\n    font-weight: 700;\\n    margin: 0 0 0.5em 0;\\n  }\\n\\n  p {\\n    margin: 1em auto;\\n  }\\n\\n  @media (min-width: 480px) {\\n    h1 {\\n      font-size: 4em;\\n    }\\n  }\\n</style>\\n\\n<svelte:head>\\n  <title>𝗖𝗔𝗧𝗣𝗘𝗔: World's Most Advanced Research Laboratories and Skunk Works</title>\\n</svelte:head>\\n\\n<h1>World's Most Advanced Research Laboratories and Skunk Works</h1>\\n<h2>The catpea is an annual pouncy feline from the genus Panthera. Due to his tolerance for serious workouts and low effort, he is kind of a big deal in the semiarid plazas of Westland.</h2>\\n\\n\\n<p>{status}{error.message}</p>\\n\\n{#if dev && error.stack}\\n  <pre>{error.stack}</pre>\\n{/if}\\n\"],\"names\":[],\"mappings\":\"AAeE,gBAAE,CAAE,CAAC,cAAC,CAAC,AACL,MAAM,CAAE,CAAC,CAAC,IAAI,AAChB,CAAC,AAED,EAAE,cAAC,CAAC,AACF,SAAS,CAAE,KAAK,CAChB,WAAW,CAAE,GAAG,CAChB,MAAM,CAAE,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,AACrB,CAAC,AAED,CAAC,cAAC,CAAC,AACD,MAAM,CAAE,GAAG,CAAC,IAAI,AAClB,CAAC,AAED,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzB,EAAE,cAAC,CAAC,AACF,SAAS,CAAE,GAAG,AAChB,CAAC,AACH,CAAC\"}"
 };
 
 const Error$1 = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
@@ -2692,11 +2692,13 @@ const Error$1 = create_ssr_component(($$result, $$props, $$bindings, $$slots) =>
 	if ($$props.error === void 0 && $$bindings.error && error !== void 0) $$bindings.error(error);
 	$$result.css.add(css);
 
-	return `${($$result.head += `${($$result.title = `<title>𝗖𝗔𝗧 𝗣𝗘𝗔: World&#39;s Most Advanced Research Laboratories and Skunk Works</title>`, "")}`, "")}
+	return `${($$result.head += `${($$result.title = `<title>𝗖𝗔𝗧𝗣𝗘𝗔: World&#39;s Most Advanced Research Laboratories and Skunk Works</title>`, "")}`, "")}
 
-<h1 class="${"svelte-hc3g3x"}">${escape(status)}</h1>
+<h1 class="${"svelte-hc3g3x"}">World&#39;s Most Advanced Research Laboratories and Skunk Works</h1>
+<h2>The catpea is an annual pouncy feline from the genus Panthera. Due to his tolerance for serious workouts and low effort, he is kind of a big deal in the semiarid plazas of Westland.</h2>
 
-<p class="${"svelte-hc3g3x"}">${escape(error.message)}</p>
+
+<p class="${"svelte-hc3g3x"}">${escape(status)}${escape(error.message)}</p>
 
 ${ ``}`;
 });
@@ -2812,7 +2814,7 @@ const Warrior = create_ssr_component(($$result, $$props, $$bindings, $$slots) =>
 	// database.forEach(chapter => chapter.data.forEach(item=>Object.keys(item).forEach(item=>types.add(item)) ))
 	// console.log(Array.from(types), types);
 
-	return `${($$result.head += `${($$result.title = `<title>𝗖𝗔𝗧 𝗣𝗘𝗔: Warrior</title>`, "")}`, "")}
+	return `${($$result.head += `${($$result.title = `<title>𝗖𝗔𝗧𝗣𝗘𝗔: Warrior</title>`, "")}`, "")}
 
 
 <div class="${["container-fluid text-warning", pageReady ? "visible" : ""].join(" ").trim()}" style="${"visibility: hidden;"}"><nav class="${"mb-5"}" aria-label="${"breadcrumb"}"><ol class="${"breadcrumb bg-dark text-white"}"><li class="${"breadcrumb-item"}"><a href="${"warrior?chapter=index"}">Warrior</a></li>
@@ -2857,7 +2859,7 @@ const Video = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	let end = start + parseInt($page.query.i);
 	let slice = database.slice(start, end);
 
-	return `${($$result.head += `${($$result.title = `<title>𝗖𝗔𝗧 𝗣𝗘𝗔: Videos</title>`, "")}`, "")}
+	return `${($$result.head += `${($$result.title = `<title>𝗖𝗔𝗧𝗣𝗘𝗔: Videos</title>`, "")}`, "")}
 
 
 <div class="${["container-fluid", pageReady ? "visible" : ""].join(" ").trim()}" style="${"visibility: hidden;"}"><div class="${"row row-cols-1 row-cols-md-2 row-cols-xl-4"}">${each(slice, post => `<div class="${"col mb-4"}"><div class="${"card bg-secondary text-white shadow p-0 m-0"}"><a${add_attribute("href", post.url, 0)} rel="${"noopener noreferrer"}" target="${"_blank"}"><img${add_attribute("src", post.image, 0)} class="${"card-img-top"}"${add_attribute("alt", post.title, 0)}></a>

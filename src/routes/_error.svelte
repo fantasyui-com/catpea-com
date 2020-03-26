@@ -35,12 +35,14 @@
 </style>
 
 <svelte:head>
-  <title>𝗖𝗔𝗧 𝗣𝗘𝗔: World's Most Advanced Research Laboratories and Skunk Works</title>
+  <title>𝗖𝗔𝗧𝗣𝗘𝗔: World's Most Advanced Research Laboratories and Skunk Works</title>
 </svelte:head>
 
-<h1>{status}</h1>
+<h1>World's Most Advanced Research Laboratories and Skunk Works</h1>
+<h2>The catpea is an annual pouncy feline from the genus Panthera. Due to his tolerance for serious workouts and low effort, he is kind of a big deal in the semiarid plazas of Westland.</h2>
 
-<p>{error.message}</p>
+
+<p>{status}{error.message}</p>
 
 {#if dev && error.stack}
   <pre>{error.stack}</pre>
