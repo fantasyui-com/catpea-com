@@ -14,6 +14,8 @@ import Squirrel from '../components/Squirrel.svelte';
 import SciurineSong from '../components/SciurineSong.svelte';
 import HiphopSong from '../components/HiphopSong.svelte';
 import LofiSoundboard from '../components/LofiSoundboard.svelte';
+import BeatSequencer from '../components/BeatSequencer.svelte';
+//import SongBuilder from '../components/SongBuilder.svelte';
 
 
 const videos = {
@@ -62,6 +64,10 @@ recalculateTimestamps();
 
     <div class="col pb-3">
     <News/>
+    </div>
+
+    <div class="col pb-3">
+    <BeatSequencer/>
     </div>
 
     <div class="col pb-3">
@@ -116,9 +122,7 @@ recalculateTimestamps();
 
 
 
-    <div class="col pb-3">
-    <RandomVideo duration="30"/>
-    </div>
+
 
     <div class="col pb-3">
     <RandomVideo duration="40"/>

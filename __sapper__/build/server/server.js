@@ -557,6 +557,10 @@ const News = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	// Application
 	let news = [
 		{
+			date: "2020-03-26T23:56:25.371Z",
+			html: "Quarantine Day Ten. My arms grew so powerful from all the rest that I mistakenly struck myself several times. I busied myself today relearning how to handle all my amazing strength. Renamed Hash Bang to <a href=\"https://en.wikipedia.org/wiki/Shebang_(Unix)\" rel=\"noopener noreferrer\" target=\"_blank\">Shebang</a>, as it is the most commonly used variant. Begun working on a beat sequencer, and a song maker. The idea here is that Chords, Bass, Melodies can all be handled by the <a href=\"https://github.com/Tonejs/Tone.js/wiki/Arpeggiator\" rel=\"noopener noreferrer\" target=\"_blank\">Arpeggiator</a>, but the beat is a bit more complex, and needs a little tool. The tool I have up today uses re-styled checkboxes, a perfect fit for the sequencer."
+		},
+		{
 			date: "2020-03-25T23:33:22.740Z",
 			html: "Captain's Log: Ninth Day of Quarantine: I found one more chicken, am ready for dinner. I created a small <a href=\"https://en.wikipedia.org/wiki/Soundboard_(computer_program)\" rel=\"noopener noreferrer\" target=\"_blank\">Soundboard</a> for what is basically a tiny collection of LOFI Hip-Hop sounds. A tiny collection will do, because we have the the synthesizer taking care of everything else. I added some Hip sounds to the THE WARRIOR Album Single and it does sound very well. Realistically it is difficult to call it music at this point, I have all the components but there were bugs along the way. <a href=\"https://sapper.svelte.dev/docs#Server-side_rendering\" class=\"text-warning\" rel=\"noopener noreferrer\" target=\"_blank\">Svelte Sapper</a> is complicated to visualize, it pre-creates some things, meaning before I publish to the website, Sapper will create a pre-ran version of the site. When a visitor visits, the pre-ran (pre-generated static version) will then be upgraded to a real version, and replaced by now running live version. It is the correct technology, and it didn't get me, but it does take a moment to figure out when a bug jumps out of nowhere."
 		},
@@ -1904,7 +1908,7 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 
 const SciurineSong = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 
-	return `<div class="${"card text-white bg-dark shadow"}"><div class="${"card-header"}">New Album Release!
+	return `<div class="${"card text-white bg-dark shadow"}"><div class="${"card-header"}">New Single Release!
   </div>
 
   <div class="${"card-body"}"><div class="${"row"}"><div class="${"col px-5"}"><img src="${"album-covers/poor-fellows.jpg"}" class="${"img-fluid img-thumbnail bg-secondary border-info"}" alt="${"Responsive image"}"></div></div>
@@ -1937,13 +1941,13 @@ const SciurineSong = create_ssr_component(($$result, $$props, $$bindings, $$slot
 
 const HiphopSong = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 
-	return `<div class="${"card text-white bg-dark shadow"}"><div class="${"card-header"}">New Album Release!
+	return `<div class="${"card text-white bg-dark shadow"}"><div class="${"card-header"}">New Single Release!
   </div>
 
   <div class="${"card-body"}"><div class="${"row"}"><div class="${"col px-5"}"><img src="${"album-covers/hash-bang-slash.png"}" class="${"img-fluid img-thumbnail bg-secondary border-info"}" alt="${"Responsive image"}"></div></div>
 
-    <div class="${"row"}"><div class="${"col py-3 small"}"><strong># ! /</strong> (Hash Bang Slash) is a new mico-genre invented at CATPEA during the 2020 pandemic.
-        <a href="${"https://en.wikipedia.org/wiki/Shebang_(Unix)"}" rel="${"noopener noreferrer"}" target="${"_blank"}">Hash Bang</a>
+    <div class="${"row"}"><div class="${"col py-3 small"}"><strong>#!/</strong> (Shebang Slash) is a new mico-genre invented at CATPEA during the 2020 pandemic.
+        <a href="${"https://en.wikipedia.org/wiki/Shebang_(Unix)"}" rel="${"noopener noreferrer"}" target="${"_blank"}">Shebang</a>
         is used by Programmers in UNIX. The Slash is used by Samurai in Battle. Album Photo by <a href="${"https://unsplash.com/photos/2fRPxsArdkc"}" rel="${"noopener noreferrer"}" target="${"_blank"}">soosang</a>.
         </div></div>
 
@@ -1961,52 +1965,6 @@ const HiphopSong = create_ssr_component(($$result, $$props, $$bindings, $$slots)
 
 const LofiSoundboard = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	let ready = false;
-
-	// "A1"
-	// "B1"
-	// "C1"
-	// "D1"
-	// "E1"
-	// "F1"
-	// "G1"
-	// "A2"
-	// "B2"
-	// "C2"
-	// "D2"
-	// "E2"
-	// "F2"
-	// "G2"
-	// "A3"
-	// "B3"
-	// "C3"
-	// "D3"
-	// "E3"
-	// "F3"
-	// "G3"
-	// "A4"
-	// "B4"
-	// "C4"
-	// "D4"
-	// "E4"
-	// "F4"
-	// "G4"
-	// "A5"
-	// "B5"
-	// "C5"
-	// "D5"
-	// "E5"
-	// "F5"
-	// "G5"
-	// "A6"
-	// "B6"
-	// "C6"
-	// "D6"
-	// "E6"
-	// "F6"
-	// "G6"
-	// "A7"
-	// "B7"
-	// "C7"
 	let instrument = null;
 
 	const primary = {
@@ -2099,7 +2057,7 @@ const LofiSoundboard = create_ssr_component(($$result, $$props, $$bindings, $$sl
 		main();
 	});
 
-	return `<div class="${"card text-white bg-dark shadow"}"><div class="${"card-header"}">Hash Bang Slash Soundboard
+	return `<div class="${"card text-white bg-dark shadow"}"><div class="${"card-header"}">LOFI Soundboard
   </div>
   <div class="${"card-body"}"><div class="${"row"}"><div class="${"col text-center"}">${each(notes, (note, index) => `<button class="${"d-inline-block mb-1 p-2 btn btn-secondary btn-sm"}" ${!ready ? "disabled" : ""}>${escape(note)}</button>
             ${(index + 1) % 7 * 9 === 0 ? `<br>` : ``}`)}</div></div>
@@ -2107,6 +2065,93 @@ const LofiSoundboard = create_ssr_component(($$result, $$props, $$bindings, $$sl
         Kit is expressed in <a href="${"https://en.wikipedia.org/wiki/Scientific_pitch_notation"}" rel="${"noopener noreferrer"}" target="${"_blank"}">Scientific Pitch Notation</a>.
         Samples graciously provided by <a href="${"http://hipstrumentals.com"}" rel="${"noopener noreferrer"}" target="${"_blank"}">Hipstrumentals</a>.
       </div></div></div></div>`;
+});
+
+/* src/controls/DrumLine.svelte generated by Svelte v3.20.1 */
+
+const css = {
+	code: ".regular-checkbox.svelte-1j43cqu{-webkit-appearance:none;background-color:darkgray;border:1px solid silver;line-height:14px;width:14px;height:14px;padding:2px;margin:0px;border-radius:0px;display:inline-block;position:relative}.regular-checkbox.sequence.svelte-1j43cqu{border-color:salmon}.regular-checkbox.odd.svelte-1j43cqu{background:grey}.regular-checkbox.divider.svelte-1j43cqu{margin-right:1px}.regular-checkbox.svelte-1j43cqu:checked{background:steelblue}",
+	map: "{\"version\":3,\"file\":\"DrumLine.svelte\",\"sources\":[\"DrumLine.svelte\"],\"sourcesContent\":[\"<script>\\nimport { onMount } from 'svelte';\\n  export let parts = 4;\\n  export let beats = 4;\\n  export let sequence = 0;\\n\\n  export let chain = [];\\n\\n  $: data = [];\\n\\n  onMount(async () => {\\n    data = chain;\\n    \\n    for(let beat = 0; beat < beats; beat++ ){\\n      for(let part = 0; part < parts; part++ ){\\n        data = data.concat({ beat,part,enabled:false });\\n      }\\n    }\\n    data = data;\\n  });\\n\\n\\n  // display: inline-block;  padding: 2px;  border-width: 1px; background:silver;\\n\\n</script>\\n\\n<style>\\n\\n.regular-checkbox {\\n  -webkit-appearance: none;\\n  background-color: darkgray;\\n  border: 1px solid silver;\\n\\n  line-height:14px;\\n  width:14px;\\n  height:14px;\\n\\n  padding: 2px;\\n  margin:0px;\\n\\n\\n  border-radius: 0px;\\n\\n  display: inline-block;\\n  position: relative;\\n}\\n\\n.regular-checkbox.sequence{\\n  border-color: salmon;\\n\\n}\\n\\n.regular-checkbox.odd{\\n  background:grey;\\n}\\n.regular-checkbox.divider{\\n  margin-right: 1px;\\n}\\n.regular-checkbox:checked{\\n  background:steelblue;\\n}\\n\\n</style>\\n\\n{#each data as item, index}\\n    <input type=\\\"checkbox\\\" class=\\\"regular-checkbox\\\" bind:checked={item.enabled} class:odd='{(!!((item.beat+1) % 2))}' class:divider='{!(!!((item.part+1) % parts))}' class:sequence='{index===sequence}'>\\n{/each}\\n<!--\\n<pre><code>\\n\\n{JSON.stringify(data,null,'  ')}\\n\\n</code></pre> -->\\n\"],\"names\":[],\"mappings\":\"AA4BA,iBAAiB,eAAC,CAAC,AACjB,kBAAkB,CAAE,IAAI,CACxB,gBAAgB,CAAE,QAAQ,CAC1B,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,MAAM,CAExB,YAAY,IAAI,CAChB,MAAM,IAAI,CACV,OAAO,IAAI,CAEX,OAAO,CAAE,GAAG,CACZ,OAAO,GAAG,CAGV,aAAa,CAAE,GAAG,CAElB,OAAO,CAAE,YAAY,CACrB,QAAQ,CAAE,QAAQ,AACpB,CAAC,AAED,iBAAiB,wBAAS,CAAC,AACzB,YAAY,CAAE,MAAM,AAEtB,CAAC,AAED,iBAAiB,mBAAI,CAAC,AACpB,WAAW,IAAI,AACjB,CAAC,AACD,iBAAiB,uBAAQ,CAAC,AACxB,YAAY,CAAE,GAAG,AACnB,CAAC,AACD,gCAAiB,QAAQ,CAAC,AACxB,WAAW,SAAS,AACtB,CAAC\"}"
+};
+
+const DrumLine = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
+	let { parts = 4 } = $$props;
+	let { beats = 4 } = $$props;
+	let { sequence = 0 } = $$props;
+	let { chain = [] } = $$props;
+
+	onMount(async () => {
+		data = chain;
+
+		for (let beat = 0; beat < beats; beat++) {
+			for (let part = 0; part < parts; part++) {
+				data = data.concat({ beat, part, enabled: false });
+			}
+		}
+
+		data = data;
+	});
+
+	if ($$props.parts === void 0 && $$bindings.parts && parts !== void 0) $$bindings.parts(parts);
+	if ($$props.beats === void 0 && $$bindings.beats && beats !== void 0) $$bindings.beats(beats);
+	if ($$props.sequence === void 0 && $$bindings.sequence && sequence !== void 0) $$bindings.sequence(sequence);
+	if ($$props.chain === void 0 && $$bindings.chain && chain !== void 0) $$bindings.chain(chain);
+	$$result.css.add(css);
+	let data = [];
+
+	return `${each(data, (item, index) => `<input type="${"checkbox"}" class="${[
+		"regular-checkbox svelte-1j43cqu",
+		(!!((item.beat + 1) % 2) ? "odd" : "") + " " + (!!!((item.part + 1) % parts) ? "divider" : "") + " " + (index === sequence ? "sequence" : "")
+	].join(" ").trim()}"${add_attribute("checked", item.enabled, 1)}>`)}
+`;
+});
+
+/* src/components/BeatSequencer.svelte generated by Svelte v3.20.1 */
+
+const BeatSequencer = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
+	onMount(async () => {
+		setInterval(
+			() => {
+				sequence++;
+
+				if (sequence == parts * beats) {
+					sequence = 0;
+				}
+			},
+			444
+		);
+	});
+
+	let data = [
+		{ label: "Drum", data: [] },
+		{ label: "Drum", data: [] },
+		{ label: "Drum", data: [] },
+		{ label: "Drum", data: [] },
+		{ label: "Drum", data: [] }
+	];
+
+	let parts = 4;
+	let beats = 4;
+	let sequence = 4;
+
+	return `<div class="${"card text-white bg-dark shadow"}"><div class="${"card-header"}">LOFI Beat Sequencer · BETA PREVIEW
+  </div>
+
+  <div class="${"card-body"}"><div class="${"row"}"><div class="${"col small text-muted"}"><small>Sorry the tool does not make any sounds, this is a test of the UI, which is a success, it is just styled checkboxes. You can click one of the boxes to mark where a sound should fire, but audio is not yet connected.</small></div></div>
+
+     <div class="${"row"}"><div class="${"col-3 small text-muted"}"><small>Instrument</small></div>
+      <div class="${"col-9 p-0 small text-muted"}"><small>Sequence</small></div></div>
+
+
+
+    ${each(data, (item, index) => `<div class="${"row"}"><div class="${"col-3 text-right"}"><small>A${escape(index)}</small>
+       </div>
+     <div class="${"col-9 p-0"}">${validate_component(DrumLine, "DrumLine").$$render($$result, { chain: item.data, parts, beats, sequence }, {}, {})}</div>
+   </div>`)}
+
+
+
+    </div></div>`;
 });
 
 /* src/routes/index.svelte generated by Svelte v3.20.1 */
@@ -2158,6 +2203,8 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
 <div class="${"container-fluid"}"><div class="${"row row-cols-1 row-cols-md-2 row-cols-xl-4"}"><div class="${"col pb-3"}">${validate_component(News, "News").$$render($$result, {}, {}, {})}</div>
 
+    <div class="${"col pb-3"}">${validate_component(BeatSequencer, "BeatSequencer").$$render($$result, {}, {}, {})}</div>
+
     <div class="${"col pb-3"}">${validate_component(LofiSoundboard, "LofiSoundboard").$$render($$result, {}, {}, {})}</div>
 
     <div class="${"col pb-3"}">${validate_component(HiphopSong, "HiphopSong").$$render($$result, {}, {}, {})}</div>
@@ -2188,7 +2235,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
 
 
-    <div class="${"col pb-3"}">${validate_component(RandomVideo, "RandomVideo").$$render($$result, { duration: "30" }, {}, {})}</div>
+
 
     <div class="${"col pb-3"}">${validate_component(RandomVideo, "RandomVideo").$$render($$result, { duration: "40" }, {}, {})}</div></div></div>`;
 });
@@ -2679,9 +2726,9 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
 /* src/routes/_error.svelte generated by Svelte v3.20.1 */
 
-const css = {
+const css$1 = {
 	code: "h1.svelte-hc3g3x,p.svelte-hc3g3x{margin:0 auto}h1.svelte-hc3g3x{font-size:2.8em;font-weight:700;margin:0 0 0.5em 0}p.svelte-hc3g3x{margin:1em auto}@media(min-width: 480px){h1.svelte-hc3g3x{font-size:4em}}",
-	map: "{\"version\":3,\"file\":\"_error.svelte\",\"sources\":[\"_error.svelte\"],\"sourcesContent\":[\"<script>\\n  export let status;\\n  export let error;\\n\\n  const dev = undefined === 'development';\\n\\n  // This will print error in terminal\\n  if(dev && error.stack){\\n    console.log('ERROR: %s' + error.message)\\n    console.log(error.stack);\\n  }\\n\\n</script>\\n\\n<style>\\n  h1, p {\\n    margin: 0 auto;\\n  }\\n\\n  h1 {\\n    font-size: 2.8em;\\n    font-weight: 700;\\n    margin: 0 0 0.5em 0;\\n  }\\n\\n  p {\\n    margin: 1em auto;\\n  }\\n\\n  @media (min-width: 480px) {\\n    h1 {\\n      font-size: 4em;\\n    }\\n  }\\n</style>\\n\\n<svelte:head>\\n  <title>𝗖𝗔𝗧𝗣𝗘𝗔: World's Most Advanced Research Laboratories and Skunk Works</title>\\n</svelte:head>\\n\\n<h1>World's Most Advanced Research Laboratories and Skunk Works</h1>\\n<h2>The catpea is an annual pouncy feline from the genus Panthera. Due to his tolerance for serious workouts and low effort, he is kind of a big deal in the semiarid plazas of Westland.</h2>\\n\\n\\n<p>{status}{error.message}</p>\\n\\n{#if dev && error.stack}\\n  <pre>{error.stack}</pre>\\n{/if}\\n\"],\"names\":[],\"mappings\":\"AAeE,gBAAE,CAAE,CAAC,cAAC,CAAC,AACL,MAAM,CAAE,CAAC,CAAC,IAAI,AAChB,CAAC,AAED,EAAE,cAAC,CAAC,AACF,SAAS,CAAE,KAAK,CAChB,WAAW,CAAE,GAAG,CAChB,MAAM,CAAE,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,AACrB,CAAC,AAED,CAAC,cAAC,CAAC,AACD,MAAM,CAAE,GAAG,CAAC,IAAI,AAClB,CAAC,AAED,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzB,EAAE,cAAC,CAAC,AACF,SAAS,CAAE,GAAG,AAChB,CAAC,AACH,CAAC\"}"
+	map: "{\"version\":3,\"file\":\"_error.svelte\",\"sources\":[\"_error.svelte\"],\"sourcesContent\":[\"<script>\\n  export let status;\\n  export let error;\\n\\n  const dev = undefined === 'development';\\n\\n  // This will print error in terminal\\n  if(dev && error.stack){\\n    console.log('ERROR: %s' + error.message)\\n    console.log(error.stack);\\n  }\\n\\n</script>\\n\\n<style>\\n  h1, p {\\n    margin: 0 auto;\\n  }\\n\\n  h1 {\\n    font-size: 2.8em;\\n    font-weight: 700;\\n    margin: 0 0 0.5em 0;\\n  }\\n\\n  p {\\n    margin: 1em auto;\\n  }\\n\\n  @media (min-width: 480px) {\\n    h1 {\\n      font-size: 4em;\\n    }\\n  }\\n</style>\\n\\n<svelte:head>\\n  <title>𝗖𝗔𝗧𝗣𝗘𝗔: World's Most Advanced Research Laboratories and Skunk Works</title>\\n</svelte:head>\\n\\n<div class=\\\"container text-small text-primary\\\">\\n<div class=\\\"row\\\">\\n<div class=\\\"col\\\">\\n\\n<h1>World's Most Advanced Research Laboratories and Skunk Works</h1>\\n<h2>The catpea is an annual pouncy feline from the genus Panthera. Due to his tolerance for serious workouts and low effort, he is kind of a big deal in the semiarid plazas of Westland.</h2>\\n\\n\\n<p>Code {status} &middot; {error.message}</p>\\n\\n{#if dev && error.stack}\\n  <pre class=\\\"text-warning\\\">{error.stack}</pre>\\n{/if}\\n\\n</div>\\n</div>\\n</div>\\n\"],\"names\":[],\"mappings\":\"AAeE,gBAAE,CAAE,CAAC,cAAC,CAAC,AACL,MAAM,CAAE,CAAC,CAAC,IAAI,AAChB,CAAC,AAED,EAAE,cAAC,CAAC,AACF,SAAS,CAAE,KAAK,CAChB,WAAW,CAAE,GAAG,CAChB,MAAM,CAAE,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,AACrB,CAAC,AAED,CAAC,cAAC,CAAC,AACD,MAAM,CAAE,GAAG,CAAC,IAAI,AAClB,CAAC,AAED,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzB,EAAE,cAAC,CAAC,AACF,SAAS,CAAE,GAAG,AAChB,CAAC,AACH,CAAC\"}"
 };
 
 const Error$1 = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
@@ -2690,17 +2737,17 @@ const Error$1 = create_ssr_component(($$result, $$props, $$bindings, $$slots) =>
 
 	if ($$props.status === void 0 && $$bindings.status && status !== void 0) $$bindings.status(status);
 	if ($$props.error === void 0 && $$bindings.error && error !== void 0) $$bindings.error(error);
-	$$result.css.add(css);
+	$$result.css.add(css$1);
 
 	return `${($$result.head += `${($$result.title = `<title>𝗖𝗔𝗧𝗣𝗘𝗔: World&#39;s Most Advanced Research Laboratories and Skunk Works</title>`, "")}`, "")}
 
-<h1 class="${"svelte-hc3g3x"}">World&#39;s Most Advanced Research Laboratories and Skunk Works</h1>
+<div class="${"container text-small text-primary"}"><div class="${"row"}"><div class="${"col"}"><h1 class="${"svelte-hc3g3x"}">World&#39;s Most Advanced Research Laboratories and Skunk Works</h1>
 <h2>The catpea is an annual pouncy feline from the genus Panthera. Due to his tolerance for serious workouts and low effort, he is kind of a big deal in the semiarid plazas of Westland.</h2>
 
 
-<p class="${"svelte-hc3g3x"}">${escape(status)}${escape(error.message)}</p>
+<p class="${"svelte-hc3g3x"}">Code ${escape(status)} · ${escape(error.message)}</p>
 
-${ ``}`;
+${ ``}</div></div></div>`;
 });
 
 /* src/node_modules/@sapper/internal/App.svelte generated by Svelte v3.20.1 */

@@ -397,7 +397,7 @@ main();
 <div class="card text-white bg-dark shadow">
 
   <div class="card-header">
-    New Album Release!
+    New Single Release!
   </div>
 
   <div class="card-body">

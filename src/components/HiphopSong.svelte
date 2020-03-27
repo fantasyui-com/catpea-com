@@ -8,17 +8,18 @@ const movements = [
   {
     start:0,
     stop:16,
-
   },
 
   {
     start:16,
     stop:32,
   },
+
   {
     start:32,
     stop:48,
   },
+
   {
     start:48,
     stop:64,
@@ -579,7 +580,7 @@ main();
 <div class="card text-white bg-dark shadow">
 
   <div class="card-header">
-    New Album Release!
+    New Single Release!
   </div>
 
   <div class="card-body">
@@ -592,8 +593,8 @@ main();
 
     <div class="row">
       <div class="col py-3 small">
-        <strong># ! /</strong> (Hash Bang Slash) is a new mico-genre invented at CATPEA during the 2020 pandemic.
-        <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)" rel="noopener noreferrer" target="_blank">Hash Bang</a>
+        <strong>#!/</strong> (Shebang Slash) is a new mico-genre invented at CATPEA during the 2020 pandemic.
+        <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)" rel="noopener noreferrer" target="_blank">Shebang</a>
         is used by Programmers in UNIX. The Slash is used by Samurai in Battle. Album Photo by <a href="https://unsplash.com/photos/2fRPxsArdkc" rel="noopener noreferrer" target="_blank">soosang</a>.
         <!-- You can  <a href="hash-bang-slash.png.mp3" rel="noopener noreferrer" target="_blank">download</a> the song as well. -->
       </div>
