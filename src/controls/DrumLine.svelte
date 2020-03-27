@@ -1,26 +1,17 @@
 <script>
 import { onMount } from 'svelte';
-  export let parts = 4;
-  export let beats = 4;
-  export let sequence = 0;
 
-  export let chain = [];
+// Pre-configure the GUI
+export let parts = 4;
+export let beats = 4;
+export let data = [];
 
-  $: data = [];
+// Dynamic data that is sent from Master COntrol Program
+export let sequence = 0;
 
-  onMount(async () => {
-    data = chain;
-    
-    for(let beat = 0; beat < beats; beat++ ){
-      for(let part = 0; part < parts; part++ ){
-        data = data.concat({ beat,part,enabled:false });
-      }
-    }
-    data = data;
-  });
+onMount(async () => {
 
-
-  // display: inline-block;  padding: 2px;  border-width: 1px; background:silver;
+});
 
 </script>
 
@@ -65,7 +56,7 @@ import { onMount } from 'svelte';
 {#each data as item, index}
     <input type="checkbox" class="regular-checkbox" bind:checked={item.enabled} class:odd='{(!!((item.beat+1) % 2))}' class:divider='{!(!!((item.part+1) % parts))}' class:sequence='{index===sequence}'>
 {/each}
-<!--
+<!-- 
 <pre><code>
 
 {JSON.stringify(data,null,'  ')}

@@ -557,6 +557,10 @@ const News = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	// Application
 	let news = [
 		{
+			date: "2020-03-27T13:12:01.513Z",
+			html: "Captains Log, Star-date Day Eleven. I connected the Beat Sequencer to Sound. Click on any of the tiny boxes and when the loop comes around the sound will fire. Tip: put a drum every four squares, and something that makes a Tsk every other square. Music is really-really simple, like language, music evolved with us, all it takes is sticks and places to hit them with. Actually we don't even need sticks <a href=\"https://youtu.be/V76psBrEypg?t=611\" class=\"strong text-warning\" rel=\"noopener noreferrer\" target=\"_blank\">Tuvan Singing</a> "
+		},
+		{
 			date: "2020-03-26T23:56:25.371Z",
 			html: "Quarantine Day Ten. My arms grew so powerful from all the rest that I mistakenly struck myself several times. I busied myself today relearning how to handle all my amazing strength. Renamed Hash Bang to <a href=\"https://en.wikipedia.org/wiki/Shebang_(Unix)\" rel=\"noopener noreferrer\" target=\"_blank\">Shebang</a>, as it is the most commonly used variant. Begun working on a beat sequencer, and a song maker. The idea here is that Chords, Bass, Melodies can all be handled by the <a href=\"https://github.com/Tonejs/Tone.js/wiki/Arpeggiator\" rel=\"noopener noreferrer\" target=\"_blank\">Arpeggiator</a>, but the beat is a bit more complex, and needs a little tool. The tool I have up today uses re-styled checkboxes, a perfect fit for the sequencer."
 		},
@@ -2071,33 +2075,24 @@ const LofiSoundboard = create_ssr_component(($$result, $$props, $$bindings, $$sl
 
 const css = {
 	code: ".regular-checkbox.svelte-1j43cqu{-webkit-appearance:none;background-color:darkgray;border:1px solid silver;line-height:14px;width:14px;height:14px;padding:2px;margin:0px;border-radius:0px;display:inline-block;position:relative}.regular-checkbox.sequence.svelte-1j43cqu{border-color:salmon}.regular-checkbox.odd.svelte-1j43cqu{background:grey}.regular-checkbox.divider.svelte-1j43cqu{margin-right:1px}.regular-checkbox.svelte-1j43cqu:checked{background:steelblue}",
-	map: "{\"version\":3,\"file\":\"DrumLine.svelte\",\"sources\":[\"DrumLine.svelte\"],\"sourcesContent\":[\"<script>\\nimport { onMount } from 'svelte';\\n  export let parts = 4;\\n  export let beats = 4;\\n  export let sequence = 0;\\n\\n  export let chain = [];\\n\\n  $: data = [];\\n\\n  onMount(async () => {\\n    data = chain;\\n    \\n    for(let beat = 0; beat < beats; beat++ ){\\n      for(let part = 0; part < parts; part++ ){\\n        data = data.concat({ beat,part,enabled:false });\\n      }\\n    }\\n    data = data;\\n  });\\n\\n\\n  // display: inline-block;  padding: 2px;  border-width: 1px; background:silver;\\n\\n</script>\\n\\n<style>\\n\\n.regular-checkbox {\\n  -webkit-appearance: none;\\n  background-color: darkgray;\\n  border: 1px solid silver;\\n\\n  line-height:14px;\\n  width:14px;\\n  height:14px;\\n\\n  padding: 2px;\\n  margin:0px;\\n\\n\\n  border-radius: 0px;\\n\\n  display: inline-block;\\n  position: relative;\\n}\\n\\n.regular-checkbox.sequence{\\n  border-color: salmon;\\n\\n}\\n\\n.regular-checkbox.odd{\\n  background:grey;\\n}\\n.regular-checkbox.divider{\\n  margin-right: 1px;\\n}\\n.regular-checkbox:checked{\\n  background:steelblue;\\n}\\n\\n</style>\\n\\n{#each data as item, index}\\n    <input type=\\\"checkbox\\\" class=\\\"regular-checkbox\\\" bind:checked={item.enabled} class:odd='{(!!((item.beat+1) % 2))}' class:divider='{!(!!((item.part+1) % parts))}' class:sequence='{index===sequence}'>\\n{/each}\\n<!--\\n<pre><code>\\n\\n{JSON.stringify(data,null,'  ')}\\n\\n</code></pre> -->\\n\"],\"names\":[],\"mappings\":\"AA4BA,iBAAiB,eAAC,CAAC,AACjB,kBAAkB,CAAE,IAAI,CACxB,gBAAgB,CAAE,QAAQ,CAC1B,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,MAAM,CAExB,YAAY,IAAI,CAChB,MAAM,IAAI,CACV,OAAO,IAAI,CAEX,OAAO,CAAE,GAAG,CACZ,OAAO,GAAG,CAGV,aAAa,CAAE,GAAG,CAElB,OAAO,CAAE,YAAY,CACrB,QAAQ,CAAE,QAAQ,AACpB,CAAC,AAED,iBAAiB,wBAAS,CAAC,AACzB,YAAY,CAAE,MAAM,AAEtB,CAAC,AAED,iBAAiB,mBAAI,CAAC,AACpB,WAAW,IAAI,AACjB,CAAC,AACD,iBAAiB,uBAAQ,CAAC,AACxB,YAAY,CAAE,GAAG,AACnB,CAAC,AACD,gCAAiB,QAAQ,CAAC,AACxB,WAAW,SAAS,AACtB,CAAC\"}"
+	map: "{\"version\":3,\"file\":\"DrumLine.svelte\",\"sources\":[\"DrumLine.svelte\"],\"sourcesContent\":[\"<script>\\nimport { onMount } from 'svelte';\\n\\n// Pre-configure the GUI\\nexport let parts = 4;\\nexport let beats = 4;\\nexport let data = [];\\n\\n// Dynamic data that is sent from Master COntrol Program\\nexport let sequence = 0;\\n\\nonMount(async () => {\\n\\n});\\n\\n</script>\\n\\n<style>\\n\\n.regular-checkbox {\\n  -webkit-appearance: none;\\n  background-color: darkgray;\\n  border: 1px solid silver;\\n\\n  line-height:14px;\\n  width:14px;\\n  height:14px;\\n\\n  padding: 2px;\\n  margin:0px;\\n\\n\\n  border-radius: 0px;\\n\\n  display: inline-block;\\n  position: relative;\\n}\\n\\n.regular-checkbox.sequence{\\n  border-color: salmon;\\n\\n}\\n\\n.regular-checkbox.odd{\\n  background:grey;\\n}\\n.regular-checkbox.divider{\\n  margin-right: 1px;\\n}\\n.regular-checkbox:checked{\\n  background:steelblue;\\n}\\n\\n</style>\\n\\n{#each data as item, index}\\n    <input type=\\\"checkbox\\\" class=\\\"regular-checkbox\\\" bind:checked={item.enabled} class:odd='{(!!((item.beat+1) % 2))}' class:divider='{!(!!((item.part+1) % parts))}' class:sequence='{index===sequence}'>\\n{/each}\\n<!-- \\n<pre><code>\\n\\n{JSON.stringify(data,null,'  ')}\\n\\n</code></pre> -->\\n\"],\"names\":[],\"mappings\":\"AAmBA,iBAAiB,eAAC,CAAC,AACjB,kBAAkB,CAAE,IAAI,CACxB,gBAAgB,CAAE,QAAQ,CAC1B,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,MAAM,CAExB,YAAY,IAAI,CAChB,MAAM,IAAI,CACV,OAAO,IAAI,CAEX,OAAO,CAAE,GAAG,CACZ,OAAO,GAAG,CAGV,aAAa,CAAE,GAAG,CAElB,OAAO,CAAE,YAAY,CACrB,QAAQ,CAAE,QAAQ,AACpB,CAAC,AAED,iBAAiB,wBAAS,CAAC,AACzB,YAAY,CAAE,MAAM,AAEtB,CAAC,AAED,iBAAiB,mBAAI,CAAC,AACpB,WAAW,IAAI,AACjB,CAAC,AACD,iBAAiB,uBAAQ,CAAC,AACxB,YAAY,CAAE,GAAG,AACnB,CAAC,AACD,gCAAiB,QAAQ,CAAC,AACxB,WAAW,SAAS,AACtB,CAAC\"}"
 };
 
 const DrumLine = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	let { parts = 4 } = $$props;
 	let { beats = 4 } = $$props;
+	let { data = [] } = $$props;
 	let { sequence = 0 } = $$props;
-	let { chain = [] } = $$props;
 
 	onMount(async () => {
-		data = chain;
-
-		for (let beat = 0; beat < beats; beat++) {
-			for (let part = 0; part < parts; part++) {
-				data = data.concat({ beat, part, enabled: false });
-			}
-		}
-
-		data = data;
+		
 	});
 
 	if ($$props.parts === void 0 && $$bindings.parts && parts !== void 0) $$bindings.parts(parts);
 	if ($$props.beats === void 0 && $$bindings.beats && beats !== void 0) $$bindings.beats(beats);
+	if ($$props.data === void 0 && $$bindings.data && data !== void 0) $$bindings.data(data);
 	if ($$props.sequence === void 0 && $$bindings.sequence && sequence !== void 0) $$bindings.sequence(sequence);
-	if ($$props.chain === void 0 && $$bindings.chain && chain !== void 0) $$bindings.chain(chain);
 	$$result.css.add(css);
-	let data = [];
 
 	return `${each(data, (item, index) => `<input type="${"checkbox"}" class="${[
 		"regular-checkbox svelte-1j43cqu",
@@ -2109,7 +2104,111 @@ const DrumLine = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 /* src/components/BeatSequencer.svelte generated by Svelte v3.20.1 */
 
 const BeatSequencer = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
+	let instrument = null;
+
+	const primary = {
+		meta: {
+			"release": 1,
+			"baseUrl": "./samples/rza/"
+		},
+		data: {
+			//"G4": "fabf3c5cc58607bf2d5eb91021e53a4773c4fb23.mp3", // Stick 1
+			//"G4": "dc39c0a1b5c1cd83b77703cff2f1900e4fc6e508.mp3", // Drum 1
+			//"F6": "aab83ca9600e185be123c7dff74f9934af55e825.mp3", // Tsk 1
+			"A1": "16a3307717ff4974787145c054171dc4ada8669f.mp3", // Misc 1 Squirrel
+			"B1": "9f9ce4b24573bcc5aa95ab4ec9cedf22ac743905.mp3", // Misc 2 Metalic Drum Finger Hit
+			"C1": "c0beffaadd0187c2a5108e44459e0e81d6a7b2ff.mp3", // Misc 3 Drum 1
+			"D1": "16fd6ae36200cc85da243ce4e5b929ef77c5cf30.mp3", // Misc 4 Stick 2 in Reverse
+			"E1": "5107c3a6c20e3133f593fac3e44b8ca534b8e395.mp3", // Misc 5 Cymbal
+			"F1": "871b0cf227272c39a77fc3a754ea092d0b65223b.mp3", // Misc 6 Stick 3 Clap
+			"G1": "df6e58fecc39a3985a6350d158131e4d599dba73.mp3", // Misc 7 Stick 1
+			"A2": "b81c18280aed479809dca9c9b87614d6b5b1db4d.mp3", // SFX 1, Funk sound effect: Walking Cool
+			"B2": "bebdc685f75f3b10b821f945cee5240c265596af.mp3", // SFX 2, Ringing SFX: Remembering
+			"C2": "130c110c5d99a6c484afb29c06dec20047f9c8fd.mp3", // SFX 3, Ringing: Noticing Danger
+			"D2": "2fc89124a9451bd9b51d22cfff794933b3b18364.mp3", // SFX 4, Drum 2
+			"E2": "384902fe4cace75f37acdfaecd6cc4fd2137ecad.mp3", // SFX 5, Pipe Long
+			"F2": "cbdad385aedd04d9e71c2bc308f944ab0cb4b34a.mp3", // SFX 6, Metal Pipe Hollow
+			"G2": "00dbab16df8f3bf9b1559e32b139f56923f592fc.mp3", // Tsk 2
+			"A3": "a3bafb69b3c80c9c6ccaba3745d0e6112f463d79.mp3", // SFX 7, Tiny Stick Ring
+			"B3": "c91112945ad9744b4b0d440ce871fdf3d08947e7.mp3", // Pure Instument 1 - Gong
+			"C3": "e7547271491320afd6e32a3d2f41f629eab91022.mp3", // Pure Instument 5 - Tambourine
+			"D3": "294599aaec34f023e6149e90a6c8e0523df4c85f.mp3", // Pure Instument 7 - Shaker
+			"E3": "53580c41ee4c9b9312d0b1952b3e62ac9e138ff2.mp3", // Pure Instument 2 - Guitar
+			"F3": "8c950d4f8ae18441cf065db741e3e1c5570f6218.mp3", // Pure Instument 3 - Guitar
+			"G3": "256e82e4b4972641b26162ac91d262fb0f7ff8bf.mp3", // Pure Instument 4 - Guitar
+			"A4": "2ae533bd30909247b701bbc1f7b1563349947282.mp3", // Drum 2
+			"B4": "55e11e95238bab9e8f60a7b377e6adf3766d9ede.mp3", // Drum 3
+			"C4": "f1ec8695896bad0c68a9da0f9e4a482f28aca4e0.mp3", // Drum 4
+			"D4": "c13bf775cbec7fbcdc8f459cb045860f57660251.mp3", // Drum 6
+			"E4": "ac16b9241b329a8144113591018b8bbf485c8a05.mp3", // Drum 7
+			"F4": "85606cf0cc23b9bd86b883ca4e4b74c5a23605d1.mp3", // Drum 5
+			"G4": "1e5bb21d766235982ff453001379d75accb142c5.mp3", // Drum 4
+			"A5": "35354ded0aadc635419c7b6b61748bb1e363946b.mp3", // Stick 7
+			"B5": "721727714259f2c9f1fa8035a261e888fcca7c91.mp3", // Stick 1 Loud
+			"C5": "98b6b793420ef22139daa30d46b8d98d0f4116b7.mp3", // Stick 2
+			"D5": "9c4a05d1e181deda1de078ebdb99adcc19ada4fe.mp3", // Stick 6
+			"E5": "f3ef81d821c76794a5e52acf3412441d94c19cce.mp3", // Stick 5
+			"F5": "4b157822e8b5d272fb7aa29009baf9ec9d4af3ae.mp3", // Stick 3
+			"G5": "ab7ec6dcc5fdebaadea68deb0e4567a6de4192ea.mp3", // Stick 4
+			"A6": "dc4473aa907a2bf917e1b91bc537192e356620af.mp3", // Tsk 1
+			"B6": "635b71f627705027d819fe87d0ed7028189d826d.mp3", // Pure Instument 6 - Tambourine
+			"C6": "4e56575f8bd27f4a07cf4d791f66b3986c6e8dfe.mp3", // Tsk 5
+			"D6": "e0fb86394e0258b50fb2a8f4c238a324e64c27b7.mp3", // Tsk 6
+			"E6": "04e938821ca043c821b39d1abdeeaa2623fa8611.mp3", // Tsk 3
+			"F6": "edf3184e2e8aa84176c2497d40311402a3b7ea75.mp3", // Tsk 7
+			"G6": "123668fd36e854461cc1a5b34551e98cd162ba2d.mp3", // Tsk 4
+			
+		}
+	};
+
+	async function load() {
+		return new Promise(function (resolve, reject) {
+				if (Tone.Sampler) {
+					instrument = new Tone.Sampler(primary.data,
+					{
+							//release : primary.meta.release,
+							baseUrl: primary.meta.baseUrl,
+							onload: () => {
+								resolve();
+								console.log("Tone.Sampler onload");
+							},
+							onerror: e => {
+								reject(e);
+								console.log("Error", e);
+							}
+						}).toMaster();
+
+					Tone.Buffer.on("load", function () {
+						console.log("all buffers are loaded.");
+					});
+				}
+			});
+	}
+
+	let data = [
+		{ label: "Drum", note: "C1", data: [] },
+		{ label: "Drum", note: "C2", data: [] },
+		{ label: "Drum", note: "C3", data: [] },
+		{ label: "Drum", note: "C4", data: [] },
+		{ label: "Drum", note: "C5", data: [] }
+	];
+
 	onMount(async () => {
+		await load();
+		var synth = new Tone.Synth().toMaster();
+
+		// for(let item of data ){ } // for of main data
+		data = data.map(item => {
+			// populate data
+			for (let beat = 0; beat < beats; beat++) {
+				for (let part = 0; part < parts; part++) {
+					item.data = item.data.concat({ beat, part, enabled: false });
+				}
+			}
+
+			return item;
+		});
+
 		setInterval(
 			() => {
 				sequence++;
@@ -2117,18 +2216,16 @@ const BeatSequencer = create_ssr_component(($$result, $$props, $$bindings, $$slo
 				if (sequence == parts * beats) {
 					sequence = 0;
 				}
+
+				for (let item of data) {
+					if (item.data[sequence].enabled) {
+						instrument.triggerAttackRelease(item.note, "8n");
+					}
+				}
 			},
-			444
+			1000 * 60 / (160 * parts)
 		);
 	});
-
-	let data = [
-		{ label: "Drum", data: [] },
-		{ label: "Drum", data: [] },
-		{ label: "Drum", data: [] },
-		{ label: "Drum", data: [] },
-		{ label: "Drum", data: [] }
-	];
 
 	let parts = 4;
 	let beats = 4;
@@ -2137,16 +2234,17 @@ const BeatSequencer = create_ssr_component(($$result, $$props, $$bindings, $$slo
 	return `<div class="${"card text-white bg-dark shadow"}"><div class="${"card-header"}">LOFI Beat Sequencer · BETA PREVIEW
   </div>
 
-  <div class="${"card-body"}"><div class="${"row"}"><div class="${"col small text-muted"}"><small>Sorry the tool does not make any sounds, this is a test of the UI, which is a success, it is just styled checkboxes. You can click one of the boxes to mark where a sound should fire, but audio is not yet connected.</small></div></div>
+  <div class="${"card-body"}"><div class="${"row"}"><div class="${"col small text-muted"}"><small>Sorry the tool does not make any sounds, this is a test of the UI, which is a success, it is just styled checkboxes.
+        You can click one of the boxes to mark where a sound is to fire.</small></div></div>
 
      <div class="${"row"}"><div class="${"col-3 small text-muted"}"><small>Instrument</small></div>
       <div class="${"col-9 p-0 small text-muted"}"><small>Sequence</small></div></div>
 
 
 
-    ${each(data, (item, index) => `<div class="${"row"}"><div class="${"col-3 text-right"}"><small>A${escape(index)}</small>
+    ${each(data, (item, index) => `<div class="${"row"}"><div class="${"col-3 text-right"}"><small>${escape(item.note)}</small>
        </div>
-     <div class="${"col-9 p-0"}">${validate_component(DrumLine, "DrumLine").$$render($$result, { chain: item.data, parts, beats, sequence }, {}, {})}</div>
+     <div class="${"col-9 p-0"}">${validate_component(DrumLine, "DrumLine").$$render($$result, { data: item.data, parts, beats, sequence }, {}, {})}</div>
    </div>`)}
 
 

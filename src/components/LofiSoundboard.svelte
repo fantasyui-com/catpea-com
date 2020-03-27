@@ -1,14 +1,10 @@
 <script>
 import { onMount } from 'svelte';
-import Tone from "tone";
 import octicons from 'octicons';
 
+import Tone from "tone";
 let ready = false;
-
-
-
 let instrument = null;
-
 const primary = {
 
     meta:{
