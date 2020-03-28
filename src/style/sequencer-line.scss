@@ -1,0 +1,85 @@
+.sequencer {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.sequencer-line {
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  display: inline-block; // this is required for the backgrounf to properly display, in block more it gets cut-off at where content woudl have wrapped
+
+  white-space: nowrap;
+
+  @include hover-focus() {
+    background-color: $gray-600;
+  }
+}
+
+// .sequencer-line-selector {
+//    $sequencer-line-selector-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path fill='" + $gray-900 + "' fill-rule='evenodd' d='M14 8.77v-1.6l-1.94-.64-.45-1.09.88-1.84-1.13-1.13-1.81.91-1.09-.45-.69-1.92h-1.6l-.63 1.94-1.11.45-1.84-.88-1.13 1.13.91 1.81-.45 1.09L0 7.23v1.59l1.94.64.45 1.09-.88 1.84 1.13 1.13 1.81-.91 1.09.45.69 1.92h1.59l.63-1.94 1.11-.45 1.84.88 1.13-1.13-.92-1.81.47-1.09L14 8.75v.02zM7 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z'></path></svg>");
+//
+//     display: inline-block;
+//
+//     border: none;
+//     background-color: $gray-700;
+//
+//     margin-right: 4px;
+//
+//     width:14px;
+//     height:14px;
+//
+//     vertical-align: middle;
+//     //content: "";
+//     background: no-repeat center center;
+//     background-size: 100% 100%;
+//     background-image: escape-svg($sequencer-line-selector-icon-bg);
+//
+//     fill: currentColor;
+//
+// }
+
+.sequencer-line-selected {
+  background-color: $gray-700;
+}
+
+
+.sequencer-line-number {
+  color: $gray-400;
+  line-height: 10px;
+  font-size: 10px;
+  width:15px;
+  height:15px;
+
+  margin:0px;
+  vertical-align: sub;
+}
+.sequencer-check {
+  display: inline-block;
+  -webkit-appearance: none;
+
+  border: 1px solid $gray-400;
+  background-color: $gray-500;
+  border-radius: 0px;
+
+  width:15px;
+  height:15px;
+
+  padding: 2px;
+  margin:0px;
+
+  vertical-align: middle;
+
+}
+.sequencer-check.odd{
+  background-color: $gray-700;
+}
+
+.sequencer-check.active{
+  border-color: $gray-600;
+}
+.sequencer-check.divider{
+  margin-right: 1px;
+}
+.sequencer-check:checked{
+  background:$primary;
+}
