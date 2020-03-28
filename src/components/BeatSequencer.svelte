@@ -16,38 +16,38 @@ let data = [
   },
   {
     label:"Drum",
-    octave: 1,
+    octave: 2,
     note:"B",
     data:[],
   },
   {
     label:"Drum",
-    octave: 1,
+    octave: 3,
     note:"C",
     data:[],
   },
   {
     label:"Drum",
-    octave: 1,
+    octave: 4,
     note:"D",
     data:[],
   },
   {
     label:"Drum",
-    octave: 1,
+    octave: 5,
     note:"E",
     data:[],
   },
   {
     label:"Drum",
-    octave: 1,
+    octave: 6,
     note:"F",
     data:[],
   },
 ];
 
 $: parts = 4;
-$: beats = 4;
+$: beats = 8;
 
 $: sequence = 4;
 
@@ -86,6 +86,16 @@ onMount(async () => {
 
 <style>
 
+  .selectable {
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+
+  .selectable:hover {
+    border: 1px solid orange;
+    border-radius: 4px;
+  }
+
 </style>
 
 <div class="card text-white bg-dark shadow">
@@ -116,7 +126,7 @@ onMount(async () => {
 
     {#each data as item, index}
 
-    <div class="row">
+    <div class="row selectable">
      <div>
      <!-- <small>{item.note+item.octave}</small> -->
      <div class="col p-0">
