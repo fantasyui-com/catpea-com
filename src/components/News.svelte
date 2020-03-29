@@ -20,6 +20,11 @@
 
   let news = [
 
+    //{date:'2020-03-29T13:14:44.761Z', html:`Captain's Log, supplemental. W`},
+
+    {date:'2020-03-29T13:14:44.761Z', html:`Captain's Log: Day Thirteen of Quarantine; still staring at my screen, hanging on for dear life to my spleen as I drink another coffee bean, trying, trying not to create a scene, dancing dressed red outside my window; during quarantine.`},
+    {date:'2020-03-29T11:14:44.761Z', html:` The birds are going wild outside my window, probably because of all the Plump <span class="shake shake-force">${octicons.squirrel.toSVG()}</span> Squirrels I've been feeding. Dammit.`},
+
     {date:'2020-03-28T22:31:17.209Z', html:'Captain\'s Log, Day Twelve of Quarantine. I ordered some trailmix from the internet, mailman dropped it off by the door and all the local Squirrels I\'ve been feeding came over, ripped the box open, and ate it. How rude, I probably shoudn\'t have been feeding them all this time. I continue my work on the little LOFI Beat Sequencer, I am searching for an easy UI configuration, that is also fully featured (can edit a huge song), and has a huge area for configuring things beyond Octave and Note. The area that opens up below when user clicks a line number will be used for sound synthesis configuration that could be as many as 10 dropdowns. I don\'t like horizontal scrolling, this is what this test is about. But there is something wrong with Vertical Scrolling, like here in the <a href="https://www.youtube.com/watch?v=gdSslkrN1kk" rel="noopener noreferrer" target="_blank">Mod Trackers</a>, it just feels too awkward to compose a song downwards. On the other hand I don\'t want to recreate the <a href="https://www.ableton.com/en/live/" rel="noopener noreferrer" target="_blank">Ableton UI</a>, editing music this way is too slow. I\'ll probably keep creating these little UI widgets, but begin connecting them together under a common beat. This way the end result is a dashboard of easy to use musical instruments, and probably some fat <span class="shake shake-force">'+octicons.squirrel.toSVG()+'</span> squirrels.'},
 
 

@@ -7,54 +7,25 @@ import DrumLine from '../controls/DrumLine.svelte';
 
 import sampler from '../devices/sampler.js';
 
-let data = [
-  {
-    label:"Drum",
-    octave: 1,
-    note:"A",
-    data:[],
-  },
-  {
-    label:"Drum",
-    octave: 2,
-    note:"B",
-    data:[],
-  },
-  {
-    label:"Drum",
-    octave: 3,
-    note:"C",
-    data:[],
-  },
-  {
-    label:"Drum",
-    octave: 4,
-    note:"D",
-    data:[],
-  },
-  {
-    label:"Drum",
-    octave: 5,
-    note:"E",
-    data:[],
-  },
-  {
-    label:"Drum",
-    octave: 6,
-    note:"F",
-    data:[],
-  },
-];
+let data = [];
 
+$: bpm = 160;
 $: parts = 4;
-$: beats = 8;
+$: beats = 4;
 
 $: selected = null;
 $: sequence = 4;
 
-function populator(item){
-     // populate data
-    for(let beat = 0; beat < beats; beat++ ){
+let instrument = {};
+
+function itemGenerator(custom={}){
+    const item = Object.assign({
+      label:"Drum",
+      octave: 6,
+      note:"F",
+      data:[],
+    },custom);
+    for(let beat = 0; beat < beats*8; beat++ ){
       for(let part = 0; part < parts; part++ ){
         item.data = item.data.concat({ beat,part,enabled:false });
       }
@@ -62,26 +33,61 @@ function populator(item){
     return item;
 }
 
-onMount(async () => {
+function dataGenerator(items=1){
 
-  let instrument = await sampler();
+  let generated = [];
+  for(let item = 0; item < items; item++ ){
+    generated.push(itemGenerator())
+  }
+  return generated;
+}
 
-  var synth = new Tone.Synth().toMaster()
+function incrementSequence(){
+  sequence++
+  if(sequence >= parts*beats){
+    sequence = 0;
+  }
 
-  // for(let item of data ){ } // for of main data
-  data = data.map(item=>populator(item));
 
-  setInterval(()=>{
-    sequence++
-    if(sequence == parts*beats){
-      sequence = 0;
-    }
-    for(let item of data ){
+  for(let item of data ){
+
       if(item.data[sequence].enabled){
         instrument.triggerAttackRelease(item.note+item.octave, '2n');
       }
-    }
-  },(1000*60)/(140*parts));
+
+  }
+}
+
+function schedule(){
+  setTimeout(function(){
+    incrementSequence();
+    schedule();
+  }, (1000*60)/(bpm*parts))
+}
+
+onMount(async () => {
+
+  instrument = await sampler();
+  data = dataGenerator(4);
+
+  const synth = new Tone.Synth().toMaster()
+
+
+  // setInterval(()=>{
+  //   sequence++
+  //   if(sequence == parts*beats){
+  //     sequence = 0;
+  //   }
+  //   for(let item of data ){
+  //     if(item.data[sequence].enabled){
+  //       instrument.triggerAttackRelease(item.note+item.octave, '2n');
+  //     }
+  //   }
+  // },(1000*60)/(140*parts));
+
+
+
+  schedule();
 
 });
 
@@ -94,12 +100,18 @@ function selectSequencerLine(event, index){
 }
 
 function addSequencerLine(){
-data = data.concat(populator({
-    label:"Drum",
-    octave: 1,
-    note:"A",
-    data:[],
-  }))
+    data = data.concat(dataGenerator())
+}
+
+function removeSequencerLine(index){
+  selected = null; // must clear selection or errors will occur
+  data[index].data = data[index].data.map(i=>{i.enabled=false; return i;});
+  data = data.filter((item,localIndex)=>localIndex!=index)
+}
+function clearSequencerLine(index){
+
+  data[index].data = data[index].data.map(i=>{i.enabled=false; return i;});
+
 }
 
 </script>
@@ -129,9 +141,37 @@ data = data.concat(populator({
       </div>
     </div>
 
-    <div class="row mb-2">
+    <div class="row my-2">
       <div class="col">
-        <!-- <button class="btn btn-text btn-sm border border-secondary float-right  mr-1" on:click={addSequencerLine}>{@html octicons['x'].toSVG({ "class": "fill-white text-small" })}</button> -->
+
+      <!-- <div class="input-group input-group-sm float-left" style="width: 6rem;">
+        <input type="text" class="form-control bg-dark text-warning border-secondary" style="width: 3rem;" placeholder="90-190" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <span class="input-group-text bg-dark text-light border-secondary" id="basic-addon2">BPM</span>
+        </div>
+      </div> -->
+
+      <div class="form-group float-left">
+        <select class="d-inline-block form-control form-control-sm" bind:value={bpm} id="exampleFormControlSelect1">
+          <option value={95}>95 BPM</option>
+          <option value={100}>100 BPM</option>
+          <option value={120}>120 BPM</option>
+          <option value={140}>140 BPM</option>
+          <option value={160}>160 BPM</option>
+          <option value={190}>190 BPM</option>
+        </select>
+      </div>
+
+      <div class="form-group float-left">
+        <select class="d-inline-block form-control form-control-sm" bind:value={beats} id="exampleFormControlSelect1">
+          <option value={4}>4 Beats</option>
+          <option value={8}>8 Beats</option>
+          <option value={16}>16 Beats</option>
+        </select>
+      </div>
+
+        <button class="btn btn-text btn-sm border border-secondary float-right mr-1" disabled={selected == null} on:click={()=>removeSequencerLine(selected)}>{@html octicons['trashcan'].toSVG({ "class": "fill-white text-small" })}</button>
+        <button class="btn btn-text btn-sm border border-secondary float-right mr-1" disabled={selected == null} on:click={()=>clearSequencerLine(selected)}>{@html octicons['zap'].toSVG({ "class": "fill-white text-small" })}</button>
         <button class="btn btn-text btn-sm border border-secondary float-right  mr-1" on:click={addSequencerLine}>{@html octicons['plus'].toSVG({ "class": "fill-white text-small" })}</button>
         <!-- <button class="btn btn-text btn-sm border border-secondary float-right  mr-1" on:click={addSequencerLine}>{@html octicons['mute'].toSVG({ "class": "fill-white text-small" })}</button> -->
       </div>
@@ -149,6 +189,8 @@ data = data.concat(populator({
 
     {/each}
     </div>
+
+
 
     {#if selected != null}
     <div class="row mb-2">

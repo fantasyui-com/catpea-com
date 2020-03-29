@@ -21,5 +21,7 @@ onMount(async () => {
 
 
 {#each data as item, index}
+  {#if index < parts*beats}
     <input type="checkbox" class="sequencer-check" bind:checked={item.enabled} class:odd='{(!!((item.beat+1) % 2))}' class:divider='{!(!!((item.part+1) % parts))}' class:active='{index===sequence}'>
+  {/if}
 {/each}

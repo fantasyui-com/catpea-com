@@ -5,7 +5,7 @@
 
 .sequencer-line {
   border-radius: .25rem;
-  padding: 0 .5rem;
+  padding: 0;
   display: inline-block; // this is required for the backgrounf to properly display, in block more it gets cut-off at where content woudl have wrapped
 
   white-space: nowrap;
@@ -44,10 +44,12 @@
 
 
 .sequencer-line-number {
+  display: inline-block;
+  text-align: right;
   color: $gray-400;
   line-height: 10px;
   font-size: 10px;
-  width:15px;
+  width:30px;
   height:15px;
 
   margin:0px;
@@ -57,7 +59,8 @@
   display: inline-block;
   -webkit-appearance: none;
 
-  border: 1px solid $gray-400;
+  border: 1px solid $gray-600;
+
   background-color: $gray-500;
   border-radius: 0px;
 
@@ -75,11 +78,12 @@
 }
 
 .sequencer-check.active{
-  border-color: $gray-600;
+  border-color: $gray-300;
 }
 .sequencer-check.divider{
   margin-right: 1px;
 }
 .sequencer-check:checked{
   background:$primary;
+  border-color: $primary;
 }
