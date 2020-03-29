@@ -7,11 +7,68 @@ import DrumLine from '../controls/DrumLine.svelte';
 
 import sampler from '../devices/sampler.js';
 
-let data = [];
-
+let song = [];
 $: bpm = 160;
 $: parts = 4;
 $: beats = 4;
+let beatBuffer = 4*8;
+
+function expandNotation(str){
+  const response = [];
+
+  const arr = str.split(' ').map(digits=>digits.split('').map(i=>parseInt(i)));
+  const beats = arr.length;
+  const parts = arr[0].length;
+
+  for(let beat = 0; beat < beatBuffer; beat++ ){
+    for(let part = 0; part < parts; part++ ){
+      let enabled=false;
+      if(beat<beats){
+        if(part<parts){
+          enabled = !!(arr[beat][part])
+        }
+      }
+      response.push({ beat,part,enabled });
+    }
+  }
+  console.log(response);
+  return response;
+}
+
+
+
+// https://docs.google.com/spreadsheets/d/19_3BxUMy3uy1Gb0V8Wc-TcG7q16Amfn6e8QVw4-HuD0/edit#gid=0
+let presets = [
+  {
+    name: 'Billie Jean Meow Mix',
+    bpm: 120,
+    beats:8,
+    parts:4,
+    song: [
+      {label:'Kick'      , device:'lofi', octave:4, note:'E', data:expandNotation('1000 0000 1000 0000 1000 0000 1010 0000')},
+      {label:'Snare'     , device:'lofi', octave:5, note:'E', data:expandNotation('0000 1000 0000 1000 0000 1000 0000 1000')},
+      {label:'Closed Hat', device:'lofi', octave:6, note:'C', data:expandNotation('1010 1010 1010 1010 1010 1010 1010 1010')},
+    ]
+  }
+]
+function loadPreset(event){
+  console.log( event.target.value );
+  const targets = presets.filter(i=>i.name==event.target.value);
+  if(targets.length){
+    let selection = targets[0];
+    bpm = selection.bpm;
+    beats = selection.beats;
+    parts = selection.parts;
+    song = JSON.parse(JSON.stringify(selection.song))
+    console.log(song);
+    event.target.value = 0;
+  }
+ }
+
+
+
+
+
 
 $: selected = null;
 $: sequence = 4;
@@ -25,7 +82,7 @@ function itemGenerator(custom={}){
       note:"F",
       data:[],
     },custom);
-    for(let beat = 0; beat < beats*8; beat++ ){
+    for(let beat = 0; beat < beatBuffer; beat++ ){
       for(let part = 0; part < parts; part++ ){
         item.data = item.data.concat({ beat,part,enabled:false });
       }
@@ -49,7 +106,7 @@ function incrementSequence(){
   }
 
 
-  for(let item of data ){
+  for(let item of song ){
 
       if(item.data[sequence].enabled){
         instrument.triggerAttackRelease(item.note+item.octave, '2n');
@@ -68,7 +125,7 @@ function schedule(){
 onMount(async () => {
 
   instrument = await sampler();
-  data = dataGenerator(4);
+  song = dataGenerator(4);
 
   const synth = new Tone.Synth().toMaster()
 
@@ -100,17 +157,17 @@ function selectSequencerLine(event, index){
 }
 
 function addSequencerLine(){
-    data = data.concat(dataGenerator())
+    song = song.concat(dataGenerator())
 }
 
 function removeSequencerLine(index){
   selected = null; // must clear selection or errors will occur
-  data[index].data = data[index].data.map(i=>{i.enabled=false; return i;});
-  data = data.filter((item,localIndex)=>localIndex!=index)
+  song[index].data = song[index].data.map(i=>{i.enabled=false; return i;});
+  song = song.filter((item,localIndex)=>localIndex!=index)
 }
 function clearSequencerLine(index){
 
-  data[index].data = data[index].data.map(i=>{i.enabled=false; return i;});
+  song[index].data = song[index].data.map(i=>{i.enabled=false; return i;});
 
 }
 
@@ -138,6 +195,24 @@ function clearSequencerLine(index){
           Click {@html octicons['plus'].toSVG({ "class": "fill-white text-small" })} to add more lines.
           Click a line number to select and configure it.
         </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+
+
+      <div class="form-group">
+      <small class="form-text text-warning">Presets</small>
+        <select class="form-control form-control-sm" on:change={loadPreset}>
+          <option selected></option>
+
+          {#each presets as item, index}
+
+          <option>{item.name}</option>
+          {/each}
+        </select>
+      </div>
       </div>
     </div>
 
@@ -179,13 +254,14 @@ function clearSequencerLine(index){
 
 
     <div class="sequencer mb-2">
-    {#each data as item, index}
-
+    {#each song as item, index}
+      <div>
         <div class="sequencer-line" on:click={(event)=>selectSequencerLine(event, index)} class:sequencer-line-selected='{index===selected}'>
         <!-- <button class="sequencer-line-selector" on:click={(event)=>selectSequencerLine(event, index)}></button> -->
           <span class="sequencer-line-number">#{index+1}</span>
           <DrumLine data={item.data} {parts} {beats} {sequence}/>
         </div>
+      </div>
 
     {/each}
     </div>
@@ -204,7 +280,7 @@ function clearSequencerLine(index){
         <div class="col">
           <div class="form-group">
             <small class="form-text text-muted">Octave</small>
-            <select class="d-inline-block form-control form-control-sm" bind:value={data[selected].octave} id="exampleFormControlSelect1">
+            <select class="d-inline-block form-control form-control-sm" bind:value={song[selected].octave} id="exampleFormControlSelect1">
               <option value={1}>1</option>
               <option value={2}>2</option>
               <option value={3}>3</option>
@@ -218,7 +294,7 @@ function clearSequencerLine(index){
         <div class="col">
           <div class="form-group">
             <small class="form-text text-muted">Note</small>
-            <select class="d-inline-block form-control form-control-sm" bind:value={data[selected].note} id="exampleFormControlSelect1">
+            <select class="d-inline-block form-control form-control-sm" bind:value={song[selected].note} id="exampleFormControlSelect1">
               <option value="A">A</option>
               <option value="B">B</option>
               <option value="C">C</option>

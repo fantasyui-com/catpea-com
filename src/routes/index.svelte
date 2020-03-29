@@ -28,21 +28,75 @@ const videos = {
 }
 
 
+let research = [
 
+  {date:'2020-03-29T13:14:44.761Z', html:`Well, I've noticed the UI is not loading on my cheap mobile tablet. And the dropdowns I use for everything look ugly, plus they are hard to consistently style across different browsers and devices. UI needs a new strategy. Now, I will leave the LOFI Sequencer in, I won't make radical changes to it. But, time has come to think about a new GUI technology. `},
 
+  {date:'2020-03-21T20:14:25.929Z', html:'Updated Warrior Book and Videos'},
 
-let news = [
+  {date:'2020-02-05T00:33:31.100Z', html:'Updated the <a href="https://fantasyui-com.github.io/neumorphism/" rel="noopener noreferrer" target="_blank" class="text-warning">Neumorphism</a> tool with support for mobile/tablet and light source direction.'},
+  {date:'2020-02-03T01:48:18.732Z', html:'Created a tool for updating the book and Cat Pea GUI <a href="https://fantasyui-com.github.io/neumorphism/" rel="noopener noreferrer" target="_blank" class="text-warning">Neumorphism</a>'},
+
+  {date:'2020-01-31T04:07:32.063Z', html:'Hee Haw, what a ride, I split the user Interface components used in <a href="/warrior" class="text-warning">The Warrior Book</a> from <a href="https://github.com/fantasyui-com/catpea-com" rel="noopener noreferrer" target="_blank" class="text-warning">Cat Pea Code</a> and created a creatively named stand-alone project: <a href="https://fantasyui-com.github.io/book-gui/?path=/story/widgets--illustration" rel="noopener noreferrer" target="_blank" class="text-warning">book-gui</a>'},
+
+  {date:'2020-01-28T03:34:30.737Z', html:'Added <a href="/warrior" class="text-warning">The Warrior Book</a> to the main menu. It is a complicated effort as the book was converted to a pure data file, and now needs components to render the data. It made the book very portable, but there are a couple of broken internal links, and perhaps a bug or two.'},
+
+  {date:'2020-01-25T01:01:25.484Z', html:'The Squirrel Expert System can hide topics that the user already discussed. Squirrel\'s mind can be configured via Preferences pane. Added warning to anomalous IQ settings. Added secondary directives.'},
+
+  {date:'2020-01-24T14:39:17.606Z', html:'Added Squirrel AI.'},
+  {date:'2020-01-24T02:11:52.327Z', html:'Added Squirrel <div class="shake shake-force">' + octicons.squirrel.toSVG({ "class": "fill-white", height: 56  }) + '</div>'},
+  {date:'2020-01-24T02:06:48.327Z', html:'Improved news readability.'},
+  {date:'2020-01-24T01:34:33.923Z', html:'Added prev/next navigation to random videos.'},
+  {date:'2020-01-24T01:16:31.658Z', html:'Continued exploring potential for component re-usability. <a href="https://svelte.dev/" rel="noopener noreferrer" target="_blank">Svelte\'s</a> <a href="https://sapper.svelte.dev/" rel="noopener noreferrer" target="_blank">Sapper</a> is following WebComponents where templating is concerned (I can reference same slot multiple times), CSS module isolation works great, metaprogramming HTML with {#if}{:else}{/if} is fine. It does beat <a href="https://markojs.com/" rel="noopener noreferrer" target="_blank">Marko</a>, <a href="https://reactjs.org/" rel="noopener noreferrer" target="_blank">React</a> and <a href="https://vuejs.org/" rel="noopener noreferrer" target="_blank">Vue</a>.'},
+  {date:'2020-01-24T00:51:10.250Z', html:'Added Autopause to Random Video player, improved its randomness.'},
+  {date:'2020-01-23T01:46:22.215Z', html:'Made the little news squirrels shake when a user pokes at them. <div class="shake shake-force pull-right">' + octicons.squirrel.toSVG({ "class": "fill-white"}) + '</div>'},
+  {date:'2020-01-23T01:07:38.773Z', html:'Testing component composition by generalizing Bodybuilding Advice Preferences Pane into a <a href="https://github.com/fantasyui-com/catpea-com/blob/0b3dd8426cc0cdcf9ade924293489c3f63996fd1/src/containers/PreferenceCard.svelte#L46" rel="noopener noreferrer" target="_blank">generic reusable container</a>. Employing the container in <a href="https://github.com/fantasyui-com/catpea-com/blob/0b3dd8426cc0cdcf9ade924293489c3f63996fd1/src/components/News.svelte#L45" rel="noopener noreferrer" target="_blank">News component</a>.'},
   {date:'2020-01-22T03:38:19.680Z', html:'Improved the randomness of Bodybuilding Advice. Items begin repeating after about 84 selections. I added a tiny little sub-progress bar to show when the system will reset, re-shuffle, and begin parading the newly re-shuffled list.'},
   {date:'2020-01-22T03:23:19.680Z', html:'Added Preferences Pane to Bodybuilding Advice. Bodybuilding Advice is meant to serve as a starting point for more complex components.'},
-  {date:'2020-01-22T03:22:19.680Z', html:'Testing <a href="https://octicons.github.com/" rel="noopener noreferrer" target="_blank">octicons</a>. I love the ' + octicons.squirrel.toSVG({ "class": "fill-white", "width": 45 }) + ' icon.'},
+  {date:'2020-01-22T03:22:19.680Z', html:'Testing <a href="https://octicons.github.com/" rel="noopener noreferrer" target="_blank">octicons</a>. I love the <span class="shake">' + octicons.squirrel.toSVG({ "class": "fill-white", "width": 45 }) + '</span> icon.'}
+
 ];
 
-function recalculateTimestamps(){
-  videos.changed = moment(videos.modified).from(moment())
-  news = news.map(i=>{ i.ago = moment(i.date).from(moment()); return i; })
-}
-setInterval(recalculateTimestamps,60000)
-recalculateTimestamps();
+let news = [
+
+
+
+  {date:'2020-03-29T13:14:44.761Z', html:`Captain's Log: Day Thirteen of Quarantine; still staring at my screen, hanging on for dear life to my spleen as I drink another coffee bean, trying, trying not to create a scene, dancing dressed red outside my window; during quarantine.`},
+  {date:'2020-03-29T11:14:44.761Z', html:` The birds are going wild outside my window, probably because of all the Plump <span class="shake shake-force">${octicons.squirrel.toSVG()}</span> Squirrels I've been feeding. Dammit.`},
+
+  {date:'2020-03-28T22:31:17.209Z', html:'Captain\'s Log, Day Twelve of Quarantine. I ordered some trailmix from the internet, mailman dropped it off by the door and all the local Squirrels I\'ve been feeding came over, ripped the box open, and ate it. How rude, I probably shoudn\'t have been feeding them all this time. I continue my work on the little LOFI Beat Sequencer, I am searching for an easy UI configuration, that is also fully featured (can edit a huge song), and has a huge area for configuring things beyond Octave and Note. The area that opens up below when user clicks a line number will be used for sound synthesis configuration that could be as many as 10 dropdowns. I don\'t like horizontal scrolling, this is what this test is about. But there is something wrong with Vertical Scrolling, like here in the <a href="https://www.youtube.com/watch?v=gdSslkrN1kk" rel="noopener noreferrer" target="_blank">Mod Trackers</a>, it just feels too awkward to compose a song downwards. On the other hand I don\'t want to recreate the <a href="https://www.ableton.com/en/live/" rel="noopener noreferrer" target="_blank">Ableton UI</a>, editing music this way is too slow. I\'ll probably keep creating these little UI widgets, but begin connecting them together under a common beat. This way the end result is a dashboard of easy to use musical instruments, and probably some fat <span class="shake shake-force">'+octicons.squirrel.toSVG()+'</span> squirrels.'},
+
+
+  {date:'2020-03-27T13:12:01.513Z', html:'Captains Log, Star-date Day Eleven. I connected the Beat Sequencer to Sound. Click on any of the tiny boxes and when the loop comes around the sound will fire. Tip: put a drum every four squares, and something that makes a Tsk every other square. Music is really-really simple, like language, music evolved with us, all it takes is sticks and places to hit them with. Actually we don\'t even need sticks <a href="https://youtu.be/V76psBrEypg?t=611" class="strong text-warning" rel="noopener noreferrer" target="_blank">Tuvan Singing</a> '},
+
+
+  {date:'2020-03-26T23:56:25.371Z', html:'Quarantine Day Ten. My arms grew so powerful from all the rest that I mistakenly struck myself several times. I busied myself today relearning how to handle all my amazing strength. Renamed Hash Bang to <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)" rel="noopener noreferrer" target="_blank">Shebang</a>, as it is the most commonly used variant. Begun working on a beat sequencer, and a song maker. The idea here is that Chords, Bass, Melodies can all be handled by the <a href="https://github.com/Tonejs/Tone.js/wiki/Arpeggiator" rel="noopener noreferrer" target="_blank">Arpeggiator</a>, but the beat is a bit more complex, and needs a little tool. The tool I have up today uses re-styled checkboxes, a perfect fit for the sequencer.'},
+
+
+  {date:'2020-03-25T23:33:22.740Z', html:'Captain\'s Log: Ninth Day of Quarantine: I found one more chicken, am ready for dinner. I created a small <a href="https://en.wikipedia.org/wiki/Soundboard_(computer_program)" rel="noopener noreferrer" target="_blank">Soundboard</a> for what is basically a tiny collection of LOFI Hip-Hop sounds. A tiny collection will do, because we have the the synthesizer taking care of everything else. I added some Hip sounds to the THE WARRIOR Album Single and it does sound very well. Realistically it is difficult to call it music at this point, I have all the components but there were bugs along the way. <a href="https://sapper.svelte.dev/docs#Server-side_rendering" class="text-warning" rel="noopener noreferrer" target="_blank">Svelte Sapper</a> is complicated to visualize, it pre-creates some things, meaning before I publish to the website, Sapper will create a pre-ran version of the site. When a visitor visits, the pre-ran (pre-generated static version) will then be upgraded to a real version, and replaced by now running live version. It is the correct technology, and it didn\'t get me, but it does take a moment to figure out when a bug jumps out of nowhere.'},
+
+  {date:'2020-03-24T21:11:29.310Z', html:'Captain\'s Log Supplemental: Day Eight and Half... of Quarantine. I almost finished eating my 30 day supply of Chicken, my muscles have tripled in size, and I have the strength of 300. I begun releasing a New Album entitled <strong class="text-white">THE WARRIOR</strong> Inspired by <a href="https://www.youtube.com/results?search_query=Tron+Legacy" class="strong text-warning" rel="noopener noreferrer" target="_blank">TRON</a> and <a href="https://www.youtube.com/watch?v=mVxLhy1v-xU" class="text-warning" rel="noopener noreferrer" target="_blank">LOFI Hip-Hop</a>.'},
+
+  {date:'2020-03-24T15:18:57.286Z', html:'Added mp3 preview for the Sciurine Song. You can also <a href="sciurine.mp3" class="text-warning" rel="noopener noreferrer" target="_blank">download</a> it (Public Domain License).'},
+
+
+  {date:'2020-03-24T13:36:42.106Z', html:'Captain\'s Log: Eighth day of the quarantine. I have extended the Sciurine Instrumental Section with a Beautiful Thin Saw (a Sciurine Favorite) and a powerful Electric Cello backing a <a href="https://github.com/Tonejs/Presets/blob/gh-pages/instrument/Synth/TreeTrunk.json" rel="noopener noreferrer" target="_blank">Tree Trunk</a> Synth. As nothing like this has ever been heard on Planet Earth before, the song has risen all the way to the very top of Shire Lyre Squire Squirrel Choir charts and is expected to stay there permanently, forever.'},
+
+  {date:'2020-03-24T00:46:35.352Z', html:'On the Seventh Day of Quarantine I Added Tremolo (<a href="https://en.wikipedia.org/wiki/Low-frequency_oscillation" rel="noopener noreferrer" target="_blank">LFO</a> effect) to the  Sciurines in Memphis song (it is used in the second movement [middle of the song]), and made our imaginary band a sick medieval logo. All my generative music uses <a href="https://en.wikipedia.org/wiki/Scientific_pitch_notation" rel="noopener noreferrer" target="_blank">Scientific Pitch Notation</a>, take that Mozart. It looks like the CPU requirements are too high for mobile devices, small price to pay for a taste of Medieval <a href="https://www.dictionary.com/browse/sciurine" rel="noopener noreferrer" target="_blank">Sciurine</a> Pop. <a href="https://www.quora.com/On-GitHub-what-is-the-significance-of-the-Ship-It-squirrel?share=1" rel="noopener noreferrer" target="_blank">Ship it!</a>'},
+
+  {date:'2020-03-23T20:32:49.019Z', html:'Added High Fidelity mode for Dehydration in Memphis, it should be possible to [almost] play it on mobile now (need a speedy CPU), though it is kind of not the point. The real value in the HD toggle is hearing the actual Synthesizer without any HD filters.'},
+  {date:'2020-03-23T13:41:42.846Z', html:'Added membrane synth (Drums) to the Dehydration in Memphis Generative Album (It sounds like the <a href="https://en.wikipedia.org/wiki/Terminator_(character)" rel="noopener noreferrer" target="_blank">T-800</a> is collaborating with the <a href="http://www.scp-wiki.net/scp-2050" rel="noopener noreferrer" target="_blank">Sciurine Poor-Fellows</a>, and he\'s good.)'},
+
+  {date:'2020-03-22T20:14:25.929Z', html:`Day Six of Quarantine:
+  Created a New Autogenerative Music Widget and disguised it as an immature <a href="https://www.dictionary.com/browse/sciurine" rel="noopener noreferrer" target="_blank">Sciurine</a> Urine joke.
+  The technology is extremely advanced.
+  I am for the first time in forever connecting virtual synthesizers through a <a href="https://tonejs.github.io/docs/13.8.25/Reverb" rel="noopener noreferrer" target="_blank">Reverb Convolver</a>.
+  This reshapes the Synthesized Sounds, the synthesizer waveform, into a more realistic sounding instrument. Reverb just about does it, if Commodore 64 came with a decent reverb it would sound amazing, nothing like chiptunes.
+  I have gotten used to breaking up my Generative Music into movements, and the initial song comes with 24 measures, where evey eight measures I do something interesting with the higher pitched instruments.
+  For the most part I fell like using A Basic <a href="https://github.com/Tonejs/Tone.js/wiki/Arpeggiator" rel="noopener noreferrer" target="_blank">Arpeggiator</a> for everything, I am yet to test it with real world sound samples (digital sound recordings as opposed to synthesizer based sounds.)`}
+
+
+]
 
 </script>
 
@@ -63,7 +117,11 @@ recalculateTimestamps();
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
 
     <div class="col pb-3">
-    <News/>
+    <News {news} icon="squirrel" title="Captain's Log" items="100"/>
+    </div>
+
+    <div class="col pb-3">
+    <News news={research} icon="mortar-board" title="Research Blog" items="10"/>
     </div>
 
     <div class="col pb-3">
@@ -119,13 +177,21 @@ recalculateTimestamps();
     <BodybuildingAdvice/>
     </div>
 
-
-
-
+    <div class="col pb-3">
+    <RandomVideo duration="40"/>
+    </div>
 
 
     <div class="col pb-3">
+    <BodybuildingAdvice/>
+    </div>
+
+    <div class="col pb-3">
     <RandomVideo duration="40"/>
+    </div>
+
+    <div class="col pb-3">
+    <BodybuildingAdvice/>
     </div>
 
 
