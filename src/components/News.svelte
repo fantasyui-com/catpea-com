@@ -94,7 +94,7 @@
               <span class="shake">{@html octicons[icon].toSVG()}</span>
             </div>
             <div class="col">
-              <div class="text-muted">{@html item.html}</div>
+              <div class="text-info">{@html item.html}</div>
               <div class="text-right"><span class="badge badge-secondary">{item.ago}</span></div>
             </div>
           </div>

@@ -28,7 +28,10 @@ const videos = {
 }
 
 
+
 let research = [
+
+  {date:'2020-03-29T20:10:34.833Z', html:'Yah, I need new GUI technologies, the browser stuff is old and brittle. I am looking to <a href="https://www.google.com/search?q=zbrush+gui&tbm=isch" rel="noopener noreferrer" target="_blank" class="text-warning">ZBrush</a> and <a href="https://www.google.com/search?q=photoshop+gui&tbm=isch" rel="noopener noreferrer" target="_blank" class="text-warning">Photoshop</a>. Just at a glance I can see I need more spacing, more dark, and above all collapsible panels. Working on nicer preset selector. <figure class="figure"> <img src="research/gui1.png" class="figure-img img-fluid rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">GUI Ideas</figcaption> </figure>'},
 
   {date:'2020-03-29T13:14:44.761Z', html:`Well, I've noticed the UI is not loading on my cheap mobile tablet. And the dropdowns I use for everything look ugly, plus they are hard to consistently style across different browsers and devices. UI needs a new strategy. Now, I will leave the LOFI Sequencer in, I won't make radical changes to it. But, time has come to think about a new GUI technology. `},
 
@@ -182,8 +185,9 @@ let news = [
     </div>
 
 
+
     <div class="col pb-3">
-    <BodybuildingAdvice/>
+    <RandomVideo duration="40"/>
     </div>
 
     <div class="col pb-3">
@@ -191,9 +195,8 @@ let news = [
     </div>
 
     <div class="col pb-3">
-    <BodybuildingAdvice/>
+    <RandomVideo duration="40"/>
     </div>
-
 
 
 

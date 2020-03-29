@@ -1,17 +1,18 @@
 <script>
 
-import { onMount } from 'svelte';
-import  Tone from "tone";
+import Tone from "tone";
+import { onMount, beforeUpdate, afterUpdate } from 'svelte';
 import octicons from 'octicons';
 import DrumLine from '../controls/DrumLine.svelte';
-
 import sampler from '../devices/sampler.js';
 
 let song = [];
+
 $: bpm = 160;
 $: parts = 4;
 $: beats = 4;
 let beatBuffer = 4*8;
+
 
 function expandNotation(str){
   const response = [];
@@ -36,7 +37,6 @@ function expandNotation(str){
 }
 
 
-
 // https://docs.google.com/spreadsheets/d/19_3BxUMy3uy1Gb0V8Wc-TcG7q16Amfn6e8QVw4-HuD0/edit#gid=0
 let presets = [
   {
@@ -51,6 +51,7 @@ let presets = [
     ]
   }
 ]
+
 function loadPreset(event){
   console.log( event.target.value );
   const targets = presets.filter(i=>i.name==event.target.value);
@@ -125,39 +126,20 @@ function schedule(){
 onMount(async () => {
 
   instrument = await sampler();
-  song = dataGenerator(4);
-
   const synth = new Tone.Synth().toMaster()
-
-
-  // setInterval(()=>{
-  //   sequence++
-  //   if(sequence == parts*beats){
-  //     sequence = 0;
-  //   }
-  //   for(let item of data ){
-  //     if(item.data[sequence].enabled){
-  //       instrument.triggerAttackRelease(item.note+item.octave, '2n');
-  //     }
-  //   }
-  // },(1000*60)/(140*parts));
-
-
-
+  song = dataGenerator(4);
   schedule();
+
+
 
 });
 
 function selectSequencerLine(event, index){
-
-
-      selected = index;
-
-
+  selected = index;
 }
 
 function addSequencerLine(){
-    song = song.concat(dataGenerator())
+  song = song.concat(dataGenerator())
 }
 
 function removeSequencerLine(index){
@@ -165,13 +147,14 @@ function removeSequencerLine(index){
   song[index].data = song[index].data.map(i=>{i.enabled=false; return i;});
   song = song.filter((item,localIndex)=>localIndex!=index)
 }
+
 function clearSequencerLine(index){
-
   song[index].data = song[index].data.map(i=>{i.enabled=false; return i;});
-
 }
 
 </script>
+
+
 
 <div class="card text-white bg-dark shadow">
 
