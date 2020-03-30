@@ -61,6 +61,9 @@ function get_current_component() {
 function onMount(fn) {
     get_current_component().$$.on_mount.push(fn);
 }
+function onDestroy(fn) {
+    get_current_component().$$.on_destroy.push(fn);
+}
 function setContext(key, context) {
     get_current_component().$$.context.set(key, context);
 }
@@ -2046,6 +2049,7 @@ const DrumLine = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 
 const BeatSequencer = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	let song = [];
+	let play = true;
 	let beatBuffer = 4 * 8;
 
 	const tips = [
@@ -2053,6 +2057,8 @@ const BeatSequencer = create_ssr_component(($$result, $$props, $$bindings, $$slo
 			text: `Click a box to make it emit a sound.`,
 			icon: "info"
 		},
+		{ text: `Play the song.`, icon: "play" },
+		{ text: `Stop playing.`, icon: "mute" },
 		{
 			text: `Fold a section up, to get it out of the way.`,
 			icon: "eye-closed"
@@ -2211,8 +2217,12 @@ const BeatSequencer = create_ssr_component(($$result, $$props, $$bindings, $$slo
 	function schedule() {
 		setTimeout(
 			function () {
-				incrementSequence();
-				schedule();
+				if (play) {
+					incrementSequence();
+					schedule();
+				} else {
+					sequence = 0;
+				}
 			},
 			1000 * 60 / (bpm * parts)
 		);
@@ -2223,6 +2233,10 @@ const BeatSequencer = create_ssr_component(($$result, $$props, $$bindings, $$slo
 		const synth = new Tone.Synth().toMaster();
 		song = dataGenerator(4);
 		schedule();
+	});
+
+	onDestroy(() => {
+		play = false;
 	});
 
 	let bpm = 160;
@@ -2256,7 +2270,16 @@ const BeatSequencer = create_ssr_component(($$result, $$props, $$bindings, $$slo
 
                 </div></div></div></div>
 
-    <div class="${"row my-2"}"><div class="${"col"}"><button class="${"btn btn-text btn-sm border border-secondary float-right mr-1"}" ${ "disabled" }>${octicons["trashcan"].toSVG({ "class": "fill-warning text-small" })}</button>
+    <div class="${"row my-2"}"><div class="${"col"}"><button class="${[
+		"btn btn-text btn-sm border border-secondary float-left mr-1",
+		(play ? "d-none" : "") + " " + (!play ? "d-block" : "")
+	].join(" ").trim()}">${octicons["play"].toSVG({ "class": "fill-warning text-small" })}</button>
+        <button class="${[
+		"btn btn-text btn-sm border border-secondary float-left mr-1",
+		(!play ? "d-none" : "") + " " + (play ? "d-block" : "")
+	].join(" ").trim()}">${octicons["mute"].toSVG({ "class": "fill-warning text-small" })}</button>
+
+        <button class="${"btn btn-text btn-sm border border-secondary float-right mr-1"}" ${ "disabled" }>${octicons["trashcan"].toSVG({ "class": "fill-warning text-small" })}</button>
         <button class="${"btn btn-text btn-sm border border-secondary float-right mr-1"}" ${ "disabled" }>${octicons["zap"].toSVG({ "class": "fill-warning text-small" })}</button>
         <button class="${"btn btn-text btn-sm border border-secondary float-right  mr-1"}">${octicons["plus"].toSVG({ "class": "fill-warning text-small" })}</button>
         </div></div>
@@ -2294,8 +2317,16 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 	// (new Date()).toISOString()
 	let research = [
 		{
+			date: "2020-03-30T22:15:38.600Z",
+			html: `I've been looking at the submissions in <a href="https://expo.getbootstrap.com/" rel="noopener noreferrer" target="_blank">Bootstrap Expo</a> curated by one of the original <a href="https://getbootstrap.com/" rel="noopener noreferrer" target="_blank">Bootstrap</a> developers. And I feel like the Warrior Book needs better design, and I think maybe the Workout Song Generation may benefit from being its own application. In next few weeks, perhaps, I would like to practice art general design and typography for a bit to create something as beautiful as that <a href="http://hellohappy.org/beautiful-web-type/" rel="noopener noreferrer" target="_blank" class="text-warning">Beautiful Web Type</a> demo.`
+		},
+		{
+			date: "2020-03-30T22:07:28.661Z",
+			html: `Added Stop/Play buttons to the Beat Sequencer, it just seems right. Overall, adding extras is a bad idea, but in larger programs, if there are too many extras one can add a Advanced Mode. It would work here too, but a couple of extra buttons is OK.`
+		},
+		{
 			date: "2020-03-30T20:16:36.830Z",
-			html: `<span class="text-light">THE FUTURE:</span> Well, it takes about 50 lines of code to make music, to make MP3 files with mostly randomly generated fresh sounding music. There is no server requirement, everything happens in the browser crunching math in the user's CPU. Let us make future now, not tomorrow. I will now aim to create a Workout Song generator Widget/Gadget, that upon straining the CPU a bit will poop out files that can be played on the phone during workout. <span class="text-primary">From Soundboard, to Beat Sequencer, to Song Maker.</span> You might have noticed that the Beat Sequencer started sounding too complicated for a bit, "BPM", "Parts", "Beats", "Octave", "Note", "Scientific Notation", this is one lesson I want to take away from the Sequencer, the song generator will have to be massively abstract, it will have a setting for Softness rather than Samples and Presets, it will say Advanced Workout, Intermediate Workout, instead of BPM and Beats. I'll abstract away all the music-y stuff. Yah.`
+			html: `<span class="text-light">THE FUTURE:</span> Well, it takes about 50 lines of code to make music, to make MP3 files with mostly randomly generated fresh sounding music. There is no server requirement, everything happens in the browser crunching math in the user's CPU. Let us make future now, not tomorrow. I will now aim to create a Workout Song generator Widget/Gadget, that upon straining the CPU a bit will pop out files that can be played on the phone during workout. <span class="text-primary">From Soundboard, to Beat Sequencer, to Song Maker.</span> You might have noticed that the Beat Sequencer started sounding too complicated for a bit, "BPM", "Parts", "Beats", "Octave", "Note", "Scientific Notation", this is one lesson I want to take away from the Sequencer, the song generator will have to be massively abstract, it will have a setting for Softness rather than Samples and Presets, it will say Advanced Workout, Intermediate Workout, instead of BPM and Beats. I'll abstract away all the music-y stuff. Yah.`
 		},
 		{
 			date: "2020-03-30T19:53:37.293Z",

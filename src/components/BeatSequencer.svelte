@@ -1,12 +1,17 @@
 <script>
 
 import Tone from "tone";
-import { onMount, beforeUpdate, afterUpdate } from 'svelte';
+import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
 import octicons from 'octicons';
 import DrumLine from '../controls/DrumLine.svelte';
 import sampler from '../devices/sampler.js';
 
+
+
+
 let song = [];
+
+let play = true;
 
 $: bpm = 160;
 $: parts = 4;
@@ -25,6 +30,9 @@ let notes = ["A1", "B1", "C1", "D1", "E1", "F1", "G1", "A2", "B2", "C2", "D2", "
 
 const tips = [
   {text:`Click a box to make it emit a sound.`, icon:'info'},
+  {text:`Play the song.`, icon:'play'},
+  {text:`Stop playing.`, icon:'mute'},
+
   {text:`Fold a section up, to get it out of the way.`, icon:'eye-closed'},
   {text:`Open up the presets section for some neat songs.`, icon:'settings'},
   {text:`Add more lines.`, icon:'plus'},
@@ -166,20 +174,23 @@ function incrementSequence(){
 
 function schedule(){
   setTimeout(function(){
-    incrementSequence();
-    schedule();
+    if(play){
+      incrementSequence();
+      schedule();
+    }else{
+      sequence=0;
+    }
   }, (1000*60)/(bpm*parts))
 }
 
 onMount(async () => {
-
   instrument = await sampler();
   const synth = new Tone.Synth().toMaster()
   song = dataGenerator(4);
   schedule();
-
-
-
+});
+onDestroy(() => {
+  play = false;
 });
 
 function selectSequencerLine(event, index){
@@ -333,6 +344,9 @@ function clearSequencerLine(index){
 
 
 
+
+        <button class="btn btn-text btn-sm border border-secondary float-left mr-1" class:d-none={play}  class:d-block={!play}  on:click={()=>{play=true;schedule()}}>{@html octicons['play'].toSVG({ "class": "fill-warning text-small" })}</button>
+        <button class="btn btn-text btn-sm border border-secondary float-left mr-1" class:d-none={!play} class:d-block={play}   on:click={()=>{play=false;}}>{@html octicons['mute'].toSVG({ "class": "fill-warning text-small" })}</button>
 
         <button class="btn btn-text btn-sm border border-secondary float-right mr-1" disabled={selected == null} on:click={()=>removeSequencerLine(selected)}>{@html octicons['trashcan'].toSVG({ "class": "fill-warning text-small" })}</button>
         <button class="btn btn-text btn-sm border border-secondary float-right mr-1" disabled={selected == null} on:click={()=>clearSequencerLine(selected)}>{@html octicons['zap'].toSVG({ "class": "fill-warning text-small" })}</button>
