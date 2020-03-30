@@ -81,7 +81,9 @@
   }
 }
 
-
+.d-none {
+  display: none ! important;
+}
 
 .cursor-default {
   cursor: default;
