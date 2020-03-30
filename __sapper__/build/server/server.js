@@ -318,7 +318,7 @@ const SeasonCalculator = create_ssr_component(($$result, $$props, $$bindings, $$
 
 	return `<div class="${"card text-white bg-dark shadow"}"><div class="${"card-header"}">Solstice and Equinox Calculator
   </div>
-	<div class="${"card-body py-3"}">${each(events, event => `${event.next
+  <div class="${"card-body py-3"}">${each(events, event => `${event.next
 	? `<p class="${"card-text pb-4 text-info lead"}">${escape(event.text)}</p>`
 	: `<p class="${"card-text pb-2 text-muted"}">${escape(event.text)}</p>`}`)}</div></div>`;
 });
@@ -1582,7 +1582,7 @@ const Squirrel = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 	// NOTE: you should initialize the conversation here, this is great for introductions.
 	let introduction = [
 		{
-			text: "<div class=\"shake shake-force d-inline-block d-flex justify-content-center\" style=\"fill: #c62525;\">" + octicons.squirrel.toSVG({ height: 56 }) + "</div> <div>Hello, I am Squirrel. I am an <a href=\"https://en.wikipedia.org/wiki/Expert_system\" rel=\"noopener noreferrer\" target=\"_blank\">expert-system</a>, fully capable of emulating the decision-making ability of a human expert.</div>"
+			text: "<div class=\"shake shake-force d-inline-block d-flex justify-content-center\">" + octicons.squirrel.toSVG({ height: 56, "class": "fill-danger" }) + "</div> <div>Hello, I am Squirrel. I am an <a href=\"https://en.wikipedia.org/wiki/Expert_system\" rel=\"noopener noreferrer\" target=\"_blank\">expert-system</a>, fully capable of emulating the decision-making ability of a human expert.</div>"
 		},
 		{
 			text: "Please state the nature of your emergency."
@@ -2531,6 +2531,10 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 		{}
 	)}</div>
 
+    <div class="${"col pb-3"}">${validate_component(SeasonCalculator, "SeasonCalculator").$$render($$result, {}, {}, {})}</div>
+
+    <div class="${"col pb-3"}">${validate_component(Squirrel, "Squirrel").$$render($$result, {}, {}, {})}</div>
+    
     <div class="${"col pb-3"}">${validate_component(BeatSequencer, "BeatSequencer").$$render($$result, {}, {}, {})}</div>
 
     <div class="${"col pb-3"}">${validate_component(LofiSoundboard, "LofiSoundboard").$$render($$result, {}, {}, {})}</div>
@@ -2541,7 +2545,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
 
 
-    <div class="${"col pb-3"}">${validate_component(Squirrel, "Squirrel").$$render($$result, {}, {}, {})}</div>
+
 
 
     <div class="${"col pb-3"}"><div class="${"card text-white bg-dark shadow"}"><a${add_attribute("href", videos.url, 0)}><img${add_attribute("src", videos.img, 0)} class="${"card-img-top"}"${add_attribute("alt", videos.name, 0)}></a>
@@ -2552,7 +2556,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
 
 
-    <div class="${"col pb-3"}">${validate_component(SeasonCalculator, "SeasonCalculator").$$render($$result, {}, {}, {})}</div>
+
 
     <div class="${"col pb-3"}">${validate_component(SongBeatCalculator, "SongBeatCalculator").$$render($$result, {}, {}, {})}</div>
 

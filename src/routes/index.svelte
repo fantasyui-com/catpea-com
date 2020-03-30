@@ -158,6 +158,14 @@ let news = [
     </div>
 
     <div class="col pb-3">
+    <SeasonCalculator/>
+    </div>
+
+    <div class="col pb-3">
+    <Squirrel/>
+    </div>
+    
+    <div class="col pb-3">
     <BeatSequencer/>
     </div>
 
@@ -175,9 +183,7 @@ let news = [
 
 
 
-    <div class="col pb-3">
-    <Squirrel/>
-    </div>
+
 
 
     <div class="col pb-3">
@@ -194,9 +200,7 @@ let news = [
 
 
 
-    <div class="col pb-3">
-    <SeasonCalculator/>
-    </div>
+
 
     <div class="col pb-3">
     <SongBeatCalculator/>

@@ -67,7 +67,7 @@ setInterval(function(){
   <div class="card-header">
     Solstice and Equinox Calculator
   </div>
-	<div class="card-body py-3">
+  <div class="card-body py-3">
 
 
     {#each events as event}
@@ -79,5 +79,5 @@ setInterval(function(){
     {/each}
 
 
-	</div>
+  </div>
 </div>
