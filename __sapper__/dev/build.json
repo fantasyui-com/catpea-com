@@ -2,22 +2,22 @@
   "bundler": "rollup",
   "shimport": "1.0.1",
   "assets": {
-    "main": "client.bbd8017a.js"
+    "main": "client.c656d22d.js"
   },
   "css": {
-    "main": "main.3920675784.css",
+    "main": "main.2541348062.css",
     "chunks": {
       "index.svelte": [
-        "client.bbd8017a.css"
+        "client.c656d22d.css"
       ],
       "warrior.svelte": [
-        "client.bbd8017a.css"
+        "client.c656d22d.css"
       ],
       "video.svelte": [
-        "client.bbd8017a.css"
+        "client.c656d22d.css"
       ],
       "big.svelte": [
-        "client.bbd8017a.css"
+        "client.c656d22d.css"
       ]
     }
   }

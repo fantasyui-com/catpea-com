@@ -19,7 +19,7 @@ $gray-900: #212529 !default;
 
 $additive: #2b1c0f;
 $additive: #056179;
-$additive-percentage: 30%;
+$additive-percentage: 20%;
 $additive-percentage-gray: 30%;
 
 $gray-100: mix($additive, #f8f9fa, $additive-percentage-gray);
@@ -84,7 +84,6 @@ $colors: map-merge(
 );
 
 $primary:       $orange !default;
-$primary:       $orange !default; //+
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -93,11 +92,11 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
-$primary:        mix($additive, $blue, $additive-percentage);
-$success:        mix($additive, $green, $additive-percentage);
-$info:           mix($additive, $cyan, $additive-percentage);
-$warning:        mix($additive, $yellow, $additive-percentage);
-$danger:         mix($additive, $red, $additive-percentage);
+$primary:        mix($additive, $primary, $additive-percentage);
+$success:        mix($additive, $success, $additive-percentage);
+$info:           mix($additive, $info, $additive-percentage);
+$warning:        mix($additive, $warning, $additive-percentage);
+$danger:         mix($additive, $danger, $additive-percentage);
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
