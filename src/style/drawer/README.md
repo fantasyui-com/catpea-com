@@ -14,7 +14,7 @@
   <div class="drawer-title">
     <span class="drawer-label">Hello World</span>
     <span class="drawer-toggle">
-      <svg width="256" height="256" class="octicon octicon-primitive-square" viewBox="0 0 8 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M8 12H0V4h8v8z"></path></svg>
+      <svg ... ><path fill-rule="evenodd" d="M8 12H0V4h8v8z"></path></svg>
     </span>
   </div>
   <div class="drawer-body small text-info">
