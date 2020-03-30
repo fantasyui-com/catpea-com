@@ -214,21 +214,21 @@ function clearSequencerLine(index){
      <div class="row">
       <div class="col">
 
-      <div class="section-panel">
-        <div class="p-1 clearfix cursor-pointer panel-title" on:click={()=>showHelp=!showHelp}>
-          <div class="d-inline text-warning float-left pl-1">Help</div>
-          <div class="d-inline text-warning float-right pr-1">
+      <div class="drawer">
+        <div class="drawer-title" on:click={()=>showHelp=!showHelp}>
+          <span class="drawer-label">Help</span>
+          <span class="drawer-toggle">
           {#if showHelp}
           {@html octicons['fold-up'].toSVG({ "class": "fill-warning" })}
           {:else}
           {@html octicons['fold-down'].toSVG({ "class": "fill-warning" })}
           {/if}
-          </div>
+          </span>
         </div>
-        <div class="small text-info panel-body px-3 pt-2 pb-3" class:collapsed={!showHelp}>
+        <div class="drawer-body small text-info " class:collapsed={!showHelp}>
          {#each tips as item, index}
           <div class="mb-2 px-1">
-          <span class="section-panel-icon">{@html octicons[item.icon].toSVG({ "class": "fill-light" })}</span>
+          <span style="display: inline-block; min-width: 1.2rem;">{@html octicons[item.icon].toSVG({ "class": "fill-light" })}</span>
           {item.text}
           </div>
         {/each}
@@ -242,24 +242,30 @@ function clearSequencerLine(index){
 
     <div class="row">
       <div class="col py-2">
+      <div class="drawer">
+        <div class="drawer-title" on:click={()=>showLineProperties=!showLineProperties}>
+          <span class="drawer-label">Presets</span>
+          <span class="drawer-toggle">
+          {#if showHelp}
+          {@html octicons['fold-up'].toSVG({ "class": "fill-warning" })}
+          {:else}
+          {@html octicons['fold-down'].toSVG({ "class": "fill-warning" })}
+          {/if}
+          </span>
+        </div>
+        <div class="drawer-body small text-info " class:collapsed={!showLineProperties}>
+        {#each presets as item, index}
+         <div  class="cursor-pointer mb-2 bg-hover-dark px-1" on:click={()=>loadPresetByIndex(index)}>
+           <span class="">{item.name}</span>
+           <span class="text-muted">{item.bpm}BPM {item.parts}/{item.beats}</span>
+         </div>
+       {/each}
+        </div>
+      </div>
 
-<!--
-      <div class="form-group">
-        <small class="form-text text-warning">Presets</small>
-        <select class="form-control form-control-sm" on:change={loadPreset}>
-          <option selected></option>
 
-          {#each presets as item, index}
-
-          <option>{item.name}</option>
-          {/each}
-        </select>
-      </div> -->
-
-
-
-      <div class="section-panel">
-        <div class="p-1 clearfix cursor-pointer panel-title" on:click={()=>showLineProperties=!showLineProperties}>
+      <!-- <div class="section-drawer">
+        <div class="p-1 clearfix cursor-pointer drawer-title" on:click={()=>showLineProperties=!showLineProperties}>
           <div class="d-inline text-warning float-left pl-1">Presets</div>
           <div class="d-inline text-warning float-right pr-1">
           {#if showLineProperties}
@@ -269,7 +275,7 @@ function clearSequencerLine(index){
           {/if}
           </div>
         </div>
-        <div class="small panel-body px-3 pt-2 pb-3" class:collapsed={!showLineProperties}>
+        <div class="small drawer-body px-3 pt-2 pb-3" class:collapsed={!showLineProperties}>
          {#each presets as item, index}
           <div  class="cursor-default mb-2 bg-hover-dark px-1" on:click={()=>loadPresetByIndex(index)}>
             <span class="">{item.name}</span>
@@ -277,7 +283,7 @@ function clearSequencerLine(index){
           </div>
         {/each}
         </div>
-      </div>
+      </div> -->
 
     </div>
     </div>
