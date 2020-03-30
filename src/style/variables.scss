@@ -18,7 +18,7 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 
 $additive: #2b1c0f;
-$additive: #054749;
+$additive: #056179;
 $additive-percentage: 30%;
 $additive-percentage-gray: 30%;
 
@@ -83,7 +83,7 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $blue !default;
+$primary:       $orange !default;
 $primary:       $orange !default; //+
 $secondary:     $gray-600 !default;
 $success:       $green !default;
@@ -141,7 +141,7 @@ $escaped-characters: (
 
 $enable-caret:                                true !default;
 $enable-rounded:                              true !default;
-$enable-shadows:                              false !default;
+$enable-shadows:                              true !default;
 $enable-gradients:                            false !default;
 $enable-transitions:                          true !default;
 $enable-prefers-reduced-motion-media-query:   true !default;

@@ -48,3 +48,64 @@
 @import "../../node_modules/bootstrap/scss/spinners";
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/print";
+
+
+// .card {
+//   background: repeating-linear-gradient(45deg, transparentize($gray-600,0.96), transparentize($gray-600,0.96) 10px, transparentize($gray-700,0.96) 10px, transparentize($gray-700,0.96) 20px);
+// }
+
+.section-panel {
+  border: 2px solid $gray-900;
+  box-shadow: inset 0 5px 12px 1px darken($gray-900,4%);
+}
+
+.section-panel-icon {
+    display: inline-block;
+    min-width: 1.2rem;
+}
+
+.panel-title {
+
+}
+
+.panel-body {
+
+  overflow:hidden;
+   height:auto;
+}
+.panel-body.collapsed {
+  height:0 ! important;
+  margin:0 ! important;
+  padding:0 ! important;
+}
+
+
+
+@each $color, $value in $theme-colors {
+  ".fill-#{$color}" {
+    fill: $value;
+  }
+}
+
+
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+
+
+.bg-hover-light:hover {
+    border-radius: .25rem;
+    background-color: $gray-100;
+}
+
+.bg-hover-dark:hover {
+    border-radius: .25rem;
+    background-color: $gray-900;
+}

@@ -13,6 +13,23 @@ $: parts = 4;
 $: beats = 4;
 let beatBuffer = 4*8;
 
+$: showLineProperties = false;
+$: showHelp = true;
+
+const tips = [
+  {text:`Click a box to make it emit a sound.`, icon:'info'},
+  {text:`Fold a section up, to get it out of the way.`, icon:'fold-up'},
+  {text:`Open up the presets section for some neat songs.`, icon:'fold-down'},
+  {text:`Add more lines.`, icon:'plus'},
+  {text:`Click a line number to select and configure it.`, icon:'info'},
+  {text:`Clear all sounds in a selected line.`, icon:'zap'},
+  {text:`Delete selected line.`, icon:'trashcan'},
+]
+
+
+
+
+
 
 function expandNotation(str){
   const response = [];
@@ -32,7 +49,7 @@ function expandNotation(str){
       response.push({ beat,part,enabled });
     }
   }
-  console.log(response);
+  //console.log(response);
   return response;
 }
 
@@ -40,8 +57,19 @@ function expandNotation(str){
 // https://docs.google.com/spreadsheets/d/19_3BxUMy3uy1Gb0V8Wc-TcG7q16Amfn6e8QVw4-HuD0/edit#gid=0
 let presets = [
   {
-    name: 'Billie Jean Meow Mix',
+    name: 'Billie Jean',
     bpm: 120,
+    beats:4,
+    parts:4,
+    song: [
+      {label:'Kick'      , device:'lofi', octave:4, note:'E', data:expandNotation('1000 0000 1000 0000')},
+      {label:'Snare'     , device:'lofi', octave:5, note:'E', data:expandNotation('0000 1000 0000 1000')},
+      {label:'Closed Hat', device:'lofi', octave:6, note:'C', data:expandNotation('1010 1010 1010 1010')},
+    ]
+  },
+  {
+    name: 'Billie Jean Meow Mix',
+    bpm: 140,
     beats:8,
     parts:4,
     song: [
@@ -53,7 +81,7 @@ let presets = [
 ]
 
 function loadPreset(event){
-  console.log( event.target.value );
+  //console.log( event.target.value );
   const targets = presets.filter(i=>i.name==event.target.value);
   if(targets.length){
     let selection = targets[0];
@@ -61,9 +89,21 @@ function loadPreset(event){
     beats = selection.beats;
     parts = selection.parts;
     song = JSON.parse(JSON.stringify(selection.song))
-    console.log(song);
+    //console.log(song);
     event.target.value = 0;
   }
+ }
+
+function loadPresetByIndex(index){
+
+    let selection = presets[index];
+    bpm = selection.bpm;
+    beats = selection.beats;
+    parts = selection.parts;
+    song = JSON.parse(JSON.stringify(selection.song))
+    //console.log(song);
+    event.target.value = 0;
+
  }
 
 
@@ -173,20 +213,39 @@ function clearSequencerLine(index){
 
      <div class="row">
       <div class="col">
-        <div class="text-muted small">
-          Click inside a box to make it emit a sound.
-          Click {@html octicons['plus'].toSVG({ "class": "fill-white text-small" })} to add more lines.
-          Click a line number to select and configure it.
+
+      <div class="section-panel">
+        <div class="p-1 clearfix cursor-pointer panel-title" on:click={()=>showHelp=!showHelp}>
+          <div class="d-inline text-warning float-left pl-1">Help</div>
+          <div class="d-inline text-warning float-right pr-1">
+          {#if showHelp}
+          {@html octicons['fold-up'].toSVG({ "class": "fill-warning" })}
+          {:else}
+          {@html octicons['fold-down'].toSVG({ "class": "fill-warning" })}
+          {/if}
+          </div>
         </div>
+        <div class="small text-info panel-body px-3 pt-2 pb-3" class:collapsed={!showHelp}>
+         {#each tips as item, index}
+          <div class="mb-2 px-1">
+          <span class="section-panel-icon">{@html octicons[item.icon].toSVG({ "class": "fill-light" })}</span>
+          {item.text}
+          </div>
+        {/each}
+        </div>
+      </div>
+
+
+
       </div>
     </div>
 
     <div class="row">
-      <div class="col">
+      <div class="col py-2">
 
-
+<!--
       <div class="form-group">
-      <small class="form-text text-warning">Presets</small>
+        <small class="form-text text-warning">Presets</small>
         <select class="form-control form-control-sm" on:change={loadPreset}>
           <option selected></option>
 
@@ -195,8 +254,32 @@ function clearSequencerLine(index){
           <option>{item.name}</option>
           {/each}
         </select>
+      </div> -->
+
+
+
+      <div class="section-panel">
+        <div class="p-1 clearfix cursor-pointer panel-title" on:click={()=>showLineProperties=!showLineProperties}>
+          <div class="d-inline text-warning float-left pl-1">Presets</div>
+          <div class="d-inline text-warning float-right pr-1">
+          {#if showLineProperties}
+          {@html octicons['fold-up'].toSVG({ "class": "fill-warning" })}
+          {:else}
+          {@html octicons['fold-down'].toSVG({ "class": "fill-warning" })}
+          {/if}
+          </div>
+        </div>
+        <div class="small panel-body px-3 pt-2 pb-3" class:collapsed={!showLineProperties}>
+         {#each presets as item, index}
+          <div  class="cursor-default mb-2 bg-hover-dark px-1" on:click={()=>loadPresetByIndex(index)}>
+            <span class="">{item.name}</span>
+            <span class="text-muted">{item.bpm}BPM {item.parts}/{item.beats}</span>
+          </div>
+        {/each}
+        </div>
       </div>
-      </div>
+
+    </div>
     </div>
 
     <div class="row my-2">

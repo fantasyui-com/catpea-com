@@ -4,15 +4,16 @@
 }
 
 .sequencer-line {
+  min-width: 100%;
   border-radius: .25rem;
   padding: 0;
+  padding-right: 1rem;
   display: inline-block; // this is required for the backgrounf to properly display, in block more it gets cut-off at where content woudl have wrapped
-
   white-space: nowrap;
+}
 
-  @include hover-focus() {
-    background-color: $gray-600;
-  }
+.sequencer-line:hover {
+  background-color: $gray-700;
 }
 
 // .sequencer-line-selector {
@@ -39,7 +40,7 @@
 // }
 
 .sequencer-line-selected {
-  background-color: $gray-700;
+  background-color: $gray-600;
 }
 
 
@@ -53,7 +54,7 @@
   height:15px;
 
   margin:0px;
-  vertical-align: sub;
+  //vertical-align: sub;
 }
 .sequencer-check {
   display: inline-block;
