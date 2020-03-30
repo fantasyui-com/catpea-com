@@ -15,6 +15,7 @@ let beatBuffer = 4*8;
 
 $: showLineProperties = false;
 $: showHelp = true;
+$: showSongStructure = false;
 
 const tips = [
   {text:`Click a box to make it emit a sound.`, icon:'info'},
@@ -212,7 +213,7 @@ function clearSequencerLine(index){
     </div>
 
      <div class="row">
-      <div class="col">
+      <div class="col py-2">
 
       <div class="drawer">
         <div class="drawer-title" on:click={()=>showHelp=!showHelp}>
@@ -242,6 +243,7 @@ function clearSequencerLine(index){
 
     <div class="row">
       <div class="col py-2">
+
       <div class="drawer">
         <div class="drawer-title" on:click={()=>showLineProperties=!showLineProperties}>
           <span class="drawer-label">Presets</span>
@@ -263,27 +265,66 @@ function clearSequencerLine(index){
         </div>
       </div>
 
+    </div>
+    </div>
 
-      <!-- <div class="section-drawer">
-        <div class="p-1 clearfix cursor-pointer drawer-title" on:click={()=>showLineProperties=!showLineProperties}>
-          <div class="d-inline text-warning float-left pl-1">Presets</div>
-          <div class="d-inline text-warning float-right pr-1">
-          {#if showLineProperties}
-          {@html octicons['fold-up'].toSVG({ "class": "fill-warning" })}
-          {:else}
-          {@html octicons['fold-down'].toSVG({ "class": "fill-warning" })}
-          {/if}
-          </div>
-        </div>
-        <div class="small drawer-body px-3 pt-2 pb-3" class:collapsed={!showLineProperties}>
-         {#each presets as item, index}
-          <div  class="cursor-default mb-2 bg-hover-dark px-1" on:click={()=>loadPresetByIndex(index)}>
-            <span class="">{item.name}</span>
-            <span class="text-muted">{item.bpm}BPM {item.parts}/{item.beats}</span>
-          </div>
-        {/each}
-        </div>
-      </div> -->
+    <div class="row">
+      <div class="col py-2">
+
+
+            <div class="drawer">
+              <div class="drawer-title" on:click={()=>showSongStructure=!showSongStructure}>
+                <span class="drawer-label">Structure</span>
+                <span class="drawer-toggle">
+                {#if showHelp}
+                {@html octicons['fold-up'].toSVG({ "class": "fill-warning" })}
+                {:else}
+                {@html octicons['fold-down'].toSVG({ "class": "fill-warning" })}
+                {/if}
+                </span>
+              </div>
+              <div class="drawer-body small text-info " class:drawer-closed={!showSongStructure}>
+
+                <div class="form-group">
+                  <select class="d-inline form-control form-control-sm" bind:value={bpm} id="exampleFormControlSelect1">
+                    <option value={95}>95 BPM</option>
+                    <option value={100}>100 BPM</option>
+                    <option value={120}>120 BPM</option>
+                    <option value={140}>140 BPM</option>
+                    <option value={160}>160 BPM</option>
+                    <option value={190}>190 BPM</option>
+                  </select>
+                </div>
+
+                <div class="alert alert-danger" role="alert">
+                  Altering Beats per Measure and Parts per Beat is buggy because that changes the fundamentals of a song setup for a different beat/step.
+                  I believe that is an indication that the following two fatures are outside of the scope of this little widget.
+                  Now, it is still possible to alter things, but ONLY, ONLY, by loading a preset that is 16 Beats per Measure or 2 Parts per Beat.
+                  The presets have their data properly structured, they are already pre-set for Parts & Beats; whereas, existing content in in its original mode and changing it destroys its sound, tempo, feel, and lastly the data it self.
+                </div>
+                <div class="alert alert-info" role="alert">
+                Programming is interesting, programs have currents, and to go with a current is to make a 50 line program, to go against it, is to write 1,500+ lines and it takes too much theory, too much remembering, too much documentation, for that program to be fun.
+                Interestingly, there is really no difference in 50 lines and 1,500 lines of code, outside of the larger being uncomfortable. Caring for a 50 line program, and writing a 1,500 line program, takes the same amount of time.
+                </div>
+
+                <div class="form-group">
+                  <select class="d-inline form-control form-control-sm" bind:value={beats} id="exampleFormControlSelect1">
+                    <option value={4}>4 Beats per Measure</option>
+                    <option value={8}>8 Beats per Measure</option>
+                    <option value={16}>16 Beats per Measure</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <select class="d-inline form-control form-control-sm" bind:value={parts} id="exampleFormControlSelect1">
+                    <option value={2}>2 Parts per Beat</option>
+                    <option value={4}>4 Parts per Beat</option>
+                    <option value={8}>8 Parts per Beat</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
 
     </div>
     </div>
@@ -291,31 +332,8 @@ function clearSequencerLine(index){
     <div class="row my-2">
       <div class="col">
 
-      <!-- <div class="input-group input-group-sm float-left" style="width: 6rem;">
-        <input type="text" class="form-control bg-dark text-warning border-secondary" style="width: 3rem;" placeholder="90-190" aria-label="Recipient's username" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-          <span class="input-group-text bg-dark text-light border-secondary" id="basic-addon2">BPM</span>
-        </div>
-      </div> -->
 
-      <div class="form-group float-left">
-        <select class="d-inline-block form-control form-control-sm" bind:value={bpm} id="exampleFormControlSelect1">
-          <option value={95}>95 BPM</option>
-          <option value={100}>100 BPM</option>
-          <option value={120}>120 BPM</option>
-          <option value={140}>140 BPM</option>
-          <option value={160}>160 BPM</option>
-          <option value={190}>190 BPM</option>
-        </select>
-      </div>
 
-      <div class="form-group float-left">
-        <select class="d-inline-block form-control form-control-sm" bind:value={beats} id="exampleFormControlSelect1">
-          <option value={4}>4 Beats</option>
-          <option value={8}>8 Beats</option>
-          <option value={16}>16 Beats</option>
-        </select>
-      </div>
 
         <button class="btn btn-text btn-sm border border-secondary float-right mr-1" disabled={selected == null} on:click={()=>removeSequencerLine(selected)}>{@html octicons['trashcan'].toSVG({ "class": "fill-white text-small" })}</button>
         <button class="btn btn-text btn-sm border border-secondary float-right mr-1" disabled={selected == null} on:click={()=>clearSequencerLine(selected)}>{@html octicons['zap'].toSVG({ "class": "fill-white text-small" })}</button>

@@ -2239,7 +2239,7 @@ const BeatSequencer = create_ssr_component(($$result, $$props, $$bindings, $$slo
 
   <div class="${"card-body"}"><div class="${"row"}"><div class="${"col small text-muted"}"></div></div>
 
-     <div class="${"row"}"><div class="${"col"}"><div class="${"drawer"}"><div class="${"drawer-title"}"><span class="${"drawer-label"}">Help</span>
+     <div class="${"row"}"><div class="${"col py-2"}"><div class="${"drawer"}"><div class="${"drawer-title"}"><span class="${"drawer-label"}">Help</span>
           <span class="${"drawer-toggle"}">${ `${octicons["fold-up"].toSVG({ "class": "fill-warning" })}`
 	}</span></div>
         <div class="${["drawer-body small text-info ",  ""].join(" ").trim()}">${each(tips, (item, index) => `<div class="${"mb-2 px-1"}"><span style="${"display: inline-block; min-width: 1.2rem;"}">${octicons[item.icon].toSVG({ "class": "fill-light" })}</span>
@@ -2251,18 +2251,27 @@ const BeatSequencer = create_ssr_component(($$result, $$props, $$bindings, $$slo
 	}</span></div>
         <div class="${["drawer-body small text-info ",  "drawer-closed" ].join(" ").trim()}">${each(presets, (item, index) => `<div class="${"cursor-pointer mb-2 bg-hover-dark px-1"}"><span class="${""}">${escape(item.name)}</span>
            <span class="${"text-muted"}">${escape(item.bpm)}BPM ${escape(item.parts)}/${escape(item.beats)}</span>
-         </div>`)}</div></div>
+         </div>`)}</div></div></div></div>
 
+    <div class="${"row"}"><div class="${"col py-2"}"><div class="${"drawer"}"><div class="${"drawer-title"}"><span class="${"drawer-label"}">Structure</span>
+                <span class="${"drawer-toggle"}">${ `${octicons["fold-up"].toSVG({ "class": "fill-warning" })}`
+	}</span></div>
+              <div class="${["drawer-body small text-info ",  "drawer-closed" ].join(" ").trim()}"><div class="${"form-group"}"><select class="${"d-inline form-control form-control-sm"}" id="${"exampleFormControlSelect1"}"${add_attribute("value", bpm, 1)}><option${add_attribute("value", 95, 0)}>95 BPM</option><option${add_attribute("value", 100, 0)}>100 BPM</option><option${add_attribute("value", 120, 0)}>120 BPM</option><option${add_attribute("value", 140, 0)}>140 BPM</option><option${add_attribute("value", 160, 0)}>160 BPM</option><option${add_attribute("value", 190, 0)}>190 BPM</option></select></div>
 
-      </div></div>
+                <div class="${"alert alert-danger"}" role="${"alert"}">Altering Beats per Measure and Parts per Beat is buggy because that changes the fundamentals of a song setup for a different beat/step.
+                  I believe that is an indication that the following two fatures are outside of the scope of this little widget.
+                  Now, it is still possible to alter things, but ONLY, ONLY, by loading a preset that is 16 Beats per Measure or 2 Parts per Beat.
+                  The presets have their data properly structured, they are already pre-set for Parts &amp; Beats; whereas, existing content in in its original mode and changing it destroys its sound, tempo, feel, and lastly the data it self.
+                </div>
+                <div class="${"alert alert-info"}" role="${"alert"}">Programming is interesting, programs have currents, and to go with a current is to make a 50 line program, to go against it, is to write 1,500+ lines and it takes too much theory, too much remembering, too much documentation, for that program to be fun.
+                Interestingly, there is really no difference in 50 lines and 1,500 lines of code, outside of the larger being uncomfortable. Caring for a 50 line program, and writing a 1,500 line program, takes the same amount of time.
+                </div>
 
-    <div class="${"row my-2"}"><div class="${"col"}">
+                <div class="${"form-group"}"><select class="${"d-inline form-control form-control-sm"}" id="${"exampleFormControlSelect1"}"${add_attribute("value", beats, 1)}><option${add_attribute("value", 4, 0)}>4 Beats per Measure</option><option${add_attribute("value", 8, 0)}>8 Beats per Measure</option><option${add_attribute("value", 16, 0)}>16 Beats per Measure</option></select></div>
 
-      <div class="${"form-group float-left"}"><select class="${"d-inline-block form-control form-control-sm"}" id="${"exampleFormControlSelect1"}"${add_attribute("value", bpm, 1)}><option${add_attribute("value", 95, 0)}>95 BPM</option><option${add_attribute("value", 100, 0)}>100 BPM</option><option${add_attribute("value", 120, 0)}>120 BPM</option><option${add_attribute("value", 140, 0)}>140 BPM</option><option${add_attribute("value", 160, 0)}>160 BPM</option><option${add_attribute("value", 190, 0)}>190 BPM</option></select></div>
+                <div class="${"form-group"}"><select class="${"d-inline form-control form-control-sm"}" id="${"exampleFormControlSelect1"}"${add_attribute("value", parts, 1)}><option${add_attribute("value", 2, 0)}>2 Parts per Beat</option><option${add_attribute("value", 4, 0)}>4 Parts per Beat</option><option${add_attribute("value", 8, 0)}>8 Parts per Beat</option></select></div></div></div></div></div>
 
-      <div class="${"form-group float-left"}"><select class="${"d-inline-block form-control form-control-sm"}" id="${"exampleFormControlSelect1"}"${add_attribute("value", beats, 1)}><option${add_attribute("value", 4, 0)}>4 Beats</option><option${add_attribute("value", 8, 0)}>8 Beats</option><option${add_attribute("value", 16, 0)}>16 Beats</option></select></div>
-
-        <button class="${"btn btn-text btn-sm border border-secondary float-right mr-1"}" ${ "disabled" }>${octicons["trashcan"].toSVG({ "class": "fill-white text-small" })}</button>
+    <div class="${"row my-2"}"><div class="${"col"}"><button class="${"btn btn-text btn-sm border border-secondary float-right mr-1"}" ${ "disabled" }>${octicons["trashcan"].toSVG({ "class": "fill-white text-small" })}</button>
         <button class="${"btn btn-text btn-sm border border-secondary float-right mr-1"}" ${ "disabled" }>${octicons["zap"].toSVG({ "class": "fill-white text-small" })}</button>
         <button class="${"btn btn-text btn-sm border border-secondary float-right  mr-1"}">${octicons["plus"].toSVG({ "class": "fill-white text-small" })}</button>
         </div></div>
@@ -2973,18 +2982,18 @@ const Nav = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 
 	if ($$props.segment === void 0 && $$bindings.segment && segment !== void 0) $$bindings.segment(segment);
 
-	return `<nav class="${"navbar navbar-expand-lg navbar-light bg-secondary shadow text-white\tmb-3 rounded-sm"}"><a class="${"navbar-brand"}" href="${"."}"><img src="${"cats/cat-01.png"}" alt="${"Logo Image"}"></a>
+	return `<nav class="${"navbar navbar-expand-lg navbar-light bg-dangers shadow-lg border-bottom border-dark text-white\tmb-3 rounded-sm"}"><a class="${"navbar-brand"}" href="${"."}"><img src="${"cats/cat-01.png"}" alt="${"Logo Image"}"></a>
 
   <button class="${"navbar-toggler"}" type="${"button"}"><span class="${"navbar-toggler-icon"}"></span></button>
 
-  <div class="${["navbar-collapse",  "collapse" ].join(" ").trim()}"><ul class="${"navbar-nav mr-auto"}"><li class="${["nav-item", segment === undefined ? "selected" : ""].join(" ").trim()}"><a class="${"nav-link"}" href="${"."}">Home <span class="${"sr-only"}">(current)</span></a></li>
+  <div class="${["navbar-collapse",  "collapse" ].join(" ").trim()}"><ul class="${"navbar-nav mr-auto"}"><li class="${["nav-item", segment === undefined ? "selected" : ""].join(" ").trim()}"><a class="${"nav-link text-primary"}" href="${"."}">Home <span class="${"sr-only"}">(current)</span></a></li>
 
       
       
 
-      <li class="${["nav-item", segment === "video" ? "selected" : ""].join(" ").trim()}"><a class="${"nav-link"}" href="${"/video?p=0&i=8"}">Video Library <span class="${"sr-only"}">(current)</span></a></li>
+      <li class="${["nav-item", segment === "video" ? "selected" : ""].join(" ").trim()}"><a class="${"nav-link text-primary"}" href="${"/video?p=0&i=8"}">Video Library <span class="${"sr-only"}">(current)</span></a></li>
 
-      <li class="${["nav-item", segment === "warrior" ? "selected" : ""].join(" ").trim()}"><a class="${"nav-link"}" href="${"/warrior"}">The Warrior Book <span class="${"sr-only"}">(current)</span></a></li>
+      <li class="${["nav-item", segment === "warrior" ? "selected" : ""].join(" ").trim()}"><a class="${"nav-link text-primary"}" href="${"/warrior"}">The Warrior Book <span class="${"sr-only"}">(current)</span></a></li>
 
 
 

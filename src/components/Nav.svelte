@@ -19,7 +19,7 @@
 
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-secondary shadow text-white	mb-3 rounded-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-dangers shadow-lg border-bottom border-dark text-white	mb-3 rounded-sm">
   <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
 
   <button class="navbar-toggler" type="button" on:click={handleCollapse}>
@@ -30,7 +30,7 @@
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item" class:selected='{segment === undefined}'>
-        <a class="nav-link" href=".">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-primary" href=".">Home <span class="sr-only">(current)</span></a>
       </li>
 
       <!-- for the stream link, we're using rel=prefetch so that Sapper prefetches
@@ -42,11 +42,11 @@
       -->
 
       <li class="nav-item" class:selected='{segment === "video"}'>
-        <a class="nav-link" href="/video?p=0&i=8">Video Library <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-primary" href="/video?p=0&i=8">Video Library <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item" class:selected='{segment === "warrior"}'>
-        <a class="nav-link" href="/warrior">The Warrior Book <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-primary" href="/warrior">The Warrior Book <span class="sr-only">(current)</span></a>
       </li>
 
 <!--
