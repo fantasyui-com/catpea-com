@@ -66,6 +66,8 @@ let news = [
 
 
 
+  {date:'2020-03-30T13:11:22.278Z', html:`Captain's Log: Day Fourteen of Quarantine; All the local squirrels now hold me in high esteem. They feel munchies to extreme, but the trailmix they stole is gone, flurries of the box still scattered on my lawn. Squirrels, now crazed, and withdrawn. Peanuts on their mind, because mail delivery was ill timed. <sup><small>Why am I like this?</small></sup>`},
+
   {date:'2020-03-29T13:14:44.761Z', html:`Captain's Log: Day Thirteen of Quarantine; still staring at my screen, hanging on for dear life to my spleen as I drink another coffee bean, trying, trying not to create a scene, dancing dressed red outside my window; during quarantine.`},
   {date:'2020-03-29T11:14:44.761Z', html:` The birds are going wild outside my window, probably because of all the Plump <span class="shake shake-force">${octicons.squirrel.toSVG()}</span> Squirrels I've been feeding. Dammit.`},
 
