@@ -225,7 +225,7 @@ function clearSequencerLine(index){
           {/if}
           </span>
         </div>
-        <div class="drawer-body small text-info " class:collapsed={!showHelp}>
+        <div class="drawer-body small text-info " class:drawer-closed={!showHelp}>
          {#each tips as item, index}
           <div class="mb-2 px-1">
           <span style="display: inline-block; min-width: 1.2rem;">{@html octicons[item.icon].toSVG({ "class": "fill-light" })}</span>
@@ -253,7 +253,7 @@ function clearSequencerLine(index){
           {/if}
           </span>
         </div>
-        <div class="drawer-body small text-info " class:collapsed={!showLineProperties}>
+        <div class="drawer-body small text-info " class:drawer-closed={!showLineProperties}>
         {#each presets as item, index}
          <div  class="cursor-pointer mb-2 bg-hover-dark px-1" on:click={()=>loadPresetByIndex(index)}>
            <span class="">{item.name}</span>

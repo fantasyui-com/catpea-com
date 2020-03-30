@@ -1,0 +1,32 @@
+.drawer {
+  border: 1px solid $gray-900;
+  box-shadow: inset 0px 22px 34px -4px transparentize($gray-900, 0.2);
+  border-radius: .2rem;
+}
+
+.drawer-title {
+  padding: .25rem;
+  cursor: pointer;
+}
+
+.drawer-label {
+  color: $light;
+  padding-left: .25rem;
+}
+
+.drawer-toggle {
+  color: $orange;
+  float:right;
+  padding-right: .25rem;
+}
+
+.drawer-body {
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.drawer-body.drawer-closed {
+  height:0 ! important;
+  margin:0 ! important;
+  padding:0 ! important;
+}
