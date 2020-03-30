@@ -60,9 +60,11 @@
   display: inline-block;
   -webkit-appearance: none;
 
-  border: 1px solid $gray-600;
+  background: darken($gray-500,30%);
+  border: 1px solid darken($gray-500,10%);
 
-  background-color: $gray-500;
+
+
   border-radius: 0px;
 
   width:15px;
@@ -70,21 +72,23 @@
 
   padding: 2px;
   margin:0px;
+  margin-right: 1px;
 
   vertical-align: middle;
 
 }
 .sequencer-check.odd{
-  background-color: $gray-700;
+  background: darken($gray-500,20%);
+  border: 1px solid darken($gray-500,10%);
 }
 
-.sequencer-check.active{
+.sequencer-check.active, .sequencer-check.odd.active{
   border-color: $gray-300;
 }
 .sequencer-check.divider{
-  margin-right: 1px;
+  margin-right: 8px;
 }
 .sequencer-check:checked{
   background:$primary;
-  border-color: $primary;
+  border-color: lighten($primary,10%);
 }
