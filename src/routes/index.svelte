@@ -1,5 +1,7 @@
 <script>
 
+import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
+
 import octicons from 'octicons';
 import moment from "moment";
 
@@ -18,6 +20,7 @@ import BeatSequencer from '../components/BeatSequencer.svelte';
 //import SongBuilder from '../components/SongBuilder.svelte';
 
 
+
 const videos = {
   modified: '2020-01-25T13:52:05.520Z',
   changed: 'recently',
@@ -28,13 +31,40 @@ const videos = {
 }
 
 
+
+const linkDatabase = {
+  'Beat Sequencer Source': 'https://github.com/fantasyui-com/catpea-com/blob/master/src/components/BeatSequencer.svelte',
+  'Bootstrap Expo': 'https://expo.getbootstrap.com/',
+  'Bootstrap': 'https://getbootstrap.com/',
+};
+
 // (new Date()).toISOString()
+
 let research = [
 
-  {date:'2020-03-31T15:36:24.127Z', html:`I have added slide-open/slide-closed animation to the drawer in Shebang Slash Beat Sequencer, when opening one of the drawers, instead of contents appearing instantly they slide in vertically. I am not a fan of animation of this kind in GUI world, but everybody seems to be doing it, and if I am to develop a Bootstrap Theme for possible sales, I need to make sure all my designs cooperate nicely with <a href="https://svelte.dev/examples#transition" rel="noopener noreferrer" target="_blank">Svelte's transition directives</a>.`},
+  {
+    date:'2020-03-31T19:24:44.147Z',
+    html:`Cleaned up the [Beat Sequencer Source Code] it is actually simpler than it looks.`,
+    link: {
+      'Beat Sequencer Source Code': 'https://github.com/fantasyui-com/catpea-com/blob/master/src/components/BeatSequencer.svelte',
+    }
+  },
 
+  {
+    date: '2020-03-31T15:36:24.127Z',
+    html: `I have added slide-open/slide-closed animation to the drawer in Shebang Slash Beat Sequencer, when opening one of the drawers, instead of contents appearing instantly they slide in vertically. I am not a fan of animation of this kind in GUI world, but everybody seems to be doing it, and if I am to develop a Bootstrap Theme for possible sales, I need to make sure all my designs cooperate nicely with [Svelte's Transition Directives].`,
+    link:{
+      'Svelte\'s Transition Directives': 'https://svelte.dev/examples#transition',
+    }
+  },
 
-  {date:'2020-03-30T22:15:38.600Z', html:`I've been looking at the submissions in <a href="https://expo.getbootstrap.com/" rel="noopener noreferrer" target="_blank">Bootstrap Expo</a> curated by one of the original <a href="https://getbootstrap.com/" rel="noopener noreferrer" target="_blank">Bootstrap</a> developers. And I feel like the Warrior Book needs better design, and I think maybe the Workout Song Generation may benefit from being its own application. In next few weeks, perhaps, I would like to practice art general design and typography for a bit to create something as beautiful as that <a href="http://hellohappy.org/beautiful-web-type/" rel="noopener noreferrer" target="_blank" class="text-warning">Beautiful Web Type</a> demo.`},
+  {
+    date: '2020-03-30T22:15:38.600Z',
+    html: `I've been looking at the submissions in [Bootstrap Expo] curated by one of the original [Bootstrap] developers. And I feel like the Warrior Book needs better design, and I think maybe the Workout Song Generation may benefit from being its own application. In next few weeks, perhaps, I would like to practice art general design and typography for a bit to create something as beautiful as that [Beautiful Web Type] demo.`,
+    link:{
+      'Beautiful Web Type': 'http://hellohappy.org/beautiful-web-type'
+    }
+},
 
   {date:'2020-03-30T22:07:28.661Z', html:`Added Stop/Play buttons to the Beat Sequencer, it just seems right. Overall, adding extras is a bad idea, but in larger programs, if there are too many extras one can add a Advanced Mode. It would work here too, but a couple of extra buttons is OK.`},
 
@@ -50,12 +80,7 @@ let research = [
 
   {date:'2020-03-30T15:54:36.578Z', html:'Github, the company hosting the site, and the site it self is becoming sluggish, so I am opening a new experiment. I am going to add control over loading resources. For example the Shebang Slash soundboard will come with a Start or Load button, the .mp3 samples that it loads will only start loading into the browser when Start/Load is pressed. &middot; Eventually I would like to make a website for creating workout music, so stuff like resource control will come in really handy dandy. If CATPEA goes down it is because GitHub broke some promise, I\'ll be back up within a couple of days.'},
 
-
-  {date:'2020-03-30T14:55:21.933Z', html:`I named the panel I've been poking at <a href="https://github.com/fantasyui-com/catpea-com/tree/master/src/style/drawer" rel="noopener noreferrer" target="_blank" class="text-warning">drawer</a>. You can take a look at the graphical configuration in CSS language <a href="https://github.com/fantasyui-com/catpea-com/blob/master/src/style/drawer/drawer.scss" rel="noopener noreferrer" target="_blank" class="text-warning">here</a>. I am learning to make components for <a href="https://getbootstrap.com/" rel="noopener noreferrer" target="_blank">Bootstrap</a> this has been a hobby of mine for many years now. It feels nice to be making progress here. I still need to create a configuration section that stores all the sizing/color information, with descriptions and such. The <a href="https://github.com/fantasyui-com/catpea-com/tree/master/src/style/drawer" rel="noopener noreferrer" target="_blank" class="text-warning">drawer page</a> shows examples of how to use the Drawer, that language is called HTML. <a href="https://getbootstrap.com/" rel="noopener noreferrer" target="_blank">Bootstrap</a> developers would frown on my work thus far because the drawer component can almost be made in another way, they actually have similar things. But I am thinking about creating components for a <a href="https://www.google.com/search?q=Digital+Audio+Workstation&tbm=isch" rel="noopener noreferrer" target="_blank" class="text-warning">Digital Audio Workstation (DAW)</a> like <a href="https://www.ableton.com/en/live/" rel="noopener noreferrer" target="_blank">Ableton</a>, right now the drawer is not impressive, but it will evolve beyond what Bootstrap can do. Already I am thinking that I should not use colors, but rather transparent shadows, so whatever color is in the background the drawer will inherit it automatically. <a href="https://getbootstrap.com/" rel="noopener noreferrer" target="_blank">Bootstrap</a> creates flat/raised things, and my additions may end up being graphically sunken. Plus, <a href="https://getbootstrap.com/" rel="noopener noreferrer" target="_blank">Bootstrap</a> creates structure, and I use it for layout and containers. They don't really create content that is specific for some purpose (like my DAW), they limit themselves to general purpose things. They do sell themes, and if I ever completed this project, they may accept mine into their store. I have much more to learn, and I still have to get used to their way of doing things.`},
-
-
-
-
+  {date:'2020-03-30T14:55:21.933Z', html:`I named the panel I've been poking at <a href="https://github.com/fantasyui-com/catpea-com/tree/master/src/style/drawer" rel="noopener noreferrer" target="_blank" class="text-warning">drawer</a>. You can take a look at the graphical configuration in CSS language <a href="https://github.com/fantasyui-com/catpea-com/blob/master/src/style/drawer/drawer.scss" rel="noopener noreferrer" target="_blank" class="text-warning">here</a>. I am learning to make components for [Bootstrap] this has been a hobby of mine for many years now. It feels nice to be making progress here. I still need to create a configuration section that stores all the sizing/color information, with descriptions and such. The <a href="https://github.com/fantasyui-com/catpea-com/tree/master/src/style/drawer" rel="noopener noreferrer" target="_blank" class="text-warning">drawer page</a> shows examples of how to use the Drawer, that language is called HTML. [Bootstrap] developers would frown on my work thus far because the drawer component can almost be made in another way, they actually have similar things. But I am thinking about creating components for a <a href="https://www.google.com/search?q=Digital+Audio+Workstation&tbm=isch" rel="noopener noreferrer" target="_blank" class="text-warning">Digital Audio Workstation (DAW)</a> like <a href="https://www.ableton.com/en/live/" rel="noopener noreferrer" target="_blank">Ableton</a>, right now the drawer is not impressive, but it will evolve beyond what Bootstrap can do. Already I am thinking that I should not use colors, but rather transparent shadows, so whatever color is in the background the drawer will inherit it automatically. [Bootstrap] creates flat/raised things, and my additions may end up being graphically sunken. Plus, [Bootstrap] creates structure, and I use it for layout and containers. They don't really create content that is specific for some purpose (like my DAW), they limit themselves to general purpose things. They do sell themes, and if I ever completed this project, they may accept mine into their store. I have much more to learn, and I still have to get used to their way of doing things.`},
 
   {date:'2020-03-30T00:37:57.352Z', html:`Added a collapsible panel to the Shebang Slash Beat Sequencer. It looks good, works OK. I will need to do a lot of configuration work before I can use it throughout. But this is the right path, this is where I will ${octicons.squirrel.toSVG({"class":"fill-light"})} away all the complexity, it will be a simple UI, but also contain all kinds of features a click away.`},
 
@@ -163,6 +188,42 @@ let news = [
 
 
 ]
+
+function updateLinks(item, entryId){
+    if(item.link){
+      Object.keys(item.link).forEach(function(key){
+        if(item.link[key]){
+          const regexp = new RegExp(`\\[${key}\\]`,'g');
+          item.html = item.html.replace(regexp,`<a href="${item.link[key]}" rel="noopener noreferrer" target="_blank">${key}</a>`);
+        }
+      });
+    };
+    Object.keys(linkDatabase).forEach(function(key){
+      if(linkDatabase[key]){
+        const regexp = new RegExp(`\\[${key}\\]`,'g');
+        item.html = item.html.replace(regexp,`<a href="${linkDatabase[key]}" rel="noopener noreferrer" target="_blank">${key}</a>`);
+      }
+    });
+    return item;
+};
+
+onMount(async () => {
+
+
+    research = research.map(updateLinks);
+    news = news.map(updateLinks);
+
+      // Object.keys(research.link).forEach(function(key){
+      //   if(item.link[key]){
+      //     const regexp = new RegExp(`\\[${key}\\]`,'g');
+      //     item.html = item.html.replace(regexp,`<a href="${item.link[key]}" rel="noopener noreferrer" target="_blank">${key}</a>`);
+      //   }
+      // });
+
+    //});
+
+  //})
+});
 
 </script>
 
