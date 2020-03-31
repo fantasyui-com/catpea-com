@@ -39,7 +39,10 @@ const tips = [
 ]
 
 
+// TODO: add more presets from
 // https://docs.google.com/spreadsheets/d/19_3BxUMy3uy1Gb0V8Wc-TcG7q16Amfn6e8QVw4-HuD0/edit#gid=0
+// https://learningmusic.ableton.com/chords/get-up-stand-up.html
+
 let presets = [
   {
     name: 'Billie Jean',
