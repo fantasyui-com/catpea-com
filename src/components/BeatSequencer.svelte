@@ -1,15 +1,15 @@
 <script>
 
-import Tone from "tone";
-
 import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
-import { fade, slide } from 'svelte/transition';
 
-import octicons from 'octicons';
+import Drawer from '../containers/Drawer.svelte';
+import Icon from '../controls/Icon.svelte';
 import DrumLine from '../controls/DrumLine.svelte';
+
 import sampler from '../devices/sampler.js';
 
-
+import Tone from "tone";
+import octicons from 'octicons';
 
 
 let song = [];
@@ -237,7 +237,16 @@ function clearSequencerLine(index){
      <div class="row">
       <div class="col py-2">
 
-      <div class="drawer">
+      <Drawer title="Help" opened>
+        {#each tips as item, index}
+          <div class="mb-2 px-1">
+            <span style="display: inline-block; min-width: 1.2rem;"><Icon name={item.icon} context="light"/></span>
+            <span class="small text-info">{item.text}</span>
+          </div>
+        {/each}
+      </Drawer>
+
+      <!-- <div class="drawer">
         <div class="drawer-title" on:click={()=>showHelp=!showHelp}>
           <span class="drawer-label">Help</span>
           <span class="drawer-toggle">
@@ -248,7 +257,6 @@ function clearSequencerLine(index){
           {/if}
           </span>
         </div>
-
         {#if showHelp}
           <div class="drawer-body small text-info" transition:slide>
             {#each tips as item, index}
@@ -260,7 +268,7 @@ function clearSequencerLine(index){
           </div>
         {/if}
 
-      </div>
+      </div> -->
 
 
 
@@ -270,7 +278,17 @@ function clearSequencerLine(index){
     <div class="row">
       <div class="col py-2">
 
-      <div class="drawer">
+      <Drawer title="Presets">
+        {#each presets as item, index}
+         <div  class="cursor-pointer mb-2 bg-hover-dark px-1" on:click={()=>loadPresetByIndex(index)}>
+           <span class="">{item.name}</span>
+           <span class="small text-muted">{item.bpm}BPM {item.parts}/{item.beats}</span>
+         </div>
+       {/each}
+      </Drawer>
+
+
+      <!-- <div class="drawer">
         <div class="drawer-title" on:click={()=>showLineProperties=!showLineProperties}>
           <span class="drawer-label">Presets</span>
           <span class="drawer-toggle">
@@ -291,7 +309,7 @@ function clearSequencerLine(index){
        {/each}
         </div>
         {/if}
-      </div>
+      </div> -->
 
     </div>
     </div>
@@ -299,7 +317,19 @@ function clearSequencerLine(index){
     <div class="row">
       <div class="col py-2">
 
-
+      <Drawer title="Tempo">
+        <div class="form-group">
+          <select class="d-inline form-control form-control-sm" bind:value={bpm} id="exampleFormControlSelect1">
+            <option value={95}>95 BPM</option>
+            <option value={100}>100 BPM</option>
+            <option value={120}>120 BPM</option>
+            <option value={140}>140 BPM</option>
+            <option value={160}>160 BPM</option>
+            <option value={190}>190 BPM</option>
+          </select>
+        </div>
+      </Drawer>
+      <!--
             <div class="drawer">
               <div class="drawer-title" on:click={()=>showSongStructure=!showSongStructure}>
                 <span class="drawer-label">Song Properties</span>
@@ -343,9 +373,9 @@ function clearSequencerLine(index){
                   </select>
                 </div> -->
 
-              </div>
+              <!-- </div>
               {/if}
-            </div>
+            </div> --> -->
 
     </div>
     </div>
@@ -383,7 +413,21 @@ function clearSequencerLine(index){
     <div class="row">
       <div class="col py-2">
 
-        <div class="drawer">
+
+      <Drawer title="Instrument">
+        <div class="row">
+          <div class="col p-0 text-center">
+            {#each notes as note, index}
+              <button class="mb-1 btn btn-sm small p-1" class:btn-secondary={(song[selected].note+song[selected].octave != note)} class:btn-primary={(song[selected].note+song[selected].octave == note)} on:click={()=> { song[selected].octave = parseInt(note.split('')[1]); song[selected].note = note.split('')[0]; } }>{note}</button>
+              {#if ((index+1) % 7*9) === 0}
+                <br>
+              {/if}
+            {/each}
+          </div>
+        </div>
+      </Drawer>
+
+        <!-- <div class="drawer">
 
           <div class="drawer-title" on:click={()=>showInstrumentSettings=!showInstrumentSettings}>
             <span class="drawer-label">Instrument</span>
@@ -398,18 +442,17 @@ function clearSequencerLine(index){
           {#if showInstrumentSettings}
           <div class="drawer-body" transition:slide>
           <!-- <p class="lead">Configuration for row #{selected+1}</p> -->
-
+<!--
           <div class="row">
             <div class="col p-0 text-center">
-                 {#each notes as note, index}
-                  <button class="mb-1 btn btn-sm small p-1" class:btn-secondary={(song[selected].note+song[selected].octave != note)} class:btn-primary={(song[selected].note+song[selected].octave == note)} on:click={()=> { song[selected].octave = parseInt(note.split('')[1]); song[selected].note = note.split('')[0]; } }>{note}</button>
-                  {#if ((index+1) % 7*9) === 0}
+              {#each notes as note, index}
+                <button class="mb-1 btn btn-sm small p-1" class:btn-secondary={(song[selected].note+song[selected].octave != note)} class:btn-primary={(song[selected].note+song[selected].octave == note)} on:click={()=> { song[selected].octave = parseInt(note.split('')[1]); song[selected].note = note.split('')[0]; } }>{note}</button>
+                {#if ((index+1) % 7*9) === 0}
                   <br>
-                  {/if}
-                {/each}
-
+                {/if}
+              {/each}
             </div>
-          </div>
+          </div> --> -->
 
           <!-- <form>
             <div class="row">
@@ -448,10 +491,10 @@ function clearSequencerLine(index){
               </div>
             </div>
           </form> -->
-
+<!--
           </div>
           {/if}
-        </div>
+        </div> -->
 
       </div>
     </div>
