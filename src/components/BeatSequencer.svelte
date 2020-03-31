@@ -1,7 +1,10 @@
 <script>
 
 import Tone from "tone";
+
 import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
+import { fade, slide } from 'svelte/transition';
+
 import octicons from 'octicons';
 import DrumLine from '../controls/DrumLine.svelte';
 import sampler from '../devices/sampler.js';
@@ -239,20 +242,24 @@ function clearSequencerLine(index){
           <span class="drawer-label">Help</span>
           <span class="drawer-toggle">
           {#if showHelp}
-          {@html octicons['eye-closed'].toSVG({ "class": "fill-warning" })}
+            {@html octicons['eye-closed'].toSVG({ "class": "fill-warning" })}
           {:else}
-          {@html octicons['settings'].toSVG({ "class": "fill-warning" })}
+            {@html octicons['settings'].toSVG({ "class": "fill-warning" })}
           {/if}
           </span>
         </div>
-        <div class="drawer-body small text-info " class:drawer-closed={!showHelp}>
-         {#each tips as item, index}
-          <div class="mb-2 px-1">
-          <span style="display: inline-block; min-width: 1.2rem;">{@html octicons[item.icon].toSVG({ "class": "fill-light" })}</span>
-          {item.text}
+
+        {#if showHelp}
+          <div class="drawer-body small text-info" transition:slide>
+            {#each tips as item, index}
+              <div class="mb-2 px-1">
+                <span style="display: inline-block; min-width: 1.2rem;">{@html octicons[item.icon].toSVG({ "class": "fill-light" })}</span>
+                {item.text}
+              </div>
+            {/each}
           </div>
-        {/each}
-        </div>
+        {/if}
+
       </div>
 
 
@@ -274,7 +281,8 @@ function clearSequencerLine(index){
           {/if}
           </span>
         </div>
-        <div class="drawer-body small text-primary" class:drawer-closed={!showLineProperties}>
+        {#if showLineProperties}
+        <div class="drawer-body small text-primary" transition:slide>
         {#each presets as item, index}
          <div  class="cursor-pointer mb-2 bg-hover-dark px-1" on:click={()=>loadPresetByIndex(index)}>
            <span class="">{item.name}</span>
@@ -282,6 +290,7 @@ function clearSequencerLine(index){
          </div>
        {/each}
         </div>
+        {/if}
       </div>
 
     </div>
@@ -302,7 +311,8 @@ function clearSequencerLine(index){
                 {/if}
                 </span>
               </div>
-              <div class="drawer-body small text-info " class:drawer-closed={!showSongStructure}>
+              {#if showSongStructure}
+              <div class="drawer-body small text-info" transition:slide>
 
                 <div class="form-group">
                   <select class="d-inline form-control form-control-sm" bind:value={bpm} id="exampleFormControlSelect1">
@@ -334,6 +344,7 @@ function clearSequencerLine(index){
                 </div> -->
 
               </div>
+              {/if}
             </div>
 
     </div>
@@ -384,14 +395,14 @@ function clearSequencerLine(index){
             {/if}
             </span>
           </div>
-
-          <div class="drawer-body" class:drawer-closed={!showInstrumentSettings}>
+          {#if showInstrumentSettings}
+          <div class="drawer-body" transition:slide>
           <!-- <p class="lead">Configuration for row #{selected+1}</p> -->
 
           <div class="row">
             <div class="col p-0 text-center">
                  {#each notes as note, index}
-                  <button class="mb-1 btn btn-sm" class:btn-secondary={(song[selected].note+song[selected].octave != note)} class:btn-primary={(song[selected].note+song[selected].octave == note)} on:click={()=> { song[selected].octave = parseInt(note.split('')[1]); song[selected].note = note.split('')[0]; } }>{note}</button>
+                  <button class="mb-1 btn btn-sm small p-1" class:btn-secondary={(song[selected].note+song[selected].octave != note)} class:btn-primary={(song[selected].note+song[selected].octave == note)} on:click={()=> { song[selected].octave = parseInt(note.split('')[1]); song[selected].note = note.split('')[0]; } }>{note}</button>
                   {#if ((index+1) % 7*9) === 0}
                   <br>
                   {/if}
@@ -439,6 +450,7 @@ function clearSequencerLine(index){
           </form> -->
 
           </div>
+          {/if}
         </div>
 
       </div>

@@ -2052,36 +2052,6 @@ const BeatSequencer = create_ssr_component(($$result, $$props, $$bindings, $$slo
 	let play = true;
 	let beatBuffer = 4 * 8;
 
-	const tips = [
-		{
-			text: `Click a box to make it emit a sound.`,
-			icon: "info"
-		},
-		{ text: `Play the song.`, icon: "play" },
-		{ text: `Stop playing.`, icon: "mute" },
-		{
-			text: `Fold a section up, to get it out of the way.`,
-			icon: "eye-closed"
-		},
-		{
-			text: `Open up the presets section for some neat songs.`,
-			icon: "settings"
-		},
-		{ text: `Add more lines.`, icon: "plus" },
-		{
-			text: `Click a line number to select and configure it.`,
-			icon: "info"
-		},
-		{
-			text: `Clear all sounds in a selected line.`,
-			icon: "zap"
-		},
-		{
-			text: `Delete selected line.`,
-			icon: "trashcan"
-		}
-	];
-
 	function expandNotation(str) {
 		const response = [];
 		const arr = str.split(" ").map(digits => digits.split("").map(i => parseInt(i)));
@@ -2252,23 +2222,16 @@ const BeatSequencer = create_ssr_component(($$result, $$props, $$bindings, $$slo
 
      <div class="${"row"}"><div class="${"col py-2"}"><div class="${"drawer"}"><div class="${"drawer-title"}"><span class="${"drawer-label"}">Help</span>
           <span class="${"drawer-toggle"}">${ `${octicons["settings"].toSVG({ "class": "fill-warning" })}`}</span></div>
-        <div class="${["drawer-body small text-info ",  "drawer-closed" ].join(" ").trim()}">${each(tips, (item, index) => `<div class="${"mb-2 px-1"}"><span style="${"display: inline-block; min-width: 1.2rem;"}">${octicons[item.icon].toSVG({ "class": "fill-light" })}</span>
-          ${escape(item.text)}
-          </div>`)}</div></div></div></div>
+
+        ${ ``}</div></div></div>
 
     <div class="${"row"}"><div class="${"col py-2"}"><div class="${"drawer"}"><div class="${"drawer-title"}"><span class="${"drawer-label"}">Presets</span>
           <span class="${"drawer-toggle"}">${ `${octicons["settings"].toSVG({ "class": "fill-warning" })}`}</span></div>
-        <div class="${["drawer-body small text-primary",  "drawer-closed" ].join(" ").trim()}">${each(presets, (item, index) => `<div class="${"cursor-pointer mb-2 bg-hover-dark px-1"}"><span class="${""}">${escape(item.name)}</span>
-           <span class="${"text-muted"}">${escape(item.bpm)}BPM ${escape(item.parts)}/${escape(item.beats)}</span>
-         </div>`)}</div></div></div></div>
+        ${ ``}</div></div></div>
 
     <div class="${"row"}"><div class="${"col py-2"}"><div class="${"drawer"}"><div class="${"drawer-title"}"><span class="${"drawer-label"}">Song Properties</span>
                 <span class="${"drawer-toggle"}">${ `${octicons["settings"].toSVG({ "class": "fill-warning" })}`}</span></div>
-              <div class="${["drawer-body small text-info ",  "drawer-closed" ].join(" ").trim()}"><div class="${"form-group"}"><select class="${"d-inline form-control form-control-sm"}" id="${"exampleFormControlSelect1"}"${add_attribute("value", bpm, 1)}><option${add_attribute("value", 95, 0)}>95 BPM</option><option${add_attribute("value", 100, 0)}>100 BPM</option><option${add_attribute("value", 120, 0)}>120 BPM</option><option${add_attribute("value", 140, 0)}>140 BPM</option><option${add_attribute("value", 160, 0)}>160 BPM</option><option${add_attribute("value", 190, 0)}>190 BPM</option></select></div>
-
-
-
-                </div></div></div></div>
+              ${ ``}</div></div></div>
 
     <div class="${"row my-2"}"><div class="${"col"}"><button class="${[
 		"btn btn-text btn-sm border border-secondary float-left mr-1",
@@ -2316,6 +2279,10 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
 	// (new Date()).toISOString()
 	let research = [
+		{
+			date: "2020-03-31T15:36:24.127Z",
+			html: `I have added slide-open/slide-closed animation to the drawer in Shebang Slash Beat Sequencer, when opening one of the drawers, instead of contents appearing instantly they slide in vertically. I am not a fan of animation of this kind in GUI world, but everybody seems to be doing it, and if I am to develop a Bootstrap Theme for possible sales, I need to make sure all my designs cooperate nicely with <a href="https://svelte.dev/examples#transition" rel="noopener noreferrer" target="_blank">Svelte's transition directives</a>.`
+		},
 		{
 			date: "2020-03-30T22:15:38.600Z",
 			html: `I've been looking at the submissions in <a href="https://expo.getbootstrap.com/" rel="noopener noreferrer" target="_blank">Bootstrap Expo</a> curated by one of the original <a href="https://getbootstrap.com/" rel="noopener noreferrer" target="_blank">Bootstrap</a> developers. And I feel like the Warrior Book needs better design, and I think maybe the Workout Song Generation may benefit from being its own application. In next few weeks, perhaps, I would like to practice art general design and typography for a bit to create something as beautiful as that <a href="http://hellohappy.org/beautiful-web-type/" rel="noopener noreferrer" target="_blank" class="text-warning">Beautiful Web Type</a> demo.`
@@ -2435,6 +2402,41 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 	];
 
 	let news = [
+		// I am trying not to hoard,
+		// but I did hide a bag in my cupboard.
+		// It will come in handy, if I run out of candy.
+		//
+		{
+			date: "2020-03-31T16:20:21.586Z",
+			html: `
+    Captain's Log: Day Fifteen of Quarantine.
+                  <p class="pt-1">
+                   Squirrels continue being mean.
+                   They just aren't very keen,
+                   On the idea,
+                   that their theft gave them diarrhea.
+
+                   I know not what to do,
+                   Darn Squirrels!
+                   that Trailmix was not for you.
+
+                   Maybe someday we'll move on,
+                   come a sunny day, carry on.
+
+                   But today, is not that day,
+                   it's just Tuesday.
+                   </p>
+
+                   <p>
+                   This is getting out of control, I don't want to be a poet anymore! I just wanted to feed the creatures I adore. Not write strange rhymes out the front door. I must stop rhyming, this is not the right timing.
+                   I feel like I've lost control,
+                   falling down a Squirrel Hole.
+                    </p>
+
+                    <p><sup><small>I swear I am not like this in real life... I can change!</small></sup></p>
+
+    `
+		},
 		{
 			date: "2020-03-30T13:11:22.278Z",
 			html: `Captain's Log: Day Fourteen of Quarantine; All the local squirrels, now hold me in high esteem. They feel munchies to extreme, but the trailmix they stole is gone, flurries of the box still scattered on my lawn. Squirrels, now crazed, and withdrawn. Peanuts on their mind, because mail delivery was ill timed. <sup><small>Why am I like this?</small></sup>`
@@ -2534,7 +2536,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
     <div class="${"col pb-3"}">${validate_component(SeasonCalculator, "SeasonCalculator").$$render($$result, {}, {}, {})}</div>
 
     <div class="${"col pb-3"}">${validate_component(Squirrel, "Squirrel").$$render($$result, {}, {}, {})}</div>
-    
+
     <div class="${"col pb-3"}">${validate_component(BeatSequencer, "BeatSequencer").$$render($$result, {}, {}, {})}</div>
 
     <div class="${"col pb-3"}">${validate_component(LofiSoundboard, "LofiSoundboard").$$render($$result, {}, {}, {})}</div>

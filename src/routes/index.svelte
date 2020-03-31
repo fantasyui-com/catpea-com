@@ -31,7 +31,7 @@ const videos = {
 // (new Date()).toISOString()
 let research = [
 
-
+  {date:'2020-03-31T15:36:24.127Z', html:`I have added slide-open/slide-closed animation to the drawer in Shebang Slash Beat Sequencer, when opening one of the drawers, instead of contents appearing instantly they slide in vertically. I am not a fan of animation of this kind in GUI world, but everybody seems to be doing it, and if I am to develop a Bootstrap Theme for possible sales, I need to make sure all my designs cooperate nicely with <a href="https://svelte.dev/examples#transition" rel="noopener noreferrer" target="_blank">Svelte's transition directives</a>.`},
 
 
   {date:'2020-03-30T22:15:38.600Z', html:`I've been looking at the submissions in <a href="https://expo.getbootstrap.com/" rel="noopener noreferrer" target="_blank">Bootstrap Expo</a> curated by one of the original <a href="https://getbootstrap.com/" rel="noopener noreferrer" target="_blank">Bootstrap</a> developers. And I feel like the Warrior Book needs better design, and I think maybe the Workout Song Generation may benefit from being its own application. In next few weeks, perhaps, I would like to practice art general design and typography for a bit to create something as beautiful as that <a href="http://hellohappy.org/beautiful-web-type/" rel="noopener noreferrer" target="_blank" class="text-warning">Beautiful Web Type</a> demo.`},
@@ -91,6 +91,39 @@ let research = [
 let news = [
 
 
+  // I am trying not to hoard,
+  // but I did hide a bag in my cupboard.
+  // It will come in handy, if I run out of candy.
+  //
+
+  {date:'2020-03-31T16:20:21.586Z', html:`
+    Captain's Log: Day Fifteen of Quarantine.
+                  <p class="pt-1">
+                   Squirrels continue being mean.
+                   They just aren't very keen,
+                   On the idea,
+                   that their theft gave them diarrhea.
+
+                   I know not what to do,
+                   Darn Squirrels!
+                   that Trailmix was not for you.
+
+                   Maybe someday we'll move on,
+                   come a sunny day, carry on.
+
+                   But today, is not that day,
+                   it's just Tuesday.
+                   </p>
+
+                   <p>
+                   This is getting out of control, I don't want to be a poet anymore! I just wanted to feed the creatures I adore. Not write strange rhymes out the front door. I must stop rhyming, this is not the right timing.
+                   I feel like I've lost control,
+                   falling down a Squirrel Hole.
+                    </p>
+
+                    <p><sup><small>I swear I am not like this in real life... I can change!</small></sup></p>
+
+    `},
 
   {date:'2020-03-30T13:11:22.278Z', html:`Captain's Log: Day Fourteen of Quarantine; All the local squirrels, now hold me in high esteem. They feel munchies to extreme, but the trailmix they stole is gone, flurries of the box still scattered on my lawn. Squirrels, now crazed, and withdrawn. Peanuts on their mind, because mail delivery was ill timed. <sup><small>Why am I like this?</small></sup>`},
 
@@ -164,7 +197,7 @@ let news = [
     <div class="col pb-3">
     <Squirrel/>
     </div>
-    
+
     <div class="col pb-3">
     <BeatSequencer/>
     </div>
