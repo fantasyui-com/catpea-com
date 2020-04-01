@@ -47,12 +47,12 @@ let research = [
 
   {
     date:'2020-04-01T00:32:07.540Z',
-    html:`I had to rotate labels on the instruments everything goes CDEFGAB instead of ABCDEFG. Sigh, music people are strange sometimes.`,
+    html:`I had to rotate labels on the instruments everything goes CDEFGAB instead of ABCDEFG. Sigh, I can't believe this is part of the [Scientific Pitch Notation] specification, music people are strange sometimes.`,
 
   },
   {
     date:'2020-04-01T00:30:07.540Z',
-    html:`Ew, lots of little  <div class="shake shake-force">${octicons.bug.toSVG({"class":"fill-light"})}</div> fixes. I made some instrument upgrades and a few code <div class="shake shake-force">${octicons.bug.toSVG({"class":"fill-danger"})}</div><div class="shake shake-force">${octicons.bug.toSVG({"class":"fill-success"})}</div><div class="shake shake-force">${octicons.bug.toSVG({"class":"fill-info"})}</div> snuck in.`,
+    html:`Ew, lots of little  <div class="shake shake-force">${octicons.bug.toSVG({"class":"fill-light"})}</div> fixes. I made some instrument upgrades and a few code <div class="shake shake-force">${octicons.bug.toSVG({"class":"fill-danger"})}</div><div class="shake shake-slow shake-force">${octicons.bug.toSVG({"class":"fill-success"})}</div><div class="shake shake-force">${octicons.bug.toSVG({"class":"fill-info"})}</div> snuck in.`,
 
   },
 

@@ -48,6 +48,11 @@ body {
   animation-timing-function: linear;
   fill: silver;
 }
+
+.shake.shake-slow {
+   animation-duration: 1.8s ! important;
+}
+
 .shake {
   display:inline-block;
   fill: gray;

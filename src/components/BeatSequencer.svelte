@@ -150,7 +150,7 @@ function itemGenerator(custom = {}) {
 function dataGenerator(items = 1) {
   let generated = [];
 
-  const notes = ['A','B','C','D','E','F','G'];
+  const notes = ['C','D','E','F','G','A','B'];
   let nodeIndex = 0;
 
   for (let item = 0; item < items; item++) {
