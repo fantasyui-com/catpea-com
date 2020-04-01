@@ -48,6 +48,9 @@
       <li class="nav-item" class:selected='{segment === "warrior"}'>
         <a class="nav-link text-primary" href="/warrior">The Warrior Book <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item" class:selected='{segment === "daw"}'>
+        <a class="nav-link text-primary invisible" href="/daw">Digital Audio Workstation <span class="sr-only">(current)</span></a>
+      </li>
 
 <!--
       <li class="nav-item" class:selected='{segment === "warrior"}'>
