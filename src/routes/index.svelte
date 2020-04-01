@@ -531,7 +531,7 @@ onMount(async () => {
     </div>
 
     <div class="col pb-3">
-    <News news={research} icon="mortar-board" title="Research Blog" items="10"/>
+    <News news={research} icon="mortar-board" title="Research Blog" items="30"/>
     </div>
 
     <div class="col pb-3">
