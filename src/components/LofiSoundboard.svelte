@@ -4,8 +4,18 @@ import octicons from 'octicons';
 import Tone from "tone";
 import sampler from '../devices/sampler.js';
 let instrument;
-let notes = ["A1", "B1", "C1", "D1", "E1", "F1", "G1", "A2", "B2", "C2", "D2", "E2", "F2", "G2", "A3", "B3", "C3", "D3", "E3", "F3", "G3", "A4", "B4", "C4", "D4", "E4", "F4", "G4", "A5", "B5", "C5", "D5", "E5", "F5", "G5", "A6", "B6", "C6", "D6", "E6", "F6", "G6"];
-
+let notes = [];
+{
+  const simple = true;
+  const minOctave = 1//-1;
+  const maxOctave = 6;
+  const collection = simple?['C','D','E','F','G','A','B']:['C','C#','D','D#','E','F','F#','G','G#','A','A#','B',];
+  for(let octave = minOctave; octave <= maxOctave; octave++){
+    for(let note = 0; note < collection.length; note++){
+    notes.push(`${collection[note]}${octave}`);
+    }
+  }
+}
 // Application State
 let loading = false;
 let ready = false;
@@ -24,7 +34,7 @@ async function play(note){
 
 async function main(){
  loading = true;
- instrument = await sampler();
+ instrument = await sampler('shebang');
  //await sleep(10000);
  loading = false;
  ready = true;
@@ -51,7 +61,7 @@ onMount(async () => {
     <div class="row">
       <div class="col p-0 text-center">
           {#each notes as note, index}
-            <button class="d-inline-block mb-1 p-2 btn btn-secondary btn-sm" disabled={!ready} on:click={()=>play(note)}>{note}</button>
+            <button class="d-inline-block mb-1 p-1 btn btn-secondary btn-sm" disabled={!ready} on:click={()=>play(note)}>{note}</button>
             {#if ((index+1) % 7*9) === 0}
             <br>
             {/if}

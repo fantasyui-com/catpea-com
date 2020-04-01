@@ -12,13 +12,25 @@ import Tone from "tone";
 import octicons from 'octicons';
 
 let beatBuffer = 4*8;
-let notes = ["A1", "B1", "C1", "D1", "E1", "F1", "G1", "A2", "B2", "C2", "D2", "E2", "F2", "G2", "A3", "B3", "C3", "D3", "E3", "F3", "G3", "A4", "B4", "C4", "D4", "E4", "F4", "G4", "A5", "B5", "C5", "D5", "E5", "F5", "G5", "A6", "B6", "C6", "D6", "E6", "F6", "G6"];
+
+let notes = [];
+{
+  const simple = true;
+  const minOctave = 1//-1;
+  const maxOctave = 9;
+  const collection = simple?['C','D','E','F','G','A','B']:['C','C#','D','D#','E','F','F#','G','G#','A','A#','B',];
+  for(let octave = minOctave; octave <= maxOctave; octave++){
+    for(let note = 0; note < collection.length; note++){
+    notes.push(`${collection[note]}${octave}`);
+    }
+  }
+}
 
 $: bpm = 160;
 $: parts = 4;
 $: beats = 4;
 
-let instrument = {};
+let instruments = {};
 let song = [];
 
 let play = true;
@@ -44,17 +56,7 @@ const tips = [
 // https://learningmusic.ableton.com/chords/get-up-stand-up.html
 
 let presets = [
-  {
-    name: 'Billie Jean',
-    bpm: 120,
-    beats:4,
-    parts:4,
-    song: [
-      {label:'Kick'      , device:'lofi', octave:4, note:'E', data:expandNotation('1000 0000 1000 0000')},
-      {label:'Snare'     , device:'lofi', octave:5, note:'E', data:expandNotation('0000 1000 0000 1000')},
-      {label:'Closed Hat', device:'lofi', octave:6, note:'C', data:expandNotation('1010 1010 1010 1010')},
-    ]
-  },
+
 
   {
     name: 'Billie Jean',
@@ -62,9 +64,9 @@ let presets = [
     beats:4,
     parts:4,
     song: [
-      {label:'Kick'      , device:'lofi', octave:4, note:'E', data:expandNotation('1000 0000 1000 0000')},
-      {label:'Snare'     , device:'lofi', octave:5, note:'E', data:expandNotation('0000 1000 0000 1000')},
-      {label:'Closed Hat', device:'lofi', octave:6, note:'C', data:expandNotation('1010 1010 1010 1010')},
+      {label:'Kick'      , instrument:'Shebang', octave:4, note:'E', data:expandNotation('1000 0000 1000 0000')},
+      {label:'Snare'     , instrument:'Shebang', octave:5, note:'E', data:expandNotation('0000 1000 0000 1000')},
+      {label:'Closed Hat', instrument:'Shebang', octave:6, note:'C', data:expandNotation('1010 1010 1010 1010')},
     ]
   },
   {
@@ -73,20 +75,30 @@ let presets = [
     beats:8,
     parts:4,
     song: [
-      {label:'Kick'      , device:'lofi', octave:4, note:'E', data:expandNotation('1000 0000 1000 0000 1000 0000 1010 0000')},
-      {label:'Snare'     , device:'lofi', octave:5, note:'E', data:expandNotation('0000 1000 0000 1000 0000 1000 0000 1000')},
-      {label:'Closed Hat', device:'lofi', octave:6, note:'C', data:expandNotation('1010 1010 1010 1010 1010 1010 1010 1010')},
+      {label:'Kick'      , instrument:'Shebang', octave:4, note:'E', data:expandNotation('1000 0000 1000 0000 1000 0000 1010 0000')},
+      {label:'Snare'     , instrument:'Shebang', octave:5, note:'E', data:expandNotation('0000 1000 0000 1000 0000 1000 0000 1000')},
+      {label:'Closed Hat', instrument:'Shebang', octave:6, note:'C', data:expandNotation('1010 1010 1010 1010 1010 1010 1010 1010')},
     ]
-  }
-]
+  },
+  {
+    name: 'Inner City, Good Life',
+    bpm: 120,
+    beats:8,
+    parts:4,
+    song: [
+      {label:'Bass 1', instrument:'Bass', octave:4, note:'B', data:expandNotation('1001 0010 0000 0000 0000 0000 0000 1010')},
+      {label:'Bass 2', instrument:'Bass', octave:4, note:'A', data:expandNotation('0000 0000 0000 0001 0101 0000 0000 0000')},
+      {label:'Bass 3', instrument:'Bass', octave:4, note:'F', data:expandNotation('0000 0000 0100 1000 0000 0000 0000 0000')},
+      {label:'Bass 3', instrument:'Bass', octave:4, note:'E', data:expandNotation('0000 0000 0000 0000 0000 0010 0101 0000')},
+    ]
+  },
+] // 0000 0000 0000 0000 0000 0000 0000 0000
 
 function expandNotation(str) {
   const response = [];
-
   const arr = str.split(' ').map(digits => digits.split('').map(i => parseInt(i)));
   const beats = arr.length;
   const parts = arr[0].length;
-
   for (let beat = 0; beat < beatBuffer; beat++) {
     for (let part = 0; part < parts; part++) {
       let enabled = false;
@@ -102,43 +114,25 @@ function expandNotation(str) {
       });
     }
   }
-  //console.log(response);
   return response;
 }
 
-function loadPreset(event) {
-  selected = null;
-  //console.log( event.target.value );
-  const targets = presets.filter(i => i.name == event.target.value);
-  if (targets.length) {
-    let selection = targets[0];
-    bpm = selection.bpm;
-    beats = selection.beats;
-    parts = selection.parts;
-    song = JSON.parse(JSON.stringify(selection.song))
-    //console.log(song);
-    event.target.value = 0;
-  }
-}
-
 function loadPresetByIndex(index) {
-
   selected = null;
   let selection = presets[index];
   bpm = selection.bpm;
   beats = selection.beats;
   parts = selection.parts;
   song = JSON.parse(JSON.stringify(selection.song))
-  //console.log(song);
   event.target.value = 0;
-
 }
 
 function itemGenerator(custom = {}) {
   const item = Object.assign({
-    label: "Drum",
-    octave: 6,
-    note: "F",
+    label: "Piano",
+    instrument: "Piano",
+    octave: 4,
+    note: "A",
     data: [],
   }, custom);
   for (let beat = 0; beat < beatBuffer; beat++) {
@@ -154,10 +148,15 @@ function itemGenerator(custom = {}) {
 }
 
 function dataGenerator(items = 1) {
-
   let generated = [];
+
+  const notes = ['A','B','C','D','E','F','G'];
+  let nodeIndex = 0;
+
   for (let item = 0; item < items; item++) {
-    generated.push(itemGenerator())
+    generated.push(itemGenerator({note:notes[nodeIndex]}))
+    nodeIndex++;
+    if(nodeIndex>notes.length) nodeIndex = 0;
   }
   return generated;
 }
@@ -168,11 +167,9 @@ function incrementSequence() {
     sequence = 0;
   }
   for (let item of song) {
-
     if (item.data[sequence].enabled) {
-      instrument.triggerAttackRelease(item.note + item.octave, '2n');
+      instruments[item.instrument].triggerAttackRelease(item.note + item.octave, '2n');
     }
-
   }
 }
 
@@ -187,6 +184,7 @@ function schedule() {
   }, (1000 * 60) / (bpm * parts))
 }
 
+$: showInstrumentSettings = true;
 function selectSequencerLine(event, index) {
   selected = index;
   showInstrumentSettings = true;
@@ -213,9 +211,91 @@ function clearSequencerLine(index) {
 }
 
 onMount(async () => {
-  instrument = await sampler();
+
+  const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).toMaster()
+  //reverb.wet.value = 0.2;
+  await reverb.generate();
+
+  instruments.Piano = await sampler('salamander');
+
+
+  instruments.Cello = new Tone.PolySynth(8, Tone.FMSynth,
+    {
+        "harmonicity": 3.01,
+        "modulationIndex": 14,
+        "oscillator": {
+            "type": "triangle"
+        },
+        "envelope": {
+            "attack": 0.2,
+            "decay": 0.3,
+            "sustain": 0.1,
+            "release": 1.2
+        },
+        "modulation" : {
+            "type": "square"
+        },
+        "modulationEnvelope" : {
+            "attack": 0.01,
+            "decay": 0.5,
+            "sustain": 0.2,
+            "release": 0.1
+        }
+    }
+  ).connect(reverb);
+
+  instruments.Saw = new Tone.PolySynth(1, Tone.Synth,
+    {
+        "oscillator" : {
+            "type" : "fatsawtooth",
+            "count" : 6,
+            "spread" : 10
+        },
+        "envelope": {
+            "attack": 0.01,
+            "decay": 0.1,
+            "sustain": 0.5,
+            "release": 0.4,
+            "attackCurve" : "exponential"
+        }
+    }
+  ).connect(reverb);
+
+  instruments.Bass = new Tone.PolySynth(2, Tone.MonoSynth,
+    {
+        "oscillator": {
+            "type": "fmsquare5",
+        "modulationType" : "triangle",
+            "modulationIndex" : 2,
+            "harmonicity" : 0.401
+        },
+        "filter": {
+            "Q": 1,
+            "type": "lowpass",
+            "rolloff": -24
+        },
+        "envelope": {
+            "attack": 0.01,
+            "decay": 0.1,
+            "sustain": 0.2,
+            "release": 2
+        },
+        "filterEnvelope": {
+            "attack": 0.01,
+            "decay": 0.1,
+            "sustain": 0.3,
+            "release": .5,
+            "baseFrequency": 60,
+            "octaves": 4.4
+        }
+    }
+    ).toMaster();
+
+    instruments.Shebang = await sampler('shebang');
+
+
   const synth = new Tone.Synth().toMaster()
-  song = dataGenerator(4);
+  song = dataGenerator(7);
   schedule();
 });
 
@@ -224,8 +304,6 @@ onDestroy(() => {
 });
 
 </script>
-
-
 
 <div class="card text-white bg-dark shadow">
 
@@ -302,7 +380,20 @@ onDestroy(() => {
     {#if selected != null}
       <div class="row">
         <div class="col py-2">
-          <Drawer title="Instrument">
+          <Drawer title="Instrument" opened={showInstrumentSettings}>
+
+            <div class="row mb-2">
+            <div class="col">
+            <div class="text-center">
+                <div class="btn-group d-inline-block" role="group" aria-label="Instrument Group">
+                {#each Object.keys(instruments) as instrument, index}
+                  <button class="btn btn-sm small p-1" style="display: inline-block;" class:btn-secondary={(song[selected].instrument != instrument)} class:btn-primary={(song[selected].instrument == instrument)} on:click={()=> { song[selected].instrument = instrument} }>{instrument}</button>
+                {/each}
+              </div>
+            </div>
+            </div>
+            </div>
+
             <div class="row">
               <div class="col p-0 text-center">
                 {#each notes as note, index}

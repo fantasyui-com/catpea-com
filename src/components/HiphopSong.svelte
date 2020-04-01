@@ -5,7 +5,7 @@ import octicons from 'octicons';
 
 import sampler from '../devices/sampler.js';
 
- 
+
 const movements = [
 
   {
@@ -469,7 +469,7 @@ async function play(){
 
   // SETUP PRIOR TO MAKE
   await loadPiano();
-  rza = await sampler();
+  rza = await sampler('shebang');
 
 
   Tone.Transport.bpm.value = songBpm; // ramp the bpm to 120 over 10 seconds Tone.Transport.bpm.rampTo(120, 10);
