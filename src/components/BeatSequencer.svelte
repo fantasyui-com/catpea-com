@@ -26,7 +26,7 @@ let notes = [];
   }
 }
 
-$: bpm = 160;
+$: bpm = 100;
 $: parts = 4;
 $: beats = 4;
 

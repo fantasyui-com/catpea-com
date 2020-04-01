@@ -17,6 +17,7 @@ import SciurineSong from '../components/SciurineSong.svelte';
 import HiphopSong from '../components/HiphopSong.svelte';
 import LofiSoundboard from '../components/LofiSoundboard.svelte';
 import BeatSequencer from '../components/BeatSequencer.svelte';
+import SongMachine from '../components/SongMachine.svelte';
 //import SongBuilder from '../components/SongBuilder.svelte';
 
 
@@ -39,10 +40,18 @@ const linkDatabase = {
   'Ableton': 'https://www.ableton.com/en/live/',
   'Scientific Pitch Notation': 'https://en.wikipedia.org/wiki/Scientific_pitch_notation',
   'Yamaha C5 Grand Piano':'https://usa.yamaha.com/products/musical_instruments/pianos/grand_pianos/cx_series/cx-series.html',
+  'CATPEA DAW':'/daw',
 };
 
 // (new Date()).toISOString()
 let research = [
+
+  {
+    date: '2020-04-01T01:14:25.924Z',
+    html: `Added a very early preview of Sound Machine. I aim to create a Workout Song Generator/Builder, but I don't want to just create a Workout Song Generator/Builder and code it. I want to explore areas in and around it, by asking "What are some related programs that take little code to finish?". There is a possibility that Sound Machine can be a useful music Builder/Generator. If you have a Desktop machine take a look at what it would look like as its own page [CATPEA DAW] it is a very raw mockup I have the Sound Machine in two places just to see what it would be like to have that little index on the left. Here is a screenshot:
+    <figure class="figure float-right"> <img src="research/daw.jpg" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">Digital Audio Workstation</figcaption> </figure>
+    `,
+  },
 
   {
     date: '2020-04-01T01:14:25.924Z',
@@ -523,6 +532,10 @@ onMount(async () => {
 
     <div class="col pb-3">
     <News news={research} icon="mortar-board" title="Research Blog" items="10"/>
+    </div>
+
+    <div class="col pb-3">
+    <SongMachine/>
     </div>
 
     <div class="col pb-3">
