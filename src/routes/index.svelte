@@ -609,12 +609,7 @@ onMount(async () => {
     <div class="col pb-3">
     <RandomVideo duration="40"/>
     </div>
-
-    <div class="col pb-3">
-    <RandomVideo duration="40"/>
-    </div>
-
-
+ 
 
 
 
