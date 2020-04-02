@@ -22,7 +22,7 @@ let view = 1; // controlled via UI icons
   <div class="card text-white bg-dark shadow">
     <div class="card-header lead">
       Preferences
-      <span class="float-right" on:click="{e => view = 1}"><Icon name="checklist" context="warning"/></span>
+      <span class="float-right" on:click="{e => view = 1}"><Icon name="checklist" color="warning"/></span>
     </div>
     <div class="card-body p-2" style="max-height: 25rem; overflow-y: auto;">
 
@@ -49,7 +49,7 @@ let view = 1; // controlled via UI icons
 
     <div class="card-header lead bg-gradient-gold shadow">
       {title}
-      <span class="float-right" on:click="{e => view = 0}"><Icon name="settings" context="warning"/></span>
+      <span class="float-right" on:click="{e => view = 0}"><Icon name="settings" color="warning"/></span>
       <slot name="buttons"></slot>
     </div>
 

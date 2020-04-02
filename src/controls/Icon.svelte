@@ -1,10 +1,11 @@
 <script>
+
   import octicons from 'octicons';
 
   export let name = "eye";
   export let color = "warning";
 
-  // {"class": "fill-"+context}
+
 </script>
 
 
