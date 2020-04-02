@@ -1,10 +1,7 @@
 <script>
-
-export let title = 'Preferences Card';
-
-import octicons from 'octicons';
 import Icon from '../controls/Icon.svelte';
 
+export let title = 'Preferences Card';
 
 /*
   0 is Preference View
