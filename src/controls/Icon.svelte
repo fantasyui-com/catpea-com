@@ -1,5 +1,6 @@
 <script>
 
+import octicons from '@primer/octicons';
 import { onMount } from 'svelte';
 
 
@@ -9,7 +10,6 @@ import { onMount } from 'svelte';
   let icon = "";
 
   onMount(async () => {
-    import octicons from '@primer/octicons';
     console.log('Are octicons installed?',!!octicons);
 
     if(octicons && octicons[name]){
