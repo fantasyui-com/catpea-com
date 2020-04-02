@@ -9,4 +9,4 @@
 </script>
 
 
-<span class="fill-{color} hover-fill-danger">{@html octicons[name].toSVG()}</span>
+<span class="fill-warning hover-fill-danger">{@html octicons[name].toSVG()}</span>
