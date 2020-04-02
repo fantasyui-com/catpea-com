@@ -6,6 +6,7 @@ import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
+
 import json from '@rollup/plugin-json';
 
 //import octicons from 'octicons';
@@ -43,12 +44,16 @@ export default {
         'process.browser': true,
         'process.env.NODE_ENV': JSON.stringify(mode)
       }),
+
       svelte({
+
         dev,
         hydratable: true,
         emitCss: true,
         preprocess, // <-- ADDED THIS LINE
+
       }),
+
       resolve({
         browser: true,
         dedupe
@@ -84,6 +89,7 @@ export default {
     input: config.server.input(),
     output: config.server.output(),
     plugins: [
+      json(),
       replace({
         'process.browser': false,
         'process.env.NODE_ENV': JSON.stringify(mode)
