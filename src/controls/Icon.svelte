@@ -6,9 +6,10 @@
   export let color = "warning";
 
   console.log('octicons',octicons);
+  console.log('octicon',name);
   let icon = "";
 
-  if(octicons[name]){
+  if(octicons && octicons[name]){
     icon = octicons[name].toSVG();
   }
 
