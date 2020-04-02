@@ -5,8 +5,8 @@
   export let name = "eye";
   export let color = "warning";
 
-  console.log(octicons);
-  let icon = octicons['squirrel'].toSVG();
+  console.log('octicons',octicons);
+  let icon = "";
 
   if(octicons[name]){
     icon = octicons[name].toSVG();
