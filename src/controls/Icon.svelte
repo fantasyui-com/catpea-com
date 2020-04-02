@@ -6,7 +6,12 @@
   export let color = "warning";
 
 
+  let icon = octicons['squirrel'].toSVG();
+
+  if(octicons[name]){
+    icon = octicons[name].toSVG();
+  }
+
 </script>
 
-
-<span class="fill-warning hover-fill-danger">{@html octicons[name].toSVG()}</span>
+<span class="fill-{color} hover-fill-danger">{@html icon}</span>
