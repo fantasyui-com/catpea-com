@@ -26,9 +26,17 @@ const videos = {
   modified: '2020-01-25T13:52:05.520Z',
   changed: 'recently',
   name: 'Video Library',
-  text: 'Cat Pea Video Library contains hundreds of interesting, informative, and educational videos.',
+  text: 'CATPEA Video Library contains hundreds of interesting, informative, and educational videos.',
   url: '/video?p=0&i=8',
   img: 'videos.png',
+}
+const daw = {
+  modified: '2020-01-25T13:52:05.520Z',
+  changed: 'recently',
+  name: 'Digital Audio Workstation',
+  text: 'CATPEA Digital Audio Workstation is in Alpha. It is unknown if a light-weight implementation is possible, but UI does look very promising.',
+  url: '/daw',
+  img: 'daw.jpg',
 }
 
 
@@ -45,6 +53,42 @@ const linkDatabase = {
 
 // (new Date()).toISOString()
 let research = [
+
+  {
+    date: '2020-04-02T15:01:03.450Z',
+    html: `
+
+    <p>
+      [CATPEA DAW] is now a Desktop Application, Mobile Devices are too slow for making music, this is a new program with new stuff in it, I won't be changing anything else, I like having all these random gadgets here.
+      </p>
+
+    <p>
+      And it is still too early to know if [CATPEA DAW] can work, there is no guarantee that what I am doing can actually result in a functional program. I went out of my way to create a Data Structure Driven program with minimal data manipulation functions embedded in the UI only.
+    </p>
+
+    <p>
+      A lot of programmers would hate this, the best of them would want me to create well named ACTIONS like 'selectTrack' or 'enableNote' but that just adds to the weight of the program, it destroys it.
+      Programs that are WRITTEN-OUT like the best of these programmers want are BLOATED, HUGE, almost broken by design.
+    </p>
+
+    <p>
+     And what I am creating is a program that exploits only that which is possible, and no more. I am creating a self editing data structure with self-updating graphics. If this works out, I'll be able to create programs without programming. It would be more like data shaping and expressing, and not programming.
+     It would beat the heck out of other applications. There is no code here, there is nothing to break.
+    </p>
+
+    <p>
+    The trade-off is that a program like this can't receive specific features, UNLESS, they are possible as dictated by the data-structure and its shaping.
+    </p>
+
+     <p>
+     If this was a project for a company, for a client and client requested a feature incompatible with the tree, one would have to say "That, is not possible". To rewrite a program like this in standard code with Data Flows, Functions, Actions, Plugins, and such would take years.
+     </p>
+
+     <p>
+     Isn't this interesting? &middot; Alas, let us first see if I can have all I need to make music withut needing functions.
+     </p>
+     `,
+  },
 
   {
     date: '2020-04-01T21:29:48.923Z',
@@ -249,146 +293,129 @@ let news = [
   // It will come in handy, if I run out of candy.
   //
 
-  {
-    date: '2020-04-01T16:35:20.987Z',
-    html: `
+    {
+      date: '2020-04-01T16:35:20.987Z',
+      html: `
 
-<p>
-  <div>Captain's Log: Day Sixteen of Quarantine.</div>
-  <div>Keeping it serious like Wolverine.</div>
-</p>
+    <p class="mb-0">Captain's Log: Day Sixteen of Quarantine.</p>
+    <p class="mb-0">Keeping it serious like Wolverine.</p>
+    <div>&nbsp;</div>
 
-<p>
-  <div>I have decided not to rhyme,</div>
-  <div>I really haven't got the time.</div>
-</p>
+    <p class="mb-0">I have decided not to rhyme,</p>
+    <p class="mb-0">I really haven't got the time.</p>
+    <div>&nbsp;</div>
 
-<p>
-  <div>I must leave the thieving Squirrels behind,</div>
-  <div>yes, really, I don't mind.</div>
-</p>
+    <p class="mb-0">I must leave the thieving Squirrels behind,</p>
+    <p class="mb-0">yes, really, I don't mind.</p>
+    <div>&nbsp;</div>
 
-<p>
-  <div>Today, is a new day, I am completely serious,</div>
-  <div>I am going to ignore everything hilarious.</div>
-</p>
+    <p class="mb-0">Today, is a new day, I am completely serious,</p>
+    <p class="mb-0">I am going to ignore everything hilarious.</p>
+    <div>&nbsp;</div>
 
-<p>
-  <div>I am not even joking, I'll ignore those furriers,</div>
-  <div>I won't even pay attention to their funny scurries.</div>
-</p>
+    <p class="mb-0">I am not even joking, I'll ignore those furriers,</p>
+    <p class="mb-0">I won't even pay attention to their funny scurries.</p>
+    <div>&nbsp;</div>
 
-<p>
-  <div>I will sit here quiet,</div>
-  <div>tending to my amazing diet...</div>
-</p>
+    <p class="mb-0">I will sit here quiet,</p>
+    <p class="mb-0">tending to my amazing diet...</p>
+    <div>&nbsp;</div>
 
-<p>
-  <div>A stray thought bubbles to my idle mind,</div>
-  <div>Oh, no, I hope people won't go blind!</div>
-</p>
+    <p class="mb-0">A stray thought bubbles to my idle mind,</p>
+    <p class="mb-0">Oh, no, I hope people won't go blind!</p>
+    <div>&nbsp;</div>
 
-<p>
-  <div>I think I am going to YouTube my workout dance,</div>
-  <div>Now, where the heck did I put my underpants?</div>
-</p>
+    <p class="mb-0">I think I am going to YouTube my workout dance,</p>
+    <p class="mb-0">Now, where the heck did I put my underpants?</p>
+    <div>&nbsp;</div>
 
 
-    `
-  },
 
-  {
-    date: '2020-03-31T16:20:21.586Z',
-    html: `
+      `
+    },
 
-    <p>
-      <div>Captain's Log: Day Fifteen of Quarantine,</div>
-      <div>Squirrels continue being mean.</div>
-    </p>
+    {
+      date: '2020-03-31T16:20:21.586Z',
+      html: `
 
-    <p>
-      <div>They just aren't very keen, on the idea,</div>
-      <div>that their theft gave them diarrhea.</div>
-    </p>
+        <p class="mb-0">Captain's Log: Day Fifteen of Quarantine,</p>
+        <p class="mb-0">Squirrels continue being mean.</p>
+        <div>&nbsp;</div>
 
-    <p>
-      <div>I know not what to do,</div>
-      <div>Darn Squirrels! that Trailmix was not for you!</div>
-    </p>
+        <p class="mb-0">They just aren't very keen, on the idea,</p>
+        <p class="mb-0">that their theft gave them diarrhea.</p>
+        <div>&nbsp;</div>
 
-    <p>
-      <div>Maybe someday we'll move on,</div>
-      <div>come a sunny day, carry on.</div>
-    </p>
-    <p>
-      <div>But today, is not that day,</div>
-      <div>it's just Tuesday.</div>
-    </p>
+        <p class="mb-0">I know not what to do,</p>
+        <p class="mb-0">Darn Squirrels! that Trailmix was not for you!</p>
+        <div>&nbsp;</div>
 
-    <p>
-      <div>This is getting out of control,</div>
-      <div>I don't want to be a poet anymore!</div>
-    </p>
+        <p class="mb-0">Maybe someday we'll move on,</p>
+        <p class="mb-0">come a sunny day, carry on.</p>
+        <div>&nbsp;</div>
 
-    <p>
-      <div>I just wanted to feed the creatures I adore.</div>
-      <div>Not write strange rhymes out the front door.</div>
-    </p>
+        <p class="mb-0">But today, is not that day,</p>
+        <p class="mb-0">it's just Tuesday.</p>
+        <div>&nbsp;</div>
 
-    <p>
-      <div>I must stop rhyming,</div>
-      <div>this is not the right timing.</div>
-    </p>
+        <p class="mb-0">This is getting out of control,</p>
+        <p class="mb-0">I don't want to be a poet anymore!</p>
+        <div>&nbsp;</div>
 
-    <p>
-      <div>I feel like I've lost control,</div>
-      <div>spiraling down a Squirrel Hole.</div>
-    </p>
+        <p class="mb-0">I just wanted to feed the creatures I adore.</p>
+        <p class="mb-0">Not write strange rhymes out the front door.</p>
+        <div>&nbsp;</div>
 
-    <p><sup><small>I swear I am not like this in real life... I can change!</small></sup></p>
-    `
-  },
+        <p class="mb-0">I must stop rhyming,</p>
+        <p class="mb-0">this is not the right timing.</p>
+        <div>&nbsp;</div>
 
-  {
-    date: '2020-03-30T13:11:22.278Z',
-    html: `
+        <p class="mb-0">I feel like I've lost control,</p>
+        <p class="mb-0">spiraling down a Squirrel Hole.</p>
+        <div>&nbsp;</div>
 
-  <p>
-    <div>Captain's Log: Day Fourteen of Quarantine,</div>
-    <div>All the local squirrels, now hold me in high esteem.</div>
-  </p>
+      <p class="mb-0">
+        <sup><small>I swear I am not like this in real life... I can change!</small></sup>
+      </p>
+      `
+    },
 
-  <p>
-    <div>They feel munchies to extreme,</div>
-    <div>but the trailmix they stole is gone,</div>
-    <div>flurries of the box still scattered on my lawn.</div>
-  </p>
-
-  <p>
-    <div>Squirrels, now crazed, and withdrawn.</div>
-  </p>
-
-  <p>
-    <div>Peanuts on their mind,</div>
-    <div>because mail delivery was ill timed.</div>
-  </p>
+    {
+      date: '2020-03-30T13:11:22.278Z',
+      html: `
 
 
-    <sup><small>Why am I like this?</small></sup>`
-  },
+      <p class="mb-0">Captain's Log: Day Fourteen of Quarantine,</p>
+      <p class="mb-0">All the local squirrels, now hold me in high esteem.</p>
+      <div>&nbsp;</div>
 
-  {
-    date: '2020-03-29T13:14:44.761Z',
-    html: `
-    <p>
-      <div>Captain's Log: Day Thirteen of Quarantine;</div>
-      <div>still staring at my screen,</div>
-      <div>hanging on for dear life to my spleen</div>
-      <div>as I drink another coffee bean,</div>
-      <div>trying, trying not to create a scene,</div>
-      <div>dancing dressed red outside my window;</div>
-      <div>during quarantine.</div>
-    </p>
+      <p class="mb-0">They feel munchies to extreme,</p>
+      <p class="mb-0">but the trailmix they stole is gone,</p>
+      <p class="mb-0">flurries of the box still scattered on my lawn.</p>
+      <div>&nbsp;</div>
+
+      <p class="mb-0">Squirrels, now crazed, and withdrawn.</p>
+      <div>&nbsp;</div>
+
+      <p class="mb-0">Peanuts on their mind,</p>
+      <p class="mb-0">because mail delivery was ill timed.</p>
+      <div>&nbsp;</div>
+
+      <sup><small>Why am I like this?</small></sup>`
+    },
+
+    {
+      date: '2020-03-29T13:14:44.761Z',
+      html: `
+
+        <p class="mb-0">Captain's Log: Day Thirteen of Quarantine;</p>
+        <p class="mb-0">still staring at my screen,</p>
+        <p class="mb-0">hanging on for dear life to my spleen</p>
+        <p class="mb-0">as I drink another coffee bean,</p>
+        <p class="mb-0">trying, trying not to create a scene,</p>
+        <p class="mb-0">dancing dressed red outside my window;</p>
+        <p class="mb-0">during quarantine.</p>
+
 
     `
   },
@@ -535,7 +562,15 @@ onMount(async () => {
     </div>
 
     <div class="col pb-3">
-    <SongMachine/>
+        <div class="card text-white bg-dark shadow">
+          <a href="{daw.url}"><img src="{daw.img}" class="card-img-top" alt="{daw.name}"></a>
+          <div class="card-body p-3">
+            <h5 class="card-text">{daw.name}</h5>
+            <p class="card-text">{daw.text}</p>
+            <a href="{daw.url}" class="btn btn-primary">{daw.name} &raquo;</a>
+            <!-- <p class="card-text"><small class="text-muted">Updated {videos.changed}</small></p> -->
+          </div>
+        </div>
     </div>
 
     <div class="col pb-3">
@@ -609,7 +644,7 @@ onMount(async () => {
     <div class="col pb-3">
     <RandomVideo duration="40"/>
     </div>
- 
+
 
 
 

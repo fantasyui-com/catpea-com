@@ -71,17 +71,27 @@
 
 
 
-
-
-
-
 @each $color, $value in $theme-colors {
-  ".fill-#{$color}" {
-    fill: $value;
+
+  ".hover-#{$color}:hover" {
+    color: $value !important;
   }
+
+  ".hover-bg-#{$color}:hover" {
+    background-color: $value !important;
+  }
+
+  ".hover-fill-#{$color}:hover" {
+      fill: $value;
+  }
+
+  ".fill-#{$color}" {
+      fill: $value;
+  }
+
 }
 
- 
+
 
 .cursor-default {
   cursor: default;

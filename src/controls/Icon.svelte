@@ -4,6 +4,8 @@
   export let name = "eye";
   export let context = "warning";
 
+  // {"class": "fill-"+context}
 </script>
 
-<span>{@html octicons[name].toSVG({ "class": "fill-"+context })}</span>
+
+<span class="fill-{context} hover-fill-danger">{@html octicons[name].toSVG()}</span>

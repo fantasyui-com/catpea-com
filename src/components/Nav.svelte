@@ -19,10 +19,10 @@
 
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-dangers shadow-lg border-bottom border-dark text-white	mb-3 rounded-sm">
+<nav class="navbar navbar-dark navbar-expand-lg shadow-lg border-bottom border-dark mb-3 rounded-pill">
   <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
 
-  <button class="navbar-toggler" type="button" on:click={handleCollapse}>
+  <button class="navbar-toggler border-0" type="button" on:click={handleCollapse}>
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -49,7 +49,7 @@
         <a class="nav-link text-primary" href="/warrior">The Warrior Book <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item" class:selected='{segment === "daw"}'>
-        <a class="nav-link text-primary invisible" href="/daw">Digital Audio Workstation <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-primary" href="/daw">Digital Audio Workstation <span class="sr-only">(current)</span></a>
       </li>
 
 <!--

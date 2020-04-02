@@ -2,17 +2,23 @@
 
   import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
 
-  import PreferenceCard from '../containers/PreferenceCard.svelte';
-  import Drawer from '../containers/Drawer.svelte';
-  import Icon from '../controls/Icon.svelte';
+  import Composition from './song-machine/Composition.svelte';
+  import Form from './song-machine/Form.svelte';
+  import Sequencer from './song-machine/Sequencer.svelte';
 
-  export let title = 'Song Machine - GUI Demonstration';
+  function rnd(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+  }
+
+  let title = 'Song Machine - GUI Demonstration';
 
 
   let playing = false;
 
 
-  const program = {
+  let program = {
     defaults: {
       slot: {
         enabled: false,
@@ -30,7 +36,7 @@
     },
   };
 
-  const song = {
+  let song = {
 
     configuration: {
 
@@ -190,66 +196,37 @@
 
 </script>
 
-<!-- <tr class:bg-primary={index===selected}>  -->
-<PreferenceCard {title}>
+<!-- <div class="bg-info text-dark">{program.selections.part}</div> -->
+<div class="container-fluid">
 
-  <div slot="preferences">
-
-  </div>
-
-  <Drawer title="Composition">
-    {#each song.parts as part, index}
-      <div  class="cursor-pointer mb-2 bg-hover-dark px-1" on:click={()=>{program.selections.part = index}}>
-        <span class="">{part.name}</span>
-        <span class="small text-muted"></span>
+    <div class="row">
+      <div class="col-12 pb-2">
+        <Composition bind:program={program} bind:song={song}/>
       </div>
-    {/each}
-  </Drawer>
+     </div>
 
-  <Drawer title="Form" opened>
-    <div class="table-responsive">
-      <table class="table table-sm table-dark">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col" style="min-width: 16rem;">Instrument Configuration</th>
-
-                {#each song.parts[program.selections.part].tracks[program.selections.track].slots as slot, index}
-                  <th scope="col small">{index}</th>
-                {/each}
-
-          </tr>
-        </thead>
-        <tbody>
-
-
-        {#each song.parts[program.selections.part].tracks as track, index}
-        <tr>
-        <th scope="row">{index}</th>
-        <th scope="row">
-        <Icon name="gear"/>
-        {track.name}
-        </th>
-
-          {#each track.slots as slot, index}
-            <td><div class="rounded shadow" style="min-width: 2rem; user-select: none;" class:bg-primary={slot.enabled} class:bg-secondary={!slot.enabled} on:click={()=>{slot.enabled=!slot.enabled}}>&nbsp;</div></td>
-          {/each}
-
-        </tr>
-        {/each}
-
-            <!-- {#each song.tracks as track, index}
-              <tr>
-              <th scope="row">{index}</th>
-              <td>{item.instrument}</td>
-              <td>{item.note}</td>
-              <td>{item.duration}</td>
-              </tr>
-            {/each} -->
-
-        </tbody>
-      </table>
+    <div class="row">
+      <div class="col-12 pb-2">
+        <Form bind:program={program} bind:song={song}/>
+      </div>
     </div>
-  </Drawer>
 
-</PreferenceCard>
+    <div class="row">
+      <div class="col-12 pb-2">
+        <Sequencer bind:program={program} bind:song={song}/>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col pb-3">
+      ...
+      </div>
+      <div class="col pb-3">
+      ...
+      </div>
+      <div class="col pb-3">
+      ...
+      </div>
+    </div>
+
+</div>

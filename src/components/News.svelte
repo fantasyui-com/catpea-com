@@ -90,12 +90,16 @@
           <div class="card-text small">
 
           <div class="row mb-3">
-            <div class="col-1"> <!-- d-flex justify-content-center -->
-              <span class="shake">{@html octicons[icon].toSVG()}</span>
-            </div>
+          <div class="col pb-3">
+
             <div class="col">
-              <div class="text-info">{@html item.html}</div>
-              <div class="text-right"><span class="badge badge-secondary">{item.ago}</span></div>
+
+              <span class="shake">{@html octicons[icon].toSVG({class:"fill-info"})}</span>
+              <span class="badge badge-secondary px-2">Posted {item.ago}</span>
+
+              <div class="text-info pl-3 py-2">{@html item.html}</div>
+            </div>
+
             </div>
           </div>
 

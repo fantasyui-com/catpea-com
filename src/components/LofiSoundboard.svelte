@@ -92,13 +92,13 @@ onMount(async () => {
       </div>
     </div>
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="col text-muted small pt-2">
         Each octave (row) marks a group of sounds, groups are as follows Misc, SFX, Instuments, Drums, Sticks, Tsk.
         Kit is expressed in <a href="https://en.wikipedia.org/wiki/Scientific_pitch_notation" rel="noopener noreferrer" target="_blank">Scientific Pitch Notation</a>.
         Samples graciously provided by <a href="http://hipstrumentals.com" rel="noopener noreferrer" target="_blank">Hipstrumentals</a>.
       </div>
-    </div>
+    </div> -->
 
   </div>
 </div>
