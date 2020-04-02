@@ -1,7 +1,8 @@
 <script>
 
   import moment from "moment";
-import octicons from '../devices/icons.js';
+  import icons from '../devices/icons.js';
+  const octicons = icons();
 
 
   import PreferenceCard from '../containers/PreferenceCard.svelte';

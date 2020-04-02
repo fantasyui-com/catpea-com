@@ -13,7 +13,6 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
-    "@primer/octicons": "^9.6.0",
     "bodybuilding-advice": "^1.5.0",
     "book-gui": "^3.3.7",
     "bootstrap": "^4.4.1",

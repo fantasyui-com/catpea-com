@@ -1,8 +1,8 @@
 <script>
 
 import  Tone from "tone";
-import octicons from '../devices/icons.js';
-
+import icons from '../devices/icons.js';
+const octicons = icons();
 import sampler from '../devices/sampler.js';
 
 

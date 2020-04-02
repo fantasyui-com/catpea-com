@@ -1,6 +1,7 @@
 <script>
 
-import octicons from '../devices/icons.js';
+import icons from '../devices/icons.js';
+const octicons = icons();
 
 import bodybuildingAdvice from 'bodybuilding-advice';
 

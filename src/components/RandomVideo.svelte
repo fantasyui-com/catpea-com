@@ -2,7 +2,8 @@
 
 import PreferenceCard from '../containers/PreferenceCard.svelte';
 
-import octicons from '../devices/icons.js';
+import icons from '../devices/icons.js';
+const octicons = icons();
 
 
 import { onMount } from "svelte";

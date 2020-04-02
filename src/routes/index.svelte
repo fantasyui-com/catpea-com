@@ -2,7 +2,9 @@
 
 import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
 
-import octicons from '../devices/icons.js';
+import icons from '../devices/icons.js';
+const octicons = icons();
+console.log(octicons);
 
 import moment from "moment";
 

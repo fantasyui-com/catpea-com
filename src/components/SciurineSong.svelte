@@ -1,7 +1,8 @@
 <script>
 
 import  Tone from "tone";
-import octicons from '../devices/icons.js';
+import icons from '../devices/icons.js';
+const octicons = icons();
 
 
 // NOTE   Using “pitch-octave” notation: A A# B C C# D D# E F F# G

@@ -1,7 +1,8 @@
 <script>
 
-import octicons from '../devices/icons.js';
-import { onMount } from 'svelte';
+import icons from '../devices/icons.js';
+const octicons = icons();
+
 
 
   export let name = "eye";
@@ -17,7 +18,7 @@ import { onMount } from 'svelte';
       //icon = `<img class="${`fill-${color} hover-fill-danger`}" src="icons/${name}.svg">`
     }
 
- 
+
 
 </script>
 

@@ -10,7 +10,8 @@ import sampler from '../devices/sampler.js';
 
 import Tone from "tone";
 
-import octicons from '../devices/icons.js';
+import icons from '../devices/icons.js';
+const octicons = icons();
 
 let beatBuffer = 4*8;
 
