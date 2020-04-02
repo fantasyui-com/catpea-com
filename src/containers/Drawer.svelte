@@ -11,7 +11,7 @@
 
   export let title = "";
   export let opened = false;
-  export let context = "warning";
+  //export let color = "warning";
 
   function open(){
     opened = true;
@@ -31,9 +31,9 @@
     <span class="drawer-label">{title}</span>
     <span class="drawer-toggle">
     {#if opened}
-      <Icon name="eye-closed" context="warning"/>
+      <Icon name="eye-closed" color="warning"/>
     {:else}
-      <Icon name="settings" context="warning"/>
+      <Icon name="settings" color="warning"/>
     {/if}
     </span>
   </div>

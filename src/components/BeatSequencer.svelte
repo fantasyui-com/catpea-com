@@ -318,7 +318,7 @@ onDestroy(() => {
         <Drawer title="Help">
           {#each tips as item, index}
             <div class="mb-2 px-1">
-              <span style="display: inline-block; min-width: 1.2rem;"><Icon name={item.icon} context="light"/></span>
+              <span style="display: inline-block; min-width: 1.2rem;"><Icon name={item.icon} color="light"/></span>
               <span class="small text-info">{item.text}</span>
             </div>
           {/each}

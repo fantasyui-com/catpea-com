@@ -2,10 +2,10 @@
   import octicons from 'octicons';
 
   export let name = "eye";
-  export let context = "warning";
+  export let color = "warning";
 
   // {"class": "fill-"+context}
 </script>
 
 
-<span class="fill-{context} hover-fill-danger">{@html octicons[name].toSVG()}</span>
+<span class="fill-{color} hover-fill-danger">{@html octicons[name].toSVG()}</span>

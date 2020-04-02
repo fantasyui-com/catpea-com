@@ -33,7 +33,7 @@
       <tr>
       <th scope="row" class="small text-muted">{index+1}</th>
       <th scope="row" class="small text-muted">
-      <Icon name="gear" context="warning"/>
+      <Icon name="gear" color="warning"/>
       {track.name}
       </th>
 
