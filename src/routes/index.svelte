@@ -66,7 +66,7 @@ let research = [
 
   {
     date: '2020-04-02T20:14:32.068Z',
-    html: `Things in square brackets are supposed to be links, but the system is crashing before I get a chance to replace the square bracket notation, it will take me a moment to figure out why [Sapper] is failing. I did finish writing the poem for today, so that's nice. I just found out that on top of everything else github is having problems:  "Update - We are investigating reports of service unavailability."`
+    html: `Things in square brackets are supposed to be links, but the system is crashing before I get a chance to replace the square bracket notation, it will take me a moment to figure out why [Sapper] is failing. I did finish writing the poem for today, so that's nice. I just found out that on top of everything else [github is having problems]:  "Update - We are investigating reports of service unavailability."`
   },
 
   {
@@ -653,6 +653,15 @@ onMount(async () => {
     </div>
 
     <div class="col pb-3">
+    <RandomVideo duration="40"/>
+    </div>
+
+    <div class="col pb-3">
+    <RandomVideo duration="40"/>
+    </div>
+
+
+    <div class="col pb-3">
         <div class="card text-white bg-dark shadow">
           <a href="{daw.url}"><img src="{daw.img}" class="card-img-top" alt="{daw.name}"></a>
           <div class="card-body p-3">
@@ -726,15 +735,6 @@ onMount(async () => {
     <BodybuildingAdvice/>
     </div>
 
-    <div class="col pb-3">
-    <RandomVideo duration="40"/>
-    </div>
-
-
-
-    <div class="col pb-3">
-    <RandomVideo duration="40"/>
-    </div>
 
 
 
