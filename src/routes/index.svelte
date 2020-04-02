@@ -2,7 +2,8 @@
 
 import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
 
-import octicons from 'octicons';
+import octicons from '@primer/octicons';
+
 import moment from "moment";
 
 import SongBeatCalculator from '../components/SongBeatCalculator.svelte';
@@ -49,10 +50,27 @@ const linkDatabase = {
   'Scientific Pitch Notation': 'https://en.wikipedia.org/wiki/Scientific_pitch_notation',
   'Yamaha C5 Grand Piano':'https://usa.yamaha.com/products/musical_instruments/pianos/grand_pianos/cx_series/cx-series.html',
   'CATPEA DAW':'/daw',
+  'Rollup': 'https://rollupjs.org/guide/en/',
+  'Octicons require a json file': 'https://github.com/primer/octicons/commit/875bc333ce4dc6a460a116dfd315a56dbb23120f#diff-c93a11fe3afdd3ccfbe1f152a8cf7b20L1',
+  'Svelte': 'https://svelte.dev/',
+  'Sapper': 'https://sapper.svelte.dev/',
+  'SVG': 'https://www.w3.org/Graphics/SVG/WG/wiki/SVG_FAQ',
+  'Ocicons':'https://octicons.github.com/',
+
 };
 
 // (new Date()).toISOString()
 let research = [
+
+  {
+    date: '2020-04-02T20:14:32.068Z',
+    html: `Things in square brackets are supposed to be links, but the system is crashing before I get a chance to replace the square bracket notation, it will take me a moment to figure out why [Sapper] is failing. I did finish writing the poem for today, so that's nice.`
+  },
+
+  {
+    date: '2020-04-02T20:04:32.068Z',
+    html: `Yah, it is an internal bug I have little to do with, it could be [Rollup] or that [Octicons require a json file], it is worth solving because it is a learning experience, I get a moment of time to look through the system I am working with, mostly [Svelte], [Sapper] and [Rollup]. The code for [Ocicons] which is made by github is highly questionable, I should make a copy and just re-write it. There is some [SVG] work coming up, since Octicons are in SVG, I may just do that then.`
+  },
 
   {
     date: '2020-04-02T16:05:22.263Z',
@@ -297,6 +315,72 @@ let news = [
   // but I did hide a bag in my cupboard.
   // It will come in handy, if I run out of candy.
   //
+          //
+          // It is sunny outside,
+          // but quiet worldwide.
+          //
+          // Though I hear my neighbors dancing & prancing,
+          // it makes no sense, as we should be distancing.
+          //
+          //
+          // I do worry some will go blind,
+          // pthers may jump from the fire escape,
+
+
+    {
+      date: '2020-04-02T20:04:32.068Z',
+      html: `
+
+      <p class="mb-0">Captain's Log: Day Seventeen of Quarantine.</p>
+      <p class="mb-0">Found two bugs in code, and got stuck in between.</p>
+      <div>&nbsp;</div>
+
+      <p class="mb-0">I was supposed to be working on a Sound Machine,</p>
+      <p class="mb-0">but spent the noon formatting the code to keep it clean.</p>
+      <div>&nbsp;</div>
+
+      <p class="mb-0">I can't believe, there is a bug in my code,</p>
+      <p class="mb-0">its probably in octicons, because I am using node.</p>
+      <div>&nbsp;</div>
+
+      <p class="mb-0">Worst of all, I can't see it fail until I publish,</p>
+      <p class="mb-0">because sapper likes static as not to be sluggish.</p>
+      <div>&nbsp;</div>
+
+      <p class="mb-0">So here I am, finally dressed up like Superman,</p>
+      <p class="mb-0">Debugging code, blind, like a veritable caveman.</p>
+      <div>&nbsp;</div>
+
+      <p class="mb-0">I did a bit of soul searching,</p>
+      <p class="mb-0">then followed with some researching.</p>
+      <div>&nbsp;</div>
+
+      <p class="mb-0">Now, I am sitting here, contemplating if I need a cape,</p>
+      <p class="mb-0">wondering if I should follow up with an Audiotape.</p>
+      <div>&nbsp;</div>
+
+      <p class="mb-0">I could finish up getting in shape,</p>
+      <p class="mb-0">and completely change the workout landscape.</p>
+      <div>&nbsp;</div>
+
+      <p class="mb-0">I am serious about making a workout tape,</p>
+      <p class="mb-0">I really want to get in shape.</p>
+      <div>&nbsp;</div>
+
+      <p class="mb-0">What if the workout required wearing a tail?</p>
+      <p class="mb-0">Would it become like super holy grail?</p>
+      <div>&nbsp;</div>
+
+      <p class="mb-0">I would walk the street and people would pale,</p>
+      <p class="mb-0">"Sir! Why have you done this?</p>
+      <p class="mb-0">You, are a Whale!!!"</p>
+      <div>&nbsp;</div>
+
+
+
+
+      `
+    },
 
     {
       date: '2020-04-01T16:35:20.987Z',

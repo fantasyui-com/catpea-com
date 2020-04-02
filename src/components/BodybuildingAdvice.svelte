@@ -1,6 +1,7 @@
 <script>
 
-import octicons from 'octicons';
+import octicons from '@primer/octicons';
+
 import bodybuildingAdvice from 'bodybuilding-advice';
 
 import shuffleArray from 'shuffle-array';

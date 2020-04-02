@@ -9,7 +9,8 @@ import DrumLine from '../controls/DrumLine.svelte';
 import sampler from '../devices/sampler.js';
 
 import Tone from "tone";
-import octicons from 'octicons';
+
+import octicons from '@primer/octicons';
 
 let beatBuffer = 4*8;
 

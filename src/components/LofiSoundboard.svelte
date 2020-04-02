@@ -1,6 +1,6 @@
 <script>
 import { onMount } from 'svelte';
-import octicons from 'octicons';
+
 import Tone from "tone";
 import sampler from '../devices/sampler.js';
 

@@ -1,7 +1,7 @@
 <script>
 
 import  Tone from "tone";
-import octicons from 'octicons';
+
 import DrumLine from '../controls/DrumLine.svelte';
 
 </script>

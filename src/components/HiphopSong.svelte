@@ -1,7 +1,7 @@
 <script>
 
 import  Tone from "tone";
-import octicons from 'octicons';
+import octicons from '@primer/octicons';
 
 import sampler from '../devices/sampler.js';
 

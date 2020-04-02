@@ -13,6 +13,7 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
+    "@primer/octicons": "^9.6.0",
     "bodybuilding-advice": "^1.5.0",
     "book-gui": "^3.3.7",
     "bootstrap": "^4.4.1",
@@ -22,7 +23,6 @@
     "lodash": "^4.17.15",
     "mainspring": "^1.0.1",
     "moment": "^2.24.0",
-    "octicons": "^8.5.0",
     "oneof": "^2.0.0",
     "polka": "^1.0.0-next.11",
     "shuffle-array": "^1.0.1",

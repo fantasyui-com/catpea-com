@@ -2,7 +2,8 @@
 
 import PreferenceCard from '../containers/PreferenceCard.svelte';
 
-import octicons from 'octicons';
+import octicons from '@primer/octicons';
+
 
 import { onMount } from "svelte";
 

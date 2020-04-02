@@ -1,7 +1,8 @@
 <script>
 
   import moment from "moment";
-  import octicons from 'octicons';
+  import octicons from '@primer/octicons';
+
   import camelCase from 'lodash/camelCase';
 
   import PreferenceCard from '../containers/PreferenceCard.svelte';

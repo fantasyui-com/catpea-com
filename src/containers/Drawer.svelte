@@ -7,7 +7,7 @@
 
   import Icon from '../controls/Icon.svelte';
 
-  import octicons from 'octicons';
+
 
   export let title = "";
   export let opened = false;

@@ -1,7 +1,8 @@
 <script>
 
 import  Tone from "tone";
-import octicons from 'octicons';
+import octicons from '@primer/octicons';
+
 
 // NOTE   Using “pitch-octave” notation: A A# B C C# D D# E F F# G
 

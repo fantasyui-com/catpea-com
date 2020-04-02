@@ -1,5 +1,8 @@
 <script>
-import octicons from 'octicons';
+
+//import octicons from '@primer/octicons';
+
+import Icon from '../controls/Icon.svelte';
 
 export let title = 'Preferences Card';
 
@@ -19,7 +22,8 @@ let view = 1; // controlled via UI icons
   <div class="card text-white bg-dark shadow">
     <div class="card-header lead">
       Preferences
-      <button class="btn btn-text btn-sm border border-secondary float-right" on:click="{e => view = 1}">{@html octicons.checklist.toSVG({ "class": "fill-white" })}</button>
+      <!-- <button class="btn btn-text btn-sm border border-secondary float-right" on:click="{e => view = 1}">{@html octicons.checklist.toSVG({ "class": "fill-white" })}</button> -->
+      <span class="float-right" on:click="{e => view = 1}"><Icon name="checklist" color="warning"/></span>
     </div>
     <div class="card-body p-2" style="max-height: 25rem; overflow-y: auto;">
 
@@ -46,7 +50,8 @@ let view = 1; // controlled via UI icons
 
     <div class="card-header lead bg-gradient-gold shadow">
       {title}
-      <button class="btn btn-text btn-sm border border-secondary float-right" on:click="{e => view = 0}">{@html octicons.gear.toSVG({ "class": "fill-white" })}</button>
+      <!-- <button class="btn btn-text btn-sm border border-secondary float-right" on:click="{e => view = 0}">{@html octicons.gear.toSVG({ "class": "fill-white" })}</button> -->
+      <span class="float-right" on:click="{e => view = 0}"><Icon name="settings" color="warning"/></span>
       <slot name="buttons"></slot>
     </div>
 
