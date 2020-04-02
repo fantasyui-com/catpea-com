@@ -1,7 +1,7 @@
 <script>
 
 import  Tone from "tone";
-import octicons from '@primer/octicons';
+import octicons from '../devices/icons.js';
 
 
 // NOTE   Using “pitch-octave” notation: A A# B C C# D D# E F F# G

@@ -2,7 +2,7 @@
 
 import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
 
-import octicons from '@primer/octicons';
+import octicons from '../devices/icons.js';
 
 import moment from "moment";
 

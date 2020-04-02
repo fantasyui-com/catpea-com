@@ -1,7 +1,7 @@
 <script>
 
   import moment from "moment";
-  import octicons from '@primer/octicons';
+  import octicons from '../devices/icons.js';
 
   import camelCase from 'lodash/camelCase';
 

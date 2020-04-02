@@ -1,6 +1,6 @@
 <script>
 
-//import octicons from '@primer/octicons';
+ 
 
 import Icon from '../controls/Icon.svelte';
 

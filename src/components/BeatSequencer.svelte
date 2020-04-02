@@ -10,7 +10,7 @@ import sampler from '../devices/sampler.js';
 
 import Tone from "tone";
 
-import octicons from '@primer/octicons';
+import octicons from '../devices/icons.js';
 
 let beatBuffer = 4*8;
 

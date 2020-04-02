@@ -1,6 +1,6 @@
 <script>
 
-import octicons from '@primer/octicons';
+import octicons from '../devices/icons.js';
 
 import bodybuildingAdvice from 'bodybuilding-advice';
 
