@@ -55,7 +55,7 @@ const linkDatabase = {
   'Svelte': 'https://svelte.dev/',
   'Sapper': 'https://sapper.svelte.dev/',
   'SVG': 'https://www.w3.org/Graphics/SVG/WG/wiki/SVG_FAQ',
-  'Ocicons':'https://octicons.github.com/',
+  'Octicons':'https://octicons.github.com/',
 
 };
 
@@ -69,7 +69,7 @@ let research = [
 
   {
     date: '2020-04-02T20:04:32.068Z',
-    html: `Yah, it is an internal bug I have little to do with, it could be [Rollup] or that [Octicons require a json file], it is worth solving because it is a learning experience, I get a moment of time to look through the system I am working with, mostly [Svelte], [Sapper] and [Rollup]. The code for [Ocicons] which is made by github is highly questionable, I should make a copy and just re-write it. There is some [SVG] work coming up, since Octicons are in SVG, I may just do that then.`
+    html: `Yah, it is an internal bug I have little to do with, it could be [Rollup] or that [Octicons require a json file], it is worth solving because it is a learning experience, I get a moment of time to look through the system I am working with, mostly [Svelte], [Sapper] and [Rollup]. The code for [Octicons] which is made by github is highly questionable, I should make a copy and just re-write it. There is some [SVG] work coming up, since Octicons are in SVG, I may just do that then.`
   },
 
   {
