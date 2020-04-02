@@ -56,6 +56,7 @@ const linkDatabase = {
   'Sapper': 'https://sapper.svelte.dev/',
   'SVG': 'https://www.w3.org/Graphics/SVG/WG/wiki/SVG_FAQ',
   'Octicons':'https://octicons.github.com/',
+  'github is having problems':'https://www.githubstatus.com/',
 
 };
 
@@ -65,7 +66,7 @@ let research = [
 
   {
     date: '2020-04-02T20:14:32.068Z',
-    html: `Things in square brackets are supposed to be links, but the system is crashing before I get a chance to replace the square bracket notation, it will take me a moment to figure out why [Sapper] is failing. I did finish writing the poem for today, so that's nice.`
+    html: `Things in square brackets are supposed to be links, but the system is crashing before I get a chance to replace the square bracket notation, it will take me a moment to figure out why [Sapper] is failing. I did finish writing the poem for today, so that's nice. I just found out that on top of everything else github is having problems:  "Update - We are investigating reports of service unavailability."`
   },
 
   {
