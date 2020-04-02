@@ -1,6 +1,5 @@
 <script>
 
-import octicons from '@primer/octicons';
 import { onMount } from 'svelte';
 
 
@@ -10,7 +9,8 @@ import { onMount } from 'svelte';
   let icon = "";
 
   onMount(async () => {
-    console.log('octicons installed?',!!octicons);
+    import octicons from '@primer/octicons';
+    console.log('Are octicons installed?',!!octicons);
 
     if(octicons && octicons[name]){
       icon = octicons[name].toSVG({class:`fill-${color} hover-fill-danger`});
