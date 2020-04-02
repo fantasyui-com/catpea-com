@@ -5,8 +5,9 @@
   export let name = "eye";
   export let color = "warning";
 
-  console.log('octicons',octicons);
+  console.log('octicons',!!octicons);
   console.log('octicon',name);
+
   let icon = "";
 
   if(octicons && octicons[name]){
