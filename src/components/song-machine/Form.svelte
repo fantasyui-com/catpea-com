@@ -29,22 +29,21 @@
       <tbody>
 
 
-      {#each song.parts[program.selections.part].tracks as track, index}
+      {#each song.parts[program.selections.part].tracks as track, trackIndex}
       <tr>
-      <th scope="row" class="small text-muted">{index+1}</th>
+      <th scope="row" class="small text-muted">{trackIndex+1}</th>
       <th scope="row" class="small text-muted">
       <Icon name="gear" color="warning"/>
       {track.name}
       </th>
 
-        {#each track.slots as slot, index}
+        {#each track.slots as slot, slotIndex}
 
 
-          {#if Math.random() < 0.2}
-            <td colspan="{rnd(1,6)}"><div class="rounded"  style="min-width: 2rem; user-select: none;" class:bg-primary={slot.enabled} class:bg-secondary={!slot.enabled} class:shadow={!slot.enabled} on:click={()=>{slot.enabled=!slot.enabled}}>&nbsp;</div></td>
-            {:else}
-            <td><div class="rounded"  style="min-width: 2rem; user-select: none;" class:bg-primary={slot.enabled} class:bg-secondary={!slot.enabled} class:shadow={!slot.enabled} on:click={()=>{slot.enabled=!slot.enabled}}>&nbsp;</div></td>
-          {/if}
+
+            <td colspan="{ 1 }"><div class="rounded"  style="min-width: 2rem; user-select: none;" class:bg-primary={slot.enabled} class:bg-secondary={!slot.enabled} class:shadow={!slot.enabled} on:click={()=>{slot.enabled=!slot.enabled; console.log(`Selecting ${slotIndex}`); program.selections.slot = slotIndex; program.selections.track = trackIndex;}}>&nbsp;</div></td>
+
+     
         {/each}
 
       </tr>

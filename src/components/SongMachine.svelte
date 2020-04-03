@@ -29,10 +29,25 @@
         duration: '16n'
       },
     },
+    // Selection are for editing content, when a user selects a slot,
+    // a new UI will open up below, it will contain the beat Sequencer
+    // for that slot.
     selections: {
-      part: 3,
-      track: 0,
-      note: 0,
+      part: 3, // part is a part of a song like a choir, or outro.
+      track: 0, // track is an instrument in a part
+      slot: 0, // slot is an orange square in a track
+      note: 0, // UNDER DEVELOPMENT
+    },
+    unselections: {
+      // when selecting a new part, clear all, when switching
+      // from intro to choir, should clear what intro track was selected
+      // user is yet to make a selection of a track in choir.
+      part:  ['track', 'slot', 'note'],
+      // when selecting a new track  make sure the slot (orange dot)
+      //  from previous track is not selected here, as that makes no sense.
+      track: ['slot', 'note'],
+      slot:  ['note'],  // UNDER DEVELOPMENT
+      note:  [], // UNDER DEVELOPMENT
     },
   };
 
@@ -56,12 +71,12 @@
           {
             name:'Initial',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           },
           {
             name:'Big Bassline',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           },
 
         ]
@@ -73,17 +88,17 @@
           {
             name:'Beat',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           },
           {
             name:'Quiet Bassline',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           },
           {
             name:'Quick Piano',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           }
         ]
       },
@@ -94,22 +109,22 @@
           {
             name:'Beat',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           },
           {
             name:'Bassline',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           },
           {
             name:'Piano',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           },
           {
             name:'Cello',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           }
         ]
       },
@@ -120,27 +135,27 @@
           {
             name:'Beat',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           },
           {
             name:'Bassline',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           },
           {
             name:'Quiet Piano',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           },
           {
             name:'Fast Piano',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           },
           {
             name:'Cello',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           }
         ]
       },
@@ -151,17 +166,17 @@
           {
             name:'Beat',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           },
           {
             name:'Bassline',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           },
           {
             name:'Piano',
             slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
           }
         ]
       },
@@ -200,6 +215,14 @@
 <div class="container-fluid">
 
     <div class="row">
+    <div class="col text-info">
+part:={program.selections.part},
+track:={program.selections.track},
+slot:={program.selections.slot},
+note:={program.selections.note},
+     </div>
+     </div>
+    <div class="row">
       <div class="col-12 pb-2">
         <Composition bind:program={program} bind:song={song}/>
       </div>
@@ -226,6 +249,23 @@
       </div>
       <div class="col pb-3">
       ...
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <code>
+          <pre class="text-info">
+            {JSON.stringify(program,null,'  ')}
+          </pre>
+        </code>
+      </div>
+      <div class="col">
+        <code>
+          <pre class="text-warning">
+            {JSON.stringify(song,null,'  ')}
+          </pre>
+        </code>
       </div>
     </div>
 

@@ -68,6 +68,15 @@ const linkDatabase = {
 let research = [
 
   {
+    date: '2020-04-03T14:15:43.386Z',
+    html: ` Already bumped into an artifact that deals with integrity problems. Basically when a new part of a song is selected, the stuff that was selected in the old part needs to be cleared. So I created an unselections section in the data file. This is still reasonable, it is not a sign of trouble. But two or three anomalies like that like that could destroy a program like the [CATPEA DAW]. But so far so good looks like it will all work.
+
+    <figure class="figure float-right"> <img src="research/unselections.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">Selections Trigger Unselections</figcaption> </figure>
+    `,
+
+  },
+
+  {
     date: '2020-04-02T22:11:51.381Z',
     html: `Yup, so [github was having problems] but also, github developers didn't code octicons right, it is not done in the standard way, and it may be that under certain conditions the database of octicons that I import into my code will get wiped, they have processing instructions in there that run every time their library is imported, technically it should run once as it is cached, but under Svelte something goes wrong and the library returns empty data. I standardized it, and it works now, I am going to redo their system, I'll probably let them know that I did it, but that will be the end of it. I like these icons because there is a cute [squirrel]. `,
     link:{

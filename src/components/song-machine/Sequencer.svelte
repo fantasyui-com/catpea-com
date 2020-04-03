@@ -20,7 +20,7 @@
           <th scope="col" class="small text-muted">#</th>
           <th scope="col" class="small text-muted" style="min-width: 16rem;">Instrument Configuration</th>
 
-              {#each song.parts[program.selections.part].tracks[program.selections.track].slots as slot, index}
+              {#each song.parts[program.selections.part].tracks[program.selections.track].notes as slot, index}
                 <th scope="col" class="small text-muted text-center">{index+1}</th>
               {/each}
 
@@ -39,7 +39,7 @@
 
         {#each track.notes as slot, index}
 
-            <td><div class="rounded"  style="min-width: 2rem; user-select: none;" class:bg-primary={slot.enabled} class:bg-secondary={!slot.enabled} class:shadow={!slot.enabled} on:click={()=>{slot.enabled=!slot.enabled}}>&nbsp;</div></td>
+            <td><div class="rounded"  style="min-width: 2rem; user-select: none;" class:bg-success={slot.enabled} class:bg-secondary={!slot.enabled} class:shadow={!slot.enabled} on:click={()=>{slot.enabled=!slot.enabled}}>&nbsp;</div></td>
 
         {/each}
 
