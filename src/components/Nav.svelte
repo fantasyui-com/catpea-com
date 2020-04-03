@@ -51,6 +51,9 @@
       <li class="nav-item" class:selected='{segment === "daw"}'>
         <a class="nav-link text-primary" href="/daw">Digital Audio Workstation <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item" class:selected='{segment === "theme"}'>
+        <a class="nav-link text-primary" href="/theme">Bootstrap Theme <span class="sr-only">(current)</span></a>
+      </li>
 
 <!--
       <li class="nav-item" class:selected='{segment === "warrior"}'>

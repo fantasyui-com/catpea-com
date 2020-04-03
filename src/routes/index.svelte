@@ -46,13 +46,17 @@ const daw = {
 
 const linkDatabase = {
   'Beat Sequencer Source': 'https://github.com/fantasyui-com/catpea-com/blob/master/src/components/BeatSequencer.svelte',
+
   'Bootstrap Expo': 'https://expo.getbootstrap.com/',
   'Bootstrap': 'https://getbootstrap.com/',
+  'Bootstrap Themes': 'https://themes.getbootstrap.com/',
+
   'Ableton': 'https://www.ableton.com/en/live/',
   'LMMS': 'https://lmms.io/',
   'Scientific Pitch Notation': 'https://en.wikipedia.org/wiki/Scientific_pitch_notation',
   'Yamaha C5 Grand Piano':'https://usa.yamaha.com/products/musical_instruments/pianos/grand_pianos/cx_series/cx-series.html',
   'CATPEA DAW':'/daw',
+  'Dragonfly':'/theme',
   'Rollup': 'https://rollupjs.org/guide/en/',
   'Octicons require a json file': 'https://github.com/primer/octicons/commit/875bc333ce4dc6a460a116dfd315a56dbb23120f#diff-c93a11fe3afdd3ccfbe1f152a8cf7b20L1',
   'Svelte': 'https://svelte.dev/',
@@ -67,6 +71,14 @@ const linkDatabase = {
 
 // (new Date()).toISOString()
 let research = [
+
+  {
+    date: '2020-04-03T23:25:54.011Z',
+    html: `
+    Zoinks! I started work on a Graphical Theme for Applications, I called it [Dragonfly]. It provides extensions for [Bootstrap] and components based on [CATPEA DAW]. I'll use it for my research here, and try to keep it tidy and inline with Bootstrap's Programming conventions so that I can think about getting into [Bootstrap Expo] and later [Bootstrap Themes]. I don't really want to create some stressful situation about sales, tech-support, and bug fixes; but I do like following [Bootstrap] conventions (it helps me keep code un-confusing) and I like learning about all this. Here's early: [Dragonfly].
+    `,
+
+  },
 
   {
     date: '2020-04-03T17:25:35.682Z',

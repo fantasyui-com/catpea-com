@@ -61,34 +61,77 @@
 
 
 
+// 
+// @each $color, $value in $app-colors {
+//   ".app-#{$color}" {
+//     background-color: $value !important;
+//   }
+// }
+//
+// .app-selectable:hover {
+//   background-color: $app-selectable;
+// }
+// .app-highlightable:hover {
+//   background-color: $app-highlightable !important;
+// }
+//
+// @each $color, $value in $app-text {
+//   ".app-text-#{$color}" {
+//     color: $value !important;
+//   }
+// }
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+@each $color, $value in $grays {
+
+  ".text-gray-#{$color}" {
+    color: $value !important;
+  }
+
+  ".bg-gray-#{$color}" {
+    background-color: $value !important;
+  }
+
+  ".bg-gray-#{$color}-hover:hover" {
+    background-color: $value !important;
+  }
+}
 
 
 
 
 
 @each $color, $value in $theme-colors {
-
-  ".hover-#{$color}:hover" {
+  ".#{$color}-hover:hover" {
     color: $value !important;
   }
-
-  ".hover-bg-#{$color}:hover" {
+  ".bg-#{$color}-hover:hover" {
     background-color: $value !important;
   }
-
-  ".hover-fill-#{$color}:hover" {
-      fill: $value;
+  ".fill-#{$color}-hover:hover" {
+    fill: $value;
   }
+}
 
+@each $color, $value in $theme-colors {
   ".fill-#{$color}" {
-      fill: $value;
+    fill: $value;
   }
-
 }
 
 

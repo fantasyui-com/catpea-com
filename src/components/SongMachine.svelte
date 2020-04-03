@@ -1,5 +1,5 @@
 <script>
-
+  
   import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
 
   import Composition from './song-machine/Composition.svelte';

@@ -5,6 +5,12 @@
 
 // Color system
 
+
+
+
+
+
+
 $white:    #fff !default;
 
 $gray-100: #f8f9fa !default;
@@ -113,6 +119,62 @@ $theme-colors: map-merge(
   ),
   $theme-colors
 );
+
+
+
+$app-color-base-body: $gray-800;
+$app-color-base-text: $gray-500;
+$app-color-additive: #11a5cc;
+
+
+$app-background-colors: () !default;
+$app-text-colors: () !default;
+
+
+@for $index from 0 through 9 {
+
+
+  .text-light-#{$index} {
+    color: lighten($gray-500, $index * 5%);
+  }
+
+  .bg-light-#{$index} {
+    background: lighten($gray-500, $index * 5%);
+    color: darken($gray-500, ( 9 - $index ) * 5%);
+  }
+
+}
+
+@for $index from 0 through 9 {
+
+  .text-dark-#{$index} {
+    color: darken($gray-500, $index * 5%);
+  }
+  .bg-dark-#{$index} {
+   
+    background: darken($gray-500, $index * 5%);
+    color: lighten($gray-500, ( 9 - $index ) * 5%);
+
+  }
+}
+
+
+
+// $app-colors: () !default;
+//
+// // stylelint-disable-next-line scss/dollar-variable-default
+// $app-colors: map-merge(
+//   (
+//   ),
+//   $theme-colors
+// );
+//
+// // stylelint-disable-next-line scss/dollar-variable-default
+// $app-text: map-merge(
+//   (
+//   ),
+//   $theme-colors
+// );
 
 
 
