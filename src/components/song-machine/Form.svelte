@@ -18,10 +18,10 @@
       <thead>
         <tr>
           <th scope="col" class="small text-muted">#</th>
-          <th scope="col" class="small text-muted" style="min-width: 16rem;">Instrument Configuration</th>
+          <th scope="col" class="small text-muted" style="min-width: 16rem;">Music Configuration</th>
 
-              {#each song.parts[program.selections.part].tracks[program.selections.track].slots as slot, index}
-                <th scope="col" class="small text-muted text-center">{index+1}</th>
+              {#each song.parts[program.selections.part].tracks[program.selections.track].slots as slot, slotIndex}
+                <th scope="col" class="small text-center" class:text-primary={program.selections.slot == slotIndex} class:text-muted={program.selections.slot != slotIndex}>{slotIndex+1}</th>
               {/each}
 
         </tr>
@@ -31,7 +31,7 @@
 
       {#each song.parts[program.selections.part].tracks as track, trackIndex}
       <tr>
-      <th scope="row" class="small text-muted">{trackIndex+1}</th>
+      <th scope="row" class="small" class:text-primary={program.selections.track == trackIndex} class:text-muted={program.selections.track != trackIndex}>{trackIndex+1}</th>
       <th scope="row" class="small text-muted">
       <Icon name="gear" color="warning"/>
       {track.name}
@@ -41,9 +41,9 @@
 
 
 
-            <td colspan="{ 1 }"><div class="rounded"  style="min-width: 2rem; user-select: none;" class:bg-primary={slot.enabled} class:bg-secondary={!slot.enabled} class:shadow={!slot.enabled} on:click={()=>{slot.enabled=!slot.enabled; console.log(`Selecting ${slotIndex}`); program.selections.slot = slotIndex; program.selections.track = trackIndex;}}>&nbsp;</div></td>
+            <td colspan="{ 1 }"><div class="rounded cursor-pointer" title={program.help.messages['activate-music']} style="min-width: 2rem; user-select: none;" class:bg-primary={slot.enabled} class:bg-secondary={!slot.enabled} class:shadow={!slot.enabled} on:click={()=>{slot.enabled=!slot.enabled; console.log(`Selecting ${slotIndex}`); program.selections.slot = slotIndex; program.selections.track = trackIndex;}}>&nbsp;</div></td>
 
-     
+
         {/each}
 
       </tr>

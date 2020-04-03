@@ -19,12 +19,21 @@
 
 
   let program = {
+    help:{
+      message:'welcome',
+      messages: {
+        'none':'',
+        'welcome':'Welcome to the program!',
+        'activate-music':'Click to activate/deactivate music in this cell.',
+        'select-song-part':'Click to select the portion of a song you want to work on.',
+      }
+    },
     defaults: {
       slot: {
         enabled: false,
       },
       note: {
-        instrument: 'piano',
+        enabled: false,
         note: 'C4',
         duration: '16n'
       },
@@ -33,15 +42,15 @@
     // a new UI will open up below, it will contain the beat Sequencer
     // for that slot.
     selections: {
-      part: 3, // part is a part of a song like a choir, or outro.
+      part: 3, // part is a part of a song like a Chorus, or outro.
       track: 0, // track is an instrument in a part
       slot: 0, // slot is an orange square in a track
       note: 0, // UNDER DEVELOPMENT
     },
     unselections: {
       // when selecting a new part, clear all, when switching
-      // from intro to choir, should clear what intro track was selected
-      // user is yet to make a selection of a track in choir.
+      // from intro to Chorus, should clear what intro track was selected
+      // user is yet to make a selection of a track in Chorus.
       part:  ['track', 'slot', 'note'],
       // when selecting a new track  make sure the slot (orange dot)
       //  from previous track is not selected here, as that makes no sense.
@@ -51,6 +60,27 @@
     },
   };
 
+   function makeMusic(){
+    const response = [
+      {
+        instrument: 'Guitar',
+        notes:Array(4*4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+      },
+      {
+        instrument: 'Piano',
+        notes:Array(4*4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+      },
+      {
+        instrument: 'Saw',
+        notes:Array(4*4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+      }
+    ]
+
+    return JSON.parse(JSON.stringify(response));
+
+  }
+
+
   let song = {
 
     configuration: {
@@ -58,6 +88,7 @@
       name:'',
       author:'',
       bpm: 160,
+
       parts: 4,
       beats: 4,
 
@@ -69,14 +100,14 @@
         size:64,
         tracks:[
           {
-            name:'Initial',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            name:'Calm little melody.',
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
           {
             name:'Big Bassline',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
 
         ]
@@ -87,44 +118,44 @@
         tracks:[
           {
             name:'Beat',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
           {
             name:'Quiet Bassline',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
           {
             name:'Quick Piano',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           }
         ]
       },
       {
-        name:'Choir',
+        name:'Chorus',
         size:64,
         tracks:[
           {
             name:'Beat',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
           {
             name:'Bassline',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
           {
             name:'Piano',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
           {
             name:'Cello',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           }
         ]
       },
@@ -134,49 +165,49 @@
         tracks:[
           {
             name:'Beat',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
           {
             name:'Bassline',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
           {
             name:'Quiet Piano',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
           {
             name:'Fast Piano',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
           {
             name:'Cello',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           }
         ]
       },
       {
-        name:'Choir',
+        name:'Chorus',
         size:64,
         tracks:[
           {
             name:'Beat',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
           {
             name:'Bassline',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
           {
             name:'Piano',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.slot)),
-            notes: Array(4).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           }
         ]
       },
@@ -186,12 +217,12 @@
         tracks:[
           {
             name:'Beat',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.note)),
             notes: Array(64).fill(program.defaults.note)
           },
           {
             name:'Piano',
-            slots: Array(64).fill(1).map(i=>Object.assign({},program.defaults.note)),
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.note)),
             notes: Array(64).fill(program.defaults.note)
           }
         ]
@@ -216,11 +247,20 @@
 
     <div class="row">
     <div class="col text-info">
-part:={program.selections.part},
-track:={program.selections.track},
-slot:={program.selections.slot},
-note:={program.selections.note},
+      part:={program.selections.part},
+      track:={program.selections.track},
+      slot:={program.selections.slot},
+      note:={program.selections.note},
      </div>
+     </div>
+    <div class="row">
+      <div class="col-12 pb-2">
+        <div style="min-height: 2rem;">
+        <span class="d-inline-block text-info small">
+          {#if program.help.messages[program.help.message]} {program.help.messages[program.help.message]} {/if}
+        </span>
+      </div>
+      </div>
      </div>
     <div class="row">
       <div class="col-12 pb-2">

@@ -20,7 +20,7 @@
           <th scope="col" class="small text-muted">#</th>
           <th scope="col" class="small text-muted" style="min-width: 16rem;">Instrument Configuration</th>
 
-              {#each song.parts[program.selections.part].tracks[program.selections.track].notes as slot, index}
+              {#each song.parts[program.selections.part].tracks[program.selections.track].melodies[0].notes as slot, index}
                 <th scope="col" class="small text-muted text-center">{index+1}</th>
               {/each}
 
@@ -29,22 +29,31 @@
       <tbody>
 
 
-      {#each song.parts[program.selections.part].tracks as track, index}
-      <tr>
-      <th scope="row" class="small text-muted">{index+1}</th>
-      <th scope="row" class="small text-muted">
-      <Icon name="gear" color="warning"/>
-      {track.name}
-      </th>
+      <!-- {#each song.parts[program.selections.part].tracks as track, index} -->
 
-        {#each track.notes as slot, index}
+
+        <!-- {#each track.notes as slot, index}
 
             <td><div class="rounded"  style="min-width: 2rem; user-select: none;" class:bg-success={slot.enabled} class:bg-secondary={!slot.enabled} class:shadow={!slot.enabled} on:click={()=>{slot.enabled=!slot.enabled}}>&nbsp;</div></td>
 
+        {/each} -->
+        {#each song.parts[program.selections.part].tracks[program.selections.track].melodies as melody, index}
+        <tr>
+        <th scope="row" class="small text-muted">{index+1}</th>
+        <th scope="row" class="small text-muted">
+          <Icon name="gear" color="warning"/>
+          {melody.instrument}
+        </th>
+          {#each melody.notes as note, index}
+            <td>
+              <div class="rounded"  style="min-width: 2rem; user-select: none;" class:bg-success={note.enabled} class:bg-secondary={!note.enabled} class:shadow={!note.enabled} on:click={()=>{note.enabled=!note.enabled}}>&nbsp;</div>
+            </td>
+          {/each}
+
+            </tr>
         {/each}
 
-      </tr>
-      {/each}
+      <!-- {/each} -->
 
           <!-- {#each song.tracks as track, index}
             <tr>
