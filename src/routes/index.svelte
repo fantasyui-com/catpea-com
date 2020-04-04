@@ -77,6 +77,11 @@ const linkDatabase = {
 let research = [
 
   {
+    date: '2020-04-04T19:47:42.610Z',
+    html: `Whoopsie, I crashed the website generator with long winded code explanations with samples. All fixed now. I always worry github will shut me down, I don't think they like Code Mavericks like me. If something ever happens like that, I'll switch within a day or two, catpea.com domain name will stay the same.`
+  },
+
+  {
     date: '2020-04-04T19:04:39.833Z',
     html: `
 
@@ -110,7 +115,7 @@ let research = [
     <figure class="figure float-right"> <img src="research/smart-color.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">Automatic Coloring</figcaption> </figure>
 
     <p class="text-warning">As a side-note, programming-wise this is not really impressive, it is like 5 lines of code, so pro-programmers would yawn at this,
-    but it is a big deal for me, because I am getting really precise and delicate control over colors in my Dark Theme here, that it is only 5 lines of code, is great for me, I can just type in @while (wcag-contrast($color, $background) < 1.5) { $color: color.adjust($color, $lightness: 5%); } and be done with worrying about color redability for some UI component or button/label combo. I like this. And I like being given the opportunity to ponder if I want something to grow brighter (like a label on a button) or darker, like in the case of a number-label on a table of data (like a row number in Excel). </p>
+    but it is a big deal for me, because I am getting really precise and delicate control over colors in my Dark Theme here, that it is only 5 lines of code, is great for me, I can just type in a bit of code and be done with worrying about color readability for some UI component or button/label combo. I like this. And I like being given the opportunity to ponder if I want something to grow brighter (like a label on a button) or darker, like in the case of a number-label on a table of data (like a row number in Excel). </p>
 
     `,
 
