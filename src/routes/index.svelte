@@ -377,7 +377,63 @@ let news = [
           // pthers may jump from the fire escape,
 
 
+
     {
+      date: '2020-04-03T23:59:02.881Z',
+      html: `
+        <p class="mb-0">Captain's Log: Day Eighteen of Quarantine.</p>
+        <p class="mb-0">Researching, learning, computers being mean.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">It must be Friday, the eve of Eighteen,</p>
+        <p class="mb-0">I peeked outside and I think the trees are turning green.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">But the squirrels, again, they act so weird,</p>
+        <p class="mb-0">smart little kitties worried that everyone disappeared.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">Speaking of weird, programming is such a fun game,</p>
+        <p class="mb-0">I am convinced it is unhealthy, but I think that's a shame.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">My computer programs kept me company since I was nine,</p>
+        <p class="mb-0">I was so little, and already learning the command line.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">Alas, the time doth fly,</p>
+        <p class="mb-0">as we grow older we must take to the sky.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">We have to learn beyond what is at our fingertips,</p>
+        <p class="mb-0">and set aims for all those leaderships.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">We should pamper our talents, can't leave them behind,</p>
+        <p class="mb-0">as we grow older they'll play a very important role in our peace of mind.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">My readers, we are each charged with becoming Teachers,</p>
+        <p class="mb-0">share our knowledge, become Reason's own preachers.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">The Future is only as bright as Her Humanity,</p>
+        <p class="mb-0">we are Her dignity, Her keepers of sanity.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">So, search for [video tutorials],</p>
+        <p class="mb-0">maybe open a book,</p>
+        <p class="mb-0">and take a look.</p>
+        <div>&nbsp;</div>
+
+      `,
+      link:{
+        'video tutorials':'/warrior',
+      }
+    },
+
+    {
+
       date: '2020-04-02T20:04:32.068Z',
       html: `
 
@@ -562,6 +618,7 @@ let news = [
     date: '2020-03-29T11:14:44.761Z',
     html: ` The birds are going wild outside my window, probably because of all the Plump <span class="shake shake-force">${octicons.squirrel.toSVG()}</span> Squirrels I've been feeding. Dammit.`
   },
+
 
   {
     date: '2020-03-28T22:31:17.209Z',
