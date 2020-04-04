@@ -1,10 +1,11 @@
+@use 'sass:color';
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-
+// https://sass-lang.com/blog/the-module-system-is-launched
 @import "../../node_modules/bootstrap/scss/functions";
 
 @import "./variables";
@@ -61,7 +62,7 @@
 
 
 
-// 
+//
 // @each $color, $value in $app-colors {
 //   ".app-#{$color}" {
 //     background-color: $value !important;
@@ -92,22 +93,17 @@
 
 
 
-
-
-
-
-
 @each $color, $value in $grays {
 
-  ".text-gray-#{$color}" {
+  .text-gray-#{$color} {
     color: $value !important;
   }
 
-  ".bg-gray-#{$color}" {
+  .bg-gray-#{$color} {
     background-color: $value !important;
   }
 
-  ".bg-gray-#{$color}-hover:hover" {
+  .bg-gray-#{$color}-hover:hover {
     background-color: $value !important;
   }
 }
@@ -117,19 +113,19 @@
 
 
 @each $color, $value in $theme-colors {
-  ".#{$color}-hover:hover" {
+  .#{$color}-hover:hover {
     color: $value !important;
   }
-  ".bg-#{$color}-hover:hover" {
+  .bg-#{$color}-hover:hover {
     background-color: $value !important;
   }
-  ".fill-#{$color}-hover:hover" {
+  .fill-#{$color}-hover:hover {
     fill: $value;
   }
 }
 
 @each $color, $value in $theme-colors {
-  ".fill-#{$color}" {
+  .fill-#{$color} {
     fill: $value;
   }
 }

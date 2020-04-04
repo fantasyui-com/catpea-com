@@ -7,7 +7,12 @@ import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 
+
 import json from '@rollup/plugin-json';
+import chroma from 'chroma-js';
+import sass from 'sass';
+
+
 
 //import octicons from 'octicons';
 
@@ -22,7 +27,39 @@ const dedupe = importee => importee === 'svelte' || importee.startsWith('svelte/
 
 const preprocess = sveltePreprocess({
   scss: {
-    includePaths: ['src']
+    includePaths: ['src' ],
+    //  includePaths: ["node_modules/bootstrap/dist/css"],
+
+
+    functions: {
+        // This function uses the synchronous API, and can be passed to either
+        // renderSync() or render().
+        'wcag-contrast($color1, $color2)': function(sassColor1, sassColor2) {
+          let result = 0;
+
+          let color1 = [sassColor1.getR(), sassColor1.getG(), sassColor1.getB(), sassColor1.getA()]
+          let color2 = [sassColor2.getR(), sassColor2.getG(), sassColor2.getB(), sassColor2.getA()]
+          result = chroma.contrast(color1, color2);
+
+          //console.log('CONTRAST', result, color1, color2);
+
+          return new sass.types.Number(result);
+        },
+
+        // This function uses the asynchronous API, and can only be passed to
+        // render().
+        'sqrt($number)': function(number, done) {
+          if (!(number instanceof sass.types.Number)) {
+            throw "$number: Expected a number.";
+          } else if (number.getUnit()) {
+            throw "$number: Expected a unitless number.";
+          }
+
+          done(new sass.types.Number());
+        }
+      }
+
+
     // functions: {
     //   'octicon($name: "squirrel")': function(name) {
     //     return octicons[name||"squirrel"].toSVG();

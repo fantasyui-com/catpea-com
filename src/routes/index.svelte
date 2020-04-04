@@ -4,7 +4,7 @@ import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
 
 import icons from '../devices/icons.js';
 const octicons = icons();
-console.log(octicons);
+
 
 import moment from "moment";
 
@@ -66,11 +66,55 @@ const linkDatabase = {
   'github is having problems':'https://www.githubstatus.com/',
   'github was having problems':'https://www.githubstatus.com/',
 
+  'node-sass':'https://github.com/sass/node-sass',
+  'sass':'https://github.com/sass/sass',
+  'SASS Programming Language':'https://sass-lang.com/documentation/at-rules/control/if',
+  'wcag-contrast':'https://www.w3.org/TR/WCAG20-TECHS/G18.html',
 };
 
 
 // (new Date()).toISOString()
 let research = [
+
+  {
+    date: '2020-04-04T19:04:39.833Z',
+    html: `
+
+    <p>Ewwwwwww! I switched from [node-sass] to [sass], node-sass got old, I guess.</p>
+    I wasn't really paying too much attention to SASS (a UI programming language) because I think CSS should be shaped with JS, as these are native browser <p>technologies. But since [Bootstrap] is forcing me into [sass], I might as well make use of the language, and... I guess its functions as well.</p>
+
+    <p>Since this is a new addition to the system, there is both a learning curve, and bugs.</p>
+    <p>So I've been trying to execute color.adjust(#6b717f, $red: 15); these are the big fancy new functions, but I've been getting errors for days.</p>
+
+    <p>Well, now that I switched to [sass] (from node-sass) there were changes, but I still got an error.</p>
+    <p>It turns out they have a new module system, and before I make use of the color function I have to execute @use 'sass:color'; on top of the program file.</p>
+
+    <p>That's how it is done in all programming languages, but sine I upgraded, I had to learn few new things about the new version of the language.</p>
+
+    <p>Now, this does not mean that I approve of the existence of the [SASS Programming Language] in my code. But it is OK.</p>
+
+    As the first, thing here, I created a custom function, this is written in JavaScript, and it is integrated with SASS. The function measures readability between a background color and a foreground color, and it is interesting... Because even though everyone says "if readibility is more than 4.5 you are peachy",</p>
+
+    <p>When working with themes, when kind of knowing colors, the 4.5 threshold can be lowered down to 1.5 even.</p>
+
+    <p>The big deal here is being able to say, keep darkening/lightening that color until it passes the readability test.</p>
+
+    <p>Here is an image of a recent test of using my [wcag-contrast](foreground, background) function until a color is readable.</p>
+
+    <p>Note how text in the first column it not readable as the background and text-color converge in the middle.</p>
+    <p>And now look at the second column, where SMART coloring is taking place.</p>
+
+    <p>I know it is still dark, I kept the color change threshold very low on purpose, to make the overall UI graphics nice. The point is that the text is keeping up with the background, it is keeping juuuuuuust a wee bit above, un-readability.</p>
+
+
+    <figure class="figure float-right"> <img src="research/smart-color.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">Automatic Coloring</figcaption> </figure>
+
+    <p class="text-warning">As a side-note, programming-wise this is not really impressive, it is like 5 lines of code, so pro-programmers would yawn at this,
+    but it is a big deal for me, because I am getting really precise and delicate control over colors in my Dark Theme here, that it is only 5 lines of code, is great for me, I can just type in @while (wcag-contrast($color, $background) < 1.5) { $color: color.adjust($color, $lightness: 5%); } and be done with worrying about color redability for some UI component or button/label combo. I like this. And I like being given the opportunity to ponder if I want something to grow brighter (like a label on a button) or darker, like in the case of a number-label on a table of data (like a row number in Excel). </p>
+
+    `,
+
+  },
 
   {
     date: '2020-04-03T23:25:54.011Z',
@@ -758,11 +802,11 @@ onMount(async () => {
     </div>
 
     <div class="col pb-3">
-    <RandomVideo duration="40"/>
+    <RandomVideo duration="10"/>
     </div>
 
     <div class="col pb-3">
-    <RandomVideo duration="40"/>
+    <RandomVideo duration="15"/>
     </div>
 
 

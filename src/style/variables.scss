@@ -8,9 +8,6 @@
 
 
 
-
-
-
 $white:    #fff !default;
 
 $gray-100: #f8f9fa !default;
@@ -122,41 +119,88 @@ $theme-colors: map-merge(
 
 
 
-$app-color-base-body: $gray-800;
-$app-color-base-text: $gray-500;
-$app-color-additive: #11a5cc;
+$color-levels-base: $gray-500;
+$color-levels-additive: #066d74;
 
 
 $app-background-colors: () !default;
 $app-text-colors: () !default;
 
+//  @debug color.adjust(#6b717f, $red: 15); // #7a717f
 
+$previous-color: red;
 @for $index from 0 through 9 {
 
-
-  .text-light-#{$index} {
-    color: lighten($gray-500, $index * 5%);
-  }
+  //
+  // .text-light-#{$index} {
+  //   // color: mix($color-levels-additive, lighten($color-levels-base, $index * 5%), $index * 5%);
+  //   // color: scale-color($color-levels-base, $lightness: -40%)
+  //   color: color.adjust($color-levels-base, $lightness: $index * 5%); // rgba(71, 57, 71, 0.6)
+  // }
 
   .bg-light-#{$index} {
-    background: lighten($gray-500, $index * 5%);
-    color: darken($gray-500, ( 9 - $index ) * 5%);
+
+    $background: color.adjust($gray-500, $lightness: - $index * 5%); // rgba(71, 57, 71, 0.6)
+    $color:      color.adjust($gray-900, $lightness: $index * 5%); // rgba(71, 57, 71, 0.6)
+    $color:      $gray-900;
+
+    @while (wcag-contrast($color, $background) < 1.5) {
+      @debug wcag-contrast($color, $background);
+       $color: color.adjust($color, $lightness: 5%);
+    }
+
+    background: $background;
+    color: $color;
+
+    //
+    // @if ( wcag-contrast($color, $background) > 1.5 ) {
+    //   $previous-color: $color;
+    // } @else {
+    //   //color: color.adjust($gray-100, $lightness: - $index * 5%);
+    //   color: $previous-color;
+    //
+    //   @while wcag-contrast($color, $background) > 1.5 {
+    //      $color: ($gray-100, $lightness: - $index * 5%);
+    //   }
+    // }
+
   }
 
 }
-
 @for $index from 0 through 9 {
 
-  .text-dark-#{$index} {
-    color: darken($gray-500, $index * 5%);
-  }
-  .bg-dark-#{$index} {
-   
-    background: darken($gray-500, $index * 5%);
-    color: lighten($gray-500, ( 9 - $index ) * 5%);
+  //
+  // .text-light-#{$index} {
+  //   // color: mix($color-levels-additive, lighten($color-levels-base, $index * 5%), $index * 5%);
+  //   // color: scale-color($color-levels-base, $lightness: -40%)
+  //   color: color.adjust($color-levels-base, $lightness: $index * 5%); // rgba(71, 57, 71, 0.6)
+  // }
+
+  .bg-light-raw-#{$index} {
+
+    $background: color.adjust($gray-500, $lightness: - $index * 5%); // rgba(71, 57, 71, 0.6)
+    $color:      color.adjust($gray-900, $lightness: $index * 5%); // rgba(71, 57, 71, 0.6)
+
+    background: $background;
+    color: $color;
+
 
   }
+
 }
+
+// @for $index from 0 through 9 {
+//
+//   .text-dark-#{$index} {
+//     color: mix($color-levels-additive, darken($color-levels-base, $index * 5%), $index * 5%);
+//   }
+//   .bg-dark-#{$index} {
+//
+//     background: mix($color-levels-additive, darken($color-levels-base, $index * 5%), $index * 5%);
+//     color: mix($color-levels-additive, lighten($color-levels-base, ( 9 - $index ) * 5%), $index * 5%);
+//
+//   }
+// }
 
 
 
