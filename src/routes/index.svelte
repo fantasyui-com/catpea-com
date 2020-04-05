@@ -858,7 +858,7 @@ onMount(async () => {
 
 
     <div class="col pb-3">
-        <div class="card text-white bg-dark shadow">
+        <div class="card bg-dark shadow">
           <a href="{daw.url}"><img src="{daw.img}" class="card-img-top" alt="{daw.name}"></a>
           <div class="card-body p-3">
             <h5 class="card-text">{daw.name}</h5>

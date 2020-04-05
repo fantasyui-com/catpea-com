@@ -13,6 +13,17 @@ import Tone from "tone";
 import icons from '../devices/icons.js';
 const octicons = icons();
 
+// Application State
+let loading = false;
+let ready = false;
+
+const preview = {
+  name: 'Shebang Slash Beat Sequencer',
+  text: 'Make Music Now, the Shebang Slash Beat Sequencer is the singe most advanced sound sequencer this side of Pluto.',
+
+  img: 'previews/beat-sequencer.png',
+}
+
 let beatBuffer = 4*8;
 
 let notes = [];
@@ -214,6 +225,17 @@ function clearSequencerLine(index) {
 
 onMount(async () => {
 
+
+});
+
+onDestroy(() => {
+  play = false;
+});
+
+async function main(){
+
+  loading = true;
+
   const reverb = new Tone.Reverb( {decay : 1.8 , preDelay : 0.01 }).toMaster()
   //reverb.wet.value = 0.2;
   await reverb.generate();
@@ -299,11 +321,10 @@ onMount(async () => {
   const synth = new Tone.Synth().toMaster()
   song = dataGenerator(7);
   schedule();
-});
 
-onDestroy(() => {
-  play = false;
-});
+  loading = false;
+  ready = true;
+}
 
 </script>
 
@@ -315,7 +336,24 @@ onDestroy(() => {
 
   <div class="card-body">
 
-     <div class="row">
+  <div class="row" class:d-none={ready}> <!-- When ready this whole row goes away -->
+    <div class="col pb-3">
+        <div class="card text-white bg-dark shadow">
+          <a href="{preview.url}"><img src="{preview.img}" class="card-img-top" alt="{preview.name}"></a>
+          <div class="card-body p-3">
+            <h5 class="card-text">{preview.name}</h5>
+            <p class="card-text small">{preview.text}</p>
+            <button class="btn btn-primary" class:d-none={loading} on:click={()=>main()}>Load</button> <!-- triggers the load -->
+            <div class="progress" class:d-block={loading} class:d-none={!loading}> <!-- hidden until loading is true -->
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">Loading...</div>
+            </div>
+
+          </div>
+        </div>
+    </div>
+  </div>
+
+     <div class="row" class:d-none={!ready}>
       <div class="col py-2">
         <Drawer title="Help">
           {#each tips as item, index}
@@ -328,7 +366,7 @@ onDestroy(() => {
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" class:d-none={!ready}>
       <div class="col py-2">
         <Drawer title="Presets">
           {#each presets as item, index}
@@ -341,7 +379,7 @@ onDestroy(() => {
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" class:d-none={!ready}>
       <div class="col py-2">
         <Drawer title="Tempo">
           <div class="form-group">
@@ -358,7 +396,7 @@ onDestroy(() => {
       </div>
     </div>
 
-    <div class="row my-2">
+    <div class="row my-2" class:d-none={!ready}>
       <div class="col">
         <button class="btn btn-text btn-sm border border-secondary float-left mr-1" class:d-none={play}  class:d-block={!play}  on:click={()=>{play=true;schedule()}}>{@html octicons['play'].toSVG({ "class": "fill-warning text-small" })}</button>
         <button class="btn btn-text btn-sm border border-secondary float-left mr-1" class:d-none={!play} class:d-block={play}   on:click={()=>{play=false;}}>{@html octicons['mute'].toSVG({ "class": "fill-warning text-small" })}</button>
@@ -368,7 +406,7 @@ onDestroy(() => {
       </div>
     </div>
 
-    <div class="sequencer mb-2">
+    <div class="sequencer mb-2" class:d-none={!ready}>
       {#each song as item, index}
         <div>
           <div class="sequencer-line" on:click={(event)=>selectSequencerLine(event, index)} class:sequencer-line-selected='{index===selected}'>

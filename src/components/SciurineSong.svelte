@@ -431,7 +431,7 @@ main();
 
 
       <div class="col">
-      <audio controls class="w-100">
+      <audio controls class="w-100" preload="none">
        <source src="sciurine.mp3" type="audio/mpeg">
      Your browser does not support the audio element.
      </audio>

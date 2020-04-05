@@ -42,8 +42,7 @@ async function play(note){
 async function main(){
 
 
-
-  console.log(notes);
+ 
 
  loading = true;
  instrument = await sampler(sample);

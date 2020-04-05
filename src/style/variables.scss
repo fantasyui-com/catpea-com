@@ -119,16 +119,22 @@ $theme-colors: map-merge(
 
 @each $color, $value in $theme-colors {
 
-  .bg-#{$color} {
-    @if (lightness($value) > 30) {
-      color: $black;
-    } @else {
-      color: $white;
-    }
-  }
+
 
   .bg-#{$color}-light {
     $background: color.adjust($value, $lightness: 10%);
+    background-color: $background !important;
+
+  }
+
+  .bg-#{$color}-dark {
+    $background: color.adjust($value, $lightness: - 10%);
+    background-color: $background !important;
+
+  }
+
+  .bt-#{$color} {
+    $background: $value;
     background-color: $background !important;
     @if (lightness($background) > 30) {
       color: $black;
@@ -137,8 +143,18 @@ $theme-colors: map-merge(
     }
   }
 
-  .bg-#{$color}-dark {
-    $background: color.adjust($value, $lightness: - 10%);
+  .bt-#{$color}-light {
+    $background: color.adjust($value, $lightness: 7%);
+    background-color: $background !important;
+    @if (lightness($background) > 30) {
+      color: $black;
+    } @else {
+      color: $white;
+    }
+  }
+
+  .bt-#{$color}-dark {
+    $background: color.adjust($value, $lightness: - 7%);
     background-color: $background !important;
     @if (lightness($background) > 30) {
       color: $black;

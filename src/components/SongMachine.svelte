@@ -1,5 +1,5 @@
 <script>
-  
+
   import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
 
   import Composition from './song-machine/Composition.svelte';
@@ -217,13 +217,33 @@
         tracks:[
           {
             name:'Beat',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.note)),
-            notes: Array(64).fill(program.defaults.note)
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
+          },
+          {
+            name:'Beat',
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
+          },
+          {
+            name:'Beat',
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
+          },
+          {
+            name:'Beat',
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
+          },
+          {
+            name:'Bassline',
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           },
           {
             name:'Piano',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.note)),
-            notes: Array(64).fill(program.defaults.note)
+            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            melodies: makeMusic(),
           }
         ]
       }

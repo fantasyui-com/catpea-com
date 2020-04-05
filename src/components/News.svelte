@@ -99,7 +99,7 @@
               <span class="shake">{@html octicons[icon].toSVG({class:"fill-info"})}</span>
               <span class="badge badge-secondary px-2">Posted {item.ago}</span>
 
-              <div class="text-info pl-3 py-2">{@html item.html}</div>
+              <div class="pl-3 py-2" style="color: skyblue;">{@html item.html}</div>
             </div>
 
             </div>

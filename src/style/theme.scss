@@ -8,9 +8,9 @@
 // https://sass-lang.com/blog/the-module-system-is-launched
 @import "../../node_modules/bootstrap/scss/functions";
 
+$body-color: skyblue;
 @import "./variables";
 
-$body-color: $gray-600;
 
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/root";
@@ -88,7 +88,9 @@ $body-color: $gray-600;
 
 
 
-
+.selectable-none {
+  user-select: none;
+}
 
 
 

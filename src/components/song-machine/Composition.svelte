@@ -14,10 +14,14 @@
   {#each song.parts as part, index}
 
     <li
-      class="list-group-item text-primary cursor-pointer"
-      class:bg-secondary={program.selections.part == index}
-      class:text-dark={program.selections.part == index}
+      class="list-group-item cursor-pointer selectable-none"
+
+      class:bg-dark-light={program.selections.part == index}
       class:bg-dark={program.selections.part != index}
+
+      class:text-secondary={program.selections.part !== index}
+      class:text-warning={program.selections.part == index}
+
       title={program.help.messages['select-song-part']}
       on:click={()=>{
         program.selections.part = index;
