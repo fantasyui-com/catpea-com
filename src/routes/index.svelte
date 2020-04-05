@@ -428,6 +428,43 @@ let news = [
 
 
     {
+      date: '2020-04-05T01:04:04.832Z',
+      html: `
+        <p class="mb-0">Captain's Log: Day Nineteen of Quarantine.</p>
+        <p class="mb-0">Tomorrow, day twenty may have rhyme a plenty,</p>
+        <p class="mb-0">but it won't rhyme with quarantine, and that was unforeseen.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">I waited all day to write,</p>
+        <p class="mb-0">to see if something interesting may bite.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">I wanted to draw and paint, and dance and prance,</p>
+        <p class="mb-0">but ended up discovering a new [poem about taking chance].</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">I ended up programming, music and art,</p>
+        <p class="mb-0">I aimed to do something relaxing, but smart.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">Such are meow days, and had been forever and more,</p>
+        <p class="mb-0">searching for all things special and all the things I adore.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">Now, I am finishing today's poem, one foot already in bed,</p>
+        <p class="mb-0">Though I already had my salad, I wonder if I should make some bread.</p>
+        <div>&nbsp;</div>
+
+        <p class="mb-0">That's sounds about right,</p>
+        <p class="mb-0">I'll waddle downstairs and grab a bite.</p>
+        <p class="mb-0">Goodnight.</p>
+        `,
+        link:{
+          'poem about taking chance':'https://www.youtube.com/watch?v=k6_QUhUPrF4',
+        }
+    },
+
+    {
       date: '2020-04-03T23:59:02.881Z',
       html: `
         <p class="mb-0">Captain's Log: Day Eighteen of Quarantine.</p>
