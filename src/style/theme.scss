@@ -10,6 +10,8 @@
 
 @import "./variables";
 
+$body-color: $gray-600;
+
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/reboot";

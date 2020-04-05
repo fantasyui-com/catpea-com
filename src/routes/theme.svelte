@@ -1,37 +1,18 @@
 <script>
 
-const textDatabase = [
-//  {name:'', prefix:'text-dark-', data:[]},
-  {name:'', prefix:'text-light-', data:[]},
-];
-const bgDatabase = [
-//  {name:'', prefix:'bg-dark-', data:[]},
-  {name:'', prefix:'bg-light-', data:[]},
-];
-const bgDatabaseRaw = [
-//  {name:'', prefix:'bg-dark-raw-', data:[]},
-  {name:'', prefix:'bg-light-raw-', data:[]},
+const bootstrapColors = [ 'primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', ];
+
+const backgroundDatabase = [
 ];
 
 
-for (let item of textDatabase){
-  for (let i = 0; i < 10; i++){
-    item.data.push({className:`${item.prefix}${i}`});
-
+  for (let i = 0; i < bootstrapColors.length; i++){
+    const name = bootstrapColors[i];
+    backgroundDatabase.push({className:`bg-${name}-dark`});
+    backgroundDatabase.push({className:`bg-${name}`});
+    backgroundDatabase.push({className:`bg-${name}-light`});
   }
-}
-for (let item of bgDatabase){
-  for (let i = 0; i < 10; i++){
-    item.data.push({className:`${item.prefix}${i}`});
 
-  }
-}
-for (let item of bgDatabaseRaw){
-  for (let i = 0; i < 10; i++){
-    item.data.push({className:`${item.prefix}${i}`});
-
-  }
-}
 
 </script>
 
@@ -46,49 +27,33 @@ for (let item of bgDatabaseRaw){
 
   <div class="row mb-3">
     <div class="col">
+      <h3 class="text-light text-uppercase">Theme Development <small class="text-light"> Bootstrap Based Theme for Applications</small></h3>
+    </div>
+  </div>
 
-      <h1 class="text-light">Dragonfly Theme Development <small class="text-light"> Bootstrap Based Theme for Applications</small></h1>
+  <div class="row mb-3">
+    <div class="col">
+      <h3 class="text-light">Extended Background Colors <small class="text-light"> </small></h3>
+
+      <div class="alert alert-dark bg-dark-light" role="alert">
+        Add a -light/-dark postfix to default bootstrap colors.
+      </div>
+
+      <!-- <ul class="list-unstyled">
+        {#each backgroundDatabase as item}
+        <li>.{item.className}</li>
+        {/each}
+      </ul> -->
 
     </div>
   </div>
 
   <div class="row">
-
-
-  <div class="col-4">
-<!--
-  {#each textDatabase as entry}
-     {#each entry.data as item}
-      <p class="{item.className}">Additional Text Classes <small class="small"> class: {item.className}</small></p>
-    {/each}
-  {/each} -->
-
-  {#each bgDatabaseRaw as entry}
-     {#each entry.data as item}
-      <p class="rounded shadow p-3 {item.className}">DUMB COLOR <small class="small"> class: .{item.className}</small></p>
-    {/each}
-  {/each}
-
-
-  </div>
-
-    <div class="col-4">
-<!--
-    {#each textDatabase as entry}
-       {#each entry.data as item}
-        <p class="{item.className}">Additional Text Classes <small class="small"> class: {item.className}</small></p>
+    <div class="col">
+      {#each backgroundDatabase as item}
+          <p class="rounded shadow p-3 {item.className}"><small>.{item.className}</small></p>
       {/each}
-    {/each} -->
-
-    {#each bgDatabase as entry}
-       {#each entry.data as item}
-        <p class="rounded shadow p-3 {item.className}">SMART COLOR <small class="small"> class: .{item.className}</small></p>
-      {/each}
-    {/each}
-
-
     </div>
-
   </div>
 
 </div>

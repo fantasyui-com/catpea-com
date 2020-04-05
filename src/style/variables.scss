@@ -117,6 +117,39 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+@each $color, $value in $theme-colors {
+
+  .bg-#{$color} {
+    @if (lightness($value) > 30) {
+      color: $black;
+    } @else {
+      color: $white;
+    }
+  }
+
+  .bg-#{$color}-light {
+    $background: color.adjust($value, $lightness: 10%);
+    background-color: $background !important;
+    @if (lightness($background) > 30) {
+      color: $black;
+    } @else {
+      color: $white;
+    }
+  }
+
+  .bg-#{$color}-dark {
+    $background: color.adjust($value, $lightness: - 10%);
+    background-color: $background !important;
+    @if (lightness($background) > 30) {
+      color: $black;
+    } @else {
+      color: $white;
+    }
+  }
+
+
+
+}
 
 
 $color-levels-base: $gray-500;
@@ -142,15 +175,34 @@ $previous-color: red;
 
     $background: color.adjust($gray-500, $lightness: - $index * 5%); // rgba(71, 57, 71, 0.6)
     $color:      color.adjust($gray-900, $lightness: $index * 5%); // rgba(71, 57, 71, 0.6)
-    $color:      $gray-900;
-
-    @while (wcag-contrast($color, $background) < 1.5) {
-      @debug wcag-contrast($color, $background);
-       $color: color.adjust($color, $lightness: 5%);
-    }
-
-    background: $background;
-    color: $color;
+    // $color:      $gray-900;
+    //
+    // // @while (wcag-contrast($color, $background) < 1.5) {
+    // //   @debug wcag-contrast($color, $background);
+    // //    $color: color.adjust($color, $lightness: 5%);
+    // // }
+    //
+    // @if lightness($background) > 50 {
+    //   // Background is lighter, color adjust should have a tendency towards darkness
+    //   @while (wcag-contrast($color, $background) < 1.5) {
+    //     @debug wcag-contrast($color, $background);
+    //      $color: color.adjust($color, $lightness: - 5%);
+    //   }
+    //
+    //   @for $i from 1 through 10 {
+    //     $color: color.adjust($color, $lightness: - 10%);
+    //   }
+    //
+    // } @else {
+    //   // background is darker, color adjust should have a tendency towards brightness
+    //   @while (wcag-contrast($color, $background) < 1.5) {
+    //     @debug wcag-contrast($color, $background);
+    //      $color: color.adjust($color, $lightness: 5%);
+    //   }
+    // }
+    //
+    // background: $background;
+    // color: $color;
 
     //
     // @if ( wcag-contrast($color, $background) > 1.5 ) {
@@ -163,6 +215,9 @@ $previous-color: red;
     //      $color: ($gray-100, $lightness: - $index * 5%);
     //   }
     // }
+
+
+
 
   }
 
@@ -302,6 +357,8 @@ $sizes: map-merge(
 $body-bg:                   $white !default;
 $body-bg:                   $gray-900; //+
 $body-color:                $gray-900 !default;
+
+
 
 
 // Links

@@ -56,7 +56,7 @@ const linkDatabase = {
   'Scientific Pitch Notation': 'https://en.wikipedia.org/wiki/Scientific_pitch_notation',
   'Yamaha C5 Grand Piano':'https://usa.yamaha.com/products/musical_instruments/pianos/grand_pianos/cx_series/cx-series.html',
   'CATPEA DAW':'/daw',
-  'Dragonfly':'/theme',
+  'THEME':'/theme',
   'Rollup': 'https://rollupjs.org/guide/en/',
   'Octicons require a json file': 'https://github.com/primer/octicons/commit/875bc333ce4dc6a460a116dfd315a56dbb23120f#diff-c93a11fe3afdd3ccfbe1f152a8cf7b20L1',
   'Svelte': 'https://svelte.dev/',
@@ -75,6 +75,11 @@ const linkDatabase = {
 
 // (new Date()).toISOString()
 let research = [
+
+  {
+    date: '2020-04-05T16:56:55.639Z',
+    html: `It took me a moment to figure out how to structure colors/shades for User Interface in the [CATPEA DAW]. The problem was I needed more colors, but I don't want to go against [Bootstrap]'s way of doing things. So, where they have a color scheme like this: primary-color, secondary-color, muted-color, warning-color. I added  primary-color-dark, secondary-color-dark, muted-color-dark, warning-color-dark and primary-color-light, secondary-color-light, muted-color-light, warning-color-light. So when two of bootstrap colors start biting each other for example button and box (that the button is in) I can make the button lighter by saying button color: primary-color-light, so I tripled color count, in such a way that all the users of the [THEME] just need to remember "Oh, yeah, all the colors have a dark and light variation now. Hmm." so [CATPEA DAW] UI is back to semi-normal now, and I updated the [THEME] page to show off this upgrade.`
+  },
 
   {
     date: '2020-04-04T19:47:42.610Z',
@@ -124,7 +129,7 @@ let research = [
   {
     date: '2020-04-03T23:25:54.011Z',
     html: `
-    Zoinks! I started work on a Graphical Theme for Applications, I called it [Dragonfly]. It provides extensions for [Bootstrap] and components based on [CATPEA DAW]. I'll use it for my research here, and try to keep it tidy and inline with Bootstrap's Programming conventions so that I can think about getting into [Bootstrap Expo] and later [Bootstrap Themes]. I don't really want to create some stressful situation about sales, tech-support, and bug fixes; but I do like following [Bootstrap] conventions (it helps me keep code un-confusing) and I like learning about all this. Here's early: [Dragonfly].
+    Zoinks! I started work on a Graphical Theme for Applications, I called it [THEME]. It provides extensions for [Bootstrap] and components based on [CATPEA DAW]. I'll use it for my research here, and try to keep it tidy and inline with Bootstrap's Programming conventions so that I can think about getting into [Bootstrap Expo] and later [Bootstrap Themes]. I don't really want to create some stressful situation about sales, tech-support, and bug fixes; but I do like following [Bootstrap] conventions (it helps me keep code un-confusing) and I like learning about all this. Here's early: [THEME].
     `,
 
   },
