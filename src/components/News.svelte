@@ -1,4 +1,5 @@
 <script>
+  import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
 
   import moment from "moment";
   import icons from '../devices/icons.js';
@@ -17,12 +18,6 @@
 
   // Application
 
-
-
-
-
-
-
   export let news = [];
 
   function recalculateTimestamps(){
@@ -31,12 +26,19 @@
   }
 
   // Timers
+  let intervalId = null;
 
-  setInterval(recalculateTimestamps,60000)
+//  onMount(async () => {
+    intervalId = setInterval(recalculateTimestamps,60000)
+    recalculateTimestamps();
 
-  // Initialization
 
-  recalculateTimestamps();
+//  });
+
+ onDestroy(() => {
+   clearInterval(intervalId);
+ });
+
 
 </script>
 

@@ -19,7 +19,7 @@
 
 
 
-<nav class="navbar navbar-dark navbar-expand-lg shadow-lg border-bottom border-dark mb-3 rounded-pill">
+<nav class="navbar navbar-dark navbar-expand-lg shadow-lg border-bottom border-dark mb-3 rounded">
   <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
 
   <button class="navbar-toggler border-0" type="button" on:click={handleCollapse}>
@@ -41,18 +41,24 @@
 
       -->
 
+      <li class="nav-item" class:selected='{segment === "quarantine"}'>
+        <a class="nav-link text-primary" href="/quarantine">Quarantine <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" class:selected='{segment === "research"}'>
+        <a class="nav-link text-primary" href="/research">Research <span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item" class:selected='{segment === "video"}'>
-        <a class="nav-link text-primary" href="/video?p=0&i=8">Video Library <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-primary" href="/video?p=0&i=8">Videos <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item" class:selected='{segment === "warrior"}'>
-        <a class="nav-link text-primary" href="/warrior">The Warrior Book <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-primary" href="/warrior">Book <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item" class:selected='{segment === "daw"}'>
-        <a class="nav-link text-primary" href="/daw">Digital Audio Workstation <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-primary" href="/daw">Audio<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item" class:selected='{segment === "theme"}'>
-        <a class="nav-link text-primary" href="/theme">Bootstrap Theme <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-primary" href="/theme">Theme <span class="sr-only">(current)</span></a>
       </li>
 
 <!--
