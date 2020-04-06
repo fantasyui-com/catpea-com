@@ -5,6 +5,21 @@ const database = [
 
 
     {
+      date: '2020-04-06T22:18:33.170Z',
+      html: `
+
+        Working with the GUI, testing what I can alter, what I can't.
+        I still have no idea what catpea is good for, what website format I should create.
+        There is also a division of widgets forming some are useful tools (Song Beat Counter) others are little information displays (You Tube Videos, Season Countdown).
+        As far as User Interface Design and getting things done goes, it is hard to beat chaos.
+
+      <figure class="figure float-right"> <img src="research/gui2.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">UI Thus Far</figcaption> </figure>
+      <figure class="figure float-right"> <img src="research/gui3.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">UI Thus Far</figcaption> </figure>
+
+      `
+    },
+
+    {
       date: '2020-04-06T19:21:21.474Z',
       html: `I am testing separate [Quarantine]/[Research] sections in the main menu. The current scroll-bar within a scroll-bar setup was for testing, I wanted to see if it worked or if I needed to so something special. Well, they are both blogs, very similar to the warrior book, they should just have the same UI. This also brings me closer to proper Web Design, where I take a moment to make some fancy graphics to decorate typographical creations.`
     },
@@ -186,7 +201,7 @@ const database = [
     {
       date: '2020-03-31T23:43:12.938Z',
       html: `Added [Inner City, Good Life] preset to the Beat Sequencer to test support for multiple instruments. I also added Salamander Piano, which is based on [Yamaha C5 Grand Piano], a real Piano, it sounds nice ${octicons.megaphone.toSVG({"class":"fill-light"})}. Go to Shebang Slash Beat Sequencer, check some of those boxes to make the piano go. I set it as the default instrument.
-      <figure class="figure float-right"> <img src="research/piano.png" class="figure-img w-75 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">Piano Fun</figcaption> </figure>
+      <figure class="figure float-right"> <img src="research/piano.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">Piano Fun</figcaption> </figure>
       `,
       link: {
         'Inner City, Good Life': 'https://github.com/fantasyui-com/catpea-com/blob/master/src/components/BeatSequencer.svelte',

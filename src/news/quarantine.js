@@ -34,14 +34,14 @@ const database = [
       //   <p class="m-0">Captain's Log: Quarantine. Day Twenty One,</p>
       //   <p class="mb-3">There is birdsong outside, and I can feel the sun.</p>
       //
-      //   <p class="m-0">I woke up, rested, for the first time, in a long time.</p>
-      //   <p class="m-0">My mind was hardly tired, but all the rest needed rhyme,</p>
+      //   <p class="m-0">I woke up today, rested, for the first time, in a long time.</p>
+      //   <p class="m-0">My mind was hardly ever tired, but all the rest needed rhyme,</p>
       //   <p class="mb-3">I am ready for gyms to reopen, I will be so much stronger.</p>
       //
       //   <p class="m-0">It took twenty one days,</p>
       //   <p class="m-0">for my body to begin recovering from my workouts.</p>
       //   <p class="m-0">What a great shame would it have been, to wish now,</p>
-      //   <p class="mb-3">that I should have danced.</p>
+      //   <p class="mb-3">that I should have danced, or tried harder.</p>
       //
       //   <p class="m-0">Instead, here I am. Bouncy and perky as heck,</p>
       //   <p class="mb-3">ready to go back.</p>

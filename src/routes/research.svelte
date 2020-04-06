@@ -4,7 +4,7 @@
   import news from '../news/index.js';
   import icons from '../devices/icons.js';
   const octicons = icons();
-  const icon = 'squirrel';
+  const icon = 'mortar-board';
 
   let report = news();
 
