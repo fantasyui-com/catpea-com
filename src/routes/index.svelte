@@ -435,7 +435,95 @@ let news = [
           // I do worry some will go blind,
           // pthers may jump from the fire escape,
 
+          /*
+          I waited eagerly for the sausages
 
+            THere is great power in conclusion of day
+
+          */
+
+    {
+      date: '2020-04-06T03:23:24.501Z',
+      html: `
+
+        <p class="mb-0">Captain's Log:  of Quarantine, Day Twenty,</p>
+        <p class="mb-2">the promised day of rhyme a plenty.</p>
+
+        <p class="mb-0">I am sitting here with my salad,</p>
+        <p class="mb-2">expecting to write world's littlest ballad.</p>
+
+        <p class="mb-0">I waited until the conclusion of day,</p>
+        <p class="mb-2">to see with what rhymes may pay.</p>
+
+        <p class="mb-0">Alas, twenty just about rhymes with plenty,</p>
+        <p class="mb-2">it rhymes a good as yeti and orange.</p>
+
+        <p class="mb-0">On the other hand Twenty One,</p>
+        <p class="mb-2">rhymes with all under the sun.</p>
+
+
+
+        <p class="mb-0">I am sitting here smacking my lips,</p>
+        <p class="mb-2">Counting down 90 days to Penumbral Eclipse.</p>
+
+        <p class="mb-0">I made little sausages to add to my salad,</p>
+        <p class="mb-2">I added really spicy dressing to spruce up my ballad.</p>
+
+        <figure class="figure my-2"> <img src="nordhouse/a.jpg" class="figure-img w-100 rounded" alt="My Little Fort"> <figcaption class="figure-caption text-right">My Little Fort (note orange tent in the center)</figcaption> </figure>
+
+        <p class="mb-0">As I grilled the little things, I remember the same smell,</p>
+        <p class="mb-0">it was back when I lived in the ancient dune wilderness.</p>
+
+        <figure class="figure my-2"> <img src="nordhouse/x.jpg" class="figure-img w-100 rounded" alt="Little Sausage Dinner"> <figcaption class="figure-caption text-right">Little Sausage Dinner</figcaption> </figure>
+
+        <p class="mb-0">That memory really rings a bell,</p>
+        <p class="mb-0">It was at the height of my loneliness.</p>
+
+        <figure class="figure my-2"> <img src="nordhouse/b.jpg" class="figure-img w-100 rounded" alt="My Evening Couch"> <figcaption class="figure-caption text-right">My Evening Couch, as I waited for Lake Michigan Sunsets</figcaption> </figure>
+
+        <p class="mb-0">Deep woods, ancient dunes,</p>
+        <p class="mb-0">and warm and sunny afternoons.</p>
+
+        <figure class="figure my-2"> <img src="nordhouse/k.jpg" class="figure-img w-100 rounded" alt="Deep in Woods"> <figcaption class="figure-caption text-right">Deep in Woods</figcaption> </figure>
+
+        <p class="mb-0">Not all afternoons were sunny, I once got a heck of a reminder,</p>
+        <p class="mb-0">One cold afternoon I remembered that I get scared of thunder.</p>
+
+        <figure class="figure my-2"> <img src="nordhouse/c.jpg" class="figure-img w-100 rounded" alt="And My Evening Wear"> <figcaption class="figure-caption text-right">And My Evening Wear</figcaption> </figure>
+
+        <p class="mb-0">Not, little thunder of course,</p>
+        <p class="mb-0">the scary ones, that always strike with great force.</p>
+
+        <figure class="figure my-2"> <img src="nordhouse/t.jpg" class="figure-img w-100 rounded" alt="Dark Evening"> <figcaption class="figure-caption text-right">Dark Evening</figcaption> </figure>
+
+        <p class="mb-0">It was almost never scary, certainly never scary for long,</p>
+        <p class="mb-0">it would pass, and moon or sun would come, followed by birdsong.</p>
+
+        <figure class="figure my-2"> <img src="nordhouse/h.jpg" class="figure-img w-100 rounded" alt="People taking photos of my Horses"> <figcaption class="figure-caption text-right">People taking photos of my Horses</figcaption> </figure>
+
+
+        <p class="mb-0">I remember by the beach many stood,</p>
+        <p class="mb-0">as I built horses out of driftwood,</p>
+
+        <figure class="figure my-2"> <img src="nordhouse/i.jpg" class="figure-img w-100 rounded" alt="Horse 2.0"> <figcaption class="figure-caption text-right">Horse 2.0</figcaption> </figure>
+        <figure class="figure my-2"> <img src="nordhouse/j.jpg" class="figure-img w-100 rounded" alt="Horse 3.0"> <figcaption class="figure-caption text-right">Horse 3.0</figcaption> </figure>
+
+        <p class="mb-0">The height of my loneliness,</p>
+        <p class="mb-0">also came with great deal of silliness,</p>
+
+        <figure class="figure my-2"> <img src="nordhouse/l.jpg" class="figure-img w-100 rounded" alt="Beach House"> <figcaption class="figure-caption text-right">Beach House</figcaption> </figure>
+        <figure class="figure my-2"> <img src="nordhouse/m.jpg" class="figure-img w-100 rounded" alt="Beach House"> <figcaption class="figure-caption text-right">Beach House</figcaption> </figure>
+
+
+
+        <p class="mb-0">I waived to the future, and to today,</p>
+        <p class="mb-0">Look at me I am Cowboy! Say, Hey!</p>
+
+        <figure class="figure my-2"> <img src="nordhouse/f.jpg" class="figure-img w-100 rounded" alt="Howdy!"> <figcaption class="figure-caption text-right">Howdy!</figcaption> </figure>
+
+
+      `
+    },
 
     {
       date: '2020-04-05T01:04:04.832Z',
