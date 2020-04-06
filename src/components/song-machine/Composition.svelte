@@ -14,7 +14,7 @@
   {#each song.parts as part, index}
 
     <li
-      class="list-group-item cursor-pointer selectable-none"
+      class="list-group-item cursor-pointer select-none"
 
       class:bg-dark-light={program.selections.part == index}
       class:bg-dark={program.selections.part != index}

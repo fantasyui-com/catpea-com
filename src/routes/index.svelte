@@ -77,6 +77,11 @@ const linkDatabase = {
 let research = [
 
   {
+    date: '2020-04-06T15:16:22.095Z',
+    html: `I continue my GUI Theme development research, todays test is about creating a custom component for the digital workstation. My research revealed that it is more efficient not to use the helper classes I created. By using helper classes such as bg-primary instead of the longer way I end up over-complicating things in the end. I am entering a stage of simplification as I can tell a lot of the things I invented work great. What I would like to see, is as little confusion as possible. If I keep the code simple today, then in a few weeks I can start thinking about selling "Digital Audio Workstation Theme" at [Bootstrap Themes], more importantly I get to learn more about Bootstrap's coding conventions, and perhaps make my own Bootstrap even.`
+  },
+
+  {
     date: '2020-04-05T22:35:47.063Z',
     html: `Expanded color subsystem, and finished configuring the build system. It should work OK when installed as a desktop shortcut. I have to figure out some way to make catpea useful.`
   },
@@ -442,26 +447,75 @@ let news = [
 
           */
 
+    // {
+    //   date: '2020-04-06T13:59:39.157Z',
+    //   html: `
+    //
+    //   <p class="m-0">Captain's Log: Quarantine. Day Twenty One,</p>
+    //   <p class="mb-3">There is birdsong outside, and I can feel the sun.</p>
+    //
+    //   <p class="m-0">I woke up, rested, for the first time, in a long time.</p>
+    //   <p class="m-0">My mind was hardly tired, but all the rest needed rhyme,</p>
+    //   <p class="mb-3">I am ready for gyms to reopen, I will be so much stronger.</p>
+    //
+    //   <p class="m-0">It took twenty one days,</p>
+    //   <p class="m-0">for my body to begin recovering from my workouts.</p>
+    //   <p class="m-0">What a great shame would it have been, to wish now,</p>
+    //   <p class="mb-3">that I should have danced.</p>
+    //
+    //   <p class="m-0">Instead, here I am. Bouncy and perky as heck,</p>
+    //   <p class="mb-3">ready to go back.</p>
+    //
+    //   <p class="m-0">My diet is twice as good as it was before,</p>
+    //   <p class="mb-3">including soup, and proper portion control.</p>
+    //
+    //   <p class="m-0">I admit, that even though, my mind was not tired.</p>
+    //   <p class="m-0">I felt like a sliver of invention and energy,</p>
+    //   <p class="mb-3">was somehow tied to tiredness of my body.</p>
+    //
+    //   <p class="m-0">I was always able to see longer,</p>
+    //   <p class="m-0">my life having had been so simple.</p>
+    //   <p class="m-0">Alas, trying to heal my body from stress,</p>
+    //   <p class="m-0">and overeating,</p>
+    //   <p class="mb-3">took some of my sight away.</p>
+    //
+    //   <p class="m-0">If anybody reads, this, please,</p>
+    //   <p class="mb-3">let no day slip away.</p>
+    //
+    //   <p class="m-0">Live, make each day count,</p>
+    //   <p class="m-0">it all adds together,</p>
+    //   <p class="mb-3">balance your account.</p>
+    //
+    //   <p class="m-0">What makes a Human,</p>
+    //   <p class="mb-3">is the sum of all the days in the past.</p>
+    //
+    //   <p class="m-0">What makes us strong,</p>
+    //   <p class="mb-3">is making each day better than the one before.</p>
+    //
+    //   <p class="mb-3">Please, make each day count.</p>
+    //
+    //
+    //   `
+    // },
+
     {
       date: '2020-04-06T03:23:24.501Z',
       html: `
 
-        <p class="mb-0">Captain's Log:  of Quarantine, Day Twenty,</p>
+        <p class="mb-0">Captain's Log: Quarantine. Day Twenty,</p>
         <p class="mb-2">the promised day of rhyme a plenty.</p>
 
         <p class="mb-0">I am sitting here with my salad,</p>
         <p class="mb-2">expecting to write world's littlest ballad.</p>
 
         <p class="mb-0">I waited until the conclusion of day,</p>
-        <p class="mb-2">to see with what rhymes may pay.</p>
+        <p class="mb-2">to see with what rhymes that may pay.</p>
 
         <p class="mb-0">Alas, twenty just about rhymes with plenty,</p>
         <p class="mb-2">it rhymes a good as yeti and orange.</p>
 
         <p class="mb-0">On the other hand Twenty One,</p>
         <p class="mb-2">rhymes with all under the sun.</p>
-
-
 
         <p class="mb-0">I am sitting here smacking my lips,</p>
         <p class="mb-2">Counting down 90 days to Penumbral Eclipse.</p>
@@ -471,7 +525,7 @@ let news = [
 
         <figure class="figure my-2"> <img src="nordhouse/a.jpg" class="figure-img w-100 rounded" alt="My Little Fort"> <figcaption class="figure-caption text-right">My Little Fort (note orange tent in the center)</figcaption> </figure>
 
-        <p class="mb-0">As I grilled the little things, I remember the same smell,</p>
+        <p class="mb-0">As I grilled the little things, I remembered that same smell,</p>
         <p class="mb-0">it was back when I lived in the ancient dune wilderness.</p>
 
         <figure class="figure my-2"> <img src="nordhouse/x.jpg" class="figure-img w-100 rounded" alt="Little Sausage Dinner"> <figcaption class="figure-caption text-right">Little Sausage Dinner</figcaption> </figure>
@@ -497,10 +551,9 @@ let news = [
         <figure class="figure my-2"> <img src="nordhouse/t.jpg" class="figure-img w-100 rounded" alt="Dark Evening"> <figcaption class="figure-caption text-right">Dark Evening</figcaption> </figure>
 
         <p class="mb-0">It was almost never scary, certainly never scary for long,</p>
-        <p class="mb-0">it would pass, and moon or sun would come, followed by birdsong.</p>
+        <p class="mb-0">it would pass, and moon or sun would rise, followed by birdsong.</p>
 
         <figure class="figure my-2"> <img src="nordhouse/h.jpg" class="figure-img w-100 rounded" alt="People taking photos of my Horses"> <figcaption class="figure-caption text-right">People taking photos of my Horses</figcaption> </figure>
-
 
         <p class="mb-0">I remember by the beach many stood,</p>
         <p class="mb-0">as I built horses out of driftwood,</p>
@@ -509,18 +562,15 @@ let news = [
         <figure class="figure my-2"> <img src="nordhouse/j.jpg" class="figure-img w-100 rounded" alt="Horse 3.0"> <figcaption class="figure-caption text-right">Horse 3.0</figcaption> </figure>
 
         <p class="mb-0">The height of my loneliness,</p>
-        <p class="mb-0">also came with great deal of silliness,</p>
+        <p class="mb-0">also came with a great deal of silliness,</p>
 
         <figure class="figure my-2"> <img src="nordhouse/l.jpg" class="figure-img w-100 rounded" alt="Beach House"> <figcaption class="figure-caption text-right">Beach House</figcaption> </figure>
         <figure class="figure my-2"> <img src="nordhouse/m.jpg" class="figure-img w-100 rounded" alt="Beach House"> <figcaption class="figure-caption text-right">Beach House</figcaption> </figure>
 
-
-
         <p class="mb-0">I waived to the future, and to today,</p>
-        <p class="mb-0">Look at me I am Cowboy! Say, Hey!</p>
+        <p class="mb-0">Look at me, I am a Cowboy! Say, Hey!</p>
 
         <figure class="figure my-2"> <img src="nordhouse/f.jpg" class="figure-img w-100 rounded" alt="Howdy!"> <figcaption class="figure-caption text-right">Howdy!</figcaption> </figure>
-
 
       `
     },
@@ -875,7 +925,32 @@ let news = [
   This reshapes the Synthesized Sounds, the synthesizer waveform, into a more realistic sounding instrument. Reverb just about does it, if Commodore 64 came with a decent reverb it would sound amazing, nothing like chiptunes.
   I have gotten used to breaking up my Generative Music into movements, and the initial song comes with 24 measures, where evey eight measures I do something interesting with the higher pitched instruments.
   For the most part I fell like using A Basic <a href="https://github.com/Tonejs/Tone.js/wiki/Arpeggiator" rel="noopener noreferrer" target="_blank">Arpeggiator</a> for everything, I am yet to test it with real world sound samples (digital sound recordings as opposed to synthesizer based sounds.)`
-  }
+},
+
+  {
+    date: '2020-03-21T20:14:25.929Z',
+    html: `Day Five of Quarantine...`
+  },
+
+  {
+    date: '2020-03-20T20:14:25.929Z',
+    html: `Day Four of Quarantine...`
+  },
+
+  {
+    date: '2020-03-19T20:14:25.929Z',
+    html: `Day Three of Quarantine...`
+  },
+
+  {
+    date: '2020-03-18T20:14:25.929Z',
+    html: `Day Two of Quarantine...`
+  },
+
+  {
+    date: '2020-03-17T20:14:25.929Z',
+    html: `Day One of Quarantine.`
+  },
 
 
 ]

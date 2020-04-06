@@ -23,6 +23,7 @@ $body-color: skyblue;
 // Custom Components
 @import "./sequencer-line.scss";
 @import "./drawer/drawer.scss";
+@import "./daw/daw.scss";
 
 @import "../../node_modules/bootstrap/scss/tables";
 @import "../../node_modules/bootstrap/scss/forms";
@@ -88,7 +89,7 @@ $body-color: skyblue;
 
 
 
-.selectable-none {
+.select-none {
   user-select: none;
 }
 

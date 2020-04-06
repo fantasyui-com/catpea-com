@@ -22,17 +22,27 @@
 
 </script>
 
-<div class="rounded bg-dark">
-  <div class="table-responsive rounded">
-    <table class="table table-sm table-dark text-light rounded">
+<style type="text/scss">
+
+
+
+
+</style>
+
+
+<div class="daw-form">
+  <div class="daw-form-table-container table-responsive">
+    <table class="daw-form-table table table-sm table-dark text-light">
+
       <thead>
         <tr>
-          <th scope="col" class="small text-muted">Track #</th>
-          <th scope="col" class="small text-muted" style="min-width: 16rem;">Music Configuration</th>
+          <th scope="col" class="daw-form-table-label">#</th>
 
-              {#each song.parts[program.selections.part].tracks[program.selections.track].slots as slot, slotIndex}
-                <th scope="col" class="small text-center" class:bg-dark={program.selections.slot == slotIndex} class:text-muted={program.selections.slot != slotIndex} class:text-primary={program.selections.slot == slotIndex}>{slotIndex+1}</th>
-              {/each}
+          <th scope="col" class="daw-form-table-label" style="min-width: 16rem;">Track Description</th>
+
+          {#each song.parts[program.selections.part].tracks[program.selections.track].slots as slot, slotIndex}
+          <th scope="col" class="daw-form-table-label" class:bg-dark={program.selections.slot == slotIndex} class:text-muted={program.selections.slot != slotIndex} class:text-primary={program.selections.slot == slotIndex}><small>#</small>{slotIndex+1}</th>
+          {/each}
 
         </tr>
       </thead>
@@ -42,17 +52,17 @@
       {#each song.parts[program.selections.part].tracks as track, trackIndex}
       <tr class="round" class:bg-dark-light={program.selections.track == trackIndex} class:bg-dark={program.selections.track != trackIndex}>
 
-        <th scope="row" class="small text-center" class:text-primary={program.selections.track == trackIndex} class:text-dark={program.selections.track != trackIndex}>{trackIndex+1}</th>
+        <th scope="row" class="daw-form-table-label" class:text-primary={program.selections.track == trackIndex} class:text-secondary={program.selections.track != trackIndex}><small>#</small>{trackIndex+1}</th>
 
-        <th scope="row" class="small text-muted cursor-pointer" on:click={()=>selectTrack({trackIndex})}>
-        <Icon name="gear" color="warning"/>
+        <th scope="row" class="daw-form-table-label" class:text-warning={program.selections.track == trackIndex} class:text-secondary={program.selections.track != trackIndex} on:click={()=>selectTrack({trackIndex})}>
+        <!-- <Icon name="gear" color="warning"/> -->
         {track.name}
         </th>
 
         {#each track.slots as slot, slotIndex}
 
             <td colspan="{ 1 }">
-              <div class="rounded cursor-pointer" style="min-width: 2rem; user-select: none;" title={program.help.messages['activate-music']} class:bg-primary={slot.enabled} class:bg-dark-dark={!slot.enabled} on:click={()=>selectSlot({slot, slotIndex, trackIndex})}>&nbsp;</div>
+              <div class="daw-form-table-selector" title={program.help.messages['activate-music']} class:bg-primary={slot.enabled} class:bg-dark-dark={!slot.enabled} on:click={()=>selectSlot({slot, slotIndex, trackIndex})}>&nbsp;</div>
             </td>
 
 
@@ -65,6 +75,6 @@
 
       </tbody>
     </table>
-    <small class="text-info">Select a music track.</small>
+    <!-- <small class="text-info">Select a music track.</small> -->
   </div>
 </div>
