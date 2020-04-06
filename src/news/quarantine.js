@@ -27,60 +27,56 @@ const database = [
 
             */
 
-      // {
-      //   date: '2020-04-06T13:59:39.157Z',
-      //   html: `
-      //
-      //   <p class="m-0">Captain's Log: Quarantine. Day Twenty One,</p>
-      //   <p class="mb-3">There is birdsong outside, and I can feel the sun.</p>
-      //
-      //   <p class="m-0">I woke up today, rested, for the first time, in a long time.</p>
-      //   <p class="m-0">My mind was hardly ever tired, but all the rest needed rhyme,</p>
-      //   <p class="mb-3">I am ready for gyms to reopen, I will be so much stronger.</p>
-      //
-      //   <p class="m-0">It took twenty one days,</p>
-      //   <p class="m-0">for my body to begin recovering from my workouts.</p>
-      //   <p class="m-0">What a great shame would it have been, to wish now,</p>
-      //   <p class="mb-3">that I should have danced, or tried harder.</p>
-      //
-      //   <p class="m-0">Instead, here I am. Bouncy and perky as heck,</p>
-      //   <p class="mb-3">ready to go back.</p>
-      //
-      //   <p class="m-0">My diet is twice as good as it was before,</p>
-      //   <p class="mb-3">including soup, and proper portion control.</p>
-      //
-      //   <p class="m-0">I admit, that even though, my mind was not tired.</p>
-      //   <p class="m-0">I felt like a sliver of invention and energy,</p>
-      //   <p class="mb-3">was somehow tied to tiredness of my body.</p>
-      //
-      //   <p class="m-0">I was always able to see longer,</p>
-      //   <p class="m-0">my life having had been so simple.</p>
-      //   <p class="m-0">Alas, trying to heal my body from stress,</p>
-      //   <p class="m-0">and overeating,</p>
-      //   <p class="mb-3">took some of my sight away.</p>
-      //
-      //   <p class="m-0">If anybody reads, this, please,</p>
-      //   <p class="mb-3">let no day slip away.</p>
-      //
-      //   <p class="m-0">Live, make each day count,</p>
-      //   <p class="m-0">it all adds together,</p>
-      //   <p class="mb-3">balance your account.</p>
-      //
-      //   <p class="m-0">What makes a Human,</p>
-      //   <p class="mb-3">is the sum of all the days in the past.</p>
-      //
-      //   <p class="m-0">What makes us strong,</p>
-      //   <p class="mb-3">is making each day better than the one before.</p>
-      //
-      //   <p class="mb-3">Please, make each day count.</p>
-      //
-      //
-      //   `
-      // },
+      {
+        date: '2020-04-06T23:25:25.662Z',
+        name:'Make Each Day Count',
+        html: `
+
+        <p class="m-0">Captain's Log: Quarantine.</p>
+        <p class="m-0">Day Twenty One.</p>
+        <p class="mb-3">There is birdsong outside, and I can feel the sun.</p>
+
+        <p class="m-0">I woke up rested, for the first time, in years.</p>
+        <p class="mb-3">My mind was hardly ever tired, but all the rest needed time.</p>
+
+        <p class="m-0">I am ready for gyms to reopen, I will be so much stronger.</p>
+        <p class="mb-3">I will dance even faster, workout longer.</p>
+
+        <p class="m-0">My diet is twice as good as it was before,</p>
+        <p class="mb-3">including soup, and proper portion control.</p>
+
+        <p class="m-0">It took twenty one days,</p>
+        <p class="mb-3">for my body to begin recovering from my workouts.</p>
+
+        <p class="m-0">What a great sadness it would be, to wish now,</p>
+        <p class="mb-3">that I should have danced, or tried harder.</p>
+
+        <p class="m-0">Instead, here I am. Bouncy, and perky as heck,</p>
+        <p class="mb-3">Ready to go back.</p>
+
+        <p class="m-0">Use your days wisely,</p>
+        <p class="mb-3">let no day slip away.</p>
+
+        <p class="m-0">Live, make each day count,</p>
+        <p class="mb-3">it all adds together, balance your account.</p>
+
+        <p class="m-0">What makes us great,</p>
+        <p class="mb-3">is the sum of all the days in the past.</p>
+
+        <p class="m-0">What makes us strong,</p>
+        <p class="mb-3">is making each day better than the one before.</p>
+
+        <p class="m-0">Make each day count,</p>
+        <p class="mb-3">enlarge your world.</p>
+        `
+      },
 
       {
         date: '2020-04-06T03:23:24.501Z',
+        name:'The Ballad of Meow',
         html: `
+
+        <div class="border border-outline-dark rounded p-4 mt-2 mb-3">
 
           <p class="mb-0">Captain's Log: Quarantine. Day Twenty,</p>
           <p class="mb-2">the promised day of rhyme a plenty.</p>
@@ -103,52 +99,73 @@ const database = [
           <p class="mb-0">I made little sausages to add to my salad,</p>
           <p class="mb-2">I added really spicy dressing to spruce up my ballad.</p>
 
+          </div>
+
+
           <figure class="figure my-2"> <img src="nordhouse/a.jpg" class="figure-img w-100 rounded" alt="My Little Fort"> <figcaption class="figure-caption text-right">My Little Fort (note orange tent in the center)</figcaption> </figure>
 
+<div class="border border-outline-dark rounded p-4 mt-2 mb-3">
           <p class="mb-0">As I grilled the little things, I remembered that same smell,</p>
           <p class="mb-0">it was back when I lived in the ancient dune wilderness.</p>
+          </div>
 
           <figure class="figure my-2"> <img src="nordhouse/x.jpg" class="figure-img w-100 rounded" alt="Little Sausage Dinner"> <figcaption class="figure-caption text-right">Little Sausage Dinner</figcaption> </figure>
 
+<div class="border border-outline-dark rounded p-4 mt-2 mb-3">
           <p class="mb-0">That memory really rings a bell,</p>
           <p class="mb-0">It was at the height of my loneliness.</p>
+          </div>
 
           <figure class="figure my-2"> <img src="nordhouse/b.jpg" class="figure-img w-100 rounded" alt="My Evening Couch"> <figcaption class="figure-caption text-right">My Evening Couch, as I waited for Lake Michigan Sunsets</figcaption> </figure>
 
+<div class="border border-outline-dark rounded p-4 mt-2 mb-3">
           <p class="mb-0">Deep woods, ancient dunes,</p>
           <p class="mb-0">and warm and sunny afternoons.</p>
+          </div>
 
           <figure class="figure my-2"> <img src="nordhouse/k.jpg" class="figure-img w-100 rounded" alt="Deep in Woods"> <figcaption class="figure-caption text-right">Deep in Woods</figcaption> </figure>
 
+<div class="border border-outline-dark rounded p-4 mt-2 mb-3">
           <p class="mb-0">Not all afternoons were sunny, I once got a heck of a reminder,</p>
           <p class="mb-0">One cold afternoon I remembered that I get scared of thunder.</p>
+          </div>
 
           <figure class="figure my-2"> <img src="nordhouse/c.jpg" class="figure-img w-100 rounded" alt="And My Evening Wear"> <figcaption class="figure-caption text-right">And My Evening Wear</figcaption> </figure>
 
+          <div class="border border-outline-dark rounded p-4 mt-2 mb-3">
           <p class="mb-0">Not, little thunder of course,</p>
           <p class="mb-0">the scary ones, that always strike with great force.</p>
+          </div>
 
           <figure class="figure my-2"> <img src="nordhouse/t.jpg" class="figure-img w-100 rounded" alt="Dark Evening"> <figcaption class="figure-caption text-right">Dark Evening</figcaption> </figure>
 
+          <div class="border border-outline-dark rounded p-4 mt-2 mb-3">
           <p class="mb-0">It was almost never scary, certainly never scary for long,</p>
           <p class="mb-0">it would pass, and moon or sun would rise, followed by birdsong.</p>
+          </div>
 
           <figure class="figure my-2"> <img src="nordhouse/h.jpg" class="figure-img w-100 rounded" alt="People taking photos of my Horses"> <figcaption class="figure-caption text-right">People taking photos of my Horses</figcaption> </figure>
 
+          <div class="border border-outline-dark rounded p-4 mt-2 mb-3">
           <p class="mb-0">I remember by the beach many stood,</p>
           <p class="mb-0">as I built horses out of driftwood,</p>
+          </div>
 
           <figure class="figure my-2"> <img src="nordhouse/i.jpg" class="figure-img w-100 rounded" alt="Horse 2.0"> <figcaption class="figure-caption text-right">Horse 2.0</figcaption> </figure>
           <figure class="figure my-2"> <img src="nordhouse/j.jpg" class="figure-img w-100 rounded" alt="Horse 3.0"> <figcaption class="figure-caption text-right">Horse 3.0</figcaption> </figure>
 
+          <div class="border border-outline-dark rounded p-4 mt-2 mb-3">
           <p class="mb-0">The height of my loneliness,</p>
           <p class="mb-0">also came with a great deal of silliness,</p>
+          </div>
 
           <figure class="figure my-2"> <img src="nordhouse/l.jpg" class="figure-img w-100 rounded" alt="Beach House"> <figcaption class="figure-caption text-right">Beach House</figcaption> </figure>
           <figure class="figure my-2"> <img src="nordhouse/m.jpg" class="figure-img w-100 rounded" alt="Beach House"> <figcaption class="figure-caption text-right">Beach House</figcaption> </figure>
 
+          <div class="border border-outline-dark rounded p-4 mt-2 mb-3">
           <p class="mb-0">I waived to the future, and to today,</p>
           <p class="mb-0">Look at me, I am a Cowboy! Say, Hey!</p>
+          </div>
 
           <figure class="figure my-2"> <img src="nordhouse/f.jpg" class="figure-img w-100 rounded" alt="Howdy!"> <figcaption class="figure-caption text-right">Howdy!</figcaption> </figure>
 
@@ -157,6 +174,7 @@ const database = [
 
       {
         date: '2020-04-05T01:04:04.832Z',
+        name:'All Things Special',
         html: `
           <p class="mb-0">Captain's Log: Day Nineteen of Quarantine.</p>
           <p class="mb-0">Tomorrow, day twenty may have rhyme a plenty,</p>
@@ -194,6 +212,7 @@ const database = [
 
       {
         date: '2020-04-03T23:59:02.881Z',
+        name:'Teacher',
         html: `
           <p class="mb-0">Captain's Log: Day Eighteen of Quarantine.</p>
           <p class="mb-0">Researching, learning, computers being mean.</p>
@@ -249,6 +268,7 @@ const database = [
       {
 
         date: '2020-04-02T20:04:32.068Z',
+        name:'Workout Video',
         html: `
 
         <p class="mb-0">Captain's Log: Day Seventeen of Quarantine.</p>
@@ -304,6 +324,8 @@ const database = [
 
       {
         date: '2020-04-01T16:35:20.987Z',
+        name:'Missing Underpants',
+
         html: `
 
       <p class="mb-0">Captain's Log: Day Sixteen of Quarantine.</p>
@@ -345,6 +367,8 @@ const database = [
 
       {
         date: '2020-03-31T16:20:21.586Z',
+        name:'Squirty Squirrels',
+
         html: `
 
           <p class="mb-0">Captain's Log: Day Fifteen of Quarantine,</p>
@@ -391,6 +415,7 @@ const database = [
 
       {
         date: '2020-03-30T13:11:22.278Z',
+        name:'Lawn Flurries',
         html: `
 
 
@@ -415,6 +440,7 @@ const database = [
 
       {
         date: '2020-03-29T13:14:44.761Z',
+        name:'Must Dance',
         html: `
 
           <p class="mb-0">Captain's Log: Day Thirteen of Quarantine;</p>
@@ -436,6 +462,7 @@ const database = [
 
     {
       date: '2020-03-28T22:31:17.209Z',
+      name:'Ragrets',
       html: `Captain\'s Log, Day Twelve of Quarantine.
       I ordered some trailmix from the internet,
       mailman dropped it off by the door and all the local Squirrels I\'ve been feeding came over,

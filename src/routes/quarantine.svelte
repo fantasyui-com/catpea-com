@@ -37,8 +37,19 @@
     <div class="col-xs-12 offset-md-2 col-md-8 offset-lg-3 col-lg-6">
       <div class="card text-white bg-dark mb-3">
         <div class="card-header">
-          <span class="shake">{@html octicons[icon].toSVG({class:"fill-info"})}</span>
-          <span class="badge badge-secondary px-2">Posted {item.ago}</span>
+
+        {#if item.name}
+        <span class="shake pr-2">
+        {@html octicons[icon].toSVG({width:20, class:"fill-info"})}
+        </span>
+        <span class="badge badge-secondary float-right">Posted {item.ago}</span>
+        {item.name}
+        {:else}
+        <span class="shake pr-2">
+        {@html octicons[icon].toSVG({width:20, class:"fill-info"})}
+        </span>
+        <span class="badge badge-secondary px-2">Posted {item.ago}</span>
+        {/if}
         </div>
         <div class="card-body">
           <div class="card-text">{@html item.html}</div>
