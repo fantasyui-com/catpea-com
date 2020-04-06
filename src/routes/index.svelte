@@ -512,7 +512,7 @@ let news = [
         <p class="mb-2">to see with what rhymes that may pay.</p>
 
         <p class="mb-0">Alas, twenty just about rhymes with plenty,</p>
-        <p class="mb-2">it rhymes a good as yeti and orange.</p>
+        <p class="mb-2">it rhymes as good as yeti and orange.</p>
 
         <p class="mb-0">On the other hand Twenty One,</p>
         <p class="mb-2">rhymes with all under the sun.</p>
