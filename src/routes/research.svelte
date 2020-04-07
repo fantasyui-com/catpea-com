@@ -1,20 +1,21 @@
 <script>
+
   import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
+
+  import Post from '../components/Post.svelte';
+
   import moment from "moment";
   import news from '../news/index.js';
-  import icons from '../devices/icons.js';
-  const octicons = icons();
+
   const icon = 'mortar-board';
 
   let report = news();
 
   function recalculateTimestamps(){
     report.research = report.research.map(i=>{ i.ago = moment(i.date).from(moment()); return i; })
-    //news = news.map(i=>{ i.ago = moment(i.date).from(moment()); return i; })
   }
 
   let intervalId = null;
-
 
   intervalId = setInterval(recalculateTimestamps,60000)
   recalculateTimestamps();
@@ -35,15 +36,7 @@
   <div class="row">
 
     <div class="col-xs-12 offset-md-2 col-md-8 offset-lg-3 col-lg-6">
-      <div class="card text-white bg-dark mb-3">
-        <div class="card-header">
-          <span class="shake">{@html octicons[icon].toSVG({class:"fill-info"})}</span>
-          <span class="badge badge-secondary px-2">Posted {item.ago}</span>
-        </div>
-        <div class="card-body">
-          <div class="card-text">{@html item.html}</div>
-        </div>
-      </div>
+      <Post title={item.name} {icon} date={item.ago} html={item.html}/>
     </div>
 
   </div>

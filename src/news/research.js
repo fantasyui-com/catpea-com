@@ -3,6 +3,18 @@ const octicons = icons();
 
 const database = [
 
+    {
+      date: '2020-04-07T13:41:39.748Z',
+      name: 'Dealing With Incompatible Systems',
+      html: `There are some anomalies in this system but they are easily dealt with. This morning I've been researching the combination of technologies behind the collapsible nav bar on the top of the page. The reason why there is complexity here is screen size reporting, the navbar is structured by a non-programmable language, kind of an automatic language. There is no way to say "Oh, the screen size is this much, I'll do this here, then do that there. Instead what is said is screen size small collapse menu. And nothing else can be said." With [Svelte] something must be added, svelte has a particular way of approaching animations. That means the existing navbar and svelte/programming-framework are incompatible, cannot work together. The existing navbar must be removed, and new one must be programmed in. This is a large project because of how important compatibility among devices is. BUT! If we allow that [Bootstrap] the existing UI framework I use here is a suggestion and collection of snippets. Then, most of this work is already done, I just have to copy Navbar. I'll create a new program, name it Navigator, and start with the Navbar code base. Eventually [Bootstrap] people will alter their programming to catch up with technologies like [Svelte] and then I'll be able to go back to using the standard Navbar.`
+    },
+
+    {
+      date: '2020-04-07T13:12:33.080Z',
+      name: 'Impossibilities and Superiorities',
+      html: `I am looking over the code, most things that could be done to make the site better are almost impossible due to the restriction that this meeting of technologies imposes. It is the only way to make things actually work. The browser was not originally designed for applications. Over last couple of decades it gained technologies that can make applications like CATPEA. But that meas balancing multiple technologies, and that balance causes severe restrictions in what can go where. I have worked with numerous technologies developed specifically for making Applications, but they are much worse than the upgraded browser. This is because nothing has received as much attention as the web. So, even though this technology stack is greatly restricted, it is also very powerful.`
+    },
+
 
     {
       date: '2020-04-06T22:18:33.170Z',

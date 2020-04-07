@@ -1,13 +1,13 @@
 <script>
+  import { fade } from 'svelte/transition';
+
   export let segment;
 
   let collapse = true;
 
   function handleCollapse() {
-  collapse=!collapse;
+    collapse=!collapse;
   }
-
-
 
 </script>
 
@@ -15,11 +15,8 @@
 
 </style>
 
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg shadow mb-4">
 
-
-
-
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg shadow-lg border-bottom border-dark mb-3 rounded">
   <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
 
   <button class="navbar-toggler border-0" type="button" on:click={handleCollapse}>
@@ -29,60 +26,33 @@
   <div class="navbar-collapse" class:collapse='{collapse}'>
     <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item">
-        <a class="nav-link" class:text-secondary='{segment === undefined}' class:text-primary='{segment !== undefined}' href=".">Home</a>
+    <li class="nav-item" class:active='{segment === undefined}'>
+        <a class="nav-link" href=".">Home</a>
       </li>
 
-      <!-- for the stream link, we're using rel=prefetch so that Sapper prefetches
-            the stream data when we hover over the link or tap it on a touchscreen -->
-      <!-- <li class="nav-item" class:selected='{segment === "stream"}'>
-        <a class="nav-link" rel=prefetch href="stream">Stream</a>
+      <li class="nav-item" class:active='{segment === "quarantine"}'>
+        <a class="nav-link" rel=prefetch href="/quarantine" title="Poetry and Foolishness">Quarantine Log</a>
       </li>
 
-      -->
-
-      <li class="nav-item">
-        <a class="nav-link" class:text-secondary='{segment === "quarantine"}' class:text-primary='{segment !== "quarantine"}' href="/quarantine">Quarantine</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" class:text-secondary='{segment === "research"}' class:text-primary='{segment !== "research"}' href="/research">Research</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" class:text-secondary='{segment === "video"}' class:text-primary='{segment !== "video"}' href="/video?p=0&i=8">Videos</a>
+      <li class="nav-item" class:active='{segment === "research"}'>
+        <a class="nav-link" rel=prefetch href="/research" title="User Interface Research">Research Blog</a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" class:text-secondary='{segment === "warrior"}' class:text-primary='{segment !== "warrior"}' href="/warrior">Book</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" class:text-secondary='{segment === "daw"}' class:text-primary='{segment !== "daw"}' href="/daw">Audio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" class:text-secondary='{segment === "theme"}' class:text-primary='{segment !== "theme"}' href="/theme">Theme</a>
+      <li class="nav-item" class:active='{segment === "warrior"}'>
+        <a class="nav-link" rel=prefetch href="/warrior" title="A Book About Growing Up">Warrior Book</a>
       </li>
 
-<!--
-      <li class="nav-item" class:selected='{segment === "warrior"}'>
-        <a class="nav-link" href="warrior">Warrior</a>
-      </li> -->
-<!--
-      <li class="nav-item" class:selected='{segment === "about"}'>
-        <a class="nav-link" href="about">About</a>
-      </li> -->
-
-      <!-- <li class="nav-item" class:selected='{segment === "stream"}'>
-        <a class="nav-link disabled" rel=prefetch href="#">Stream</a>
+      <li class="nav-item" class:active='{segment === "theme"}'>
+      <a class="nav-link" rel=prefetch href="/theme" title="User Interface Theme">Design</a>
       </li>
 
-      <li class="nav-item" class:selected='{segment === "profile"}'>
-        <a class="nav-link disabled" rel=prefetch href="#">Profile</a>
+      <li class="nav-item" class:active='{segment === "daw"}'>
+        <a class="nav-link" rel=prefetch href="/daw" title="Digital Audio Workstation">Audio</a>
       </li>
-      <li class="nav-item" class:selected='{segment === "friends"}'>
-        <a class="nav-link disabled" rel=prefetch href="#">Friends</a>
+
+      <li class="nav-item" class:active='{segment === "video"}'>
+      <a class="nav-link" rel=prefetch href="/video?p=0&i=8" title="Favorite Videos">Video</a>
       </li>
-      <li class="nav-item" class:selected='{segment === "inbox"}'>
-        <a class="nav-link disabled" rel=prefetch href="#">Inbox</a>
-      </li> -->
 
     </ul>
 

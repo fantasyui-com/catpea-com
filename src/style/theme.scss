@@ -24,6 +24,7 @@ $body-color: skyblue;
 @import "./sequencer-line.scss";
 @import "./drawer/drawer.scss";
 @import "./daw/daw.scss";
+@import "./post/post.scss";
 
 @import "../../node_modules/bootstrap/scss/tables";
 @import "../../node_modules/bootstrap/scss/forms";
@@ -84,7 +85,6 @@ $body-color: skyblue;
 //     color: $value !important;
 //   }
 // }
-
 
 
 .bg-photo {
