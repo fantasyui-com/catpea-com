@@ -4,15 +4,11 @@
   let collapsed = false;
 </script>
 
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg shadow mb-4">
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg shadow mb-4 d-none d-lg-flex">
 
   <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
 
-  <button class="navbar-toggler border-0" type="button" on:click={()=>collapsed =! collapsed} class:collapsed={collapsed}>
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="navbar-collapse d-none d-lg-block">
+  <div class="navbar-collapse">
     <ul class="navbar-nav mr-auto">
 
     <li class="nav-item" class:active='{segment === undefined}'>
@@ -50,9 +46,18 @@
     </ul>
   </div>
 
+</nav>
+
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg shadow mb-4 d-lg-none">
+
+  <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
+
+  <button class="navbar-toggler border-0" type="button" on:click={()=>collapsed =! collapsed} class:collapsed={collapsed}>
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
   {#if collapsed}
-    <div class="navbar-collapse d-lg-none" in:slide={{ duration: 1500 }} out:slide={{ duration: 500 }}>
+    <div class="navbar-collapse" in:slide={{ duration: 1500 }} out:slide={{ duration: 500 }}>
       <ul class="navbar-nav mr-auto">
 
       <li class="nav-item" class:active='{segment === undefined}'>

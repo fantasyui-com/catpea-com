@@ -88,14 +88,14 @@ $enable-prefers-reduced-motion-media-query: false;
 //   }
 // }
 
-// 
-// .bg-photo {
-//   background-image: linear-gradient(145deg, rgba(1, 40, 41, 0.47) 0%,rgba(0, 31, 33, 1) 100%), url("/bg-photo.png");
-//   background-size: cover;
-//      background-repeat: no-repeat;
-//      background-position: 50% 50%;
-//     background-attachment: fixed;
-// }
+
+.bg-photo {
+  background-image: linear-gradient(145deg, rgba(1, 40, 41, 0.47) 0%,rgba(0, 31, 33, 1) 100%), url("/bg-photo.png");
+  background-size: cover;
+     background-repeat: no-repeat;
+     background-position: 50% 50%;
+    background-attachment: fixed;
+}
 
 
 
