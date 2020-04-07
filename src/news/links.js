@@ -4,6 +4,8 @@ const database = {
   'Bootstrap Expo': 'https://expo.getbootstrap.com/',
   'Bootstrap': 'https://getbootstrap.com/',
   'Bootstrap Themes': 'https://themes.getbootstrap.com/',
+  'Bash': 'https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29',
+  'Bash Tutorial': 'https://www.youtube.com/watch?v=v-F3YLd6oMw',
 
   'Ableton': 'https://www.ableton.com/en/live/',
   'LMMS': 'https://lmms.io/',
