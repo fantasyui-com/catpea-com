@@ -9,7 +9,7 @@ const database = [
       html: [
 
         `When on Mobile/Tablet (or in a small Desktop Window) Website Navigation collapses and shows an open icon (three lines), now when clicked it will open very smoothly. Previously it just popped into existence (I am not a fan of animations like that, but it tends to be a mark of good programming.) `,
-        ``,
+
 
         `I continued researching the Navbar issues, and I discovered bootstrap can't make it work without programming. There is no way to transition the menu from height:0pixels (closed) to height:auto (open) because the underlying language does not concern it self with the measurement of what auto actually means. There are no reasonable ways around it. They are stuck using a [big program] for it. And by big I mean 433 lines of code.`,
         `Let me tell you how many lines my program has.`,
@@ -433,7 +433,7 @@ const database = [
 function process(data) {
   data = data.map(item => {
     if(typeof item.html !== 'string'){
-      item.html = item.html.map(d=>(d.charAt(0)=='<')?d:`<p>${  d}</p>`).join('')
+      item.html = item.html.map(d=>(d.charAt(0)=='<')?d:`<p>${d}</p>`).join('')
     }
     return item;
   })
