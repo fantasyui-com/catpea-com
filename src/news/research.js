@@ -7,79 +7,79 @@ const database = [
       date: '2020-04-07T19:44:14.734Z',
       html: `Another website crash, [Svelte] isn't reporting errors properly. Working on it now.`
     },
-
-    {
-      date: '2020-04-07T18:43:22.379Z',
-      name: 'The Navbar Kerfuffle',
-      html: [
-
-        `When on Mobile/Tablet (or in a small Desktop Window) Website Navigation collapses and shows an open icon (three lines), now when clicked it will open very smoothly. Previously it just popped into existence (I am not a fan of animations like that, but it tends to be a mark of good programming.) `,
-
-
-        `I continued researching the Navbar issues, and I discovered bootstrap can't make it work without programming. There is no way to transition the menu from height:0pixels (closed) to height:auto (open) because the underlying language does not concern it self with the measurement of what auto actually means. There are no reasonable ways around it. They are stuck using a [big program] for it. And by big I mean 433 lines of code.`,
-        `Let me tell you how many lines my program has.`,
-        `[ZERO] (the three lines are configuration/maintenance not real code)`,
-        `<figure class="figure float-right"> <img src="research/wee.png" class="figure-img w-100 rounded" alt="No Code"> <figcaption class="figure-caption text-right">Woo! No Code</figcaption> </figure>`,
-        `The framework I use comes with the collapsing animation built in.`,
-        `When I say that [Bootstrap] is behind in programming, they are, they really are. [Svelte] has a superior animation subsystem, and there is nothing to compare here.`,
-        `In the morning I felt that [Navbar]-[Svelte] integration was problematic, now having taken a closer look, I find their [big program] is the problem here.`,
-        `Bootstrap is currently at version 4.4, they are already making big changes for 5.0. I am not the first to notice that their JavaScript is a problem, they will catch up.`,
-
-      ],
-      link: {
-        'ZERO':'https://github.com/fantasyui-com/catpea-com/blob/d12cb893c59f447a94b5146c003f457e0122bab8/src/components/Nav.svelte#L2-L4',
-        'take a look':'https://getbootstrap.com/docs/4.4/components/navbar/',
-        'Navbar':'https://getbootstrap.com/docs/4.4/components/navbar/',
-        'big program':'https://github.com/twbs/bootstrap/blob/master/js/src/collapse.js'
-      }
-    },
-
-    {
-      date: '2020-04-07T13:41:39.748Z',
-      name: 'Dealing With Incompatible Systems',
-      html: [
-        `There are some anomalies in this system but they are easily dealt with.`,
-        `This morning I've been researching the combination of technologies behind the collapsible Navbar on the top of the page.`,
-        `The reason why there is complexity here is screen size reporting, the navbar is structured by a non-programmable language, kind of an automatic language.`,
-        `There is no way to say "Oh, the screen size is this much, I'll do this here, then do that there. Instead what is said is screen size small collapse menu. And nothing else can be said." With [Svelte] something must be added, svelte has a particular way of approaching animations.`,
-        `That means the existing navbar and svelte/programming-framework are incompatible, cannot work together.`,
-        `The existing navbar must be removed, and new one must be programmed in.`,
-        `This is a large project because of how important compatibility among devices is in this context (main menu can't fail, otherwise the whole website is broken).
-        BUT! If we allow that [Bootstrap] the existing UI framework I use here is a suggestion and collection of snippets.
-        Then, most of this work is already done, I just have to copy Navbar.
-        I'll create a new program, name it Navigator, and start with the Navbar code base.`,
-        `Eventually [Bootstrap] people will alter their programming to catch up with technologies like [Svelte] and then I'll be able to go back to using the standard Navbar.`
-      ]
-    },
-
-    {
-      date: '2020-04-07T13:12:33.080Z',
-      name: 'Impossibilities and Superiorities',
-      html: [
-        `I am looking over the code, most things that could be done to make the site better are almost impossible due to the restriction that this meeting of technologies imposes.`,
-        `It is the only way to make things actually work.`,
-        `The browser was not originally designed for applications. Over last couple of decades it gained technologies that can make applications like CATPEA.`,
-        `But that meas balancing multiple technologies, and that balance causes severe restrictions in what can go where.`,
-        `I have worked with numerous technologies developed specifically for making Applications, but they are much worse than the upgraded browser.`,
-        `This is because nothing has received as much attention as the web. So, even though this technology stack is greatly restricted, it is also very powerful.`,
-      ]
-    },
-
-
-    {
-      date: '2020-04-06T22:18:33.170Z',
-      html: `
-
-        Working with the GUI, testing what I can alter, what I can't.
-        I still have no idea what catpea is good for, what website format I should create.
-        There is also a division of widgets forming some are useful tools (Song Beat Counter) others are little information displays (You Tube Videos, Season Countdown).
-        As far as User Interface Design and getting things done goes, it is hard to beat chaos.
-
-      <figure class="figure float-right"> <img src="research/gui2.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">UI Thus Far</figcaption> </figure>
-      <figure class="figure float-right"> <img src="research/gui3.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">UI Thus Far</figcaption> </figure>
-
-      `
-    },
+    //
+    // {
+    //   date: '2020-04-07T18:43:22.379Z',
+    //   name: 'The Navbar Kerfuffle',
+    //   html: [
+    //
+    //     `When on Mobile/Tablet (or in a small Desktop Window) Website Navigation collapses and shows an open icon (three lines), now when clicked it will open very smoothly. Previously it just popped into existence (I am not a fan of animations like that, but it tends to be a mark of good programming.) `,
+    //
+    //
+    //     `I continued researching the Navbar issues, and I discovered bootstrap can't make it work without programming. There is no way to transition the menu from height:0pixels (closed) to height:auto (open) because the underlying language does not concern it self with the measurement of what auto actually means. There are no reasonable ways around it. They are stuck using a [big program] for it. And by big I mean 433 lines of code.`,
+    //     `Let me tell you how many lines my program has.`,
+    //     `[ZERO] (the three lines are configuration/maintenance not real code)`,
+    //     `<figure class="figure float-right"> <img src="research/wee.png" class="figure-img w-100 rounded" alt="No Code"> <figcaption class="figure-caption text-right">Woo! No Code</figcaption> </figure>`,
+    //     `The framework I use comes with the collapsing animation built in.`,
+    //     `When I say that [Bootstrap] is behind in programming, they are, they really are. [Svelte] has a superior animation subsystem, and there is nothing to compare here.`,
+    //     `In the morning I felt that [Navbar]-[Svelte] integration was problematic, now having taken a closer look, I find their [big program] is the problem here.`,
+    //     `Bootstrap is currently at version 4.4, they are already making big changes for 5.0. I am not the first to notice that their JavaScript is a problem, they will catch up.`,
+    //
+    //   ],
+    //   link: {
+    //     'ZERO':'https://github.com/fantasyui-com/catpea-com/blob/d12cb893c59f447a94b5146c003f457e0122bab8/src/components/Nav.svelte#L2-L4',
+    //     'take a look':'https://getbootstrap.com/docs/4.4/components/navbar/',
+    //     'Navbar':'https://getbootstrap.com/docs/4.4/components/navbar/',
+    //     'big program':'https://github.com/twbs/bootstrap/blob/master/js/src/collapse.js'
+    //   }
+    // },
+    //
+    // {
+    //   date: '2020-04-07T13:41:39.748Z',
+    //   name: 'Dealing With Incompatible Systems',
+    //   html: [
+    //     `There are some anomalies in this system but they are easily dealt with.`,
+    //     `This morning I've been researching the combination of technologies behind the collapsible Navbar on the top of the page.`,
+    //     `The reason why there is complexity here is screen size reporting, the navbar is structured by a non-programmable language, kind of an automatic language.`,
+    //     `There is no way to say "Oh, the screen size is this much, I'll do this here, then do that there. Instead what is said is screen size small collapse menu. And nothing else can be said." With [Svelte] something must be added, svelte has a particular way of approaching animations.`,
+    //     `That means the existing navbar and svelte/programming-framework are incompatible, cannot work together.`,
+    //     `The existing navbar must be removed, and new one must be programmed in.`,
+    //     `This is a large project because of how important compatibility among devices is in this context (main menu can't fail, otherwise the whole website is broken).
+    //     BUT! If we allow that [Bootstrap] the existing UI framework I use here is a suggestion and collection of snippets.
+    //     Then, most of this work is already done, I just have to copy Navbar.
+    //     I'll create a new program, name it Navigator, and start with the Navbar code base.`,
+    //     `Eventually [Bootstrap] people will alter their programming to catch up with technologies like [Svelte] and then I'll be able to go back to using the standard Navbar.`
+    //   ]
+    // },
+    //
+    // {
+    //   date: '2020-04-07T13:12:33.080Z',
+    //   name: 'Impossibilities and Superiorities',
+    //   html: [
+    //     `I am looking over the code, most things that could be done to make the site better are almost impossible due to the restriction that this meeting of technologies imposes.`,
+    //     `It is the only way to make things actually work.`,
+    //     `The browser was not originally designed for applications. Over last couple of decades it gained technologies that can make applications like CATPEA.`,
+    //     `But that meas balancing multiple technologies, and that balance causes severe restrictions in what can go where.`,
+    //     `I have worked with numerous technologies developed specifically for making Applications, but they are much worse than the upgraded browser.`,
+    //     `This is because nothing has received as much attention as the web. So, even though this technology stack is greatly restricted, it is also very powerful.`,
+    //   ]
+    // },
+    //
+    //
+    // {
+    //   date: '2020-04-06T22:18:33.170Z',
+    //   html: `
+    //
+    //     Working with the GUI, testing what I can alter, what I can't.
+    //     I still have no idea what catpea is good for, what website format I should create.
+    //     There is also a division of widgets forming some are useful tools (Song Beat Counter) others are little information displays (You Tube Videos, Season Countdown).
+    //     As far as User Interface Design and getting things done goes, it is hard to beat chaos.
+    //
+    //   <figure class="figure float-right"> <img src="research/gui2.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">UI Thus Far</figcaption> </figure>
+    //   <figure class="figure float-right"> <img src="research/gui3.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">UI Thus Far</figcaption> </figure>
+    //
+    //   `
+    // },
 
     {
       date: '2020-04-06T19:21:21.474Z',
@@ -436,13 +436,13 @@ const database = [
 
 
 function process(data) {
-  data = data.map(item => {
+  const clean = data.map(item => {
     if(typeof item.html !== 'string'){
       item.html = item.html.map(d=>(d.charAt(0)=='<')?d:`<p>${d}</p>`).join('')
     }
     return item;
   })
-  return data;
+  return clean;
 
 } // fun
 
