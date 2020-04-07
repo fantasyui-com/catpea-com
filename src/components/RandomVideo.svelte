@@ -38,13 +38,13 @@ function getRandomIntInclusive(min, max) {
 export let duration = getRandomIntInclusive(10, 60);
 
 onMount(async function() {
-  const res = await fetch("youtube.json");
+  const res = await fetch("/youtube.json");
   const data = await res.json()
 
-  // setTimeout(i=>{
-  //   database = shuffleArray( data );
-  //   next()
-  // },1000)
+  setTimeout(i=>{
+    database = shuffleArray( data );
+    next()
+  },1000)
 
 })
 
