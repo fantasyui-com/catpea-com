@@ -11,7 +11,7 @@ const octicons = icons();
   let icon = "";
 
 
-    console.log('Are octicons installed?',!!octicons);
+  //  console.log('Are octicons installed?',!!octicons);
 
     if(octicons && octicons[name]){
       icon = octicons[name].toSVG({width:24, height: 24, class:`fill-${color} hover-fill-danger`});
