@@ -1,18 +1,8 @@
 <script>
-
   import { slide } from 'svelte/transition';
-
   export let segment;
-
-
-  let collapsed = false; // toggler button
-  // const sleep = m => new Promise(r=>setTimeout(r,m));
-
-
+  let collapsed = false;
 </script>
-
-<style>
-</style>
 
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg shadow mb-4">
 
