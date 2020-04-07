@@ -1,29 +1,28 @@
 <script>
-  import { fade } from 'svelte/transition';
+
+  import { slide } from 'svelte/transition';
 
   export let segment;
 
-  let collapse = true;
 
-  function handleCollapse() {
-    collapse=!collapse;
-  }
+  let collapsed = false; // toggler button
+  // const sleep = m => new Promise(r=>setTimeout(r,m));
+
 
 </script>
 
 <style>
-
 </style>
 
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg shadow mb-4">
 
   <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
 
-  <button class="navbar-toggler border-0" type="button" on:click={handleCollapse}>
+  <button class="navbar-toggler border-0" type="button" on:click={()=>collapsed =! collapsed} class:collapsed={collapsed}>
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="navbar-collapse" class:collapse='{collapse}'>
+  <div class="navbar-collapse d-none d-lg-block">
     <ul class="navbar-nav mr-auto">
 
     <li class="nav-item" class:active='{segment === undefined}'>
@@ -43,18 +42,63 @@
       </li>
 
       <li class="nav-item" class:active='{segment === "theme"}'>
-      <a class="nav-link" rel=prefetch href="/theme" title="User Interface Theme">Design</a>
+      <a class="nav-link" rel=prefetch href="/theme" title="User Interface Theme">The Design</a>
       </li>
 
       <li class="nav-item" class:active='{segment === "daw"}'>
-        <a class="nav-link" rel=prefetch href="/daw" title="Digital Audio Workstation">Audio</a>
+        <a class="nav-link" rel=prefetch href="/daw" title="Digital Audio Workstation">Song Machine</a>
       </li>
 
       <li class="nav-item" class:active='{segment === "video"}'>
-      <a class="nav-link" rel=prefetch href="/video?p=0&i=8" title="Favorite Videos">Video</a>
+      <a class="nav-link" rel=prefetch href="/video?p=0&i=8" title="Favorite Videos">Video Browser</a>
+      </li>
+
+      <li class="nav-item" class:active='{segment === "wall"}'>
+      <a class="nav-link" rel=prefetch href="/wall" title="Video Wall">Video Wall</a>
       </li>
 
     </ul>
-
   </div>
+
+
+  {#if collapsed}
+    <div class="navbar-collapse d-lg-none" in:slide={{ duration: 1500 }} out:slide={{ duration: 500 }}>
+      <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item" class:active='{segment === undefined}'>
+          <a class="nav-link" href=".">Home</a>
+        </li>
+
+        <li class="nav-item" class:active='{segment === "quarantine"}'>
+          <a class="nav-link" rel=prefetch href="/quarantine" title="Poetry and Foolishness">Quarantine Log</a>
+        </li>
+
+        <li class="nav-item" class:active='{segment === "research"}'>
+          <a class="nav-link" rel=prefetch href="/research" title="User Interface Research">Research Blog</a>
+        </li>
+
+        <li class="nav-item" class:active='{segment === "warrior"}'>
+          <a class="nav-link" rel=prefetch href="/warrior" title="A Book About Growing Up">Warrior Book</a>
+        </li>
+
+        <li class="nav-item" class:active='{segment === "theme"}'>
+        <a class="nav-link" rel=prefetch href="/theme" title="User Interface Theme">The Design</a>
+        </li>
+
+        <li class="nav-item" class:active='{segment === "daw"}'>
+          <a class="nav-link" rel=prefetch href="/daw" title="Digital Audio Workstation">Song Machine</a>
+        </li>
+
+        <li class="nav-item" class:active='{segment === "video"}'>
+        <a class="nav-link" rel=prefetch href="/video?p=0&i=8" title="Favorite Videos">Video Browser</a>
+        </li>
+
+        <li class="nav-item" class:active='{segment === "wall"}'>
+        <a class="nav-link" rel=prefetch href="/wall" title="Video Wall">Video Wall</a>
+        </li>
+
+      </ul>
+    </div>
+  {/if}
+
 </nav>

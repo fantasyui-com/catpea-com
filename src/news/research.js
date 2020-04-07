@@ -4,6 +4,30 @@ const octicons = icons();
 const database = [
 
     {
+      date: '2020-04-07T17:40:42.241Z',
+      name: 'The Navbar Kerfuffle',
+      html: [
+        `I continued researching the Navbar issues, and I discovered bootstrap can't make it work withut programming. There is no way to transition the menu from height:0pixels (closed) to height:auto (open) because the underlying language does not concern it self with the measurement of what auto actually means. There are no reasonable ways around it. They are stuck using a [big program] for it. And by big I mean 433 lines of code.`,
+        `Let me tell you how many lines my program has.`,
+        `ZERO`,
+        `The framework I use comes with the collapsing animation built in.`,
+        `When I say that [Bootstrap] is behind kn programming, they are, they really are. [Svelte] has a superior animation subsystem, and there is nothing to compare here.`,
+        `In the morning I felt bad that Navbar integration was problematic`,
+      ].map(d=>`<p>${d}</p>`).join(''),
+      link: {
+        'take a look':'https://getbootstrap.com/docs/4.4/components/navbar/',
+        'Navbar':'https://getbootstrap.com/docs/4.4/components/navbar/',
+        'big program':'https://github.com/twbs/bootstrap/blob/master/js/src/collapse.js'
+      }
+    },
+
+    {
+      date: '2020-04-07T13:41:39.748Z',
+      name: 'Dealing With Incompatible Systems',
+      html: `There are some anomalies in this system but they are easily dealt with. This morning I've been researching the combination of technologies behind the collapsible nav bar on the top of the page. The reason why there is complexity here is screen size reporting, the navbar is structured by a non-programmable language, kind of an automatic language. There is no way to say "Oh, the screen size is this much, I'll do this here, then do that there. Instead what is said is screen size small collapse menu. And nothing else can be said." With [Svelte] something must be added, svelte has a particular way of approaching animations. That means the existing navbar and svelte/programming-framework are incompatible, cannot work together. The existing navbar must be removed, and new one must be programmed in. This is a large project because of how important compatibility among devices is. BUT! If we allow that [Bootstrap] the existing UI framework I use here is a suggestion and collection of snippets. Then, most of this work is already done, I just have to copy Navbar. I'll create a new program, name it Navigator, and start with the Navbar code base. Eventually [Bootstrap] people will alter their programming to catch up with technologies like [Svelte] and then I'll be able to go back to using the standard Navbar.`
+    },
+
+    {
       date: '2020-04-07T13:41:39.748Z',
       name: 'Dealing With Incompatible Systems',
       html: `There are some anomalies in this system but they are easily dealt with. This morning I've been researching the combination of technologies behind the collapsible nav bar on the top of the page. The reason why there is complexity here is screen size reporting, the navbar is structured by a non-programmable language, kind of an automatic language. There is no way to say "Oh, the screen size is this much, I'll do this here, then do that there. Instead what is said is screen size small collapse menu. And nothing else can be said." With [Svelte] something must be added, svelte has a particular way of approaching animations. That means the existing navbar and svelte/programming-framework are incompatible, cannot work together. The existing navbar must be removed, and new one must be programmed in. This is a large project because of how important compatibility among devices is. BUT! If we allow that [Bootstrap] the existing UI framework I use here is a suggestion and collection of snippets. Then, most of this work is already done, I just have to copy Navbar. I'll create a new program, name it Navigator, and start with the Navbar code base. Eventually [Bootstrap] people will alter their programming to catch up with technologies like [Svelte] and then I'll be able to go back to using the standard Navbar.`
