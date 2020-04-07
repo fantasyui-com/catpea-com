@@ -62,7 +62,7 @@
         </button>
 
 
-          <figure class="figure mb-0 mr-3"> <img src="previews/wall.png" class="figure-img rounded" alt="Best Viewed On Desktop"><figcaption class="figure-caption text-right">Best Viewed On Desktop {notice}</figcaption></figure>
+          <figure class="figure mb-0 mr-3"> <img src="previews/wall.png" class="figure-img rounded" alt="Best Viewed On Desktop"><figcaption class="figure-caption text-right">Best Viewed On Desktop.</figcaption></figure>
 
         </div>
       </div>
