@@ -48,7 +48,7 @@
 
 <p>Code {status} &middot; {error.message}</p>
 
-{#if dev && error.stack}
+{#if error.stack}
   <pre class="text-warning">{error.stack}</pre>
 {/if}
 
