@@ -7,6 +7,24 @@ const octicons = icons();
 const database = [
 
     {
+      date: '2020-04-08T16:28:09.783Z',
+      html: [
+      `I finished laying down the groundwork for [Bootstrap]+[Svelte] components. As predicted, there is wisdom in following Bootstrap's Conventions. The code is short, clean and lightweight.`,
+      `I only styled the big grid in [CATPEA DAW] this is a lot of work, or at least getting it off the ground initially was a lot of work. Now that I know how to structure things, things will move faster.`,
+      `<figure class="figure float-right"> <img src="research/gui5.png" class="figure-img w-100 rounded" alt="Design Examples"> <figcaption class="figure-caption text-right">Fully Styled Component</figcaption> </figure>`,
+      `Here is the [graphics programming language] and the [actual code of the musical form component] it is very compact, but there are multiple layers of programming conventions here, ew, ew.`,
+      `I should add that this grid is where the user structures a part of a song, for example The Intro. Each cell in here represents about 16 notes that can be inserted. But also, once the user establishes those 16 notes, they only need to worry about lighting those buttons up, it is always the same 16 notes per row... they just select where those notes are active. And beneath this grid is a list of instruments, and places where those 16 notes go. If the user places sharp-drums as the first instruments, selects all 16 note-spots, then it will play tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk BUT ONLY IF THE cell in the thing pictured above is lit. So this grid is an activator of melodies. Which are created in the thing pictured below:`,
+      `<figure class="figure float-right"> <img src="research/gui6.png" class="figure-img w-100 rounded" alt="Design Examples"> <figcaption class="figure-caption text-right">Yet Un-styled Melody Maker Component</figcaption> </figure>`,
+
+      ],
+      link:{
+        'graphics programming language':'https://github.com/fantasyui-com/catpea-com/blob/b79570e6459d128d3ecb79ed478ffe65fb23759c/src/style/daw/daw.scss',
+        'actual code of the musical form component': 'https://github.com/fantasyui-com/catpea-com/blob/b79570e6459d128d3ecb79ed478ffe65fb23759c/src/components/song-machine/Form.svelte',
+      }
+
+    },
+
+    {
       date: '2020-04-08T13:52:16.396Z',
       html: `Clarification as to why my development is taking so long. While I am developing some programs that are *best* on the desktop. I am actually developing User Interfaces that work on Mobile Phones, and "grow" to fit tablet and desktop. Making user interfaces that work property on Mobile and Desktop is kind of hard, the more detailed they become the harder it is to ensure compatibility. `,
 
