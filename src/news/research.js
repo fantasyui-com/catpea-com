@@ -4,7 +4,7 @@ const octicons = icons();
 const database = [
 
     {
-      date: '2020-04-07T21:11:12.541Z',
+      date: '2020-04-08T01:41:32.088Z',
       html: `Yup, it was a github problem, they only serve regularly named files. Everything was fine on my end, on my local servers. But the moment website was uploaded to their server, it would refuse to serve some files. So, on my computer the program ran fine, on github's it was missing files as the server would not serve them just give a File Not Found 404. Pretty awful, I couldn't fully investigate the problem until I uploaded to github where the error was occurring.`,
 
     },
