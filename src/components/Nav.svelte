@@ -2,6 +2,74 @@
   import { slide } from 'svelte/transition';
   export let segment;
   let collapsed = false;
+
+  const navigation = [
+    {
+      id:'home',
+      link:'.',
+      name: 'Home',
+      description:'Home Page',
+    },
+
+    {
+      id:'quarantine',
+      link:'/quarantine',
+      name:'Quarantine Log',
+      description:'Poetry and Foolishness',
+    },
+
+    {
+      id:'research',
+      link:'/research',
+      name:'Research Blog',
+      description:'User Interface Research',
+    },
+
+    {
+      id:'warrior',
+      link:'/warrior',
+      name:'Book',
+      description:'A Book About Growing Up',
+    },
+
+
+
+    {
+      id:'palette',
+      link:'/palette',
+      name:'Palette',
+      description:'Color Palette Designer',
+    },
+
+    {
+      id:'theme',
+      link:'/theme',
+      name:'Theme',
+      description:'User Interface Theme',
+    },
+
+    {
+      id:'daw',
+      link:'/daw',
+      name:'Composer',
+      description:'Digital Audio Workstation',
+    },
+
+    {
+      id:'video',
+      link:'/video?p=0&i=8',
+      name:'Videos',
+      description:'Favorite Videos',
+    },
+
+    {
+      id:'wall',
+      link:'/wall',
+      name: 'Wall',
+      description:'Video Wall (not for mobile devices)',
+    }
+  ];
+
 </script>
 
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg shadow mb-4 d-none d-lg-flex">
@@ -11,37 +79,11 @@
   <div class="navbar-collapse">
     <ul class="navbar-nav mr-auto">
 
-    <li class="nav-item" class:active='{segment === undefined}'>
-        <a class="nav-link" href=".">Home</a>
+    {#each navigation as item, i}
+      <li class="nav-item" class:active='{ (segment?segment:'home')===item.id }'>
+        <a class="nav-link" rel=prefetch href={item.link} title={item.description}>{item.name}</a>
       </li>
-
-      <li class="nav-item" class:active='{segment === "quarantine"}'>
-        <a class="nav-link" rel=prefetch href="/quarantine" title="Poetry and Foolishness">Quarantine Log</a>
-      </li>
-
-      <li class="nav-item" class:active='{segment === "research"}'>
-        <a class="nav-link" rel=prefetch href="/research" title="User Interface Research">Research Blog</a>
-      </li>
-
-      <li class="nav-item" class:active='{segment === "warrior"}'>
-        <a class="nav-link" rel=prefetch href="/warrior" title="A Book About Growing Up">Warrior Book</a>
-      </li>
-
-      <li class="nav-item" class:active='{segment === "theme"}'>
-      <a class="nav-link" rel=prefetch href="/theme" title="User Interface Theme">The Design</a>
-      </li>
-
-      <li class="nav-item" class:active='{segment === "daw"}'>
-        <a class="nav-link" rel=prefetch href="/daw" title="Digital Audio Workstation">Song Machine</a>
-      </li>
-
-      <li class="nav-item" class:active='{segment === "video"}'>
-      <a class="nav-link" rel=prefetch href="/video?p=0&i=8" title="Favorite Videos">Video Browser</a>
-      </li>
-
-      <li class="nav-item" class:active='{segment === "wall"}'>
-      <a class="nav-link" rel=prefetch href="/wall" title="Video Wall">Video Wall</a>
-      </li>
+    {/each}
 
     </ul>
   </div>
@@ -60,37 +102,11 @@
     <div class="navbar-collapse" in:slide={{ duration: 1500 }} out:slide={{ duration: 500 }}>
       <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item" class:active='{segment === undefined}'>
-          <a class="nav-link" href=".">Home</a>
+      {#each navigation as item, i}
+        <li class="nav-item" class:active='{ (segment?segment:'home')===item.id }'>
+          <a class="nav-link" rel=prefetch href={item.link} title={item.description}>{item.name} &middot; <small class="text-muted">{item.description}</small></a>
         </li>
-
-        <li class="nav-item" class:active='{segment === "quarantine"}'>
-          <a class="nav-link" rel=prefetch href="/quarantine" title="Poetry and Foolishness">Quarantine Log</a>
-        </li>
-
-        <li class="nav-item" class:active='{segment === "research"}'>
-          <a class="nav-link" rel=prefetch href="/research" title="User Interface Research">Research Blog</a>
-        </li>
-
-        <li class="nav-item" class:active='{segment === "warrior"}'>
-          <a class="nav-link" rel=prefetch href="/warrior" title="A Book About Growing Up">Warrior Book</a>
-        </li>
-
-        <li class="nav-item" class:active='{segment === "theme"}'>
-        <a class="nav-link" rel=prefetch href="/theme" title="User Interface Theme">The Design</a>
-        </li>
-
-        <li class="nav-item" class:active='{segment === "daw"}'>
-          <a class="nav-link" rel=prefetch href="/daw" title="Digital Audio Workstation">Song Machine</a>
-        </li>
-
-        <li class="nav-item" class:active='{segment === "video"}'>
-        <a class="nav-link" rel=prefetch href="/video?p=0&i=8" title="Favorite Videos">Video Browser</a>
-        </li>
-
-        <li class="nav-item" class:active='{segment === "wall"}'>
-        <a class="nav-link" rel=prefetch href="/wall" title="Video Wall">Video Wall</a>
-        </li>
+      {/each}
 
       </ul>
     </div>

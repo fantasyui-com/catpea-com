@@ -7,6 +7,30 @@ const octicons = icons();
 const database = [
 
     {
+      date: '2020-04-08T23:35:35.074Z',
+      html: [
+        `I created a new tool I named [Palette] this time it deals with color theory.`,
+        `Right now it is focused on the five primary colors that most designers use.`,
+        `In context of this tool they are labeled: Primary, Secondary, Success, Info, Warning, Danger.`,
+        '[Bootstrap] developers call them contextual colors.',
+        ``,
+        '[Color Theory] is a tiny-tiny little bit more complicated than adjusting colors and themes.',
+        'But it is not very complicated. Most often it is just a cylinder of hues with colors going around.',
+      ],
+
+    },
+
+    {
+      date: '2020-04-08T23:01:17.448Z',
+      html: [
+        `I wanted to quickly demonstrate what I mean when I say the UI works on both Mobile Devices and Desktop Computers. The first image shows the application in desktop mode, and second on mobile. I cut the mobile up into columns because the image was too long. What happends is that the Desktop version collapses into a single long column on mobile. The application is still usable on mobile. This is not always the case with other applications, people don't always build the layout right.`,
+        `<figure class="figure float-right"> <img src="research/desktop.png" class="figure-img w-100 rounded" alt="Mobile vs. Desktop"> <figcaption class="figure-caption text-right">Application In Desktop Mode</figcaption> </figure>`,
+        `<figure class="figure float-right"> <img src="research/mobile.png" class="figure-img w-100 rounded" alt="Mobile vs. Desktop"> <figcaption class="figure-caption text-right">Application In Mobile Mode (I had to cut it up in multiple columns)</figcaption> </figure>`,
+      ]
+
+    },
+
+    {
       date: '2020-04-08T16:28:09.783Z',
       html: [
       `I finished laying down the groundwork for [Bootstrap]+[Svelte] components. As predicted, there is wisdom in following Bootstrap's Conventions. The code is short, clean and lightweight.`,

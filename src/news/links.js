@@ -12,6 +12,7 @@ const database = {
   'Scientific Pitch Notation': 'https://en.wikipedia.org/wiki/Scientific_pitch_notation',
   'Yamaha C5 Grand Piano':'https://usa.yamaha.com/products/musical_instruments/pianos/grand_pianos/cx_series/cx-series.html',
 
+  'Palette':'/palette',
   'CATPEA DAW':'/daw',
   'THEME':'/theme',
   'Quarantine':'/quarantine',
@@ -30,6 +31,7 @@ const database = {
   'sass':'https://github.com/sass/sass',
   'SASS Programming Language':'https://sass-lang.com/documentation/at-rules/control/if',
   'wcag-contrast':'https://www.w3.org/TR/WCAG20-TECHS/G18.html',
+  'Color Theory':'https://www.youtube.com/watch?v=NN5h6Uwtqzw',
 };
 
 
