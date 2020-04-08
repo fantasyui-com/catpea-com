@@ -57,6 +57,7 @@ const database = [
         <p class="mb-2">this can only result in more smiles.</p>
 
         <p class="m-0"><sup><small>Also, please remember to backup your files.</small></sup></p>
+        <p class="m-0"><sup><small>As that's even better - by miles.</small></sup></p>
 
 
         `
