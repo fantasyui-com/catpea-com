@@ -1,4 +1,19 @@
+$daw-form-table-header-cell-color: $gray-400;
+$daw-form-table-header-cell-bg: $gray-700;
+$daw-form-table-header-cell-active-color: $primary;
+
+$daw-form-table-row-color: $gray-400;
+$daw-form-table-row-bg: $gray-700;
+
+$daw-form-table-cell-color: $gray-400;
+$daw-form-table-cell-bg: $gray-700;
+$daw-form-table-cell-active-color: $primary;
+
+$daw-form-table-cell-selector-bg: $gray-600;
+$daw-form-table-cell-selector-active-bg: $primary;
+
 .daw-form {
+  user-select: none;
   border-radius: $border-radius-sm;
   background: $dark;
 }
@@ -9,118 +24,54 @@
 
 .daw-form-table {
   border-radius: $border-radius-sm;
-  margin-bottom: 0px ! important;
-}
-
-.daw-form-table-label {
+  margin-bottom: 0px !important;
   font-size: $small-font-size;
+}
+
+// Header Labels
+.daw-form-table-header-cell {
   text-align: center;
-  cursor: pointer;
-  user-select: none;
+  color: $daw-form-table-header-cell-color;
+  background: $daw-form-table-header-cell-bg;
+  &.selectable {
+    cursor: pointer;
+  }
+  &.active {
+    color: $daw-form-table-header-cell-active-color;
+  }
+
 }
 
-.daw-form-table-selector {
-  border-radius: $border-radius-sm;
-  cursor: pointer;
-  user-select: none;
+// Cell and Row Sections
+.daw-form-table-cell {
+  color: $daw-form-table-cell-color;
+  background: $daw-form-table-cell-bg;
+  &.selectable {
+    cursor: pointer;
+  }
+  &.active {
+    color: $daw-form-table-cell-active-color;
+  }
+
+}
+
+// Row Wide Styling
+.daw-form-table-row {
+  color: $daw-form-table-row-color;
+  background: $daw-form-table-row-bg;
+}
+
+// Sound Activation Cell
+.daw-form-table-cell-selector {
+  display: inline-block;
   min-width: 2rem;
+  min-height: 2rem;
+  border-radius: $border-radius-sm;
+  background: $daw-form-table-cell-selector-bg;
+  &.selectable {
+    cursor: pointer;
+  }
+  &.active {
+    background: $daw-form-table-cell-selector-active-bg;
+  }
 }
-
-
-
-
-// .card {
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
-//   height: $card-height;
-//   word-wrap: break-word;
-//   background-color: $card-bg;
-//   background-clip: border-box;
-//   border: $card-border-width solid $card-border-color;
-//   @include border-radius($card-border-radius);
-//
-//   > hr {
-//     margin-right: 0;
-//     margin-left: 0;
-//   }
-//
-//   > .list-group:first-child {
-//     .list-group-item:first-child {
-//       @include border-top-radius($card-border-radius);
-//     }
-//   }
-//
-//   > .list-group:last-child {
-//     .list-group-item:last-child {
-//       @include border-bottom-radius($card-border-radius);
-//     }
-//   }
-// }
-//
-// .card-body {
-//   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
-//   // as much space as possible, ensuring footers are aligned to the bottom.
-//   flex: 1 1 auto;
-//   // Workaround for the image size bug in IE
-//   // See: https://github.com/twbs/bootstrap/pull/28855
-//   min-height: 1px;
-//   padding: $card-spacer-x;
-//   color: $card-color;
-// }
-//
-// .card-title {
-//   margin-bottom: $card-spacer-y;
-// }
-//
-// .card-subtitle {
-//   margin-top: -$card-spacer-y / 2;
-//   margin-bottom: 0;
-// }
-//
-// .card-text:last-child {
-//   margin-bottom: 0;
-// }
-//
-// .card-link {
-//   @include hover() {
-//     text-decoration: none;
-//   }
-//
-//   + .card-link {
-//     margin-left: $card-spacer-x;
-//   }
-// }
-//
-// //
-// // Optional textual caps
-// //
-//
-// .card-header {
-//   padding: $card-spacer-y $card-spacer-x;
-//   margin-bottom: 0; // Removes the default margin-bottom of <hN>
-//   color: $card-cap-color;
-//   background-color: $card-cap-bg;
-//   border-bottom: $card-border-width solid $card-border-color;
-//
-//   &:first-child {
-//     @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
-//   }
-//
-//   + .list-group {
-//     .list-group-item:first-child {
-//       border-top: 0;
-//     }
-//   }
-// }
-//
-// .card-footer {
-//   padding: $card-spacer-y $card-spacer-x;
-//   background-color: $card-cap-bg;
-//   border-top: $card-border-width solid $card-border-color;
-//
-//   &:last-child {
-//     @include border-radius(0 0 $card-inner-border-radius $card-inner-border-radius);
-//   }
-// }

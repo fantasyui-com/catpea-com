@@ -1,6 +1,6 @@
 <script>
 
-  import Icon from '../../controls/Icon.svelte';
+  // import Icon from '../../controls/Icon.svelte';
   export let program = {};
   export let song = {};
 
@@ -14,7 +14,11 @@
     program.selections.track = trackIndex;
   }
 
-  function selectSlot({slot, slotIndex, trackIndex}){
+  function selectColumn({slot, slotIndex}){
+     program.selections.slot = slotIndex;
+  }
+
+  function toggleSlot({slot, slotIndex, trackIndex}){
     slot.enabled=!slot.enabled;
     program.selections.slot = slotIndex;
     program.selections.track = trackIndex;
@@ -22,59 +26,31 @@
 
 </script>
 
-<style type="text/scss">
-
-
-
-
-</style>
-
-
 <div class="daw-form">
   <div class="daw-form-table-container table-responsive">
     <table class="daw-form-table table table-sm table-dark text-light">
-
       <thead>
         <tr>
-          <th scope="col" class="daw-form-table-label">#</th>
-
-          <th scope="col" class="daw-form-table-label" style="min-width: 16rem;">Track Description</th>
-
+          <th scope="col" class="daw-form-table-header-cell">#</th>
+          <th scope="col" class="daw-form-table-header-cell" style="min-width: 16rem;">Track Description</th>
           {#each song.parts[program.selections.part].tracks[program.selections.track].slots as slot, slotIndex}
-          <th scope="col" class="daw-form-table-label" class:bg-dark={program.selections.slot == slotIndex} class:text-muted={program.selections.slot != slotIndex} class:text-primary={program.selections.slot == slotIndex}><small>#</small>{slotIndex+1}</th>
+          <th scope="col" class="daw-form-table-header-cell selectable" class:active={program.selections.slot == slotIndex} on:click={()=>selectColumn({slot, slotIndex})}>{slotIndex+1}</th>
           {/each}
-
         </tr>
       </thead>
       <tbody>
-
-
       {#each song.parts[program.selections.part].tracks as track, trackIndex}
-      <tr class="round" class:bg-dark-light={program.selections.track == trackIndex} class:bg-dark={program.selections.track != trackIndex}>
-
-        <th scope="row" class="daw-form-table-label" class:text-primary={program.selections.track == trackIndex} class:text-secondary={program.selections.track != trackIndex}><small>#</small>{trackIndex+1}</th>
-
-        <th scope="row" class="daw-form-table-label" class:text-warning={program.selections.track == trackIndex} class:text-secondary={program.selections.track != trackIndex} on:click={()=>selectTrack({trackIndex})}>
-        <!-- <Icon name="gear" color="warning"/> -->
-        {track.name}
-        </th>
-
-        {#each track.slots as slot, slotIndex}
-
-            <td colspan="{ 1 }">
-              <div class="daw-form-table-selector" title={program.help.messages['activate-music']} class:bg-primary={slot.enabled} class:bg-dark-dark={!slot.enabled} on:click={()=>selectSlot({slot, slotIndex, trackIndex})}>&nbsp;</div>
+        <tr class="daw-form-table-row">
+          <th scope="row" class="daw-form-table-cell selectable" class:active={program.selections.track == trackIndex} on:click={()=>selectTrack({trackIndex})}>{trackIndex+1}</th>
+          <th scope="row" class="daw-form-table-cell selectable text-left" class:active={program.selections.track == trackIndex} on:click={()=>selectTrack({trackIndex})}>{track.name}</th>
+          {#each track.slots as slot, slotIndex}
+            <td class="daw-form-table-cell" colspan="{ 1 }">
+              <div class="daw-form-table-cell-selector selectable" title={program.help.messages['activate-music']} class:active={slot.enabled} on:click={()=>toggleSlot({slot, slotIndex, trackIndex})}>&nbsp;</div>
             </td>
-
-
-        {/each}
-
-      </tr>
+          {/each}
+        </tr>
       {/each}
-
-
-
       </tbody>
     </table>
-    <!-- <small class="text-info">Select a music track.</small> -->
   </div>
 </div>
