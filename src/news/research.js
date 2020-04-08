@@ -5,6 +5,12 @@ const database = [
 
     {
       date: '2020-04-07T21:11:12.541Z',
+      html: `Yup, it was a github problem, they only serve regularly named files. Everything was fine on my end, on my local servers. But the moment website was uploaded to their server, it would refuse to serve some files. So, on my computer the program ran fine, on github's it was missing files as the server would not serve them just give a File Not Found 404. Pretty awful, I couldn't fully investigate the problem until I uploaded to github where the error was occurring.`,
+
+    },
+
+    {
+      date: '2020-04-07T21:11:12.541Z',
       html: `I am testing the other stuff I added now. I narrowed down problems down to one thing so if something is still broken I'll fix it now. I wrote a [cute little program] to apply the bug fixes. It is in a language called [Bash] ([Bash Tutorial]). It is my pet language. Not favorite, but like a bitey pet Lynx type of thing. All my music processing software that I used at the gym was written in Bash. It is an old language.`,
       link:{
         'cute little program':'https://github.com/fantasyui-com/catpea-com/blob/master/bugfix-commonjs-helpers.sh'

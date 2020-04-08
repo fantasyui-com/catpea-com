@@ -28,6 +28,41 @@ const database = [
             */
 
       {
+        date: '2020-04-08T01:41:32.088Z',
+        name:'Save The Files',
+        html: `
+
+        <p class="mb-2">Captain's Log, Eternal, Quarantine, Day Twenty Two.</p>
+
+        <p class="m-0">Eeeeek! It's raining, I am trying not to be complaining.</p>
+        <p class="mb-2">But the sky is no longer blue, what am I to do?</p>
+
+        <p class="m-0">Each time I sneeze, the power goes out,</p>
+        <p class="mb-2">not to say my sneezes are not petite, or that I am ill!</p>
+
+        <p class="m-0">No, I am perfectly fine, I don't need to blow my nose.</p>
+        <p class="mb-2">It is the transformer outside that blows!</p>
+
+        <p class="m-0">Frantically, atomically I hit CTRL+S, CTRL+S, save, save. Saves!</p>
+        <p class="mb-2">As the thunderous thunder thunders its electromagnetic waves.</p>
+
+        <p class="m-0">How am I going to finish, how can I upload,</p>
+        <p class="m-0">when any moment something will explode,</p>
+        <p class="mb-2">and there will be nothing where current once flowed.</p>
+
+        <p class="m-0">While the rain has slowed, my fingers still tapping,</p>
+        <p class="mb-2">Save, save, save! rise! against the Gigawatt Wave.</p>
+
+        <p class="m-0">Seriously, please remember to save your files,</p>
+        <p class="mb-2">this can only result in more smiles.</p>
+
+        <p class="m-0"><sup><small>Also, please remember to backup your files.</small></sup></p>
+
+
+        `
+      },
+
+      {
         date: '2020-04-06T23:25:25.662Z',
         name:'Make Each Day Count',
         html: `
@@ -39,7 +74,7 @@ const database = [
         <p class="m-0">I woke up rested, for the first time, in years.</p>
         <p class="mb-3">My mind was hardly ever tired, but all the rest needed time.</p>
 
-        <p class="m-0">I am ready for gyms to reopen, I will be so much stronger.</p>
+        <p class="m-0">I am ready for gyms to reopen, It will be so much fun.</p>
         <p class="mb-3">I will dance even faster, workout longer.</p>
 
         <p class="m-0">My diet is twice as good as it was before,</p>
