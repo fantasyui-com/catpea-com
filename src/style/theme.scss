@@ -10,6 +10,7 @@
 
 $body-color: skyblue;
 $enable-prefers-reduced-motion-media-query: false;
+@import "./colors.scss";
 @import "./variables";
 $enable-prefers-reduced-motion-media-query: false;
 
@@ -23,6 +24,7 @@ $enable-prefers-reduced-motion-media-query: false;
 @import "../../node_modules/bootstrap/scss/grid";
 
 // Custom Components
+@import "./gradients/gradients.scss";
 @import "./sequencer-line.scss";
 @import "./drawer/drawer.scss";
 @import "./daw/daw.scss";

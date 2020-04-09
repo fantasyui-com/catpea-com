@@ -90,13 +90,13 @@ onMount(async () => {
     <News news={report.research} icon="mortar-board" title="Research Blog" items="30"/>
     </div>
 
-    <div class="col pb-3">
+    <!-- <div class="col pb-3">
     <RandomVideo duration="10"/>
     </div>
 
     <div class="col pb-3">
     <RandomVideo duration="15"/>
-    </div>
+    </div> -->
 
 
     <div class="col pb-3">
@@ -168,6 +168,16 @@ onMount(async () => {
     <div class="col pb-3">
     <SongTempoChangeCalculator/>
     </div>
+
+    <div class="col pb-3">
+    <BodybuildingAdvice/>
+    </div>
+
+
+    <div class="col pb-3">
+    <BodybuildingAdvice/>
+    </div>
+
 
     <div class="col pb-3">
     <BodybuildingAdvice/>

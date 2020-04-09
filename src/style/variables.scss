@@ -5,11 +5,7 @@
 
 // Color system
 
-
-
-
 $white:    #fff !default;
-
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -19,22 +15,6 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-
-$additive: #2b1c0f;
-$additive: #056179;
-$additive-percentage: 20%;
-$additive-percentage-gray: 30%;
-
-$gray-100: mix($additive, #f8f9fa, $additive-percentage-gray);
-$gray-200: mix($additive, #e9ecef, $additive-percentage-gray);
-$gray-300: mix($additive, #dee2e6, $additive-percentage-gray);
-$gray-400: mix($additive, #ced4da, $additive-percentage-gray);
-$gray-500: mix($additive, #adb5bd, $additive-percentage-gray);
-$gray-600: mix($additive, #6c757d, $additive-percentage-gray);
-$gray-700: mix($additive, #495057, $additive-percentage-gray);
-$gray-800: mix($additive, #343a40, $additive-percentage-gray);
-$gray-900: mix($additive, #212529, $additive-percentage-gray);
-
 $black:    #000 !default;
 
 $grays: () !default;
@@ -86,7 +66,7 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $orange !default;
+$primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -94,12 +74,6 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
-
-$primary:        mix($additive, $primary, $additive-percentage);
-$success:        mix($additive, $success, $additive-percentage);
-$info:           mix($additive, $info, $additive-percentage);
-$warning:        mix($additive, $warning, $additive-percentage);
-$danger:         mix($additive, $danger, $additive-percentage);
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -116,182 +90,6 @@ $theme-colors: map-merge(
   ),
   $theme-colors
 );
-
-@each $color, $value in $theme-colors {
-
-
-
-  .bg-#{$color}-light {
-    $background: color.adjust($value, $lightness: 10%);
-    background-color: $background !important;
-
-  }
-
-  .bg-#{$color}-dark {
-    $background: color.adjust($value, $lightness: - 10%);
-    background-color: $background !important;
-
-  }
-
-  .bt-#{$color} {
-    $background: $value;
-    background-color: $background !important;
-    @if (lightness($background) > 30) {
-      color: $black;
-    } @else {
-      color: $white;
-    }
-  }
-
-  .bt-#{$color}-light {
-    $background: color.adjust($value, $lightness: 7%);
-    background-color: $background !important;
-    @if (lightness($background) > 30) {
-      color: $black;
-    } @else {
-      color: $white;
-    }
-  }
-
-  .bt-#{$color}-dark {
-    $background: color.adjust($value, $lightness: - 7%);
-    background-color: $background !important;
-    @if (lightness($background) > 30) {
-      color: $black;
-    } @else {
-      color: $white;
-    }
-  }
-
-
-
-}
-
-
-$color-levels-base: $gray-500;
-$color-levels-additive: #066d74;
-
-
-$app-background-colors: () !default;
-$app-text-colors: () !default;
-
-//  @debug color.adjust(#6b717f, $red: 15); // #7a717f
-
-$previous-color: red;
-@for $index from 0 through 9 {
-
-  //
-  // .text-light-#{$index} {
-  //   // color: mix($color-levels-additive, lighten($color-levels-base, $index * 5%), $index * 5%);
-  //   // color: scale-color($color-levels-base, $lightness: -40%)
-  //   color: color.adjust($color-levels-base, $lightness: $index * 5%); // rgba(71, 57, 71, 0.6)
-  // }
-
-  .bg-light-#{$index} {
-
-    $background: color.adjust($gray-500, $lightness: - $index * 5%); // rgba(71, 57, 71, 0.6)
-    $color:      color.adjust($gray-900, $lightness: $index * 5%); // rgba(71, 57, 71, 0.6)
-    // $color:      $gray-900;
-    //
-    // // @while (wcag-contrast($color, $background) < 1.5) {
-    // //   @debug wcag-contrast($color, $background);
-    // //    $color: color.adjust($color, $lightness: 5%);
-    // // }
-    //
-    // @if lightness($background) > 50 {
-    //   // Background is lighter, color adjust should have a tendency towards darkness
-    //   @while (wcag-contrast($color, $background) < 1.5) {
-    //     @debug wcag-contrast($color, $background);
-    //      $color: color.adjust($color, $lightness: - 5%);
-    //   }
-    //
-    //   @for $i from 1 through 10 {
-    //     $color: color.adjust($color, $lightness: - 10%);
-    //   }
-    //
-    // } @else {
-    //   // background is darker, color adjust should have a tendency towards brightness
-    //   @while (wcag-contrast($color, $background) < 1.5) {
-    //     @debug wcag-contrast($color, $background);
-    //      $color: color.adjust($color, $lightness: 5%);
-    //   }
-    // }
-    //
-    // background: $background;
-    // color: $color;
-
-    //
-    // @if ( wcag-contrast($color, $background) > 1.5 ) {
-    //   $previous-color: $color;
-    // } @else {
-    //   //color: color.adjust($gray-100, $lightness: - $index * 5%);
-    //   color: $previous-color;
-    //
-    //   @while wcag-contrast($color, $background) > 1.5 {
-    //      $color: ($gray-100, $lightness: - $index * 5%);
-    //   }
-    // }
-
-
-
-
-  }
-
-}
-@for $index from 0 through 9 {
-
-  //
-  // .text-light-#{$index} {
-  //   // color: mix($color-levels-additive, lighten($color-levels-base, $index * 5%), $index * 5%);
-  //   // color: scale-color($color-levels-base, $lightness: -40%)
-  //   color: color.adjust($color-levels-base, $lightness: $index * 5%); // rgba(71, 57, 71, 0.6)
-  // }
-
-  .bg-light-raw-#{$index} {
-
-    $background: color.adjust($gray-500, $lightness: - $index * 5%); // rgba(71, 57, 71, 0.6)
-    $color:      color.adjust($gray-900, $lightness: $index * 5%); // rgba(71, 57, 71, 0.6)
-
-    background: $background;
-    color: $color;
-
-
-  }
-
-}
-
-// @for $index from 0 through 9 {
-//
-//   .text-dark-#{$index} {
-//     color: mix($color-levels-additive, darken($color-levels-base, $index * 5%), $index * 5%);
-//   }
-//   .bg-dark-#{$index} {
-//
-//     background: mix($color-levels-additive, darken($color-levels-base, $index * 5%), $index * 5%);
-//     color: mix($color-levels-additive, lighten($color-levels-base, ( 9 - $index ) * 5%), $index * 5%);
-//
-//   }
-// }
-
-
-
-// $app-colors: () !default;
-//
-// // stylelint-disable-next-line scss/dollar-variable-default
-// $app-colors: map-merge(
-//   (
-//   ),
-//   $theme-colors
-// );
-//
-// // stylelint-disable-next-line scss/dollar-variable-default
-// $app-text: map-merge(
-//   (
-//   ),
-//   $theme-colors
-// );
-
-
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
@@ -317,10 +115,10 @@ $escaped-characters: (
 
 $enable-caret:                                true !default;
 $enable-rounded:                              true !default;
-$enable-shadows:                              true !default;
+$enable-shadows:                              false !default;
 $enable-gradients:                            false !default;
 $enable-transitions:                          true !default;
-$enable-prefers-reduced-motion-media-query:   false !default;
+$enable-prefers-reduced-motion-media-query:   true !default;
 $enable-hover-media-query:                    false !default; // Deprecated, no longer affects any compiled CSS
 $enable-grid-classes:                         true !default;
 $enable-pointer-cursor-for-buttons:           true !default;
@@ -371,10 +169,7 @@ $sizes: map-merge(
 // Settings for the `<body>` element.
 
 $body-bg:                   $white !default;
-$body-bg:                   $gray-900; //+
 $body-color:                $gray-900 !default;
-
-
 
 
 // Links
