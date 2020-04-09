@@ -45,7 +45,7 @@ for(let color of themeColors){
 
   <div class="row my-4">
     <div class="col">
-      <h3 class="text-warning">Photosensitive Container &beta;</h3>
+      <h3 class="text-warning">Night Mode &beta;</h3>
     </div>
   </div>
 
@@ -54,12 +54,12 @@ for(let color of themeColors){
     <div class="col">
 
       <div class="alert {night?'alert-dark':'alert-light'}" role="alert">
-        Photosensitive Container can switch between Dark and Light modes.
+        The Night Mode Subsystem allows stitching between Dark/Night and Day/Light modes.
 
         <div class="form-check">
           <input class="form-check-input" type="checkbox" bind:checked={night} id="defaultCheck1">
           <label class="form-check-label" for="defaultCheck1">
-            Toggle Night Mode ({night})
+            Toggle Night Mode ({night?"Night Mode is presently enabled":"Night Mode is disabled."})
           </label>
         </div>
 
@@ -72,7 +72,16 @@ for(let color of themeColors){
     <div class="col">
 
     <div class="card text-dark bg-night text-night" style="width: 18rem; display: inline-block;">
-      <img src="..." class="card-img-top" alt="...">
+      <img src="nordhouse/f.jpg" class="card-img-top" alt="Le Cowboy">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="." class="btn btn-primary bg-night text-night">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card text-dark bg-night text-night" style="width: 18rem; display: inline-block;">
+      <img src="nordhouse/c.jpg" class="card-img-top" alt="Le Captain">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -81,7 +90,7 @@ for(let color of themeColors){
     </div>
 
     <div class="card bg-primary text-dark bg-night text-night" style="width: 18rem; display: inline-block;">
-      <img src="..." class="card-img-top" alt="...">
+      <img src="nordhouse/h.jpg" class="card-img-top" alt="Le Horse">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
