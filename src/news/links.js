@@ -27,6 +27,8 @@ const database = {
   'github is having problems':'https://www.githubstatus.com/',
   'github was having problems':'https://www.githubstatus.com/',
 
+  'JavaScript Array':'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array',
+
   'node-sass':'https://github.com/sass/node-sass',
   'sass':'https://github.com/sass/sass',
   'SASS Programming Language':'https://sass-lang.com/documentation/at-rules/control/if',
