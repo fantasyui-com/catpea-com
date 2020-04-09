@@ -27,7 +27,7 @@
 </script>
 
 <svelte:head>
-  <title>𝗖𝗔𝗧𝗣𝗘𝗔: Quarantine and Poetry</title>
+  <title>𝗖𝗔𝗧𝗣𝗘𝗔: Research, Progress, Peanut Butter, and Jelly</title>
 </svelte:head>
 
 <div class="container">

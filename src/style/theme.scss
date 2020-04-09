@@ -11,6 +11,16 @@
 $body-color: skyblue;
 $enable-prefers-reduced-motion-media-query: false;
 @import "./colors/colors.scss";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1367px
+) !default;
+
 @import "./variables";
 $enable-prefers-reduced-motion-media-query: false;
 
@@ -158,6 +168,15 @@ $enable-prefers-reduced-motion-media-query: false;
   user-select: none;
 }
 
+.night .bg-night {
+  background: $dark !important;
+}
+.night .text-night {
+  color: $light !important;
+}
+
+
+
 //
 //
 //
@@ -169,4 +188,18 @@ $enable-prefers-reduced-motion-media-query: false;
 // .bg-hover-dark:hover {
 //     border-radius: .25rem;
 //     background-color: $gray-900;
+// }
+
+
+
+// @each $color, $value in () {
+//   .bg-#{$color}-hover:hover {
+//     color: $value !important;
+//   }
+//   .bg-#{$color}-hover:hover {
+//     background-color: $value !important;
+//   }
+//   .fill-#{$color}-hover:hover {
+//     fill: $value;
+//   }
 // }

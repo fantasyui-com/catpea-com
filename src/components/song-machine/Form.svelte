@@ -44,7 +44,7 @@
           <th scope="row" class="daw-form-table-cell selectable" class:active={program.selections.track == trackIndex} on:click={()=>selectTrack({trackIndex})}>{trackIndex+1}</th>
           <th scope="row" class="daw-form-table-cell selectable text-left" class:active={program.selections.track == trackIndex} on:click={()=>selectTrack({trackIndex})}>{track.name}</th>
           {#each track.slots as slot, slotIndex}
-            <td class="daw-form-table-cell" colspan="{ 1 }">
+            <td class="daw-form-table-cell text-center" colspan="{ 1 }">
               <div class="daw-form-table-cell-selector selectable" title={program.help.messages['activate-music']} class:active={slot.enabled} on:click={()=>toggleSlot({slot, slotIndex, trackIndex})}>&nbsp;</div>
             </td>
           {/each}

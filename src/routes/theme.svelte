@@ -1,6 +1,8 @@
 <script>
 import capitalize from 'lodash/capitalize.js'
 
+let night = true;
+
 const themeColors = [ 'primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', ];
 const gradientAngles = [ "45", "90", "135", "180", "225", "270", "315" ];
 
@@ -26,7 +28,7 @@ for(let color of themeColors){
 
 
 
-<div class="container">
+<div class="container {night?'night':'day'}">
 
   <div class="row mb-5">
     <div class="col">
@@ -37,6 +39,56 @@ for(let color of themeColors){
 
   <div class="row my-4">
     <div class="col">
+    </div>
+  </div>
+
+
+  <div class="row my-4">
+    <div class="col">
+      <h3 class="text-warning">Photosensitive Container &beta;</h3>
+    </div>
+  </div>
+
+
+  <div class="row mb-3">
+    <div class="col">
+
+      <div class="alert {night?'alert-dark':'alert-light'}" role="alert">
+        Photosensitive Container can switch between Dark and Light modes.
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" bind:checked={night} id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Toggle Night Mode ({night})
+          </label>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+
+    <div class="card text-dark bg-night text-night" style="width: 18rem; display: inline-block;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="." class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card bg-primary text-dark bg-night text-night" style="width: 18rem; display: inline-block;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="." class="btn btn-secondary">Go somewhere</a>
+      </div>
+    </div>
+
     </div>
   </div>
 

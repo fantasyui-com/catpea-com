@@ -101,12 +101,12 @@
         tracks:[
           {
             name:'Calm little melody.',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Big Bassline',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
 
@@ -118,17 +118,17 @@
         tracks:[
           {
             name:'Beat',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Quiet Bassline',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Quick Piano',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           }
         ]
@@ -139,22 +139,22 @@
         tracks:[
           {
             name:'Beat',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Bassline',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Piano',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Cello',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           }
         ]
@@ -165,27 +165,27 @@
         tracks:[
           {
             name:'Beat',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Bassline',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Quiet Piano',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Fast Piano',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Cello',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           }
         ]
@@ -196,17 +196,17 @@
         tracks:[
           {
             name:'Beat',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Bassline',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Piano',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           }
         ]
@@ -217,32 +217,32 @@
         tracks:[
           {
             name:'Beat',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Beat',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Beat',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Beat',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Bassline',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           },
           {
             name:'Piano',
-            slots: Array(32).fill(1).map(i=>Object.assign({},program.defaults.slot)),
+            slots: Array(8).fill(1).map(i=>Object.assign({},program.defaults.slot)),
             melodies: makeMusic(),
           }
         ]
