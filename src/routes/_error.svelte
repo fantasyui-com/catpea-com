@@ -47,7 +47,7 @@
 <h2>The catpea is an annual pouncy feline from the genus Panthera. Due to his tolerance for serious workouts and low effort, he is kind of a big deal in the semiarid plazas of Westland.</h2>
  -->
 
-<p>The website might have updated, and you maybe using an old version attempting to load files that are no longer on the server.</p>
+<p class="lead">The website might have updated, and you maybe using an old version attempting to load files that are no longer on the server. I kind of can fix this, but for now, if you could reload the page, everything will probably work!</p>
 <p>Please reload or refresh to download the latest version.</p>
 <p>If the error persists, that means there is a bug in the code and I am already working on it.</p>
 <p>Code {status} &middot; {error.message}</p>

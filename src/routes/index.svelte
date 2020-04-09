@@ -80,7 +80,7 @@ onMount(async () => {
 
 
 <div class="container-fluid">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-4">
 
     <div class="col pb-3">
     <News news={report.quarantine} icon="squirrel" title="Quarantine Log" items="3" link="/quarantine" invitation="There is a lot more poetry ({report.quarantine.length} entries in total) at the Quarantine Log, and it is a lot easier to read on mobile."/>

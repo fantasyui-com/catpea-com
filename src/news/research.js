@@ -9,7 +9,7 @@ const database = [
     {
       date: '2020-04-09T22:07:45.885Z',
       html: [
-        `Yay, Night Mode seems to have worked out, I even gave it nice and tidy animation. [Octicons] had a [light bulb] for me so it all went smoothly. Give it a try, put on some shades, and click ${octicons['light-bulb'].toSVG({"class":"fill-warning"})} the &uarr; above.`,
+        `Yay, Night Mode seems to have worked out, I even gave it nice and tidy animation. [Octicons] had a [light bulb] for me so it all went smoothly. Give it a try, go to the [Research] page, put on some shades, and click on the ${octicons['light-bulb'].toSVG({"class":"fill-warning"})} icon &uarr;.`,
         ``,
         `<figure class="figure float-right"> <img src="research/bulb.png" class="figure-img w-100 rounded" alt="Night Mode Toggle"> <figcaption class="figure-caption text-right">Night Mode Toggle</figcaption> </figure>`,
       ],
