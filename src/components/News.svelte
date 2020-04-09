@@ -10,6 +10,9 @@
 
   // Preferences
 
+  export let link = '';
+  export let invitation = 'Read More';
+
   export let icon = 'telescope';
   export let height = '25rem';
   export let title = '';
@@ -108,17 +111,27 @@
           </div>
 
           </div>
+
+
+
         {/if}
       {/each}
+
+      {#if link}
+      <p class="text-primary">{invitation}</p>
+      <a href="{link}" class="btn btn-primary">Visit &raquo;</a>
+      {/if}
+
+
     </div>
 
     {#if footer}
       {#if news.length >= items}
-        <div class="card-footer small text-secondary">
+        <div class="card-footer small text-muted">
           Showing {items} out of {news.length} items, latest post published <span class="text-primary">{news[0].ago}</span>
         </div>
         {:else}
-        <div class="card-footer small text-secondary">
+        <div class="card-footer small text-muted">
           Total of {news.length} news items, latest post published <span class="text-primary">{news[0].ago}</span>
         </div>
         {/if}

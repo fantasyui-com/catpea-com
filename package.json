@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
-    "export": "sapper export --legacy; rm -fr docs; cp -fr __sapper__/export docs; cp -f domain.txt docs/CNAME; ./bugfix-commonjs-helpers.sh",
+    "make": "sapper export --legacy; rm -fr docs; cp -fr __sapper__/export docs; cp -f domain.txt docs/CNAME; ./bugfix-commonjs-helpers.sh",
     "upload": "git add .; git commit -m \"New Release\"; git push;",
-    "pub": "npm run export; npm run upload;",
+    "pub": "npm run make; npm run upload;",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",

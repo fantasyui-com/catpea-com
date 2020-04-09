@@ -7,6 +7,19 @@ const octicons = icons();
 const database = [
 
     {
+      date: '2020-04-09T19:29:25.681Z',
+      html: [
+        `I fixed up the [THEME] page where I show off some more advanced backgrounds. But, overall this has been a study of color. Not just how to create the palettes but how to configure colors in bootstrap.`,
+        `This is a small success. Basically, it comes down to not using any text colors unless it is necessary, at which point make sure the background matches. As to background colors, the primary color doe backgrounds is bg-dark, or if it is a white website then bg-light. The coloring has to be used as little as possible because it does not really work.`,
+        `Since I am using a programmable component layer over [Bootstrap], I can automate colorification, combined with the notion that it must be used sparingly. I'll be able to create multicolored websites soon, or as the case might be, websites with multiple coherent color themes.`,
+        ``,
+        `This was more difficult than I expected. And when complete it will be quite a framework for web applications.`,
+      ],
+    },
+
+
+
+    {
       date: '2020-04-09T15:55:13.217Z',
       html: [
         `I upgraded [Palette] and begun using it somewhat. The website has new colors that almost came directly from [Palette].`,

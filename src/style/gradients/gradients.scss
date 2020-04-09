@@ -1,6 +1,6 @@
-$angles: () !default;
+$gradient-angles: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$angles: map-merge(
+$gradient-angles: map-merge(
   (
     "45": 45deg,
     "90": 90deg,
@@ -10,16 +10,25 @@ $angles: map-merge(
     "270": 270deg,
     "315": 315deg,
   ),
-  $angles
+  $gradient-angles
 );
 
 @each $color, $value in $theme-colors {
-  $color1: color.adjust($value, $lightness: - 20%);
-  $color2: $value;
+
+  $color1: color.adjust($value, $lightness: 8%);
+  $color2: color.adjust($value, $lightness: - 8%);
+
+  // Exception For very bright colors
+  @if(lightness($value) > 90%){
+    $color2: color.adjust($value, $lightness: - 40%);
+  }
+  // End: For very bright colors
+
   .gr-#{$color} {
     background: linear-gradient(0deg, $color1 0%, $color2 100%);
   }
-  @each $angle, $deg in $angles {
+
+  @each $angle, $deg in $gradient-angles {
     .gr-#{$color}-#{$angle} {
       background: linear-gradient($deg, $color1 0%, $color2 100%);
     }

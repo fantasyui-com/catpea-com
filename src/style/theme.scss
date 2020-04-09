@@ -10,7 +10,7 @@
 
 $body-color: skyblue;
 $enable-prefers-reduced-motion-media-query: false;
-@import "./colors.scss";
+@import "./colors/colors.scss";
 @import "./variables";
 $enable-prefers-reduced-motion-media-query: false;
 
@@ -25,9 +25,9 @@ $enable-prefers-reduced-motion-media-query: false;
 
 // Custom Components
 @import "./gradients/gradients.scss";
-@import "./sequencer-line.scss";
 @import "./drawer/drawer.scss";
 @import "./daw/daw.scss";
+@import "./daw/sequencer-line.scss";
 @import "./post/post.scss";
 
 @import "../../node_modules/bootstrap/scss/tables";
@@ -101,45 +101,42 @@ $enable-prefers-reduced-motion-media-query: false;
 
 
 
-.select-none {
-  user-select: none;
-}
 
 
 
+//
+//
+//
+// @each $color, $value in $grays {
+//
+//   .text-gray-#{$color} {
+//     color: $value !important;
+//   }
+//
+//   .bg-gray-#{$color} {
+//     background-color: $value !important;
+//   }
+//
+//   .bg-gray-#{$color}-hover:hover {
+//     background-color: $value !important;
+//   }
+// }
 
 
 
-@each $color, $value in $grays {
-
-  .text-gray-#{$color} {
-    color: $value !important;
-  }
-
-  .bg-gray-#{$color} {
-    background-color: $value !important;
-  }
-
-  .bg-gray-#{$color}-hover:hover {
-    background-color: $value !important;
-  }
-}
-
-
-
-
-
-@each $color, $value in $theme-colors {
-  .#{$color}-hover:hover {
-    color: $value !important;
-  }
-  .bg-#{$color}-hover:hover {
-    background-color: $value !important;
-  }
-  .fill-#{$color}-hover:hover {
-    fill: $value;
-  }
-}
+//
+//
+// @each $color, $value in $theme-colors {
+//   .#{$color}-hover:hover {
+//     color: $value !important;
+//   }
+//   .bg-#{$color}-hover:hover {
+//     background-color: $value !important;
+//   }
+//   .fill-#{$color}-hover:hover {
+//     fill: $value;
+//   }
+// }
 
 @each $color, $value in $theme-colors {
   .fill-#{$color} {
@@ -157,15 +154,19 @@ $enable-prefers-reduced-motion-media-query: false;
   cursor: pointer;
 }
 
-
-
-
-.bg-hover-light:hover {
-    border-radius: .25rem;
-    background-color: $gray-100;
+.select-none {
+  user-select: none;
 }
 
-.bg-hover-dark:hover {
-    border-radius: .25rem;
-    background-color: $gray-900;
-}
+//
+//
+//
+// .bg-hover-light:hover {
+//     border-radius: .25rem;
+//     background-color: $gray-100;
+// }
+//
+// .bg-hover-dark:hover {
+//     border-radius: .25rem;
+//     background-color: $gray-900;
+// }

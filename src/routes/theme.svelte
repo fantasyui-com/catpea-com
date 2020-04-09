@@ -1,25 +1,21 @@
 <script>
+import capitalize from 'lodash/capitalize.js'
 
-// const bootstrapColors = [ 'primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', ];
-//
-// const bgDatabase = [];
-// const btDatabase = [];
-//
-//
-//   for (let i = 0; i < bootstrapColors.length; i++){
-//     const name = bootstrapColors[i];
-//     bgDatabase.push({className:`bg-${name}-dark`});
-//     bgDatabase.push({className:`bg-${name}`});
-//     bgDatabase.push({className:`bg-${name}-light`});
-//   }
-//
-//   for (let i = 0; i < bootstrapColors.length; i++){
-//     const name = bootstrapColors[i];
-//     btDatabase.push({className:`bt-${name}-dark`});
-//     btDatabase.push({className:`bt-${name}`});
-//     btDatabase.push({className:`bt-${name}-light`});
-//   }
-//
+const themeColors = [ 'primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', ];
+const gradientAngles = [ "45", "90", "135", "180", "225", "270", "315" ];
+
+const gradients = {};
+
+for(let color of themeColors){
+  gradients[ `0&deg; ${capitalize(color)}` ] = `gr-${color}` ;
+  for(let angle of gradientAngles){
+    gradients[ `${angle}&deg; ${capitalize(color)}` ] = `gr-${color}-${angle}` ;
+  }
+}
+
+
+
+
 
 </script>
 
@@ -32,15 +28,57 @@
 
 <div class="container">
 
-  <div class="row mb-3">
+  <div class="row mb-5">
     <div class="col">
-      <h3 class="text-light text-uppercase">Custom Theme Development <small class="text-light"> Bootstrap Based Theme for Applications</small></h3>
+      <h1 class="text-light text-uppercase">Custom Theme Development</h1>
+      <h2 class="text-light">Bootstrap Based Theme for Applications</h2>
+    </div>
+  </div>
+
+  <div class="row my-4">
+    <div class="col">
+    </div>
+  </div>
+
+
+  <div class="row my-4">
+    <div class="col">
+      <h3 class="text-warning">Rotational Gradients</h3>
     </div>
   </div>
 
   <div class="row mb-3">
     <div class="col">
-      The theme has 4 components, and a custom gradient library. It includes a stand alone colors.scss that can be generate on this site.
+
+      <div class="alert alert-dark" role="alert">
+
+        <ul class="list-unstyled">
+          <li>&middot; {Object.keys(gradients).length} Additional Classes</li>
+          <li>&middot; Naming scheme: <span class="badge badge-light text-dark">gr</span>-<span class="badge badge-light text-dark">contextual color</span>-<span class="badge badge-light text-dark">degree of angle</span></li>
+          <li>&middot; Angles {@html gradientAngles.map(o=>`${o}&deg;`).join(', ')}.</li>
+          <li>&middot; Colors {@html themeColors.map(o=>`${o}`).join(', ')}.</li>
+          <li>&middot; Example: "gr-primary-45"</li>
+          <li>&middot; Note: 0&deg; angle is expressed without indicating any degree of angle (ex: Gradient of primary color at 0&deg; is written as "gr-primary")</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container rounded gr-info-45 mb-4">
+    <div class="row justify-content-center">
+      {#each Object.keys(gradients).filter(name=>1).map(name=>({name, className:gradients[name]})) as item, i}
+
+        <div class="col-xs-12 col-md-6 col-lg-3 text-center p-2">
+          <div class="d-inline-block p-2 {item.className} rounded shadow">
+            <div class="text-dark"><span class="badge badge-dark text-white">{@html item.name}</span></div>
+            <div class="d-inline-block" style="height: 6rem; width: 10rem;"></div>
+            <div class="text-dark"><span class="badge badge-dark text-white">.{item.className}</span></div>
+          </div>
+        </div>
+
+      {/each}
     </div>
   </div>
 

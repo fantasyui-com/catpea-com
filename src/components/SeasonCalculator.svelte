@@ -72,7 +72,7 @@ setInterval(function(){
 
     {#each events as event}
       {#if event.next}
-      <p class="card-text pb-4 text-info lead">{event.text}</p>
+      <p class="card-text pb-4 text-primary lead">{event.text}</p>
       {:else}
       <p class="card-text pb-2 text-muted">{event.text}</p>
       {/if}

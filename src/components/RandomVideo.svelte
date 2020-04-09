@@ -205,7 +205,7 @@ function prev(){
 
     <div class="card-body p-1 m-0">
     {#if titles}<h5 class="card-title text-center m-0 p-2">{selected.title}</h5>{/if}
-    {#if !titles}<p class="card-text small text-secondary text-center">{selected.title}</p>{/if}
+    {#if !titles}<p class="card-text small text-center">{selected.title}</p>{/if}
     </div>
 
 
