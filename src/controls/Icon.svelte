@@ -7,7 +7,7 @@
 
   let icon = "";
   if(octicons && octicons[name]){
-    icon = octicons[name].toSVG({width:size, class:`fill-${color} hover-fill-danger`});
+    icon = octicons[name].toSVG({width:size});
   }
 </script>
-<span>{@html icon}</span>
+<span class="fill-{color}">{@html icon}</span>

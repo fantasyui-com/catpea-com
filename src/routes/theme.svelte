@@ -28,7 +28,7 @@ for(let color of themeColors){
 
 
 
-<div class="container {night?'night':'day'}">
+<div class="container" class:night>
 
   <div class="row mb-5">
     <div class="col">

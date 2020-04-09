@@ -7,6 +7,18 @@ const octicons = icons();
 const database = [
 
     {
+      date: '2020-04-09T22:07:45.885Z',
+      html: [
+        `Yay, Night Mode seems to have worked out, I even gave it nice and tidy animation. [Octicons] had a [light bulb] for me so it all went smoothly. Give it a try, put on some shades, and click ${octicons['light-bulb'].toSVG({"class":"fill-warning"})} the &uarr; above.`,
+        ``,
+        `<figure class="figure float-right"> <img src="research/bulb.png" class="figure-img w-100 rounded" alt="Night Mode Toggle"> <figcaption class="figure-caption text-right">Night Mode Toggle</figcaption> </figure>`,
+      ],
+      link:{
+        'light bulb':'https://octicons.github.com/icon/light-bulb/'
+      }
+    },
+
+    {
       date: '2020-04-09T21:22:15.282Z',
       html: [
         `I might have come up with a way to toggle night mode on websites, even dark ones. I did this with just two lines of code. Basically what it came down to was asking, "What am I going to do with a red/danger alert box, during night mode?" And the answer is, it had to dark, everything has to be dark in night mode. There cannot be colorful things and especially things with backgrounds.`,

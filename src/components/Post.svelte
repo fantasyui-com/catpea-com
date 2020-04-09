@@ -8,13 +8,14 @@
   export let text = "";
   export let html = "";
 
+
 </script>
 
 <style>
 
 </style>
 
-<div class="post card text-white bg-dark">
+<div class="post card text-dark bg-night text-night">
   <div class="card-header">
     <Header {icon} {title} {date}/>
   </div>

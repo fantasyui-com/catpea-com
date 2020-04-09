@@ -168,6 +168,14 @@ $enable-prefers-reduced-motion-media-query: false;
   user-select: none;
 }
 
+
+.bg-night {
+  transition: background-color 1000ms ease-out;
+}
+.text-night {
+  transition: color 1000ms ease-out;
+}
+
 .night .bg-night {
   background: $dark !important;
 }
