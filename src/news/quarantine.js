@@ -4,6 +4,119 @@ const octicons = icons();
 const database = [
 
 
+        // 
+        // {
+        //   date: '2020-04-10T13:55:12.447Z',
+        //   name:'Citizen of The World',
+        //   html: `
+        //
+        //     Captain's Log, Quarantine Meow, Day Twenty Five,
+        //     Yesterday, Bernie dropped out.
+        //
+        //     I didn't even try to wait, you can't place this much weight.
+        //     And what were you expecting? Was he going to fix all?
+        //
+        //     It has always been like this, hit and miss.
+        //     It is time for you to stop hiding, to rise.
+        //
+        //     Become a Citizen of The World. In your own hands.
+        //     With your own mind. Seek Knowledge and Triumph.
+        //
+        //     Let the name of this New Nation be, Earth,
+        //     May the Citizen be called, Earthling.
+        //
+        //     It brings pain to my heart to set aside my dreams of
+        //     United States of The World, and The World Union.
+        //
+        //     These were childish dreams,
+        //     Mother Nature cared not for,
+        //
+        //     She never recognized any of our borders,
+        //     and it broke her heart to see us fight.
+        //
+        //     No one is coming to help,
+        //     because when they used to rise,
+        //     those who are most uneducated would take them down.
+        //
+        //     We need a round table,
+        //     where everyone accepts responsibility,
+        //     and the entry,
+        //     and the pass,
+        //     is your Wisdom,
+        //     and Knowledge.
+        //
+        //     We are all born equal,
+        //     but we do not grow equally fast,
+        //     those fractured by poverty of mind and wallet,
+        //     fall behind.
+        //
+        //     We may no more abandon them to their small worlds and prisons,
+        //     than leave our very family behind.
+        //
+        //     The solution is prevention,
+        //     it is the solution for mass incarceration,
+        //     and the solution for poverty,
+        //     and the path to World Peace.
+        //
+        //     The power is in your hands, so near,
+        //     rooted in every audio-book you can hear.
+        //
+        //     But you have to lean to rise,
+        //     you can't near the skies,
+        //     without your eyes.
+        //
+        //     When you have learned enough, you have to turn around and teach.
+        //     Yell from your mountain, scream, dance and preach.
+        //
+        //     The promise of Freedom, Reason, and Peace,
+        //     is in our hands, it is our Masterpiece.
+        //
+        //     And, the promise of Freedom, Reason, and Peace,
+        //     is in your hands too, it your masterpiece as well.
+        //
+        //     What divides leaders, and those who take them down,
+        //     is that one learned and the other was crushed by poverty,
+        //     it is a difference of, bad luck, of our ignorance and out arrogance.
+        //
+        //     The world cannot be cut up in to pieces,
+        //     any and all that goes against the grain of reality will crash.
+        //     It will crash into the brick wall of reality.
+        //
+        //     Borders are not real, they do not prevent your economic collapse,
+        //     they do not lead you to heaven, Heaven is Now, it Your Life as you live it.
+        //
+        //     Education is [fun] it only ever seems hard,
+        //     because one is trying to learn too much in too little time.
+        //
+        //     Before we can sit at our round table,
+        //     we must each discover wisdom, enlightenment.
+        //
+        //     The only way we will ever do that,
+        //     is by inheriting knowledge from world's most beloved Heroes.
+        //
+        //     This inheritance is begins by following in their footstep, first;
+        //     and continues, when we break away to resume where they left off.
+        //
+        //     Rise, rise to the mountains before you.
+        //     The only way is to go up,
+        //     to grow up,
+        //     to grow all the way up,
+        //     until we each become a Great Being.
+        //
+        //     Same as those before us,
+        //     same as those that are sure to rise.
+        //
+        //     Open Your Eyes.
+        //     The Time is Now.
+        //
+        //     <audio controls preload="none"> <source src="poems/day25.mp3" type="audio/mpeg"></audio>
+        //
+        //   `.trim().split('\n'),
+        //   link:{
+        //     'fun':'/warrior',
+        //   }
+        // },
+
 
         {
           date: '2020-04-10T01:35:43.133Z',

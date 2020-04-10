@@ -6,7 +6,7 @@ import icons from '../devices/icons.js';
 const octicons = icons();
 
 
-import { onMount } from "svelte";
+import { onMount, onDestroy } from "svelte";
 
 // import shuffleArray from 'shuffle-array';
 function shuffleArray(a){
@@ -67,7 +67,7 @@ let procession = 0; // overall progress through the current shuffle.
 // Data State
 let index = -1;
 
-setInterval(function(){
+let intervalId = setInterval(function(){
   if(paused) return;
   if(database.length === 0) return;
 
@@ -87,6 +87,11 @@ setInterval(function(){
 
 }, 1000)
 
+onDestroy(() => {
+  clearInterval(intervalId);
+});
+
+
 function next(){
 
   // Reset Timer State
@@ -103,6 +108,7 @@ function next(){
 
   // Set Advice
   selected = database[index];
+  console.log(selected);
 
 }
 function prev(){

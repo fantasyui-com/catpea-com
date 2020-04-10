@@ -9,9 +9,9 @@ const gradientAngles = [ "45", "90", "135", "180", "225", "270", "315" ];
 const gradients = {};
 
 for(let color of themeColors){
-  gradients[ `0&deg; ${capitalize(color)}` ] = `gr-${color}` ;
+  gradients[ `0&deg; ${capitalize(color)}` ] = `bg-${color} gr` ;
   for(let angle of gradientAngles){
-    gradients[ `${angle}&deg; ${capitalize(color)}` ] = `gr-${color}-${angle}` ;
+    gradients[ `${angle}&deg; ${capitalize(color)}` ] = `bg-${color} gr-${angle}` ;
   }
 }
 
@@ -34,6 +34,27 @@ for(let color of themeColors){
     <div class="col">
       <h1 class="text-light text-uppercase">Custom Theme Development</h1>
       <h2 class="text-light">Bootstrap Based Theme for Applications</h2>
+    </div>
+  </div>
+
+  <div class="row my-4">
+    <div class="col">
+    </div>
+  </div>
+
+  <div class="row my-4">
+    <div class="col">
+      <h3 class="text-warning">Design Guidelines</h3>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <div class="alert alert-dark" role="alert">
+        <ul class="list-styled">
+          <li>You may only place text in components with a background.</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -115,11 +136,13 @@ for(let color of themeColors){
 
         <ul class="list-unstyled">
           <li>&middot; {Object.keys(gradients).length} Additional Classes</li>
-          <li>&middot; Naming scheme: <span class="badge badge-light text-dark">gr</span>-<span class="badge badge-light text-dark">contextual color</span>-<span class="badge badge-light text-dark">degree of angle</span></li>
+          <li>&middot; Naming scheme: <span class="badge badge-light text-dark">bg-primary</span> <span class="badge badge-light text-dark">gr</span>-<span class="badge badge-light text-dark">degree of angle</span></li>
           <li>&middot; Angles {@html gradientAngles.map(o=>`${o}&deg;`).join(', ')}.</li>
           <li>&middot; Colors {@html themeColors.map(o=>`${o}`).join(', ')}.</li>
-          <li>&middot; Example: "gr-primary-45"</li>
-          <li>&middot; Note: 0&deg; angle is expressed without indicating any degree of angle (ex: Gradient of primary color at 0&deg; is written as "gr-primary")</li>
+          <li>&middot; Example: "bg-primary gr-45" applies a primary colored gradient at 45&deg; of angle.</li>
+          <li>&middot; Note: 0&deg; angle is expressed without indicating any degree of angle (ex: Gradient of primary color at 0&deg; is written as "bg-primary gr").</li>
+          <li>&middot; Note: you can lower class count (file size) by removing angles from configuration.</li>
+          <li>&middot; Note: you fallback on standard colors by disabling the Rotational Gradient stylesheet.</li>
         </ul>
       </div>
 
@@ -135,7 +158,7 @@ for(let color of themeColors){
           <div class="d-inline-block p-2 {item.className} rounded shadow">
             <div class="text-dark"><span class="badge badge-dark text-white">{@html item.name}</span></div>
             <div class="d-inline-block" style="height: 6rem; width: 10rem;"></div>
-            <div class="text-dark"><span class="badge badge-dark text-white">.{item.className}</span></div>
+            <div class="text-dark"><span class="badge badge-dark text-white">{item.className}</span></div>
           </div>
         </div>
 

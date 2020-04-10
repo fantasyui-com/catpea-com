@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
-    "make": "sapper export --legacy; rm -fr docs; cp -fr __sapper__/export docs; cp -f domain.txt docs/CNAME; ./bugfix-commonjs-helpers.sh",
+    "make": "sapper export --legacy; ./bugfix-dont-delete-everything.sh; cp -fr __sapper__/export/* ./docs; cp -f domain.txt docs/CNAME; ./bugfix-commonjs-helpers.sh",
     "upload": "git add .; git commit -m \"New Release\"; git push;",
     "pub": "npm run make; npm run upload;",
     "start": "node __sapper__/build",

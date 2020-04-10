@@ -1,6 +1,18 @@
 <script>
   import { slide } from 'svelte/transition';
+
+  import Icon from '../controls/Icon.svelte';
+
   export let segment;
+
+  export let bulb;
+  export let night;
+  export let allowance;
+
+  let minute = 1000*60 ;
+
+  let eyestrain = 15 * minute;
+
   let collapsed = false;
 
   const navigation = [
@@ -72,28 +84,44 @@
 
 </script>
 
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg shadow mb-4 d-none d-lg-flex">
+<nav class="navbar navbar-light bg-primary bg-night text-night navbar-expand-lg shadow d-none d-lg-flex mb-3">
 
   <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
+
+
 
   <div class="navbar-collapse">
     <ul class="navbar-nav mr-auto">
 
     {#each navigation as item, i}
       <li class="nav-item" class:active='{ (segment?segment:'home')===item.id }'>
-        <a class="nav-link" rel=prefetch href={item.link} title={item.description}>{item.name}</a>
+        <a class="nav-link text-night" rel=prefetch href={item.link} title={item.description}>{item.name}</a>
       </li>
     {/each}
 
     </ul>
   </div>
 
+  {#if bulb}
+    <div class="">
+      <button type="button" class="btn btn-sm" class:btn-primary={!night} class:btn-dark={night} class:active={night} on:click={()=>{night=!night;allowance=eyestrain}}>
+        <Icon name="light-bulb" color={night?'primary':'light'}/>
+      </button>
+    </div>
+  {/if}
+
 </nav>
 
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg shadow mb-4 d-lg-none">
+<nav class="navbar navbar-light bg-primary bg-night text-night navbar-expand-lg shadow d-lg-none mb-3">
 
   <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
-
+  {#if bulb}
+    <div class="">
+      <button type="button" class="btn btn-sm" class:btn-primary={!night} class:btn-dark={night} class:active={night} on:click={()=>{night=!night;allowance=eyestrain}}>
+        <Icon name="light-bulb" size=16 color={night?'primary':'light'}/>
+      </button>
+    </div>
+  {/if}
   <button class="navbar-toggler border-0" type="button" on:click={()=>collapsed =! collapsed} class:collapsed={collapsed}>
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -104,7 +132,7 @@
 
       {#each navigation as item, i}
         <li class="nav-item" class:active='{ (segment?segment:'home')===item.id }'>
-          <a class="nav-link" rel=prefetch href={item.link} title={item.description}>{item.name} &middot; <small class="text-muted">{item.description}</small></a>
+          <a class="nav-link text-night" rel=prefetch href={item.link} title={item.description}>{item.name} &middot; <small class="text-muted">{item.description}</small></a>
         </li>
       {/each}
 

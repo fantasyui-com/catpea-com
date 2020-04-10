@@ -7,6 +7,33 @@ const octicons = icons();
 const database = [
 
     {
+      date: '2020-04-10T17:27:13.602Z',
+      html: [
+        `<figure class="figure float-right"> <img src="research/dexter.png" class="figure-img w-100 rounded" alt="Dexter!"> <figcaption class="figure-caption text-right">My laboratory, is Cat Pea... Oh noes...</figcaption> </figure>`,
+         `Added site-wide support for Night/Day mode. I thought it was a bit hokey at first, but it is solid, it is good, a round of tests will make it perfect.`,
+          `<figure class="figure float-right"> <img src="research/pixels.png" class="figure-img w-100 rounded" alt="Chromatic Storytelling"> <figcaption class="figure-caption text-right">Chromatic Storytelling Sample</figcaption> </figure>`,
+          `The backgrounds are inspired by Interstellar and Life Aquatic with Steve Zissou. Take a look at [Chromatic Storytelling] to see how they extracted scenes from movies to get a new view of the classics.`,
+          ``,
+          `In the day mode I use pixels from Life Aquatic with Steve Zissou, during the night I use pixels from Interstellar.`,
+          ``,
+          `The night more is automatically enabled between 8PM and 6AM. I hope 6AM is not too early.`,
+          ``,
+          `So, of course, there is this crazy little temporal consequence associated with this.
+           When clicking the light-bulb I can't just say it is night or day because the computer is now calculating this.`,
+           `Now I must ask for allowance, a grace period when I can override the computer's idea a of day.`,
+           `So when I force night-mode during the day, the computer will reset back after 12 minutes. I think this is funny.`,
+           ``,
+           `(Oh, and it is 12 minutes, because my Linux monitor goes to sleep after 15, no matter what. So to test the system, it has to be less than 15)`,
+           ``,
+           `I remember the day, I got my self into all this ridiculousness. People kept saying "Computers are the future", and the little me was like "Hey, I am trying to get my future all sorted out, why don't I learn computers? After all, it is the future!"`,
+
+       ],
+      link:{
+        'Chromatic Storytelling':'https://towardsdatascience.com/exploring-chromatic-storytelling-with-r-part-1-8e9ddf8d4187'
+      }
+    },
+
+    {
       date: '2020-04-09T22:07:45.885Z',
       html: [
         `Yay, Night Mode seems to have worked out, I even gave it nice and tidy animation. [Octicons] had a [light bulb] for me so it all went smoothly. Give it a try, go to the [Research] page, put on some shades, and click on the ${octicons['light-bulb'].toSVG({"class":"fill-warning"})} icon &uarr;.`,
