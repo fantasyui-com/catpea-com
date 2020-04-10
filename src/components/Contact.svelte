@@ -24,7 +24,7 @@
 		<img src="logo.png" class="d-inline mr-3" alt="Catpea Logo Image">
 		<div class="media-body">
 			<h5 class="mt-0">Contact Advanced Development Programs</h5>
-			<a class="text-dark" href="mailto:squirt@catpea.com">squirt@catpea.com</a>
+			<a href="mailto:squirt@catpea.com">squirt@catpea.com</a>
 		</div>
 	</div>
 

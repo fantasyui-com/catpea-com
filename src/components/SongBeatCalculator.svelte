@@ -47,19 +47,19 @@ function reset(){
 
 </style>
 
-<div class="card text-white bg-dark shadow">
+<div class="card bg-night text-night shadow">
 <div class="card-header">
   Song Beat Calculator
 </div>
-	<div class="card-body">
+  <div class="card-body">
 
-    <h3 class="card-title text-white text-center py-5">{totalBpm} BPM</h3>
+    <h3 class="card-title text-center py-5">{totalBpm} BPM</h3>
     <button class="btn btn-primary btn-lg p-4" on:click={beat}>Beat</button>
-    <p class="card-text py-3"><small class="text-info">Start hitting the beat button to the beat of a song to calculate the song's BPM.</small></p>
+    <p class="card-text py-3"><small>Start hitting the beat button to the beat of a song to calculate the song's BPM.</small></p>
 
 
     <div class="row">
-    <div class="col text-muted small">
+    <div class="col small">
       {message}
       {#if beatCounter}
       Sampled {beatCounter} time{beatCounter==1?'':'s'}, average bpm is {totalBpm}.
@@ -71,7 +71,7 @@ function reset(){
     </div>
 
 
-	</div>
+  </div>
 
 
 </div>

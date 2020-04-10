@@ -47,7 +47,7 @@ onMount(async function() {
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
     {#each slice as post}
       <div class="col mb-4">
-        <div class="card bg-dark text-white shadow p-0 m-0">
+        <div class="card bg-night text-night shadow p-0 m-0">
           <a href="{post.url}" rel="noopener noreferrer" target="_blank"><img src="{post.image}" class="card-img-top" alt="{post.title}"></a>
           <div class="card-body p-3">
             <h5 class="card-text small">{post.title}</h5>
@@ -60,11 +60,11 @@ onMount(async function() {
     <div class="row" style="display: none;" class:d-flex='{(parseInt($page.query.p) - 1)>-1}'>
 
       <div class="col-md-6 mb-4 order-2 order-md-1">
-        <a class="btn btn-dark btn-lg text-secondary shadow" href="/video?p={parseInt($page.query.p) - 1}&i={$page.query.i}">&laquo; Return to page {parseInt($page.query.p) }</a>
+        <a class="btn btn-dark btn-lg shadow" href="/video?p={parseInt($page.query.p) - 1}&i={$page.query.i}">&laquo; Return to page {parseInt($page.query.p) }</a>
       </div>
 
       <div class="col-md-6 mb-4 text-md-right order-1 order-md-2">
-        <div class="p-2 lead text-muted">
+        <div class="p-2 lead">
         Viewing page {parseInt($page.query.p)+1 } out of {  Math.ceil((database.length/parseInt($page.query.i))) }
           </div>
       </div>

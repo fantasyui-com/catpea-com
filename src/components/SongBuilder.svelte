@@ -10,7 +10,7 @@ import DrumLine from '../controls/DrumLine.svelte';
 
 </style>
 
-<div class="card text-white bg-dark shadow">
+<div class="card bg-night text-night shadow">
 
   <div class="card-header">
     Song Structure Builder
@@ -19,13 +19,13 @@ import DrumLine from '../controls/DrumLine.svelte';
   <div class="card-body">
 
     <div class="row">
-      <div class="col small text-muted">
+      <div class="col small">
       This is a simplified lightweight song structure builder. The purpose of this program is to outline key points, and get the job done in as little time as possible.
       </div>
     </div>
 
     <div class="row">
-      <div class="col small text-muted">
+      <div class="col small">
       Each Song has a Structure that is built out of Sections.
       Common sections are intro, verse, lift, pre-chorus, chorus, bridge/solo, outro.
       </div>

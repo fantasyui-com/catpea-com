@@ -63,7 +63,7 @@ setInterval(function(){
 
 </style>
 
-<div class="card text-white bg-dark shadow">
+<div class="card bg-night text-night shadow">
   <div class="card-header">
     Solstice and Equinox Calculator
   </div>
@@ -72,9 +72,9 @@ setInterval(function(){
 
     {#each events as event}
       {#if event.next}
-      <p class="card-text pb-4 text-primary lead">{event.text}</p>
+      <p class="card-text pb-4 lead">{event.text}</p>
       {:else}
-      <p class="card-text pb-2 text-muted">{event.text}</p>
+      <p class="card-text pb-2">{event.text}</p>
       {/if}
     {/each}
 

@@ -31,13 +31,13 @@ $: adjustment = songTempoChange(original, target).toPrecision(3);
 
 </style>
 
-<div class="card text-white bg-dark shadow">
+<div class="card bg-night text-night shadow">
 <div class="card-header">
   Calculate Song Tempo Change
 </div>
-	<div class="card-body">
-			<!-- <p class="card-text"><input type="number" min="10" max="900" bind:value={original} placeholder="original"> <abbr title="Beats Per Minute">bpm</abbr></p>
-			<p class="card-text"><input type="number" min="10" max="900" bind:value={target} placeholder="target"> <abbr title="Beats Per Minute">bpm</abbr></p> -->
+  <div class="card-body">
+      <!-- <p class="card-text"><input type="number" min="10" max="900" bind:value={original} placeholder="original"> <abbr title="Beats Per Minute">bpm</abbr></p>
+      <p class="card-text"><input type="number" min="10" max="900" bind:value={target} placeholder="target"> <abbr title="Beats Per Minute">bpm</abbr></p> -->
 
       <div class="card-text">
         <div class="row no-gutters">
@@ -87,14 +87,14 @@ $: adjustment = songTempoChange(original, target).toPrecision(3);
       <div class="card-text">
 
       <div class="border border secondary rounded p-3 mb-3">
-        ffmpeg -i <span class="text-secondary">input-file.mp3</span> -af atempo=<strong>{adjustment}</strong> <span class="text-secondary">output-file-{target}.mp3</span>
+        ffmpeg -i <span>input-file.mp3</span> -af atempo=<strong>{adjustment}</strong> <span>output-file-{target}.mp3</span>
       </div>
 
 
       </div>
 
-      <p class="card-text small text-secondary"><strong>-af</strong> Simple filtergraphs are configured with the per-stream -filter option (with -vf and -af aliases for video and audio respectively). <a href="https://ffmpeg.org/ffmpeg.html#Filtering">&raquo</a></p>
-      <p class="card-text small text-secondary"><strong>atempo</strong> Adjust audio tempo. The filter accepts exactly one parameter, the audio tempo. If not specified then the filter will assume nominal 1.0 tempo. Tempo must be in the [0.5, 100.0] range. Note that tempo greater than 2 will skip some samples rather than blend them in. <a href="https://ffmpeg.org/ffmpeg-filters.html#atempo">&raquo</a></p>
+      <p class="card-text small"><strong>-af</strong> Simple filtergraphs are configured with the per-stream -filter option (with -vf and -af aliases for video and audio respectively). <a href="https://ffmpeg.org/ffmpeg.html#Filtering">&raquo</a></p>
+      <p class="card-text small"><strong>atempo</strong> Adjust audio tempo. The filter accepts exactly one parameter, the audio tempo. If not specified then the filter will assume nominal 1.0 tempo. Tempo must be in the [0.5, 100.0] range. Note that tempo greater than 2 will skip some samples rather than blend them in. <a href="https://ffmpeg.org/ffmpeg-filters.html#atempo">&raquo</a></p>
          {:else}
 
          <div class="card-text">
@@ -107,5 +107,5 @@ $: adjustment = songTempoChange(original, target).toPrecision(3);
 
 
 
-	</div>
+  </div>
 </div>

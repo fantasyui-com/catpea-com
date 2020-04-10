@@ -72,7 +72,7 @@ function next(){
 
 {#if view == 0}
 
-  <div class="card text-white bg-dark shadow" style="min-height: 23rem;" >
+  <div class="card bg-night text-night shadow" style="min-height: 23rem;" >
     <div class="card-header lead">
       Preferences
       <button class="btn btn-text btn-sm border border-secondary float-right" on:click="{e => view = 1}">{@html octicons.checklist.toSVG({ "class": "fill-white" })}</button>
@@ -89,7 +89,7 @@ function next(){
         </div>
       </div>
 
-      <div class="card-text small text-info">
+      <div class="card-text small">
       Database contains {list.length} items. Current shuffle progress {procession}%.
       </div>
 
@@ -98,17 +98,17 @@ function next(){
 
 {:else if view == 1}
 
-  <div class="card text-white bg-dark shadow" style="min-height: 23rem;" >
+  <div class="card bg-night text-night shadow" style="min-height: 23rem;" >
 
     <div class="card-header lead">
       {title} <button class="btn btn-text btn-sm border border-secondary float-right" on:click="{e => view = 0}">{@html octicons.gear.toSVG({ "class": "fill-white" })}</button>
     </div>
 
     <div class="card-body py-1">
-      <p class="card-text pb-4 text-warning lead text-center pt-4" style="cursor: pointer;" on:click={next}>{advice}</p>
+      <p class="card-text pb-4 lead text-center pt-4" style="cursor: pointer;" on:click={next}>{advice}</p>
     </div>
 
-    <div class="card-footer text-muted">
+    <div class="card-footer">
 
       <div class="progress" style="height: 1px; background: black;">
         <div class="progress-bar bg-warning" role="progressbar" style="width: {progress}%;" aria-valuenow="{progress}" aria-valuemin="0" aria-valuemax="100"></div>

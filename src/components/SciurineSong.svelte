@@ -396,7 +396,7 @@ main();
 
 </style>
 
-<div class="card text-white bg-dark shadow">
+<div class="card bg-night text-night shadow">
 
   <div class="card-header">
     New Single Release!
@@ -431,7 +431,7 @@ main();
 
 
       <div class="col">
-      <audio controls class="w-100" preload="none">
+      <audio controls class="w-100 rounded" preload="none">
        <source src="sciurine.mp3" type="audio/mpeg">
      Your browser does not support the audio element.
      </audio>
@@ -458,9 +458,9 @@ main();
         <div class="form-check pt-1" style="display: none;" class:d-block='{playing}'>
           <input type="checkbox" class="form-check-input" id="customSwitch1" checked={highDefinition} on:click={()=>{ highDefinition=!highDefinition; useReverb=highDefinition; if(playing){play()}; }} >
           {#if highDefinition}
-          <label class="form-check-label text-warning small" for="customSwitch1">High Definition Mode</label>
+          <label class="form-check-label small" for="customSwitch1">High Definition Mode</label>
           {:else}
-          <label class="form-check-label text-info small" for="customSwitch1">High Definition Mode</label>
+          <label class="form-check-label small" for="customSwitch1">High Definition Mode</label>
           {/if}
         </div>
       </div>
@@ -472,9 +472,9 @@ main();
 
       <div class="col">
 
-      <div class="small text-info pt-3" style="display: none;" class:d-block='{playing}'>
+      <div class="small pt-3" style="display: none;" class:d-block='{playing}'>
         Audio generation may not work on all mobile devices due to high CPU speed requirements.
-          <span class="text-warning" style="display: none;" class:d-inline='{highDefinition}'>
+          <span style="display: none;" class:d-inline='{highDefinition}'>
           It is recommended that you use a Desktop Computer for high definition music.
           </span>
       </div>

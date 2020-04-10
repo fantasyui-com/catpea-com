@@ -100,13 +100,13 @@ onMount(async () => {
 
 
     <div class="col pb-3">
-        <div class="card bg-dark shadow">
+        <div class="card bg-night text-night shadow">
           <a href="{daw.url}"><img src="{daw.img}" class="card-img-top" alt="{daw.name}"></a>
           <div class="card-body p-3">
             <h5 class="card-text">{daw.name}</h5>
             <p class="card-text">{daw.text}</p>
             <a href="{daw.url}" class="btn btn-primary">{daw.name} &raquo;</a>
-            <!-- <p class="card-text"><small class="text-muted">Updated {videos.changed}</small></p> -->
+            <!-- <p class="card-text"><small>Updated {videos.changed}</small></p> -->
           </div>
         </div>
     </div>
@@ -146,13 +146,13 @@ onMount(async () => {
 
 
     <div class="col pb-3">
-        <div class="card text-white bg-dark shadow">
+        <div class="card bg-night text-night shadow">
           <a href="{videos.url}"><img src="{videos.img}" class="card-img-top" alt="{videos.name}"></a>
           <div class="card-body p-3">
             <h5 class="card-text">{videos.name}</h5>
             <p class="card-text">{videos.text}</p>
             <a href="{videos.url}" class="btn btn-primary">{videos.name} &raquo;</a>
-            <p class="card-text"><small class="text-muted">Updated {videos.changed}</small></p>
+            <p class="card-text"><small>Updated {videos.changed}</small></p>
           </div>
         </div>
     </div>

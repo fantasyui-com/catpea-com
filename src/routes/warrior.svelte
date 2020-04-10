@@ -113,7 +113,7 @@ onMount(async function() {
 </svelte:head>
 
 
-<div class="container-fluid text-warning" style="visibility: hidden;" class:visible='{pageReady}'>
+<div class="container-fluid" style="visibility: hidden;" class:visible='{pageReady}'>
 
   <nav class="mb-5" aria-label="breadcrumb">
     <ol class="breadcrumb bg-dark text-white">
@@ -124,7 +124,7 @@ onMount(async function() {
 
 </div>
 
-<div class="container-fluid text-warning py-5" style="visibility: hidden;" class:visible='{pageReady}'>
+<div class="container-fluid py-5" style="visibility: hidden;" class:visible='{pageReady}'>
 
 {#each content.data as item}
   <div class="row">
@@ -145,7 +145,7 @@ onMount(async function() {
 
 </div>
 
-<div class="container-fluid text-warning" style="visibility: hidden;" class:visible='{pageReady}'>
+<div class="container-fluid" style="visibility: hidden;" class:visible='{pageReady}'>
 
 
 

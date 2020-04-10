@@ -290,7 +290,7 @@ initialize()
       {#if item.user}
         <div class="shadow border border-primary rounded-lg ml-5 mb-2">
           <div class="card-body">
-              <h5 class="card-title small text-muted">You:</h5>
+              <h5 class="card-title small">You:</h5>
               <p class="card-text small">{item.text}</p>
           </div>
         </div>

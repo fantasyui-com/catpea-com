@@ -6,10 +6,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 // https://sass-lang.com/blog/the-module-system-is-launched
-@import "../../node_modules/bootstrap/scss/functions";
 
-$body-color: skyblue;
-$enable-prefers-reduced-motion-media-query: false;
+@import "../../node_modules/bootstrap/scss/functions";
 @import "./colors/colors.scss";
 
 $grid-breakpoints: (
@@ -22,8 +20,16 @@ $grid-breakpoints: (
 ) !default;
 
 @import "./variables";
-$enable-prefers-reduced-motion-media-query: false;
 
+
+
+//$link-color: color.change($primary, $red: null, $green: null, $blue: null, $hue: null, $saturation: null, $lightness: 50%, $alpha: null);
+$link-color: $primary;
+$link-hover-color: darken($link-color, 15%) !default;
+
+$enable-prefers-reduced-motion-media-query: false;
+$body-color: $black;
+$card-bg: $gray-300;
 
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/root";
@@ -180,17 +186,12 @@ $enable-prefers-reduced-motion-media-query: false;
 }
 
 
-.bg-night {
-  transition: background-color 1000ms ease-out;
-}
-.text-night {
-  transition: color 1000ms ease-out;
-}
-
 .night .bg-night {
+  transition: background-color 1000ms ease-out;
   background: $dark !important;
 }
 .night .text-night {
+  transition: color 1000ms ease-out;
   color: $light !important;
 }
 

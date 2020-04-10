@@ -44,7 +44,19 @@
       description:'A Book About Growing Up',
     },
 
+    {
+      id:'video',
+      link:'/video?p=0&i=8',
+      name:'Videos',
+      description:'Favorite Videos',
+    },
 
+    {
+      id:'wall',
+      link:'/wall',
+      name: 'Wall',
+      description:'Video Wall (not for mobile devices)',
+    },
 
     {
       id:'palette',
@@ -67,19 +79,7 @@
       description:'Digital Audio Workstation',
     },
 
-    {
-      id:'video',
-      link:'/video?p=0&i=8',
-      name:'Videos',
-      description:'Favorite Videos',
-    },
 
-    {
-      id:'wall',
-      link:'/wall',
-      name: 'Wall',
-      description:'Video Wall (not for mobile devices)',
-    }
   ];
 
 </script>
@@ -103,7 +103,7 @@
   </div>
 
   {#if bulb}
-    <div class="">
+    <div>
       <button type="button" class="btn btn-sm" class:btn-primary={!night} class:btn-dark={night} class:active={night} on:click={()=>{night=!night;allowance=eyestrain}}>
         <Icon name="light-bulb" color={night?'primary':'light'}/>
       </button>
@@ -116,7 +116,7 @@
 
   <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
   {#if bulb}
-    <div class="">
+    <div>
       <button type="button" class="btn btn-sm" class:btn-primary={!night} class:btn-dark={night} class:active={night} on:click={()=>{night=!night;allowance=eyestrain}}>
         <Icon name="light-bulb" size=16 color={night?'primary':'light'}/>
       </button>
@@ -132,7 +132,7 @@
 
       {#each navigation as item, i}
         <li class="nav-item" class:active='{ (segment?segment:'home')===item.id }'>
-          <a class="nav-link text-night" rel=prefetch href={item.link} title={item.description}>{item.name} &middot; <small class="text-muted">{item.description}</small></a>
+          <a class="nav-link text-night" rel=prefetch href={item.link} title={item.description}>{item.name} &middot; <small>{item.description}</small></a>
         </li>
       {/each}
 

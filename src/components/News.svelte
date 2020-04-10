@@ -102,10 +102,10 @@
             <div class="col">
 
               <span class="shake">{@html octicons[icon].toSVG({class:"fill-info"})}</span>
-              {#if item.name}<span class="py-2" style="color: aliceblue;"><strong>{item.name}</strong></span>{/if}
+              {#if item.name}<span class="py-2"><strong>{item.name}</strong></span>{/if}
               <span class="badge badge-secondary px-2">Posted {item.ago}</span>
 
-              <div class="pl-3 py-2" style="color: skyblue;">{@html item.html}</div>
+              <div class="pl-3 py-2">{@html item.html}</div>
             </div>
 
             </div>
@@ -119,7 +119,7 @@
       {/each}
 
       {#if link}
-      <p class="text-primary">{invitation}</p>
+      <p>{invitation}</p>
       <a href="{link}" class="btn btn-primary">Visit &raquo;</a>
       {/if}
 
@@ -128,12 +128,12 @@
 
     {#if footer}
       {#if news.length >= items}
-        <div class="card-footer small text-muted">
-          Showing {items} out of {news.length} items, latest post published <span class="text-primary">{news[0].ago}</span>
+        <div class="card-footer small">
+          Showing {items} out of {news.length} items, latest post published <strong>{news[0].ago}</strong>
         </div>
         {:else}
-        <div class="card-footer small text-muted">
-          Total of {news.length} news items, latest post published <span class="text-primary">{news[0].ago}</span>
+        <div class="card-footer small">
+          Total of {news.length} news items, latest post published <strong>{news[0].ago}</strong>
         </div>
         {/if}
     {/if}

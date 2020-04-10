@@ -39,7 +39,7 @@
   <title>𝗖𝗔𝗧𝗣𝗘𝗔: World's Most Advanced Research Laboratories and Skunk Works</title>
 </svelte:head>
 
-<div class="container text-small text-primary">
+<div class="container text-small">
 <div class="row">
 <div class="col">
 
@@ -53,7 +53,7 @@
 <p>Code {status} &middot; {error.message}</p>
 
 {#if error.stack}
-  <pre class="text-warning">{error.stack}</pre>
+  <pre>{error.stack}</pre>
 {/if}
 
 </div>

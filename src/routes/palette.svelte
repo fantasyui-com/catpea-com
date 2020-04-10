@@ -128,9 +128,9 @@ function makeStyle(){
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2">
 
         <div class="p-2 pb-4 bg-light gr-135 rounded shadow">
-          <div class="text-dark">{capitalize(item.name)}</div>
+          <div>{capitalize(item.name)}</div>
           <div class="d-inline-block rounded shadow border border-dark" style="background: {item.color}; height: 10rem; width: 10rem;"></div>
-          <div class=""> <Icon name="pencil" color="dark" size="16"/>  <input type="color" bind:value={colors[item.name]}> </div>
+          <div> <Icon name="pencil" color="dark" size="16"/>  <input type="color" bind:value={colors[item.name]}> </div>
         </div>
 
       </div>
@@ -150,9 +150,9 @@ function makeStyle(){
   <div class="row justify-content-center">
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2 bg-info gr-45 rounded">
         <div class="p-2 pb-4 bg-light gr-135 rounded shadow">
-          <div class="text-dark">Blend</div>
+          <div>Blend</div>
           <div class="d-inline-block rounded shadow border border-dark" style="background: {blend}; height: 10rem; width: 10rem;"></div>
-          <div class=""> <Icon name="pencil" color="dark" size="16"/>  <input type="color" bind:value={blend}> </div>
+          <div> <Icon name="pencil" color="dark" size="16"/>  <input type="color" bind:value={blend}> </div>
           <input type="range" class="custom-range" min="0" max="1" step="0.01" bind:value={ratio}>
         </div>
       </div>
@@ -174,7 +174,7 @@ function makeStyle(){
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2">
 
         <div class="p-2 pb-4 bg-light gr-135 rounded shadow">
-          <div class="text-dark">Blended {capitalize(item.name)}</div>
+          <div>Blended {capitalize(item.name)}</div>
           <div class="d-inline-block rounded shadow border border-dark" style="background: {mix(blend,item.color,ratio*ratios[item.name])}; height: 10rem; width: 10rem;"></div>
           <input type="range" class="custom-range" min="0" max="1" step="0.01" bind:value={ratios[item.name]}>
         </div>
@@ -200,7 +200,7 @@ function makeStyle(){
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2">
 
       <div class="p-2 pb-4 bg-light gr-135 rounded shadow">
-        <div class="text-dark">{capitalize(item.name)} ({item.id})</div>
+        <div>{capitalize(item.name)} ({item.id})</div>
         <div class="d-inline-block rounded shadow border border-dark" style="background: {mix(blend,item.color,ratio*ratios[item.id])}; height: 10rem; width: 10rem;"></div>
         <input type="range" class="custom-range" min="0" max="1" step="0.01" bind:value={ratios[item.id]}>
         <select class="form-control" bind:value={theme[item.name]}>
@@ -228,19 +228,19 @@ function makeStyle(){
 
 <div class="container">
   <div class="row">
-  <div class="col bg-dark text-success p-3">
+  <div class="col bg-light p-3 rounded">
   <Drawer title="Bootstrap Theme" opened>
       <code class="bg-dark">
       <div>// Color Declaration</div>
       <div>// Add this to your <a href="https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss" rel="noopener noreferrer" target="_blank">variables.scss</a> file.</div>
       {#each Object.keys(colors).map(name=>({name, color:colors[name]})) as item, i}
-        <div><span class="text-danger">${item.name}</span>: <span class="text-warning">{mix(blend,item.color,ratio*ratios[item.name])};</span></div>
-        <!-- <div><span class="text-danger">${item.name}</span>: <span class="text-warning">{item.color};</span></div> -->
+        <div><span>${item.name}</span>: <span>{mix(blend,item.color,ratio*ratios[item.name])};</span></div>
+        <!-- <div><span>${item.name}</span>: <span>{item.color};</span></div> -->
       {/each}
       <br>
       <div>// Theme Colors</div>
       {#each Object.keys(theme).map(name=>({name, color:theme[name]})) as item, i}
-        <div><span class="text-info">${item.name}</span>: <span class="text-danger">${item.color};</span></div>
+        <div><span>${item.name}</span>: <span>${item.color};</span></div>
       {/each}
       </code>
       </Drawer>

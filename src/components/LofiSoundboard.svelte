@@ -42,7 +42,7 @@ async function play(note){
 async function main(){
 
 
- 
+
 
  loading = true;
  instrument = await sampler(sample);
@@ -64,7 +64,7 @@ onMount(async () => {
 <style>
 </style>
 
-<div class="card text-white bg-dark shadow">
+<div class="card bg-night text-night shadow">
   <div class="card-header">
     {title}
   </div>
@@ -92,7 +92,7 @@ onMount(async () => {
     </div>
 
     <!-- <div class="row">
-      <div class="col text-muted small pt-2">
+      <div class="col small pt-2">
         Each octave (row) marks a group of sounds, groups are as follows Misc, SFX, Instuments, Drums, Sticks, Tsk.
         Kit is expressed in <a href="https://en.wikipedia.org/wiki/Scientific_pitch_notation" rel="noopener noreferrer" target="_blank">Scientific Pitch Notation</a>.
         Samples graciously provided by <a href="http://hipstrumentals.com" rel="noopener noreferrer" target="_blank">Hipstrumentals</a>.

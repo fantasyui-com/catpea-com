@@ -1,3 +1,84 @@
+$text-color-adjustments: 2% 5% 10% 20% 50% 75% 100%;
+
+@each $color, $value in $theme-colors {
+
+  // PATCH
+  @each $themeColorName, $themeColor in $theme-colors {
+
+    // if this color has bad contrast,
+    @if(lightness($themeColor)<50){
+    // this background color is dark, please whiten text
+    @each $adjustment in $text-color-adjustments {
+      @if(wcag-contrast($value, $themeColor) < 3) {
+          $value: color.adjust($value, $lightness: $adjustment);
+      }
+    } // @each
+
+  }else{
+    // this background color is light, please darken text
+    @each $adjustment in $text-color-adjustments {
+      @if(wcag-contrast($value, $themeColor) < 3) {
+          $value: color.adjust($value, $lightness: - $adjustment);
+      }
+    } // @each
+  }
+
+  } // PATCH
+
+  @include text-emphasis-variant(".text-#{$color}", $value, true);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$text-color-adjustments: 2% -2% 5% -5% 10% -10% 20% -20% 50% -50% 75% -75% 100% -100%;
+
+  // PATCH
+  @each $themeColorName, $themeColor in $theme-colors {
+
+    // if this color has bad contrast,
+
+    // this background color is dark, please whiten text
+    @each $adjustment in $text-color-adjustments {
+      @if(wcag-contrast($value, $themeColor) < 4.5) {
+          $value: color.adjust($value, $lightness: $adjustment);
+      }
+    } // @each
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
 
 
 @each $color, $value in $theme-colors {

@@ -4,7 +4,7 @@ const octicons = icons();
 const database = [
 
 
-        // 
+        //
         // {
         //   date: '2020-04-10T13:55:12.447Z',
         //   name:'Citizen of The World',
@@ -109,7 +109,7 @@ const database = [
         //     Open Your Eyes.
         //     The Time is Now.
         //
-        //     <audio controls preload="none"> <source src="poems/day25.mp3" type="audio/mpeg"></audio>
+        //     <audio controls preload="none" class="rounded"> <source src="poems/day25.mp3" type="audio/mpeg"></audio>
         //
         //   `.trim().split('\n'),
         //   link:{
@@ -148,7 +148,7 @@ const database = [
             quarantine will be over soon,
             that is clear.
 
-            <audio controls preload="none"> <source src="poems/day24.mp3" type="audio/mpeg"></audio>
+            <audio controls preload="none" class="rounded"> <source src="poems/day24.mp3" type="audio/mpeg"></audio>
 
           `.trim().split('\n'),
           link:{
@@ -183,7 +183,7 @@ const database = [
             `No wait, I'll add this:`,
             `I wish everyone pure bliss!`,
             ``,
-            `<audio controls preload="none"> <source src="poems/day23.mp3" type="audio/mpeg"></audio>`,
+            `<audio controls preload="none" class="rounded"> <source src="poems/day23.mp3" type="audio/mpeg"></audio>`,
 
 
           ]
@@ -701,7 +701,7 @@ const database = [
 
     {
       date: '2020-03-27T13:12:01.513Z',
-      html: 'Captains Log, Star-date Day Eleven. I connected the Beat Sequencer to Sound. Click on any of the tiny boxes and when the loop comes around the sound will fire. Tip: put a drum every four squares, and something that makes a Tsk every other square. Music is really-really simple, like language, music evolved with us, all it takes is sticks and places to hit them with. Actually we don\'t even need sticks <a href="https://youtu.be/V76psBrEypg?t=611" class="strong text-warning" rel="noopener noreferrer" target="_blank">Tuvan Singing</a> '
+      html: 'Captains Log, Star-date Day Eleven. I connected the Beat Sequencer to Sound. Click on any of the tiny boxes and when the loop comes around the sound will fire. Tip: put a drum every four squares, and something that makes a Tsk every other square. Music is really-really simple, like language, music evolved with us, all it takes is sticks and places to hit them with. Actually we don\'t even need sticks <a href="https://youtu.be/V76psBrEypg?t=611" class="strong" rel="noopener noreferrer" target="_blank">Tuvan Singing</a> '
     },
 
 
@@ -713,17 +713,17 @@ const database = [
 
     {
       date: '2020-03-25T23:33:22.740Z',
-      html: 'Captain\'s Log: Ninth Day of Quarantine: I found one more chicken, am ready for dinner. I created a small <a href="https://en.wikipedia.org/wiki/Soundboard_(computer_program)" rel="noopener noreferrer" target="_blank">Soundboard</a> for what is basically a tiny collection of LOFI Hip-Hop sounds. A tiny collection will do, because we have the the synthesizer taking care of everything else. I added some Hip sounds to the THE WARRIOR Album Single and it does sound very well. Realistically it is difficult to call it music at this point, I have all the components but there were bugs along the way. <a href="https://sapper.svelte.dev/docs#Server-side_rendering" class="text-warning" rel="noopener noreferrer" target="_blank">Svelte Sapper</a> is complicated to visualize, it pre-creates some things, meaning before I publish to the website, Sapper will create a pre-ran version of the site. When a visitor visits, the pre-ran (pre-generated static version) will then be upgraded to a real version, and replaced by now running live version. It is the correct technology, and it didn\'t get me, but it does take a moment to figure out when a bug jumps out of nowhere.'
+      html: 'Captain\'s Log: Ninth Day of Quarantine: I found one more chicken, am ready for dinner. I created a small <a href="https://en.wikipedia.org/wiki/Soundboard_(computer_program)" rel="noopener noreferrer" target="_blank">Soundboard</a> for what is basically a tiny collection of LOFI Hip-Hop sounds. A tiny collection will do, because we have the the synthesizer taking care of everything else. I added some Hip sounds to the THE WARRIOR Album Single and it does sound very well. Realistically it is difficult to call it music at this point, I have all the components but there were bugs along the way. <a href="https://sapper.svelte.dev/docs#Server-side_rendering" rel="noopener noreferrer" target="_blank">Svelte Sapper</a> is complicated to visualize, it pre-creates some things, meaning before I publish to the website, Sapper will create a pre-ran version of the site. When a visitor visits, the pre-ran (pre-generated static version) will then be upgraded to a real version, and replaced by now running live version. It is the correct technology, and it didn\'t get me, but it does take a moment to figure out when a bug jumps out of nowhere.'
     },
 
     {
       date: '2020-03-24T21:11:29.310Z',
-      html: 'Captain\'s Log Supplemental: Day Eight and Half... of Quarantine. I almost finished eating my 30 day supply of Chicken, my muscles have tripled in size, and I have the strength of 300. I begun releasing a New Album entitled <strong class="text-white">THE WARRIOR</strong> Inspired by <a href="https://www.youtube.com/results?search_query=Tron+Legacy" class="strong text-warning" rel="noopener noreferrer" target="_blank">TRON</a> and <a href="https://www.youtube.com/watch?v=mVxLhy1v-xU" class="text-warning" rel="noopener noreferrer" target="_blank">LOFI Hip-Hop</a>.'
+      html: 'Captain\'s Log Supplemental: Day Eight and Half... of Quarantine. I almost finished eating my 30 day supply of Chicken, my muscles have tripled in size, and I have the strength of 300. I begun releasing a New Album entitled <strong class="text-white">THE WARRIOR</strong> Inspired by <a href="https://www.youtube.com/results?search_query=Tron+Legacy" class="strong" rel="noopener noreferrer" target="_blank">TRON</a> and <a href="https://www.youtube.com/watch?v=mVxLhy1v-xU" rel="noopener noreferrer" target="_blank">LOFI Hip-Hop</a>.'
     },
 
     {
       date: '2020-03-24T15:18:57.286Z',
-      html: 'Added mp3 preview for the Sciurine Song. You can also <a href="sciurine.mp3" class="text-warning" rel="noopener noreferrer" target="_blank">download</a> it (Public Domain License).'
+      html: 'Added mp3 preview for the Sciurine Song. You can also <a href="sciurine.mp3" rel="noopener noreferrer" target="_blank">download</a> it (Public Domain License).'
     },
 
 

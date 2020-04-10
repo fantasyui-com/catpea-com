@@ -518,7 +518,7 @@ main();
 
 </style>
 
-<div class="card text-white bg-dark shadow">
+<div class="card bg-night text-night shadow">
 
   <div class="card-header">
     New Single Release!
@@ -561,7 +561,7 @@ main();
 
     <div class="row">
       <div class="col">
-        <div class="small text-info pt-3" style="display: none;" class:d-block='{playing}'>
+        <div class="small pt-3" style="display: none;" class:d-block='{playing}'>
           Audio generation may not work on all mobile devices due to high CPU speed requirements.
           Please use a desktop computer for high definition music composition in the browser.
         </div>

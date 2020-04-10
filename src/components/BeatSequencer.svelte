@@ -328,7 +328,7 @@ async function main(){
 
 </script>
 
-<div class="card text-white bg-dark shadow">
+<div class="card bg-night text-night shadow">
 
   <div class="card-header">
     Shebang Slash Beat Sequencer
@@ -359,7 +359,7 @@ async function main(){
           {#each tips as item, index}
             <div class="mb-2 px-1">
               <span style="display: inline-block; min-width: 1.2rem;"><Icon name={item.icon} color="light"/></span>
-              <span class="small text-info">{item.text}</span>
+              <span class="small">{item.text}</span>
             </div>
           {/each}
         </Drawer>
@@ -371,8 +371,8 @@ async function main(){
         <Drawer title="Presets">
           {#each presets as item, index}
             <div  class="cursor-pointer mb-2 bg-hover-dark px-1" on:click={()=>loadPresetByIndex(index)}>
-              <span class="">{item.name}</span>
-              <span class="small text-muted">{item.bpm}BPM {item.parts}/{item.beats}</span>
+              <span>{item.name}</span>
+              <span class="small">{item.bpm}BPM {item.parts}/{item.beats}</span>
             </div>
          {/each}
         </Drawer>

@@ -262,11 +262,11 @@
 
 </script>
 
-<!-- <div class="bg-info text-dark">{program.selections.part}</div> -->
+<!-- <div class="bg-info">{program.selections.part}</div> -->
 <div class="container-fluid">
 
     <div class="row">
-    <div class="col text-info">
+    <div class="col">
       part:={program.selections.part},
       track:={program.selections.track},
       slot:={program.selections.slot},
@@ -276,7 +276,7 @@
     <div class="row">
       <div class="col-12 pb-2">
         <div style="min-height: 2rem;">
-        <span class="d-inline-block text-info small">
+        <span class="d-inline-block small">
           {#if program.help.messages[program.help.message]} {program.help.messages[program.help.message]} {/if}
         </span>
       </div>
@@ -315,14 +315,14 @@
     <div class="row">
       <div class="col">
         <code>
-          <pre class="text-info">
+          <pre>
             {JSON.stringify(program,null,'  ')}
           </pre>
         </code>
       </div>
       <div class="col">
         <code>
-          <pre class="text-warning">
+          <pre>
             {JSON.stringify(song,null,'  ')}
           </pre>
         </code>

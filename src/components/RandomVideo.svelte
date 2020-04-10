@@ -201,8 +201,8 @@ function prev(){
 
   {#if database.length === 0}
     <div class="card-body text-center">
-    <div class="text-warning p-5">Loading Database...</div>
-      <div class="spinner-border text-danger" role="status">
+    <div class="p-5">Loading Database...</div>
+      <div class="spinner-border" role="status">
         <span class="sr-only">Loading Database...</span>
       </div>
     </div>

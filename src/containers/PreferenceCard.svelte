@@ -19,7 +19,7 @@ let view = 1; // controlled via UI icons
 {#if view == 0}
 
   <!-- TODO: Add this? style="min-height: 20rem;" -->
-  <div class="card text-white bg-dark shadow">
+  <div class="card bg-night text-night shadow">
     <div class="card-header lead">
       Preferences
       <!-- <button class="btn btn-text btn-sm border border-secondary float-right" on:click="{e => view = 1}">{@html octicons.checklist.toSVG({ "class": "fill-white" })}</button> -->
@@ -35,7 +35,7 @@ let view = 1; // controlled via UI icons
 
     </div>
 
-    <div class="card-footer text-muted small">
+    <div class="card-footer small">
       <slot name="preferences-footer">
       </slot>
     </div>
@@ -46,7 +46,7 @@ let view = 1; // controlled via UI icons
 
 {:else if view == 1}
 
-  <div class="card text-white bg-dark shadow">
+  <div class="card bg-night text-night shadow">
 
     <div class="card-header lead bg-gradient-gold shadow">
       {title}
