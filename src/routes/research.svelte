@@ -44,15 +44,11 @@
 </div>
 
 <div class="container" class:night>
-
-{#each report.research as item, i}
-  <div class="row">
-
-    <div class="col-xs-12 offset-md-2 col-md-8 offset-lg-3 col-lg-6">
-      <Post title={item.name} {icon} date={item.ago} html={item.html}/>
+  {#each report.research as item, i}
+    <div class="row">
+      <div class="col-xs-12 offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+        <Post title={item.name} {icon} date={item.ago} html={item.html}/>
+      </div>
     </div>
-
-  </div>
-{/each}
-
+  {/each}
 </div>

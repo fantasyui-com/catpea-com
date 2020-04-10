@@ -102,6 +102,7 @@
             <div class="col">
 
               <span class="shake">{@html octicons[icon].toSVG({class:"fill-info"})}</span>
+              {#if item.name}<span class="py-2" style="color: aliceblue;"><strong>{item.name}</strong></span>{/if}
               <span class="badge badge-secondary px-2">Posted {item.ago}</span>
 
               <div class="pl-3 py-2" style="color: skyblue;">{@html item.html}</div>
