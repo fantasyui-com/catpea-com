@@ -8,8 +8,8 @@
   let allowance = 0;
   let night = false;
   let unit = d.getHours();
-  let min = 7
-  let max = 21;
+  let min = 6
+  let max = 20;
 
   setInterval(()=>{
 
@@ -35,6 +35,13 @@
 </style>
 <main class="bg-photo" class:night style="overflow-y: hidden;">
   <Nav {segment} bind:allowance bind:night bulb/>
+  <!-- <div>min={min}</div>
+  <div>max={max}</div>
+  <div>unit={unit}</div>
+  <div>(unit &gt; min)={(unit > min)}</div>
+  <div>(unit &lt; max)={(unit < max)}</div>
+  <div>day={( (unit > min) && (unit < max) )}</div>
+  <div>night={!( (unit > min) && (unit < max) )}</div> -->
   <slot></slot>
 </main>
 
