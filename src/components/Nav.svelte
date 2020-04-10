@@ -11,7 +11,7 @@
 
   let minute = 1000*60 ;
 
-  let eyestrain = 15 * minute;
+  let eyestrain = 12 * minute;
 
   let collapsed = false;
 
