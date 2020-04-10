@@ -114,7 +114,7 @@ function makeStyle(){
 
 
 
-<div class="container gr-info-45 rounded p-2 mb-4">
+<div class="container bg-info gr-45 rounded p-2 mb-4">
   <div class="row">
       <div class="col">
         <div class="p-2">Adjust Color Palette</div>
@@ -122,12 +122,12 @@ function makeStyle(){
   </div>
 </div>
 
-<div class="container rounded gr-info-45 mb-4">
+<div class="container rounded bg-info gr-45 mb-4">
   <div class="row justify-content-center">
     {#each Object.keys(colors).filter(name=>!name.startsWith('gray-')).map(name=>({name, color:colors[name]})) as item, i}
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2">
 
-        <div class="p-2 pb-4 gr-light-135 rounded shadow">
+        <div class="p-2 pb-4 bg-light gr-135 rounded shadow">
           <div class="text-dark">{capitalize(item.name)}</div>
           <div class="d-inline-block rounded shadow border border-dark" style="background: {item.color}; height: 10rem; width: 10rem;"></div>
           <div class=""> <Icon name="pencil" color="dark" size="16"/>  <input type="color" bind:value={colors[item.name]}> </div>
@@ -138,7 +138,7 @@ function makeStyle(){
   </div>
 </div>
 
-<div class="container gr-info-45 rounded p-2 mb-4">
+<div class="container bg-info gr-45 rounded p-2 mb-4">
   <div class="row">
       <div class="col">
         <div class="p-2">Select Blend Color</div>
@@ -148,8 +148,8 @@ function makeStyle(){
 
 <div class="container   mb-4">
   <div class="row justify-content-center">
-      <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2 gr-info-45 rounded">
-        <div class="p-2 pb-4 gr-light-135 rounded shadow">
+      <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2 bg-info gr-45 rounded">
+        <div class="p-2 pb-4 bg-light gr-135 rounded shadow">
           <div class="text-dark">Blend</div>
           <div class="d-inline-block rounded shadow border border-dark" style="background: {blend}; height: 10rem; width: 10rem;"></div>
           <div class=""> <Icon name="pencil" color="dark" size="16"/>  <input type="color" bind:value={blend}> </div>
@@ -160,7 +160,7 @@ function makeStyle(){
   </div>
 </div>
 
-<div class="container gr-info-45 rounded p-2 mb-4">
+<div class="container bg-info gr-45 rounded p-2 mb-4">
   <div class="row">
       <div class="col">
         <div class="p-2">Fine-tune Blending</div>
@@ -168,12 +168,12 @@ function makeStyle(){
   </div>
 </div>
 
-<div class="container rounded gr-info-45 mb-4">
+<div class="container rounded bg-info gr-45 mb-4">
   <div class="row justify-content-center">
     {#each Object.keys(colors).filter(name=>!name.startsWith('gray-')).map(name=>({name, color:colors[name]})) as item, i}
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2">
 
-        <div class="p-2 pb-4 gr-light-135 rounded shadow">
+        <div class="p-2 pb-4 bg-light gr-135 rounded shadow">
           <div class="text-dark">Blended {capitalize(item.name)}</div>
           <div class="d-inline-block rounded shadow border border-dark" style="background: {mix(blend,item.color,ratio*ratios[item.name])}; height: 10rem; width: 10rem;"></div>
           <input type="range" class="custom-range" min="0" max="1" step="0.01" bind:value={ratios[item.name]}>
@@ -186,7 +186,7 @@ function makeStyle(){
 
 
 
-<div class="container gr-info-45 rounded p-2 mb-4">
+<div class="container bg-info gr-45 rounded p-2 mb-4">
   <div class="row">
       <div class="col">
         <div class="p-2">Assign Contextual Colors</div>
@@ -194,12 +194,12 @@ function makeStyle(){
   </div>
 </div>
 
-<div class="container rounded gr-info-45 mb-4">
+<div class="container rounded bg-info gr-45 mb-4">
   <div class="row justify-content-center">
     {#each Object.keys(theme).map(name=>({name, id:theme[name], color:colors[theme[name]]})) as item, i}
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2">
 
-      <div class="p-2 pb-4 gr-light-135 rounded shadow">
+      <div class="p-2 pb-4 bg-light gr-135 rounded shadow">
         <div class="text-dark">{capitalize(item.name)} ({item.id})</div>
         <div class="d-inline-block rounded shadow border border-dark" style="background: {mix(blend,item.color,ratio*ratios[item.id])}; height: 10rem; width: 10rem;"></div>
         <input type="range" class="custom-range" min="0" max="1" step="0.01" bind:value={ratios[item.id]}>
@@ -218,7 +218,7 @@ function makeStyle(){
   </div>
 </div>
 
-<div class="container gr-info-45 rounded p-2 mb-4">
+<div class="container bg-info gr-45 rounded p-2 mb-4">
   <div class="row">
       <div class="col">
         <div class="p-2">Copy Code</div>
