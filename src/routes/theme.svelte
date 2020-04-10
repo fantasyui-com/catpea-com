@@ -39,10 +39,14 @@ for(let color of themeColors){
 
 <div class="container">
 
-  <div class="row mb-5">
-    <div class="col">
-      <h1 class="text-uppercase">Custom Theme Development</h1>
-      <h2>Bootstrap Based Theme for Applications</h2>
+
+
+  <div class="container text-primary bg-secondary gr-135 bg-night text-night rounded p-2 mb-4">
+    <div class="row">
+        <div class="col">
+        <h1 class="text-uppercase">Custom Theme Development</h1>
+        <h2>Bootstrap Based Theme for Applications</h2>
+        </div>
     </div>
   </div>
 
@@ -51,9 +55,12 @@ for(let color of themeColors){
     </div>
   </div>
 
-  <div class="row my-4">
-    <div class="col">
-      <h3>Design Guidelines</h3>
+
+  <div class="container text-primary bg-secondary gr-135 bg-night text-night rounded p-2 mb-4">
+    <div class="row">
+        <div class="col">
+          <h3>Design Guidelines</h3>
+        </div>
     </div>
   </div>
 
@@ -74,9 +81,11 @@ for(let color of themeColors){
   </div>
 
 
-  <div class="row my-4">
-    <div class="col">
-      <h3>Background Colors</h3>
+  <div class="container text-primary bg-secondary gr-135 bg-night text-night rounded p-2 mb-4">
+    <div class="row">
+        <div class="col">
+          <h3>Background Colors</h3>
+        </div>
     </div>
   </div>
 
@@ -102,9 +111,11 @@ for(let color of themeColors){
   </div>
   </div>
 
-  <div class="row my-4">
-    <div class="col">
-      <h3>Text Colors</h3>
+  <div class="container text-primary bg-secondary gr-135 bg-night text-night rounded p-2 mb-4">
+    <div class="row">
+        <div class="col">
+          <h3>Text Colors</h3>
+        </div>
     </div>
   </div>
 
@@ -128,10 +139,11 @@ for(let color of themeColors){
   </div>
   </div>
 
-
-  <div class="row my-4">
-    <div class="col">
-      <h3>Night Mode &beta;</h3>
+  <div class="container text-primary bg-secondary gr-135 bg-night text-night rounded p-2 mb-4">
+    <div class="row">
+        <div class="col">
+          <h3>Night Mode</h3>
+        </div>
     </div>
   </div>
 
@@ -188,9 +200,11 @@ for(let color of themeColors){
   </div>
 
 
-  <div class="row my-4">
-    <div class="col">
-      <h3>Rotational Gradients</h3>
+  <div class="container text-primary bg-secondary gr-135 bg-night text-night rounded p-2 mb-4">
+    <div class="row">
+        <div class="col">
+          <h3>Rotational Gradients</h3>
+        </div>
     </div>
   </div>
 

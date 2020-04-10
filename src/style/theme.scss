@@ -29,9 +29,15 @@ $link-hover-color: darken($link-color, 15%) !default;
 
 $enable-prefers-reduced-motion-media-query: false;
 $body-color: $black;
-$card-bg: $gray-300;
+$card-bg: $gray-400;
 
 @import "../../node_modules/bootstrap/scss/mixins";
+
+// Overload Bootstrap Default Mixins
+@import "mixins/background-variant";
+@import "mixins/text-emphasis";
+
+
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/type";

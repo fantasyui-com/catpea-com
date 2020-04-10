@@ -8,8 +8,8 @@
   let allowance = 0;
   let night = false;
   let unit = d.getHours();
-  let min = 6
-  let max = 20;
+  let min = 7
+  let max = 21;
 
   setInterval(()=>{
 
