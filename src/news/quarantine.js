@@ -60,13 +60,14 @@ const database = [
             Open Your Eyes.
             The Time is Always Now.
 
+            <audio controls preload="none" class="rounded"> <source src="poems/day25.mp3" type="audio/mpeg"></audio>
+
           `.trim().split('\n'),
           link:{
             'fun':'/warrior',
           }
         },
 
-        // <!-- <audio controls preload="none" class="rounded"> <source src="poems/day25.mp3" type="audio/mpeg"></audio> -->
 
 
 
