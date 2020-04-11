@@ -1,31 +1,43 @@
 <script>
+
+  import { onMount, onDestroy } from "svelte";
+
   import Nav from '../components/Nav.svelte';
   import Tail from '../components/Tail.svelte';
 
   export let segment;
 
-  let d = new Date();
-  let allowance = 0;
   let night = false;
-  let unit = d.getHours();
-  let min = 6
-  let max = 20;
 
-  setInterval(()=>{
+  let sandman = {
+    intervalId: null,
+    current: (new Date()).getHours(),
+    morning: 6,
+    evening: 6,
+    manual: true,
+  };
 
-    d = new Date();
-    unit = d.getHours();
-
-    if(allowance<=0){
-      if ( (unit > min) && (unit < max) ){
-        night = false;
-      } else {
-        night = true;
+  onMount(async function() {
+    // This must only run onMount,
+    // because colors should be default during static generation.
+    sandman.intervalId = setInterval(()=>{
+      sandman.current = (new Date()).getHours();
+      if(sandman.manual){
+        // in manual mode the automatic adjustments are disabled
+      }else{
+        // in !manual mode the night variable is constantly adjusted.
+        if ( (sandman.current > sandman.morning) && (sandman.current < sandman.evening) ){
+          night = false;
+        } else {
+          night = true;
+        }
       }
-    }
+    },1000);
+  });
 
-    if(allowance>0) allowance = allowance - 1000;
-  },1000);
+  onDestroy(async function() {
+    clearInterval(sandman.intervalId);
+  });
 
 </script>
 
@@ -34,7 +46,7 @@
  @import "../style/theme.scss";
 </style>
 <main class="bg-photo" class:night style="overflow-y: hidden;">
-  <Nav {segment} bind:allowance bind:night bulb/>
+  <Nav {segment} bind:sandman bind:night bulb/>
   <!-- <div>min={min}</div>
   <div>max={max}</div>
   <div>unit={unit}</div>

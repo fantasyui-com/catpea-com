@@ -29,7 +29,7 @@ $link-hover-color: darken($link-color, 15%) !default;
 
 $enable-prefers-reduced-motion-media-query: false;
 $body-color: $black;
-$card-bg: $gray-400;
+$card-bg:  color.change($primary, $lightness: 90%);
 
 @import "../../node_modules/bootstrap/scss/mixins";
 

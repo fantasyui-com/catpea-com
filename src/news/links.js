@@ -28,6 +28,8 @@ const database = {
   'github was having problems':'https://www.githubstatus.com/',
 
   'JavaScript Array':'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array',
+  'HSL':'https://www.youtube.com/watch?v=NAw2_NtGNaA',
+  'HSV':'https://www.youtube.com/watch?v=yNgH3wv4crg',
 
   'node-sass':'https://github.com/sass/node-sass',
   'sass':'https://github.com/sass/sass',

@@ -1,5 +1,7 @@
 <script>
+
   import { slide } from 'svelte/transition';
+
 
   import Icon from '../controls/Icon.svelte';
 
@@ -7,11 +9,11 @@
 
   export let bulb;
   export let night;
-  export let allowance;
+  export let sandman = {};
 
-  let minute = 1000*60 ;
 
-  let eyestrain = 12 * minute;
+
+
 
   let collapsed = false;
 
@@ -104,7 +106,7 @@
 
   {#if bulb}
     <div>
-      <button type="button" class="btn btn-sm" class:btn-primary={!night} class:btn-dark={night} class:active={night} on:click={()=>{night=!night;allowance=eyestrain}}>
+      <button type="button" class="btn btn-sm" class:btn-primary={!night} class:btn-dark={night} class:active={night} on:click={()=>{night=!night;sandman.manual=true}}>
         <Icon name="light-bulb" color={night?'primary':'light'}/>
       </button>
     </div>
@@ -117,7 +119,7 @@
   <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
   {#if bulb}
     <div>
-      <button type="button" class="btn btn-sm" class:btn-primary={!night} class:btn-dark={night} class:active={night} on:click={()=>{night=!night;allowance=eyestrain}}>
+      <button type="button" class="btn btn-sm" class:btn-primary={!night} class:btn-dark={night} class:active={night} on:click={()=>{night=!night;sandman.manual=true}}>
         <Icon name="light-bulb" size=16 color={night?'primary':'light'}/>
       </button>
     </div>
