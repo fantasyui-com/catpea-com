@@ -83,11 +83,11 @@ onMount(async () => {
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-4">
 
     <div class="col pb-3">
-    <News news={report.quarantine} icon="squirrel" title="Quarantine Log" items="3" link="/quarantine" invitation="There is a lot more poetry ({report.quarantine.length} entries in total) at the Quarantine Log, and it is a lot easier to read on mobile."/>
+    <News news={report.quarantine} icon="squirrel" title="Quarantine Log" items="5" link="/quarantine" invitation="There is a lot more poetry ({report.quarantine.length} entries in total) at the Quarantine Log, and it is a lot easier to read on mobile."/>
     </div>
 
     <div class="col pb-3">
-    <News news={report.research} icon="mortar-board" title="Research Blog" items="5" link="/research" invitation="I share some more thoughts at the Research Blog, a long, easy to scroll, dedicated page with {report.research.length} entries."/>
+    <News news={report.research} icon="mortar-board" title="Research Blog" items="1" link="/research" invitation="I share some more thoughts at the Research Blog, a long, easy to scroll, dedicated page with {report.research.length} entries."/>
     </div>
 
     <!-- <div class="col pb-3">
@@ -173,7 +173,7 @@ onMount(async () => {
     <BodybuildingAdvice/>
     </div>
 
-
+<!-- 
     <div class="col pb-3">
     <RandomVideo/>
     </div>
@@ -182,7 +182,7 @@ onMount(async () => {
     <div class="col d-none d-xxl-block">
     <RandomVideo/>
     </div>
-
+ -->
 
 
 

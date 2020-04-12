@@ -64,7 +64,8 @@ $daw-form-table-cell-selector-active-bg: $primary;
 // Sound Activation Cell
 .daw-form-table-cell-selector {
   display: inline-block;
-  min-width: 2rem;
+  min-width: 4rem;
+  width: 100%;
   min-height: 2rem;
   border-radius: $border-radius-sm;
   background: $daw-form-table-cell-selector-bg;

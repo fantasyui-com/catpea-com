@@ -28,7 +28,7 @@
 
 <div class="daw-form">
   <div class="daw-form-table-container table-responsive">
-    <table class="daw-form-table table table-sm table-dark text-light">
+    <table class="daw-form-table table-borderless table table-sm table-dark text-light">
       <thead>
         <tr>
           <th scope="col" class="daw-form-table-header-cell">#</th>

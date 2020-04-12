@@ -97,7 +97,7 @@
 
     {#each navigation as item, i}
       <li class="nav-item" class:active='{ (segment?segment:'home')===item.id }'>
-        <a class="nav-link text-night" rel=prefetch href={item.link} title={item.description}>{item.name}</a>
+        <a class="nav-link text-night" href={item.link} title={item.description}>{item.name}</a>
       </li>
     {/each}
 
@@ -134,7 +134,7 @@
 
       {#each navigation as item, i}
         <li class="nav-item" class:active='{ (segment?segment:'home')===item.id }'>
-          <a class="nav-link text-night" rel=prefetch href={item.link} title={item.description}>{item.name} &middot; <small>{item.description}</small></a>
+          <a class="nav-link text-night" href={item.link} title={item.description}>{item.name} &middot; <small>{item.description}</small></a>
         </li>
       {/each}
 
