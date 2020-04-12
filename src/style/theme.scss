@@ -34,8 +34,8 @@ $card-bg:  color.change($primary, $lightness: 90%);
 @import "../../node_modules/bootstrap/scss/mixins";
 
 // Overload Bootstrap Default Mixins
-@import "mixins/background-variant";
-@import "mixins/text-emphasis";
+// @import "mixins/background-variant";
+// @import "mixins/text-emphasis";
 
 
 @import "../../node_modules/bootstrap/scss/root";

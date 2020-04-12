@@ -1,0 +1,21 @@
+// stylelint-disable declaration-no-important
+
+// Contextual backgrounds
+
+@mixin bg-variant($parent, $color, $ignore-warning: false) {
+  #{$parent} {
+      //$color: color.change($color, $lightness: 40%, $saturation: 40%);
+  }
+  a#{$parent},
+  button#{$parent} {
+    @include hover-focus() {
+    }
+  }
+  @include deprecate("The `bg-variant` mixin", "v4.4.0", "v5", $ignore-warning);
+}
+
+@mixin bg-gradient-variant($parent, $color) {
+  #{$parent} {
+    background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x !important;
+  }
+}
