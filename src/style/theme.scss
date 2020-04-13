@@ -229,3 +229,39 @@ $card-bg:  color.change($primary, $lightness: 90%);
 //     fill: $value;
 //   }
 // }
+
+
+
+
+
+
+
+
+
+
+// .card {
+//   min-height: 3rem;
+//   position: relative;
+//   border-radius: 0.3rem;
+//   box-shadow: 0px 8px 6px 0px #0e1318, inset 0px 1px 1px 1px #d4e4f0, inset 0px -1px 1px 1px #0d4353;
+//   background: #76b8ed;
+//   border: none;
+// }
+
+// .card:before {
+//   background: green;
+//  min-height: 3rem;
+//   content: 'y';
+//   position: absolute;
+//   top: 1rem;
+//   left: 1rem;
+// }
+//
+// .card:after {
+//   background: blue;
+//  min-height: 3rem;
+//   content: 'y';
+//   position: absolute;
+//   top: 1rem;
+//   right: 1rem;
+// }

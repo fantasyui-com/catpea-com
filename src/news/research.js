@@ -6,6 +6,40 @@ const octicons = icons();
 
 const database = [
 
+
+  {
+    date: '2020-04-13T14:56:54.894Z',
+    html: `
+      <figure class="figure"> <img src="research/real.jpg" class="figure-img w-100 rounded" alt="Real Design"> <figcaption class="figure-caption text-right">Real Design</figcaption> </figure>
+      Creating [serserge] was in deed a good idea, the newest thing about it is that ig gives me the ability to query [Bootstrap] sourcode for things like: "Hey! which things in the source-code have a background?"
+      Armed with this information I can mark components and their pieces for cloning (making my own copy) and then editing.
+
+      Now, the next step is DESIGN. The [image up top] (click to zoom) is a really good example of what design is... design makes you look.
+
+      Design is Pleasant.
+
+      Design, like a Remix of a Song, changes as not to bore.
+
+      <figure class="figure"> <img src="research/real1.jpg" class="figure-img w-100 rounded" alt="Real Design"> <figcaption class="figure-caption text-right">Real Design</figcaption> </figure>
+
+      I am going to make a new tool, here for catpea where I study certain approaches to creating artistic accents.
+
+      I have previously experimented with this by having created [skins], [neumorphism], [fantasy-gui], [synthwave] and [color-schemes]. For this first one I'll keep things even simpler.
+
+    `.trim().split('\n').map(i=>i.trim()),
+    link:{
+      'serserge':'https://github.com/fantasyui-com/serserge',
+      'image up top':'https://catpea.com/research/real.jpg',
+
+      'skins':'https://github.com/fantasyui-com/skins',
+      'neumorphism':'https://fantasyui-com.github.io/neumorphism/',
+      'fantasy-gui':'https://fantasyui-com.github.io/fantasy-gui/',
+      'synthwave':'https://fantasyui-com.github.io/synthwave/',
+      'color-schemes':'https://github.com/fantasyui-com/color-schemes',
+    }
+  },
+
+
     {
       date: '2020-04-12T18:03:06.437Z',
       html: `
