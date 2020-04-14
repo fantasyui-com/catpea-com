@@ -92,6 +92,8 @@ export default {
       }),
 
       resolve({
+        // preferBuiltins: true,
+        // mainFields: ['browser'],
         browser: true,
         dedupe
       }),

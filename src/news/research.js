@@ -8,6 +8,38 @@ const database = [
 
 
   {
+    date: '2020-04-14T19:16:55.040Z',
+    html: `
+      I am still working on [Designer] I found some graphic artifacts with yesterday's approach, now I am creating the 3D raised effect with Drop Shadows, rather than inner shadows.
+
+      This means that I can color the inside of the box with a bit more creativity.
+
+      [Designer] is still in early stages, I have to add profile support, probably restructure the flow control as well. But it will forever solve the problem of 3D raised boxes in themes.
+
+      <figure class="figure"> <img src="research/box1.png" class="figure-img w-100 rounded" alt="Three Shadows to Simulate Surface"> <figcaption class="figure-caption">Three Shadows to Simulate Surface</figcaption> </figure>
+
+      <figure class="figure"> <img src="research/box2.png" class="figure-img w-100 rounded" alt="Close Up"> <figcaption class="figure-caption">Close Up</figcaption> </figure>
+
+      And here is what is actually going on. This show the places where colors are placed to give a 3D effect.
+
+      <figure class="figure"> <img src="research/box3.png" class="figure-img w-100 rounded" alt="Color Revelation"> <figcaption class="figure-caption">Color Revelation</figcaption> </figure>
+      <figure class="figure"> <img src="research/box4.png" class="figure-img w-100 rounded" alt="Color Revelation"> <figcaption class="figure-caption">Color Revelation</figcaption> </figure>
+
+      Orange is where the highlight color lives.
+
+      Red, Green, Blue, are combined together to create smooth surface that created the 3D effect.
+
+      Yellow is the subtle Drop Shadow that is cast on the page background.
+
+
+
+    `.trim().split('\n').map(i=>i.trim()),
+    link:{
+    }
+  },
+
+
+  {
     date: '2020-04-14T01:45:49.801Z',
     html: `
       <figure class="figure"> <img src="research/designer.png" class="figure-img w-100 rounded" alt="Designer GUI Preview"> <figcaption class="figure-caption">Designer GUI Preview</figcaption> </figure>
