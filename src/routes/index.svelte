@@ -52,17 +52,13 @@ const daw = {
 
 
 // (new Date()).toISOString()
-
-
-
-
-
-
+let loading = true;
 onMount(async () => {
-
+loading = false;
 
 
 });
+
 
 </script>
 
@@ -76,6 +72,21 @@ onMount(async () => {
 
 
 
+
+<div class="container-fluid d-none" class:d-block={loading}>
+    <div class="row">
+      <div class="col">
+      <div class="clearfix">
+        <div class="spinner-border text-light" role="status" style="position: fixed; top:.8rem; left:1rem;">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-light" role="status" style="position: fixed; top:.8rem; left:1rem;">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      </div>
+    </div>
+</div>
 
 
 
@@ -173,7 +184,7 @@ onMount(async () => {
     <BodybuildingAdvice/>
     </div>
 
-<!-- 
+<!--
     <div class="col pb-3">
     <RandomVideo/>
     </div>

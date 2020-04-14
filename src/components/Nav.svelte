@@ -73,6 +73,13 @@
       name:'Theme',
       description:'User Interface Theme',
     },
+    
+    {
+      id:'designer',
+      link:'/designer',
+      name:'Designer',
+      description:'User Interface Designer',
+    },
 
     {
       id:'daw',

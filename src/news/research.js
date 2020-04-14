@@ -8,10 +8,40 @@ const database = [
 
 
   {
+    date: '2020-04-14T01:45:49.801Z',
+    html: `
+      <figure class="figure"> <img src="research/designer.png" class="figure-img w-100 rounded" alt="Designer GUI Preview"> <figcaption class="figure-caption">Designer GUI Preview</figcaption> </figure>
+
+
+
+      I have managed to create a little tool named [Designer], mostly for Desktops. The tool sets only three things, the top highlight, the bottom shade, a drop shadow that it casts on the background.
+      Our sample image has more shadows, more blending, it is precise with its colors, and my tool can do that as well, and without making the UI much more complex.
+
+      <figure class="figure"> <img src="research/real.jpg" class="figure-img w-100 rounded" alt="Real Design"> <figcaption class="figure-caption">Real Design</figcaption> </figure>
+
+      I am only focusing on the box around the components, so in this case it is the thing that makes the Audio Player look 3D, like it has a height.
+
+      <figure class="figure"> <img src="research/real2.png" class="figure-img w-100 rounded" alt="Real Design"> <figcaption class="figure-caption">Real Design</figcaption> </figure>
+
+      From what my eyes can see here, he set the top highlight to be 1 pixel, bottom shade about 6, and he is using a subtle 4 pixel drop shadow. Alone, these things are almost imperceptible,
+      together, they create a convincing 3D effect.
+
+      I believe this is a design by [Creative Mints] because I notice [something similar here].
+
+      And right now, I don't have any particular design in mind. I am just focusing on creating a tool that gives a convincing 3D effect, in a language called CSS. CSS is not meant for this, but applying a couple of tricks here and there, can actually work, and efficiently, and it would be accepted by the [Bootstrap] developers as OK. I did play with this tool for a few minutes, and it needs another layer of shade, to make the bottom border more pronounced, other than that it is about done.
+
+    `.trim().split('\n').map(i=>i.trim()),
+    link:{
+      'Creative Mints':'https://dribbble.com/creativemints',
+      'something similar here':'https://dribbble.com/shots/864910-Ui-Kit',
+    }
+  },
+
+  {
     date: '2020-04-13T14:56:54.894Z',
     html: `
-      <figure class="figure"> <img src="research/real.jpg" class="figure-img w-100 rounded" alt="Real Design"> <figcaption class="figure-caption text-right">Real Design</figcaption> </figure>
-      Creating [serserge] was in deed a good idea, the newest thing about it is that ig gives me the ability to query [Bootstrap] sourcode for things like: "Hey! which things in the source-code have a background?"
+      <figure class="figure"> <img src="research/real.jpg" class="figure-img w-100 rounded" alt="Real Design"> <figcaption class="figure-caption">Real Design</figcaption> </figure>
+      Creating [serserge] was in deed a good idea, the newest thing about it, is that it gives me the ability to query [Bootstrap] source-code for things like: "Hey! which things in the source-code have a background?"
       Armed with this information I can mark components and their pieces for cloning (making my own copy) and then editing.
 
       Now, the next step is DESIGN. The [image up top] (click to zoom) is a really good example of what design is... design makes you look.
@@ -20,7 +50,7 @@ const database = [
 
       Design, like a Remix of a Song, changes as not to bore.
 
-      <figure class="figure"> <img src="research/real1.jpg" class="figure-img w-100 rounded" alt="Real Design"> <figcaption class="figure-caption text-right">Real Design</figcaption> </figure>
+      <figure class="figure"> <img src="research/real1.jpg" class="figure-img w-100 rounded" alt="Real Design"> <figcaption class="figure-caption">Real Design</figcaption> </figure>
 
       I am going to make a new tool, here for catpea where I study certain approaches to creating artistic accents.
 
@@ -43,11 +73,11 @@ const database = [
     {
       date: '2020-04-12T18:03:06.437Z',
       html: `
-      <figure class="figure"> <img src="research/mm.png" class="figure-img w-100 rounded" alt="Sunday Mascot"> <figcaption class="figure-caption text-right">Sunday Mascot</figcaption> </figure>
+      <figure class="figure"> <img src="research/mm.png" class="figure-img w-100 rounded" alt="Sunday Mascot"> <figcaption class="figure-caption">Sunday Mascot</figcaption> </figure>
 
         I continue adapting my strategy for approaching automated [Bootstrap] processing. I created a program that creates a little overview of thier code for me, my program is able to understand all of their code now.
 
-        <figure class="figure"> <img src="research/overview.png" class="figure-img w-100 rounded" alt="Bootstrap Code Overview"> <figcaption class="figure-caption text-right">Bootstrap Code Overview</figcaption> </figure>
+        <figure class="figure"> <img src="research/overview.png" class="figure-img w-100 rounded" alt="Bootstrap Code Overview"> <figcaption class="figure-caption">Bootstrap Code Overview</figcaption> </figure>
 
         Overall, they come in with just about 5700 statements, talking about color, and text padding, and and little quirks and tricks. Looking over their work, I realized, If I touch any of this code they will hate me, with a passion.
 
@@ -75,19 +105,19 @@ const database = [
         Vary some fonts, and padding, and margins. I am still stuck with, what is basically... a [basic theme].
 
 
-        <figure class="figure"> <img src="research/basic.png" class="figure-img w-100 rounded" alt="Basic Theme"> <figcaption class="figure-caption text-right">Basic Theme</figcaption> </figure>
+        <figure class="figure"> <img src="research/basic.png" class="figure-img w-100 rounded" alt="Basic Theme"> <figcaption class="figure-caption">Basic Theme</figcaption> </figure>
 
 
         I still have to come up with a Robotic Artist, that actually does [real design].
 
 
-        <figure class="figure"> <img src="research/real.jpg" class="figure-img w-100 rounded" alt="Real Design"> <figcaption class="figure-caption text-right">Real Design</figcaption> </figure>
+        <figure class="figure"> <img src="research/real.jpg" class="figure-img w-100 rounded" alt="Real Design"> <figcaption class="figure-caption">Real Design</figcaption> </figure>
 
 
         But... I think I know how to do that. You know how Megaman can [inherit weapons from their enemies by touch].
 
 
-        <figure class="figure"> <img src="research/megaman.jpg" class="figure-img w-100 rounded" alt="Inherit Design"> <figcaption class="figure-caption text-right">Design Inheritance</figcaption> </figure>
+        <figure class="figure"> <img src="research/megaman.jpg" class="figure-img w-100 rounded" alt="Inherit Design"> <figcaption class="figure-caption">Design Inheritance</figcaption> </figure>
 
 
         I think I can make some basic designs like beautifully styled boxes, and then AIM THEM AT SuperNavbar and SuperCard, and fire.
@@ -110,7 +140,7 @@ const database = [
       html: [
         `I went for the gold, I've been experimenting with low level SCSS language processing for a goodie long while now, and I just finished an early test of a program that removes color information from [Bootstrap].`,
         ``,
-        `<figure class="figure"> <img src="research/nocolor.jpg" class="figure-img w-100 rounded" alt="Wee No Color"> <figcaption class="figure-caption text-right">Bootstrap With Color Information Stripped Off</figcaption> </figure>`,
+        `<figure class="figure"> <img src="research/nocolor.jpg" class="figure-img w-100 rounded" alt="Wee No Color"> <figcaption class="figure-caption">Bootstrap With Color Information Stripped Off</figcaption> </figure>`,
         ``,
         `Buttons are white as that is their uncolored-color, I have access to, probably 100% of code, so if I missed something I can track it down.`,
         ``,
@@ -135,7 +165,7 @@ const database = [
     //     ``,
     //     `I will be sticking to [HSL] as the fundamental tool for solving all color problems.`,
     //     ``,
-    //     `<figure class="figure"> <img src="research/hsl.png" class="figure-img w-100 rounded" alt="HSL Color Model"> <figcaption class="figure-caption text-right">HSL Model</figcaption> </figure>`,
+    //     `<figure class="figure"> <img src="research/hsl.png" class="figure-img w-100 rounded" alt="HSL Color Model"> <figcaption class="figure-caption">HSL Model</figcaption> </figure>`,
     //   ],
     //   link:{
     //   }
@@ -171,15 +201,15 @@ const database = [
       date: '2020-04-10T22:17:27.567Z',
       html: [
         `Huge problems with mixing colors. It is not really possible to use yellow on white. Now, I kind of have the "Heads up yellow is being used on white" information and and I can attempt to program a solution, but, perhaps, I am thinking about it wrong.`,
-        `<figure class="figure"> <img src="research/color-mixing.png" class="figure-img w-100 rounded" alt="Color Mixing"> <figcaption class="figure-caption text-right">Huge Problems with Mixing Colors</figcaption> </figure>`,
+        `<figure class="figure"> <img src="research/color-mixing.png" class="figure-img w-100 rounded" alt="Color Mixing"> <figcaption class="figure-caption">Huge Problems with Mixing Colors</figcaption> </figure>`,
         ``,
         `I reset almost all text-colors on CATPEA to black. Everything looks OK. So I am at a, really, good point.`,
         ``,
         `I also ran some experiments that do work, and show promising results.`,
-        `<figure class="figure"> <img src="research/color-mixing-trial-1.png" class="figure-img w-100 rounded" alt="Color Mixing"> <figcaption class="figure-caption text-right">Good Results via The HSL/HSV Model</figcaption> </figure>`,
+        `<figure class="figure"> <img src="research/color-mixing-trial-1.png" class="figure-img w-100 rounded" alt="Color Mixing"> <figcaption class="figure-caption">Good Results via The HSL/HSV Model</figcaption> </figure>`,
         ``,
         `The [HSL]/[HSV] color models are more than just models. They are tools, that yield themselves to manipulating colors via color theory. In color theory we have notions of colors that are opposite on a circle, and here we have a cylinder, shaped to work with that theory.`,
-        `<figure class="figure"> <img src="research/hsl.png" class="figure-img w-100 rounded" alt="HSL Color Model"> <figcaption class="figure-caption text-right">HSL Model</figcaption> </figure>`,
+        `<figure class="figure"> <img src="research/hsl.png" class="figure-img w-100 rounded" alt="HSL Color Model"> <figcaption class="figure-caption">HSL Model</figcaption> </figure>`,
         ``,
         `It makes sense that [Bootstrap] developers wouldn't want to touch this. They are developing a framework, not really a theme.`,
         ``,
@@ -201,9 +231,9 @@ const database = [
     {
       date: '2020-04-10T17:27:13.602Z',
       html: [
-        `<figure class="figure"> <img src="research/dexter.png" class="figure-img w-100 rounded" alt="Dexter!"> <figcaption class="figure-caption text-right">My laboratory, is Cat Pea... Oh noes...</figcaption> </figure>`,
+        `<figure class="figure"> <img src="research/dexter.png" class="figure-img w-100 rounded" alt="Dexter!"> <figcaption class="figure-caption">My laboratory, is Cat Pea... Oh noes...</figcaption> </figure>`,
          `Added site-wide support for Night/Day mode. I thought it was a bit hokey at first, but it is solid, it is good, a round of tests will make it perfect.`,
-          `<figure class="figure"> <img src="research/pixels.png" class="figure-img w-100 rounded" alt="Chromatic Storytelling"> <figcaption class="figure-caption text-right">Chromatic Storytelling Sample</figcaption> </figure>`,
+          `<figure class="figure"> <img src="research/pixels.png" class="figure-img w-100 rounded" alt="Chromatic Storytelling"> <figcaption class="figure-caption">Chromatic Storytelling Sample</figcaption> </figure>`,
           `The backgrounds are inspired by Interstellar and Life Aquatic with Steve Zissou. Take a look at [Chromatic Storytelling] to see how they extracted scenes from movies to get a new view of the classics.`,
           ``,
           `In the day mode I use pixels from Life Aquatic with Steve Zissou, during the night I use pixels from Interstellar.`,
@@ -230,7 +260,7 @@ const database = [
       html: [
         `Yay, Night Mode seems to have worked out, I even gave it nice and tidy animation. [Octicons] had a [light bulb] for me so it all went smoothly. Give it a try, go to the [Research] page, put on some shades, and click on the ${octicons['light-bulb'].toSVG({"class":"fill-warning"})} icon &uarr;.`,
         ``,
-        `<figure class="figure"> <img src="research/bulb.png" class="figure-img w-100 rounded" alt="Night Mode Toggle"> <figcaption class="figure-caption text-right">Night Mode Toggle</figcaption> </figure>`,
+        `<figure class="figure"> <img src="research/bulb.png" class="figure-img w-100 rounded" alt="Night Mode Toggle"> <figcaption class="figure-caption">Night Mode Toggle</figcaption> </figure>`,
       ],
       link:{
         'light bulb':'https://octicons.github.com/icon/light-bulb/'
@@ -293,8 +323,8 @@ const database = [
       date: '2020-04-08T23:01:17.448Z',
       html: [
         `I wanted to quickly demonstrate what I mean when I say the UI works on both Mobile Devices and Desktop Computers. The first image shows the application in desktop mode, and second on mobile. I cut the mobile up into columns because the image was too long. What happends is that the Desktop version collapses into a single long column on mobile. The application is still usable on mobile. This is not always the case with other applications, people don't always build the layout right.`,
-        `<figure class="figure"> <img src="research/desktop.png" class="figure-img w-100 rounded" alt="Mobile vs. Desktop"> <figcaption class="figure-caption text-right">Application In Desktop Mode</figcaption> </figure>`,
-        `<figure class="figure"> <img src="research/mobile.png" class="figure-img w-100 rounded" alt="Mobile vs. Desktop"> <figcaption class="figure-caption text-right">Application In Mobile Mode (I had to cut it up in multiple columns)</figcaption> </figure>`,
+        `<figure class="figure"> <img src="research/desktop.png" class="figure-img w-100 rounded" alt="Mobile vs. Desktop"> <figcaption class="figure-caption">Application In Desktop Mode</figcaption> </figure>`,
+        `<figure class="figure"> <img src="research/mobile.png" class="figure-img w-100 rounded" alt="Mobile vs. Desktop"> <figcaption class="figure-caption">Application In Mobile Mode (I had to cut it up in multiple columns)</figcaption> </figure>`,
       ]
 
     },
@@ -304,10 +334,10 @@ const database = [
       html: [
       `I finished laying down the groundwork for [Bootstrap]+[Svelte] components. As predicted, there is wisdom in following Bootstrap's Conventions. The code is short, clean and lightweight.`,
       `I only styled the big grid in [CATPEA DAW] this is a lot of work, or at least getting it off the ground initially was a lot of work. Now that I know how to structure things, things will move faster.`,
-      `<figure class="figure"> <img src="research/gui5.png" class="figure-img w-100 rounded" alt="Design Examples"> <figcaption class="figure-caption text-right">Fully Styled Component</figcaption> </figure>`,
+      `<figure class="figure"> <img src="research/gui5.png" class="figure-img w-100 rounded" alt="Design Examples"> <figcaption class="figure-caption">Fully Styled Component</figcaption> </figure>`,
       `Here is the [graphics programming language] and the [actual code of the musical form component] it is very compact, but there are multiple layers of programming conventions here, ew, ew.`,
       `I should add that this grid is where the user structures a part of a song, for example The Intro. Each cell in here represents about 16 notes that can be inserted. But also, once the user establishes those 16 notes, they only need to worry about lighting those buttons up, it is always the same 16 notes per row... they just select where those notes are active. And beneath this grid is a list of instruments, and places where those 16 notes go. If the user places sharp-drums as the first instruments, selects all 16 note-spots, then it will play tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk-tsk BUT ONLY IF THE cell in the thing pictured above is lit. So this grid is an activator of melodies. Which are created in the thing pictured below:`,
-      `<figure class="figure"> <img src="research/gui6.png" class="figure-img w-100 rounded" alt="Design Examples"> <figcaption class="figure-caption text-right">Yet Un-styled Melody Maker Component</figcaption> </figure>`,
+      `<figure class="figure"> <img src="research/gui6.png" class="figure-img w-100 rounded" alt="Design Examples"> <figcaption class="figure-caption">Yet Un-styled Melody Maker Component</figcaption> </figure>`,
 
       ],
       link:{
@@ -353,7 +383,7 @@ const database = [
         `I continued researching the Navbar issues, and I discovered bootstrap can't make it work without programming. There is no way to transition the menu from height:0pixels (closed) to height:auto (open) because the underlying language does not concern it self with the measurement of what auto actually means. There are no reasonable ways around it. They are stuck using a [big program] for it. And by big I mean 433 lines of code.`,
         `Let me tell you how many lines my program has.`,
         `[ZERO] (the three lines are configuration/maintenance not real code)`,
-        `<figure class="figure"> <img src="research/wee.png" class="figure-img w-100 rounded" alt="No Code"> <figcaption class="figure-caption text-right">Woo! No Code</figcaption> </figure>`,
+        `<figure class="figure"> <img src="research/wee.png" class="figure-img w-100 rounded" alt="No Code"> <figcaption class="figure-caption">Woo! No Code</figcaption> </figure>`,
         `The framework I use comes with the collapsing animation built in.`,
         `When I say that [Bootstrap] is behind in programming, they are, they really are. [Svelte] has a superior animation subsystem, and there is nothing to compare here.`,
         `In the morning I felt that [Navbar]-[Svelte] integration was problematic, now having taken a closer look, I find their [big program] is the problem here.`,
@@ -409,8 +439,8 @@ const database = [
         There is also a division of widgets forming some are useful tools (Song Beat Counter) others are little information displays (You Tube Videos, Season Countdown).
         As far as User Interface Design and getting things done goes, it is hard to beat chaos.
 
-      <figure class="figure"> <img src="research/gui2.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">UI Thus Far</figcaption> </figure>
-      <figure class="figure"> <img src="research/gui3.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">UI Thus Far</figcaption> </figure>
+      <figure class="figure"> <img src="research/gui2.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption">UI Thus Far</figcaption> </figure>
+      <figure class="figure"> <img src="research/gui3.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption">UI Thus Far</figcaption> </figure>
 
       `
     },
@@ -471,7 +501,7 @@ const database = [
       <p>I know it is still dark, I kept the color change threshold very low on purpose, to make the overall UI graphics nice. The point is that the text is keeping up with the background, it is keeping juuuuuuust a wee bit above, un-readability.</p>
 
 
-      <figure class="figure"> <img src="research/smart-color.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">Automatic Coloring</figcaption> </figure>
+      <figure class="figure"> <img src="research/smart-color.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption">Automatic Coloring</figcaption> </figure>
 
       <p>As a side-note, programming-wise this is not really impressive, it is like 5 lines of code, so pro-programmers would yawn at this,
       but it is a big deal for me, because I am getting really precise and delicate control over colors in my Dark Theme here, that it is only 5 lines of code, is great for me, I can just type in a bit of code and be done with worrying about color readability for some UI component or button/label combo. I like this. And I like being given the opportunity to ponder if I want something to grow brighter (like a label on a button) or darker, like in the case of a number-label on a table of data (like a row number in Excel). </p>
@@ -500,14 +530,14 @@ const database = [
 
       <p>I will create a RANDOMIZE SYNTHESIZER SETTINGS button, this will make different instruments with a simple click of a button. Sure, it is great to have a little library, but is it needed when maybe a selection of 10 synthesizers with a randomize button is available? That makes for hundreds or thousands of instruments just leap out of thin air.</p>
 
-      <figure class="figure"> <img src="research/sequencer.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">Song Structure and Sequencer</figcaption> </figure>
+      <figure class="figure"> <img src="research/sequencer.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption">Song Structure and Sequencer</figcaption> </figure>
       `,
 
     },
     {
       date: '2020-04-03T14:15:43.386Z',
       html: ` Already bumped into an artifact that deals with integrity problems. Basically when a new part of a song is selected, the stuff that was selected in the old part needs to be cleared. So I created an unselections section in the data file. This is still reasonable, it is not a sign of trouble. But two or three anomalies like that like that could destroy a program like the [CATPEA DAW]. But so far so good looks like it will all work.
-      <figure class="figure"> <img src="research/unselections.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">Selections Trigger Unselections</figcaption> </figure>
+      <figure class="figure"> <img src="research/unselections.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption">Selections Trigger Unselections</figcaption> </figure>
       `,
 
     },
@@ -574,7 +604,7 @@ const database = [
     {
       date: '2020-04-01T21:29:48.923Z',
       html: `Added a very early preview of Sound Machine. I aim to create a Workout Song Generator/Builder, but I don't want to just create a Workout Song Generator/Builder and code it. I want to explore areas in and around it, by asking "What are some related programs that take little code to finish?". There is a possibility that Sound Machine can be a useful music Builder/Generator. If you have a Desktop machine take a look at what it would look like as its own page [CATPEA DAW] it is a very raw mockup I have the Sound Machine in two places just to see what it would be like to have that little index on the left. Here is a screenshot:
-      <figure class="figure"> <img src="research/daw.jpg" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">Digital Audio Workstation</figcaption> </figure>
+      <figure class="figure"> <img src="research/daw.jpg" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption">Digital Audio Workstation</figcaption> </figure>
       `,
     },
 
@@ -597,7 +627,7 @@ const database = [
     {
       date: '2020-03-31T23:43:12.938Z',
       html: `Added [Inner City, Good Life] preset to the Beat Sequencer to test support for multiple instruments. I also added Salamander Piano, which is based on [Yamaha C5 Grand Piano], a real Piano, it sounds nice ${octicons.megaphone.toSVG({"class":"fill-light"})}. Go to Shebang Slash Beat Sequencer, check some of those boxes to make the piano go. I set it as the default instrument.
-      <figure class="figure"> <img src="research/piano.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">Piano Fun</figcaption> </figure>
+      <figure class="figure"> <img src="research/piano.png" class="figure-img w-100 rounded" alt="GUI Ideas"> <figcaption class="figure-caption">Piano Fun</figcaption> </figure>
       `,
       link: {
         'Inner City, Good Life': 'https://github.com/fantasyui-com/catpea-com/blob/master/src/components/BeatSequencer.svelte',
@@ -675,7 +705,7 @@ const database = [
 
     {
       date: '2020-03-29T20:10:34.833Z',
-      html: 'Yah, I need new GUI technologies, the browser stuff is old and brittle. I am looking to <a href="https://www.google.com/search?q=zbrush+gui&tbm=isch" rel="noopener noreferrer" target="_blank">ZBrush</a> and <a href="https://www.google.com/search?q=photoshop+gui&tbm=isch" rel="noopener noreferrer" target="_blank">Photoshop</a>. Just at a glance I can see I need more spacing, more dark, and above all collapsible panels. Working on nicer preset selector. <figure class="figure"> <img src="research/gui1.png" class="figure-img img-fluid rounded" alt="GUI Ideas"> <figcaption class="figure-caption text-right">GUI Ideas</figcaption> </figure>'
+      html: 'Yah, I need new GUI technologies, the browser stuff is old and brittle. I am looking to <a href="https://www.google.com/search?q=zbrush+gui&tbm=isch" rel="noopener noreferrer" target="_blank">ZBrush</a> and <a href="https://www.google.com/search?q=photoshop+gui&tbm=isch" rel="noopener noreferrer" target="_blank">Photoshop</a>. Just at a glance I can see I need more spacing, more dark, and above all collapsible panels. Working on nicer preset selector. <figure class="figure"> <img src="research/gui1.png" class="figure-img img-fluid rounded" alt="GUI Ideas"> <figcaption class="figure-caption">GUI Ideas</figcaption> </figure>'
     },
 
     {

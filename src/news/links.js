@@ -14,9 +14,12 @@ const database = {
 
   'Palette':'/palette',
   'CATPEA DAW':'/daw',
+  'Composer':'/daw',
+  'Theme':'/theme',
   'THEME':'/theme',
   'Quarantine':'/quarantine',
   'Research':'/research',
+  'Designer':'/designer',
 
   'Rollup': 'https://rollupjs.org/guide/en/',
   'Octicons require a json file': 'https://github.com/primer/octicons/commit/875bc333ce4dc6a460a116dfd315a56dbb23120f#diff-c93a11fe3afdd3ccfbe1f152a8cf7b20L1',
