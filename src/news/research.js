@@ -26,14 +26,14 @@ const database = [
       From what my eyes can see here, he set the top highlight to be 1 pixel, bottom shade about 6, and he is using a subtle 4 pixel drop shadow. Alone, these things are almost imperceptible,
       together, they create a convincing 3D effect.
 
-      I believe this is a design by [Creative Mints] because I notice [something similar here].
+      I believe this is a design by [Creative Mints] because I noticed [something similar].
 
       And right now, I don't have any particular design in mind. I am just focusing on creating a tool that gives a convincing 3D effect, in a language called CSS. CSS is not meant for this, but applying a couple of tricks here and there, can actually work, and efficiently, and it would be accepted by the [Bootstrap] developers as OK. I did play with this tool for a few minutes, and it needs another layer of shade, to make the bottom border more pronounced, other than that it is about done.
 
     `.trim().split('\n').map(i=>i.trim()),
     link:{
       'Creative Mints':'https://dribbble.com/creativemints',
-      'something similar here':'https://dribbble.com/shots/864910-Ui-Kit',
+      'something similar':'https://dribbble.com/shots/864910-Ui-Kit',
     }
   },
 

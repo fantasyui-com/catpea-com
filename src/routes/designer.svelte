@@ -119,11 +119,9 @@
 
       <div class="col-lg-2 p-3">
 
-      <div class="p-3 mb-2 rounded bg-dark text-warning bg-night text-night text-center">
-        <div class="">Base Color</div>
-        <div class="small">{pickerColor}</div>
-        <input type="color" bind:value={pickerColor} on:input={()=>{updateColor(); console.log('CHANGED@')}}>
-        <div class="small strong">Hue</div><input type="range" class="custom-range" min="0" max="3" step="0.1" bind:value={borderRadius}>
+      <div class="p-3 mb-2 rounded bg-dark text-warning bg-night text-night">
+        <div class="small strong">Color</div><input class="mb-2 mt-1" type="color" bind:value={pickerColor} on:input={()=>updateColor()}>
+        <div class="small strong">Corners</div><input type="range" class="custom-range" min="0" max="3" step="0.1" bind:value={borderRadius}>
       </div>
 
       <div class="p-3 mb-2 rounded bg-dark text-warning bg-night text-night">
@@ -168,7 +166,7 @@
             {@html boxStyleCSS.split('\n').map(i=>`<div class="pl-3">${i}</div>`).join('')}
           <div>{'}'}</div>
         </div>
-        
+
       </div>
 
       <div class="col-lg-2 p-3">
