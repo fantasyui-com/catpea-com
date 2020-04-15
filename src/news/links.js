@@ -39,7 +39,8 @@ const database = {
   'CSS':'https://www.youtube.com/watch?v=gT0Lh1eYk78',
 
   'node-sass':'https://github.com/sass/node-sass',
-  'sass':'https://github.com/sass/sass',
+
+  'Sass':'https://sass-lang.com',
   'SASS Programming Language':'https://sass-lang.com/documentation/at-rules/control/if',
   'wcag-contrast':'https://www.w3.org/TR/WCAG20-TECHS/G18.html',
   'Color Theory':'https://www.youtube.com/watch?v=NN5h6Uwtqzw',

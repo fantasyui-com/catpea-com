@@ -4,123 +4,163 @@
   import { css } from 'emotion'
   import chroma from 'chroma-js';
 
-  const profiles = [
-  {
-    "name": "Blueberry",
-    "primaryColor": "#bcb8ee",
-    "enableBackground": true,
-    "backgroundColor": "#a2e6a6",
-    "borderRadius": 2.1,
-    "highlightOffsetX": 0,
-    "highlightOffsetY": 0,
-    "highlightBlurRadius": 18,
-    "highlightSpreadRadius": 5,
-    "shadowTopOffsetX": 0,
-    "shadowTopOffsetY": 17,
-    "shadowTopBlurRadius": 8,
-    "shadowTopSpreadRadius": -6,
-    "shadowCenterOffsetX": 0,
-    "shadowCenterOffsetY": 30,
-    "shadowCenterBlurRadius": 10,
-    "shadowCenterSpreadRadius": -4,
-    "shadowBottomOffsetX": 0,
-    "shadowBottomOffsetY": 40,
-    "shadowBottomBlurRadius": 0,
-    "shadowBottomSpreadRadius": 0,
-    "dropshadowOffsetX": 0,
-    "dropshadowOffsetY": 46,
-    "dropshadowBlurRadius": 31,
-    "dropshadowSpreadRadius": 12,
-    "highlightSaturation": 0.85,
-    "highlightLuminosity": 0.84,
-    "shadowTopSaturation": 0.53,
-    "shadowTopLuminosity": 0.71,
-    "shadowCenterSaturation": 0.35,
-    "shadowCenterLuminosity": 0.61,
-    "shadowBottomSaturation": 0.35,
-    "shadowBottomLuminosity": 0.46,
-    "dropshadowSaturation": 0.76,
-    "dropshadowLuminosity": 0.37
-  },
+  import kebabCase from 'lodash/kebabCase.js';
 
-  {
-  "name": "Lemon",
-  "primaryColor": "#efe697",
-  "enableBackground": true,
-  "backgroundColor": "#9cc9cb",
-  "borderRadius": 3,
-  "highlightOffsetX": 1,
-  "highlightOffsetY": 5,
-  "highlightBlurRadius": 12,
-  "highlightSpreadRadius": 2,
-  "shadowTopOffsetX": 0,
-  "shadowTopOffsetY": 5,
-  "shadowTopBlurRadius": 9,
-  "shadowTopSpreadRadius": 0,
-  "shadowCenterOffsetX": 0,
-  "shadowCenterOffsetY": 15,
-  "shadowCenterBlurRadius": 6,
-  "shadowCenterSpreadRadius": -4,
-  "shadowBottomOffsetX": 0,
-  "shadowBottomOffsetY": 21,
-  "shadowBottomBlurRadius": 0,
-  "shadowBottomSpreadRadius": 0,
-  "dropshadowOffsetX": -2,
-  "dropshadowOffsetY": 19,
-  "dropshadowBlurRadius": 12,
-  "dropshadowSpreadRadius": 11,
-  "highlightSaturation": 0.25,
-  "highlightLuminosity": 1.07,
-  "shadowTopSaturation": 0.22,
-  "shadowTopLuminosity": 0.87,
-  "shadowCenterSaturation": 0.76,
-  "shadowCenterLuminosity": 0.7,
-  "shadowBottomSaturation": 0.41,
-  "shadowBottomLuminosity": 0.47,
-  "dropshadowSaturation": 0.3,
-  "dropshadowLuminosity": 0.38
-  },
+  const profileInternals = new Set(['name', 'enableBackground', 'backgroundColor']);
+  const profileDatatypes = {
 
-  {
-  "name": "Heavy Metal",
-  "primaryColor": "#92949d",
-  "enableBackground": true,
-  "backgroundColor": "#4f4f4f",
-  "borderRadius": 0.8,
-  "highlightOffsetX": 1,
-  "highlightOffsetY": 1,
-  "highlightBlurRadius": 0,
-  "highlightSpreadRadius": 0,
-  "shadowTopOffsetX": 0,
-  "shadowTopOffsetY": 3,
-  "shadowTopBlurRadius": 5,
-  "shadowTopSpreadRadius": -1,
-  "shadowCenterOffsetX": 0,
-  "shadowCenterOffsetY": 8,
-  "shadowCenterBlurRadius": 5,
-  "shadowCenterSpreadRadius": -4,
-  "shadowBottomOffsetX": 0,
-  "shadowBottomOffsetY": 9,
-  "shadowBottomBlurRadius": 0,
-  "shadowBottomSpreadRadius": 0,
-  "dropshadowOffsetX": -2,
-  "dropshadowOffsetY": 16,
-  "dropshadowBlurRadius": 5,
-  "dropshadowSpreadRadius": -6,
-  "highlightSaturation": 0,
-  "highlightLuminosity": 1.13,
-  "shadowTopSaturation": 0,
-  "shadowTopLuminosity": 0.8,
-  "shadowCenterSaturation": 0,
-  "shadowCenterLuminosity": 0.75,
-  "shadowBottomSaturation": 0,
-  "shadowBottomLuminosity": 0.46,
-  "dropshadowSaturation": 0.13,
-  "dropshadowLuminosity": 0.19
-},
+      "primaryColor": "",
 
+      "borderRadius": 'rem',
+
+      "highlightOffsetX": 'px',
+      "highlightOffsetY": 'px',
+      "highlightBlurRadius": 'px',
+      "highlightSpreadRadius": 'px',
+      "shadowTopOffsetX": 'px',
+      "shadowTopOffsetY": 'px',
+      "shadowTopBlurRadius": 'px',
+      "shadowTopSpreadRadius": 'px',
+      "shadowCenterOffsetX": 'px',
+      "shadowCenterOffsetY": 'px',
+      "shadowCenterBlurRadius": 'px',
+      "shadowCenterSpreadRadius": 'px',
+      "shadowBottomOffsetX": 'px',
+      "shadowBottomOffsetY": 'px',
+      "shadowBottomBlurRadius": 'px',
+      "shadowBottomSpreadRadius": 'px',
+      "dropshadowOffsetX": 'px',
+      "dropshadowOffsetY": 'px',
+      "dropshadowBlurRadius": 'px',
+      "dropshadowSpreadRadius": 'px',
+
+      "highlightSaturation": '%',
+      "highlightLightness": '%',
+      "shadowTopSaturation": '%',
+      "shadowTopLightness": '%',
+      "shadowCenterSaturation": '%',
+      "shadowCenterLightness": '%',
+      "shadowBottomSaturation": '%',
+      "shadowBottomLightness": '%',
+      "dropshadowSaturation": '%',
+      "dropshadowLightness": '%',
+    };
+
+  const profiles =
+  [
 {
-"name": "Gold Bar",
+"name": "Blueberry",
+"primaryColor": "#bcb8ee",
+"enableBackground": true,
+"backgroundColor": "#a2e6a6",
+"borderRadius": 2.1,
+"highlightOffsetX": 0,
+"highlightOffsetY": 0,
+"highlightBlurRadius": 18,
+"highlightSpreadRadius": 5,
+"shadowTopOffsetX": 0,
+"shadowTopOffsetY": 17,
+"shadowTopBlurRadius": 8,
+"shadowTopSpreadRadius": -6,
+"shadowCenterOffsetX": 0,
+"shadowCenterOffsetY": 30,
+"shadowCenterBlurRadius": 10,
+"shadowCenterSpreadRadius": -4,
+"shadowBottomOffsetX": 0,
+"shadowBottomOffsetY": 40,
+"shadowBottomBlurRadius": 0,
+"shadowBottomSpreadRadius": 0,
+"dropshadowOffsetX": 0,
+"dropshadowOffsetY": 46,
+"dropshadowBlurRadius": 31,
+"dropshadowSpreadRadius": 12,
+"highlightSaturation": -0.15,
+"highlightLightness": -0.16,
+"shadowTopSaturation": -0.47,
+"shadowTopLightness": -0.29,
+"shadowCenterSaturation": -0.65,
+"shadowCenterLightness": -0.39,
+"shadowBottomSaturation": -0.65,
+"shadowBottomLightness": -0.54,
+"dropshadowSaturation": -0.24,
+"dropshadowLightness": -0.63
+},
+{
+"name": "Lemon",
+"primaryColor": "#efe697",
+"enableBackground": true,
+"backgroundColor": "#9cc9cb",
+"borderRadius": 3,
+"highlightOffsetX": 1,
+"highlightOffsetY": 5,
+"highlightBlurRadius": 12,
+"highlightSpreadRadius": 2,
+"shadowTopOffsetX": 0,
+"shadowTopOffsetY": 5,
+"shadowTopBlurRadius": 9,
+"shadowTopSpreadRadius": 0,
+"shadowCenterOffsetX": 0,
+"shadowCenterOffsetY": 15,
+"shadowCenterBlurRadius": 6,
+"shadowCenterSpreadRadius": -4,
+"shadowBottomOffsetX": 0,
+"shadowBottomOffsetY": 21,
+"shadowBottomBlurRadius": 0,
+"shadowBottomSpreadRadius": 0,
+"dropshadowOffsetX": -2,
+"dropshadowOffsetY": 19,
+"dropshadowBlurRadius": 12,
+"dropshadowSpreadRadius": 11,
+"highlightSaturation": -0.75,
+"highlightLightness": 0.07,
+"shadowTopSaturation": -0.78,
+"shadowTopLightness": -0.13,
+"shadowCenterSaturation": -0.24,
+"shadowCenterLightness": -0.3,
+"shadowBottomSaturation": -0.59,
+"shadowBottomLightness": -0.53,
+"dropshadowSaturation": -0.7,
+"dropshadowLightness": -0.62
+},
+{
+"name": "Aluminium",
+"primaryColor": "#92949d",
+"enableBackground": true,
+"backgroundColor": "#4f4f4f",
+"borderRadius": 0.4,
+"highlightOffsetX": 1,
+"highlightOffsetY": 1,
+"highlightBlurRadius": 0,
+"highlightSpreadRadius": 0,
+"shadowTopOffsetX": 0,
+"shadowTopOffsetY": 3,
+"shadowTopBlurRadius": 0,
+"shadowTopSpreadRadius": 0,
+"shadowCenterOffsetX": 0,
+"shadowCenterOffsetY": 8,
+"shadowCenterBlurRadius": 5,
+"shadowCenterSpreadRadius": -4,
+"shadowBottomOffsetX": 0,
+"shadowBottomOffsetY": 11,
+"shadowBottomBlurRadius": 3,
+"shadowBottomSpreadRadius": -3,
+"dropshadowOffsetX": 20,
+"dropshadowOffsetY": 32,
+"dropshadowBlurRadius": 31,
+"dropshadowSpreadRadius": -3,
+"highlightSaturation": -1,
+"highlightLightness": 0.13,
+"shadowTopSaturation": -1,
+"shadowTopLightness": -0.33,
+"shadowCenterSaturation": -1,
+"shadowCenterLightness": -0.25,
+"shadowBottomSaturation": -1,
+"shadowBottomLightness": -0.42,
+"dropshadowSaturation": -0.87,
+"dropshadowLightness": -0.79
+},
+{
+"name": "Gold",
 "primaryColor": "#ff9f2c",
 "enableBackground": true,
 "backgroundColor": "#ffca8c",
@@ -145,19 +185,110 @@
 "dropshadowOffsetY": 16,
 "dropshadowBlurRadius": 8,
 "dropshadowSpreadRadius": 0,
-"highlightSaturation": 0.93,
-"highlightLuminosity": 1.27,
-"shadowTopSaturation": 0.79,
-"shadowTopLuminosity": 0.91,
-"shadowCenterSaturation": 0.52,
-"shadowCenterLuminosity": 0.75,
-"shadowBottomSaturation": 0.83,
-"shadowBottomLuminosity": 0.65,
-"dropshadowSaturation": 0.64,
-"dropshadowLuminosity": 0.55
+"highlightSaturation": -0.07,
+"highlightLightness": 0.27,
+"shadowTopSaturation": -0.21,
+"shadowTopLightness": -0.09,
+"shadowCenterSaturation": -0.48,
+"shadowCenterLightness": -0.25,
+"shadowBottomSaturation": -0.17,
+"shadowBottomLightness": -0.35,
+"dropshadowSaturation": -0.36,
+"dropshadowLightness": -0.45
+},
+{
+"name": "Energon",
+"primaryColor": "#fc90ff",
+"enableBackground": true,
+"backgroundColor": "#262858",
+"borderRadius": 0.4,
+"highlightOffsetX": 0,
+"highlightOffsetY": 0,
+"highlightBlurRadius": 18,
+"highlightSpreadRadius": 5,
+"shadowTopOffsetX": 0,
+"shadowTopOffsetY": 8,
+"shadowTopBlurRadius": 8,
+"shadowTopSpreadRadius": -1,
+"shadowCenterOffsetX": 0,
+"shadowCenterOffsetY": 27,
+"shadowCenterBlurRadius": 9,
+"shadowCenterSpreadRadius": -5,
+"shadowBottomOffsetX": 0,
+"shadowBottomOffsetY": 40,
+"shadowBottomBlurRadius": 6,
+"shadowBottomSpreadRadius": -11,
+"dropshadowOffsetX": 0,
+"dropshadowOffsetY": 50,
+"dropshadowBlurRadius": 31,
+"dropshadowSpreadRadius": 12,
+"highlightSaturation": 0,
+"highlightLightness": -0.27,
+"shadowTopSaturation": 0,
+"shadowTopLightness": -0.29,
+"shadowCenterSaturation": 0,
+"shadowCenterLightness": -0.44,
+"shadowBottomSaturation": 0,
+"shadowBottomLightness": -0.55,
+"dropshadowSaturation": -0.24,
+"dropshadowLightness": -0.63
+},
+{
+"name": "Structure",
+"primaryColor": "#ff00c3",
+"enableBackground": true,
+"backgroundColor": "#ffca8c",
+"borderRadius": 0.8,
+"highlightOffsetX": 0,
+"highlightOffsetY": 0,
+"highlightBlurRadius": 0,
+"highlightSpreadRadius": 5,
+"shadowTopOffsetX": 0,
+"shadowTopOffsetY": 5,
+"shadowTopBlurRadius": 0,
+"shadowTopSpreadRadius": 5,
+"shadowCenterOffsetX": 0,
+"shadowCenterOffsetY": 10,
+"shadowCenterBlurRadius": 0,
+"shadowCenterSpreadRadius": 10,
+"shadowBottomOffsetX": 0,
+"shadowBottomOffsetY": 15,
+"shadowBottomBlurRadius": 0,
+"shadowBottomSpreadRadius": 15,
+"dropshadowOffsetX": 0,
+"dropshadowOffsetY": 20,
+"dropshadowBlurRadius": 0,
+"dropshadowSpreadRadius": 20,
+"highlightSaturation": 0,
+"shadowTopSaturation": 0,
+"shadowCenterSaturation": 0,
+"shadowBottomSaturation": 0,
+"dropshadowSaturation": 0,
+"highlightLightness": -0.1,
+"shadowTopLightness": -0.2,
+"shadowCenterLightness": -0.3,
+"shadowBottomLightness": -0.4,
+"dropshadowLightness": -0.5
 }
+]
 
-  ];
+// .map(profile=>{
+//      profile.highlightSaturation = parseFloat(profile.highlightSaturation.toFixed(2));
+//      profile.highlightLightness = parseFloat(profile.highlightLightness.toFixed(2));
+//      profile.shadowTopSaturation = parseFloat(profile.shadowTopSaturation.toFixed(2));
+//      profile.shadowTopLightness = parseFloat(profile.shadowTopLightness.toFixed(2));
+//      profile.shadowCenterSaturation = parseFloat(profile.shadowCenterSaturation.toFixed(2));
+//      profile.shadowCenterLightness = parseFloat(profile.shadowCenterLightness.toFixed(2));
+//      profile.shadowBottomSaturation = parseFloat(profile.shadowBottomSaturation.toFixed(2));
+//      profile.shadowBottomLightness = parseFloat(profile.shadowBottomLightness.toFixed(2));
+//      profile.dropshadowSaturation = parseFloat(profile.dropshadowSaturation.toFixed(2));
+//      profile.dropshadowLightness = parseFloat(profile.dropshadowLightness.toFixed(2));
+//   return profile;
+// })
+
+
+
+
 
   let selected = 0;
   let profile = profiles[0];
@@ -173,11 +304,11 @@
     ],
 
     colorPane:[
-      {label:'Highlight', reference:'highlight', controls:[ {label:'saturation', key:'Saturation', min:0, max:1, step:.01},{label:'luminosity', key:'Luminosity', min:0, max:2, step:.01}]},
-      {label:'Shadow Top', reference:'shadowTop', controls:[ {label:'saturation', key:'Saturation', min:0, max:1, step:.01},{label:'luminosity', key:'Luminosity', min:0, max:1, step:.01}]},
-      {label:'Shadow Center', reference:'shadowCenter', controls:[ {label:'saturation', key:'Saturation', min:0, max:1, step:.01},{label:'luminosity', key:'Luminosity', min:0, max:1, step:.01}]},
-      {label:'Shadow Bottom', reference:'shadowBottom', controls:[ {label:'saturation', key:'Saturation', min:0, max:1, step:.01},{label:'luminosity', key:'Luminosity', min:0, max:1, step:.01}]},
-      {label:'Drop Shadow', reference:'dropshadow', controls:[ {label:'saturation', key:'Saturation', min:0, max:1, step:.01},{label:'luminosity', key:'Luminosity', min:0, max:1, step:.01}]},
+      {label:'Highlight', reference:'highlight', controls:[ {label:'saturation', key:'Saturation', min:-1, max:1, step:.01},{label:'lightness', key:'Lightness', min:-1, max:1, step:.01}]},
+      {label:'Shadow Top', reference:'shadowTop', controls:[ {label:'saturation', key:'Saturation', min:-1, max:1, step:.01},{label:'lightness', key:'Lightness', min:-1, max:1, step:.01}]},
+      {label:'Shadow Center', reference:'shadowCenter', controls:[ {label:'saturation', key:'Saturation', min:-1, max:1, step:.01},{label:'lightness', key:'Lightness', min:-1, max:1, step:.01}]},
+      {label:'Shadow Bottom', reference:'shadowBottom', controls:[ {label:'saturation', key:'Saturation', min:-1, max:1, step:.01},{label:'lightness', key:'Lightness', min:-1, max:1, step:.01}]},
+      {label:'Drop Shadow', reference:'dropshadow', controls:[ {label:'saturation', key:'Saturation', min:-1, max:1, step:.01},{label:'lightness', key:'Lightness', min:-1, max:1, step:.01}]},
     ],
 
   }
@@ -189,26 +320,62 @@
   $: foregroundColor = chroma(profile.primaryColor).darken(0).saturate(0).hex();
 
 
+  const shadowStack = [
+    {key:'highlight', refs:['Saturation', 'Lightness'],    dims:['OffsetX', 'OffsetY', 'BlurRadius', 'SpreadRadius', 'Color'], inset:true},
+    {key:'shadowTop', refs:['Saturation', 'Lightness'],    dims:['OffsetX', 'OffsetY', 'BlurRadius', 'SpreadRadius', 'Color']},
+    {key:'shadowCenter', refs:['Saturation', 'Lightness'], dims:['OffsetX', 'OffsetY', 'BlurRadius', 'SpreadRadius', 'Color']},
+    {key:'shadowBottom', refs:['Saturation', 'Lightness'], dims:['OffsetX', 'OffsetY', 'BlurRadius', 'SpreadRadius', 'Color']},
+    {key:'dropshadow', refs:['Saturation', 'Lightness'],   dims:['OffsetX', 'OffsetY', 'BlurRadius', 'SpreadRadius', 'Color']},
+
+  ]
 
 
-  // updateColor();
-  //
-  $: highlightColor = chroma(profile.primaryColor).set('hsl.s', '*'+profile.highlightSaturation).set('hsl.l', '*'+profile.highlightLuminosity).hex();
-  $: shadowTopColor = chroma(profile.primaryColor).set('hsl.s', '*'+profile.shadowTopSaturation).set('hsl.l', '*'+profile.shadowTopLuminosity).hex();
-  $: shadowCenterColor = chroma(profile.primaryColor).set('hsl.s', '*'+profile.shadowCenterSaturation).set('hsl.l', '*'+profile.shadowCenterLuminosity).hex();
-  $: shadowBottomColor = chroma(profile.primaryColor).set('hsl.s', '*'+profile.shadowBottomSaturation).set('hsl.l', '*'+profile.shadowBottomLuminosity).hex();
-  $: dropshadowColor = chroma(profile.primaryColor).set('hsl.s', '*'+profile.dropshadowSaturation).set('hsl.l', '*'+profile.dropshadowLuminosity).hex();
-  //
+  let cssColors = {};
+  $: shadowStack.forEach(o=>{
+
+    cssColors[o.key + 'Color'] = chroma(profile.primaryColor).set('hsl.s', '*' + ((profile[o.key+o.refs[0]])+1)  ).set('hsl.l', '*' + ((profile[o.key+o.refs[1]])+1)  ).hex();
+  });
+
+  let sassColors = {};
+  $: shadowStack.forEach(o=>{
+    let name = `${kebabCase(profile.name)}-${'primary-color'}`;
+    let changes = o.refs.map(p=>`$${kebabCase(p)}: $${kebabCase(profile.name)}-${kebabCase(o.key)}-${kebabCase(p)}`).join(', ')
+    sassColors[o.key + 'Color'] = `color.adjust($${name}, ${changes})`
+  });
+
+  let sassBoxShadow = [];
+  $: shadowStack.forEach((o,i)=>{
+     if(i==0) sassBoxShadow.length = 0;
+     sassBoxShadow.push(o.dims.map((p,j)=>`${(o.inset&&j==0)?'inset ':''}$${kebabCase(profile.name)}-${kebabCase(o.key)}-${kebabCase(p)}`).join(' '))
+   });
+
   $: boxStyleCSS = `
       min-height: 3rem;
       border-radius: ${profile.borderRadius}rem;
       background: ${foregroundColor};
       box-shadow:
-      inset ${profile.highlightOffsetX}px ${profile.highlightOffsetY}px ${profile.highlightBlurRadius}px ${profile.highlightSpreadRadius}px ${highlightColor},
-            ${profile.shadowTopOffsetX}px ${profile.shadowTopOffsetY}px ${profile.shadowTopBlurRadius}px ${profile.shadowTopSpreadRadius}px ${shadowTopColor},
-            ${profile.shadowCenterOffsetX}px ${profile.shadowCenterOffsetY}px ${profile.shadowCenterBlurRadius}px ${profile.shadowCenterSpreadRadius}px ${shadowCenterColor},
-            ${profile.shadowBottomOffsetX}px ${profile.shadowBottomOffsetY}px ${profile.shadowBottomBlurRadius}px ${profile.shadowBottomSpreadRadius}px ${shadowBottomColor},
-            ${profile.dropshadowOffsetX}px ${profile.dropshadowOffsetY}px ${profile.dropshadowBlurRadius}px ${profile.dropshadowSpreadRadius}px ${dropshadowColor};
+      inset ${profile.highlightOffsetX}px ${profile.highlightOffsetY}px ${profile.highlightBlurRadius}px ${profile.highlightSpreadRadius}px ${cssColors.highlightColor},
+            ${profile.shadowTopOffsetX}px ${profile.shadowTopOffsetY}px ${profile.shadowTopBlurRadius}px ${profile.shadowTopSpreadRadius}px ${cssColors.shadowTopColor},
+            ${profile.shadowCenterOffsetX}px ${profile.shadowCenterOffsetY}px ${profile.shadowCenterBlurRadius}px ${profile.shadowCenterSpreadRadius}px ${cssColors.shadowCenterColor},
+            ${profile.shadowBottomOffsetX}px ${profile.shadowBottomOffsetY}px ${profile.shadowBottomBlurRadius}px ${profile.shadowBottomSpreadRadius}px ${cssColors.shadowBottomColor},
+            ${profile.dropshadowOffsetX}px ${profile.dropshadowOffsetY}px ${profile.dropshadowBlurRadius}px ${profile.dropshadowSpreadRadius}px ${cssColors.dropshadowColor};
+  `;
+
+  $: boxStyleSASS = `
+  @mixin ${kebabCase(profile.name)}() {
+
+  // Configuration
+  ${Object.keys(profile).filter(o=>!profileInternals.has(o)).map(name=>({name, value:profile[name]})).map(o=>`$${kebabCase(profile.name)}-${kebabCase(o.name)}: ${profileDatatypes[o.name]=='%'? ((o.value*100 )/2).toFixed(1) :o.value}${profileDatatypes[o.name]} !default;`).join('\n')}
+
+  // Color Adjust
+  ${Object.keys(sassColors).map(name=>({name, value:sassColors[name]})).map(o=>`$${kebabCase(profile.name)}-${kebabCase(o.name)}: ${o.value};`).join('\n')}
+
+  // Declarations
+     border-radius: $${kebabCase(profile.name)}-${'border-radius'};
+     box-shadow: ${sassBoxShadow.join(',\n')} !important;
+
+  }
+
   `;
   //
   //
@@ -316,7 +483,7 @@
           <div class="p-3 mb-2 rounded bg-dark text-warning bg-night text-night" style="min-height: 17rem;">
             <div class="text-center">{setup.label}</div>
             {#each setup.controls as control}
-              <div class="small strong">{control.label} {profile[setup.reference+control.key]}</div><input type="range" class="custom-range" min={control.min} max={control.max} step={control.step} bind:value={profile[setup.reference+control.key]}>
+              <div class="small strong">{control.label} {profile[setup.reference+control.key]}{profileDatatypes[setup.reference+control.key]}</div><input type="range" class="custom-range" min={control.min} max={control.max} step={control.step} bind:value={profile[setup.reference+control.key]}>
             {/each}
           </div>
         </div>
@@ -346,11 +513,20 @@
 
 <div class="bg-dark text-primary p-3 rounded bg-night text-night mb-5">
   <div>.box {'{'}</div>
-    {@html boxStyleCSS.split('\n').map(i=>`<div class="pl-3">${i}</div>`).join('')}
+    {@html boxStyleCSS.trim().split('\n').map(o=>o.trim()).map(o=>(o=='')?'<br>':o).map(i=>`<div class="pl-3">${i}</div>`).join('')}
   <div>{'}'}</div>
+</div>
+<div class="bg-dark text-primary p-3 rounded bg-night text-night mb-5">
+
+    {@html boxStyleSASS.trim().split('\n').map(o=>o.trim()).map(o=>(o=='')?'<br>':o).map(i=>`<div class="pl-3">${i}</div>`).join('')}
+
 </div>
 
 
 <div class="bg-dark text-primary p-3 rounded bg-night text-night mb-5">
 {@html JSON.stringify(profile, null,'  ').split('\n').map(i=>`<div class="pl-3">${i}</div>`).join('')}
 </div>
+<!--
+<div class="bg-dark text-primary p-3 rounded bg-night text-night mb-5">
+{@html JSON.stringify(profiles, null,'  ').split('\n').map(i=>`<div class="pl-3">${i}</div>`).join('')}
+</div> -->

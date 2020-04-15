@@ -8,6 +8,73 @@ const database = [
 
 
   {
+    date: '2020-04-15T21:29:22.387Z',
+    html: `
+      <figure class="figure"> <img src="research/energon1.jpg" class="figure-img w-100 rounded" alt="Transformer Robots Eat Energon... or something"> <figcaption class="figure-caption">Transformer Robots Eat Energon... or something</figcaption> </figure>
+      <figure class="figure"> <img src="research/energon.jpg" class="figure-img w-100 rounded" alt="And walk on it... sometimes."> <figcaption class="figure-caption">And walk on it... sometimes.</figcaption> </figure>
+
+      I gave [Designer] a big upgrade, it now not only generates standard CSS, but the much needed [Sass] CSS (known as SCSS).
+
+      This is huge, because I can copy code from [Designer] and paste it into [Bootstrap] and it will just work. After the code is in Bootstrap, it takes one line to use it.
+
+      Here is what the Sass code for one of the presets (Energon) in [Designer] looks like:
+
+      <figure class="figure"> <img src="research/energon2.png" class="figure-img w-100 rounded" alt="Energon: Installation"> <figcaption class="figure-caption">Energon: Installation</figcaption> </figure>
+
+      And here is what it takes to use it in some design:
+
+      <div class="small text-muted">(.card.energon means a card that has been marked as being of type energon, and a card is the boxes I use on the homepage. Card design comes from the Bootstrap team.)</div>
+
+      <figure class="figure"> <img src="research/energon1.png" class="figure-img w-100 rounded" alt="Energon: Usage"> <figcaption class="figure-caption">Energon: Usage</figcaption> </figure>
+
+      And here is a crazy looking, but SUPER SERIOUS test. I am exporting information to multiple programming languages, JavaScript, CSS, and Sass. And in the case of Sass, I need to pass CONFIGURATION VARIABLES so that the customers can tweak them. I can't calculate the colors at all. That means, the Math for CSS and JavaScript has to match the Math for Scss.
+
+      This is Applied Color Theory...
+
+      I used calculations over [HSL] for all three (CSS, JavaScript, and Sass) and it worked. For example Saturation of 0.5 in JavaScript, means the same thing that Saturation of 0.5 in Sass. But they each have a different way of expressing that. In JavaScript I say <span class="badge badge-warning">'*'+(0.5+1)</span>, and in Sass I have to say <span class="badge badge-warning">((0.5*100 )/2).toFixed(1)</span>
+
+      <figure class="figure"> <img src="research/energon.png" class="figure-img w-100 rounded" alt="Energon Cubes: Crazy Design"> <figcaption class="figure-caption">Energon Cubes: Crazy Design</figcaption> </figure>
+
+      And when all is said and done Compiled [Sass] and [Designer] preview, match pixel for pixel, because of my use of [HSL] Color Model. The code for both is written by different programmer for different languages.
+
+      And there is no way a person will get far, without some visual tool like the [Designer].
+
+      Manipulating colors is such a freaking delicate operation, a 5% difference in Saturation and Brightness can either make a design, or make it look off and crappy.
+
+      There is no creating something like the Energon Experiment with a visual preview. Something as silly and useless as Energon required four separate revisions, to adjust blur/spread and colors, and the base color. It is just not possible without a tool.
+
+      A lot of Programmers/Designers use the browser as it has some preview/editing features.
+
+      <figure class="figure"> <img src="research/bp.png" class="figure-img w-100 rounded" alt="Browser Can't help with Sass SCSS for Bootstrap"> <figcaption class="figure-caption">Browser Can't help with Sass SCSS for Bootstrap</figcaption> </figure>
+
+      But how the heckedy heck to declare/extract variables, and generate Sass's SCSS code, that's not possible in the browser - lyke at all.
+
+      <figure class="figure"> <img src="research/calc.png" class="figure-img w-100 rounded" alt="Still doing math in Sass"> <figcaption class="figure-caption">Still doing math in Sass</figcaption> </figure>
+
+      The code in Sass is still going to do some math based on the settings.
+
+      <figure class="figure"> <img src="research/setings.png" class="figure-img w-100 rounded" alt="User's Settings"> <figcaption class="figure-caption">User's Settings</figcaption> </figure>
+
+      And the settings exists so that the user/customer can tweak things, they aren't really interested in building a new design, just making a slight alteration that makes sense in their business context.
+
+      One such example is removing the top-right highlight, or darkening the bottom-most blur/drop shadow to match their webpage-background.
+
+      <figure class="figure"> <img src="research/box4.png" class="figure-img w-100 rounded" alt="View of the different things at play."> <figcaption class="figure-caption">View of the different things at play.</figcaption> </figure>
+
+      Now I need to make some serious presets that will get me closer to a more serious design:
+
+      <figure class="figure"> <img src="research/real.jpg" class="figure-img w-100 rounded" alt="Serious Design"> <figcaption class="figure-caption">Serious Design</figcaption> </figure>
+
+    `.trim().split('\n').map(i=>i.trim()),
+    link:{
+    }
+  },
+
+
+
+
+
+  {
     date: '2020-04-15T14:34:27.831Z',
     html: `
 
@@ -574,13 +641,13 @@ const database = [
       date: '2020-04-04T19:04:39.833Z',
       html: `
 
-      <p>Ewwwwwww! I switched from [node-sass] to [sass], node-sass got old, I guess.</p>
-      I wasn't really paying too much attention to SASS (a UI programming language) because I think CSS should be shaped with JS, as these are native browser <p>technologies. But since [Bootstrap] is forcing me into [sass], I might as well make use of the language, and... I guess its functions as well.</p>
+      <p>Ewwwwwww! I switched from [node-sass] to [Sass], node-sass got old, I guess.</p>
+      I wasn't really paying too much attention to SASS (a UI programming language) because I think CSS should be shaped with JS, as these are native browser <p>technologies. But since [Bootstrap] is forcing me into [Sass], I might as well make use of the language, and... I guess its functions as well.</p>
 
       <p>Since this is a new addition to the system, there is both a learning curve, and bugs.</p>
       <p>So I've been trying to execute color.adjust(#6b717f, $red: 15); these are the big fancy new functions, but I've been getting errors for days.</p>
 
-      <p>Well, now that I switched to [sass] (from node-sass) there were changes, but I still got an error.</p>
+      <p>Well, now that I switched to [Sass] (from node-sass) there were changes, but I still got an error.</p>
       <p>It turns out they have a new module system, and before I make use of the color function I have to execute @use 'sass:color'; on top of the program file.</p>
 
       <p>That's how it is done in all programming languages, but since I upgraded, I had to learn few new things about the new version of the language.</p>

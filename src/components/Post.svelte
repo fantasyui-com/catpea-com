@@ -7,6 +7,7 @@
   export let date = "";
   export let text = "";
   export let html = "";
+  export let decoration = "";
 
 
 </script>
@@ -15,7 +16,7 @@
 
 </style>
 
-<div class="post card shadow bg-night text-night">
+<div class="post card shadow {decoration} bg-night text-night">
   <div class="card-header">
     <Header {icon} {title} {date}/>
   </div>
