@@ -4,7 +4,8 @@
   import { css } from 'emotion'
   import chroma from 'chroma-js';
 
-  import kebabCase from 'lodash/kebabCase.js';
+  import kebabCase from 'dashify';
+
 
   const profileInternals = new Set(['name', 'enableBackground', 'backgroundColor']);
   const profileDatatypes = {
