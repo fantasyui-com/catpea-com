@@ -17,15 +17,22 @@
   export let height = '25rem';
   export let title = '';
   export let items = 10;
+
+  export let today = false;
   let footer = true;
 
   // Application
 
   export let news = [];
 
+  let todayNews = 0;
+
   function recalculateTimestamps(){
-    news = news
-      .map(i=>{ i.ago = moment(i.date).from(moment()); return i; })
+    let now = moment();
+    news = news.map(i=>{i.today = (now.diff(moment(i.date), 'days') < 1); return i; })
+    todayNews = news.filter(i=>i.today).length;
+    news = news.map(i=>{ i.ago = moment(i.date).from(moment()); return i; })
+
   }
 
   // Timers
@@ -88,41 +95,78 @@
     {/if}
   </div>
 
+  <sup slot="subtitle"><span class="badge badge-danger d-none" class:d-inline={todayNews} title="Last 24 Hours">{todayNews}</span></sup>
 
 
 
     <div class="card-body" style="max-height: {height}; overflow-y: auto;">
-      {#each news as item, i}
-        {#if i<items}
-          <div class="card-text small">
 
-          <div class="row mb-3">
-          <div class="col pb-3">
 
-            <div class="col">
 
-              <span class="shake">{@html octicons[icon].toSVG({class:"fill-info"})}</span>
-              {#if item.name}<span class="py-2"><strong>{item.name}</strong></span>{/if}
-              <span class="badge badge-secondary px-2">Posted {item.ago}</span>
+    {#if today && todayNews}
 
-              <div class="pl-3 py-2">{@html item.html}</div>
-            </div>
+    {#each news as item, i}
+      {#if item.today}
+        <div class="card-text small">
 
-            </div>
+        <div class="row mb-3">
+        <div class="col pb-3">
+
+          <div class="col">
+
+            <span class="shake">{@html octicons[icon].toSVG({class:"fill-info"})}</span>
+            {#if item.name}<span class="py-2"><strong>{item.name}</strong></span>{/if}
+            <span class="badge badge-secondary px-2">Posted {item.ago}</span>
+
+            <div class="pl-3 py-2">{@html item.html}</div>
           </div>
 
           </div>
+        </div>
+
+        </div>
+
+      {/if}
+    {/each}
+
+
+    {:else}
+
+    {#each news as item, i}
+      {#if i<items}
+        <div class="card-text small">
+
+        <div class="row mb-3">
+        <div class="col pb-3">
+
+          <div class="col">
+
+            <span class="shake">{@html octicons[icon].toSVG({class:"fill-info"})}</span>
+            {#if item.name}<span class="py-2"><strong>{item.name}</strong></span>{/if}
+            <span class="badge badge-secondary px-2">Posted {item.ago}</span>
+
+            <div class="pl-3 py-2">{@html item.html}</div>
+          </div>
+
+          </div>
+        </div>
+
+        </div>
 
 
 
-        {/if}
-      {/each}
+      {/if}
+    {/each}
 
-      {#if link}
+
+    {/if}
+
+    {#if link}
+      <div class="py-3">
       <p>{invitation}</p>
       <a href="{link}" class="btn btn-primary">Visit &raquo;</a>
-      {/if}
-
+      </div>
+    {/if}
 
     </div>
 

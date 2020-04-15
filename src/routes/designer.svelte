@@ -5,44 +5,49 @@
   import chroma from 'chroma-js';
 
   const profiles = [
-    {
+  {
     "name": "Blueberry",
     "primaryColor": "#bcb8ee",
-    "borderRadius": 1,
-    "highlightOffsetX": 1,
-    "highlightOffsetY": 5,
-    "highlightBlurRadius": 12,
-    "highlightSpreadRadius": 2,
+    "enableBackground": true,
+    "backgroundColor": "#a2e6a6",
+    "borderRadius": 2.1,
+    "highlightOffsetX": 0,
+    "highlightOffsetY": 0,
+    "highlightBlurRadius": 18,
+    "highlightSpreadRadius": 5,
     "shadowTopOffsetX": 0,
-    "shadowTopOffsetY": 12,
-    "shadowTopBlurRadius": 9,
-    "shadowTopSpreadRadius": 0,
+    "shadowTopOffsetY": 17,
+    "shadowTopBlurRadius": 8,
+    "shadowTopSpreadRadius": -6,
     "shadowCenterOffsetX": 0,
     "shadowCenterOffsetY": 30,
-    "shadowCenterBlurRadius": 6,
+    "shadowCenterBlurRadius": 10,
     "shadowCenterSpreadRadius": -4,
     "shadowBottomOffsetX": 0,
     "shadowBottomOffsetY": 40,
     "shadowBottomBlurRadius": 0,
     "shadowBottomSpreadRadius": 0,
-    "dropshadowOffsetX": -2,
-    "dropshadowOffsetY": 50,
-    "dropshadowBlurRadius": 23,
-    "dropshadowSpreadRadius": 6,
-    "highlightSaturation": 0,
-    "highlightLuminosity": 1.07,
-    "shadowTopSaturation": 0,
-    "shadowTopLuminosity": 0.63,
-    "shadowCenterSaturation": 0,
-    "shadowCenterLuminosity": 0.49,
-    "shadowBottomSaturation": 0,
-    "shadowBottomLuminosity": 0.47,
-    "dropshadowSaturation": 0.13,
-    "dropshadowLuminosity": 0.19
+    "dropshadowOffsetX": 0,
+    "dropshadowOffsetY": 46,
+    "dropshadowBlurRadius": 31,
+    "dropshadowSpreadRadius": 12,
+    "highlightSaturation": 0.85,
+    "highlightLuminosity": 0.84,
+    "shadowTopSaturation": 0.53,
+    "shadowTopLuminosity": 0.71,
+    "shadowCenterSaturation": 0.35,
+    "shadowCenterLuminosity": 0.61,
+    "shadowBottomSaturation": 0.35,
+    "shadowBottomLuminosity": 0.46,
+    "dropshadowSaturation": 0.76,
+    "dropshadowLuminosity": 0.37
   },
+
   {
   "name": "Lemon",
   "primaryColor": "#efe697",
+  "enableBackground": true,
+  "backgroundColor": "#9cc9cb",
   "borderRadius": 3,
   "highlightOffsetX": 1,
   "highlightOffsetY": 5,
@@ -62,8 +67,8 @@
   "shadowBottomSpreadRadius": 0,
   "dropshadowOffsetX": -2,
   "dropshadowOffsetY": 19,
-  "dropshadowBlurRadius": 23,
-  "dropshadowSpreadRadius": 6,
+  "dropshadowBlurRadius": 12,
+  "dropshadowSpreadRadius": 11,
   "highlightSaturation": 0.25,
   "highlightLuminosity": 1.07,
   "shadowTopSaturation": 0.22,
@@ -72,13 +77,15 @@
   "shadowCenterLuminosity": 0.7,
   "shadowBottomSaturation": 0.41,
   "shadowBottomLuminosity": 0.47,
-  "dropshadowSaturation": 0.13,
-  "dropshadowLuminosity": 0.19
+  "dropshadowSaturation": 0.3,
+  "dropshadowLuminosity": 0.38
   },
 
   {
   "name": "Heavy Metal",
   "primaryColor": "#92949d",
+  "enableBackground": true,
+  "backgroundColor": "#4f4f4f",
   "borderRadius": 0.8,
   "highlightOffsetX": 1,
   "highlightOffsetY": 1,
@@ -110,7 +117,45 @@
   "shadowBottomLuminosity": 0.46,
   "dropshadowSaturation": 0.13,
   "dropshadowLuminosity": 0.19
-  }
+},
+
+{
+"name": "Gold Bar",
+"primaryColor": "#ff9f2c",
+"enableBackground": true,
+"backgroundColor": "#ffca8c",
+"borderRadius": 0.8,
+"highlightOffsetX": 1,
+"highlightOffsetY": 1,
+"highlightBlurRadius": 0,
+"highlightSpreadRadius": 0,
+"shadowTopOffsetX": 0,
+"shadowTopOffsetY": 3,
+"shadowTopBlurRadius": 5,
+"shadowTopSpreadRadius": -1,
+"shadowCenterOffsetX": 0,
+"shadowCenterOffsetY": 8,
+"shadowCenterBlurRadius": 5,
+"shadowCenterSpreadRadius": -4,
+"shadowBottomOffsetX": 0,
+"shadowBottomOffsetY": 9,
+"shadowBottomBlurRadius": 0,
+"shadowBottomSpreadRadius": 0,
+"dropshadowOffsetX": 0,
+"dropshadowOffsetY": 16,
+"dropshadowBlurRadius": 8,
+"dropshadowSpreadRadius": 0,
+"highlightSaturation": 0.93,
+"highlightLuminosity": 1.27,
+"shadowTopSaturation": 0.79,
+"shadowTopLuminosity": 0.91,
+"shadowCenterSaturation": 0.52,
+"shadowCenterLuminosity": 0.75,
+"shadowBottomSaturation": 0.83,
+"shadowBottomLuminosity": 0.65,
+"dropshadowSaturation": 0.64,
+"dropshadowLuminosity": 0.55
+}
 
   ];
 
@@ -208,10 +253,26 @@
     <div class="row">
 
 
-      <div class="col-lg-12 p-3">
-      <div class="box p-3 mb-5 {boxClass}" style="min-height: 10rem;" class:animate>
+      <div class="col-lg-12">
 
-      </div>
+      {#if profile.enableBackground}
+
+        <div class="rounded" style="padding: 5rem; background-color: {profile.backgroundColor}" class:animate>
+          <div class="box p-3 mb-5 {boxClass}" style="min-height: 10rem;" class:animate>
+
+          </div>
+        </div>
+
+      {:else}
+
+      <div class="rounded" style="padding: 5rem;">
+
+        <div class="box p-3 mb-5 {boxClass}" style="min-height: 10rem;" class:animate>
+        </div>
+        </div>
+
+      {/if}
+
       </div>
 
     </div>
@@ -219,6 +280,8 @@
     <div class="row">
     <div class="col-lg-2 p-3">
       <div class="p-3 mb-2 rounded bg-dark text-warning bg-night text-night" style="min-height: 17rem;">
+
+        <div class="text-center">Setup</div>
 
         <div class="small strong mb-1">Design Presets</div>
         <select class="form-control mb-3" on:change={o=>{animation(); profile=profiles[parseInt(o.target.value)]}}>
@@ -229,7 +292,22 @@
           {/each}
         </select>
 
-        <div class="small strong">Color {profile.primaryColor}</div><input class="mb-2 mt-1" type="color" bind:value={profile.primaryColor}>
+        <div class="small strong">Primary Color</div>
+        <!-- <div class="small strong">Primary Color {profile.primaryColor}</div> -->
+        <input class="mb-2 mt-1" type="color" bind:value={profile.primaryColor}>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" bind:checked={profile.enableBackground} id="defaultCheck1">
+          <label class="form-check-label small" for="defaultCheck1">
+            Background Color
+          </label>
+        </div>
+
+        {#if profile.enableBackground}
+          <!-- <div class="small strong">{profile.backgroundColor}</div> -->
+          <input class="mb-2 mt-1" type="color" bind:value={profile.backgroundColor}>
+        {/if}
+
 
       </div>
     </div>

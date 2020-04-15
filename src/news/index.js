@@ -1,5 +1,7 @@
 import research from './research.js';
+import theme from './theme.js';
 import quarantine from './quarantine.js';
+
 import linkdb from './links.js';
 const links = linkdb();
 
@@ -29,6 +31,7 @@ function updateLinks(objectReference, entryId){
 
 export default function main(name){
   const report = {};
+  report.theme = theme().map(updateLinks);
   report.research = research().map(updateLinks);
   report.quarantine = quarantine().map(updateLinks);
   return report;

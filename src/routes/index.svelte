@@ -98,7 +98,11 @@ loading = false;
     </div>
 
     <div class="col pb-3">
-    <News news={report.research} icon="mortar-board" title="Research Blog" items="1" link="/research" invitation="I share some more thoughts at the Research Blog, a long, easy to scroll, dedicated page with {report.research.length} entries."/>
+    <News news={report.research} icon="mortar-board" title="Research Blog" items="1" today={true} link="/research" invitation="I share some more thoughts at the Research Blog, a long, easy to scroll, dedicated page with {report.research.length} entries."/>
+    </div>
+
+    <div class="col pb-3">
+    <News news={report.theme} icon="mortar-board" title="Theme Development Log" items="100"/>
     </div>
 
     <!-- <div class="col pb-3">
@@ -116,7 +120,7 @@ loading = false;
           <div class="card-body p-3">
             <h5 class="card-text">{daw.name}</h5>
             <p class="card-text">{daw.text}</p>
-            <a href="{daw.url}" class="btn btn-primary">{daw.name} &raquo;</a>
+            <a href="{daw.url}" class="btn btn-primary btn-a">{daw.name} &raquo;</a>
             <!-- <p class="card-text"><small>Updated {videos.changed}</small></p> -->
           </div>
         </div>

@@ -274,13 +274,30 @@ $card-bg:  color.change($primary, $lightness: 90%);
   transition: all 0.5s ease-in;
 }
 
-.card.shadow .card-img-top {
+.card.shadow .card-img-top, .card.shadow .card-img-bottom {
     border-radius: 0.8rem;
 }
+
+.btn.btn-primary.btn-a {
+  border-radius: .5rem;
+  box-shadow:
+  inset 1px 1px 0px 0px #fbc381,
+  0px 3px 5px -1px #e6912a,
+  0px 8px 5px -4px #aa7536,
+  0px 9px 0px 0px #b26811,
+  0px 16px 8px 0px #87571e;
+  margin-bottom: 1rem;
+}
+
 .card.shadow {
   transition: all 0.5s ease-in;
   border-radius: 0.8rem;
-  box-shadow: inset 0px 0px 0px 0px white, 0px 3px 5px -1px #797979, 0px 8px 5px -4px #727272, 0px 9px 0px 0px #464646, -2px 16px 5px -6px #1d1d1d !important;
+  box-shadow:
+  inset 1px 1px 0px 0px #fefdfb,
+  0px 3px 5px -1px #e3b987,
+  0px 8px 5px -4px #c1996a,
+  0px 9px 0px 0px #d4882e,
+  0px 8px 9px 3px #3f2a10 !important;
 
 }
 
