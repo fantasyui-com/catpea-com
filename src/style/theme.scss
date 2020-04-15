@@ -265,3 +265,25 @@ $card-bg:  color.change($primary, $lightness: 90%);
 //   top: 1rem;
 //   right: 1rem;
 // }
+
+
+
+
+
+.navbar {
+  transition: all 0.5s ease-in;
+}
+
+.card.shadow .card-img-top {
+    border-radius: 0.8rem;
+}
+.card.shadow {
+  transition: all 0.5s ease-in;
+  border-radius: 0.8rem;
+  box-shadow: inset 0px 0px 0px 0px white, 0px 3px 5px -1px #797979, 0px 8px 5px -4px #727272, 0px 9px 0px 0px #464646, -2px 16px 5px -6px #1d1d1d !important;
+
+}
+
+.night .card.shadow {
+  box-shadow: inset 1px 1px 0px 0px #ababab, 0px 3px 5px -1px #0e0e0e, 0px 8px 5px -4px #585858, 0px 9px 0px 0px #1a1a1a, 0px 0px 0px 0px #2b2c30 !important;
+}

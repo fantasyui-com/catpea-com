@@ -15,7 +15,7 @@
 
 </style>
 
-<div class="post card bg-night text-night">
+<div class="post card shadow bg-night text-night">
   <div class="card-header">
     <Header {icon} {title} {date}/>
   </div>

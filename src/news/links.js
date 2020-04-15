@@ -33,6 +33,7 @@ const database = {
   'JavaScript Array':'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array',
   'HSL':'https://www.youtube.com/watch?v=NAw2_NtGNaA',
   'HSV':'https://www.youtube.com/watch?v=yNgH3wv4crg',
+  'CSS':'https://www.youtube.com/watch?v=gT0Lh1eYk78',
 
   'node-sass':'https://github.com/sass/node-sass',
   'sass':'https://github.com/sass/sass',

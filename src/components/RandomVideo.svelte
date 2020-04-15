@@ -216,6 +216,7 @@ function prev(){
 
 
     {#if footer}
+    <div class="card-footer">
 
       <div class="progress" style="height: 1px; background: black;">
         <div class="progress-bar bg-warning" role="progressbar" style="width: {progress}%;" aria-valuenow="{progress}" aria-valuemin="0" aria-valuemax="100"></div>
@@ -225,6 +226,7 @@ function prev(){
         <div class="progress-bar bg-secondary" role="progressbar" style="width: {procession}%;" aria-valuenow="{procession}" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
 
+    </div>
     {/if}
 
   {/if}

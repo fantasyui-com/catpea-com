@@ -8,6 +8,34 @@ const database = [
 
 
   {
+    date: '2020-04-15T00:20:18.443Z',
+    html: `
+
+      I just finished another upgrade for [Designer] and it can make Ice Cream now. I also made a couple of Profiles (Lemon and Blueberry) to toggle between and the transition is animated.
+
+      <figure class="figure"> <img src="research/icecream.jpg" class="figure-img w-100 rounded" alt="Making Ice Cream"> <figcaption class="figure-caption">Making Ice Cream</figcaption> </figure>
+
+      This tool should be enough to begin with interesting UI Themes.
+
+      <figure class="figure"> <img src="research/tool1.png" class="figure-img w-100 rounded" alt="Updated User Interface"> <figcaption class="figure-caption">Updated User Interface</figcaption> </figure>
+
+      Just to remind, my aim is a product on [Bootstrap Themes] that looks something like this:
+
+      <figure class="figure"> <img src="research/real.jpg" class="figure-img w-100 rounded" alt="What I need to start building."> <figcaption class="figure-caption">What I need to start building.</figcaption> </figure>
+
+      But the [CSS] language is not happy about making 3D things, and artful little digital frescos, so I have to make a few little tools.
+
+      To celebrate this little programming milestone I temporarily added the "Heavy Metal" [Designer] Preset to all boxes on CATPEA.
+
+      <figure class="figure"> <img src="research/all.png" class="figure-img w-100 rounded" alt="Looks Interesting"> <figcaption class="figure-caption">Looks Interesting</figcaption> </figure>
+
+      <figure class="figure"> <img src="research/interesting.png" class="figure-img w-100 rounded" alt="Looks Interesting"> <figcaption class="figure-caption">Looks Interesting</figcaption> </figure>
+
+    `.trim().split('\n').map(i=>i.trim()),
+    link:{
+    }
+  },
+  {
     date: '2020-04-14T19:16:55.040Z',
     html: `
       I am still working on [Designer] I found some graphic artifacts with yesterday's approach, now I am creating the 3D raised effect with Drop Shadows, rather than inner shadows.
