@@ -45,6 +45,12 @@
       name:'Book',
       description:'A Book About Growing Up',
     },
+    // {
+    //   id:'rhyme',
+    //   link:'/rhyme',
+    //   name:'Rhyme',
+    //   description:'Rhyme Helper',
+    // },
 
     {
       id:'video',
@@ -73,7 +79,7 @@
       name:'Theme',
       description:'User Interface Theme',
     },
-    
+
     {
       id:'designer',
       link:'/designer',
