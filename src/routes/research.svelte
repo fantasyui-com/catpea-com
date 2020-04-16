@@ -25,16 +25,20 @@
     clearInterval(intervalId);
   });
 
+  onMount(() => {
+  });
+
+
 </script>
 
 <svelte:head>
-  <title>𝗖𝗔𝗧𝗣𝗘𝗔: Research, Progress, Peanut Butter, and Jelly</title>
+  <title>CATPEA! Research, Progress, Peanut Butter, and Jelly</title>
 </svelte:head>
 
 
 <div class="container">
   {#each report.research as item, i}
-    <div class="row">
+    <div class="row mb-4">
       <div class="col-xs-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
         <Post title={item.name} {icon} date={item.ago} html={item.html} decoration="energon"/>
       </div>

@@ -104,7 +104,7 @@ function makeStyle(){
 </script>
 
 <svelte:head>
-  <title>𝗖𝗔𝗧𝗣𝗘𝗔: Color Palette Designer</title>
+  <title>CATPEA! Color Palette Designer</title>
 </svelte:head>
 
 <style type="text/css" lang="css">

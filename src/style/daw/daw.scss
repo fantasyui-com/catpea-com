@@ -1,15 +1,15 @@
 $daw-form-table-header-cell-color: $gray-400;
-$daw-form-table-header-cell-bg: $gray-700;
+$daw-form-table-header-cell-bg: $gray-800;
 $daw-form-table-header-cell-active-color: $primary;
 
 $daw-form-table-row-color: $gray-400;
-$daw-form-table-row-bg: $gray-700;
+$daw-form-table-row-bg: $gray-800;
 
 $daw-form-table-cell-color: $gray-400;
-$daw-form-table-cell-bg: $gray-700;
+$daw-form-table-cell-bg: $gray-800;
 $daw-form-table-cell-active-color: $primary;
 
-$daw-form-table-cell-selector-bg: $gray-600;
+$daw-form-table-cell-selector-bg: darken($gray-900,5%);
 $daw-form-table-cell-selector-active-bg: $primary;
 
 .daw-form {

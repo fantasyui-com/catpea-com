@@ -1,0 +1,27 @@
+// .night .card.shadow {
+//   // box-shadow: inset 1px 1px 0px 0px #ababab, 0px 3px 5px -1px #0e0e0e, 0px 8px 5px -4px #585858, 0px 9px 0px 0px #1a1a1a, 0px 0px 0px 0px #2b2c30 !important;
+// }
+//
+//
+// .night .bg-night {
+//   // transition: background-color 1000ms ease-out;
+//   background: $dark !important;
+// }
+// .night .text-night {
+//   // transition: color 1000ms ease-out;
+//   color: $light !important;
+// }
+
+
+
+.night {
+
+  .bg-night {
+    background: $dark !important;
+  }
+
+  .text-night {
+    color: $gray-500 !important;
+  }
+
+}

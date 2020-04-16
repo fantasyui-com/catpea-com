@@ -38,7 +38,7 @@ onMount(async function() {
 </style>
 
 <svelte:head>
-  <title>𝗖𝗔𝗧𝗣𝗘𝗔: Videos</title>
+  <title>CATPEA! Videos</title>
 </svelte:head>
 
 

@@ -7,6 +7,34 @@ const octicons = icons();
 const database = [
 
 
+    {
+      date: '2020-04-15T21:29:22.387Z',
+      html: `
+
+        I have rebuilt the theme, the third time. This time it follows the programming pattern of [Bootswatch].
+
+        It feels quite right.
+
+        Night more is simple and powerful.
+
+        I fixed the big bug that was crashing the site. Github servers won't serve files prefixed with an _underscore.
+        Some of my libraries here use that here (not my code) and it is really hard to predict when some program will pull in a library that has files beginning with an underscore.
+
+        The overall site is getting sluggish, I may need a real blog program, I will probably run it under blog.catpea.com and probably go craaaaazy with typography.
+
+        I updated the [Theme] page and it is starting to look pro.
+
+        Once I setup blog.catpea.com (in days or few weeks) catpea.com and blog.catpea.com will share the [Theme] design. It will be a great test of usefulness.
+
+        Whews.
+
+      `.trim().split('\n').map(i=>i.trim()),
+      link:{
+        'FIXED':'https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/',
+        'typography':'http://hellohappy.org/beautiful-web-type/',
+      }
+    },
+
   {
     date: '2020-04-15T21:29:22.387Z',
     html: `
@@ -268,7 +296,7 @@ const database = [
 
         Also, a little twinkle of a business perspective is bubbling up here. Automated processing means bug free product, fast upgrades, fast support.
 
-        But still, I am not sure what I will do to automate Design, once I do have SuperNavbar, presumably with all colors removed, and I make some classes like I have in [THEME] right now, to apply color to things, an interactive color, that supports mult-color-websites and multiple dark themes.
+        But still, I am not sure what I will do to automate Design, once I do have SuperNavbar, presumably with all colors removed, and I make some classes like I have in [Theme] right now, to apply color to things, an interactive color, that supports mult-color-websites and multiple dark themes.
         Vary some fonts, and padding, and margins. I am still stuck with, what is basically... a [basic theme].
 
 
@@ -443,14 +471,14 @@ const database = [
         ``,
         `So, on this website, I don't really need night mode. But, as experimental research goes I do need a system for it. So here is how this will work. This very page, The Research Blog, will be the first one to get night mode, and will be put in dark more by default. Now if somebody wants DAY MODE, then they can switch it off, and the page will become blinding.`,
         ``,
-        `I'll work on that for a couple of hours, it shouldn't take long, I already have a demo on the [THEME] page.`,
+        `I'll work on that for a couple of hours, it shouldn't take long, I already have a demo on the [Theme] page.`,
       ],
     },
 
     {
       date: '2020-04-09T19:29:25.681Z',
       html: [
-        `I fixed up the [THEME] page where I show off some more advanced backgrounds. But, overall this has been a study of color. Not just how to create the palettes but how to configure colors in bootstrap.`,
+        `I fixed up the [Theme] page where I show off some more advanced backgrounds. But, overall this has been a study of color. Not just how to create the palettes but how to configure colors in bootstrap.`,
         `This is a small success. Basically, it comes down to not using any text colors unless it is necessary, at which point make sure the background matches. As to background colors, the primary color doe backgrounds is bg-dark, or if it is a white website then bg-light. The coloring has to be used as little as possible because it does not really work.`,
         `Since I am using a programmable component layer over [Bootstrap], I can automate colorification, combined with the notion that it must be used sparingly. I'll be able to create multicolored websites soon, or as the case might be, websites with multiple coherent color themes.`,
         ``,
@@ -629,7 +657,7 @@ const database = [
 
     {
       date: '2020-04-05T16:56:55.639Z',
-      html: `It took me a moment to figure out how to structure colors/shades for User Interface in the [CATPEA DAW]. The problem was I needed more colors, but I don't want to go against [Bootstrap]'s way of doing things. So, where they have a color scheme like this: primary-color, secondary-color, muted-color, warning-color. I added  primary-color-dark, secondary-color-dark, muted-color-dark, warning-color-dark and primary-color-light, secondary-color-light, muted-color-light, warning-color-light. So when two of bootstrap colors start biting each other for example button and box (that the button is in) I can make the button lighter by saying button color: primary-color-light, so I tripled color count, in such a way that all the users of the [THEME] just need to remember "Oh, yeah, all the colors have a dark and light variation now. Hmm." so [CATPEA DAW] UI is back to semi-normal now, and I updated the [THEME] page to show off this upgrade.`
+      html: `It took me a moment to figure out how to structure colors/shades for User Interface in the [CATPEA DAW]. The problem was I needed more colors, but I don't want to go against [Bootstrap]'s way of doing things. So, where they have a color scheme like this: primary-color, secondary-color, muted-color, warning-color. I added  primary-color-dark, secondary-color-dark, muted-color-dark, warning-color-dark and primary-color-light, secondary-color-light, muted-color-light, warning-color-light. So when two of bootstrap colors start biting each other for example button and box (that the button is in) I can make the button lighter by saying button color: primary-color-light, so I tripled color count, in such a way that all the users of the [Theme] just need to remember "Oh, yeah, all the colors have a dark and light variation now. Hmm." so [CATPEA DAW] UI is back to semi-normal now, and I updated the [Theme] page to show off this upgrade.`
     },
 
     {
@@ -680,7 +708,7 @@ const database = [
     {
       date: '2020-04-03T23:25:54.011Z',
       html: `
-      Zoinks! I started work on a Graphical Theme for Applications, I called it [THEME]. It provides extensions for [Bootstrap] and components based on [CATPEA DAW]. I'll use it for my research here, and try to keep it tidy and inline with Bootstrap's Programming conventions so that I can think about getting into [Bootstrap Expo] and later [Bootstrap Themes]. I don't really want to create some stressful situation about sales, tech-support, and bug fixes; but I do like following [Bootstrap] conventions (it helps me keep code un-confusing) and I like learning about all this. Here's early: [THEME].
+      Zoinks! I started work on a Graphical Theme for Applications, I called it [Theme]. It provides extensions for [Bootstrap] and components based on [CATPEA DAW]. I'll use it for my research here, and try to keep it tidy and inline with Bootstrap's Programming conventions so that I can think about getting into [Bootstrap Expo] and later [Bootstrap Themes]. I don't really want to create some stressful situation about sales, tech-support, and bug fixes; but I do like following [Bootstrap] conventions (it helps me keep code un-confusing) and I like learning about all this. Here's early: [Theme].
       `,
 
     },

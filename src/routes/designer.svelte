@@ -4,7 +4,7 @@
   import { css } from 'emotion'
   import chroma from 'chroma-js';
 
-  import kebabCase from 'dashify';
+  import kebabCase from 'lodash/kebabCase.js';
 
 
   const profileInternals = new Set(['name', 'enableBackground', 'backgroundColor']);
@@ -407,7 +407,7 @@
 </style>
 
 <svelte:head>
-  <title>𝗖𝗔𝗧𝗣𝗘𝗔: Component Designer</title>
+  <title>CATPEA! Component Designer</title>
 </svelte:head>
 
 

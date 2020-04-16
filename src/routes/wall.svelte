@@ -49,7 +49,7 @@
 </style>
 
 <svelte:head>
-  <title>𝗖𝗔𝗧𝗣𝗘𝗔: Video Wall</title>
+  <title>CATPEA! Video Wall</title>
 </svelte:head>
 
 <div class="container-fluid">

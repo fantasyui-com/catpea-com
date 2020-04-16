@@ -29,14 +29,14 @@
 </script>
 
 <svelte:head>
-  <title>𝗖𝗔𝗧𝗣𝗘𝗔: Quarantine and Poetry</title>
+  <title>CATPEA! Quarantine and Poetry</title>
 </svelte:head>
 
 
 
 <div class="container">
   {#each report.quarantine as item, i}
-    <div class="row">
+    <div class="row mb-4">
       <div class="col-xs-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
         <Post title={item.name} {icon} date={item.ago} html={item.html}/>
       </div>

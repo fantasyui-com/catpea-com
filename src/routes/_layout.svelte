@@ -43,7 +43,7 @@
 
 
 <style lang="scss" global>
- @import "../style/theme.scss";
+ @import "../style/index.scss";
 </style>
 <main class="bg-photo" class:night style="overflow-y: hidden;">
   <Nav {segment} bind:sandman bind:night bulb/>

@@ -99,7 +99,7 @@
 
 </script>
 
-<nav class="navbar navbar-light bg-primary bg-night text-night navbar-expand-lg shadow d-none d-lg-flex mb-3">
+<nav class="navbar navbar-dark bg-primary bg-night text-night navbar-expand-lg shadow d-none d-lg-flex mb-3">
 
   <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
 
@@ -110,7 +110,7 @@
 
     {#each navigation as item, i}
       <li class="nav-item" class:active='{ (segment?segment:'home')===item.id }'>
-        <a class="nav-link text-night" href={item.link} title={item.description}>{item.name}</a>
+        <a class="nav-link" href={item.link} title={item.description}>{item.name}</a>
       </li>
     {/each}
 
@@ -127,7 +127,7 @@
 
 </nav>
 
-<nav class="navbar navbar-light bg-primary bg-night text-night navbar-expand-lg shadow d-lg-none mb-3">
+<nav class="navbar navbar-dark bg-primary bg-night text-night navbar-expand-lg shadow d-lg-none mb-3">
 
   <a class="navbar-brand" href="."><img src="cats/cat-01.png" alt="Logo Image"></a>
   {#if bulb}
@@ -147,7 +147,7 @@
 
       {#each navigation as item, i}
         <li class="nav-item" class:active='{ (segment?segment:'home')===item.id }'>
-          <a class="nav-link text-night" href={item.link} title={item.description}>{item.name} &middot; <small>{item.description}</small></a>
+          <a class="nav-link" href={item.link} title={item.description}>{item.name} &middot; <small>{item.description}</small></a>
         </li>
       {/each}
 

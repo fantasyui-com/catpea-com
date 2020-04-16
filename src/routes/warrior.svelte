@@ -109,7 +109,7 @@ onMount(async function() {
 </style>
 
 <svelte:head>
-  <title>𝗖𝗔𝗧𝗣𝗘𝗔: Warrior</title>
+  <title>CATPEA! Warrior</title>
 </svelte:head>
 
 

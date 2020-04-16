@@ -66,7 +66,7 @@ loading = false;
 </style>
 
 <svelte:head>
-  <title>𝗖𝗔𝗧𝗣𝗘𝗔: World's Most Advanced Research Laboratories and Skunk Works</title>
+  <title>CATPEA! World's Most Advanced Research Laboratories and Skunk Works</title>
 </svelte:head>
 
 
