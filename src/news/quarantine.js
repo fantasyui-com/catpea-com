@@ -4,6 +4,36 @@ const octicons = icons();
 const database = [
 
   {
+    date: '2020-04-17T01:52:06.930Z',
+    name:'Super Salad',
+    html: `
+
+    Captain's Log, Quarantine, Day Thirty One,
+    I've been programming all day, but now I am done.
+
+    I coded colors, design, music, a whole ballad,
+    but now my mind has fixed its aims on a salad.
+
+    I've been trying to invent one that tastes really nice,
+    one that someone could even eat twice.
+
+    And I did! as I always do,
+    Just add Strawberry Jam, a dollop or two.
+
+    No need for dressing,
+    it tastes like a blessing!
+
+    Just squirt some jam,
+    mix it up and Bam!
+
+
+    <audio controls preload="none" class="rounded"> <source src="poems/day31.mp3" type="audio/mpeg"></audio>
+
+    `.trim().split('\n'),
+    link:{}
+  },
+  
+  {
     date: '2020-04-16T02:49:34.356Z',
     name:'Computers Are Slow',
     html: `
