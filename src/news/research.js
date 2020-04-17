@@ -8,6 +8,19 @@ const database = [
 
 
     {
+      date: '2020-04-17T01:02:46.761Z',
+      html: `
+
+      I expanded the [Theme] Styleguide to include many more components, and gave everything night mode support.
+      If you click the lightbulb and browse [Theme] all the color information will be washed away, and things will look all military Zero Dark Alfa Mike Foxtrot Color Mango Tango Apple.
+
+      `.trim().split('\n').map(i=>i.trim()),
+      link:{
+      }
+    },
+
+
+    {
       date: '2020-04-16T19:25:33.766Z',
       html: `
 

@@ -18,10 +18,43 @@
 
   .bg-night {
     background: $dark !important;
+    border-color: darken($dark, 3%) !important;
+  }
+  hr {
+    border-top-color: darken($dark, 3%) !important;
+  }
+
+  .bg-night.progress {
+    background: darken($dark, 5%) !important;
+    .progress-bar {
+      background: lighten($dark, 5%) !important;
+    }
+
+  }
+
+  .btn {
+    background: lighten($dark, 3%) !important;
+    border-color: lighten($dark, 8%) !important;
+  }
+  .btn .disabled {
+    background: darken($dark, 0.5%) !important;
+    border-color: darken($dark, 0.5%) !important;
   }
 
   .text-night {
     color: $gray-500 !important;
+  }
+
+  a.text-night  {
+    color: $blue !important;
+  }
+
+  a.text-night.disabled  {
+    color: $gray-600 !important;
+  }
+
+  .active > a.text-night  {
+    color: $cyan !important;
   }
 
 }

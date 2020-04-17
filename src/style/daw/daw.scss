@@ -4,6 +4,7 @@ $daw-form-table-header-cell-active-color: $primary;
 
 $daw-form-table-row-color: $gray-400;
 $daw-form-table-row-bg: $gray-800;
+$daw-form-table-row-bg-hover: lighten($daw-form-table-row-bg, 3%);
 
 $daw-form-table-cell-color: $gray-400;
 $daw-form-table-cell-bg: $gray-800;
@@ -45,7 +46,7 @@ $daw-form-table-cell-selector-active-bg: $primary;
 // Cell and Row Sections
 .daw-form-table-cell {
   color: $daw-form-table-cell-color;
-  background: $daw-form-table-cell-bg;
+  //background: $daw-form-table-cell-bg;
   &.selectable {
     cursor: pointer;
   }
@@ -59,6 +60,10 @@ $daw-form-table-cell-selector-active-bg: $primary;
 .daw-form-table-row {
   color: $daw-form-table-row-color;
   background: $daw-form-table-row-bg;
+}
+
+.daw-form-table-row:hover {
+  background: $daw-form-table-row-bg-hover !important;
 }
 
 // Sound Activation Cell

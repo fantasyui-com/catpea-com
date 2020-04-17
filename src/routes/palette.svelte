@@ -114,7 +114,7 @@ function makeStyle(){
 
 
 
-<div class="container bg-info gr-45 rounded p-2 mb-4">
+<div class="container bg-dark gr-45 rounded p-2 mb-4">
   <div class="row">
       <div class="col">
         <div class="p-2">Adjust Color Palette</div>
@@ -122,7 +122,7 @@ function makeStyle(){
   </div>
 </div>
 
-<div class="container rounded bg-info gr-45 mb-4">
+<div class="container rounded bg-dark gr-45 mb-4">
   <div class="row justify-content-center">
     {#each Object.keys(colors).filter(name=>!name.startsWith('gray-')).map(name=>({name, color:colors[name]})) as item, i}
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2">
@@ -138,7 +138,7 @@ function makeStyle(){
   </div>
 </div>
 
-<div class="container bg-info gr-45 rounded p-2 mb-4">
+<div class="container bg-dark gr-45 rounded p-2 mb-4">
   <div class="row">
       <div class="col">
         <div class="p-2">Select Blend Color</div>
@@ -148,7 +148,7 @@ function makeStyle(){
 
 <div class="container   mb-4">
   <div class="row justify-content-center">
-      <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2 bg-info gr-45 rounded">
+      <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2 bg-dark gr-45 rounded">
         <div class="p-2 pb-4 bg-light gr-135 rounded shadow">
           <div>Blend</div>
           <div class="d-inline-block rounded shadow border border-dark" style="background: {blend}; height: 10rem; width: 10rem;"></div>
@@ -160,7 +160,7 @@ function makeStyle(){
   </div>
 </div>
 
-<div class="container bg-info gr-45 rounded p-2 mb-4">
+<div class="container bg-dark gr-45 rounded p-2 mb-4">
   <div class="row">
       <div class="col">
         <div class="p-2">Fine-tune Blending</div>
@@ -168,7 +168,7 @@ function makeStyle(){
   </div>
 </div>
 
-<div class="container rounded bg-info gr-45 mb-4">
+<div class="container rounded bg-dark gr-45 mb-4">
   <div class="row justify-content-center">
     {#each Object.keys(colors).filter(name=>!name.startsWith('gray-')).map(name=>({name, color:colors[name]})) as item, i}
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2">
@@ -186,7 +186,7 @@ function makeStyle(){
 
 
 
-<div class="container bg-info gr-45 rounded p-2 mb-4">
+<div class="container bg-dark gr-45 rounded p-2 mb-4">
   <div class="row">
       <div class="col">
         <div class="p-2">Assign Contextual Colors</div>
@@ -194,7 +194,7 @@ function makeStyle(){
   </div>
 </div>
 
-<div class="container rounded bg-info gr-45 mb-4">
+<div class="container rounded bg-dark gr-45 mb-4">
   <div class="row justify-content-center">
     {#each Object.keys(theme).map(name=>({name, id:theme[name], color:colors[theme[name]]})) as item, i}
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2">
@@ -218,7 +218,7 @@ function makeStyle(){
   </div>
 </div>
 
-<div class="container bg-info gr-45 rounded p-2 mb-4">
+<div class="container bg-dark gr-45 rounded p-2 mb-4">
   <div class="row">
       <div class="col">
         <div class="p-2">Copy Code</div>
@@ -228,7 +228,7 @@ function makeStyle(){
 
 <div class="container">
   <div class="row">
-  <div class="col bg-light p-3 rounded">
+  <div class="col bg-dark p-3 rounded">
   <Drawer title="Bootstrap Theme" opened>
       <code class="bg-dark">
       <div>// Color Declaration</div>

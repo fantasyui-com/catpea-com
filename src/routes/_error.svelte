@@ -9,6 +9,8 @@
   export let status;
   export let error;
 
+
+
   const icon = 'squirrel';
   let report = news();
   function recalculateTimestamps(){
@@ -62,10 +64,10 @@
         <h5 class="card-title">Error Information</h5>
         <p class="card-text">{status}: {error.message}</p>
       </div>
-      {#if error.stack}
+      {#if error && error.stack}
         <ul class="list-group list-group-flush">
-          {#each error.stack as item, i}
-            <li class="list-group-item">{item}</li>
+          {#each error.stack.split('\n') as item, i}
+            <li class="list-group-item bg-danger text-light small">{item}</li>
           {/each}
         </ul>
       {/if}
@@ -79,7 +81,7 @@
     <div class="card bg-dark mb-3">
      <div class="card-header">Poems</div>
        <div class="card-body">
-         <p class="card-text">In case it is talking longer than expected, here are my poems.</p>
+         <p class="card-text">In case it is taking longer than expected to fix the bug, here are my poems.</p>
        </div>
     </div>
 

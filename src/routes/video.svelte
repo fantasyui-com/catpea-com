@@ -60,7 +60,7 @@ onMount(async function() {
     <div class="row" style="display: none;" class:d-flex='{(parseInt($page.query.p) - 1)>-1}'>
 
       <div class="col-md-6 mb-4 order-2 order-md-1">
-        <a class="btn btn-dark btn-lg shadow" href="/video?p={parseInt($page.query.p) - 1}&i={$page.query.i}">&laquo; Return to page {parseInt($page.query.p) }</a>
+        <a class="btn btn-dark text-muted btn-lg shadow" href="/video?p={parseInt($page.query.p) - 1}&i={$page.query.i}">&laquo; Return to page {parseInt($page.query.p) }</a>
       </div>
 
       <div class="col-md-6 mb-4 text-md-right order-1 order-md-2">
@@ -73,13 +73,13 @@ onMount(async function() {
 
     <div class="row" style="display: none;" class:d-flex='{( (parseInt($page.query.p)+1) * parseInt($page.query.i) < database.length)}'>
       <div class="col mb-4">
-        <a class="btn btn-dark btn-lg text-primary btn-block shadow" href="/video?p={parseInt($page.query.p) + 1}&i={$page.query.i}">Page {parseInt($page.query.p) + 2} &raquo;</a>
+        <a class="btn btn-dark btn-lg btn-block shadow" href="/video?p={parseInt($page.query.p) + 1}&i={$page.query.i}">Page {parseInt($page.query.p) + 2} &raquo;</a>
       </div>
     </div>
 
     <div class="row" style="display: none;" class:d-flex='{( (parseInt($page.query.p)+1) * parseInt($page.query.i) >= database.length)}'>
       <div class="col mb-4">
-        <a class="btn btn-dark btn-lg text-primary btn-block shadow" href="/video?p=0&i={$page.query.i}">Return to page 1 &infin;</a>
+        <a class="btn btn-dark btn-lg btn-block shadow" href="/video?p=0&i={$page.query.i}">Return to page 1 &infin;</a>
       </div>
     </div>
 
