@@ -1,5 +1,6 @@
 <script>
   import Navbar from './styleguide/Navbar.svelte';
+  import blinkenlights from 'blinkenlights';
 
   const globalClass = 'bg-night text-night';
 
@@ -243,10 +244,10 @@
         <div class="col">
 
         <div class="{item.class} {globalClass}" role="alert">
-          <h4 class="alert-heading">Achtung!</h4>
-          <p>Alles turisten und nonteknischen lookenspeepers! Das komputermaschine ist nicht für der gefingerpoken und mittengraben! Oderwise ist easy to schnappen der springenwerk, blowenfusen und poppencorken mit spitzensparken.</p>
+          <h4 class="alert-heading">{blinkenlights.text.title()}</h4>
+          <p>{blinkenlights.text.text()}</p>
           <hr>
-          <p class="mb-0">Ist nicht für gewerken bei dummkopfen. Der rubbernecken sightseeren keepen das cottonpicken händer in das pockets muss. Zo relaxen und watschen der blinkenlichten.</p>
+          <p class="mb-0">{blinkenlights.text.subtext()}</p>
         </div>
 
         </div>
@@ -264,7 +265,7 @@
          <div class="card-header">Header</div>
          <div class="card-body">
            <h5 class="card-title">Primary card title</h5>
-           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+           <p class="card-text">{blinkenlights.text.text()}</p>
          </div>
        </div>
 
@@ -275,7 +276,7 @@
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <h6 class="card-subtitle mb-2">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">{blinkenlights.text.text()}</p>
             <a href="/" class="{item.link}">Card link</a>
             <a href="/" class="{item.link}">Another link</a>
           </div>

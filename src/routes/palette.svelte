@@ -1,6 +1,6 @@
 <script>
 import Drawer from '../containers/Drawer.svelte';
-import Icon from '../controls/Icon.svelte';
+// import Icon from '../controls/Icon.svelte';
 
 import chroma from 'chroma-js';
 import capitalize from 'lodash/capitalize.js'
@@ -20,7 +20,38 @@ tetrad
 square
 compound
 shades
+$white:    #fff !default;
+$gray-100: #fefbf4 !default;
+$gray-200: #fdf6e3 !default;
+$gray-300: #eee8d5 !default;
+$gray-400: #93a1a1 !default;
+$gray-500: #839496 !default;
+$gray-600: #657b83 !default;
+$gray-700: #586e75 !default;
+$gray-800: #073642 !default;
+$gray-900: #002b36 !default;
+$black:    #000 !default;
 
+$blue:    #268bd2 !default;
+$indigo:  #8061b5 !default;
+$purple:  #6c71c4 !default;
+$pink:    #d33682 !default;
+$red:     #c15755 !default;
+$orange:  #c85f33 !default;
+$yellow:  #b58900 !default;
+$green:   #859900 !default;
+$teal:    #20c997 !default;
+$cyan:    #2aa198 !default;
+
+
+$primary:       $indigo !default;
+$secondary:     $orange !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
 */
 
 let blend = '#042c38';
@@ -30,27 +61,28 @@ let ratio = .7;
 let colors = {
   'white':'#ffffff',
 
-  'gray-100':'#f8f9fa',
-  'gray-200':'#e9ecef',
-  'gray-300':'#dee2e6',
-  'gray-400':'#ced4da',
-  'gray-500':'#adb5bd',
-  'gray-600':'#6c757d',
-  'gray-700':'#495057',
-  'gray-800':'#343a40',
-  'gray-900':'#212529',
+  'gray-100':'#fefbf4',
+  'gray-200':'#fdf6e3',
+  'gray-300':'#eee8d5',
+  'gray-400':'#93a1a1',
+  'gray-500':'#839496',
+  'gray-600':'#657b83',
+  'gray-700':'#586e75',
+  'gray-800':'#073642',
+  'gray-900':'#002b36',
 
-  'black':'#000000',
-  'blue':'#007bff',
-  'indigo':'#6610f2',
-  'purple':'#6f42c1',
-  'pink':'#e83e8c',
-  'red':'#dc3545',
-  'orange':'#fd7e14',
-  'yellow':'#ffc107',
-  'green':'#28a745',
+  'black':'#011418',
+
+  'blue':'#268bd2',
+  'indigo':'#8061b5',
+  'purple':'#6c71c4',
+  'pink':'#d33682',
+  'red':'#c15755',
+  'orange':'#c85f33',
+  'yellow':'#b58900',
+  'green':'#859900',
   'teal':'#20c997',
-  'cyan':'#17a2b8',
+  'cyan':'#2aa198',
 
 };
 
@@ -124,13 +156,13 @@ function makeStyle(){
 
 <div class="container rounded bg-dark gr-45 mb-4">
   <div class="row justify-content-center">
-    {#each Object.keys(colors).filter(name=>!name.startsWith('gray-')).map(name=>({name, color:colors[name]})) as item, i}
+    {#each Object.keys(colors).map(name=>({name, color:colors[name]})) as item, i}
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2">
 
-        <div class="p-2 pb-4 bg-light gr-135 rounded shadow">
+        <div class="p-2 pb-4 bg-dark gr-135 rounded shadow">
           <div>{capitalize(item.name)}</div>
           <div class="d-inline-block rounded shadow border border-dark" style="background: {item.color}; height: 10rem; width: 10rem;"></div>
-          <div> <Icon name="pencil" color="dark" size="16"/>  <input type="color" bind:value={colors[item.name]}> </div>
+          <div><input type="color" bind:value={colors[item.name]}></div>
         </div>
 
       </div>
@@ -149,10 +181,10 @@ function makeStyle(){
 <div class="container   mb-4">
   <div class="row justify-content-center">
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2 bg-dark gr-45 rounded">
-        <div class="p-2 pb-4 bg-light gr-135 rounded shadow">
+        <div class="p-2 pb-4 bg-dark gr-135 rounded shadow">
           <div>Blend</div>
           <div class="d-inline-block rounded shadow border border-dark" style="background: {blend}; height: 10rem; width: 10rem;"></div>
-          <div> <Icon name="pencil" color="dark" size="16"/>  <input type="color" bind:value={blend}> </div>
+          <div> <input type="color" bind:value={blend}> </div>
           <input type="range" class="custom-range" min="0" max="1" step="0.01" bind:value={ratio}>
         </div>
       </div>
@@ -170,10 +202,10 @@ function makeStyle(){
 
 <div class="container rounded bg-dark gr-45 mb-4">
   <div class="row justify-content-center">
-    {#each Object.keys(colors).filter(name=>!name.startsWith('gray-')).map(name=>({name, color:colors[name]})) as item, i}
+    {#each Object.keys(colors).map(name=>({name, color:colors[name]})) as item, i}
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2">
 
-        <div class="p-2 pb-4 bg-light gr-135 rounded shadow">
+        <div class="p-2 pb-4 bg-dark gr-135 rounded shadow">
           <div>Blended {capitalize(item.name)}</div>
           <div class="d-inline-block rounded shadow border border-dark" style="background: {mix(blend,item.color,ratio*ratios[item.name])}; height: 10rem; width: 10rem;"></div>
           <input type="range" class="custom-range" min="0" max="1" step="0.01" bind:value={ratios[item.name]}>
@@ -199,7 +231,7 @@ function makeStyle(){
     {#each Object.keys(theme).map(name=>({name, id:theme[name], color:colors[theme[name]]})) as item, i}
       <div class="col-xs-12 col-md-6 col-lg-4 col-xl-2 text-center p-2">
 
-      <div class="p-2 pb-4 bg-light gr-135 rounded shadow">
+      <div class="p-2 pb-4 bg-dark gr-135 rounded shadow">
         <div>{capitalize(item.name)} ({item.id})</div>
         <div class="d-inline-block rounded shadow border border-dark" style="background: {mix(blend,item.color,ratio*ratios[item.id])}; height: 10rem; width: 10rem;"></div>
         <input type="range" class="custom-range" min="0" max="1" step="0.01" bind:value={ratios[item.id]}>

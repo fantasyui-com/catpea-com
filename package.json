@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
-    "make": "sapper export --legacy; ./bugfix-dont-delete-everything.sh; cp -fr __sapper__/export/* ./docs/; cp -f domain.txt docs/CNAME; ./bugfix-commonjs-helpers.sh",
+    "make": "sapper export --legacy; ./bugfix-dont-delete-everything.sh; cp -fr __sapper__/export/* ./docs/; cp -f domain.txt docs/CNAME; ./bugfix-underscore-filenames.sh",
     "upload": "git add .; git commit -m \"New Release\"; git push;",
     "pub": "npm run make; npm run upload;",
     "start": "node __sapper__/build",
@@ -14,6 +14,7 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
+    "blinkenlights": "^1.0.1",
     "bodybuilding-advice": "^1.5.0",
     "book-gui": "^3.3.7",
     "bootstrap": "^4.4.1",

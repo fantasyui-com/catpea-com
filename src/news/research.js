@@ -8,11 +8,32 @@ const database = [
 
 
     {
+      date: '2020-04-17T19:45:54.868Z',
+      html: `
+
+      I setup [news.catpea.com] a bit early than I wanted to, I'll upload all the photos, research and poems on there.
+      I need something that is less application and more website to try out less boxy designs.
+
+      Before I can make a product for [Bootstrap Themes] I feel have to create something that will qualify for [Bootstrap Expo] at least in theory.
+
+      [Theme] Styleguide is neat, but I now need something like this: [https://getbootstrap.com/docs/4.4/examples/] about nine web page designs.
+
+      At the time of writing there are nine menu items (Quarantine Log, Research Blog, Book, Videos, Wall, Palette, Theme, Designer, and Composer), so it would be pretty neat to present components of catpea as templates.
+
+      This is really helping me learn about design, and it is keeping my programming skills sharp.
+
+      `.trim().split('\n').map(i=>i.trim()),
+      link:{
+        'https://getbootstrap.com/docs/4.4/examples/':'https://getbootstrap.com/docs/4.4/examples/'
+      }
+    },
+
+    {
       date: '2020-04-17T01:02:46.761Z',
       html: `
 
       I expanded the [Theme] Styleguide to include many more components, and gave everything night mode support.
-      If you click the lightbulb and browse [Theme] all the color information will be washed away, and things will look all military Zero Dark Alfa Mike Foxtrot Color Mango Tango Apple.
+      If you click the lightbulb and browse [Theme] all the color information will be washed away, and things will look all military Zero Dark Mango Tango.
 
       `.trim().split('\n').map(i=>i.trim()),
       link:{
@@ -37,7 +58,8 @@ const database = [
 
         I updated the [Theme] page and it is starting to look pro.
 
-        Once I setup blog.catpea.com (in days or few weeks) catpea.com and blog.catpea.com will share the [Theme] design. It will be a great test of usefulness.
+        Once I setup blog.catpea.com (in days or few weeks) catpea.com and blog.catpea.com will share the [Theme] design.
+        It will be a great test of usefulness.
 
         Whews.
 

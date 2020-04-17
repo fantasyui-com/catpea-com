@@ -24,6 +24,9 @@ const database = {
   'Research':'/research',
   'Designer':'/designer',
 
+  'news.catpea.com':'http://news.catpea.com',
+  'news':'http://news.catpea.com',
+
   'Rollup': 'https://rollupjs.org/guide/en/',
   'Octicons require a json file': 'https://github.com/primer/octicons/commit/875bc333ce4dc6a460a116dfd315a56dbb23120f#diff-c93a11fe3afdd3ccfbe1f152a8cf7b20L1',
   'Svelte': 'https://svelte.dev/',
