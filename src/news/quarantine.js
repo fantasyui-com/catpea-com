@@ -5,6 +5,75 @@ const database = [
 
   {
     date: '2020-04-17T01:52:06.930Z',
+    name:'Iron Horse',
+    html: `
+
+    Captain's Log, Quarantine, Day Thirty Two,
+    I thought about my bicycle, my trail,
+    the morning dew.
+
+    When there is no gym,
+    I get up real early,
+    and ride on through,
+
+    It is magical out there,
+    seeing the world from the other side,
+    people stuck in traffic,
+    and here I ride.
+
+    I discovered modern architecture
+    of the highway underpass,
+    little woodland parks,
+    endless fields of grass.
+
+    Five miles out,
+    there lives an angry goose,
+
+    at seven miles,
+    in deep summer, angry 'squitoes on the loose,
+
+    Ten miles out,
+    there is a ninety degree turn,
+    and emptiness follows,
+    nothing but deep green fern.
+
+    Fifteen miles out,
+    a whole new city,
+    two new parks,
+    and the road gets gritty.
+
+    At twenty miles,
+    the real adventure starts,
+    you better have water,
+    and some street smarts.
+
+    And if you keep going forward,
+    you'll arrive on a pier at Lake Erie.
+
+    At first you'll feel pretty weary,
+    until you realize you're 30 miles from your bed,
+    at which point things will get pretty mad.
+
+    Hope you have trailmix.
+    Cause you're gonna need it.
+    To find you way back.
+    and keep pushing those pedals.
+
+    It will get dark soon,
+    but upon your return,
+    you'll fall into your comfy bed,
+    with a long, dramatic swoon,
+
+
+
+    <audio controls preload="none" class="rounded"> <source src="poems/day32.mp3" type="audio/mpeg"></audio>
+
+    `.trim().split('\n'),
+    link:{}
+  },
+
+  {
+    date: '2020-04-17T01:52:06.930Z',
     name:'Super Salad',
     html: `
 
@@ -32,7 +101,7 @@ const database = [
     `.trim().split('\n'),
     link:{}
   },
-  
+
   {
     date: '2020-04-16T02:49:34.356Z',
     name:'Computers Are Slow',
