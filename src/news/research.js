@@ -1,14 +1,68 @@
 import icons from '../devices/icons.js';
 const octicons = icons();
 
-
-// TODO: CRYPTOGRAPHER
-
 const database = [
 
 
+
+  {
+    date: '2020-04-18T22:07:44.063Z',
+    name:'System Upgrade',
+    html: `
+
+    I continued working on [news.catpea.com] and actually made very good progress.
+
+    I wanted to pull the poems out of code and give them an alternate version that can be easily read via github.
+
+    Here is the [result], it is not pretty, but it is pretty readable.
+
+    Now I can continue with making [news.catpea.com] look nicer, I am missing some icons, and i want to allow browsing by category (research/quarantine) so that with a click only poems will come up.
+
+    `.trim().split('\n').map(i=>i.trim()),
+    link:{
+      result: 'https://github.com/fantasyui-com/news-catpea-com/blob/17041ee955dacdf17c1f5f7c706bd1bbbd8b3060/db/content/posts/aquamarine-sandybrown.md'
+    }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
-      date: '2020-04-17T19:45:54.868Z',
+      date:'2020-04-17T19:45:54.868Z',
+      name:'Working on news.catpea.com',
+      tags:'dev',
       html: `
 
       I setup [news.catpea.com] a bit early than I wanted to, I'll upload all the photos, research and poems on there.
@@ -23,6 +77,7 @@ const database = [
       This is really helping me learn about design, and it is keeping my programming skills sharp.
 
       `.trim().split('\n').map(i=>i.trim()),
+
       link:{
         'https://getbootstrap.com/docs/4.4/examples/':'https://getbootstrap.com/docs/4.4/examples/'
       }
@@ -30,6 +85,7 @@ const database = [
 
     {
       date: '2020-04-17T01:02:46.761Z',
+      name:'Styleguide Updates',
       html: `
 
       I expanded the [Theme] Styleguide to include many more components, and gave everything night mode support.
@@ -43,6 +99,7 @@ const database = [
 
     {
       date: '2020-04-16T19:25:33.766Z',
+      name:'Theme rebuilt, syncing up with Bootswatch',
       html: `
 
         I have rebuilt the theme, the third time. This time it follows the programming pattern of [Bootswatch].
@@ -1030,12 +1087,21 @@ const database = [
 
 
 function process(data) {
-  const clean = data.map(item => {
+
+  const clean = data
+
+  .map(item => {
     if(typeof item.html !== 'string'){
       item.html = item.html.map(d=>(d.charAt(0)=='<')?d:`<p>${d}</p>`).join('')
     }
     return item;
   })
+  .map(item=>{
+    if(!item.name && item.html) item.name = item.html.replace(/<[^>]*>/g, "").replace(/\n/g, " ").replace(/\[|\]/g, "").substr(0,128) + '..';
+    return item;
+  })
+
+
   return clean;
 
 } // fun

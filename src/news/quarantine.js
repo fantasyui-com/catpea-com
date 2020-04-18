@@ -1144,6 +1144,11 @@ function process(data) {
     }
     return item;
   })
+  .map(item=>{
+    if(!item.name && item.html) item.name = item.html.replace(/<[^>]*>/g, "").replace(/\n/g, " ").replace(/\[|\]/g, "").substr(0,128) + '..';
+    return item;
+  })
+  
   return clean;
 
 } // fun
