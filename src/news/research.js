@@ -5,6 +5,60 @@ const database = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    date: '2020-04-19T17:22:14.849Z',
+    name:'News on news.catpea.com has a functional category browser.',
+    html: `
+
+    I continue working on [news.catpea.com] I added categories and little navigational hints, and timestamps.
+
+    I want to create a new category, poetry. But I don't want to mix it with quarantine, yet.
+
+    So, I guess, the news site will have a category browser with strict rule, one post per category.
+
+    And Then I'll add tags, where the user can browse all posts tagged poem for example.
+
+    `.trim().split('\n').map(i=>i.trim()),
+    link:{
+    }
+  },
+
+
   {
     date: '2020-04-18T22:07:44.063Z',
     name:'System Upgrade',
@@ -23,40 +77,6 @@ const database = [
       result: 'https://github.com/fantasyui-com/news-catpea-com/blob/17041ee955dacdf17c1f5f7c706bd1bbbd8b3060/db/content/posts/aquamarine-sandybrown.md'
     }
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     {
