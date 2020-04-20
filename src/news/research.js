@@ -42,7 +42,7 @@ const database = [
 
   {
     date: '2020-04-19T17:22:14.849Z',
-    name:'News on news.catpea.com has a functional category browser.',
+    name:'Development of Post Explorer on Catpea News',
     html: `
 
     I continue working on [news.catpea.com] I added categories and little navigational hints, and timestamps.
@@ -61,7 +61,7 @@ const database = [
 
   {
     date: '2020-04-18T22:07:44.063Z',
-    name:'System Upgrade',
+    name:'Catpea Alpha System Upgrade',
     html: `
 
     I continued working on [news.catpea.com] and actually made very good progress.
@@ -81,7 +81,7 @@ const database = [
 
     {
       date:'2020-04-17T19:45:54.868Z',
-      name:'Working on news.catpea.com',
+      name:'Working on the New Catpea Website',
       tags:'dev',
       html: `
 
@@ -105,7 +105,7 @@ const database = [
 
     {
       date: '2020-04-17T01:02:46.761Z',
-      name:'Styleguide Updates',
+      name:'Theme Styleguide Updates',
       html: `
 
       I expanded the [Theme] Styleguide to include many more components, and gave everything night mode support.
@@ -119,7 +119,7 @@ const database = [
 
     {
       date: '2020-04-16T19:25:33.766Z',
-      name:'Theme rebuilt, syncing up with Bootswatch',
+      name:'Syncing Theme With Bootswatch Programming Patterns',
       html: `
 
         I have rebuilt the theme, the third time. This time it follows the programming pattern of [Bootswatch].

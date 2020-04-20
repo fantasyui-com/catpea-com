@@ -5,8 +5,8 @@ import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
 import icons from '../devices/icons.js';
 const octicons = icons();
 
-import news from '../news/index.js';
-let report = news();
+// import news from '../news/index.js';
+// let report = news();
 
 
 
@@ -46,9 +46,15 @@ const daw = {
   img: 'daw.jpg',
 }
 
-
-
-
+const news = {
+  modified: '2020-01-25T13:52:05.520Z',
+  changed: 'recently',
+  caption: 'http://news.catpea.com',
+  name: 'ANNOUNCING CATPEA NEWS SERVICE',
+  text: 'A dedicated website to all the important things, minus the clutter of strange little programs. Featuring <span class="text-light">poems</span>, research <span class="text-light">notes</span>, and other announcements like updates to my little book, and soon to come Summer adventure <span class="text-light">photos</span>.',
+  url: 'http://news.catpea.com',
+  img: 'news.png',
+}
 
 
 // (new Date()).toISOString()
@@ -94,6 +100,18 @@ loading = false;
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-4">
 
     <div class="col pb-3">
+        <div class="card bg-night text-night shadow">
+          <a href="{news.url}"><img src="{news.img}" class="card-img-top" alt="{news.name}"></a>
+          <div class="card-body p-3">
+            <h5 class="card-text text-danger">{news.name}</h5>
+            <p class="card-text">{@html news.text}</p>
+            <a href="{news.url}" class="btn btn-primary btn-a">{news.caption} &raquo;</a>
+            <!-- <p class="card-text"><small>Updated {videos.changed}</small></p> -->
+          </div>
+        </div>
+    </div>
+
+    <!-- <div class="col pb-3">
     <News news={report.quarantine} icon="squirrel" title="Quarantine Log" items="5" link="/quarantine" invitation="There is a lot more poetry ({report.quarantine.length} entries in total) at the Quarantine Log, and it is a lot easier to read on mobile."/>
     </div>
 
@@ -103,7 +121,7 @@ loading = false;
 
     <div class="col pb-3">
     <News news={report.theme} icon="mortar-board" title="Theme Development Log" items="100"/>
-    </div>
+    </div> -->
 
     <!-- <div class="col pb-3">
     <RandomVideo duration="10"/>

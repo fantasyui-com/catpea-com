@@ -25,18 +25,25 @@
       description:'Home Page',
     },
 
-    {
-      id:'quarantine',
-      link:'/quarantine',
-      name:'Quarantine Log',
-      description:'Poetry and Foolishness',
-    },
+    // {
+    //   id:'quarantine',
+    //   link:'/quarantine',
+    //   name:'Quarantine Log',
+    //   description:'Poetry and Foolishness',
+    // },
+    //
+    // {
+    //   id:'research',
+    //   link:'/research',
+    //   name:'Research Blog',
+    //   description:'User Interface Research',
+    // },
 
     {
-      id:'research',
-      link:'/research',
-      name:'Research Blog',
-      description:'User Interface Research',
+      id:'warrior',
+      link:'http://news.catpea.com',
+      name:'News',
+      description:'Latest News (news.catpea.com)',
     },
 
     {
@@ -45,6 +52,9 @@
       name:'Book',
       description:'A Book About Growing Up',
     },
+
+
+
     // {
     //   id:'rhyme',
     //   link:'/rhyme',

@@ -35,7 +35,7 @@
   <title>CATPEA! Research, Progress, Peanut Butter, and Jelly</title>
 </svelte:head>
 
-
+<!--
 <div class="container">
   {#each report.research as item, i}
     <div class="row mb-4">
@@ -44,4 +44,6 @@
       </div>
     </div>
   {/each}
-</div>
+</div> -->
+
+<a href="http://news.catpea.com" class="btn btn-primary btn-a">http://news.catpea.com »</a>

@@ -32,7 +32,7 @@
   <title>CATPEA! Quarantine and Poetry</title>
 </svelte:head>
 
-
+<!--
 
 <div class="container">
   {#each report.quarantine as item, i}
@@ -42,4 +42,6 @@
       </div>
     </div>
   {/each}
-</div>
+</div> -->
+
+<a href="http://news.catpea.com" class="btn btn-primary btn-a">http://news.catpea.com »</a>
