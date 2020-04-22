@@ -1,0 +1,33 @@
+// Color Declaration
+// Add this to your variables.scss file.
+$white: #e0e1e2;
+$gray-100: #dadcde;
+$gray-200: #cdd1d4;
+$gray-300: #c3c8cc;
+$gray-400: #b5bcc2;
+$gray-500: #636d75;
+$gray-600: #3e4c55;
+$gray-700: #2a3a44;
+$gray-800: #1e313b;
+$gray-900: #132a34;
+$black: #011418;
+$blue: #026cdc;
+$indigo: #521dc4;
+$purple: #593b9e;
+$pink: #ba3875;
+$red: #b03241;
+$orange: #d86e22;
+$yellow: #cc9d22;
+$green: #208841;
+$teal: #1aa37d;
+$cyan: #138497;
+
+// Theme Colors
+$primary: $blue;
+$secondary: $orange;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-800;

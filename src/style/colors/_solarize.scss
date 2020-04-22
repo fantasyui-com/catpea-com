@@ -1,0 +1,35 @@
+//
+// Color system
+//
+
+$white:    #faf8f2 !default;
+$gray-100: #fefbf4 !default;
+$gray-200: #fdf6e3 !default;
+$gray-300: #eee8d5 !default;
+$gray-400: #93a1a1 !default;
+$gray-500: #839496 !default;
+$gray-600: #657b83 !default;
+$gray-700: #586e75 !default;
+$gray-800: #073642 !default;
+$gray-900: #002b36 !default;
+$black:    #011418 !default;
+
+$blue:    #268bd2 !default;
+$indigo:  #8061b5 !default;
+$purple:  #6c71c4 !default;
+$pink:    #d33682 !default;
+$red:     #c15755 !default;
+$orange:  #c85f33 !default;
+$yellow:  #b58900 !default;
+$green:   #859900 !default;
+$teal:    #20c997 !default;
+$cyan:    #2aa198 !default;
+
+$primary:       $indigo !default;
+$secondary:     $orange !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;

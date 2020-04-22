@@ -55,64 +55,64 @@ $dark:          $gray-800 !default;
 */
 
 let blend = '#042c38';
-let ratio = .7;
+let ratio = .9;
 
 
 let colors = {
   'white':'#ffffff',
 
-  'gray-100':'#fefbf4',
-  'gray-200':'#fdf6e3',
-  'gray-300':'#eee8d5',
-  'gray-400':'#93a1a1',
-  'gray-500':'#839496',
-  'gray-600':'#657b83',
-  'gray-700':'#586e75',
-  'gray-800':'#073642',
-  'gray-900':'#002b36',
+  'gray-100':'#f8f9fa',
+  'gray-200':'#e9ecef',
+  'gray-300':'#dee2e6',
+  'gray-400':'#ced4da',
+  'gray-500':'#adb5bd',
+  'gray-600':'#6c757d',
+  'gray-700':'#495057',
+  'gray-800':'#343a40',
+  'gray-900':'#212529',
 
   'black':'#011418',
 
-  'blue':'#268bd2',
-  'indigo':'#8061b5',
-  'purple':'#6c71c4',
-  'pink':'#d33682',
-  'red':'#c15755',
-  'orange':'#c85f33',
-  'yellow':'#b58900',
-  'green':'#859900',
+  'blue':'#007bff',
+  'indigo':'#6610f2',
+  'purple':'#6f42c1',
+  'pink':'#e83e8c',
+  'red':'#dc3545',
+  'orange':'#fd7e14',
+  'yellow':'#ffc107',
+  'green':'#28a745',
   'teal':'#20c997',
-  'cyan':'#2aa198',
+  'cyan':'#17a2b8',
 
 };
 
 let ratios = {
-  'white':1,
-  'gray-100':1,
-  'gray-200':1,
-  'gray-300':1,
-  'gray-400':1,
-  'gray-500':1,
-  'gray-600':1,
-  'gray-700':1,
-  'gray-800':1,
-  'gray-900':1,
-  'black':1,
-  'blue':1,
-  'indigo':1,
-  'purple':1,
-  'pink':1,
-  'red':1,
-  'orange':1,
-  'yellow':1,
-  'green':1,
-  'teal':1,
-  'cyan':1,
+  'white':0.25,
+  'gray-100':0.25,
+  'gray-200':0.25,
+  'gray-300':0.25,
+  'gray-400':0.25,
+  'gray-500':0.75,
+  'gray-600':0.75,
+  'gray-700':0.75,
+  'gray-800':0.75,
+  'gray-900':0.75,
+  'black':0,
+  'blue':.40,
+  'indigo':.40,
+  'purple':.40,
+  'pink':.40,
+  'red':.40,
+  'orange':.40,
+  'yellow':.40,
+  'green':.40,
+  'teal':.40,
+  'cyan':.40,
 };
 
 let theme = {
-  'primary': 'orange',
-  'secondary': 'gray-600',
+  'primary': 'blue',
+  'secondary': 'orange',
   'success': 'green',
   'info': 'cyan',
   'warning': 'yellow',
@@ -263,14 +263,16 @@ function makeStyle(){
   <div class="col bg-dark p-3 rounded">
   <Drawer title="Bootstrap Theme" opened>
       <code class="bg-dark">
-      <div>// Color Declaration</div>
-      <div>// Add this to your <a href="https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss" rel="noopener noreferrer" target="_blank">variables.scss</a> file.</div>
+      <div>//</div>
+      <div>// Color System</div>
+      <div>//</div>
+      <br>
+      <!-- <div>// Add this to your <a href="https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss" rel="noopener noreferrer" target="_blank">variables.scss</a> file.</div> -->
       {#each Object.keys(colors).map(name=>({name, color:colors[name]})) as item, i}
         <div><span>${item.name}</span>: <span>{mix(blend,item.color,ratio*ratios[item.name])};</span></div>
         <!-- <div><span>${item.name}</span>: <span>{item.color};</span></div> -->
       {/each}
       <br>
-      <div>// Theme Colors</div>
       {#each Object.keys(theme).map(name=>({name, color:theme[name]})) as item, i}
         <div><span>${item.name}</span>: <span>${item.color};</span></div>
       {/each}
