@@ -14,6 +14,16 @@
   border: 1px solid darken($color, 6.5%);
 }
 
+/*---
+title:      Utilities
+section:    Visibility
+yakkityyak: Don’t Talk Back
+---
+
+.visible and .invisible are supplied with the theme.
+
+*/
+
 .visible {
   visibility: visible !important;
 }
@@ -107,4 +117,44 @@ $grid-breakpoints: (
 
 .bg-debug {
   background: linear-gradient(135deg, darken($body-bg, 3%), darken($body-bg, 5%) 100%);
+}
+
+// a, button {
+//   &*.focus-0:focus {
+//     box-shadow: none !important;
+//     background-color: inherit !important;
+//   }
+// }
+
+/*---
+title:      Resets
+section:    Focus
+Focus reset can be applied to either a `<button>` or an `<a>` element and it will reset box-shadow and background-color declarations.
+
+```example:html
+
+<a class="btn focus-0">Click</a>
+<button class="btn focus-0">Click</button>
+<button class="btn btn-dark focus-0">Click</button>
+
+```
+
+Hola
+
+
+*/
+
+a, button {
+  &.focus-0:focus {
+    box-shadow: none !important;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  a, button {
+    &.btn-#{$color}.focus-0:focus {
+      box-shadow: none !important;
+      background-color: $value !important;
+    }
+  }
 }
