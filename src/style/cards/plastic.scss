@@ -1,0 +1,56 @@
+@mixin plastic() {
+
+// Configuration
+$plastic-primary-color: #dfdfdf !default;
+$plastic-border-radius: 2.1rem !default;
+$plastic-highlight-offset-x: 0px !default;
+$plastic-highlight-offset-y: 0px !default;
+$plastic-highlight-blur-radius: 18px !default;
+$plastic-highlight-spread-radius: 5px !default;
+$plastic-shadow-top-offset-x: 0px !default;
+$plastic-shadow-top-offset-y: 5px !default;
+$plastic-shadow-top-blur-radius: 8px !default;
+$plastic-shadow-top-spread-radius: -6px !default;
+$plastic-shadow-center-offset-x: 0px !default;
+$plastic-shadow-center-offset-y: 10px !default;
+$plastic-shadow-center-blur-radius: 10px !default;
+$plastic-shadow-center-spread-radius: -4px !default;
+$plastic-shadow-bottom-offset-x: 0px !default;
+$plastic-shadow-bottom-offset-y: 15px !default;
+$plastic-shadow-bottom-blur-radius: 0px !default;
+$plastic-shadow-bottom-spread-radius: 0px !default;
+$plastic-dropshadow-offset-x: 0px !default;
+$plastic-dropshadow-offset-y: 20px !default;
+$plastic-dropshadow-blur-radius: 10px !default;
+$plastic-dropshadow-spread-radius: -15px !default;
+$plastic-highlight-saturation: -7.5% !default;
+$plastic-highlight-lightness: -8.0% !default;
+$plastic-shadow-top-saturation: -23.5% !default;
+$plastic-shadow-top-lightness: -14.5% !default;
+$plastic-shadow-center-saturation: -32.5% !default;
+$plastic-shadow-center-lightness: -19.5% !default;
+$plastic-shadow-bottom-saturation: -32.5% !default;
+$plastic-shadow-bottom-lightness: -27.0% !default;
+$plastic-dropshadow-saturation: -12.0% !default;
+$plastic-dropshadow-lightness: -31.5% !default;
+
+// Color Adjust
+$plastic-highlight-color: color.adjust($plastic-primary-color, $saturation: $plastic-highlight-saturation, $lightness: $plastic-highlight-lightness);
+$plastic-shadow-top-color: color.adjust($plastic-primary-color, $saturation: $plastic-shadow-top-saturation, $lightness: $plastic-shadow-top-lightness);
+$plastic-shadow-center-color: color.adjust($plastic-primary-color, $saturation: $plastic-shadow-center-saturation, $lightness: $plastic-shadow-center-lightness);
+$plastic-shadow-bottom-color: color.adjust($plastic-primary-color, $saturation: $plastic-shadow-bottom-saturation, $lightness: $plastic-shadow-bottom-lightness);
+$plastic-dropshadow-color: color.adjust($plastic-primary-color, $saturation: $plastic-dropshadow-saturation, $lightness: $plastic-dropshadow-lightness);
+
+// Declarations
+border-radius: $plastic-border-radius;
+box-shadow: inset $plastic-highlight-offset-x $plastic-highlight-offset-y $plastic-highlight-blur-radius $plastic-highlight-spread-radius $plastic-highlight-color,
+$plastic-shadow-top-offset-x $plastic-shadow-top-offset-y $plastic-shadow-top-blur-radius $plastic-shadow-top-spread-radius $plastic-shadow-top-color,
+$plastic-shadow-center-offset-x $plastic-shadow-center-offset-y $plastic-shadow-center-blur-radius $plastic-shadow-center-spread-radius $plastic-shadow-center-color,
+$plastic-shadow-bottom-offset-x $plastic-shadow-bottom-offset-y $plastic-shadow-bottom-blur-radius $plastic-shadow-bottom-spread-radius $plastic-shadow-bottom-color,
+$plastic-dropshadow-offset-x $plastic-dropshadow-offset-y $plastic-dropshadow-blur-radius $plastic-dropshadow-spread-radius $plastic-dropshadow-color !important;
+
+}
+
+.plastic.card {
+  @include plastic();
+}

@@ -1,38 +1,15 @@
 <script>
-
-  import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
-  import Post from '../components/Post.svelte';
   import Icon from '../controls/Icon.svelte';
-
-  import moment from "moment";
-  import news from '../news/index.js';
   export let status;
   export let error;
 
-
-
-  const icon = 'squirrel';
-  let report = news();
-  function recalculateTimestamps(){
-    report.quarantine = report.quarantine.map(i=>{ i.ago = moment(i.date).from(moment()); return i; })
-    //news = news.map(i=>{ i.ago = moment(i.date).from(moment()); return i; })
-  }
-  let intervalId = null;
-  intervalId = setInterval(recalculateTimestamps,60000)
-  recalculateTimestamps();
-  onDestroy(() => {
-    clearInterval(intervalId);
-  });
-
   const dev = process.env.NODE_ENV === 'development';
-
   // This will print error in terminal
   if(dev && error.stack){
     console.log('ERROR: %s', error.message)
     console.log(error.stack);
     console.log(error);
   }
-
 </script>
 
 <style>
@@ -47,7 +24,7 @@
   <div class="row">
     <div class="col-12 offset-md-2 col-md-8 offset-xxl-4 col-xxl-4">
      <div class="card bg-info text-dark mb-3">
-       <div class="card-header"><Icon name={icon} class="fill-dark mr-3"/>Website Bugs, Sorry.</div>
+       <div class="card-header"><img src="icons/exclamation-triangle-fill.svg" alt="" width="32" height="32" style="filter: invert(1);"> Website Bugs, Sorry.</div>
        <div class="card-body">
          <h5 class="card-title">I am working on it!</h5>
          <p class="card-text">Please Refresh, and Try Again.</p>
@@ -59,7 +36,7 @@
        </div>
      </div>
      <div class="card bg-danger text-dark mb-3">
-      <div class="card-header"><Icon name={icon} class="fill-dark mr-3"/>HTTP Status Code: {status}</div>
+      <div class="card-header"><img src="icons/exclamation-triangle-fill.svg" alt="" width="32" height="32" style="filter: invert(1);"> HTTP Status Code: {status}</div>
       <div class="card-body">
         <h5 class="card-title">Error Information</h5>
         <p class="card-text">{status}: {error.message}</p>
@@ -79,21 +56,15 @@
     <div class="col-12 offset-md-2 col-md-8 offset-xxl-4 col-xxl-4">
 
     <div class="card bg-dark mb-3">
-     <div class="card-header">Poems</div>
+     <div class="card-header">News</div>
        <div class="card-body">
-         <p class="card-text">In case it is taking longer than expected to fix the bug, here are my poems.</p>
+         <p class="card-text">
+         Visit <a href="http://news.catpea.com">http://news.catpea.com</a>
+         </p>
        </div>
     </div>
 
     </div>
   </div>
-
-  {#each report.quarantine as item, i}
-    <div class="row mb-3">
-      <div class="col-12 offset-md-2 col-md-8 offset-xxl-4 col-xxl-4">
-        <Post title={item.name} {icon} date={item.ago} html={item.html}/>
-      </div>
-    </div>
-  {/each}
 
 </div>

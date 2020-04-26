@@ -270,7 +270,46 @@
 "shadowCenterLightness": -0.3,
 "shadowBottomLightness": -0.4,
 "dropshadowLightness": -0.5
+},
+
+{
+"name": "Plastic",
+"primaryColor": "#dfdfdf",
+"enableBackground": false,
+"backgroundColor": "#a2e6a6",
+"borderRadius": 2.1,
+"highlightOffsetX": 0,
+"highlightOffsetY": 0,
+"highlightBlurRadius": 18,
+"highlightSpreadRadius": 5,
+"shadowTopOffsetX": 0,
+"shadowTopOffsetY": 5,
+"shadowTopBlurRadius": 8,
+"shadowTopSpreadRadius": -6,
+"shadowCenterOffsetX": 0,
+"shadowCenterOffsetY": 10,
+"shadowCenterBlurRadius": 10,
+"shadowCenterSpreadRadius": -4,
+"shadowBottomOffsetX": 0,
+"shadowBottomOffsetY": 15,
+"shadowBottomBlurRadius": 0,
+"shadowBottomSpreadRadius": 0,
+"dropshadowOffsetX": 0,
+"dropshadowOffsetY": 20,
+"dropshadowBlurRadius": 10,
+"dropshadowSpreadRadius": -15,
+"highlightSaturation": -0.15,
+"highlightLightness": -0.16,
+"shadowTopSaturation": -0.47,
+"shadowTopLightness": -0.29,
+"shadowCenterSaturation": -0.65,
+"shadowCenterLightness": -0.39,
+"shadowBottomSaturation": -0.65,
+"shadowBottomLightness": -0.54,
+"dropshadowSaturation": -0.24,
+"dropshadowLightness": -0.63
 }
+
 ]
 
 // .map(profile=>{

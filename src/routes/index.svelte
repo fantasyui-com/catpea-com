@@ -2,6 +2,8 @@
 
 import { onMount, beforeUpdate, afterUpdate, onDestroy } from 'svelte';
 
+import bodybuildingAdvice from 'bodybuilding-advice';
+
 import icons from '../devices/icons.js';
 const octicons = icons();
 
@@ -12,21 +14,17 @@ const octicons = icons();
 
 import moment from "moment";
 
+import Advice from '../components/Advice.svelte';
 import SongBeatCalculator from '../components/SongBeatCalculator.svelte';
 import SongTempoChangeCalculator from '../components/SongTempoChangeCalculator.svelte';
 import SeasonCalculator from '../components/SeasonCalculator.svelte';
-import BodybuildingAdvice from '../components/BodybuildingAdvice.svelte';
 import RandomVideo from '../components/RandomVideo.svelte';
-import News from '../components/News.svelte';
 import Squirrel from '../components/Squirrel.svelte';
-
 import SciurineSong from '../components/SciurineSong.svelte';
 import HiphopSong from '../components/HiphopSong.svelte';
 import LofiSoundboard from '../components/LofiSoundboard.svelte';
 import BeatSequencer from '../components/BeatSequencer.svelte';
 import SongMachine from '../components/SongMachine.svelte';
-//import SongBuilder from '../components/SongBuilder.svelte';
-
 
 
 const videos = {
@@ -53,7 +51,7 @@ const news = {
   name: 'ANNOUNCING CATPEA NEWS SERVICE',
   text: 'A dedicated website to all the important things, minus the clutter of strange little programs. Featuring <span class="text-light">poems</span>, research <span class="text-light">notes</span>, and other announcements like updates to my little book, and soon to come Summer adventure <span class="text-light">photos</span>.',
   url: 'http://news.catpea.com',
-  img: 'news.png',
+  img: 'news2.png',
 }
 
 
@@ -79,7 +77,7 @@ loading = false;
 
 
 
-<div class="container-fluid d-none" class:d-block={loading}>
+<div class="container-fluid d-none" class:d-block={loading} style="z-index: 1000;">
     <div class="row">
       <div class="col">
       <div class="clearfix">
@@ -98,6 +96,7 @@ loading = false;
 
 <div class="container-fluid">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-4">
+
 
     <div class="col pb-3">
         <div class="card bg-night text-night shadow">
@@ -195,34 +194,20 @@ loading = false;
 
 
     <div class="col pb-3">
-    <SongBeatCalculator/>
+      <SongBeatCalculator/>
     </div>
 
     <div class="col pb-3">
-    <SongTempoChangeCalculator/>
+      <SongTempoChangeCalculator/>
     </div>
 
     <div class="col pb-3">
-    <BodybuildingAdvice/>
+      <Advice title="Bodybuilding Advice" data={bodybuildingAdvice()}/>
     </div>
 
-<!--
     <div class="col pb-3">
-    <RandomVideo/>
+      <RandomVideo/>
     </div>
-
-
-    <div class="col d-none d-xxl-block">
-    <RandomVideo/>
-    </div>
- -->
-
-
-
-
-
-
-
 
     </div>
 </div>

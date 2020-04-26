@@ -68,11 +68,20 @@ $link-color:                $blue !default;
     // $dropdown-link-hover-color:         $white !default;
     // $dropdown-link-hover-bg:            $primary !default;
 
+// Cards
+
+        $card-bg:                           $gray-800 !default;
+        // $card-cap-bg:                       $card-bg;
+        // $card-border-color:                 $gray-900 !default;
+        // $card-spacer-y:                     .75rem !default;
+        // $card-spacer-x:                     .25rem !default;
+
 // Navs
 
-    $nav-link-padding-y:                .9rem !default;
-    // $nav-link-disabled-color:           $gray-400 !default;
-    // $nav-tabs-border-color:             darken(#fff, 6.5%) !default;
+    $nav-tabs-border-color:             $primary;
+    $nav-tabs-link-active-bg:           $card-bg;
+    $nav-tabs-link-hover-border-color:  darken($nav-tabs-border-color,10%) darken($nav-tabs-border-color,10%) $nav-tabs-border-color !default;
+    $nav-tabs-link-active-border-color: $nav-tabs-border-color $nav-tabs-border-color transparent !default;
 
 // Navbar
 
@@ -94,10 +103,6 @@ $link-color:                $blue !default;
 
     // $jumbotron-bg:                      $nav-tabs-border-color !default;
 
-// Cards
-
-    $card-bg:                           $gray-800 !default;
-    $card-border-color:                 $gray-900 !default;
 
 // Popovers
 
@@ -111,7 +116,8 @@ $link-color:                $blue !default;
 
 // Progress bars
 
-    //$progress-bar-color:                $primary !default;
+    $progress-bar-color:                $primary !default;
+    $progress-bg:                       darken($card-bg, 3%) !default;
 
 // List group
 
