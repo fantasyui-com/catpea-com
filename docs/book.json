@@ -1779,47 +1779,6 @@
    },
    {
     "type": "text",
-    "title": "TVR Exploring",
-    "text": [
-     "<a href=\"https://www.youtube.com/user/rocket550\">YouTube Channel</a> His oxygen alarm goes off again, he talks about Hypoxia, and then he just keeps going at <a href=\"https://youtu.be/WkklsnMaqiQ?t=968\">16:08</a>"
-    ]
-   },
-   {
-    "type": "youtube",
-    "video": "WkklsnMaqiQ",
-    "title": "Into A Very Dangerous Underground Placer Gold Mine"
-   },
-   {
-    "type": "text",
-    "title": "Abandoned Mines Nova Scotia",
-    "text": [
-     "<a href=\"https://www.youtube.com/channel/UCSFuiWVky6AONgoB__dqmhg\">YouTube Channel</a>"
-    ]
-   },
-   {
-    "type": "youtube",
-    "video": "Dr15j1TOBEU",
-    "title": "The Abandoned CAPE D'OR Copper Mines"
-   },
-   {
-    "type": "text",
-    "title": "Exploring Abandoned Mines and Unusual Places",
-    "text": [
-     "<a href=\"https://www.youtube.com/channel/UCYKZObv8VH_Z2xXpftQXw3w\">YouTube Channel</a>"
-    ]
-   },
-   {
-    "type": "youtube",
-    "video": "8nEoZcZmgo8",
-    "title": "Exploring the Abandoned Copper Aces Mine Part 2"
-   },
-   {
-    "type": "youtube",
-    "video": "O8Da3PURP3U",
-    "title": "Stuck in a Ditch! Search and Rescue Saves My @$$ and My Car!"
-   },
-   {
-    "type": "text",
     "title": "Relic Recoverist",
     "text": [
      "<a href=\"https://www.youtube.com/channel/UC9D3lVCpT6kljc61gm6h_Yg\">YouTube Channel</a>"
@@ -1953,8 +1912,13 @@
    },
    {
     "type": "youtube",
-    "video": "1-OdJmAefOY",
-    "title": "Carl Sagan's Cosmos - Ep 1: The Shores of the Cosmic Ocean"
+    "video": "BdXtjNSDi4s",
+    "title": "Carl Sagan: The Earth as a Planet (1977)"
+   },
+   {
+    "type": "link",
+    "url": "https://www.youtube.com/watch?v=BdXtjNSDi4s&list=PLzEZRwmmqC4FTciK3pyF2JsuSFyiysVYM",
+    "title": "Full Playlist"
    },
    {
     "type": "subtitle",
@@ -2079,6 +2043,141 @@
     "type": "youtube",
     "video": "c6Eq2sI1NDY",
     "title": "How the Edge of Our Galaxy Defies Known Physics"
+   }
+  ]
+ },
+ {
+  "meta": {
+   "name": "mine-explorer",
+   "title": "The Mine Explorer"
+  },
+  "data": [
+   {
+    "type": "text",
+    "title": "Featured Channels",
+    "text": [
+     "<ul> <li><a href=\"https://www.youtube.com/channel/UCeD7ZrrrgGhkVhE5EIPrBwA\">TVR Exploring</a></li> <li><a href=\"https://www.youtube.com/user/fhood/\">Exploring Abandoned Mines and Unusual Places</a></li> <li><a href=\"https://www.youtube.com/channel/UCU7kKUhwDj8jTbJHI8GL21A\">Abandoned and Forgotten Places</a></li> <li><a href=\"https://www.youtube.com/channel/UCSFuiWVky6AONgoB__dqmhg\">Abandoned Mines Nova Scotia</a></li> <li><a href=\"https://www.youtube.com/channel/UCtFNKt_IKBpalOWXuIreW7Q\">Exploring Abandoned Mines</a></li> <li><a href=\"https://www.youtube.com/channel/UCOlnSz4KfPqAuOPRBUnzayw\">Mines of the West</a></li> <li><a href=\"https://www.youtube.com/user/aquachigger\">Aquachigger</a></li> </ul>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "WkklsnMaqiQ",
+    "title": "Into A Very Dangerous Underground Placer Gold Mine"
+   },
+   {
+    "type": "youtube",
+    "video": "E1_Timwm1fs",
+    "title": "The Marvelous Marble Mines Of Carrara"
+   },
+   {
+    "type": "youtube",
+    "video": "MimPqfiwXXU",
+    "title": "Deep Blue Mystery Mineral Inside An Abandoned Mine In Nevada"
+   },
+   {
+    "type": "youtube",
+    "video": "dSYy7YYo6XY",
+    "title": "Finding Something Unexpected in an Abandoned Copper Mine"
+   },
+   {
+    "type": "youtube",
+    "video": "HqQJTfdTJL0",
+    "title": "4100 Feet Underground in the Massive, Abandoned Admiral Aaron Ward Mine"
+   },
+   {
+    "type": "youtube",
+    "video": "z4mG3rAjEXQ",
+    "title": "Entering Chasm Cave and Finding Light in the Darkness"
+   },
+   {
+    "type": "youtube",
+    "video": "8nEoZcZmgo8",
+    "title": "Exploring the Abandoned Copper Aces Mine Part 2"
+   },
+   {
+    "type": "youtube",
+    "video": "qwGMiCZZLDM",
+    "title": "Exploring an Abandoned, Three-Level Fluorite Mine"
+   },
+   {
+    "type": "youtube",
+    "video": "RwqwNotrioo",
+    "title": "A&FP 2020 Summer Season Premier!"
+   },
+   {
+    "type": "youtube",
+    "video": "OqpqkaXNr74",
+    "title": "Exploring the Whiskey Mine, Patented Portals and Open Pits"
+   },
+   {
+    "type": "youtube",
+    "video": "WKSI-Vx4yUo",
+    "title": "The Monte Cristo Mine Double Feature!"
+   },
+   {
+    "type": "youtube",
+    "video": "kjlHdEEfPxI",
+    "title": "Ep.32 ARCH CAVE Special Episode - 2016 Finale"
+   },
+   {
+    "type": "youtube",
+    "video": "Dr15j1TOBEU",
+    "title": "The Abandoned CAPE D'OR Copper Mines"
+   },
+   {
+    "type": "youtube",
+    "video": "SqLmFYAWpQc",
+    "title": "Ep.19 STELLARTON - Abandoned Coal Mines"
+   },
+   {
+    "type": "youtube",
+    "video": "2p-DGj66Z0g",
+    "title": "#192 The most dangerous mine yet... has the most awesome artifacts!"
+   },
+   {
+    "type": "youtube",
+    "video": "k7ISgvCAxRc",
+    "title": "#157 The 1500 ft Dickson Decline in Hedley built 1907"
+   },
+   {
+    "type": "youtube",
+    "video": "WI6ApUvuToM",
+    "title": "#188 8 pair of Levis and other rare jeans from the 1800s found buried in an abandoned mine!"
+   },
+   {
+    "type": "youtube",
+    "video": "cEnFpU4ab-M",
+    "title": "Exploring the Abandoned Richmond Mine"
+   },
+   {
+    "type": "youtube",
+    "video": "zKC_TEIXMTs",
+    "title": "Exploring the Mountain Chief Mine - The Upper Workings (Part 1 of 2)"
+   },
+   {
+    "type": "youtube",
+    "video": "gIF7rws8Pl4",
+    "title": "Eerie Flooded Winzes in the Abandoned Bluejay Mine"
+   },
+   {
+    "type": "youtube",
+    "video": "kgITmAl7rJk",
+    "title": "Digging Out And Exploring A Lost Underground Gold Mine Tunnel (1/2)"
+   },
+   {
+    "type": "youtube",
+    "video": "YXdQZvtHN2k",
+    "title": "Digging Out And Exploring A Lost Underground Gold Mine Tunnel (2/2)"
+   },
+   {
+    "type": "youtube",
+    "video": "RM-i7-elgJQ",
+    "title": "I Found A New Cave! | Aquachigger"
+   },
+   {
+    "type": "youtube",
+    "video": "5w0RzhT2wYQ",
+    "title": "Road Kill Cave Conquered : Lucky To Be Alive | Aquachigger"
    }
   ]
  },
@@ -3454,11 +3553,6 @@
    },
    {
     "type": "youtube",
-    "video": "918gdIdyu8Q",
-    "title": "Imagine Dragons - Believer (Studio Acapella) [VIDEO]"
-   },
-   {
-    "type": "youtube",
     "video": "f5TSlm79zc0",
     "title": "P!nk - Fuckin' Perfect (Official Acapella) [EXPLICIT]"
    },
@@ -3634,6 +3728,169 @@
     "text": [
      "<p> My Friends, My Readers, play. </p> <p> Revolutionary Warriors. Lead The Way. </p> <p> Let no one stand in it, may they face your wrath. </p> <p> Make your own path. </p> <p> Let no one play you like a piano key. </p> <p> Be the change, you hope to see. </p>"
     ]
+   }
+  ]
+ },
+ {
+  "meta": {
+   "name": "poet",
+   "title": "The Poet"
+  },
+  "data": [
+   {
+    "type": "youtube",
+    "video": "k6_QUhUPrF4",
+    "title": "All The Way by Charles Bukowski"
+   },
+   {
+    "type": "youtube",
+    "video": "T2LUbk_7uKg",
+    "title": "If - Rudyard Kipling, Dennis Hopper on Johnny Cash Show"
+   },
+   {
+    "type": "text",
+    "title": "By Subtle Analogy",
+    "text": [
+     "<p> I have once discovered a poem that cradled the very definition of Wisdom. It simply said: </p>"
+    ]
+   },
+   {
+    "type": "quote",
+    "author": "Walt Whitman",
+    "url": "https://en.wikipedia.org/wiki/Walt_Whitman",
+    "text": [
+     "<p>Who, out of the theory of the earth and of his or her body understands by subtle analogies all other theories,</p> <p>The theory of a city, a poem, and of the large politics of these States;</p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "LVxrzOLst64",
+    "title": "Walt Whitman"
+   },
+   {
+    "type": "youtube",
+    "video": "qIDkjoyAAy8",
+    "title": "Favorite Poem Project: Kosmos by Ms. Browne"
+   },
+   {
+    "type": "quote",
+    "author": "Walt Whitman",
+    "url": "https://en.wikipedia.org/wiki/Walt_Whitman",
+    "text": [
+     "<p>I sound my barbaric yawp over the rooftops of the world.</p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "gQU3EphIpMY",
+    "title": "YAWP - Dead Poets Society"
+   },
+   {
+    "type": "youtube",
+    "video": "aS1esgRV4Rc",
+    "title": "Why do we read and write poetry?"
+   },
+   {
+    "type": "text",
+    "title": "Please, Read & Write Poetry.",
+    "text": [
+     "<p> Do not forget that you are full of poems, that those who are walking near your footsteps, need. </p> <p> <a href=\"https://www.rhymezone.com/\">Find Rhymes</a>, Write Poems. </p> <p> Become a Great Being. </p>"
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/owlcat.jpg",
+    "title": "The Owl and the Pussycat",
+    "text": [
+     "<a href=\"https://en.wikipedia.org/wiki/The_Owl_and_the_Pussy-Cat\">The Owl and the Pussycat at Wikipedia</a>."
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "WAfPKNSvesI",
+    "title": "The Owl and the Pussycat"
+   },
+   {
+    "type": "youtube",
+    "video": "KUaQgRiJukA",
+    "title": "The Road Not Taken, by Robert Frost"
+   },
+   {
+    "type": "youtube",
+    "video": "JqOqo50LSZ0",
+    "title": "And Still I Rise - Maya Angelou"
+   },
+   {
+    "type": "youtube",
+    "video": "krbX-9ugbI4",
+    "title": "Ozymandias by Percy Bysshe Shelley"
+   },
+   {
+    "type": "youtube",
+    "video": "TjozQHEqXNs",
+    "title": "Stopping by Woods on a Snowy Evening by Robert Frost"
+   },
+   {
+    "type": "youtube",
+    "video": "rxg7OFFtWQE",
+    "title": "A Dream Within A Dream by Edgar Allan Poe"
+   },
+   {
+    "type": "youtube",
+    "video": "DYNjUllUcFY",
+    "title": "Marianne Verville: Fire and Ice by Robert Frost"
+   },
+   {
+    "type": "youtube",
+    "video": "oRQIISF4prA",
+    "title": "2014 National Champion Anita Norman (TN) recites The Layers by Stanley Kunitz"
+   },
+   {
+    "type": "youtube",
+    "video": "bmVGBcXqtFY",
+    "title": "Poetry Out Loud 2012 NJ State Finals: Brianne Barker performs Snow Day"
+   },
+   {
+    "type": "youtube",
+    "video": "w8HdOHrc3OQ",
+    "title": "The Great Dictator Speech - Charlie Chaplin"
+   },
+   {
+    "type": "youtube",
+    "video": "EWPFmdAWRZ0",
+    "title": "Carl Sagan"
+   },
+   {
+    "type": "text",
+    "title": "Science & Progress",
+    "text": [
+     "<p> &quot;To free the world, to do away with National Barriers. Greed, hate, intolerance. Let us fight for a world of reason, a world where science and progress will [lead us all] to happiness.&quot; </p> <p> Read You Poems, Record Them, Upload Them. Practice. Share, Teach and Inspire. </p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "a7q_vACVwq0",
+    "title": "Morgan Freeman recites 'Invictus' from memory on Charlie Rose (about Nelson Mandela)"
+   },
+   {
+    "type": "youtube",
+    "video": "sR2v0Pfmzzc",
+    "title": "Invictus by William Ernest Henley (1875)"
+   },
+   {
+    "type": "youtube",
+    "video": "j64SctPKmqk",
+    "title": "O Captain, my Captain! - Thank you to Robin Williams"
+   },
+   {
+    "type": "youtube",
+    "video": "bLiXjaPqSyY",
+    "title": "The Simpsons - Edgar Allan Poe: The Raven"
+   },
+   {
+    "type": "youtube",
+    "video": "AfsnHVaScjg",
+    "title": "Ravens can talk!"
    }
   ]
  },
@@ -3827,6 +4084,145 @@
     "type": "youtube",
     "video": "QpeUEK_5Tb0",
     "title": "How to Create Tilt-Shift / Miniature World Time-lapses"
+   }
+  ]
+ },
+ {
+  "meta": {
+   "name": "filmmaker",
+   "title": "The Filmmaker"
+  },
+  "data": [
+   {
+    "type": "youtube",
+    "video": "nH7r5ThIw5Y",
+    "title": "Forgotten How To Listen"
+   },
+   {
+    "type": "youtube",
+    "video": "jreddFmavCI",
+    "title": "Lady in the Water (2006) - Trailer"
+   },
+   {
+    "type": "youtube",
+    "video": "x7B928wTLGE",
+    "title": "The Fountain Explained"
+   },
+   {
+    "type": "youtube",
+    "video": "hIdsjNGCGz4",
+    "title": "Wicked Smart"
+   },
+   {
+    "type": "youtube",
+    "video": "RVVwCE0A6Es",
+    "title": "Preparations"
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/superman-plato.png",
+    "title": "He's reading about Plato",
+    "text": []
+   },
+   {
+    "type": "youtube",
+    "video": "eWw1rMlSfeQ",
+    "title": "He's Going to Change the World"
+   },
+   {
+    "type": "youtube",
+    "video": "zWTbLZCR84k",
+    "title": "Faora-Ul vs Kal-El"
+   },
+   {
+    "type": "youtube",
+    "video": "xy62MyYWnU4",
+    "title": "Kal-El vs Justice League"
+   },
+   {
+    "type": "youtube",
+    "video": "X7SiuQxhAjg",
+    "title": "Batman v Superman"
+   },
+   {
+    "type": "youtube",
+    "video": "24vtRhMbDEA",
+    "title": "The Final Battle - Justice League"
+   },
+   {
+    "type": "youtube",
+    "video": "b9V3Pj47x4c",
+    "title": "Race. Flash vs Superman"
+   },
+   {
+    "type": "youtube",
+    "video": "sfM7_JLk-84",
+    "title": "Wonder Woman 1984"
+   },
+   {
+    "type": "youtube",
+    "video": "CE8XKeN0zk4",
+    "title": "Kickboxer Dance"
+   },
+   {
+    "type": "youtube",
+    "video": "aztdMwYrF4k",
+    "title": "Coco: Kickboxer Dance"
+   },
+   {
+    "type": "youtube",
+    "video": "LUDEjulbqzk",
+    "title": "I Have Made Fire!"
+   },
+   {
+    "type": "youtube",
+    "video": "YNcN5f3vwro",
+    "title": "Not To Be"
+   },
+   {
+    "type": "youtube",
+    "video": "o_YtK5SYK6Y",
+    "title": "Firewalker (in German)"
+   },
+   {
+    "type": "youtube",
+    "video": "wMyZEgC20UA",
+    "title": "Bud Spencer & Terence Hill"
+   },
+   {
+    "type": "youtube",
+    "video": "8WT6ihi8MkM",
+    "title": "Louis de Funès"
+   },
+   {
+    "type": "youtube",
+    "video": "tDJJi5ijAnM",
+    "title": "Czterej Pancerni i Pies"
+   },
+   {
+    "type": "youtube",
+    "video": "6FqUyxVD4qc",
+    "title": "Alfa Mike Foxtrot - I Love It When a Plan Comes Together!"
+   },
+   {
+    "type": "youtube",
+    "video": "Rm8i9qMxeRQ",
+    "title": "Fifth Element Was Love"
+   },
+   {
+    "type": "youtube",
+    "video": "jXeF1rMkpQw",
+    "title": "Trinity"
+   },
+   {
+    "type": "youtube",
+    "video": "T4FUPSGiy8Y",
+    "title": "Get Up Neo"
+   },
+   {
+    "type": "youtube",
+    "video": "dSnosk4tWrg",
+    "title": "Like Jane"
    }
   ]
  },
@@ -5107,6 +5503,147 @@
     "text": [
      "<p> Web Developer, is a huge step. But making themes is not it. It is not even about learning programming, though you should definitely know about it; because you need a team of programmers to develop your sales platform(s). </p> <p> It is about becoming a Businessperson with a plan. In other words, a Founder, a CEO. </p> <p> You shouldn&apos;t think of a web developer as a person that merely develops for the web, think of one as a developer of the web. That is a difference between $180 and $2,200,000, a resume and an outstanding portfolio, an employee and an employer, bugfixes and excitement. </p>"
     ]
+   }
+  ]
+ },
+ {
+  "meta": {
+   "name": "cryptographer",
+   "title": "The Cryptographer"
+  },
+  "data": [
+   {
+    "type": "quote",
+    "author": "Carrie Anne",
+    "text": [
+     "The Enigma was a tough cookie to crack"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "jhXCTbFnK8o",
+    "title": "Cryptography: Crash Course Computer Science #33"
+   },
+   {
+    "type": "youtube",
+    "video": "1P8Xpxm76e8",
+    "title": "Cryptography 101 - Substitution Ciphers"
+   },
+   {
+    "type": "youtube",
+    "video": "mUoQhXWTKE0",
+    "title": "How to use the Frequency Analysis Tool"
+   },
+   {
+    "type": "youtube",
+    "video": "sHsnH1u03e4",
+    "title": "Cryptography: Transposition Cipher"
+   },
+   {
+    "type": "youtube",
+    "video": "mO0oET8TT5E",
+    "title": "Poles Escape With Secret of Enigma"
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/enigma-patent.png",
+    "title": "Enigma Machine",
+    "text": [
+     "Invented by <a href=\"https://en.wikipedia.org/wiki/Arthur_Scherbius\">Arthur Scherbius</a> attacked by <a href=\"https://en.wikipedia.org/wiki/Biuro_Szyfr%C3%B3w\">Polish Cipher Bureau</a>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "cpRhZaQxnhw",
+    "title": "Polish cryptologists and breaking of the Enigma"
+   },
+   {
+    "type": "youtube",
+    "video": "G2_Q9FoD-oQ",
+    "title": "Enigma Machine - Numberphile"
+   },
+   {
+    "type": "youtube",
+    "video": "V4V2bpZlqx8",
+    "title": "Flaw in the Enigma Code - Numberphile"
+   },
+   {
+    "type": "youtube",
+    "video": "dG09jv3c1sE",
+    "title": "Typex"
+   },
+   {
+    "type": "text",
+    "title": "More on Wikipedia",
+    "text": [
+     "<p><a href=\"https://en.wikipedia.org/wiki/Zygalski_sheets\">Zygalski Sheets</a></p> <p><a href=\"https://en.wikipedia.org/wiki/Bomba_(cryptography)\">Bomba (Polish Machine)</a></p> <p><a href=\"https://en.wikipedia.org/wiki/Bombe\">Bombe (British Machine)</a></p> <p><a href=\"https://en.wikipedia.org/wiki/Typex\">Typex</a></p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "Sy0sXa73PZA",
+    "title": "DES encryption by hand (simple low level example at a bit view)"
+   },
+   {
+    "type": "youtube",
+    "video": "O4xNJsjtN6E",
+    "title": "AES Explained (Advanced Encryption Standard) - Computerphile"
+   },
+   {
+    "type": "youtube",
+    "video": "pArLLJmgX10",
+    "title": "Symmetric and Asymmetric Encryption"
+   },
+   {
+    "type": "youtube",
+    "video": "AQDCe585Lnc",
+    "title": "Asymmetric encryption - Simply explained"
+   },
+   {
+    "type": "text",
+    "title": "Games",
+    "text": [
+     "<p><a href=\"https://capturetheflag.withgoogle.com/#beginners/\">Google Capture The Flag (CTF)</a></p> <p><a href=\"https://cryptochallenge.io/\">NSA CRYPTOCHALLENGE - Puzzle of the week</a></p>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "j9xht4K-MBk",
+    "title": "Google CTF: Beginner Quest: OCR IS COOL!"
+   },
+   {
+    "type": "youtube",
+    "video": "fPJoNYgXHnI",
+    "title": "Kryptos: The CIA's Unsolved Secret Code"
+   },
+   {
+    "type": "text",
+    "title": "Kryptos",
+    "text": [
+     "<p><a href=\"https://en.wikipedia.org/wiki/Kryptos\">Kryptos On Wikipedia</a></p> <p><a href=\"https://www.elonka.com/\">Kryptos Transcription by Elonka Dunin</a></p> <p><a href=\"https://www.elonka.com/UnsolvedCodes.html\">Elonka&apos;s List of Famous Unsolved Codes and Ciphers</a></p> <p><a href=\"https://www.elonka.com/kryptos/CyrillicProjectorAnnouncement.html\">The Cyrillic Projector Code - Cracked!</a></p>"
+    ]
+   },
+   {
+    "type": "image",
+    "url": "warrior/images/kryptos.jpg",
+    "text": []
+   },
+   {
+    "type": "text",
+    "title": "Kryptos Transcription",
+    "text": [
+     "<pre style=\"font-size: .8rem;\">EMUFPHZLRFAXYUSDJKZLDKRNSHGNFIVJ YQTQUXQBQVYUVLLTREVJYQTMKYRDMFD VFPJUDEEHZWETZYVGWHKKQETGFQJNCE GGWHKK?DQMCPFQZDQMMIAGPFXHQRLG TIMVMZJANQLVKQEDAGDVFRPJUNGEUNA QZGZLECGYUXUEENJTBJLBQCRTBJDFHRR YIZETKZEMVDUFKSJHKFWHKUWQLSZFTI HHDDDUVH?DWKBFUFPWNTDFIYCUQZERE EVLDKFEZMOQQJLTTUGSYQPFEUNLAVIDX FLGGTEZ?FKZBSFDQVGOGIPUFXHHDRKF FHQNTGPUAECNUVPDJMQCLQUMUNEDFQ ELZZVRRGKFFVOEEXBDMVPNFQXEZLGRE DNQFMPNZGLFLPMRJQYALMGNUVPDXVKP DQUMEBEDMHDAFMJGZNUPLGEWJLLAETG </pre> <pre style=\"font-size: .8rem;\">&#xA0;ABCDEFGHIJKLMNOPQRSTUVWXYZABCD AKRYPTOSABCDEFGHIJLMNQUVWXZKRYP BRYPTOSABCDEFGHIJLMNQUVWXZKRYPT CYPTOSABCDEFGHIJLMNQUVWXZKRYPTO DPTOSABCDEFGHIJLMNQUVWXZKRYPTOS ETOSABCDEFGHIJLMNQUVWXZKRYPTOSA FOSABCDEFGHIJLMNQUVWXZKRYPTOSAB GSABCDEFGHIJLMNQUVWXZKRYPTOSABC HABCDEFGHIJLMNQUVWXZKRYPTOSABCD IBCDEFGHIJLMNQUVWXZKRYPTOSABCDE JCDEFGHIJLMNQUVWXZKRYPTOSABCDEF KDEFGHIJLMNQUVWXZKRYPTOSABCDEFG LEFGHIJLMNQUVWXZKRYPTOSABCDEFGH MFGHIJLMNQUVWXZKRYPTOSABCDEFGHI </pre> <pre style=\"font-size: .8rem;\">ENDYAHROHNLSRHEOCPTEOIBIDYSHNAIA CHTNREYULDSLLSLLNOHSNOSMRWXMNE TPRNGATIHNRARPESLNNELEBLPIIACAE WMTWNDITEENRAHCTENEUDRETNHAEOE TFOLSEDTIWENHAEIOYTEYQHEENCTAYCR EIFTBRSPAMHHEWENATAMATEGYEERLB TEEFOASFIOTUETUAEOTOARMAEERTNRTI BSEDDNIAAHTTMSTEWPIEROAGRIEWFEB AECTDDHILCEIHSITEGOEAOSDDRYDLORIT RKLMLEHAGTDHARDPNEOHMGFMFEUHE ECDMRIPFEIMEHNLSSTTRTVDOHW?OBKR UOXOGHULBSOLIFBBWFLRV<span style=\"color: white;\" title=\"NORTHEAST\">QQPRNGKSS</span>O TWTQSJQSSEKZZWATJKLUDIAWINFB<span style=\"color: yellow;\" title=\"BERLIN\">NYP VTT</span><span style=\"color: white;\" title=\"CLOCK\">MZFPK</span>WGDKZXTJCDIGKUHUAUEKCAR </pre> <pre style=\"font-size: .8rem;\">NGHIJLMNQUVWXZKRYPTOSABCDEFGHIJL OHIJLMNQUVWXZKRYPTOSABCDEFGHIJL PIJLMNQUVWXZKRYPTOSABCDEFGHIJLM QJLMNQUVWXZKRYPTOSABCDEFGHIJLMN RLMNQUVWXZKRYPTOSABCDEFGHIJLMNQ SMNQUVWXZKRYPTOSABCDEFGHIJLMNQU TNQUVWXZKRYPTOSABCDEFGHIJLMNQUV UQUVWXZKRYPTOSABCDEFGHIJLMNQUVW VUVWXZKRYPTOSABCDEFGHIJLMNQUVWX WVWXZKRYPTOSABCDEFGHIJLMNQUVWXZ XWXZKRYPTOSABCDEFGHIJLMNQUVWXZK YXZKRYPTOSABCDEFGHIJLMNQUVWXZKR ZZKRYPTOSABCDEFGHIJLMNQUVWXZKRY &#xA0;ABCDEFGHIJKLMNOPQRSTUVWXYZABCD </pre>"
+    ]
+   },
+   {
+    "type": "youtube",
+    "video": "r-76Smf2oMk",
+    "title": "Ancient Codes and Hieroglyphs"
+   },
+   {
+    "type": "youtube",
+    "video": "nVVF8dgKC38",
+    "title": "Keeping Secrets: Cryptography In A Connected World"
    }
   ]
  },

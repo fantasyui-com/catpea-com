@@ -1,6 +1,7 @@
 <script>
 
   import { onMount, onDestroy } from 'svelte';
+
   import calculatePercent from 'calculate-percent';
   import dataShuffle from 'lodash/shuffle';
   import cloneDeep from 'lodash/cloneDeep';
@@ -76,7 +77,7 @@
 </script>
 
 {#if active === 0}
-  <div class="card">
+  <div class="card shadow">
     <div class="card-header border-primary">
       <ul class="nav nav-tabs card-header-tabs">
       {#each panes as item, index}
@@ -102,7 +103,7 @@
     </div>
   </div>
 {:else}
-  <div class="card">
+  <div class="card shadow">
     <div class="card-header border-primary">
       <ul class="nav nav-tabs card-header-tabs">
       {#each panes as item, index}

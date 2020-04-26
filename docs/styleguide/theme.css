@@ -3847,7 +3847,7 @@ input[type=button].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.9rem 1rem;
+  padding: 0.5rem 1rem;
 }
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
@@ -3859,7 +3859,7 @@ input[type=button].btn-block {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #eee8d5;
+  border-bottom: 1px solid #8061b5;
 }
 .nav-tabs .nav-item {
   margin-bottom: -1px;
@@ -3870,7 +3870,7 @@ input[type=button].btn-block {
   border-top-right-radius: 0.25rem;
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: #fdf6e3 #fdf6e3 #eee8d5;
+  border-color: #67489b #67489b #8061b5;
 }
 .nav-tabs .nav-link.disabled {
   color: #657b83;
@@ -3880,8 +3880,8 @@ input[type=button].btn-block {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #586e75;
-  background-color: #002b36;
-  border-color: #eee8d5 #eee8d5 #002b36;
+  background-color: #073642;
+  border-color: #8061b5 #8061b5 transparent;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
@@ -3937,8 +3937,8 @@ input[type=button].btn-block {
 }
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.7125rem;
-  padding-bottom: 0.7125rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -3966,8 +3966,8 @@ input[type=button].btn-block {
 
 .navbar-text {
   display: inline-block;
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .navbar-collapse {
@@ -4289,7 +4289,7 @@ input[type=button].btn-block {
   word-wrap: break-word;
   background-color: #073642;
   background-clip: border-box;
-  border: 1px solid #002b36;
+  border: 1px solid rgba(1, 20, 24, 0.125);
   border-radius: 0.25rem;
 }
 .card > hr {
@@ -4335,7 +4335,7 @@ input[type=button].btn-block {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(1, 20, 24, 0.03);
-  border-bottom: 1px solid #002b36;
+  border-bottom: 1px solid rgba(1, 20, 24, 0.125);
 }
 .card-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
@@ -4347,7 +4347,7 @@ input[type=button].btn-block {
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: rgba(1, 20, 24, 0.03);
-  border-top: 1px solid #002b36;
+  border-top: 1px solid rgba(1, 20, 24, 0.125);
 }
 .card-footer:last-child {
   border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
@@ -4885,7 +4885,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   height: 1rem;
   overflow: hidden;
   font-size: 0.75rem;
-  background-color: #fdf6e3;
+  background-color: #062b34;
   border-radius: 0.25rem;
   box-shadow: inset 0 0.1rem 0.1rem rgba(1, 20, 24, 0.1);
 }
@@ -4895,7 +4895,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  color: #faf8f2;
+  color: #8061b5;
   text-align: center;
   white-space: nowrap;
   background-color: #8061b5;
@@ -10027,6 +10027,11 @@ h3 {
   border-color: #9c84c5;
 }
 
+.plastic.card {
+  border-radius: 2.1rem;
+  box-shadow: inset 0px 0px 18px 5px #cbcbcb, 0px 5px 8px -6px #bababa, 0px 10px 10px -4px #adadad, 0px 15px 0px 0px #9a9a9a, 0px 20px 10px -15px #8f8f8f !important;
+}
+
 /*---
 title:      Utilities
 section:    Visibility
@@ -10121,6 +10126,10 @@ yakkityyak: Don’t Talk Back
 .btn-outline-secondary:hover {
   background-color: #93a1a1;
   color: #faf8f2;
+}
+
+.nav-tabs {
+  padding-left: 1rem;
 }
 
 .fill-primary {
