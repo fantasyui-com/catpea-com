@@ -1,4 +1,8 @@
 @charset "UTF-8";
+pre > code {
+  color: #8061b5 !important;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
