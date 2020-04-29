@@ -1,7 +1,13 @@
 @use 'sass:color';
 
 @import "colors/solarize";
+
 @import "variables";
+
+pre > code {
+  color: $primary ! important;
+}
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 @import "./night/night.scss";
