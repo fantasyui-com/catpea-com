@@ -26,7 +26,7 @@
     "dashify": "^2.0.0",
     "emotion": "^10.0.27",
     "js-cookie": "^2.2.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mainspring": "^1.0.1",
     "moment": "^2.24.0",
     "object-assign": "^4.1.1",
