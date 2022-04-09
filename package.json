@@ -28,7 +28,7 @@
     "js-cookie": "^2.2.1",
     "lodash": "^4.17.15",
     "mainspring": "^1.0.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "object-assign": "^4.1.1",
     "oneof": "^2.0.0",
     "polka": "^1.0.0-next.11",
